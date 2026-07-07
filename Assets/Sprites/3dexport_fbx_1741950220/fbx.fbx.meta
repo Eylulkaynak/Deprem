@@ -3,7 +3,92 @@ guid: 71ae80dfc7b5e7946980376e2c8532ca
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BabyLunaClothDiaper_0__Merge
+    second: {fileID: 2100000, guid: d65a91100cb2afd41a1cba7a28bd1b13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown_Hair_Transparency
+    second: {fileID: 2100000, guid: ba0c59711ec974f4e8c71edee29e9c01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camisole
+    second: {fileID: 2100000, guid: f6fa510408cfd8e48b84dff597eb7f71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Cornea_L
+    second: {fileID: 2100000, guid: 86d876610605da84f92ca8d455ae51fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Cornea_R
+    second: {fileID: 2100000, guid: 28e6aca403643f74e863ff8848b369bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Eye_L
+    second: {fileID: 2100000, guid: 2be903835795b3e4894d9a660b410caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Eye_R
+    second: {fileID: 2100000, guid: 71f83b6d8972b264388deccc7fe6c60a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Eyelash
+    second: {fileID: 2100000, guid: 04ca73650dde5be4582a5c64cc0f6035, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Nails
+    second: {fileID: 2100000, guid: 7b3ee308486d3ae45bbd26506780e180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Skin_Arm
+    second: {fileID: 2100000, guid: 96037df9fba823042b07254d4d2b5fa2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Skin_Body
+    second: {fileID: 2100000, guid: 02345087594c1df42b31fea626d24e9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Skin_Head
+    second: {fileID: 2100000, guid: 1be7667fd5a1f2f42b99985c98bb3f46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Skin_Leg
+    second: {fileID: 2100000, guid: f2ab5f12dc34db5488ea4255a843fa88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EM3D_Tongue
+    second: {fileID: 2100000, guid: ee240694d64d0c2488d12f9a4badbb0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toon_Eyebrows_C_Transparency
+    second: {fileID: 2100000, guid: a18a2c137ed2e8746b5967dcad59e413, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __Gums
+    second: {fileID: 2100000, guid: 71813d16c2d5cde42b6f6af97ad22f00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __Teeth
+    second: {fileID: 2100000, guid: 70d74fd62529ad14ab2f76a957d76cbe, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
