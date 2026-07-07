@@ -10,7 +10,7 @@ ModelImporter:
       name: Bank
     second: {fileID: 2100000, guid: 40285f8e363a7f04cbae53973d70ef42, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

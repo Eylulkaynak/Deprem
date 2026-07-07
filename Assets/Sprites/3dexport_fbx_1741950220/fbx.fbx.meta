@@ -89,6 +89,31 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: __Teeth
     second: {fileID: 2100000, guid: 70d74fd62529ad14ab2f76a957d76cbe, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BabyLunaClothDiaper_0__Merge_Reflection
+    second: {fileID: 2800000, guid: cccdf6bb8e2683d4aaaa8cabccc39bec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Camisole_Normal
+    second: {fileID: 2800000, guid: 7564d6e8dd5f77947889fab350bedd7a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Camisole_Specular
+    second: {fileID: 2800000, guid: 05532187062b8b940a14b52143e71887, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Std_Eye_R_Diffuse
+    second: {fileID: 2800000, guid: 746137483989aa848922990b3da6772a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Std_Eyelash_Opacity
+    second: {fileID: 2800000, guid: 7438a382037736e47b22aae2ade56c27, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
