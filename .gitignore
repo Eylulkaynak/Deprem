@@ -1,0 +1,40 @@
+# Unity'nin oluşturduğu geçici ve cihaza özel klasörler
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+
+# Asset meta dosyaları, yalnızca asset'in kendisi yoksayıldığında yoksayılmalıdır!
+!/[Aa]ssets/**/*.meta
+
+# IDE ve Editör dosyaları (Visual Studio, Rider, VS Code vb.)
+.vs/
+.idea/
+.vscode/
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# İşletim sistemi tarafından oluşturulan gizli dosyalar
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
