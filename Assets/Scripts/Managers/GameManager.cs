@@ -4,7 +4,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    
     public static GameManager Instance;
 
     [Header("Score")]
@@ -81,7 +80,7 @@ public class GameManager : MonoBehaviour
         if (playerMoving)
             return;
 
-        // Yanlış alan
+        // Güvensiz alan seçildi
         if (area.areaType == InteractableArea.AreaType.Unsafe)
         {
             score -= wrongPenalty;
@@ -96,17 +95,12 @@ public class GameManager : MonoBehaviour
         // Güvenli alan
         playerMoving = true;
 
-    player.MoveTo(area.targetPoint, () =>
+        player.MoveTo(area.targetPoint, () =>
         {
-        Debug.Log("MOVE CALLBACK ÇALIŞTI");
+            playerMoving = false;
+            playerSafe = true;
 
-        playerMoving = false;
-
-        playerSafe = true;
-
-    
-
-     area.HideBubble();
+            area.HideBubble();
         });
     }
 
@@ -116,46 +110,42 @@ public class GameManager : MonoBehaviour
 
         earthquakeRunning = true;
 
-        feedbackUI.Show(" Deprem başladı!\nHemen güvenli alana git.");
+        // İlk uyarı
+        feedbackUI.Show("Deprem basladı!\n\nHemen guvenli alana git.");
 
-        yield return new WaitForSecondsRealtime(2f);
-
-        feedbackUI.Hide();
+        // Oyuncu tıklayana kadar bekle
+        yield return new WaitUntil(() => !feedbackUI.WaitingForClick);
 
         ShowAllBubbles();
 
-        if (CameraShake.Instance != null)
-        {
-            yield return StartCoroutine(
-                CameraShake.Instance.Shake(
-                    earthquakeDuration,
-                    earthquakePower));
-        }
+        // Deprem
+        if (EarthquakeObjectsShaker.Instance != null)
+            {
+                yield return StartCoroutine(
+                EarthquakeObjectsShaker.Instance.ShakeAll(earthquakeDuration));
+            }
         else
-        {
-            yield return new WaitForSeconds(earthquakeDuration);
-        }
+            {
+                yield return new WaitForSeconds(earthquakeDuration);
+            }
 
         earthquakeRunning = false;
 
         HideAllBubbles();
 
         if (playerSafe)
-        if (playerSafe)
-            {
-                successPanel.SetActive(true);
+        {
+            successPanel.SetActive(true);
 
-                scoreText.text =
-
-                $" Tebrikler!\n\n" +
-                $"Deprem sırasında güvenli alana ulaştın.\n\n" +
+            scoreText.text =
+                "Tebrikler!\n\n" +
+                "Deprem sırasında guvenli alana ulastın.\n\n" +
                 $"Puanın\n\n{score} / {maxScore}";
-}
+        }
         else
         {
             failPanel.SetActive(true);
         }
-     
     }
 
     private void ShowMistake(string message)
@@ -165,15 +155,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator MistakeRoutine(string message)
     {
-        Time.timeScale = 0f;
-
         feedbackUI.Show(message);
 
-        yield return new WaitForSecondsRealtime(2f);
-
-        feedbackUI.Hide();
-
-        Time.timeScale = 1f;
+        // Oyuncu tıklayana kadar bekle
+        yield return new WaitUntil(() => !feedbackUI.WaitingForClick);
     }
 
     public int GetScore()
