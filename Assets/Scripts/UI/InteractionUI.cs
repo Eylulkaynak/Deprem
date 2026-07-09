@@ -1,23 +1,23 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class InteractionUI : MonoBehaviour
 {
     public static InteractionUI Instance;
 
-    [SerializeField] private GameObject panel;
-    [SerializeField] private TMP_Text interactionText;
+    public GameObject panel;
+    public TMP_Text actionText;
 
     private void Awake()
     {
         Instance = this;
-        Hide();
+        panel.SetActive(false);
     }
 
     public void Show(string text)
     {
         panel.SetActive(true);
-        interactionText.text = text;
+        actionText.text = "[E]\n" + text;
     }
 
     public void Hide()
