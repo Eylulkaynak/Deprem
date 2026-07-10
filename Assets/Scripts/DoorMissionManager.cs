@@ -18,6 +18,8 @@ public class DoorMissionManager : MonoBehaviour
     public GameObject goToDoorIndicator;
     public TMP_Text missionText;
     public string missionMessage = "Kap\u0131ya ilerle";
+    public StairInfoBubbleUI doorInfoBubbleUI;
+    public string doorBubbleMessage = "Kap\u0131ya do\u011fru ilerle.";
 
     [Header("Fade")]
     public GameObject fadePanel;
@@ -131,6 +133,11 @@ public class DoorMissionManager : MonoBehaviour
             missionText.text = missionMessage;
         }
 
+        if (doorInfoBubbleUI != null)
+        {
+            doorInfoBubbleUI.ShowMessage(doorBubbleMessage);
+        }
+
         SetMissionVisuals(true);
         SetTransitionPanel(false);
         SetFadeAlpha(0f, false);
@@ -188,7 +195,7 @@ public class DoorMissionManager : MonoBehaviour
         }
 
         MovePlayerToNextAreaSpawn();
-        MoveCameraToNextAreaPoint();
+        MoveOrSnapCameraAfterAreaTransition();
 
         yield return FadeTo(0f);
         SetFadeAlpha(0f, false);
@@ -211,6 +218,11 @@ public class DoorMissionManager : MonoBehaviour
         doorReached = true;
         missionActive = false;
         SetMissionVisuals(false);
+
+        if (doorInfoBubbleUI != null)
+        {
+            doorInfoBubbleUI.Hide();
+        }
 
         if (clickToDoorMove != null)
         {
@@ -326,6 +338,47 @@ public class DoorMissionManager : MonoBehaviour
 
         cameraTransform.position = nextCameraPoint.position;
         cameraTransform.rotation = nextCameraPoint.rotation;
+    }
+
+    private void MoveOrSnapCameraAfterAreaTransition()
+    {
+        if (cameraTransform == null && Camera.main != null)
+        {
+            cameraTransform = Camera.main.transform;
+        }
+
+        if (cameraTransform == null)
+        {
+            return;
+        }
+
+        IsometricCameraFollow cameraFollow = cameraTransform.GetComponent<IsometricCameraFollow>();
+        if (cameraFollow != null)
+        {
+            cameraFollow.SnapToTarget();
+            return;
+        }
+
+        MoveCameraToNextAreaPoint();
+    }
+
+    private void SnapCameraFollowToTarget()
+    {
+        if (cameraTransform == null && Camera.main != null)
+        {
+            cameraTransform = Camera.main.transform;
+        }
+
+        if (cameraTransform == null)
+        {
+            return;
+        }
+
+        IsometricCameraFollow cameraFollow = cameraTransform.GetComponent<IsometricCameraFollow>();
+        if (cameraFollow != null)
+        {
+            cameraFollow.SnapToTarget();
+        }
     }
 
     private IEnumerator FadeTo(float targetAlpha)

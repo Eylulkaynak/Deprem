@@ -1,5 +1,3 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,27 +9,21 @@ public class StairChoiceManager : MonoBehaviour
     public StairChoiceTarget[] choiceTargets;
     public GameObject choicesRoot;
 
-    [Header("Feedback")]
-    public TMP_Text feedbackText;
-    public StairInfoMessageUI infoMessageUI;
-    public float messageVisibleDuration = 3f;
+    [Header("Info Bubble")]
+    public StairInfoBubbleUI infoBubbleUI;
     public string introMessage = "Deprem sonras\u0131 merdivenleri kullan\u0131rken sakin ol. En g\u00fcvenli yolu se\u00e7.";
     public string elevatorMessage = "Asans\u00f6r deprem sonras\u0131 tehlikelidir. Kullanma!";
     public string middleStairsMessage = "Merdivenin ortas\u0131ndan inmek g\u00fcvenli de\u011fil. Duvar kenar\u0131ndan ilerle.";
     public string wallSideMessage = "Do\u011fru se\u00e7im! Duvar dibinden dikkatlice in.";
-
-    [Header("Shake")]
-    public Transform shakeTarget;
-    public float shakeDuration = 0.25f;
-    public float shakeAmount = 0.08f;
+    public string pathCompletedMessage = "Harika! Merdivenleri g\u00fcvenli \u015fekilde indin.";
+    public bool hideBubbleOnStart = false;
 
     [Header("Correct Choice")]
     public bool hideChoicesOnCorrect = true;
     public StairPathWalker stairPathWalker;
     public UnityEvent onCorrectChoice;
 
-    private Coroutine shakeRoutine;
-    private Vector3 originalShakePosition;
+    private bool pathEventRegistered;
 
     private void Awake()
     {
@@ -40,13 +32,17 @@ public class StairChoiceManager : MonoBehaviour
             raycastCamera = Camera.main;
         }
 
-        if (shakeTarget == null && raycastCamera != null)
-        {
-            shakeTarget = raycastCamera.transform;
-        }
-
         CacheChoiceTargetsIfNeeded();
         ValidateChoiceColliders();
+        RegisterPathCompletedEvent();
+    }
+
+    private void OnDestroy()
+    {
+        if (stairPathWalker != null && pathEventRegistered)
+        {
+            stairPathWalker.onPathCompleted.RemoveListener(HandlePathCompleted);
+        }
     }
 
     private void Update()
@@ -69,13 +65,14 @@ public class StairChoiceManager : MonoBehaviour
             raycastCamera = Camera.main;
         }
 
-        if (shakeTarget == null && raycastCamera != null)
+        RegisterPathCompletedEvent();
+
+        if (hideBubbleOnStart && infoBubbleUI != null)
         {
-            shakeTarget = raycastCamera.transform;
+            infoBubbleUI.Hide();
         }
 
-        SetFeedback(string.Empty);
-        ShowInfoMessage(introMessage);
+        ShowMessage(introMessage);
         EnableChoices();
         ValidateChoiceColliders();
     }
@@ -104,15 +101,11 @@ public class StairChoiceManager : MonoBehaviour
         switch (target.choice)
         {
             case StairChoiceTarget.StairChoice.Elevator:
-                SetFeedback(elevatorMessage);
-                ShowInfoMessage(elevatorMessage);
-                PlayShake();
+                ShowMessageAndShake(elevatorMessage);
                 break;
 
             case StairChoiceTarget.StairChoice.MiddleStairs:
-                SetFeedback(middleStairsMessage);
-                ShowInfoMessage(middleStairsMessage);
-                PlayShake();
+                ShowMessageAndShake(middleStairsMessage);
                 break;
 
             case StairChoiceTarget.StairChoice.WallSide:
@@ -123,15 +116,13 @@ public class StairChoiceManager : MonoBehaviour
 
     private void HandleCorrectChoice()
     {
-        SetFeedback(wallSideMessage);
-        ShowInfoMessage(wallSideMessage);
+        ShowMessage(wallSideMessage);
+        choicesEnabled = false;
 
         if (hideChoicesOnCorrect)
         {
             SetChoicesVisible(false);
         }
-
-        choicesEnabled = false;
 
         if (stairPathWalker != null)
         {
@@ -139,6 +130,11 @@ public class StairChoiceManager : MonoBehaviour
         }
 
         onCorrectChoice?.Invoke();
+    }
+
+    private void HandlePathCompleted()
+    {
+        ShowMessage(pathCompletedMessage);
     }
 
     private bool TryGetClickOrTouchPosition(out Vector2 screenPosition)
@@ -188,61 +184,19 @@ public class StairChoiceManager : MonoBehaviour
         }
     }
 
-    private void PlayShake()
+    private void ShowMessage(string message)
     {
-        if (shakeTarget == null)
+        if (infoBubbleUI != null)
         {
-            return;
-        }
-
-        if (shakeRoutine != null)
-        {
-            StopCoroutine(shakeRoutine);
-            shakeTarget.localPosition = originalShakePosition;
-        }
-
-        shakeRoutine = StartCoroutine(ShakeRoutine());
-    }
-
-    private IEnumerator ShakeRoutine()
-    {
-        originalShakePosition = shakeTarget.localPosition;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < shakeDuration)
-        {
-            Vector3 offset = new Vector3(
-                Random.Range(-shakeAmount, shakeAmount),
-                Random.Range(-shakeAmount, shakeAmount),
-                0f);
-
-            shakeTarget.localPosition = originalShakePosition + offset;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        shakeTarget.localPosition = originalShakePosition;
-        shakeRoutine = null;
-    }
-
-    private void SetFeedback(string message)
-    {
-        if (feedbackText != null)
-        {
-            feedbackText.text = message;
+            infoBubbleUI.ShowMessage(message);
         }
     }
 
-    private void ShowInfoMessage(string message)
+    private void ShowMessageAndShake(string message)
     {
-        if (infoMessageUI != null)
+        if (infoBubbleUI != null)
         {
-            if (!infoMessageUI.gameObject.activeSelf)
-            {
-                infoMessageUI.gameObject.SetActive(true);
-            }
-
-            infoMessageUI.ShowMessage(message, messageVisibleDuration);
+            infoBubbleUI.ShowMessageAndShake(message);
         }
     }
 
@@ -285,6 +239,17 @@ public class StairChoiceManager : MonoBehaviour
         {
             choiceTargets = FindObjectsOfType<StairChoiceTarget>(true);
         }
+    }
+
+    private void RegisterPathCompletedEvent()
+    {
+        if (stairPathWalker == null || pathEventRegistered)
+        {
+            return;
+        }
+
+        stairPathWalker.onPathCompleted.AddListener(HandlePathCompleted);
+        pathEventRegistered = true;
     }
 
     private void ValidateChoiceColliders()
