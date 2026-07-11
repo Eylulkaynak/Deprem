@@ -55,7 +55,29 @@ public class FinalSuccessUI : MonoBehaviour
 
     public void ShowFinalPanel()
     {
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+        }
+
+        if (panelRoot != null && !panelRoot.activeSelf)
+        {
+            panelRoot.SetActive(true);
+        }
+
         ResolveReferences();
+
+        if (panelRoot != null && !panelRoot.activeSelf)
+        {
+            panelRoot.SetActive(true);
+        }
+
+        if (!gameObject.activeInHierarchy)
+        {
+            Debug.LogWarning("FinalSuccessUI: Final panel animation could not start because this object is inactive in the hierarchy. Keep the Canvas and parent objects active, then hide the panel with CanvasGroup.");
+            return;
+        }
+
         ApplyText();
         DisableGameplayObjects();
 
@@ -198,9 +220,13 @@ public class FinalSuccessUI : MonoBehaviour
 
     private void SetVisibleInstant(bool isVisible)
     {
-        if (panelRoot != null)
+        if (panelRoot != null && panelRoot != gameObject)
         {
             panelRoot.SetActive(isVisible);
+        }
+        else if (panelRoot != null && !panelRoot.activeSelf)
+        {
+            panelRoot.SetActive(true);
         }
 
         SetVisual(isVisible ? 1f : 0f);

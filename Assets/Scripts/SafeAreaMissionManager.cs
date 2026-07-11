@@ -444,6 +444,7 @@ public class SafeAreaMissionManager : MonoBehaviour
     {
         if (finalSuccessUI != null)
         {
+            SetLegacyFinalTextsActive(false);
             finalSuccessUI.ShowFinalPanel();
             return;
         }
@@ -466,6 +467,8 @@ public class SafeAreaMissionManager : MonoBehaviour
 
     private void HideFinalPanel()
     {
+        SetLegacyFinalTextsActive(false);
+
         if (finalSuccessUI != null)
         {
             finalSuccessUI.Hide();
@@ -475,6 +478,19 @@ public class SafeAreaMissionManager : MonoBehaviour
         if (finalSuccessPanel != null)
         {
             finalSuccessPanel.SetActive(false);
+        }
+    }
+
+    private void SetLegacyFinalTextsActive(bool isActive)
+    {
+        if (finalTitleText != null)
+        {
+            finalTitleText.gameObject.SetActive(isActive);
+        }
+
+        if (finalDescriptionText != null)
+        {
+            finalDescriptionText.gameObject.SetActive(isActive);
         }
     }
 
