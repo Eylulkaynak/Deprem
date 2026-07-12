@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TouchManager : MonoBehaviour
+public class OsmanTouchManager : MonoBehaviour
 {
     public Camera cam;
 
