@@ -1,0 +1,60 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 16.11.2011 16:14:41
+
+newmtl orig_whistle
+	Ns 75.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.4294 0.3941 0.2627
+	Ke 0.0000 0.0000 0.0000
+	map_Ka WhistleDiffuseMap.jpg
+	map_Kd WhistleDiffuseMap.jpg
+	map_refl Desk_Sm_Blurry.hdr
+
+newmtl orig_plastic_ball
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9529 0.9529 0.9529
+	Kd 0.9529 0.9529 0.9529
+	Ks 0.2970 0.2970 0.2970
+	Ke 0.0000 0.0000 0.0000
+	map_Ka plastic_ball_diffuse.jpg
+	map_Kd plastic_ball_diffuse.jpg
+
+newmtl orig_metal
+	Ns 75.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.8550 0.8550 0.8550
+	Ke 0.0000 0.0000 0.0000
+	map_Ka MetalDiffuseMap.jpg
+	map_Kd MetalDiffuseMap.jpg
+	map_refl Desk_Sm_Blurry.hdr
+
+newmtl rope
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.1080 0.1080 0.1080
+	Ke 0.0000 0.0000 0.0000
+	map_Ka RopeDiffuseMap.jpg
+	map_Kd RopeDiffuseMap.jpg
