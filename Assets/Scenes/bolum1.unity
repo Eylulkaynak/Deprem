@@ -600,6 +600,7 @@ RectTransform:
   - {fileID: 719397533}
   - {fileID: 3000001002}
   - {fileID: 990265390}
+  - {fileID: 1487929030}
   m_Father: {fileID: 1927060747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -607,6 +608,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &287239239
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 695717332}
+    m_Modifications:
+    - target: {fileID: 5286945971098998633, guid: 0c618e172ee68cf4bb6727690f160956, type: 3}
+      propertyPath: m_Name
+      value: DraggedItemLabel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c618e172ee68cf4bb6727690f160956, type: 3}
+--- !u!224 &1487929030 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5158638752963087825, guid: 0c618e172ee68cf4bb6727690f160956, type: 3}
+  m_PrefabInstance: {fileID: 287239239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708158611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1206,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 105
+  field of view: 115
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

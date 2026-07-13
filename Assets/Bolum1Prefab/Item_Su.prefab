@@ -114,6 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrectItem: 1
+  displayName: Su
+  labelAnchor: {fileID: 0}
+  labelHeightPadding: 0.08
   dragLift: 0.15
   dragScale: 1.1
   moveToOpeningDuration: 0.25

@@ -5560,7 +5560,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 58
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5657,9 +5657,9 @@ MonoBehaviour:
   yawAngle: 120
   pitchAngle: 0
   focusOffset: {x: 0, y: 1, z: 0}
-  smoothSpeed: 6
+  smoothSpeed: 9
   snapIfTooFar: 1
-  maxDistanceBeforeSnap: 25
+  maxDistanceBeforeSnap: 10
 --- !u!1 &983060812
 GameObject:
   m_ObjectHideFlags: 0

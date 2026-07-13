@@ -26,6 +26,15 @@ public class DraggableItem : MonoBehaviour
     [Tooltip("Bu esya afet cantasina konmasi gereken dogru bir esya mi?")]
     [SerializeField] private bool isCorrectItem = true;
 
+    [Tooltip("Suruklerken gosterilecek ad. Bossa obje adi duzenlenerek kullanilir.")]
+    [SerializeField] private string displayName = "";
+
+    [Tooltip("Etiketin takip edecegi nokta. Bossa modelin ust siniri kullanilir.")]
+    [SerializeField] private Transform labelAnchor;
+
+    [Tooltip("Otomatik etiket konumuna eklenecek yukseklik.")]
+    [SerializeField] private float labelHeightPadding = 0.08f;
+
     [Header("Surukleme")]
     [Tooltip("Suruklerken esyanin zeminden ne kadar yukselecegi.")]
     [SerializeField] private float dragLift = 0.15f;
@@ -70,6 +79,42 @@ public class DraggableItem : MonoBehaviour
 
     public bool IsCorrectItem => isCorrectItem;
     public bool IsInBag => state == ItemState.InBag;
+    public bool IsDragging => state == ItemState.Dragging;
+    public static DraggableItem ActiveDrag => activeDrag;
+
+    public string DisplayName
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(displayName))
+                return displayName;
+
+            string fallback = gameObject.name
+                .Replace("(Clone)", "")
+                .Replace('_', ' ')
+                .Trim();
+
+            return fallback.StartsWith("Item ", StringComparison.OrdinalIgnoreCase)
+                ? fallback.Substring(5)
+                : fallback;
+        }
+    }
+
+    public Vector3 GetLabelWorldPosition()
+    {
+        if (labelAnchor != null)
+            return labelAnchor.position;
+
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        if (renderers.Length == 0)
+            return transform.position + Vector3.up * (0.2f + labelHeightPadding);
+
+        Bounds bounds = renderers[0].bounds;
+        for (int index = 1; index < renderers.Length; index++)
+            bounds.Encapsulate(renderers[index].bounds);
+
+        return new Vector3(bounds.center.x, bounds.max.y + labelHeightPadding, bounds.center.z);
+    }
 
     /// <summary>Su an herhangi bir esya surukleniyor mu? (ipucu sistemi icin)</summary>
     public static bool IsAnyDragging => activeDrag != null;

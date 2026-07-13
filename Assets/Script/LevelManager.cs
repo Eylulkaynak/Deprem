@@ -31,6 +31,9 @@ public class LevelManager : MonoBehaviour
     public string sonrakiSahneAdi = "Bolum3";
     public float sonrakiSahneBeklemeSuresi = 1.8f;
 
+    [Header("Gorev Kamerasi")]
+    public MissionCameraController missionCamera;
+
     [Header("Ses (opsiyonel)")]
     public AudioClip zaferSesi;
 
@@ -67,6 +70,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Toplam: " + totalHazards);
 
         UpdateProgressUI();
+        missionCamera?.SetProgress(0, true);
     }
 
     public void HazardFixed(GameObject hazardObject)
@@ -77,6 +81,7 @@ public class LevelManager : MonoBehaviour
         fixedObjects.Add(hazardObject);
         Debug.Log("Cozuldu: " + hazardObject.name + "  (" + fixedObjects.Count + " / " + totalHazards + ")");
         UpdateProgressUI();
+        missionCamera?.SetProgress(fixedObjects.Count);
 
         if (fixedObjects.Count >= totalHazards)
         {
