@@ -1,85 +1,94 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5567089141694836561
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.972
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.584
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.973
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      propertyPath: m_Name
-      value: Item_Tava
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8793330363755875094}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3170259184441234570}
-  m_SourcePrefab: {fileID: 100100000, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
---- !u!1 &4720669360919319040 stripped
+--- !u!1 &4720669360919319040
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
-  m_PrefabInstance: {fileID: 5567089141694836561}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5388837782147483834}
+  - component: {fileID: 9036231842546960159}
+  - component: {fileID: 6522289463748801493}
+  - component: {fileID: 8793330363755875094}
+  - component: {fileID: 3170259184441234570}
+  m_Layer: 0
+  m_Name: Item_Tava
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5388837782147483834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720669360919319040}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 3.8951373, y: 0.911, z: -2.359}
+  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &9036231842546960159
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720669360919319040}
+  m_Mesh: {fileID: -1183250288214202709, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
+--- !u!23 &6522289463748801493
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720669360919319040}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -1580535799172915004, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
+  - {fileID: -5243988174349660497, guid: 4787fd89990aa434793c1589f5e5baa2, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &8793330363755875094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114,6 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrectItem: 0
+  displayName: Tava
+  labelAnchor: {fileID: 0}
+  labelHeightPadding: 0.05
+  tableHeightOffset: 0
+  alignBottomToSurface: 1
   dragLift: 0.15
   dragScale: 1.1
   moveToOpeningDuration: 0.25

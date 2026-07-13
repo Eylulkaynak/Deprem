@@ -24,6 +24,22 @@ public class DraggableItem : MonoBehaviour
     [Tooltip("Bu esya afet cantasina konmasi gereken dogru bir esya mi?")]
     [SerializeField] private bool isCorrectItem = true;
 
+    [Tooltip("Ekranda gorunecek isim (or. Su, Dudduk). Bos birakilirsa obje adi kullanilir.")]
+    [SerializeField] private string displayName = "";
+
+    [Tooltip("Labelin takip edecegi nokta. Bos birakilirsa modelin ust noktasi kullanilir.")]
+    [SerializeField] private Transform labelAnchor;
+
+    [Tooltip("labelAnchor yoksa ust noktaya eklenecek ekstra yukseklik.")]
+    [SerializeField] private float labelHeightPadding = 0.05f;
+
+    [Header("Masa Yerlesimi")]
+    [Tooltip("Spawn sonrasi yukari/asagi ince ayar. Prefab basina ayarla.")]
+    [SerializeField] private float tableHeightOffset = 0f;
+
+    [Tooltip("Aciksa modelin alt kenari spawn noktasina hizalanir, sonra offset uygulanir.")]
+    [SerializeField] private bool alignBottomToSurface = true;
+
     [Header("Surukleme")]
     [Tooltip("Suruklerken esyanin zeminden ne kadar yukselecegi.")]
     [SerializeField] private float dragLift = 0.15f;
@@ -62,6 +78,31 @@ public class DraggableItem : MonoBehaviour
 
     public bool IsCorrectItem => isCorrectItem;
     public bool IsInBag => state == ItemState.InBag;
+
+    /// <summary>Bu esya su an parmakla/mouse ile tasiniyor mu?</summary>
+    public bool IsDragging => state == ItemState.Dragging;
+
+    public string DisplayName =>
+        string.IsNullOrWhiteSpace(displayName) ? gameObject.name : displayName;
+
+    /// <summary>UI labelin takip edecegi world pozisyon.</summary>
+    public Vector3 GetLabelWorldPosition()
+    {
+        if (labelAnchor != null)
+            return labelAnchor.position;
+
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        if (renderers.Length > 0)
+        {
+            Bounds bounds = renderers[0].bounds;
+            for (int i = 1; i < renderers.Length; i++)
+                bounds.Encapsulate(renderers[i].bounds);
+
+            return new Vector3(bounds.center.x, bounds.max.y + labelHeightPadding, bounds.center.z);
+        }
+
+        return transform.position + Vector3.up * (0.2f + labelHeightPadding);
+    }
 
     /// <summary>Su an herhangi bir esya surukleniyor mu? (ipucu sistemi icin)</summary>
     public static bool IsAnyDragging => activeDrag != null;
@@ -116,8 +157,35 @@ public class DraggableItem : MonoBehaviour
         mainCamera = Camera.main;
         itemCollider = GetComponent<Collider>();
         itemCollider.isTrigger = false;
-        startPosition = transform.position;
         originalScale = transform.localScale;
+        ApplyTablePlacement();
+        startPosition = transform.position;
+    }
+
+    private void ApplyTablePlacement()
+    {
+        if (alignBottomToSurface)
+        {
+            float surfaceY = transform.position.y;
+            float bottomY = GetVisualBottomY();
+            transform.position += Vector3.up * (surfaceY - bottomY);
+        }
+
+        if (Mathf.Abs(tableHeightOffset) > 0.0001f)
+            transform.position += Vector3.up * tableHeightOffset;
+    }
+
+    private float GetVisualBottomY()
+    {
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        if (renderers.Length == 0)
+            return transform.position.y;
+
+        float bottomY = renderers[0].bounds.min.y;
+        for (int i = 1; i < renderers.Length; i++)
+            bottomY = Mathf.Min(bottomY, renderers[i].bounds.min.y);
+
+        return bottomY;
     }
 
     private void Update()

@@ -1,89 +1,96 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3826378590765855941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.964
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.716
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.879
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5754084199372789682, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4749707353668628313, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-    - target: {fileID: 919132149155446097, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      propertyPath: m_Name
-      value: Item_Fener
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2000251500315237894}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8407657716419408336}
-  m_SourcePrefab: {fileID: 100100000, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
---- !u!1 &4169047787386636692 stripped
+--- !u!1 &4169047787386636692
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
-  m_PrefabInstance: {fileID: 3826378590765855941}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3643621501157987118}
+  - component: {fileID: 378132932749974667}
+  - component: {fileID: 2511762501606090817}
+  - component: {fileID: 2000251500315237894}
+  - component: {fileID: 8407657716419408336}
+  m_Layer: 0
+  m_Name: Item_Fener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3643621501157987118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169047787386636692}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 4.617, y: 1.05, z: -2.607472}
+  m_LocalScale: {x: 20, y: 20, z: 16}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &378132932749974667
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169047787386636692}
+  m_Mesh: {fileID: 4749707353668628313, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
+--- !u!23 &2511762501606090817
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169047787386636692}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -2653651044934150266, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
+  - {fileID: -1580535799172915004, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
+  - {fileID: -91986665691257589, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
+  - {fileID: 7488469549937972830, guid: 526f7e88f2e15a94f894255e349aa95e, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2000251500315237894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118,6 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrectItem: 1
+  displayName: El Feneri
+  labelAnchor: {fileID: 0}
+  labelHeightPadding: 0.05
+  tableHeightOffset: 0
+  alignBottomToSurface: 1
   dragLift: 0.15
   dragScale: 1.1
   moveToOpeningDuration: 0.25

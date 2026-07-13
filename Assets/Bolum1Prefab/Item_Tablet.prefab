@@ -118,6 +118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrectItem: 0
+  displayName: Tablet
+  labelAnchor: {fileID: 0}
+  labelHeightPadding: 0.05
+  tableHeightOffset: 0
+  alignBottomToSurface: 1
   dragLift: 0.15
   dragScale: 1.1
   moveToOpeningDuration: 0.25
