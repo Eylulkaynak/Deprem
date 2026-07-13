@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1b83dedaf018d458aadd9d8e8ac0e7, type: 3}
+  m_Name: Bolum5_LevelData 1
+  m_EditorClassIdentifier: 
+  rows: 5
+  cols: 8
+  tileSize: 1.5
+  start:
+    row: 2
+    col: 0
+  goal:
+    row: 2
+    col: 7
+  hazardCells:
+  - pos:
+      row: 0
+      col: 2
+    hazardKey: bina
+  - pos:
+      row: 3
+      col: 2
+    hazardKey: cam
+  - pos:
+      row: 0
+      col: 4
+    hazardKey: direk
+  - pos:
+      row: 3
+      col: 4
+    hazardKey: agac
+  - pos:
+      row: 1
+      col: 1
+    hazardKey: duvar
+  - pos:
+      row: 2
+      col: 3
+    hazardKey: cadde
+  - pos:
+      row: 0
+      col: 6
+    hazardKey: deniz
+  - pos:
+      row: 2
+      col: 6
+    hazardKey: ambulans
+  decisionCells:
+  - pos:
+      row: 1
+      col: 2
+    decisionKey: oyuncak
+  - pos:
+      row: 2
+      col: 5
+    decisionKey: telefon
+  - pos:
+      row: 3
+      col: 7
+    decisionKey: ambulans_karar
+  hazardDefinitions:
+  - key: bina
+    label: "Hasarl\u0131 bina"
+    tip: "Hasarl\u0131 binalara yakla\u015Fma, \xE7\xF6kme riski vard\u0131r."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: cam
+    label: "Cam k\u0131r\u0131klar\u0131"
+    tip: "K\u0131r\u0131k camlar \xFCzerinden y\xFCr\xFCme, yaralanabilirsin."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: direk
+    label: "Elektrik dire\u011Fi"
+    tip: "Enerji hatlar\u0131ndan ve direklerden uzak dur."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: agac
+    label: "A\u011Fa\xE7 alt\u0131"
+    tip: "Deprem sonras\u0131 a\u011Fa\xE7 alt\u0131nda durma, dallar k\u0131r\u0131labilir."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: duvar
+    label: Duvar dibi
+    tip: "Duvar diplerinden uzak dur, \xFCzerine y\u0131k\u0131labilir."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: cadde
+    label: "Kalabal\u0131k cadde"
+    tip: "Kalabal\u0131k ve trafik olan caddelerden uzak dur."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: deniz
+    label: "Deniz k\u0131y\u0131s\u0131"
+    tip: "Deprem sonras\u0131 deniz k\u0131y\u0131s\u0131ndan uzakla\u015F, tsunami
+      riski olabilir."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  - key: ambulans
+    label: "Acil yard\u0131m arac\u0131n\u0131n yolu"
+    tip: "Acil ara\xE7lar\u0131n yolunu asla kapatma."
+    icon: {fileID: 0}
+    tileMaterial: {fileID: 0}
+  decisionDefinitions:
+  - key: oyuncak
+    icon: "\U0001F9F8"
+    title: "Karar An\u0131!"
+    question: "Arkada\u015F\u0131m oyunca\u011F\u0131n\u0131 almak i\xE7in eve d\xF6nmek
+      istiyor. Ne yapmal\u0131y\u0131z?"
+    options:
+    - text: "Hasarl\u0131 binaya girmeyiz, bir b\xFCy\xFC\u011Fe haber veririz."
+      isCorrect: 1
+    - text: "Hemen eve gidip oyunca\u011F\u0131 al\u0131r\u0131z."
+      isCorrect: 0
+    okFeedback: "Do\u011Fru! Hasarl\u0131 yerlere asla tek ba\u015F\u0131na girme,
+      \xF6nce bir b\xFCy\xFC\u011Fe haber ver."
+    noFeedback: "Bu g\xFCvenli de\u011Fil. Hasarl\u0131 binaya d\xF6nmek yerine bir
+      b\xFCy\xFC\u011Fe haber vermeliyiz."
+  - key: telefon
+    icon: "\U0001F4F1"
+    title: "Karar An\u0131!"
+    question: "Telefonla video \xE7ekelim mi?"
+    options:
+    - text: "Evet, hemen video \xE7ekelim."
+      isCorrect: 0
+    - text: "Hay\u0131r, acil durumlar d\u0131\u015F\u0131nda telefonu me\u015Fgul
+        etmeyiz."
+      isCorrect: 1
+    okFeedback: "Do\u011Fru! Telefon hatlar\u0131 acil durumlar i\xE7in bo\u015F
+      tutulmal\u0131."
+    noFeedback: "Do\u011Fru de\u011Fil. Acil durumlarda telefonu bo\u015Fta tutmal\u0131y\u0131z,
+      video \xE7ekmemeliyiz."
+  - key: ambulans_karar
+    icon: "\U0001F691"
+    title: "Karar An\u0131!"
+    question: "Ambulans ge\xE7iyor, ne yapal\u0131m?"
+    options:
+    - text: "Yolu bo\u015F b\u0131rak\u0131r\u0131z, kenara \xE7ekiliriz."
+      isCorrect: 1
+    - text: "Yolun ortas\u0131nda durup bakar\u0131z."
+      isCorrect: 0
+    okFeedback: "Do\u011Fru! Acil ara\xE7lar\u0131n yolu her zaman bo\u015F olmal\u0131."
+    noFeedback: "Bu tehlikeli olabilir. Ambulans ge\xE7erken yolu bo\u015F b\u0131rakmal\u0131y\u0131z."
+  learningMessage: "Toplanma alan\u0131na giderken binalardan, duvar diplerinden,
+    enerji hatlar\u0131ndan ve hasarl\u0131 yap\u0131lardan uzak dur."
+  afadTavsiyesi: "A\xE7\u0131k alanda enerji hatlar\u0131ndan, binalardan, direklerden,
+    a\u011Fa\xE7lardan ve duvar diplerinden uzakla\u015F; deprem sonras\u0131nda
+    da hasarl\u0131 binalardan ve enerji nakil hatlar\u0131ndan uzak dur."
