@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Bolum1GameManager : MonoBehaviour
@@ -114,5 +115,15 @@ public class Bolum1GameManager : MonoBehaviour
 
         if (successPanel != null)
             successPanel.SetActive(true);
+    }
+
+    /// <summary>
+    /// Bitis panelindeki "Tekrar Oyna" butonundan cagir.
+    /// Sahneyi bastan yukler; rastgele esyalar da yeniden spawn olur.
+    /// </summary>
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
