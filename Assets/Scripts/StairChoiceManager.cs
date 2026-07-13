@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
 public class StairChoiceManager : MonoBehaviour
@@ -11,11 +13,11 @@ public class StairChoiceManager : MonoBehaviour
 
     [Header("Info Bubble")]
     public StairInfoBubbleUI infoBubbleUI;
-    public string introMessage = "Deprem sonras\u0131 merdivenleri kullan\u0131rken sakin ol. En g\u00fcvenli yolu se\u00e7.";
-    public string elevatorMessage = "Asans\u00f6r deprem sonras\u0131 tehlikelidir. Kullanma!";
-    public string middleStairsMessage = "Merdivenin ortas\u0131ndan inmek g\u00fcvenli de\u011fil. Duvar kenar\u0131ndan ilerle.";
-    public string wallSideMessage = "Do\u011fru se\u00e7im! Duvar dibinden dikkatlice in.";
-    public string pathCompletedMessage = "Harika! Merdivenleri g\u00fcvenli \u015fekilde indin.";
+    public string introMessage = "Deprem sonrasi merdivenleri kullanirken sakin ol. En guvenli yolu sec.";
+    public string elevatorMessage = "Asansor deprem sonrasi tehlikelidir. Kullanma!";
+    public string middleStairsMessage = "Merdivenin ortasindan inmek guvenli degil. Duvar kenarindan ilerle.";
+    public string wallSideMessage = "Dogru secim! Duvar dibinden dikkatlice in.";
+    public string pathCompletedMessage = "Harika! Merdivenleri guvenli sekilde indin.";
     public bool hideBubbleOnStart = false;
 
     [Header("Correct Choice")]
@@ -52,7 +54,8 @@ public class StairChoiceManager : MonoBehaviour
             return;
         }
 
-        if (TryGetClickOrTouchPosition(out Vector2 screenPosition))
+        if (TryGetClickOrTouchPosition(out Vector2 screenPosition, out int pointerId) &&
+            !IsPointerOverUi(pointerId))
         {
             TrySelectChoice(screenPosition);
         }
@@ -137,26 +140,62 @@ public class StairChoiceManager : MonoBehaviour
         ShowMessage(pathCompletedMessage);
     }
 
-    private bool TryGetClickOrTouchPosition(out Vector2 screenPosition)
+    private bool TryGetClickOrTouchPosition(out Vector2 screenPosition, out int pointerId)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (UnityEngine.Input.touchCount > 0)
         {
-            screenPosition = Input.mousePosition;
-            return true;
-        }
-
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            UnityEngine.Touch touch = UnityEngine.Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
             {
                 screenPosition = touch.position;
+                pointerId = touch.fingerId;
                 return true;
             }
         }
 
+        if (UnityEngine.Input.GetMouseButtonDown(0))
+        {
+            screenPosition = UnityEngine.Input.mousePosition;
+            pointerId = -1;
+            return true;
+        }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            pointerId = 0;
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            pointerId = -1;
+            return true;
+        }
+#endif
+
         screenPosition = Vector2.zero;
+        pointerId = -1;
         return false;
+    }
+
+    private bool IsPointerOverUi(int pointerId)
+    {
+        if (EventSystem.current == null)
+        {
+            return false;
+        }
+
+        if (pointerId >= 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(pointerId);
+        }
+
+        return EventSystem.current.IsPointerOverGameObject();
     }
 
     private void TrySelectChoice(Vector2 screenPosition)
@@ -172,15 +211,22 @@ public class StairChoiceManager : MonoBehaviour
         }
 
         Ray ray = raycastCamera.ScreenPointToRay(screenPosition);
-        if (!Physics.Raycast(ray, out RaycastHit hit))
+        RaycastHit[] hits = Physics.RaycastAll(ray, 1000f);
+        if (hits.Length == 0)
         {
             return;
         }
 
-        StairChoiceTarget target = hit.collider.GetComponentInParent<StairChoiceTarget>();
-        if (target != null)
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
         {
-            HandleChoice(target);
+            StairChoiceTarget target = hit.collider.GetComponentInParent<StairChoiceTarget>();
+            if (target != null && target.isActiveAndEnabled)
+            {
+                HandleChoice(target);
+                return;
+            }
         }
     }
 
@@ -237,7 +283,7 @@ public class StairChoiceManager : MonoBehaviour
         }
         else
         {
-            choiceTargets = FindObjectsOfType<StairChoiceTarget>(true);
+            choiceTargets = FindObjectsByType<StairChoiceTarget>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         }
     }
 

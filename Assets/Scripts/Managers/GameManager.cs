@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,16 +21,25 @@ public class GameManager : MonoBehaviour
     public GameObject successPanel;
     public GameObject failPanel;
     public TMP_Text scoreText;
+    public bool loadNextSceneOnSuccess = true;
+    public string nextSceneName = "Bolum4";
+    public float nextSceneDelay = 2f;
+    public bool reloadSceneOnFail = true;
+    public float failRestartDelay = 2f;
 
     [Header("Earthquake")]
     public float earthquakeDuration = 5f;
     public float earthquakePower = 0.08f;
+    public float safeArrivalGraceTime = 4f;
+    public float earthquakeStartMessageDuration = 2f;
 
     private InteractableArea[] areas;
 
     private bool earthquakeRunning = false;
     private bool playerMoving = false;
     private bool playerSafe = false;
+    private InteractableArea lastSelectedArea;
+    private int lastSelectionFrame = -1;
 
     private void Awake()
     {
@@ -74,13 +84,22 @@ public class GameManager : MonoBehaviour
 
     public void OnAreaSelected(InteractableArea area)
     {
+        if (area == null)
+            return;
+
+        if (area == lastSelectedArea && lastSelectionFrame == Time.frameCount)
+            return;
+
+        lastSelectedArea = area;
+        lastSelectionFrame = Time.frameCount;
+
         if (!earthquakeRunning)
             return;
 
         if (playerMoving)
             return;
 
-        // Güvensiz alan seçildi
+        // Guvensiz alan secildi.
         if (area.areaType == InteractableArea.AreaType.Unsafe)
         {
             score -= wrongPenalty;
@@ -92,7 +111,13 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // Güvenli alan
+        // Guvenli alan.
+        if (player == null || area.targetPoint == null)
+        {
+            Debug.LogWarning("GameManager: Safe area selected but player or target point is missing.");
+            return;
+        }
+
         playerMoving = true;
 
         player.MoveTo(area.targetPoint, () =>
@@ -104,30 +129,36 @@ public class GameManager : MonoBehaviour
         });
     }
 
-    IEnumerator StartEarthquake()
+    private IEnumerator StartEarthquake()
     {
-        yield return new WaitForSeconds(1f);
+        yield return null;
 
         earthquakeRunning = true;
-
-        // İlk uyarı
-        feedbackUI.Show("Deprem basladı!\n\nHemen guvenli alana git.");
-
-        // Oyuncu tıklayana kadar bekle
-        yield return new WaitUntil(() => !feedbackUI.WaitingForClick);
-
         ShowAllBubbles();
 
-        // Deprem
+        if (feedbackUI != null)
+        {
+            feedbackUI.ShowTimed("Deprem basladi!\n\nHemen guvenli alana git.", earthquakeStartMessageDuration);
+            yield return new WaitForSeconds(earthquakeStartMessageDuration);
+        }
+
         if (EarthquakeObjectsShaker.Instance != null)
-            {
-                yield return StartCoroutine(
-                EarthquakeObjectsShaker.Instance.ShakeAll(earthquakeDuration));
-            }
+        {
+            yield return StartCoroutine(EarthquakeObjectsShaker.Instance.ShakeAll(earthquakeDuration));
+        }
         else
+        {
+            yield return new WaitForSeconds(earthquakeDuration);
+        }
+
+        if (playerMoving && safeArrivalGraceTime > 0f)
+        {
+            float waitUntil = Time.time + safeArrivalGraceTime;
+            while (playerMoving && Time.time < waitUntil)
             {
-                yield return new WaitForSeconds(earthquakeDuration);
+                yield return null;
             }
+        }
 
         earthquakeRunning = false;
 
@@ -135,29 +166,50 @@ public class GameManager : MonoBehaviour
 
         if (playerSafe)
         {
-            successPanel.SetActive(true);
+            if (successPanel != null)
+                successPanel.SetActive(true);
 
-            scoreText.text =
-                "Tebrikler!\n\n" +
-                "Deprem sırasında guvenli alana ulastın.\n\n" +
-                $"Puanın\n\n{score} / {maxScore}";
+            if (scoreText != null)
+            {
+                scoreText.text =
+                    "Tebrikler!\n\n" +
+                    "Deprem sirasinda guvenli alana ulastin.\n\n" +
+                    $"Puanin\n\n{score} / {maxScore}";
+            }
+
+            if (loadNextSceneOnSuccess && !string.IsNullOrWhiteSpace(nextSceneName))
+            {
+                yield return new WaitForSeconds(nextSceneDelay);
+                SceneManager.LoadScene(nextSceneName);
+            }
         }
         else
         {
-            failPanel.SetActive(true);
+            if (failPanel != null)
+                failPanel.SetActive(true);
+
+            if (reloadSceneOnFail)
+            {
+                yield return new WaitForSeconds(failRestartDelay);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 
     private void ShowMistake(string message)
     {
+        if (feedbackUI == null)
+        {
+            return;
+        }
+
         StartCoroutine(MistakeRoutine(message));
     }
 
-    IEnumerator MistakeRoutine(string message)
+    private IEnumerator MistakeRoutine(string message)
     {
         feedbackUI.Show(message);
 
-        // Oyuncu tıklayana kadar bekle
         yield return new WaitUntil(() => !feedbackUI.WaitingForClick);
     }
 

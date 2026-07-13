@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
-public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     [Header("Card Info")]
     public int correctOrder;
+    public CardGameManager cardGameManager;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -20,6 +22,17 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private bool wasDroppedSuccessfully;
 
     public DropSlot currentSlot;
+    public DropSlot PreviousSlot => returnSlot;
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        ResolveManagerIfNeeded();
+
+        if (cardGameManager != null)
+        {
+            cardGameManager.SelectCard(this);
+        }
+    }
 
     private void Awake()
     {
@@ -32,17 +45,18 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
 
         parentCanvas = GetComponentInParent<Canvas>();
+        CaptureStartTransformIfNeeded();
     }
 
     private void Start()
     {
-        startParent = transform.parent;
-        startSiblingIndex = transform.GetSiblingIndex();
+        CaptureStartTransformIfNeeded();
         NormalizeRectTransform();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        CaptureStartTransformIfNeeded();
         wasDroppedSuccessfully = false;
         returnParent = transform.parent;
         returnSiblingIndex = transform.GetSiblingIndex();
@@ -88,6 +102,13 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
+
+        if (!wasDroppedSuccessfully)
+        {
+            canvasGroup.blocksRaycasts = false;
+            wasDroppedSuccessfully = TryDropOnSlotUnderPointer(eventData);
+        }
+
         canvasGroup.blocksRaycasts = true;
 
         if (!wasDroppedSuccessfully)
@@ -115,6 +136,8 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void ReturnToArea(Transform areaTransform)
     {
+        CaptureStartTransformIfNeeded();
+
         if (areaTransform == null)
         {
             ReturnToStartArea();
@@ -167,6 +190,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void ReturnToStartArea()
     {
+        CaptureStartTransformIfNeeded();
         currentSlot = null;
         returnSlot = null;
         wasDroppedSuccessfully = false;
@@ -225,6 +249,32 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         NormalizeRectTransform();
     }
 
+    private void CaptureStartTransformIfNeeded()
+    {
+        if (startParent != null)
+        {
+            return;
+        }
+
+        startParent = transform.parent;
+        startSiblingIndex = transform.GetSiblingIndex();
+    }
+
+    private void ResolveManagerIfNeeded()
+    {
+        if (cardGameManager != null)
+        {
+            return;
+        }
+
+        cardGameManager = GetComponentInParent<CardGameManager>();
+
+        if (cardGameManager == null)
+        {
+            cardGameManager = FindFirstObjectByType<CardGameManager>();
+        }
+    }
+
     private void CacheDragOffset(PointerEventData eventData)
     {
         dragRoot = transform.parent as RectTransform;
@@ -251,5 +301,28 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
 
         return transform.parent.GetComponent<DropSlot>();
+    }
+
+    private bool TryDropOnSlotUnderPointer(PointerEventData eventData)
+    {
+        if (eventData == null || EventSystem.current == null)
+        {
+            return false;
+        }
+
+        List<RaycastResult> raycastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, raycastResults);
+
+        foreach (RaycastResult result in raycastResults)
+        {
+            DropSlot slot = result.gameObject.GetComponentInParent<DropSlot>();
+            if (slot != null && slot.CanAccept(this))
+            {
+                slot.AcceptCard(this);
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SafeAreaClickTarget : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class SafeAreaClickTarget : MonoBehaviour
 
     private void Awake()
     {
-        EnsureCollider();
+        WarnIfColliderMissing();
     }
 
     private void OnValidate()
@@ -16,6 +17,11 @@ public class SafeAreaClickTarget : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (IsPointerOverUi())
+        {
+            return;
+        }
+
         NotifyClicked();
     }
 
@@ -25,7 +31,7 @@ public class SafeAreaClickTarget : MonoBehaviour
 
         if (safeAreaMissionManager == null)
         {
-            safeAreaMissionManager = FindObjectOfType<SafeAreaMissionManager>();
+            safeAreaMissionManager = FindFirstObjectByType<SafeAreaMissionManager>();
         }
 
         if (safeAreaMissionManager != null)
@@ -55,15 +61,31 @@ public class SafeAreaClickTarget : MonoBehaviour
         }
     }
 
-    private void EnsureCollider()
+    private bool IsPointerOverUi()
     {
-        if (GetComponent<Collider>() != null)
+        if (EventSystem.current == null)
         {
-            return;
+            return false;
         }
 
-        SphereCollider sphereCollider = gameObject.AddComponent<SphereCollider>();
-        sphereCollider.isTrigger = false;
-        Debug.LogWarning($"SafeAreaClickTarget '{name}' had no Collider. A SphereCollider was added automatically.");
+        if (UnityEngine.Input.touchCount > 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(UnityEngine.Input.GetTouch(0).fingerId);
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return true;
+        }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            return EventSystem.current.IsPointerOverGameObject(0);
+        }
+#endif
+
+        return false;
     }
 }

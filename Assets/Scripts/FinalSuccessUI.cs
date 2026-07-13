@@ -25,14 +25,14 @@ public class FinalSuccessUI : MonoBehaviour
     public GameObject[] objectsToHideOnShow;
 
     [Header("Text")]
-    public string title = "G\u00f6rev Tamamland\u0131!";
-    public string description = "Deprem sonras\u0131 do\u011fru ad\u0131mlar\u0131 \u00f6\u011frendin.";
+    public string title = "Gorev Tamamlandi!";
+    public string description = "Deprem sonrasi dogru adimlari ogrendin.";
     [TextArea(3, 6)]
     public string achievements =
-        "\u2713 Sars\u0131nt\u0131 bitince kendini kontrol ettin.\n" +
-        "\u2713 Asans\u00f6r\u00fc kullanmad\u0131n.\n" +
-        "\u2713 Merdivenleri duvar kenar\u0131ndan dikkatli indin.\n" +
-        "\u2713 A\u00e7\u0131k ve g\u00fcvenli alana ula\u015ft\u0131n.";
+        "Sarsinti bitince kendini kontrol ettin.\n" +
+        "Asansoru kullanmadin.\n" +
+        "Merdivenleri duvar kenarindan dikkatli indin.\n" +
+        "Acik ve guvenli alana ulastin.";
 
     [Header("Animation")]
     public float showDuration = 0.45f;

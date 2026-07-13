@@ -62,7 +62,7 @@ public class ChoiceLabel : MonoBehaviour
         textMesh.fontSize = fontSize;
         textMesh.color = textColor;
         textMesh.alignment = TextAlignmentOptions.Center;
-        textMesh.enableWordWrapping = false;
+        textMesh.textWrappingMode = TextWrappingModes.NoWrap;
         textMesh.rectTransform.sizeDelta = new Vector2(5f, 1f);
 
         BillboardToCamera billboard = textMesh.GetComponent<BillboardToCamera>();

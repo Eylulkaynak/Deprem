@@ -51,7 +51,7 @@ public class CocukUyanir : MonoBehaviour
 
     void Start()
     {
-        if (animator == null) animator = GetComponent<Animator>();
+        if (animator == null) animator = GetComponentInChildren<Animator>(true);
         audioSource = GetComponent<AudioSource>();
     }
 

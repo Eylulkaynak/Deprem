@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DoorTarget : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class DoorTarget : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (IsPointerOverUi())
+        {
+            return;
+        }
+
         SendTargetToMission();
     }
 
@@ -25,7 +31,7 @@ public class DoorTarget : MonoBehaviour
     {
         if (doorMissionManager == null)
         {
-            doorMissionManager = FindObjectOfType<DoorMissionManager>();
+            doorMissionManager = FindFirstObjectByType<DoorMissionManager>();
         }
 
         if (doorMissionManager != null)
@@ -42,5 +48,33 @@ public class DoorTarget : MonoBehaviour
         }
 
         return transform.position;
+    }
+
+    private bool IsPointerOverUi()
+    {
+        if (EventSystem.current == null)
+        {
+            return false;
+        }
+
+        if (UnityEngine.Input.touchCount > 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(UnityEngine.Input.GetTouch(0).fingerId);
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return true;
+        }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            return EventSystem.current.IsPointerOverGameObject(0);
+        }
+#endif
+
+        return false;
     }
 }

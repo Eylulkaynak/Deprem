@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -28,6 +30,10 @@ public class CardGameManager : MonoBehaviour
     public GameObject checkButton;
     public bool hideCheckButton = true;
     public bool autoCheckWhenAllSlotsFilled = true;
+    public bool tapFallbackInput = true;
+    public bool rectTransformTapFallback = true;
+    public GraphicRaycaster graphicRaycaster;
+    public EventSystem eventSystem;
     public RectTransform shakeTarget;
     public float shakeDuration = 0.25f;
     public float shakeAmount = 12f;
@@ -40,6 +46,7 @@ public class CardGameManager : MonoBehaviour
 
     private Coroutine checkRoutine;
     private Coroutine shakeRoutine;
+    private DraggableCard selectedCard;
 
     private void Awake()
     {
@@ -49,8 +56,23 @@ public class CardGameManager : MonoBehaviour
         FindShakeTargetIfNeeded();
         FindCheckButtonIfNeeded();
         FindCardsIfNeeded();
+        BindCardsAndSlots();
+        ResolveInputFallbackReferences();
         ApplyBackgroundAlpha();
         ApplyCheckButtonVisibility();
+    }
+
+    private void Update()
+    {
+        if (!tapFallbackInput || cardGamePanel == null || !cardGamePanel.activeInHierarchy)
+        {
+            return;
+        }
+
+        if (TryGetPointerDown(out Vector2 screenPosition))
+        {
+            TryHandleTapFallback(screenPosition);
+        }
     }
 
     private void Start()
@@ -69,6 +91,8 @@ public class CardGameManager : MonoBehaviour
         FindShakeTargetIfNeeded();
         FindCheckButtonIfNeeded();
         FindCardsIfNeeded();
+        BindCardsAndSlots();
+        ResolveInputFallbackReferences();
         ApplyBackgroundAlpha();
         ApplyCheckButtonVisibility();
 
@@ -87,12 +111,50 @@ public class CardGameManager : MonoBehaviour
 
     public void HideCardGame()
     {
+        selectedCard = null;
+
         if (cardGamePanel != null)
         {
             cardGamePanel.SetActive(false);
         }
 
         SetPlayerMovementEnabled(true);
+    }
+
+    public void SelectCard(DraggableCard card)
+    {
+        if (card == null || checkRoutine != null)
+        {
+            return;
+        }
+
+        selectedCard = card;
+        SetFeedback("Kart secildi. Yerlesecegi slota dokun.");
+    }
+
+    public void HandleSlotTapped(DropSlot slot)
+    {
+        if (slot == null || checkRoutine != null)
+        {
+            return;
+        }
+
+        if (selectedCard == null)
+        {
+            if (slot.currentCard != null)
+            {
+                SelectCard(slot.currentCard);
+                return;
+            }
+
+            SetFeedback("Once bir kart sec.");
+            PlayShake();
+            return;
+        }
+
+        slot.AcceptCard(selectedCard);
+        selectedCard = null;
+        SetFeedback("Kart yerlesti.");
     }
 
     public void CheckAnswer()
@@ -104,7 +166,7 @@ public class CardGameManager : MonoBehaviour
 
         if (!AreAllSlotsFilled())
         {
-            SetFeedback("\u00d6nce t\u00fcm kartlar\u0131 yerle\u015ftir!");
+            SetFeedback("Once tum kartlari yerlestir!");
             PlayShake();
             return;
         }
@@ -161,6 +223,7 @@ public class CardGameManager : MonoBehaviour
         }
 
         RefreshCardsAreaLayout();
+        selectedCard = null;
     }
 
     private IEnumerator WrongAnswerRoutine()
@@ -171,15 +234,19 @@ public class CardGameManager : MonoBehaviour
             shakeRoutine = null;
         }
 
-        SetFeedback("Yanl\u0131\u015f s\u0131ra! Tekrar dene.");
+        SetFeedback("Yanlis sira! Kartlari yer degistir.");
         yield return ShakeRoutine();
-        ResetAllCardsToStartArea();
         checkRoutine = null;
+
+        if (AreAllSlotsFilled() && IsSequenceCorrect())
+        {
+            CheckAnswer();
+        }
     }
 
     private IEnumerator CorrectAnswerRoutine()
     {
-        SetFeedback("Do\u011fru s\u0131ralama!");
+        SetFeedback("Dogru siralama!");
 
         if (successDelay > 0f)
         {
@@ -418,6 +485,187 @@ public class CardGameManager : MonoBehaviour
         }
 
         cards = FindSceneObjectsOfType<DraggableCard>();
+    }
+
+    private void BindCardsAndSlots()
+    {
+        if (cards != null)
+        {
+            foreach (DraggableCard card in cards)
+            {
+                if (card != null)
+                {
+                    card.cardGameManager = this;
+                }
+            }
+        }
+
+        if (slots != null)
+        {
+            foreach (DropSlot slot in slots)
+            {
+                if (slot != null)
+                {
+                    slot.cardGameManager = this;
+                }
+            }
+        }
+    }
+
+    private void ResolveInputFallbackReferences()
+    {
+        if (graphicRaycaster == null && cardGamePanel != null)
+        {
+            graphicRaycaster = cardGamePanel.GetComponentInParent<GraphicRaycaster>();
+        }
+
+        if (eventSystem == null)
+        {
+            eventSystem = EventSystem.current;
+        }
+    }
+
+    private bool TryGetPointerDown(out Vector2 screenPosition)
+    {
+        if (UnityEngine.Input.touchCount > 0)
+        {
+            UnityEngine.Touch touch = UnityEngine.Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
+            {
+                screenPosition = touch.position;
+                return true;
+            }
+        }
+
+        if (UnityEngine.Input.GetMouseButtonDown(0))
+        {
+            screenPosition = UnityEngine.Input.mousePosition;
+            return true;
+        }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            return true;
+        }
+#endif
+
+        screenPosition = Vector2.zero;
+        return false;
+    }
+
+    private void TryHandleTapFallback(Vector2 screenPosition)
+    {
+        ResolveInputFallbackReferences();
+
+        if (graphicRaycaster != null && eventSystem != null &&
+            TryHandleGraphicRaycastTap(screenPosition))
+        {
+            return;
+        }
+
+        if (rectTransformTapFallback)
+        {
+            TryHandleRectTransformTap(screenPosition);
+        }
+    }
+
+    private bool TryHandleGraphicRaycastTap(Vector2 screenPosition)
+    {
+        PointerEventData pointerData = new PointerEventData(eventSystem)
+        {
+            position = screenPosition
+        };
+
+        List<RaycastResult> raycastResults = new List<RaycastResult>();
+        graphicRaycaster.Raycast(pointerData, raycastResults);
+
+        foreach (RaycastResult result in raycastResults)
+        {
+            DraggableCard card = result.gameObject.GetComponentInParent<DraggableCard>();
+            if (card != null)
+            {
+                SelectCard(card);
+                return true;
+            }
+
+            DropSlot slot = result.gameObject.GetComponentInParent<DropSlot>();
+            if (slot != null)
+            {
+                HandleSlotTapped(slot);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void TryHandleRectTransformTap(Vector2 screenPosition)
+    {
+        Camera uiCamera = GetUiCamera();
+
+        if (cards != null)
+        {
+            foreach (DraggableCard card in cards)
+            {
+                if (card == null || !card.gameObject.activeInHierarchy)
+                {
+                    continue;
+                }
+
+                RectTransform cardRect = card.transform as RectTransform;
+                if (cardRect != null &&
+                    RectTransformUtility.RectangleContainsScreenPoint(cardRect, screenPosition, uiCamera))
+                {
+                    SelectCard(card);
+                    return;
+                }
+            }
+        }
+
+        if (slots != null)
+        {
+            foreach (DropSlot slot in slots)
+            {
+                if (slot == null || !slot.gameObject.activeInHierarchy)
+                {
+                    continue;
+                }
+
+                RectTransform slotRect = slot.transform as RectTransform;
+                if (slotRect != null &&
+                    RectTransformUtility.RectangleContainsScreenPoint(slotRect, screenPosition, uiCamera))
+                {
+                    HandleSlotTapped(slot);
+                    return;
+                }
+            }
+        }
+    }
+
+    private Camera GetUiCamera()
+    {
+        if (cardGamePanel == null)
+        {
+            return null;
+        }
+
+        Canvas canvas = cardGamePanel.GetComponentInParent<Canvas>();
+        if (canvas == null || canvas.renderMode == RenderMode.ScreenSpaceOverlay)
+        {
+            return null;
+        }
+
+        return canvas.worldCamera;
     }
 
     private T[] FindSceneObjectsOfType<T>() where T : Component

@@ -16,6 +16,8 @@ public class HazardMover : MonoBehaviour
 
     [Header("Hiz")]
     public float moveDuration = 1.5f;
+    public bool alignRotationToTarget = true;
+    public bool preserveStartHeight = true;
 
     [Header("Kirmizi (tehlike)")]
     public Color dangerColor = new Color(1f, 0.15f, 0.1f, 1f);
@@ -80,6 +82,13 @@ public class HazardMover : MonoBehaviour
 
         Vector3 startPos = transform.position;
         Vector3 targetPos = safeTarget.position;
+        if (preserveStartHeight)
+        {
+            targetPos.y = startPos.y;
+        }
+
+        Quaternion startRot = transform.rotation;
+        Quaternion targetRot = alignRotationToTarget ? safeTarget.rotation : startRot;
 
         float t = 0f;
         float dur = Mathf.Max(0.05f, moveDuration);
@@ -89,9 +98,11 @@ public class HazardMover : MonoBehaviour
             float k = t / dur;
             k = k * k * (3f - 2f * k);
             transform.position = Vector3.Lerp(startPos, targetPos, k);
+            transform.rotation = Quaternion.Slerp(startRot, targetRot, k);
             yield return null;
         }
         transform.position = targetPos;
+        transform.rotation = targetRot;
 
         isMoving = false;
         isMoved = true;

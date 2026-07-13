@@ -1,5 +1,7 @@
 using System.Collections;
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Surukle-birak esyasi. Dokunma (mobil) ve mouse (editor) ile calisir.
@@ -30,6 +32,12 @@ public class DraggableItem : MonoBehaviour
 
     [Tooltip("Suruklerken esyanin buyume orani (1 = ayni boyut).")]
     [SerializeField] private float dragScale = 1.1f;
+
+    [Tooltip("Kisa dokunmayla dogru esyayi dogrudan cantaya ekle.")]
+    [SerializeField] private bool tapToBagEnabled = true;
+
+    [Tooltip("Dokunma sayilmasi icin izin verilen en fazla ekran hareketi (piksel).")]
+    [SerializeField] private float tapMaxMovementPixels = 24f;
 
     [Header("Cantaya Girme Animasyonu")]
     [Tooltip("Esyanin canta agzina gitme suresi (saniye).")]
@@ -106,8 +114,11 @@ public class DraggableItem : MonoBehaviour
     private Collider itemCollider;
     private Vector3 startPosition;
     private Vector3 originalScale;
-    private Vector3 dragOffset;
-    private float dragPlaneY;
+    private Vector3 dragStartWorldPosition;
+    private Vector2 pointerDownScreenPosition;
+    private Plane dragPlane;
+    private Vector3 dragPointerOffset;
+    private float dragPlaneHeight;
     private ItemState state = ItemState.Idle;
     private Coroutine activeRoutine;
 
@@ -122,16 +133,20 @@ public class DraggableItem : MonoBehaviour
 
     private void Update()
     {
-        if (state == ItemState.Idle && TryGetPointerDown(out Vector2 downPosition))
+        if (state == ItemState.Idle &&
+            TryGetPointerDown(out Vector2 downPosition, out int pointerId) &&
+            !IsPointerOverUi(pointerId))
+        {
             TryBeginDrag(downPosition);
+        }
 
         if (state == ItemState.Dragging)
         {
             if (TryGetPointerPosition(out Vector2 dragPosition))
                 UpdateDrag(dragPosition);
 
-            if (TryGetPointerUp(out _))
-                EndDrag();
+            if (TryGetPointerUp(out Vector2 releasePosition))
+                EndDrag(releasePosition);
         }
     }
 
@@ -143,58 +158,87 @@ public class DraggableItem : MonoBehaviour
             return;
 
         Ray ray = mainCamera.ScreenPointToRay(screenPosition);
-        if (!Physics.Raycast(ray, out RaycastHit hit))
-            return;
-
-        if (hit.collider != itemCollider)
+        if (FindFirstDraggableItem(ray) != this)
             return;
 
         activeDrag = this;
         state = ItemState.Dragging;
-        dragPlaneY = transform.position.y;
+        dragStartWorldPosition = transform.position;
+        pointerDownScreenPosition = screenPosition;
+        dragPlaneHeight = dragStartWorldPosition.y + dragLift;
+        dragPlane = new Plane(Vector3.up, new Vector3(0f, dragPlaneHeight, 0f));
 
-        Plane plane = new Plane(Vector3.up, new Vector3(0f, dragPlaneY, 0f));
-        if (plane.Raycast(ray, out float enter))
+        Ray pointerRay = mainCamera.ScreenPointToRay(screenPosition);
+        if (dragPlane.Raycast(pointerRay, out float enter))
         {
-            Vector3 hitPoint = ray.GetPoint(enter);
-            dragOffset = transform.position - hitPoint;
-            dragOffset.y = 0f;
+            Vector3 pointerWorld = pointerRay.GetPoint(enter);
+            dragPointerOffset = dragStartWorldPosition - pointerWorld;
+            dragPointerOffset.y = 0f;
         }
         else
         {
-            dragOffset = Vector3.zero;
+            dragPointerOffset = Vector3.zero;
         }
 
         transform.localScale = originalScale * dragScale;
+        UpdateDrag(screenPosition);
+    }
+
+    private static DraggableItem FindFirstDraggableItem(Ray ray)
+    {
+        RaycastHit[] hits = Physics.RaycastAll(ray, 1000f);
+        if (hits.Length == 0)
+            return null;
+
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
+        {
+            DraggableItem item = hit.collider.GetComponentInParent<DraggableItem>();
+            if (item != null && item.state == ItemState.Idle && item.isActiveAndEnabled)
+                return item;
+        }
+
+        return null;
     }
 
     private void UpdateDrag(Vector2 screenPosition)
     {
         Ray ray = mainCamera.ScreenPointToRay(screenPosition);
-        Plane plane = new Plane(Vector3.up, new Vector3(0f, dragPlaneY, 0f));
-
-        if (!plane.Raycast(ray, out float enter))
+        if (!dragPlane.Raycast(ray, out float enter))
+        {
             return;
+        }
 
-        Vector3 target = ray.GetPoint(enter) + dragOffset;
-        target.y = dragPlaneY + dragLift;
+        Vector3 target = ray.GetPoint(enter) + dragPointerOffset;
+        target.y = dragPlaneHeight;
         transform.position = target;
     }
 
-    private void EndDrag()
+    private void EndDrag(Vector2 releasePosition)
     {
         activeDrag = null;
         transform.localScale = originalScale;
+
+        bool wasTap = tapToBagEnabled
+            && Vector2.Distance(pointerDownScreenPosition, releasePosition) <= tapMaxMovementPixels;
+
+        if (wasTap)
+        {
+            if (isCorrectItem)
+                PlaceInBag();
+            else
+                Bolum1GameManager.Instance?.OnWrongItemPlaced(this);
+
+            return;
+        }
 
         bool droppedOnBag = BagDropZone.Instance != null
             && BagDropZone.Instance.ContainsPoint(transform.position);
 
         if (droppedOnBag && isCorrectItem)
         {
-            state = ItemState.GoingToBag;
-            itemCollider.enabled = false;
-            Bolum1GameManager.Instance?.OnCorrectItemPlaced(this);
-            StartRoutine(AnimateIntoBag());
+            PlaceInBag();
             return;
         }
 
@@ -206,6 +250,14 @@ public class DraggableItem : MonoBehaviour
         }
 
         ReturnToStart();
+    }
+
+    private void PlaceInBag()
+    {
+        state = ItemState.GoingToBag;
+        itemCollider.enabled = false;
+        Bolum1GameManager.Instance?.OnCorrectItemPlaced(this);
+        StartRoutine(AnimateIntoBag());
     }
 
     // ---------- Disaridan cagrilan ----------
@@ -333,41 +385,93 @@ public class DraggableItem : MonoBehaviour
 
     // ---------- Girdi (dokunma + mouse) ----------
 
-    private static bool TryGetPointerDown(out Vector2 screenPosition)
+    private static bool TryGetPointerDown(out Vector2 screenPosition, out int pointerId)
     {
-        if (Input.touchCount > 0)
+        if (UnityEngine.Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            UnityEngine.Touch touch = UnityEngine.Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
             {
                 screenPosition = touch.position;
+                pointerId = touch.fingerId;
                 return true;
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (UnityEngine.Input.GetMouseButtonDown(0))
         {
-            screenPosition = Input.mousePosition;
+            screenPosition = UnityEngine.Input.mousePosition;
+            pointerId = -1;
             return true;
         }
 
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            pointerId = 0;
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            pointerId = -1;
+            return true;
+        }
+#endif
+
         screenPosition = default;
+        pointerId = -1;
         return false;
+    }
+
+    private static bool IsPointerOverUi(int pointerId)
+    {
+        if (EventSystem.current == null)
+        {
+            return false;
+        }
+
+        if (pointerId >= 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(pointerId);
+        }
+
+        return EventSystem.current.IsPointerOverGameObject();
     }
 
     private static bool TryGetPointerPosition(out Vector2 screenPosition)
     {
-        if (Input.touchCount > 0)
+        if (UnityEngine.Input.touchCount > 0)
         {
-            screenPosition = Input.GetTouch(0).position;
+            screenPosition = UnityEngine.Input.GetTouch(0).position;
             return true;
         }
 
-        if (Input.GetMouseButton(0))
+        if (UnityEngine.Input.GetMouseButton(0))
         {
-            screenPosition = Input.mousePosition;
+            screenPosition = UnityEngine.Input.mousePosition;
             return true;
         }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.isPressed)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            return true;
+        }
+#endif
 
         screenPosition = default;
         return false;
@@ -375,21 +479,37 @@ public class DraggableItem : MonoBehaviour
 
     private static bool TryGetPointerUp(out Vector2 screenPosition)
     {
-        if (Input.touchCount > 0)
+        if (UnityEngine.Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            UnityEngine.Touch touch = UnityEngine.Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Ended || touch.phase == UnityEngine.TouchPhase.Canceled)
             {
                 screenPosition = touch.position;
                 return true;
             }
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (UnityEngine.Input.GetMouseButtonUp(0))
         {
-            screenPosition = Input.mousePosition;
+            screenPosition = UnityEngine.Input.mousePosition;
             return true;
         }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            return true;
+        }
+#endif
 
         screenPosition = default;
         return false;

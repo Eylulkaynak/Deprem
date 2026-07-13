@@ -88,7 +88,7 @@ public class IsometricCameraFollow : MonoBehaviour
 
     private Vector3 CalculateCameraPosition()
     {
-        Vector3 orbitOffset = Quaternion.Euler(0f, yawAngle, 0f) *
+        Vector3 orbitOffset = Quaternion.Euler(pitchAngle, yawAngle, 0f) *
             new Vector3(0f, height, -distance);
 
         return target.position + orbitOffset;

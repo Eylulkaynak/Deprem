@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DropSlot : MonoBehaviour, IDropHandler
+public class DropSlot : MonoBehaviour, IDropHandler, IPointerClickHandler
 {
     [Header("Slot Info")]
     public int slotOrder;
@@ -11,11 +11,21 @@ public class DropSlot : MonoBehaviour, IDropHandler
 
     public DraggableCard currentCard;
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        ResolveManagerIfNeeded();
+
+        if (cardGameManager != null)
+        {
+            cardGameManager.HandleSlotTapped(this);
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         DraggableCard card = GetDraggedCard(eventData);
 
-        if (card == null || !CanAccept(card))
+        if (card == null)
         {
             return;
         }
@@ -35,9 +45,32 @@ public class DropSlot : MonoBehaviour, IDropHandler
 
     public void AcceptCard(DraggableCard card)
     {
-        if (!CanAccept(card))
+        if (card == null)
         {
             return;
+        }
+
+        DropSlot replacementSlot = card.currentSlot != null ? card.currentSlot : card.PreviousSlot;
+        if (card.currentSlot != null && card.currentSlot != this)
+        {
+            card.currentSlot.ClearSlot(card);
+        }
+
+        if (currentCard != null && currentCard != card)
+        {
+            DraggableCard displacedCard = currentCard;
+            currentCard = null;
+
+            if (replacementSlot != null &&
+                replacementSlot != this &&
+                replacementSlot.CanAccept(displacedCard))
+            {
+                replacementSlot.AcceptCard(displacedCard);
+            }
+            else
+            {
+                displacedCard.ReturnToStartArea();
+            }
         }
 
         currentCard = card;
@@ -80,14 +113,19 @@ public class DropSlot : MonoBehaviour, IDropHandler
 
     private void NotifyCardPlaced()
     {
-        if (cardGameManager == null)
-        {
-            cardGameManager = FindObjectOfType<CardGameManager>();
-        }
+        ResolveManagerIfNeeded();
 
         if (cardGameManager != null)
         {
             cardGameManager.OnCardPlacedInSlot();
+        }
+    }
+
+    private void ResolveManagerIfNeeded()
+    {
+        if (cardGameManager == null)
+        {
+            cardGameManager = FindFirstObjectByType<CardGameManager>();
         }
     }
 }

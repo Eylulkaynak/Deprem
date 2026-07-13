@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Bolum1GameManager : MonoBehaviour
 {
@@ -21,9 +22,16 @@ public class Bolum1GameManager : MonoBehaviour
     [Tooltip("Son esyanin canta animasyonunun bitmesi icin beklenecek sure (saniye).")]
     [SerializeField] private float successPanelDelay = 1f;
 
+    [Tooltip("Bolum bitince siradaki sahneye otomatik gec.")]
+    [SerializeField] private bool loadNextSceneOnComplete = true;
+
+    [SerializeField] private string nextSceneName = "Bolum2";
+
+    [SerializeField] private float nextSceneDelay = 1.5f;
+
     [Header("Geri Bildirim")]
     [SerializeField] private string wrongItemMessage =
-        "Bu eğlenceli ama acil durumda önce su, yiyecek ve yardım eşyaları gerekli.";
+        "Acil durumda once su, yiyecek, fener, radyo, ilk yardim ve temel esyalar gerekli.";
 
     private readonly HashSet<DraggableItem> placedCorrectItems = new HashSet<DraggableItem>();
     private int totalCorrectItems;
@@ -60,7 +68,7 @@ public class Bolum1GameManager : MonoBehaviour
         if (item == null || !placedCorrectItems.Add(item))
             return;
 
-        Debug.Log($"Doğru eşya: {item.name} ({PlacedCorrectCount}/{TotalCorrectItems})");
+        Debug.Log($"Dogru esya: {item.name} ({PlacedCorrectCount}/{TotalCorrectItems})");
         Bolum1FeedbackUI.Instance?.ShowCorrectMark();
         Bolum1HintSystem.Instance?.ResetTimer();
         UpdateStarText();
@@ -103,7 +111,7 @@ public class Bolum1GameManager : MonoBehaviour
     private void UpdateStarText()
     {
         if (starText != null)
-            starText.text = $"Yıldız: {PlacedCorrectCount}/{totalCorrectItems}";
+            starText.text = $"<b>Afet cantasini hazirla</b>\nEsyaya dokun veya cantaya surukle  {PlacedCorrectCount}/{totalCorrectItems}";
     }
 
     private IEnumerator ShowSuccessPanelAfterDelay()
@@ -114,5 +122,19 @@ public class Bolum1GameManager : MonoBehaviour
 
         if (successPanel != null)
             successPanel.SetActive(true);
+
+        if (loadNextSceneOnComplete)
+        {
+            yield return new WaitForSeconds(nextSceneDelay);
+            LoadNextScene();
+        }
+    }
+
+    private void LoadNextScene()
+    {
+        if (string.IsNullOrWhiteSpace(nextSceneName))
+            return;
+
+        SceneManager.LoadScene(nextSceneName);
     }
 }

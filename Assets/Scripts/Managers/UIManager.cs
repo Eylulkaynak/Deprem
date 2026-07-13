@@ -1,32 +1,65 @@
+using TMPro;
 using UnityEngine;
-using TMPro; // TextMeshPro için
 
 public class UIManager : MonoBehaviour
 {
-    [Header("UI Elemanları")]
-    public GameObject uyariPaneli; // Ekrana çıkacak genel panel
-    public TextMeshProUGUI uyariMetni; // Uyarı yazısının değişeceği text nesnesi
+    [Header("UI")]
+    public GameObject uyariPaneli;
+    public TextMeshProUGUI uyariMetni;
 
-    // Bu fonksiyonu deprem başladığında veya tehlikeli objeye yaklaşıldığında çağır
-    public void UyariGoster(string mesaj)
+    private bool pausedByThisManager;
+
+    private void OnDisable()
     {
-        // 1. Gelen mesajı ekrana yazdır
-        uyariMetni.text = mesaj;
-        
-        // 2. Paneli görünür yap
-        uyariPaneli.SetActive(true);
-        
-        // 3. ZAMANI DURDUR
-        Time.timeScale = 0f; 
+        ReleasePauseState();
     }
 
-    // Bu fonksiyonu uyarı panelindeki "Anladım" butonuna bağlayacağız
+    private void OnDestroy()
+    {
+        ReleasePauseState();
+    }
+
+    public void UyariGoster(string mesaj)
+    {
+        bool hasVisiblePanel = uyariPaneli != null;
+
+        if (uyariMetni != null)
+        {
+            uyariMetni.text = mesaj;
+        }
+
+        if (hasVisiblePanel)
+        {
+            uyariPaneli.SetActive(true);
+        }
+
+        if (!hasVisiblePanel)
+        {
+            return;
+        }
+
+        Time.timeScale = 0f;
+        pausedByThisManager = true;
+    }
+
     public void UyariyiKapatVeDevamEt()
     {
-        // 1. Paneli gizle
-        uyariPaneli.SetActive(false);
-        
-        // 2. ZAMANI NORMALE DÖNDÜR
-        Time.timeScale = 1f; 
+        if (uyariPaneli != null)
+        {
+            uyariPaneli.SetActive(false);
+        }
+
+        ReleasePauseState();
+    }
+
+    private void ReleasePauseState()
+    {
+        if (!pausedByThisManager)
+        {
+            return;
+        }
+
+        pausedByThisManager = false;
+        Time.timeScale = 1f;
     }
 }

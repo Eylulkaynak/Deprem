@@ -156,8 +156,8 @@ public class StairInfoBubbleUI : MonoBehaviour
         if (canvasGroup != null)
         {
             canvasGroup.alpha = alpha;
-            canvasGroup.interactable = alpha > 0.01f;
-            canvasGroup.blocksRaycasts = alpha > 0.01f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
         }
 
         if (bubbleRect != null)

@@ -21,13 +21,14 @@ public class EarthquakeEventManager : MonoBehaviour
 
     private Coroutine earthquakeRoutine;
     private Vector3 originalCameraLocalPosition;
+    private IsometricCameraFollow cameraFollow;
+    private bool cameraFollowWasEnabled;
+    private bool cameraFollowPaused;
+    private bool hasOriginalCameraLocalPosition;
 
     private void Start()
     {
-        if (targetCamera == null)
-        {
-            targetCamera = Camera.main;
-        }
+        ResolveCamera();
 
         SetWarningVisible(false);
         earthquakeRoutine = StartCoroutine(EarthquakeSequence());
@@ -38,9 +39,23 @@ public class EarthquakeEventManager : MonoBehaviour
         if (earthquakeRoutine != null)
         {
             StopCoroutine(earthquakeRoutine);
+            ResetCameraPosition();
+            RestoreCameraFollow();
         }
 
         earthquakeRoutine = StartCoroutine(RunEarthquake());
+    }
+
+    private void OnDisable()
+    {
+        if (earthquakeRoutine != null)
+        {
+            StopCoroutine(earthquakeRoutine);
+            earthquakeRoutine = null;
+        }
+
+        ResetCameraPosition();
+        RestoreCameraFollow();
     }
 
     private IEnumerator EarthquakeSequence()
@@ -55,16 +70,15 @@ public class EarthquakeEventManager : MonoBehaviour
 
     private IEnumerator RunEarthquake()
     {
-        if (targetCamera == null)
-        {
-            targetCamera = Camera.main;
-        }
+        ResolveCamera();
 
         if (targetCamera != null)
         {
             originalCameraLocalPosition = targetCamera.transform.localPosition;
+            hasOriginalCameraLocalPosition = true;
         }
 
+        PauseCameraFollow();
         ShowWarning();
 
         float elapsedTime = 0f;
@@ -76,6 +90,7 @@ public class EarthquakeEventManager : MonoBehaviour
         }
 
         ResetCameraPosition();
+        RestoreCameraFollow();
         SetWarningVisible(false);
         ShowCardGame();
         earthquakeRoutine = null;
@@ -98,9 +113,47 @@ public class EarthquakeEventManager : MonoBehaviour
 
     private void ResetCameraPosition()
     {
-        if (targetCamera != null)
+        if (targetCamera != null && hasOriginalCameraLocalPosition)
         {
             targetCamera.transform.localPosition = originalCameraLocalPosition;
+        }
+    }
+
+    private void ResolveCamera()
+    {
+        if (targetCamera == null)
+        {
+            targetCamera = Camera.main;
+        }
+
+        cameraFollow = targetCamera != null ? targetCamera.GetComponent<IsometricCameraFollow>() : null;
+    }
+
+    private void PauseCameraFollow()
+    {
+        if (cameraFollow == null)
+        {
+            return;
+        }
+
+        cameraFollowWasEnabled = cameraFollow.enabled;
+        cameraFollow.enabled = false;
+        cameraFollowPaused = true;
+    }
+
+    private void RestoreCameraFollow()
+    {
+        if (cameraFollow == null || !cameraFollowPaused)
+        {
+            return;
+        }
+
+        cameraFollow.enabled = cameraFollowWasEnabled;
+        cameraFollowPaused = false;
+
+        if (cameraFollow.enabled)
+        {
+            cameraFollow.SnapToTarget();
         }
     }
 

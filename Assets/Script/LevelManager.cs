@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 // ============================================================
 //  LevelManager.cs
@@ -20,6 +22,14 @@ public class LevelManager : MonoBehaviour
 
     [Header("Bitis Ekrani")]
     public GameObject tebriklerPaneli;
+
+    [Header("Arayuz")]
+    public TMP_Text ilerlemeYazisi;
+    public string ilerlemeMetniFormat = "Sabitlenen: {0}/{1}";
+
+    public bool sonrakiSahneyeGec = true;
+    public string sonrakiSahneAdi = "Bolum3";
+    public float sonrakiSahneBeklemeSuresi = 1.8f;
 
     [Header("Ses (opsiyonel)")]
     public AudioClip zaferSesi;
@@ -42,11 +52,11 @@ public class LevelManager : MonoBehaviour
 
         HashSet<GameObject> hazardObjects = new HashSet<GameObject>();
 
-        foreach (WobbleFixer w in FindObjectsOfType<WobbleFixer>())
+        foreach (WobbleFixer w in FindObjectsByType<WobbleFixer>(FindObjectsSortMode.None))
             hazardObjects.Add(w.gameObject);
-        foreach (HazardMover m in FindObjectsOfType<HazardMover>())
+        foreach (HazardMover m in FindObjectsByType<HazardMover>(FindObjectsSortMode.None))
             hazardObjects.Add(m.gameObject);
-        foreach (DrillFixSequence d in FindObjectsOfType<DrillFixSequence>())
+        foreach (DrillFixSequence d in FindObjectsByType<DrillFixSequence>(FindObjectsSortMode.None))
             hazardObjects.Add(d.gameObject);
 
         totalHazards = hazardObjects.Count;
@@ -55,6 +65,8 @@ public class LevelManager : MonoBehaviour
         foreach (GameObject go in hazardObjects)
             Debug.Log("  - " + go.name);
         Debug.Log("Toplam: " + totalHazards);
+
+        UpdateProgressUI();
     }
 
     public void HazardFixed(GameObject hazardObject)
@@ -64,6 +76,7 @@ public class LevelManager : MonoBehaviour
 
         fixedObjects.Add(hazardObject);
         Debug.Log("Cozuldu: " + hazardObject.name + "  (" + fixedObjects.Count + " / " + totalHazards + ")");
+        UpdateProgressUI();
 
         if (fixedObjects.Count >= totalHazards)
         {
@@ -93,9 +106,23 @@ public class LevelManager : MonoBehaviour
         if (tebriklerPaneli != null) tebriklerPaneli.SetActive(true);
 
         Debug.Log("*** ODA GUVENLI ***");
+
+        if (sonrakiSahneyeGec && !string.IsNullOrWhiteSpace(sonrakiSahneAdi))
+        {
+            yield return new WaitForSeconds(sonrakiSahneBeklemeSuresi);
+            SceneManager.LoadScene(sonrakiSahneAdi);
+        }
     }
 
     public int CozulenSayisi() => fixedObjects.Count;
     public int ToplamSayi() => totalHazards;
     public bool OyunBittiMi() => bitti;
+
+    private void UpdateProgressUI()
+    {
+        if (ilerlemeYazisi == null)
+            return;
+
+        ilerlemeYazisi.text = string.Format(ilerlemeMetniFormat, fixedObjects.Count, totalHazards);
+    }
 }

@@ -196,7 +196,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2571689292225610219, guid: 48c897de7006f436ebc613446e766067, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -206,9 +207,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3725680173231446836, guid: 48c897de7006f436ebc613446e766067, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1303459513}
-    - targetCorrespondingSourceObject: {fileID: 3725680173231446836, guid: 48c897de7006f436ebc613446e766067, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1303459517}
   m_SourcePrefab: {fileID: 100100000, guid: 48c897de7006f436ebc613446e766067, type: 3}
 --- !u!1 &121230966
 GameObject:
@@ -247,8 +245,15 @@ MonoBehaviour:
   successPanel: {fileID: 2102107859}
   failPanel: {fileID: 1409622335}
   scoreText: {fileID: 1649332924}
-  earthquakeDuration: 5
+  loadNextSceneOnSuccess: 1
+  nextSceneName: Bolum4
+  nextSceneDelay: 2.5
+  reloadSceneOnFail: 1
+  failRestartDelay: 4
+  earthquakeDuration: 11
   earthquakePower: 0.08
+  safeArrivalGraceTime: 6
+  earthquakeStartMessageDuration: 1.2
 --- !u!4 &121230968
 Transform:
   m_ObjectHideFlags: 0
@@ -277,6 +282,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 0
+  fallbackScreenPickRadius: 220
+  scaleFallbackRadiusWithScreenSize: 1
+  fallbackReferenceShortSide: 1080
 --- !u!1 &127362060
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,16 +311,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127362060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -217}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 554843898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000011444, y: 0}
-  m_SizeDelta: {x: 687.5255, y: 415.3079}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -72, y: -48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127362062
 MonoBehaviour:
@@ -328,13 +336,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: a
+  m_text: "<b>DEPREM BASLADI</b>\nGuvenli alana dokun. COK - KAPAN - TUTUN."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4417102a02b1005459ed918678893492, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -343,8 +351,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278192836
-  m_fontColor: {r: 0.76699996, g: 0.037761077, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -361,12 +369,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSize: 38
+  m_fontSizeBase: 38
+  m_fontWeight: 500
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 20
+  m_fontSizeMax: 38
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -505,7 +513,7 @@ Canvas:
   m_Camera: {fileID: 1095115828}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
-  m_ReceivesEvents: 1
+  m_ReceivesEvents: 0
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
@@ -575,12 +583,12 @@ GameObject:
   - component: {fileID: 330437500}
   - component: {fileID: 330437499}
   m_Layer: 0
-  m_Name: baloncuks-removebg-preview
+  m_Name: Desk Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &330437499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -645,7 +653,7 @@ Transform:
   m_GameObject: {fileID: 330437498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.4446701, z: -0, w: 0.89569443}
-  m_LocalPosition: {x: 619.2, y: 138, z: -461.9}
+  m_LocalPosition: {x: 289, y: 180, z: -634}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -702,7 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1037,16 +1045,16 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 127362061}
   - {fileID: 365606303}
   m_Father: {fileID: 919687876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.13025968, y: 0}
-  m_AnchorMax: {x: 1, y: 0.74643594}
-  m_AnchoredPosition: {x: -59, y: 64.5}
-  m_SizeDelta: {x: 118, y: 129}
+  m_AnchorMin: {x: 0.06, y: 0.79}
+  m_AnchorMax: {x: 0.94, y: 0.94}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554843899
 MonoBehaviour:
@@ -1061,7 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.125, g: 0.125, b: 0.125, a: 0.05882353}
+  m_Color: {r: 0.07, g: 0.085, b: 0.09, a: 0.94}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1137,7 +1145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1401,12 +1409,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1421,7 +1429,7 @@ Canvas:
   m_GameObject: {fileID: 919687872}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1514,7 +1522,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -1534,7 +1542,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 72
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1913,9 +1921,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33221b32a3afabd4caf1f6dc9f7d4b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 5.5
   rotationSpeed: 10
   arrivalThreshold: 0.8
+  speedParameter: Speed
+  animatorWalkReferenceSpeed: 0.9
+  maxAnimatorMoveSpeed: 2.8
+  useTransformFallbackWhenControllerStuck: 1
+  stuckMoveEpsilon: 0.001
 --- !u!136 &1303459513
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1939,18 +1952,6 @@ CapsuleCollider:
   m_Height: 1.1019917
   m_Direction: 1
   m_Center: {x: 0.0388888, y: 0.47944283, z: -0.2043276}
---- !u!114 &1303459517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303459507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d5ef43da6cc9e4dbce38f8560ddb3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1309674413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,10 +1984,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1409622336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000015259}
-  m_SizeDelta: {x: 927, y: 521.25}
+  m_AnchorMin: {x: 0.08, y: 0.08}
+  m_AnchorMax: {x: 0.92, y: 0.92}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309674415
 MonoBehaviour:
@@ -2002,15 +2003,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tekrar Deneyelim!\r\n\r\nBu kez guvenli alana zaman\u0131nda ulasamad\u0131n.\r\n\r\nBir
-    sonraki denemende daha dikkatli olacag\u0131na inan\u0131yoruz!\r\n\r\nUnutma:\r\nDeprem
-    an\u0131nda guvenli bir yere git,\r\nCOK \u2022 KAPAN \u2022 TUTUN\r\n"
+  m_text: "<b>TEKRAR DENEYELIM</b>\n\nGuvenli alana zamaninda ulasamadik.\nBir
+    sonraki denemede guvenli noktaya hemen dokun.\n\nCOK - KAPAN - TUTUN"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4417102a02b1005459ed918678893492, type: 2}
   m_sharedMaterial: {fileID: -3756384142307692889, guid: 4417102a02b1005459ed918678893492, type: 2}
@@ -2037,12 +2037,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 500
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.2272034, y: 1.8556519, z: 0.52215576, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2181,7 +2181,7 @@ Canvas:
   m_Camera: {fileID: 1095115828}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
-  m_ReceivesEvents: 1
+  m_ReceivesEvents: 0
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
@@ -2224,8 +2224,8 @@ RectTransform:
   - {fileID: 1309674414}
   m_Father: {fileID: 919687876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.07, y: 0.25}
+  m_AnchorMax: {x: 0.93, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2242,7 +2242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.12, g: 0.07, b: 0.07, a: 0.95}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2299,10 +2299,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2102107860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.08, y: 0.08}
+  m_AnchorMax: {x: 0.92, y: 0.92}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 365.1602, y: 189.1799}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649332924
 MonoBehaviour:
@@ -2318,13 +2318,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tebrikler! \xC7ok do\u011Fru davrand\u0131n!"
+  m_text: Tebrikler! Cok dogru davrandin!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4417102a02b1005459ed918678893492, type: 2}
   m_sharedMaterial: {fileID: -3756384142307692889, guid: 4417102a02b1005459ed918678893492, type: 2}
@@ -2354,9 +2354,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 24
+  m_fontSizeMax: 40
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -2389,7 +2389,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -148.34572, y: -113.799225, z: -140.2171, w: -130.05647}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 1
@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2596,7 +2596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeableObjects:
   - {fileID: 919132149580998001}
-  - {fileID: 1303459517}
   - {fileID: 6546798968640698992}
   - {fileID: 8954624377225352511}
   - {fileID: 919132148570720978}
@@ -2762,7 +2761,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058075687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 139}
+  m_LocalPosition: {x: -250, y: 0, z: 139}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2771,7 +2770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 126}
+  m_AnchoredPosition: {x: -250, y: 126}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058075689
@@ -2827,7 +2826,7 @@ Canvas:
   m_Camera: {fileID: 1095115828}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
-  m_ReceivesEvents: 1
+  m_ReceivesEvents: 0
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
@@ -2888,7 +2887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2945,10 +2944,10 @@ RectTransform:
   - {fileID: 1649332923}
   m_Father: {fileID: 919687876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -255.25}
-  m_SizeDelta: {x: 910, y: 512}
+  m_AnchorMin: {x: 0.08, y: 0.7}
+  m_AnchorMax: {x: 0.92, y: 0.92}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102107861
 MonoBehaviour:
@@ -2963,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.035, g: 0.24, b: 0.18, a: 0.95}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3787,7 +3786,7 @@ MonoBehaviour:
   areaType: 0
   targetPoint: {fileID: 476872620}
   wrongFeedbackMessage: 
-  bubble: {fileID: 0}
+  bubble: {fileID: 330437498}
 --- !u!1 &919132148570720976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,7 +3820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaType: 1
   targetPoint: {fileID: 712502594}
-  wrongFeedbackMessage: "Dolap devrilebilir, sars\u0131nt\u0131 bitene kadar g\xFCvenli
+  wrongFeedbackMessage: "Dolap devrilebilir, sarsinti bitene kadar guvenli
     bir yer buluyoruz.\n"
   bubble: {fileID: 165971507}
 --- !u!114 &919132148570720978
@@ -6806,8 +6805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaType: 1
   targetPoint: {fileID: 600175108}
-  wrongFeedbackMessage: "Pencereye yakla\u015Fmak tehlikeli, cam k\u0131r\u0131labilir!
-    Sa\u011Flam bir yere gidelim."
+  wrongFeedbackMessage: "Pencereye yaklasmak tehlikeli, cam kirilabilir!
+    Saglam bir yere gidelim."
   bubble: {fileID: 2058075687}
 --- !u!65 &6546798968640698991
 BoxCollider:

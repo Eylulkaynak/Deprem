@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,9 +19,9 @@ public class DoorMissionManager : MonoBehaviour
     [Header("Mission UI")]
     public GameObject goToDoorIndicator;
     public TMP_Text missionText;
-    public string missionMessage = "Kap\u0131ya ilerle";
+    public string missionMessage = "Kapiya ilerle";
     public StairInfoBubbleUI doorInfoBubbleUI;
-    public string doorBubbleMessage = "Kap\u0131ya do\u011fru ilerle.";
+    public string doorBubbleMessage = "Kapiya dogru ilerle.";
 
     [Header("Fade")]
     public GameObject fadePanel;
@@ -42,7 +44,7 @@ public class DoorMissionManager : MonoBehaviour
     [Header("Legacy Transition")]
     public GameObject transitionPanel;
     public bool loadSceneOnReachedDoor;
-    public string nextSceneName = "StairMission";
+    public string nextSceneName = "";
 
     private bool missionActive;
     private bool doorReached;
@@ -106,7 +108,8 @@ public class DoorMissionManager : MonoBehaviour
             return;
         }
 
-        if (TryGetClickOrTouchPosition(out Vector2 screenPosition))
+        if (TryGetClickOrTouchPosition(out Vector2 screenPosition, out int pointerId) &&
+            !IsPointerOverUi(pointerId))
         {
             TrySelectDoor(screenPosition);
         }
@@ -420,26 +423,62 @@ public class DoorMissionManager : MonoBehaviour
         fadeImage.color = color;
     }
 
-    private bool TryGetClickOrTouchPosition(out Vector2 screenPosition)
+    private bool TryGetClickOrTouchPosition(out Vector2 screenPosition, out int pointerId)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (UnityEngine.Input.touchCount > 0)
         {
-            screenPosition = Input.mousePosition;
-            return true;
-        }
-
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            UnityEngine.Touch touch = UnityEngine.Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
             {
                 screenPosition = touch.position;
+                pointerId = touch.fingerId;
                 return true;
             }
         }
 
+        if (UnityEngine.Input.GetMouseButtonDown(0))
+        {
+            screenPosition = UnityEngine.Input.mousePosition;
+            pointerId = -1;
+            return true;
+        }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            pointerId = 0;
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            pointerId = -1;
+            return true;
+        }
+#endif
+
         screenPosition = Vector2.zero;
+        pointerId = -1;
         return false;
+    }
+
+    private bool IsPointerOverUi(int pointerId)
+    {
+        if (EventSystem.current == null)
+        {
+            return false;
+        }
+
+        if (pointerId >= 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(pointerId);
+        }
+
+        return EventSystem.current.IsPointerOverGameObject();
     }
 
     private void TrySelectDoor(Vector2 screenPosition)
@@ -455,15 +494,22 @@ public class DoorMissionManager : MonoBehaviour
         }
 
         Ray ray = raycastCamera.ScreenPointToRay(screenPosition);
-        if (!Physics.Raycast(ray, out RaycastHit hit))
+        RaycastHit[] hits = Physics.RaycastAll(ray, 1000f);
+        if (hits.Length == 0)
         {
             return;
         }
 
-        DoorTarget target = hit.collider.GetComponentInParent<DoorTarget>();
-        if (target != null)
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
         {
-            MovePlayerToDoor(target);
+            DoorTarget target = hit.collider.GetComponentInParent<DoorTarget>();
+            if (target != null && target.isActiveAndEnabled)
+            {
+                MovePlayerToDoor(target);
+                return;
+            }
         }
     }
 

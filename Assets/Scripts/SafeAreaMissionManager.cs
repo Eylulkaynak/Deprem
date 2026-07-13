@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SafeAreaMissionManager : MonoBehaviour
@@ -50,6 +52,14 @@ public class SafeAreaMissionManager : MonoBehaviour
     public float stoppingDistance = 0.5f;
     public float gravity = -20f;
     public float groundedGravity = -2f;
+    public string speedParameter = "Speed";
+    public float animatorWalkReferenceSpeed = 2f;
+    public float maxAnimatorMoveSpeed = 2f;
+    public bool freeClickToMove = true;
+    public LayerMask walkableLayers = ~0;
+    [Range(0f, 1f)] public float minWalkableNormalY = 0.45f;
+    public bool useTransformFallbackWhenControllerStuck = true;
+    public float stuckMoveEpsilon = 0.001f;
 
     private Coroutine missionRoutine;
     private Coroutine moveRoutine;
@@ -85,9 +95,18 @@ public class SafeAreaMissionManager : MonoBehaviour
             return;
         }
 
-        if (TryGetClickOrTouchPosition(out Vector2 screenPosition))
+        if (TryGetClickOrTouchPosition(out Vector2 screenPosition, out int pointerId) &&
+            !IsPointerOverUi(pointerId))
         {
-            TrySelectSafeAreaTarget(screenPosition);
+            if (TrySelectSafeAreaTarget(screenPosition))
+            {
+                return;
+            }
+
+            if (freeClickToMove)
+            {
+                TrySelectFreeMoveTarget(screenPosition);
+            }
         }
     }
 
@@ -150,9 +169,11 @@ public class SafeAreaMissionManager : MonoBehaviour
         if (moveRoutine != null)
         {
             StopCoroutine(moveRoutine);
+            moveRoutine = null;
         }
 
         Debug.Log("Safe area movement started");
+        missionActive = false;
         moveRoutine = StartCoroutine(MoveToSafeAreaTargetRoutine());
     }
 
@@ -188,7 +209,7 @@ public class SafeAreaMissionManager : MonoBehaviour
         SetFadeAlpha(0f, false);
 
         missionActive = true;
-        ShowInfoMessage("A\u00e7\u0131k ve g\u00fcvenli alana ilerle.");
+        ShowInfoMessage("Acik ve guvenli alana ilerle.");
         ValidateClickTarget();
 
         if (autoWalkToSafeArea)
@@ -232,34 +253,152 @@ public class SafeAreaMissionManager : MonoBehaviour
         missionActive = false;
         SetAnimatorSpeed(0f);
         Debug.Log("SafeAreaMissionManager: Safe area target reached.");
-        ShowInfoMessage("Harika! G\u00fcvenli toplanma alan\u0131na ula\u015ft\u0131n.");
+        ShowInfoMessage("Harika! Guvenli toplanma alanina ulastin.");
         ShowFinalPanel();
         moveRoutine = null;
     }
 
-    private bool TryGetClickOrTouchPosition(out Vector2 screenPosition)
+    private void StartWalkingToFreeTarget(Vector3 worldPosition)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (targetReached || playerTransform == null)
         {
-            screenPosition = Input.mousePosition;
-            return true;
+            return;
         }
 
-        if (Input.touchCount > 0)
+        if (moveRoutine != null)
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            StopCoroutine(moveRoutine);
+            moveRoutine = null;
+        }
+
+        moveRoutine = StartCoroutine(MoveToFreeTargetRoutine(worldPosition));
+    }
+
+    private IEnumerator MoveToFreeTargetRoutine(Vector3 worldPosition)
+    {
+        if (playerTransform == null)
+        {
+            SetAnimatorSpeed(0f);
+            yield break;
+        }
+
+        SetAnimatorSpeed(1f);
+
+        while (true)
+        {
+            Vector3 currentPosition = playerTransform.position;
+            Vector3 flatTarget = new Vector3(worldPosition.x, currentPosition.y, worldPosition.z);
+            Vector3 toTarget = flatTarget - currentPosition;
+
+            if (toTarget.magnitude <= stoppingDistance)
+            {
+                break;
+            }
+
+            Vector3 direction = toTarget.normalized;
+            RotatePlayerTowards(direction);
+            MovePlayer(direction);
+            SetAnimatorSpeed(1f);
+            yield return null;
+        }
+
+        SetAnimatorSpeed(0f);
+        moveRoutine = null;
+    }
+
+    private bool TryGetClickOrTouchPosition(out Vector2 screenPosition, out int pointerId)
+    {
+        if (UnityEngine.Input.touchCount > 0)
+        {
+            UnityEngine.Touch touch = UnityEngine.Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
             {
                 screenPosition = touch.position;
+                pointerId = touch.fingerId;
                 return true;
             }
         }
 
+        if (UnityEngine.Input.GetMouseButtonDown(0))
+        {
+            screenPosition = UnityEngine.Input.mousePosition;
+            pointerId = -1;
+            return true;
+        }
+
+#if ENABLE_INPUT_SYSTEM
+        if (UnityEngine.InputSystem.Touchscreen.current != null &&
+            UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Touchscreen.current.primaryTouch.position.ReadValue();
+            pointerId = 0;
+            return true;
+        }
+
+        if (UnityEngine.InputSystem.Mouse.current != null &&
+            UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            screenPosition = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+            pointerId = -1;
+            return true;
+        }
+#endif
+
         screenPosition = Vector2.zero;
+        pointerId = -1;
         return false;
     }
 
-    private void TrySelectSafeAreaTarget(Vector2 screenPosition)
+    private bool IsPointerOverUi(int pointerId)
+    {
+        if (EventSystem.current == null)
+        {
+            return false;
+        }
+
+        if (pointerId >= 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(pointerId);
+        }
+
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+
+    private bool TrySelectSafeAreaTarget(Vector2 screenPosition)
+    {
+        if (raycastCamera == null)
+        {
+            raycastCamera = Camera.main;
+        }
+
+        if (raycastCamera == null)
+        {
+            return false;
+        }
+
+        Ray ray = raycastCamera.ScreenPointToRay(screenPosition);
+        RaycastHit[] hits = Physics.RaycastAll(ray, 1000f);
+        if (hits.Length == 0)
+        {
+            return false;
+        }
+
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
+        {
+            SafeAreaClickTarget clickTarget = hit.collider.GetComponentInParent<SafeAreaClickTarget>();
+            if (clickTarget != null && clickTarget.isActiveAndEnabled)
+            {
+                OnSafeAreaTargetClicked(clickTarget);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void TrySelectFreeMoveTarget(Vector2 screenPosition)
     {
         if (raycastCamera == null)
         {
@@ -272,15 +411,28 @@ public class SafeAreaMissionManager : MonoBehaviour
         }
 
         Ray ray = raycastCamera.ScreenPointToRay(screenPosition);
-        if (!Physics.Raycast(ray, out RaycastHit hit))
+        RaycastHit[] hits = Physics.RaycastAll(ray, 1000f, walkableLayers);
+        if (hits.Length == 0)
         {
             return;
         }
 
-        SafeAreaClickTarget clickTarget = hit.collider.GetComponentInParent<SafeAreaClickTarget>();
-        if (clickTarget != null)
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
         {
-            OnSafeAreaTargetClicked(clickTarget);
+            if (hit.collider.GetComponentInParent<SafeAreaClickTarget>() != null)
+            {
+                return;
+            }
+
+            if (hit.normal.y < minWalkableNormalY)
+            {
+                continue;
+            }
+
+            StartWalkingToFreeTarget(hit.point);
+            return;
         }
     }
 
@@ -367,7 +519,9 @@ public class SafeAreaMissionManager : MonoBehaviour
 
         if (playerCharacterController != null && playerCharacterController.enabled)
         {
+            Vector3 beforeMove = playerTransform.position;
             playerCharacterController.Move(move * Time.deltaTime);
+            ApplyTransformFallbackIfStuck(beforeMove, horizontalMove);
             return;
         }
 
@@ -375,6 +529,23 @@ public class SafeAreaMissionManager : MonoBehaviour
         {
             playerTransform.position += horizontalMove * Time.deltaTime;
         }
+    }
+
+    private void ApplyTransformFallbackIfStuck(Vector3 beforeMove, Vector3 horizontalMove)
+    {
+        if (!useTransformFallbackWhenControllerStuck || playerTransform == null || horizontalMove.sqrMagnitude <= 0.0001f)
+        {
+            return;
+        }
+
+        Vector2 beforeFlat = new Vector2(beforeMove.x, beforeMove.z);
+        Vector2 afterFlat = new Vector2(playerTransform.position.x, playerTransform.position.z);
+        if ((afterFlat - beforeFlat).sqrMagnitude > stuckMoveEpsilon * stuckMoveEpsilon)
+        {
+            return;
+        }
+
+        playerTransform.position += horizontalMove * Time.deltaTime;
     }
 
     private void ApplyGravity()
@@ -456,12 +627,12 @@ public class SafeAreaMissionManager : MonoBehaviour
 
         if (finalTitleText != null)
         {
-            finalTitleText.text = "G\u00f6rev Tamamland\u0131!";
+            finalTitleText.text = "Gorev Tamamlandi!";
         }
 
         if (finalDescriptionText != null)
         {
-            finalDescriptionText.text = "Deprem sonras\u0131 do\u011fru ad\u0131mlar\u0131 \u00f6\u011frendin.";
+            finalDescriptionText.text = "Deprem sonrasi dogru adimlari ogrendin.";
         }
     }
 
@@ -498,13 +669,22 @@ public class SafeAreaMissionManager : MonoBehaviour
     {
         if (animator != null && hasSpeedParameter)
         {
-            animator.SetFloat("Speed", speed);
+            float speedValue = 0f;
+            if (speed > 0f)
+            {
+                speedValue = Mathf.Clamp(
+                    speed * moveSpeed / Mathf.Max(0.01f, animatorWalkReferenceSpeed),
+                    0.5f,
+                    maxAnimatorMoveSpeed);
+            }
+
+            animator.SetFloat(speedParameter, speedValue);
         }
     }
 
     private bool HasAnimatorSpeedParameter()
     {
-        if (animator == null)
+        if (animator == null || string.IsNullOrWhiteSpace(speedParameter))
         {
             return false;
         }
@@ -512,7 +692,7 @@ public class SafeAreaMissionManager : MonoBehaviour
         foreach (AnimatorControllerParameter parameter in animator.parameters)
         {
             if (parameter.type == AnimatorControllerParameterType.Float &&
-                parameter.name == "Speed")
+                parameter.name == speedParameter)
             {
                 return true;
             }

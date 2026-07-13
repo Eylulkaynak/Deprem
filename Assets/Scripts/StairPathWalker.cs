@@ -9,6 +9,8 @@ public class StairPathWalker : MonoBehaviour
     public float moveSpeed = 2f;
     public float rotationSpeed = 8f;
     public float stoppingDistance = 0.35f;
+    public bool useTransformFallbackWhenControllerStuck = true;
+    public float stuckMoveEpsilon = 0.001f;
 
     [Header("Gravity")]
     public float gravity = -20f;
@@ -17,6 +19,8 @@ public class StairPathWalker : MonoBehaviour
     [Header("Animator")]
     public Animator animator;
     public string speedParameter = "Speed";
+    public float animatorWalkReferenceSpeed = 2f;
+    public float maxAnimatorMoveSpeed = 2f;
 
     [Header("Events")]
     public UnityEvent onPathCompleted;
@@ -136,7 +140,26 @@ public class StairPathWalker : MonoBehaviour
 
         if (characterController != null)
         {
+            Vector3 beforeMove = transform.position;
             characterController.Move(move * Time.deltaTime);
+            ApplyTransformFallbackIfStuck(beforeMove, horizontalMove);
+            return;
+        }
+
+        transform.position += horizontalMove * Time.deltaTime;
+    }
+
+    private void ApplyTransformFallbackIfStuck(Vector3 beforeMove, Vector3 horizontalMove)
+    {
+        if (!useTransformFallbackWhenControllerStuck || horizontalMove.sqrMagnitude <= 0.0001f)
+        {
+            return;
+        }
+
+        Vector2 beforeFlat = new Vector2(beforeMove.x, beforeMove.z);
+        Vector2 afterFlat = new Vector2(transform.position.x, transform.position.z);
+        if ((afterFlat - beforeFlat).sqrMagnitude > stuckMoveEpsilon * stuckMoveEpsilon)
+        {
             return;
         }
 
@@ -162,7 +185,16 @@ public class StairPathWalker : MonoBehaviour
     {
         if (animator != null && hasSpeedParameter)
         {
-            animator.SetFloat(speedParameter, speed);
+            float speedValue = 0f;
+            if (speed > 0f)
+            {
+                speedValue = Mathf.Clamp(
+                    speed * moveSpeed / Mathf.Max(0.01f, animatorWalkReferenceSpeed),
+                    0.5f,
+                    maxAnimatorMoveSpeed);
+            }
+
+            animator.SetFloat(speedParameter, speedValue);
         }
     }
 
