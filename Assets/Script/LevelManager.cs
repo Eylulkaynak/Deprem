@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Arayuz")]
     public TMP_Text ilerlemeYazisi;
-    public string ilerlemeMetniFormat = "Sabitlenen: {0}/{1}";
+    public string ilerlemeMetniFormat = "Sabitlenen eşya: {0}/{1}";
 
     public bool sonrakiSahneyeGec = true;
     public string sonrakiSahneAdi = "Bolum3";

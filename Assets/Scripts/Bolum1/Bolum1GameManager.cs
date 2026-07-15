@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Bolum1GameManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class Bolum1GameManager : MonoBehaviour
 
     [Tooltip("Sag ustteki yildiz sayaci yazisi (or. 'Yildiz: 2/4').")]
     [SerializeField] private TMP_Text starText;
+
+    [Tooltip("HUD uzerindeki sayisal ilerleme (or. '3 / 13').")]
+    [SerializeField] private TMP_Text progressText;
+
+    [Tooltip("HUD uzerindeki yatay ilerleme cubugunun dolan gorseli.")]
+    [SerializeField] private Image progressFill;
 
     [Header("Bolum Sonu")]
     [Tooltip("Tum dogru esyalar toplaninca acilacak panel.")]
@@ -69,7 +76,7 @@ public class Bolum1GameManager : MonoBehaviour
             return;
 
         Debug.Log($"Dogru esya: {item.name} ({PlacedCorrectCount}/{TotalCorrectItems})");
-        Bolum1FeedbackUI.Instance?.ShowCorrectMark();
+        Bolum1FeedbackUI.Instance?.ShowCorrectItem(item.DisplayName);
         Bolum1HintSystem.Instance?.ResetTimer();
         UpdateStarText();
 
@@ -86,10 +93,7 @@ public class Bolum1GameManager : MonoBehaviour
             return;
 
         if (Bolum1FeedbackUI.Instance != null)
-        {
-            Bolum1FeedbackUI.Instance.ShowWrongMark();
-            Bolum1FeedbackUI.Instance.ShowTemporaryMessage(wrongItemMessage);
-        }
+            Bolum1FeedbackUI.Instance.ShowWrongItem(wrongItemMessage);
         else
             Debug.Log(wrongItemMessage);
 
@@ -111,7 +115,27 @@ public class Bolum1GameManager : MonoBehaviour
     private void UpdateStarText()
     {
         if (starText != null)
-            starText.text = $"<b>Afet cantasini hazirla</b>\nEsyaya dokun veya cantaya surukle  {PlacedCorrectCount}/{totalCorrectItems}";
+        {
+            starText.text = progressText != null
+                ? "<b>AFET CANTANI HAZIRLA</b>\n<size=21><color=#9FAEAA>Gerekli esyalari sec</color></size>"
+                : $"<b>AFET CANTANI HAZIRLA</b>\nGerekli esyalari sec  {PlacedCorrectCount}/{totalCorrectItems}";
+        }
+
+        if (progressText != null)
+            progressText.text = $"{PlacedCorrectCount:00}/{totalCorrectItems:00}";
+
+        if (progressFill != null)
+        {
+            float normalizedProgress = totalCorrectItems > 0
+                ? (float)PlacedCorrectCount / totalCorrectItems
+                : 0f;
+
+            progressFill.enabled = normalizedProgress > 0f;
+            RectTransform fillRect = progressFill.rectTransform;
+            Vector2 anchorMax = fillRect.anchorMax;
+            anchorMax.x = normalizedProgress;
+            fillRect.anchorMax = anchorMax;
+        }
     }
 
     private IEnumerator ShowSuccessPanelAfterDelay()
@@ -121,7 +145,10 @@ public class Bolum1GameManager : MonoBehaviour
         Bolum1FeedbackUI.Instance?.HideMessage();
 
         if (successPanel != null)
+        {
+            successPanel.transform.SetAsLastSibling();
             successPanel.SetActive(true);
+        }
 
         if (loadNextSceneOnComplete)
         {
@@ -136,5 +163,10 @@ public class Bolum1GameManager : MonoBehaviour
             return;
 
         SceneManager.LoadScene(nextSceneName);
+    }
+
+    public void ContinueToNextScene()
+    {
+        LoadNextScene();
     }
 }

@@ -55,6 +55,12 @@ public class DraggableItem : MonoBehaviour
     [Tooltip("Esyanin agizdan cantanin icine inme suresi (saniye).")]
     [SerializeField] private float descendIntoBagDuration = 0.2f;
 
+    [Tooltip("Esyanin canta agzina giderken cizecegi kisa yay.")]
+    [SerializeField] private float moveToOpeningArcHeight = 0.22f;
+
+    [Tooltip("Cantaya gitmeden onceki kisa vurgu buyumesi.")]
+    [SerializeField] private float bagEntryPopScale = 1.12f;
+
     [Tooltip("Animasyon bitince esya gizlensin mi? Kapaliysa cantada kucuk halde gorunur.")]
     [SerializeField] private bool hideItemInBag = true;
 
@@ -301,6 +307,7 @@ public class DraggableItem : MonoBehaviour
     {
         state = ItemState.GoingToBag;
         itemCollider.enabled = false;
+        transform.localScale = originalScale * bagEntryPopScale;
         Bolum1GameManager.Instance?.OnCorrectItemPlaced(this);
         StartRoutine(AnimateIntoBag());
     }
@@ -352,7 +359,13 @@ public class DraggableItem : MonoBehaviour
         Vector3 targetScale = originalScale * targetMultiplier;
 
         // 1) Canta agzina git (boyut ayni kalir)
-        yield return MoveAndScale(transform.position, openingPosition, transform.localScale, transform.localScale, moveToOpeningDuration, 0f);
+        yield return MoveAndScale(
+            transform.position,
+            openingPosition,
+            transform.localScale,
+            originalScale,
+            moveToOpeningDuration,
+            moveToOpeningArcHeight);
 
         // 2) Agizdan hedefe in (kuculerek)
         yield return MoveAndScale(openingPosition, targetPosition, transform.localScale, targetScale, descendIntoBagDuration, 0f);

@@ -129,7 +129,7 @@ public class CardGameManager : MonoBehaviour
         }
 
         selectedCard = card;
-        SetFeedback("Kart secildi. Yerlesecegi slota dokun.");
+        SetFeedback("Kart seçildi. Yerleşeceği alana dokun.");
     }
 
     public void HandleSlotTapped(DropSlot slot)
@@ -147,14 +147,14 @@ public class CardGameManager : MonoBehaviour
                 return;
             }
 
-            SetFeedback("Once bir kart sec.");
+            SetFeedback("Önce bir kart seç.");
             PlayShake();
             return;
         }
 
         slot.AcceptCard(selectedCard);
         selectedCard = null;
-        SetFeedback("Kart yerlesti.");
+        SetFeedback("Kart yerleşti.");
     }
 
     public void CheckAnswer()
@@ -166,7 +166,7 @@ public class CardGameManager : MonoBehaviour
 
         if (!AreAllSlotsFilled())
         {
-            SetFeedback("Once tum kartlari yerlestir!");
+            SetFeedback("Önce tüm kartları yerleştir!");
             PlayShake();
             return;
         }
@@ -234,7 +234,7 @@ public class CardGameManager : MonoBehaviour
             shakeRoutine = null;
         }
 
-        SetFeedback("Yanlis sira! Kartlari yer degistir.");
+        SetFeedback("Yanlış sıra! Kartların yerini değiştir.");
         yield return ShakeRoutine();
         checkRoutine = null;
 
@@ -246,7 +246,7 @@ public class CardGameManager : MonoBehaviour
 
     private IEnumerator CorrectAnswerRoutine()
     {
-        SetFeedback("Dogru siralama!");
+        SetFeedback("Doğru sıralama!");
 
         if (successDelay > 0f)
         {

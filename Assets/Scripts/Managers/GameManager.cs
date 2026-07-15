@@ -138,7 +138,9 @@ public class GameManager : MonoBehaviour
 
         if (feedbackUI != null)
         {
-            feedbackUI.ShowTimed("Deprem basladi!\n\nHemen guvenli alana git.", earthquakeStartMessageDuration);
+            feedbackUI.ShowTimed(
+                "Deprem başladı!\nGüvenli alana dokun. ÇÖK - KAPAN - TUTUN.",
+                earthquakeStartMessageDuration);
             yield return new WaitForSeconds(earthquakeStartMessageDuration);
         }
 
@@ -172,9 +174,8 @@ public class GameManager : MonoBehaviour
             if (scoreText != null)
             {
                 scoreText.text =
-                    "Tebrikler!\n\n" +
-                    "Deprem sirasinda guvenli alana ulastin.\n\n" +
-                    $"Puanin\n\n{score} / {maxScore}";
+                    "Deprem sırasında güvenli alana ulaştın.\n\n" +
+                    $"PUAN  {score} / {maxScore}";
             }
 
             if (loadNextSceneOnSuccess && !string.IsNullOrWhiteSpace(nextSceneName))

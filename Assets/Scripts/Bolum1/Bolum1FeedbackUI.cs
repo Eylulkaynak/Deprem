@@ -34,8 +34,13 @@ public class Bolum1FeedbackUI : MonoBehaviour
     [Tooltip("Tik/carpinin ekranda kalma suresi (saniye).")]
     [SerializeField] private float markDuration = 0.6f;
 
+    [Header("Mesaj Renkleri")]
+    [SerializeField] private Color positiveTextColor = new Color(0.35f, 1f, 0.72f, 1f);
+    [SerializeField] private Color warningTextColor = new Color(1f, 0.82f, 0.3f, 1f);
+    [SerializeField] private float positiveMessageDuration = 1.1f;
+
     [Header("Sesler")]
-    [Tooltip("Sesleri calacak AudioSource. Bos birakilirsa bu objeye otomatik eklenir.")]
+    [Tooltip("Sesleri calacak, sahnede hazirlanan AudioSource.")]
     [SerializeField] private AudioSource audioSource;
 
     [Tooltip("Dogru esyada calacak ses.")]
@@ -58,13 +63,10 @@ public class Bolum1FeedbackUI : MonoBehaviour
         Instance = this;
 
         if (audioSource == null)
-        {
             audioSource = GetComponent<AudioSource>();
-            if (audioSource == null)
-                audioSource = gameObject.AddComponent<AudioSource>();
-        }
 
-        audioSource.playOnAwake = false;
+        if (audioSource != null)
+            audioSource.playOnAwake = false;
 
         if (Root != null)
             Root.SetActive(false);
@@ -85,13 +87,7 @@ public class Bolum1FeedbackUI : MonoBehaviour
     /// <summary>Mesaji harf harf yazar, bekler ve gizler.</summary>
     public void ShowTemporaryMessage(string message)
     {
-        if (messageText == null)
-            return;
-
-        if (messageRoutine != null)
-            StopCoroutine(messageRoutine);
-
-        messageRoutine = StartCoroutine(TypeMessage(message));
+        BeginMessage(message, warningTextColor, holdDuration, true);
     }
 
     public void HideMessage()
@@ -104,6 +100,15 @@ public class Bolum1FeedbackUI : MonoBehaviour
 
         if (Root != null)
             Root.SetActive(false);
+
+        if (markRoutine != null)
+        {
+            StopCoroutine(markRoutine);
+            markRoutine = null;
+        }
+
+        HideMark(correctMarkRoot);
+        HideMark(wrongMarkRoot);
     }
 
     public void ShowCorrectMark()
@@ -118,6 +123,18 @@ public class Bolum1FeedbackUI : MonoBehaviour
         PlaySound(wrongSound);
     }
 
+    public void ShowCorrectItem(string displayName)
+    {
+        ShowCorrectMark();
+        BeginMessage($"{displayName} cantaya eklendi!", positiveTextColor, positiveMessageDuration, false);
+    }
+
+    public void ShowWrongItem(string message)
+    {
+        ShowWrongMark();
+        ShowTemporaryMessage(message);
+    }
+
     private void PlaySound(AudioClip clip)
     {
         if (clip == null || audioSource == null)
@@ -126,29 +143,43 @@ public class Bolum1FeedbackUI : MonoBehaviour
         audioSource.PlayOneShot(clip, soundVolume);
     }
 
-    private IEnumerator TypeMessage(string message)
+    private void BeginMessage(string message, Color textColor, float duration, bool typewriter)
     {
+        if (messageText == null)
+            return;
+
+        if (messageRoutine != null)
+            StopCoroutine(messageRoutine);
+
+        messageRoutine = StartCoroutine(ShowMessage(message, textColor, duration, typewriter));
+    }
+
+    private IEnumerator ShowMessage(string message, Color textColor, float duration, bool typewriter)
+    {
+        messageText.color = textColor;
         messageText.text = message;
-        messageText.maxVisibleCharacters = 0;
+        messageText.maxVisibleCharacters = typewriter ? 0 : int.MaxValue;
 
         if (Root != null)
             Root.SetActive(true);
 
-        // TMP'nin karakter sayisini dogru hesaplamasi icin mesh guncelle
-        messageText.ForceMeshUpdate();
-        int totalCharacters = messageText.textInfo.characterCount;
-
-        float visibleCount = 0f;
-        while (visibleCount < totalCharacters)
+        if (typewriter)
         {
-            visibleCount += charactersPerSecond * Time.deltaTime;
-            messageText.maxVisibleCharacters = Mathf.Min(Mathf.FloorToInt(visibleCount), totalCharacters);
-            yield return null;
+            messageText.ForceMeshUpdate();
+            int totalCharacters = messageText.textInfo.characterCount;
+
+            float visibleCount = 0f;
+            while (visibleCount < totalCharacters)
+            {
+                visibleCount += charactersPerSecond * Time.unscaledDeltaTime;
+                messageText.maxVisibleCharacters = Mathf.Min(Mathf.FloorToInt(visibleCount), totalCharacters);
+                yield return null;
+            }
+
+            messageText.maxVisibleCharacters = totalCharacters;
         }
 
-        messageText.maxVisibleCharacters = totalCharacters;
-
-        yield return new WaitForSeconds(holdDuration);
+        yield return new WaitForSecondsRealtime(duration);
 
         if (Root != null)
             Root.SetActive(false);
@@ -176,8 +207,46 @@ public class Bolum1FeedbackUI : MonoBehaviour
     private IEnumerator ShowMarkRoutine(GameObject mark)
     {
         mark.SetActive(true);
-        yield return new WaitForSeconds(markDuration);
+
+        Transform markTransform = mark.transform;
+        Vector3 restingScale = Vector3.one;
+        float elapsed = 0f;
+        const float popDuration = 0.16f;
+        const float settleDuration = 0.12f;
+
+        markTransform.localScale = restingScale * 0.65f;
+        while (elapsed < popDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float t = Mathf.Clamp01(elapsed / popDuration);
+            markTransform.localScale = Vector3.LerpUnclamped(restingScale * 0.65f, restingScale * 1.18f, t);
+            yield return null;
+        }
+
+        elapsed = 0f;
+        while (elapsed < settleDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float t = Mathf.Clamp01(elapsed / settleDuration);
+            markTransform.localScale = Vector3.LerpUnclamped(restingScale * 1.18f, restingScale, t);
+            yield return null;
+        }
+
+        float remainingDuration = Mathf.Max(0f, markDuration - popDuration - settleDuration);
+        if (remainingDuration > 0f)
+            yield return new WaitForSecondsRealtime(remainingDuration);
+
+        markTransform.localScale = restingScale;
         mark.SetActive(false);
         markRoutine = null;
+    }
+
+    private static void HideMark(GameObject mark)
+    {
+        if (mark == null)
+            return;
+
+        mark.transform.localScale = Vector3.one;
+        mark.SetActive(false);
     }
 }
