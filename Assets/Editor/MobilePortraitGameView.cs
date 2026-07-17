@@ -10,6 +10,9 @@ internal static class MobilePortraitGameView
     private const string PortraitLabel = "Portrait 1080x1920";
     private const int PortraitWidth = 1080;
     private const int PortraitHeight = 1920;
+    private const string TallPortraitLabel = "Tall Portrait 1080x2340";
+    private const int TallPortraitWidth = 1080;
+    private const int TallPortraitHeight = 2340;
 
     private static readonly BindingFlags AllMembers =
         BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
@@ -22,7 +25,13 @@ internal static class MobilePortraitGameView
     [MenuItem("Tools/Deprem/Use Portrait Game View")]
     private static void UsePortraitGameView()
     {
-        ConfigureAndSelect(true);
+        ConfigureAndSelect(PortraitWidth, PortraitHeight, PortraitLabel, true);
+    }
+
+    [MenuItem("Tools/Deprem/Use Tall Portrait Game View")]
+    private static void UseTallPortraitGameView()
+    {
+        ConfigureAndSelect(TallPortraitWidth, TallPortraitHeight, TallPortraitLabel, true);
     }
 
     private static void ConfigureOncePerSession()
@@ -33,10 +42,10 @@ internal static class MobilePortraitGameView
         }
 
         SessionState.SetBool(SessionKey, true);
-        ConfigureAndSelect(false);
+        ConfigureAndSelect(PortraitWidth, PortraitHeight, PortraitLabel, false);
     }
 
-    private static void ConfigureAndSelect(bool logSuccess)
+    private static void ConfigureAndSelect(int width, int height, string label, bool logSuccess)
     {
         try
         {
@@ -64,7 +73,7 @@ internal static class MobilePortraitGameView
                 throw new InvalidOperationException("Standalone Game View size group was not found.");
             }
 
-            int portraitIndex = FindPortraitIndex(standaloneGroup);
+            int portraitIndex = FindSizeIndex(standaloneGroup, width, height);
             if (portraitIndex < 0)
             {
                 object portraitSize = Activator.CreateInstance(
@@ -74,16 +83,16 @@ internal static class MobilePortraitGameView
                     new[]
                     {
                         Enum.Parse(sizeModeType, "FixedResolution"),
-                        PortraitWidth,
-                        PortraitHeight,
-                        PortraitLabel
+                        width,
+                        height,
+                        label
                     },
                     null);
 
                 standaloneGroup.GetType().GetMethod("AddCustomSize", AllMembers)?.Invoke(
                     standaloneGroup,
                     new[] { portraitSize });
-                portraitIndex = FindPortraitIndex(standaloneGroup);
+                portraitIndex = FindSizeIndex(standaloneGroup, width, height);
             }
 
             if (portraitIndex < 0)
@@ -107,7 +116,7 @@ internal static class MobilePortraitGameView
 
             if (logSuccess)
             {
-                Debug.Log("Game View set to Portrait 1080x1920.");
+                Debug.Log($"Game View set to {label}.");
             }
         }
         catch (Exception exception)
@@ -116,7 +125,7 @@ internal static class MobilePortraitGameView
         }
     }
 
-    private static int FindPortraitIndex(object group)
+    private static int FindSizeIndex(object group, int width, int height)
     {
         Type groupInstanceType = group.GetType();
         MethodInfo getTotalCount = groupInstanceType.GetMethod("GetTotalCount", AllMembers);
@@ -131,8 +140,8 @@ internal static class MobilePortraitGameView
         for (int index = 0; index < count; index++)
         {
             object size = getGameViewSize.Invoke(group, new object[] { index });
-            if (ReadIntMember(size, "width") == PortraitWidth &&
-                ReadIntMember(size, "height") == PortraitHeight)
+            if (ReadIntMember(size, "width") == width &&
+                ReadIntMember(size, "height") == height)
             {
                 return index;
             }

@@ -36,6 +36,12 @@ public class DraggableItem : MonoBehaviour
     [SerializeField] private float labelHeightPadding = 0.08f;
 
     [Header("Surukleme")]
+    [Tooltip("Kapalıysa girdi başka bir manager tarafından yönetilir; çantaya giriş animasyonu yine kullanılabilir.")]
+    [SerializeField] private bool inputEnabled = true;
+
+    [Tooltip("Kapalıysa yerleştirme Bolum1GameManager skorunu değiştirmez.")]
+    [SerializeField] private bool notifyGameManager = true;
+
     [Tooltip("Suruklerken esyanin zeminden ne kadar yukselecegi.")]
     [SerializeField] private float dragLift = 0.15f;
 
@@ -87,6 +93,7 @@ public class DraggableItem : MonoBehaviour
     public bool IsInBag => state == ItemState.InBag;
     public bool IsDragging => state == ItemState.Dragging;
     public static DraggableItem ActiveDrag => activeDrag;
+    public float BagEntryDuration => moveToOpeningDuration + descendIntoBagDuration;
 
     public string DisplayName
     {
@@ -184,6 +191,9 @@ public class DraggableItem : MonoBehaviour
 
     private void Update()
     {
+        if (!inputEnabled)
+            return;
+
         if (state == ItemState.Idle &&
             TryGetPointerDown(out Vector2 downPosition, out int pointerId) &&
             !IsPointerOverUi(pointerId))
@@ -212,6 +222,11 @@ public class DraggableItem : MonoBehaviour
         if (FindFirstDraggableItem(ray) != this)
             return;
 
+        BeginDragAt(screenPosition);
+    }
+
+    private void BeginDragAt(Vector2 screenPosition)
+    {
         activeDrag = this;
         state = ItemState.Dragging;
         dragStartWorldPosition = transform.position;
@@ -284,8 +299,9 @@ public class DraggableItem : MonoBehaviour
             return;
         }
 
-        bool droppedOnBag = BagDropZone.Instance != null
-            && BagDropZone.Instance.ContainsPoint(transform.position);
+        bool droppedOnBag = BagDropZone.Instance != null &&
+            (BagDropZone.Instance.ContainsScreenPoint(releasePosition, mainCamera) ||
+             BagDropZone.Instance.ContainsPoint(transform.position));
 
         if (droppedOnBag && isCorrectItem)
         {
@@ -308,8 +324,83 @@ public class DraggableItem : MonoBehaviour
         state = ItemState.GoingToBag;
         itemCollider.enabled = false;
         transform.localScale = originalScale * bagEntryPopScale;
-        Bolum1GameManager.Instance?.OnCorrectItemPlaced(this);
+        if (notifyGameManager)
+            Bolum1GameManager.Instance?.OnCorrectItemPlaced(this);
         StartRoutine(AnimateIntoBag());
+    }
+
+    /// <summary>
+    /// Story sahneleri eski bölümün fiziksel "eşya çantaya uçar ve içine iner" davranışını
+    /// merkezi dokunma yöneticisinden tetiklemek için bunu kullanır.
+    /// </summary>
+    public bool SendToBag()
+    {
+        if (state != ItemState.Idle || !isCorrectItem || BagDropZone.Instance == null)
+            return false;
+
+        PlaceInBag();
+        return true;
+    }
+
+    /// <summary>
+    /// StoryTouchManager icin dogrudan dunya-nesnesi suruklemesini baslatir.
+    /// Girdi bu component tarafindan okunmaz; tek girdi sahibi manager olarak kalir.
+    /// </summary>
+    public bool BeginManagedDrag(Vector2 screenPosition)
+    {
+        if (state != ItemState.Idle || activeDrag != null || mainCamera == null)
+            return false;
+
+        BeginDragAt(screenPosition);
+        return state == ItemState.Dragging;
+    }
+
+    public void UpdateManagedDrag(Vector2 screenPosition)
+    {
+        if (state == ItemState.Dragging)
+            UpdateDrag(screenPosition);
+    }
+
+    /// <summary>
+    /// Esya canta agzinda birakildiysa true doner. Dogru esyanin kalici sonucunu
+    /// StoryInteractable olayi verir; yanlis esya guvenle baslangic yerine doner.
+    /// </summary>
+    public bool EndManagedDrag(Vector2 screenPosition)
+    {
+        if (state != ItemState.Dragging)
+            return false;
+
+        UpdateDrag(screenPosition);
+        activeDrag = null;
+        transform.localScale = originalScale;
+        bool droppedOnBag = BagDropZone.Instance != null &&
+            (BagDropZone.Instance.ContainsScreenPoint(screenPosition, mainCamera) ||
+             BagDropZone.Instance.ContainsPoint(transform.position));
+        if (!droppedOnBag)
+        {
+            ReturnToStart();
+            return false;
+        }
+
+        if (!isCorrectItem)
+        {
+            ReturnToStart();
+            return true;
+        }
+
+        state = ItemState.Idle;
+        itemCollider.enabled = true;
+        return true;
+    }
+
+    public void CancelManagedDrag()
+    {
+        if (state != ItemState.Dragging)
+            return;
+
+        activeDrag = null;
+        transform.localScale = originalScale;
+        ReturnToStart();
     }
 
     // ---------- Disaridan cagrilan ----------
