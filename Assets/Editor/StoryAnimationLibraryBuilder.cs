@@ -20,6 +20,7 @@ public static class StoryAnimationLibraryBuilder
     private const string KayKitRoot = "Assets/Story/Animations/ThirdParty/KayKit";
     private const string QuaterniusRoot = "Assets/Story/Animations/ThirdParty/Quaternius";
     private const string ChildIdlePath = "Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_idle0.anim";
+    private const string ChildWalkPath = "Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_move_walk.anim";
     private const string GeneralPath = KayKitRoot + "/Rig_Medium_General.fbx";
     private const string MovementBasicPath = KayKitRoot + "/Rig_Medium_MovementBasic.fbx";
     private const string MovementAdvancedPath = KayKitRoot + "/Rig_Medium_MovementAdvanced.fbx";
@@ -40,7 +41,7 @@ public static class StoryAnimationLibraryBuilder
     [MenuItem("Tools/Deprem Story/Build Story Animation Library")]
     public static void BuildFromMenu()
     {
-        BuildLibrary(true);
+        BuildLibrary(false);
     }
 
     public static RuntimeAnimatorController BuildLibrary(bool showDialog = false)
@@ -131,11 +132,15 @@ public static class StoryAnimationLibraryBuilder
 
     private static RuntimeAnimatorController CreateChildController()
     {
-        AnimationClip childIdle = CreateNeutralIdle(ChildNeutralIdlePath, "ChildNeutralIdle", -0.24f);
+        // The KidsCharacterFree avatar has a narrow pelvis but the source idle still retargets
+        // into a conspicuous wide-legged squat in the portrait camera. The earlier -0.24
+        // correction reduced the source curve without actually closing the silhouette.
+        AnimationClip childIdle = CreateNeutralIdle(ChildNeutralIdlePath, "ChildNeutralIdle", -0.44f);
         AnimationClip childWalk = CreateNaturalWalk();
         AnimationClip crouching = FindClip(MovementAdvancedPath, "Crouching");
         AnimationClip coverUpperPose = CreateFrozenPose(
             FindClip(SimulationPath, "Waving"), ChildCoverUpperPosePath, "ChildCoverUpperPose", 0.25f);
+        AuthorProtectiveUpperBodyPose(coverUpperPose);
         AnimatorController existing = AssetDatabase.LoadAssetAtPath<AnimatorController>(ControllerPath);
         string[] requiredStates =
         {
@@ -296,7 +301,11 @@ public static class StoryAnimationLibraryBuilder
             .FirstOrDefault(candidate => candidate.name == "Cover Upper Body");
         if (layer == null || layer.avatarMask == null ||
             layer.avatarMask.name != "ChildCoverUpperBody" ||
-            layer.syncedLayerIndex != 0)
+            layer.syncedLayerIndex != 0 ||
+            layer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.Body) ||
+            !layer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.Head) ||
+            !layer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.LeftArm) ||
+            !layer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.RightArm))
             return false;
 
         AnimatorStateMachine baseStateMachine = controller.layers[0].stateMachine;
@@ -324,7 +333,9 @@ public static class StoryAnimationLibraryBuilder
 
         for (int index = 0; index < (int)AvatarMaskBodyPart.LastBodyPart; index++)
             mask.SetHumanoidBodyPartActive((AvatarMaskBodyPart)index, false);
-        mask.SetHumanoidBodyPartActive(AvatarMaskBodyPart.Body, true);
+        // Keep hips, spine and chest on the crouching base layer. Enabling Body here lets the
+        // standing source clip overwrite the crouch and produces the twisted tip-toe pose that
+        // prompted this regression pass.
         mask.SetHumanoidBodyPartActive(AvatarMaskBodyPart.Head, true);
         mask.SetHumanoidBodyPartActive(AvatarMaskBodyPart.LeftArm, true);
         mask.SetHumanoidBodyPartActive(AvatarMaskBodyPart.RightArm, true);
@@ -389,6 +400,48 @@ public static class StoryAnimationLibraryBuilder
         clip.wrapMode = WrapMode.Loop;
         EditorUtility.SetDirty(clip);
         return clip;
+    }
+
+    private static void AuthorProtectiveUpperBodyPose(AnimationClip clip)
+    {
+        // The source wave only raises a straight arm and reads as both hands resting on the floor
+        // once combined with the crouch. Shape the humanoid muscles into an unmistakable
+        // head-and-neck cover: elbows forward, forearms folded back over the crown.
+        SetConstantMuscleCurve(clip, "Spine Front-Back", 0.28f);
+        SetConstantMuscleCurve(clip, "Chest Front-Back", 0.34f);
+        SetConstantMuscleCurve(clip, "UpperChest Front-Back", 0.24f);
+        SetConstantMuscleCurve(clip, "Head Nod Down-Up", -0.32f);
+
+        SetConstantMuscleCurve(clip, "Left Shoulder Down-Up", 0.25f);
+        SetConstantMuscleCurve(clip, "Left Shoulder Front-Back", -0.24f);
+        SetConstantMuscleCurve(clip, "Left Arm Down-Up", 0.82f);
+        SetConstantMuscleCurve(clip, "Left Arm Front-Back", -0.38f);
+        SetConstantMuscleCurve(clip, "Left Arm Twist In-Out", -0.42f);
+        SetConstantMuscleCurve(clip, "Left Forearm Stretch", -0.92f);
+        SetConstantMuscleCurve(clip, "Left Forearm Twist In-Out", -0.18f);
+        SetConstantMuscleCurve(clip, "Left Hand Down-Up", -0.18f);
+        SetConstantMuscleCurve(clip, "Left Hand In-Out", 0.08f);
+
+        SetConstantMuscleCurve(clip, "Right Shoulder Down-Up", 0.25f);
+        SetConstantMuscleCurve(clip, "Right Shoulder Front-Back", -0.24f);
+        SetConstantMuscleCurve(clip, "Right Arm Down-Up", 0.82f);
+        SetConstantMuscleCurve(clip, "Right Arm Front-Back", -0.38f);
+        SetConstantMuscleCurve(clip, "Right Arm Twist In-Out", 0.42f);
+        SetConstantMuscleCurve(clip, "Right Forearm Stretch", -0.92f);
+        SetConstantMuscleCurve(clip, "Right Forearm Twist In-Out", 0.18f);
+        SetConstantMuscleCurve(clip, "Right Hand Down-Up", 0.18f);
+        SetConstantMuscleCurve(clip, "Right Hand In-Out", -0.08f);
+        EditorUtility.SetDirty(clip);
+    }
+
+    private static void SetConstantMuscleCurve(AnimationClip clip, string propertyName, float value)
+    {
+        float poseLength = Mathf.Max(1f / 30f, clip.length);
+        EditorCurveBinding binding = EditorCurveBinding.FloatCurve(string.Empty, typeof(Animator), propertyName);
+        AnimationCurve curve = AnimationCurve.Constant(0f, poseLength, value);
+        curve.preWrapMode = WrapMode.ClampForever;
+        curve.postWrapMode = WrapMode.ClampForever;
+        AnimationUtility.SetEditorCurve(clip, binding, curve);
     }
 
     private static bool MotionGraphUsesMotion(Motion motion, string motionName)
@@ -466,7 +519,10 @@ public static class StoryAnimationLibraryBuilder
 
     private static AnimationClip CreateNaturalWalk()
     {
-        AnimationClip source = FindClip(MovementBasicPath, "Walking_B");
+        // Keep the child's authored hip height, knee flex and stride. Retargeting KayKit's
+        // adult-proportioned walk onto this short rig produced the low, bent-knee "gorilla"
+        // silhouette even after its lateral stance was narrowed.
+        AnimationClip source = RequiredClip(ChildWalkPath);
         AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(ChildNaturalWalkPath);
         if (clip == null)
         {
@@ -484,20 +540,20 @@ public static class StoryAnimationLibraryBuilder
         {
             float multiplier = binding.propertyName switch
             {
-                "LeftFootT.x" => 0.45f,
-                "RightFootT.x" => 0.45f,
-                "Left Upper Leg In-Out" => 0.35f,
-                "Right Upper Leg In-Out" => 0.35f,
-                "Left Upper Leg Twist In-Out" => 0.35f,
-                "Right Upper Leg Twist In-Out" => 0.35f,
-                "Left Foot Twist In-Out" => 0.35f,
-                "Right Foot Twist In-Out" => 0.35f,
+                "LeftFootT.x" => 0.15f,
+                "RightFootT.x" => 0.15f,
+                "Left Upper Leg In-Out" => 0.15f,
+                "Right Upper Leg In-Out" => 0.15f,
+                "Left Upper Leg Twist In-Out" => 0.4f,
+                "Right Upper Leg Twist In-Out" => 0.4f,
+                "Left Foot Twist In-Out" => 0.4f,
+                "Right Foot Twist In-Out" => 0.4f,
                 _ => 1f
             };
             float offset = binding.propertyName switch
             {
-                "Left Upper Leg In-Out" => -0.24f,
-                "Right Upper Leg In-Out" => -0.24f,
+                "Left Upper Leg In-Out" => -0.44f,
+                "Right Upper Leg In-Out" => -0.44f,
                 _ => 0f
             };
             if (Mathf.Approximately(multiplier, 1f) && Mathf.Approximately(offset, 0f))

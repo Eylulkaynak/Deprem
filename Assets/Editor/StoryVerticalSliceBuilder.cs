@@ -406,21 +406,28 @@ public static class StoryVerticalSliceBuilder
 
         Transform room = NewChild(environment.transform, "Room");
         CreatePrimitive("LivingRoom_Floor", PrimitiveType.Cube, new Vector3(0f, -0.12f, 0.25f), new Vector3(10f, 0.24f, 11.5f), m.floor, room);
-        CreatePrimitive("BackWall_Left", PrimitiveType.Cube, new Vector3(-1.55f, 1.7f, 6f), new Vector3(6.9f, 3.4f, 0.22f), m.wall, room);
-        CreatePrimitive("BackWall_Right", PrimitiveType.Cube, new Vector3(4.15f, 1.7f, 6f), new Vector3(1.7f, 3.4f, 0.22f), m.wall, room);
-        CreatePrimitive("Door_Lintel", PrimitiveType.Cube, new Vector3(2.5f, 3.02f, 6f), new Vector3(1.5f, 0.76f, 0.22f), m.wall, room);
+        // Keep a genuinely navigable 2.2 m doorway. The previous 1.4 m opening was closed by
+        // the default Humanoid NavMesh agent radius during bake, so hiding the door still left
+        // the living room and corridor as disconnected islands.
+        CreatePrimitive("BackWall_Left", PrimitiveType.Cube, new Vector3(-1.8f, 1.7f, 6f), new Vector3(6.4f, 3.4f, 0.22f), m.wall, room);
+        CreatePrimitive("BackWall_Right", PrimitiveType.Cube, new Vector3(4.3f, 1.7f, 6f), new Vector3(1.4f, 3.4f, 0.22f), m.wall, room);
+        CreatePrimitive("Door_Lintel", PrimitiveType.Cube, new Vector3(2.5f, 3.02f, 6f), new Vector3(2.2f, 0.76f, 0.22f), m.wall, room);
         CreatePrimitive("LeftWall", PrimitiveType.Cube, new Vector3(-5f, 1.7f, 0.25f), new Vector3(0.22f, 3.4f, 11.5f), m.wall, room);
         CreatePrimitive("LowRightWall", PrimitiveType.Cube, new Vector3(5f, 0.5f, 1.7f), new Vector3(0.22f, 1f, 8.5f), m.wall, room);
         CreatePrimitive("RugBorder", PrimitiveType.Cube, new Vector3(0.15f, 0.025f, 0f), new Vector3(4.9f, 0.05f, 3.7f), m.navy, room, false);
         CreatePrimitive("Rug", PrimitiveType.Cube, new Vector3(0.15f, 0.045f, 0f), new Vector3(4.55f, 0.05f, 3.35f), m.teal, room, false);
         CreatePrimitive("RugInset", PrimitiveType.Cube, new Vector3(0.15f, 0.073f, 0f), new Vector3(3.7f, 0.012f, 2.55f), m.cream, room, false);
-        CreatePrimitive("Skirting_Back", PrimitiveType.Cube, new Vector3(-1.3f, 0.18f, 5.82f), new Vector3(7.4f, 0.18f, 0.12f), m.cream, room, false);
+        CreatePrimitive("Skirting_Back", PrimitiveType.Cube, new Vector3(-1.825f, 0.18f, 5.82f), new Vector3(6.35f, 0.18f, 0.12f), m.cream, room, false);
         CreatePrimitive("Skirting_Left", PrimitiveType.Cube, new Vector3(-4.82f, 0.18f, 0.1f), new Vector3(0.12f, 0.18f, 11f), m.cream, room, false);
         CreatePrimitive("Skirting_Right", PrimitiveType.Cube, new Vector3(4.82f, 0.18f, 1.7f), new Vector3(0.12f, 0.18f, 8.45f), m.cream, room, false);
         CreatePrimitive("WindowAccentWall", PrimitiveType.Cube, new Vector3(-2.18f, 1.7f, 5.855f), new Vector3(3.35f, 3.12f, 0.045f), m.cream, room, false);
 
         Transform corridor = NewChild(environment.transform, "Corridor");
         CreatePrimitive("CorridorFloor", PrimitiveType.Cube, new Vector3(2.5f, -0.11f, 9.4f), new Vector3(3f, 0.22f, 6.8f), m.corridor, corridor);
+        // Overlap both floor colliders through the wall thickness. Two coplanar cubes that only
+        // touched at z=6 baked as separate NavMesh islands on Unity 6 even with a wide opening.
+        CreatePrimitive("DoorwayFloorBridge", PrimitiveType.Cube, new Vector3(2.5f, -0.105f, 6f),
+            new Vector3(2.2f, 0.21f, 1.4f), m.corridor, corridor);
         CreatePrimitive("CorridorLeftWall", PrimitiveType.Cube, new Vector3(0.98f, 1.7f, 9.4f), new Vector3(0.18f, 3.4f, 6.8f), m.wall, corridor);
         CreatePrimitive("CorridorRightWall", PrimitiveType.Cube, new Vector3(4.02f, 1.7f, 9.4f), new Vector3(0.18f, 3.4f, 6.8f), m.wall, corridor);
         CreatePrimitive("CorridorEnd", PrimitiveType.Cube, new Vector3(2.5f, 1.7f, 12.8f), new Vector3(3f, 3.4f, 0.18f), m.navy, corridor);
@@ -682,12 +689,12 @@ public static class StoryVerticalSliceBuilder
     {
         closedDoor = StoryChapterBuilderCommon.InstantiateAsset(
             "Assets/Sprites/FBX-20260707T100149Z-3-001/FBX/Door2.fbx", "Door_Closed", parent,
-            new Vector3(2.5f, 0f, 5.9f), new Vector3(1.35f, 2.5f, 0.22f),
+            new Vector3(2.5f, 0f, 5.9f), new Vector3(1.9f, 2.5f, 0.22f),
             Vector3.zero, false, true);
         StoryChapterBuilderCommon.ConfigureDynamicNavigationBlocker(closedDoor);
         openDoor = StoryChapterBuilderCommon.InstantiateAsset(
             "Assets/Sprites/FBX-20260707T100149Z-3-001/FBX/Door2.fbx", "Door_Open", parent,
-            new Vector3(3.15f, 0f, 6.5f), new Vector3(0.22f, 2.5f, 1.35f),
+            new Vector3(3.48f, 0f, 6.78f), new Vector3(0.22f, 2.5f, 1.9f),
             new Vector3(0f, 90f, 0f), false, false);
         openDoor.AddComponent<NavMeshModifier>().ignoreFromBuild = true;
         openDoor.SetActive(false);
@@ -810,35 +817,40 @@ public static class StoryVerticalSliceBuilder
         StoryCameraBinding[] bindings =
         {
             MakeFollowCamera(cameraRoot.transform, StoryCameraZoneId.RoomOverview, "CM_RoomOverview", new Vector3(10.2f, 11.2f, -13.2f), new Vector3(-0.1f, 0.9f, 0.7f), 48f, player, 18.5f, new Vector2(-0.22f, 0.18f)),
-            MakeFollowCamera(cameraRoot.transform, StoryCameraZoneId.QuakeClose, "CM_QuakeClose", new Vector3(6.4f, 6.8f, -7.6f), new Vector3(-0.35f, 0.78f, -0.35f), 48f, player, 11.5f, new Vector2(-0.16f, 0.2f)),
+            MakeFollowCamera(cameraRoot.transform, StoryCameraZoneId.QuakeClose, "CM_QuakeClose",
+                new Vector3(4.0f, 4.2f, -5.2f), new Vector3(-0.35f, 0.78f, -0.35f), 44f,
+                player, 6.6f, new Vector2(-0.08f, 0.13f)),
             // Güvenli alan planı: masa ayaklarının tamamını ve iki kardeşin sığınacağı
             // boşluğu aynı kadrajda tutan alçak, geniş bir üç çeyrek açı.
             MakeCamera(cameraRoot.transform, StoryCameraZoneId.UnderTable, "CM_UnderTable",
-                new Vector3(0.4f, 1.18f, -6.65f), new Vector3(0.45f, 0.48f, 0.65f), 50f),
-            MakeFollowCamera(cameraRoot.transform, StoryCameraZoneId.PostQuake, "CM_PostQuake", new Vector3(8.9f, 9.0f, -10.4f), new Vector3(0.2f, 0.85f, 1.25f), 47f, player, 15.2f, new Vector2(-0.18f, 0.18f)),
-            MakeFollowCamera(cameraRoot.transform, StoryCameraZoneId.Corridor, "CM_Corridor",
-                new Vector3(2.5f, 7.3f, 10.2f), new Vector3(2.5f, 0.6f, 9.35f), 50f,
-                player, 2.5f, new Vector2(-0.02f, 0.12f)),
+                new Vector3(1.8f, 1.2f, -3.6f), new Vector3(-0.1f, 0.5f, 0.2f), 46f),
+            MakeFollowCamera(cameraRoot.transform, StoryCameraZoneId.PostQuake, "CM_PostQuake",
+                new Vector3(5.7f, 5.8f, -7.0f), new Vector3(0.2f, 0.85f, 1.25f), 45f,
+                player, 9.5f, new Vector2(-0.12f, 0.15f)),
+            // Koridoru oda eşiğinden tek bir uzun planla kurar. Dört dünya etkileşimi
+            // kadraj içinde kalır; oyuncu ilerledikçe kamera duvara veya tavana çarpmaz.
+            MakeCamera(cameraRoot.transform, StoryCameraZoneId.Corridor, "CM_Corridor",
+                new Vector3(2.5f, 2.7f, 2.5f), new Vector3(2.5f, 0.7f, 9.3f), 50f),
             // Masa incelemesi: yakın plan yerine masa silueti, dört ayak ve güvenli
             // alt boşluğu gösteren kurucu plan. Oyuncu alt üçlüde kalır.
             MakeCamera(cameraRoot.transform, StoryCameraZoneId.InspectTable, "CM_InspectTableLegs",
-                new Vector3(0.45f, 1.62f, -8.15f), new Vector3(0.45f, 0.58f, 0.65f), 50f),
+                new Vector3(5.2f, 2.6f, -5.5f), new Vector3(0.45f, 0.5f, 0.55f), 48f),
             // Pencere incelemesi: camı üst üçlüye, güvenli bekleme mesafesini alt
             // üçlüye alan çapraz oda planı; masa yalnızca derinlik için kenarda kalır.
             MakeCamera(cameraRoot.transform, StoryCameraZoneId.InspectWindow, "CM_InspectWindow",
-                new Vector3(2.35f, 2.55f, -0.65f), new Vector3(-2.18f, 1.46f, 5.32f), 50f),
+                new Vector3(3.2f, 2.6f, -0.5f), new Vector3(-2.2f, 1.78f, 5.65f), 44f),
             // Dolabın tamamı ve duvar bağlantısı tek bakışta okunur.
             MakeCamera(cameraRoot.transform, StoryCameraZoneId.InspectWardrobe, "CM_InspectWardrobe",
-                new Vector3(-1.15f, 1.72f, 2.35f), new Vector3(-4.18f, 1.45f, 5.42f), 50f),
+                new Vector3(-1.6f, 2.15f, 2.3f), new Vector3(-4.18f, 1.42f, 5.38f), 42f),
             // Kapıyı bir kaçış ikonu gibi yakınlaştırmak yerine oda-koridor ilişkisini göster.
             MakeCamera(cameraRoot.transform, StoryCameraZoneId.InspectExit, "CM_InspectExit",
-                new Vector3(0f, 3.4f, 0.2f), new Vector3(2.5f, 1.25f, 6.35f), 48f),
+                new Vector3(1.0f, 2.2f, 2.3f), new Vector3(2.5f, 1.25f, 5.95f), 40f),
             // Kırık cam planı: zemine yakın, pencereye doğru uzanan çapraz çizgi.
             // Parçalar ve yaklaşılmaması gereken zemin şeridi birlikte okunur; kamera tehlikenin
-            // üstüne yapışmaz ve oyuncunun rota bağlamını kaybettirmez. Kamera sol duvarın
-            // içinde kalır; dışarı taşarsa duvar bütün portre kadrajını kapatır.
+            // üstüne yapışmaz ve oyuncunun rota bağlamını kaybettirmez. Daha yüksek üç çeyrek
+            // açı hem kırıkları hem pencere/dolap referansını aynı portre kadrajında tutar.
             MakeCamera(cameraRoot.transform, StoryCameraZoneId.InspectBrokenGlass, "CM_InspectBrokenGlass",
-                new Vector3(-4.72f, 0.85f, -0.1f), new Vector3(-2.88f, 0.08f, 4.82f), 50f)
+                new Vector3(-4.35f, 2.35f, -0.65f), new Vector3(-2.88f, 0.82f, 4.72f), 43f)
         };
 
         GameObject controllerObject = new GameObject("MissionCameraController_Story");
@@ -904,6 +916,32 @@ public static class StoryVerticalSliceBuilder
         composition.HardLimits.Enabled = true;
         composition.HardLimits.Size = new Vector2(0.72f, 0.62f);
         composer.Composition = composition;
+
+        // Takip kamerası oyuncuyla odanın kenarına kaydığında duvarın arkasına geçebiliyordu.
+        // Cinemachine'in sahne bileşeni görüş çizgisini kontrol edip kamerayı duvarın önüne
+        // çeker; böylece özel bir runtime kamera/transform koduna ihtiyaç kalmaz.
+        CinemachineDeoccluder deoccluder = camera.gameObject.AddComponent<CinemachineDeoccluder>();
+        deoccluder.CollideAgainst = 1 << 0;
+        deoccluder.IgnoreTag = "Player";
+        deoccluder.TransparentLayers = 0;
+        deoccluder.MinimumDistanceFromTarget = 0.65f;
+        deoccluder.AvoidObstacles = new CinemachineDeoccluder.ObstacleAvoidance
+        {
+            Enabled = true,
+            DistanceLimit = 0f,
+            MinimumOcclusionTime = 0f,
+            CameraRadius = 0.24f,
+            UseFollowTarget = new CinemachineDeoccluder.ObstacleAvoidance.FollowTargetSettings
+            {
+                Enabled = true,
+                YOffset = 0.82f
+            },
+            Strategy = CinemachineDeoccluder.ObstacleAvoidance.ResolutionStrategy.PullCameraForward,
+            MaximumEffort = 4,
+            SmoothingTime = 0.08f,
+            Damping = 0.18f,
+            DampingWhenOccluded = 0f
+        };
 
         return binding;
     }
@@ -1431,7 +1469,9 @@ public static class StoryVerticalSliceBuilder
         roomLight.range = 10f;
         roomLight.intensity = 1.35f;
         roomLight.color = new Color(1f, 0.72f, 0.48f);
-        roomLight.shadows = LightShadows.Soft;
+        // Tek bir point light altı gölge yüzü üretip mobil URP gölge atlasını
+        // küçültüyordu. Yumuşak yönlü ışık ana gölgeyi taşır; bu yalnızca dolgu ışığıdır.
+        roomLight.shadows = LightShadows.None;
 
         GameObject volumeObject = new GameObject("StoryGlobalVolume");
         volumeObject.transform.SetParent(lights.transform);

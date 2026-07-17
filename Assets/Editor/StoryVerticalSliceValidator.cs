@@ -67,6 +67,18 @@ public static class StoryVerticalSliceValidator
             Require(sequence.AuthoredBeatCount >= 28, "28+ oynanış ritmi");
             CinemachineCamera[] cameras = UnityEngine.Object.FindObjectsByType<CinemachineCamera>(FindObjectsSortMode.None);
             Require(cameras.Length >= 10, "10+ composed Cinemachine cameras with subject-specific interaction shots");
+            CinemachineCamera[] followCameras = cameras
+                .Where(camera => camera.GetComponent<CinemachinePositionComposer>() != null && camera.Follow != null)
+                .ToArray();
+            Require(followCameras.Length >= 3
+                && followCameras.All(camera =>
+                {
+                    CinemachineDeoccluder deoccluder = camera.GetComponent<CinemachineDeoccluder>();
+                    return deoccluder != null
+                        && deoccluder.AvoidObstacles.Enabled
+                        && deoccluder.AvoidObstacles.Strategy
+                            == CinemachineDeoccluder.ObstacleAvoidance.ResolutionStrategy.PullCameraForward;
+                }), "Room follow cameras pull in front of walls instead of rendering a wall-only frame");
             Require(cameras.Any(camera => camera.name == "CM_InspectTableLegs") && cameras.Any(camera => camera.name == "CM_InspectBrokenGlass"),
                 "Separate cinematic shots for the table legs and broken glass");
             CinemachineCamera tableShot = cameras.Single(camera => camera.name == "CM_InspectTableLegs");
@@ -80,14 +92,16 @@ public static class StoryVerticalSliceValidator
                 "9:16 kırık cam planında bütün parçalar kadraj içinde");
             Require(tableShot.transform.position.z <= -4.5f && Vector3.Distance(tableShot.transform.position, CombinedBounds(GameObject.Find("SafeTable")).center) >= 5f,
                 "Masa incelemesi nesneye yapışmayan temiz kurucu plan");
-            Require(glassShot.transform.position.y <= 1f,
-                "Kırık cam tehlikesi için zemin seviyesinde sinematik plan");
+            Require(glassShot.transform.position.y >= 1.5f && glassShot.transform.position.y <= 3f,
+                "Kırık cam ve pencere bağlamını birlikte gösteren yüksek üç çeyrek plan");
             StoryInteractable glassInspection = interactions.Single(item => item.InteractionId == "Post_InspectGlass");
             Require(glassInspection.FocusCameraZone == StoryCameraZoneId.InspectBrokenGlass,
-                "Broken glass inspection uses the floor-level shot rather than the intact-window shot");
+                "Broken glass inspection uses its contextual hazard shot rather than the intact-window shot");
             Require(cameras.Length >= 9, "9+ bestelenmiş Cinemachine kamerası ve etkileşim yakın planları");
-            Require(cameras.Count(camera => camera.GetComponent<CinemachinePositionComposer>() != null && camera.Follow != null) >= 4,
-                "Oyuncuyu alt üçlüde izleyen hareketli oynanış kameraları");
+            Require(cameras.Count(camera => camera.GetComponent<CinemachinePositionComposer>() != null && camera.Follow != null) >= 3,
+                "Oda, deprem ve deprem sonrasında oyuncuyu alt üçlüde izleyen hareketli oynanış kameraları");
+            Require(cameras.Single(camera => camera.name == "CM_Corridor").Follow == null,
+                "Koridorda duvar ve tavan kirişlerinden kaçan sabit eşik planı");
             Require(UnityEngine.Object.FindObjectsByType<NavMeshSurface>(FindObjectsSortMode.None).Single().navMeshData != null, "Baked NavMesh");
             Require(UnityEngine.Object.FindObjectsByType<ParticleSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None).Length >= 2, "Sahneye yerleştirilmiş VFX");
             Require(UnityEngine.Object.FindObjectsByType<PlayableDirector>(FindObjectsSortMode.None).Any(director => director.playableAsset != null), "Deprem Timeline'ı");

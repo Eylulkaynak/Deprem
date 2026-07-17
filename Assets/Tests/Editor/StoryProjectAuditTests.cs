@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Deprem.Story;
 using NUnit.Framework;
 using TMPro;
@@ -10,6 +12,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
 public sealed class StoryProjectAuditTests
@@ -21,6 +24,42 @@ public sealed class StoryProjectAuditTests
         "Assets/Scenes/Story_03_Quake.unity",
         "Assets/Scenes/Story_04_Evacuation.unity"
     };
+
+    [Test]
+    public void StoryRuntime_RespectsSingleInputOwnerAndAuthoredContentBoundary()
+    {
+        string[] runtimeFiles = Directory.GetFiles("Assets/Scripts/Story", "*.cs", SearchOption.AllDirectories);
+        Assert.That(runtimeFiles, Is.Not.Empty);
+
+        string[] inputOwners = runtimeFiles
+            .Where(path =>
+            {
+                string source = File.ReadAllText(path);
+                return source.Contains("Input.", System.StringComparison.Ordinal) ||
+                       source.Contains("Touchscreen.current", System.StringComparison.Ordinal) ||
+                       source.Contains("Mouse.current", System.StringComparison.Ordinal);
+            })
+            .Select(path => Path.GetFileName(path))
+            .Distinct()
+            .ToArray();
+        Assert.That(inputOwners, Is.EqualTo(new[] { "StoryTouchManager.cs" }),
+            "Yeni hikâye sahnelerinde ham dokunma/fare girişini yalnız StoryTouchManager okumalı.");
+
+        foreach (string path in runtimeFiles)
+        {
+            string source = File.ReadAllText(path);
+            Assert.That(source, Does.Not.Contain("new GameObject"),
+                path + " runtime'da sahne nesnesi üretmemeli; içerik builder/prefab/sahnede hazırlanmalı.");
+            Assert.That(source, Does.Not.Contain("AddComponent<"),
+                path + " runtime'da component üretmemeli; component sahnede serialize edilmeli.");
+            Assert.That(source, Does.Not.Contain("new Material"),
+                path + " runtime'da materyal üretmemeli.");
+            Assert.That(source, Does.Not.Contain("CreatePrimitive("),
+                path + " runtime'da görsel primitive üretmemeli.");
+            Assert.That(source, Does.Not.Contain("Camera.main.transform"),
+                path + " ana kamerayı doğrudan sürmemeli; Cinemachine kamera öncelikleri kullanılmalı.");
+        }
+    }
 
     [TestCaseSource(nameof(StoryScenes))]
     public void StoryScene_HasNoInvisibleInputCameraOrNavigationDeadEnds(string scenePath)
@@ -89,6 +128,9 @@ public sealed class StoryProjectAuditTests
         Assert.That(bindings.All(binding => binding.camera != null), Is.True, scenePath);
         Dictionary<StoryCameraZoneId, CinemachineCamera> cameras =
             bindings.ToDictionary(binding => binding.zone, binding => binding.camera);
+        foreach (StoryCameraZoneId requiredZone in RequiredCameraZones(scenePath))
+            Assert.That(cameras.ContainsKey(requiredZone), Is.True,
+                scenePath + " story director can request a camera zone with no authored binding: " + requiredZone);
 
         foreach (StoryInteractable interactable in interactions)
         {
@@ -97,11 +139,22 @@ public sealed class StoryProjectAuditTests
                 Assert.That(cameras.ContainsKey(interactable.FocusCameraZone), Is.True,
                     scenePath + " missing focus camera for " + interactable.InteractionId);
                 Vector3 subject = InteractionCenter(interactable);
-                AssertPortraitVisible(cameras[interactable.FocusCameraZone], subject,
-                    scenePath + " " + interactable.InteractionId);
-                if (!interactable.InteractFromAnywhere)
-                    AssertNotOccluded(cameras[interactable.FocusCameraZone], interactable, subject,
+                CinemachineCamera focusCamera = cameras[interactable.FocusCameraZone];
+                CinemachinePositionComposer composer = focusCamera.GetComponent<CinemachinePositionComposer>();
+                if (composer == null)
+                {
+                    AssertPortraitVisible(focusCamera, subject, scenePath + " " + interactable.InteractionId);
+                    if (!interactable.InteractFromAnywhere)
+                        AssertNotOccluded(focusCamera, interactable, subject,
                         scenePath + " " + interactable.InteractionId);
+                }
+                else
+                {
+                    Assert.That(focusCamera.Follow, Is.Not.Null,
+                        scenePath + " " + focusCamera.name + " dynamic camera needs a follow subject");
+                    Assert.That(composer.CameraDistance, Is.GreaterThan(1.5f),
+                        scenePath + " " + focusCamera.name + " dynamic camera distance");
+                }
             }
             if (interactable.ReturnCameraAfterCompletion)
                 Assert.That(cameras.ContainsKey(interactable.ReturnCameraZone), Is.True,
@@ -110,6 +163,18 @@ public sealed class StoryProjectAuditTests
 
         foreach (CinemachineCamera camera in cameras.Values)
             Assert.That(camera.Lens.FieldOfView, Is.InRange(38f, 50f), scenePath + " " + camera.name);
+
+        StoryCameraZoneId validZone = bindings[0].zone;
+        cameraController.ActivateZone(validZone, true);
+        Dictionary<CinemachineCamera, int> prioritiesBeforeMissingZone =
+            cameras.Values.ToDictionary(camera => camera, camera => camera.Priority.Value);
+        LogAssert.Expect(LogType.Error,
+            $"Story camera zone 'None' has no authored camera binding. Keeping '{validZone}' active.");
+        cameraController.ActivateZone(StoryCameraZoneId.None, true);
+        Assert.That(cameraController.ActiveZone, Is.EqualTo(validZone),
+            scenePath + " missing camera request must not blank every Cinemachine priority.");
+        foreach (KeyValuePair<CinemachineCamera, int> entry in prioritiesBeforeMissingZone)
+            Assert.That(entry.Key.Priority.Value, Is.EqualTo(entry.Value), scenePath + " " + entry.Key.name);
 
         string allUiText = string.Join("\n", Object.FindObjectsByType<TMP_Text>(
             FindObjectsInactive.Include, FindObjectsSortMode.None).Select(text => text.text ?? string.Empty));
@@ -253,6 +318,25 @@ public sealed class StoryProjectAuditTests
                 FindObjectsInactive.Include, FindObjectsSortMode.None)
             .FirstOrDefault(candidate => candidate.name == name);
         return transform != null ? transform.gameObject : null;
+    }
+
+    private static StoryCameraZoneId[] RequiredCameraZones(string scenePath)
+    {
+        string directorPath = scenePath switch
+        {
+            var path when path.EndsWith("Story_01_BagPreparation.unity", System.StringComparison.Ordinal) =>
+                "Assets/Scripts/Story/StoryPreparationDirector.cs",
+            var path when path.EndsWith("Story_02_HomeSafety.unity", System.StringComparison.Ordinal) =>
+                "Assets/Scripts/Story/StoryHomeSafetyDirector.cs",
+            var path when path.EndsWith("Story_03_Quake.unity", System.StringComparison.Ordinal) =>
+                "Assets/Scripts/Story/StorySequenceDirector.cs",
+            _ => "Assets/Scripts/Story/StoryEvacuationDirector.cs"
+        };
+        return Regex.Matches(File.ReadAllText(directorPath), @"StoryCameraZoneId\.([A-Za-z0-9_]+)")
+            .Cast<Match>()
+            .Select(match => (StoryCameraZoneId)System.Enum.Parse(typeof(StoryCameraZoneId), match.Groups[1].Value))
+            .Distinct()
+            .ToArray();
     }
 
     private static T GetPrivate<T>(object target, string fieldName)

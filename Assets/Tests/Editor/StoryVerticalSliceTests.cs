@@ -230,12 +230,26 @@ public sealed class StoryVerticalSliceTests
             Assert.That(cameras.Length, Is.GreaterThanOrEqualTo(10));
             Assert.That(cameras.All(camera => camera.Lens.FieldOfView >= 38f && camera.Lens.FieldOfView <= 50f), Is.True);
             Assert.That(cameras.Count(camera => camera.GetComponent<CinemachinePositionComposer>() != null && camera.Follow == storyPlayer.transform),
-                Is.GreaterThanOrEqualTo(4), "Room, quake, post-quake and corridor gameplay cameras must follow Deniz.");
+                Is.GreaterThanOrEqualTo(3), "Room, quake and post-quake gameplay cameras must follow Deniz.");
+            foreach (CinemachineCamera followCamera in cameras.Where(camera =>
+                         camera.GetComponent<CinemachinePositionComposer>() != null && camera.Follow == storyPlayer.transform))
+            {
+                CinemachineDeoccluder deoccluder = followCamera.GetComponent<CinemachineDeoccluder>();
+                Assert.That(deoccluder, Is.Not.Null,
+                    $"{followCamera.name} must resolve room walls before they fill the portrait frame.");
+                Assert.That(deoccluder.AvoidObstacles.Enabled, Is.True);
+                Assert.That(deoccluder.AvoidObstacles.Strategy,
+                    Is.EqualTo(CinemachineDeoccluder.ObstacleAvoidance.ResolutionStrategy.PullCameraForward));
+                Assert.That(deoccluder.AvoidObstacles.UseFollowTarget.Enabled, Is.True);
+            }
+            CinemachineCamera corridorCamera = cameras.Single(camera => camera.name == "CM_Corridor");
+            Assert.That(corridorCamera.Follow, Is.Null,
+                "Corridor uses an authored doorway long shot so walls and ceiling beams cannot push the camera into Deniz.");
             CinemachineCamera tableLegCamera = cameras.Single(camera => camera.name == "CM_InspectTableLegs");
             CinemachineCamera brokenGlassCamera = cameras.Single(camera => camera.name == "CM_InspectBrokenGlass");
             StoryInteractable glassInspection = interactions.Single(item => item.InteractionId == "Post_InspectGlass");
             Assert.That(glassInspection.FocusCameraZone, Is.EqualTo(StoryCameraZoneId.InspectBrokenGlass),
-                "Broken glass must use its floor-level subject shot instead of the intact-window camera.");
+                "Broken glass must use its contextual hazard shot instead of the intact-window camera.");
             Renderer nearestTableLeg = GameObject.Find("SafeTable").GetComponentsInChildren<Renderer>(true)
                 .Where(renderer => renderer.name == "Leg")
                 .OrderBy(renderer => Vector3.Distance(renderer.bounds.center, tableLegCamera.transform.position))
@@ -247,6 +261,8 @@ public sealed class StoryVerticalSliceTests
                 .gameObject;
             Assert.That(brokenGlassCamera.transform.position.x, Is.GreaterThan(-4.85f),
                 "Broken-glass camera must remain inside the left wall; otherwise the wall occludes the entire shot.");
+            Assert.That(brokenGlassCamera.transform.position.y, Is.InRange(1.5f, 3f),
+                "Broken-glass camera must show the hazard and its window context instead of a floor-only frame.");
             AssertPortraitSubject(brokenGlassCamera, CombinedBounds(brokenGlassHazard).center, "broken glass");
 
             Assert.That(UnityEngine.Object.FindObjectsByType<ParticleSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None).Length, Is.GreaterThanOrEqualTo(2));
@@ -513,11 +529,27 @@ public sealed class StoryVerticalSliceTests
             AssertCompleteRoute(table, window, "table -> window");
             AssertCompleteRoute(window, wardrobe, "window -> wardrobe");
             AssertCompleteRoute(wardrobe, exit, "wardrobe -> exit");
+
+            GameObject closedDoor = GameObject.Find("Door_Closed");
+            GameObject openDoor = Resources.FindObjectsOfTypeAll<GameObject>()
+                .Single(item => item.scene.IsValid() && item.name == "Door_Open");
+            Assert.That(closedDoor, Is.Not.Null);
+            Assert.That(openDoor, Is.Not.Null);
+            NavMeshObstacle closedDoorObstacle = closedDoor.GetComponentInChildren<NavMeshObstacle>(true);
+            Assert.That(closedDoorObstacle, Is.Not.Null);
+            closedDoor.SetActive(false);
+            openDoor.SetActive(true);
+            Physics.SyncTransforms();
+            NavMeshSurface surface = UnityEngine.Object.FindFirstObjectByType<NavMeshSurface>();
+            Assert.That(surface, Is.Not.Null);
+            surface.BuildNavMesh();
             AssertCompleteRoute(exit, corridorEnd, "open door -> corridor end");
 
-            NavMeshModifier closedDoorModifier = GameObject.Find("Door_Closed").GetComponent<NavMeshModifier>();
+            NavMeshModifier closedDoorModifier = closedDoor.GetComponentInChildren<NavMeshModifier>(true);
             Assert.That(closedDoorModifier, Is.Not.Null);
             Assert.That(closedDoorModifier.ignoreFromBuild, Is.True, "The animated door must not leave a permanent hole in the baked NavMesh.");
+            Assert.That(closedDoorObstacle.carving, Is.True,
+                "Closed door must block movement dynamically, then release the already-baked doorway when hidden.");
         }
         finally
         {
@@ -605,6 +637,11 @@ public sealed class StoryVerticalSliceTests
             .Single(layer => layer.name == "Cover Upper Body");
         Assert.That(coverLayer.avatarMask, Is.Not.Null);
         Assert.That(coverLayer.avatarMask.name, Is.EqualTo("ChildCoverUpperBody"));
+        Assert.That(coverLayer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.Body), Is.False,
+            "Korunma katmanı kalça/gövdeyi ezip çömelmeyi bozmamalı.");
+        Assert.That(coverLayer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.Head), Is.True);
+        Assert.That(coverLayer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.LeftArm), Is.True);
+        Assert.That(coverLayer.avatarMask.GetHumanoidBodyPartActive(AvatarMaskBodyPart.RightArm), Is.True);
         Assert.That(coverLayer.syncedLayerIndex, Is.EqualTo(0),
             "Üst gövde katmanı ayrı Trigger tüketmemeli; ana katmanla senkron olmalı.");
         AnimatorState protectState = controller.layers[0].stateMachine.states
@@ -613,8 +650,17 @@ public sealed class StoryVerticalSliceTests
             .Single(child => child.state.name == "Hold Cover").state;
         Assert.That(coverLayer.GetOverrideMotion(protectState).name, Is.EqualTo("ChildCoverUpperPose"));
         Assert.That(coverLayer.GetOverrideMotion(holdState).name, Is.EqualTo("ChildCoverUpperPose"));
-        Assert.That(AssetDatabase.LoadAssetAtPath<AnimationClip>(
-            StoryAnimationLibraryBuilder.ChildCoverUpperPosePath), Is.Not.Null);
+        AnimationClip coverUpperPose = AssetDatabase.LoadAssetAtPath<AnimationClip>(
+            StoryAnimationLibraryBuilder.ChildCoverUpperPosePath);
+        Assert.That(coverUpperPose, Is.Not.Null);
+        foreach (string forearm in new[] { "Left Forearm Stretch", "Right Forearm Stretch" })
+        {
+            EditorCurveBinding binding = AnimationUtility.GetCurveBindings(coverUpperPose)
+                .Single(curve => curve.propertyName == forearm);
+            Assert.That(AnimationUtility.GetEditorCurve(coverUpperPose, binding).Evaluate(0f),
+                Is.LessThan(-0.85f),
+                forearm + " must remain folded so the hands cover the head instead of hanging at the floor.");
+        }
 
         AnimatorController adult =
             AssetDatabase.LoadAssetAtPath<AnimatorController>(StoryAnimationLibraryBuilder.AdultControllerPath);
@@ -648,15 +694,23 @@ public sealed class StoryVerticalSliceTests
             AnimationUtility.GetEditorCurve(adultIdle, adultLeftUpperLeg).Evaluate(0f);
         Assert.That(adultUpperLegInOut, Is.LessThanOrEqualTo(-0.44f),
             "Anne'nin yetişkin idle pozu tekrar geniş goril duruşuna dönememeli.");
+        AnimationClip correctedChildIdle =
+            AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildNeutralIdlePath);
+        EditorCurveBinding childIdleLeftUpperLeg = AnimationUtility.GetCurveBindings(correctedChildIdle)
+            .Single(binding => binding.propertyName == "Left Upper Leg In-Out");
+        float childIdleUpperLegInOut =
+            AnimationUtility.GetEditorCurve(correctedChildIdle, childIdleLeftUpperLeg).Evaluate(0f);
+        Assert.That(childIdleUpperLegInOut, Is.LessThanOrEqualTo(-0.42f),
+            "Deniz ve Can boşta dururken geniş goril siluetine geri dönememeli.");
 
         AnimationClip naturalWalk =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildNaturalWalkPath);
         Assert.That(naturalWalk, Is.Not.Null);
         EditorCurveBinding naturalWalkFootX = AnimationUtility.GetCurveBindings(naturalWalk)
             .Single(binding => binding.propertyName == "LeftFootT.x");
-        AnimationClip sourceWalk = AssetDatabase.LoadAllAssetsAtPath(
-                "Assets/Story/Animations/ThirdParty/KayKit/Rig_Medium_MovementBasic.fbx")
-            .OfType<AnimationClip>().Single(clip => clip.name == "Walking_B");
+        AnimationClip sourceWalk = AssetDatabase.LoadAssetAtPath<AnimationClip>(
+            "Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_move_walk.anim");
+        Assert.That(sourceWalk, Is.Not.Null);
         EditorCurveBinding sourceWalkFootX = AnimationUtility.GetCurveBindings(sourceWalk)
             .Single(binding => binding.propertyName == "LeftFootT.x");
         float sampleTime = Mathf.Min(naturalWalk.length, sourceWalk.length) * 0.18f;
@@ -664,8 +718,32 @@ public sealed class StoryVerticalSliceTests
             Mathf.Abs(AnimationUtility.GetEditorCurve(naturalWalk, naturalWalkFootX).Evaluate(sampleTime));
         float rawWalkFootX =
             Mathf.Abs(AnimationUtility.GetEditorCurve(sourceWalk, sourceWalkFootX).Evaluate(sampleTime));
-        Assert.That(correctedWalkFootX, Is.LessThan(rawWalkFootX * 0.55f),
-            "Çocuk yürüyüşü ham KayKit yanal ayak açıklığını geri getirmemeli.");
+        Assert.That(correctedWalkFootX, Is.LessThan(rawWalkFootX * 0.2f),
+            "Çocuk yürüyüşü kendi rigindeki hareketi korurken yanal ayak açıklığını geri getirmemeli.");
+        EditorCurveBinding naturalWalkUpperLeg = AnimationUtility.GetCurveBindings(naturalWalk)
+            .Single(binding => binding.propertyName == "Left Upper Leg In-Out");
+        Assert.That(AnimationUtility.GetEditorCurve(naturalWalk, naturalWalkUpperLeg).Evaluate(sampleTime),
+            Is.LessThanOrEqualTo(-0.38f),
+            "Yürüyüş çocuk kalçasını yeniden dışa açmamalı.");
+
+        foreach (string preservedCurve in new[]
+                 {
+                     "RootT.y",
+                     "Left Upper Leg Front-Back",
+                     "Right Upper Leg Front-Back",
+                     "Left Lower Leg Stretch",
+                     "Right Lower Leg Stretch"
+                 })
+        {
+            EditorCurveBinding generatedBinding = AnimationUtility.GetCurveBindings(naturalWalk)
+                .Single(binding => binding.propertyName == preservedCurve);
+            EditorCurveBinding sourceBinding = AnimationUtility.GetCurveBindings(sourceWalk)
+                .Single(binding => binding.propertyName == preservedCurve);
+            float generatedValue = AnimationUtility.GetEditorCurve(naturalWalk, generatedBinding).Evaluate(sampleTime);
+            float sourceValue = AnimationUtility.GetEditorCurve(sourceWalk, sourceBinding).Evaluate(sampleTime);
+            Assert.That(generatedValue, Is.EqualTo(sourceValue).Within(0.0001f),
+                preservedCurve + " çocuk modelinin kendi dik yürüyüşünden korunmalı; yetişkin klibi retarget edilmemeli.");
+        }
         Assert.That(adultMotions["Adult Interact"], Is.EqualTo("Interact"));
         Assert.That(adultMotions["Adult Pick Up"], Is.EqualTo("PickUp"));
         Assert.That(adultMotions["Adult Work"], Is.EqualTo("Working_B"),
@@ -768,7 +846,10 @@ public sealed class StoryVerticalSliceTests
         Assert.That(NavMesh.SamplePosition(to, out NavMeshHit end, 1.75f, NavMesh.AllAreas), Is.True, label + " end");
         NavMeshPath path = new NavMeshPath();
         Assert.That(NavMesh.CalculatePath(start.position, end.position, NavMesh.AllAreas, path), Is.True, label);
-        Assert.That(path.status, Is.EqualTo(NavMeshPathStatus.PathComplete), label);
+        string corners = string.Join(" -> ", path.corners.Select(corner =>
+            $"({corner.x:F2},{corner.y:F2},{corner.z:F2})"));
+        Assert.That(path.status, Is.EqualTo(NavMeshPathStatus.PathComplete),
+            $"{label}; sampled {start.position} -> {end.position}; corners {corners}");
     }
 
     private static void AssertEvent(StoryInteractable[] interactions, string id, string methodName)

@@ -53,6 +53,21 @@ namespace Deprem.Story
             if (cameras == null)
                 return;
 
+            bool hasValidCamera = false;
+            foreach (StoryCameraBinding binding in cameras)
+            {
+                if (binding.zone == zone && binding.camera != null)
+                {
+                    hasValidCamera = true;
+                    break;
+                }
+            }
+            if (!hasValidCamera)
+            {
+                Debug.LogError($"Story camera zone '{zone}' has no authored camera binding. Keeping '{activeZone}' active.", this);
+                return;
+            }
+
             bool zoneChanged = !hasActiveZone || activeZone != zone;
             foreach (StoryCameraBinding binding in cameras)
             {
@@ -64,13 +79,13 @@ namespace Deprem.Story
             hasActiveZone = true;
             if (zoneChanged)
             {
-                if (instant)
+                if (instant || !Application.isPlaying)
                     EndNavigationBlock();
                 else
                     BeginNavigationBlock();
             }
 
-            if (instant && brain != null && isActiveAndEnabled)
+            if (instant && brain != null && isActiveAndEnabled && Application.isPlaying)
                 StartCoroutine(CutForOneFrame());
         }
 

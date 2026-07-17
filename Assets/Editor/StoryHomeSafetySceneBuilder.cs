@@ -116,16 +116,17 @@ public static class StoryHomeSafetySceneBuilder
             {
                 new(StoryCameraZoneId.HomeOverview, "CM_Home_Overview", new Vector3(8.6f, 8.8f, -10.4f),
                     new Vector3(0f, 0.95f, 0.35f), 44f, false, family.deniz.transform, 15.2f, new Vector2(-0.08f, 0.1f)),
-                new(StoryCameraZoneId.HomeWardrobe, "CM_Home_Wardrobe", new Vector3(0.2f, 4.2f, -1.4f),
-                    new Vector3(-3.65f, 1.25f, 2.15f), 48f),
-                new(StoryCameraZoneId.HomeShelf, "CM_Home_Shelf", new Vector3(-0.15f, 3.45f, -1.75f),
-                    new Vector3(3.55f, 1.2f, 4.45f), 48f),
-                new(StoryCameraZoneId.HomeExit, "CM_Home_Exit", new Vector3(0.4f, 3.1f, -1.6f),
-                    new Vector3(3.65f, 0.78f, -4.75f), 39f),
-                new(StoryCameraZoneId.HomeParent, "CM_Home_ParentWork", new Vector3(-2f, 3f, -2f),
-                    new Vector3(0.95f, 0.88f, 1.3f), 40f),
-                new(StoryCameraZoneId.HomeFinalTest, "CM_Home_FinalExit", new Vector3(0.8f, 2.8f, -1.8f),
-                    new Vector3(3.55f, 0.82f, -5.25f), 38f)
+                new(StoryCameraZoneId.HomeWardrobe, "CM_Home_Wardrobe", new Vector3(0.2f, 3.6f, -1.8f),
+                    new Vector3(-4.15f, 1.55f, 2.2f), 46f),
+                new(StoryCameraZoneId.HomeShelf, "CM_Home_Shelf", new Vector3(1.4f, 3.1f, 2.0f),
+                    new Vector3(4.05f, 1.35f, 4.95f), 40f),
+                new(StoryCameraZoneId.HomeExit, "CM_Home_Exit", new Vector3(0.2f, 2.45f, -2.0f),
+                    new Vector3(3.65f, 0.72f, -4.82f), 40f),
+                new(StoryCameraZoneId.HomeParent, "CM_Home_ParentWork", new Vector3(-1.6f, 2.7f, -1.8f),
+                    new Vector3(1.25f, 0.98f, 0.15f), 38f, false, family.parent.transform, 4.8f,
+                    new Vector2(0.12f, 0.08f)),
+                new(StoryCameraZoneId.HomeFinalTest, "CM_Home_FinalExit", new Vector3(0.65f, 2.1f, -2.45f),
+                    new Vector3(3.65f, 0.72f, -5.2f), 38f)
             };
             StoryCameraController cameraController = StoryChapterBuilderCommon.BuildCameras(root.transform,
                 StoryCameraZoneId.HomeOverview, cameraSpecs, out Camera mainCamera, out CinemachineBrain brain);

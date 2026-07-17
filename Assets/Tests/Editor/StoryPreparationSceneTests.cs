@@ -41,6 +41,10 @@ public sealed class StoryPreparationSceneTests
         StoryTouchManager touchManager = Object.FindFirstObjectByType<StoryTouchManager>();
         Assert.That(GetPrivateValue<bool>(touchManager, "directWorldGestures"), Is.True);
         Assert.That(Object.FindObjectsByType<StoryPlayerMovement>(FindObjectsInactive.Include, FindObjectsSortMode.None), Has.Length.EqualTo(1));
+        StoryGameManager session = Object.FindFirstObjectByType<StoryGameManager>();
+        Assert.That(session, Is.Not.Null);
+        Assert.That(GetPrivate<StoryFlag[]>(session, "initialFlags"), Is.Empty,
+            "Yeni çanta oyunu hazır seçimlerle başlamamalı; masadaki tüm gerekli seçenekler oyuncuya kalmalı.");
         DraggableItem[] itemBridges = Object.FindObjectsByType<DraggableItem>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         Assert.That(itemBridges, Has.Length.EqualTo(26));
         Assert.That(itemBridges.All(item => !GetPrivateValue<bool>(item, "inputEnabled")), Is.True);

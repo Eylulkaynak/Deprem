@@ -62,16 +62,6 @@ namespace Deprem.Story
             ApplyWorldInputLock();
         }
 
-        private void Update()
-        {
-            if (!consumeWorldPointerUntilRelease || paused || subtitleActive || IsPrimaryPointerPressed())
-                return;
-
-            consumeWorldPointerUntilRelease = false;
-            ApplyWorldInputLock();
-            WorldInputBlockChanged?.Invoke(WorldInputBlocked);
-        }
-
         public void ShowObjective(string title, string detail)
         {
             if (objectiveTitle != null)
@@ -119,6 +109,16 @@ namespace Deprem.Story
 
             subtitleAdvanceRequested = true;
             return true;
+        }
+
+        public void NotifyPrimaryPointerReleased()
+        {
+            if (!consumeWorldPointerUntilRelease || paused || subtitleActive)
+                return;
+
+            consumeWorldPointerUntilRelease = false;
+            ApplyWorldInputLock();
+            WorldInputBlockChanged?.Invoke(WorldInputBlocked);
         }
 
         public void ShowContext(string text)
@@ -356,17 +356,6 @@ namespace Deprem.Story
         {
             movementOwner ??= FindFirstObjectByType<StoryPlayerMovement>(FindObjectsInactive.Include);
             movementOwner?.SetStoryInputLocked(WorldInputBlocked);
-        }
-
-        private static bool IsPrimaryPointerPressed()
-        {
-            if (Input.touchCount > 0)
-            {
-                TouchPhase phase = Input.GetTouch(0).phase;
-                return phase == TouchPhase.Began || phase == TouchPhase.Moved || phase == TouchPhase.Stationary;
-            }
-
-            return Input.GetMouseButton(0);
         }
 
         private void UpdateReducedShakeState(bool reduced)

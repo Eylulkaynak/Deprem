@@ -95,12 +95,12 @@ public sealed class StoryChapterSceneTests
     }
 
     [Test]
-    public void EvacuationScene_HasContinuousRouteConsequencesAndEightCameras()
+    public void EvacuationScene_HasContinuousRouteConsequencesAndAuthoredCameraCoverage()
     {
         EditorSceneManager.OpenScene(EvacuationScene, OpenSceneMode.Single);
         Assert.That(Object.FindObjectsByType<StoryEvacuationDirector>(FindObjectsInactive.Include, FindObjectsSortMode.None),
             Has.Length.EqualTo(1));
-        AssertCommonSceneContract(19, 8);
+        AssertCommonSceneContract(19, 13);
 
         StoryInteractable[] interactions = Object.FindObjectsByType<StoryInteractable>(
             FindObjectsInactive.Include, FindObjectsSortMode.None);

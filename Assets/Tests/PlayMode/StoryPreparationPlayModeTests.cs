@@ -197,10 +197,10 @@ public sealed class StoryPreparationPlayModeTests
         yield return new WaitForSecondsRealtime(0.35f);
         Assert.That(Vector3.Distance(movement.transform.position, stoppedPosition), Is.LessThan(0.03f),
             "Deniz must remain stationary for the whole visible dialogue.");
+        touchManager.enabled = true;
         yield return AdvanceSubtitlesUntilIdle(uiController);
         Assert.That(movementAgent.isStopped, Is.False,
             "The NavMeshAgent must be released only after the dialogue has fully closed.");
-        touchManager.enabled = true;
     }
 
     [UnityTest]

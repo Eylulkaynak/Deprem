@@ -67,6 +67,9 @@ namespace Deprem.Story
 
         private void Update()
         {
+            if (ui != null && !TryGetPointerHeld(out _))
+                ui.NotifyPrimaryPointerReleased();
+
             if (ui != null && ui.WorldInputBlocked)
             {
                 // Diyalog açılmadan önce verilmiş rota da aynı anda iptal edilir. Böylece yeni bir

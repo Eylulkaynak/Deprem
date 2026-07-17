@@ -62,7 +62,8 @@ public class ColliderAuditWindow : EditorWindow
     {
         objectsMissingColliders.Clear();
 
-        MeshRenderer[] renderers = FindObjectsOfType<MeshRenderer>(true);
+        MeshRenderer[] renderers = FindObjectsByType<MeshRenderer>(
+            FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (MeshRenderer meshRenderer in renderers)
         {
             GameObject sceneObject = meshRenderer.gameObject;

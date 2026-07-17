@@ -135,8 +135,8 @@ public static class StoryEvacuationSceneBuilder
             {
                 new(StoryCameraZoneId.EvacuationCorridor, "CM_Evac_Corridor", new Vector3(1.9f, 6.3f, -5.2f),
                     new Vector3(0f, 4.03f, -0.65f), 44f, true),
-                new(StoryCameraZoneId.EvacuationElevator, "CM_Evac_Elevator", new Vector3(-1.6f, 5.65f, -4.6f),
-                    new Vector3(2.1f, 5.05f, -1.22f), 42f, true),
+                new(StoryCameraZoneId.EvacuationElevator, "CM_Evac_Elevator", new Vector3(-1.65f, 6.8f, -5.55f),
+                    new Vector3(2.25f, 5.05f, -2.55f), 48f, true),
                 new(StoryCameraZoneId.EvacuationStairDoor, "CM_Evac_StairDoor", new Vector3(1.8f, 5.85f, -3.0f),
                     new Vector3(0f, 5.05f, 0.0f), 40f, true),
                 new(StoryCameraZoneId.EvacuationStairsTop, "CM_Evac_StairsTop", new Vector3(1.9f, 6.4f, -1.6f),
@@ -149,8 +149,8 @@ public static class StoryEvacuationSceneBuilder
                     new Vector3(-0.65f, 0.75f, 18.0f), 48f, true),
                 new(StoryCameraZoneId.EvacuationBuildingDoor, "CM_Evac_BuildingDoor", new Vector3(2.0f, 3.0f, 17.0f),
                     new Vector3(0f, 1.1f, 21.18f), 40f, true),
-                new(StoryCameraZoneId.EvacuationBuildingFront, "CM_Evac_BuildingFront", new Vector3(4.8f, 3.0f, 26.5f),
-                    new Vector3(0f, 1.15f, 23.3f), 41f, true),
+                new(StoryCameraZoneId.EvacuationBuildingFront, "CM_Evac_BuildingFront", new Vector3(0f, 4.5f, 32.5f),
+                    new Vector3(0f, 4.0f, 20.9f), 45f, true),
                 new(StoryCameraZoneId.EvacuationStreetInspect, "CM_Evac_StreetInspect", new Vector3(5.4f, 2.7f, 23.0f),
                     new Vector3(-1.05f, 0.7f, 27.7f), 42f, true),
                 new(StoryCameraZoneId.EvacuationStreet, "CM_Evac_Street", new Vector3(6.8f, 4.25f, 25.75f),
@@ -240,6 +240,26 @@ public static class StoryEvacuationSceneBuilder
         GameObject elevatorFrame = StoryChapterBuilderCommon.InstantiateAsset(
             ElevatorPath, "ElevatorFrame", route, new Vector3(2.15f, 3.94f, -2.55f),
             new Vector3(0.5f, 2.5f, 2.25f), new Vector3(0f, 90f, 0f), true, true);
+        // The source elevator mesh is almost black from the corridor angle. Authored panels and
+        // trim keep the unsafe elevator choice visually legible without adding runtime setup.
+        StoryChapterBuilderCommon.CreatePrimitive("ElevatorDoorPanel_A", PrimitiveType.Cube,
+            new Vector3(2.32f, 5.04f, -2.98f), new Vector3(0.12f, 2.18f, 0.78f),
+            m.metal, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("ElevatorDoorPanel_B", PrimitiveType.Cube,
+            new Vector3(2.32f, 5.04f, -2.12f), new Vector3(0.12f, 2.18f, 0.78f),
+            m.metal, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("ElevatorDoorSplit", PrimitiveType.Cube,
+            new Vector3(2.25f, 5.04f, -2.55f), new Vector3(0.035f, 2.18f, 0.055f),
+            m.navy, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("ElevatorHeader", PrimitiveType.Cube,
+            new Vector3(2.28f, 6.2f, -2.55f), new Vector3(0.16f, 0.14f, 1.86f),
+            m.navy, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("ElevatorCallPlate", PrimitiveType.Cube,
+            new Vector3(2.3f, 5.05f, -1.34f), new Vector3(0.14f, 0.42f, 0.24f),
+            m.navy, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("ElevatorCallLight", PrimitiveType.Sphere,
+            new Vector3(2.21f, 5.05f, -1.34f), new Vector3(0.09f, 0.09f, 0.09f),
+            m.coral, route, false);
         world.elevatorButton = StoryChapterBuilderCommon.CreatePrimitive("ElevatorCallButton", PrimitiveType.Cube,
             new Vector3(2.1f, 5.05f, -1.22f), new Vector3(0.13f, 0.38f, 0.24f), m.coral, route, true);
         world.elevatorButton.GetComponent<Renderer>().enabled = false;
@@ -385,10 +405,17 @@ public static class StoryEvacuationSceneBuilder
         for (int floor = 0; floor < 3; floor++)
         {
             StoryChapterBuilderCommon.CreatePrimitive("FacadeWindowL_" + floor, PrimitiveType.Cube,
-                new Vector3(-2.15f, 2.3f + floor * 2.1f, 20.5f), new Vector3(1.2f, 1.15f, 0.08f), m.glass, route, false);
+                new Vector3(-2.15f, 2.3f + floor * 2.1f, 21.16f), new Vector3(1.2f, 1.15f, 0.08f), m.glass, route, false);
             StoryChapterBuilderCommon.CreatePrimitive("FacadeWindowR_" + floor, PrimitiveType.Cube,
-                new Vector3(2.15f, 2.3f + floor * 2.1f, 20.5f), new Vector3(1.2f, 1.15f, 0.08f), m.glass, route, false);
+                new Vector3(2.15f, 2.3f + floor * 2.1f, 21.16f), new Vector3(1.2f, 1.15f, 0.08f), m.glass, route, false);
         }
+        StoryChapterBuilderCommon.CreatePrimitive("FacadeEntranceHeader", PrimitiveType.Cube,
+            new Vector3(0f, 3.18f, 21.18f), new Vector3(2.5f, 0.28f, 0.18f), m.teal, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("FacadeBaseBand", PrimitiveType.Cube,
+            new Vector3(0f, 0.42f, 21.18f), new Vector3(5.25f, 0.34f, 0.18f), m.navy, route, false);
+        StoryChapterBuilderCommon.CreateWorldLabel("BuildingAddressLabel", "BLOK A",
+            new Vector3(0f, 3.58f, 21.22f), new Vector3(0f, 180f, 0f), 1.65f,
+            StoryChapterBuilderCommon.Cream, route, new Vector2(1.8f, 0.36f));
 
         world.streetHazard = new GameObject("StreetGlassAndLooseSign_Hazard");
         world.streetHazard.transform.SetParent(route);
@@ -397,7 +424,7 @@ public static class StoryEvacuationSceneBuilder
             new Vector3(2.1f, 0.1f, 1.55f), m.glass, 11, true);
         StoryChapterBuilderCommon.InstantiateAsset(
             StreetSignRoot + "/Prop_StreetSign_Stop.prefab", "LooseFacadeSign", world.streetHazard.transform,
-            new Vector3(-1.05f, 1.3f, 25.9f), new Vector3(2.25f, 2.25f, 0.5f),
+            new Vector3(-2.5f, 1.3f, 25.9f), new Vector3(2.25f, 2.25f, 0.5f),
             new Vector3(0f, 0f, -12f), true, true);
 
         world.unsafeShortcut = StoryChapterBuilderCommon.CreatePrimitive("UnsafeGlassShortcut", PrimitiveType.Cube,
