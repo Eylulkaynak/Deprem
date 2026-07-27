@@ -39,17 +39,26 @@ namespace Deprem.Story
         [SerializeField] private AudioSource impactSource;
         [SerializeField] private Light roomLight;
 
+        [Header("Flow variant")]
+        [Tooltip("Yeni Story 03 önizlemesindeki doğal açılış, sıkıştırılmış deprem sonrası akış ve kısa koridor artçısını kullanır.")]
+        [SerializeField] private bool revisedFlow;
+        [SerializeField, Min(0)] private int revisedShoesBeatIndex = 3;
+        [SerializeField, Min(0)] private int revisedCanShoesBeatIndex = 4;
+        [SerializeField, Min(0)] private int revisedBagBeatIndex = 5;
+
         [Header("Pacing — first-play target 8–12 minutes")]
-        [SerializeField, Range(60f, 90f)] private float introMinimumDuration = 60f;
-        [SerializeField, Range(60f, 90f)] private float introMaximumDuration = 90f;
-        [SerializeField, Range(45f, 120f)] private float quakeMinimumDuration = 90f;
-        [SerializeField, Range(5f, 20f)] private float postQuakeSettleDuration = 10f;
-        [SerializeField, Range(420f, 600f)] private float minimumCompletionDuration = 480f;
-        [SerializeField, Range(20f, 60f)] private float corridorWarningDuration = 30f;
+        [SerializeField, Min(0f)] private float introMinimumDuration = 60f;
+        [SerializeField, Min(1f)] private float introMaximumDuration = 90f;
+        [SerializeField, Min(1f)] private float quakeMinimumDuration = 90f;
+        [SerializeField, Min(0f)] private float postQuakeSettleDuration = 10f;
+        [SerializeField, Min(0f)] private float minimumCompletionDuration = 480f;
+        [SerializeField, Min(0f)] private float corridorWarningDuration = 30f;
         [SerializeField, Min(0f)] private float estimatedTraversalDuration = 115f;
 
         [Header("Calm opening")]
         [SerializeField] private StoryInteractable[] introInspections;
+        [SerializeField] private StoryInteractable[] introOptionalMoments;
+        [SerializeField, Min(0f)] private float revisedQuakeDelayAfterFamilyMoment = 55f;
 
         [Header("Quake")]
         [SerializeField] private StoryInteractable calmSibling;
@@ -94,6 +103,7 @@ namespace Deprem.Story
         [SerializeField] private GameObject denizWornShoes;
         [SerializeField] private GameObject denizWornBag;
         [SerializeField] private GameObject canWornShoes;
+        [SerializeField] private GameObject canComfortItem;
 
         private StorySlicePhase phase;
         private int introIndex;
@@ -123,8 +133,10 @@ namespace Deprem.Story
         public StorySlicePhase CurrentPhase => phase;
         public float ElapsedSliceSeconds => Mathf.Max(0f, Time.time - sliceStartedTime);
         public float MinimumCompletionDuration => minimumCompletionDuration;
-        public int AuthoredBeatCount => (introInspections?.Length ?? 0) + (postQuakeBeats?.Length ?? 0) +
-                                         (corridorBeats?.Length ?? 0) + 7;
+        public bool RevisedFlow => revisedFlow;
+        public int AuthoredBeatCount => (introInspections?.Length ?? 0) + (introOptionalMoments?.Length ?? 0) +
+                                          (postQuakeBeats?.Length ?? 0) +
+                                          (corridorBeats?.Length ?? 0) + 7;
         public float EstimatedFirstPlayDuration => Mathf.Max(minimumCompletionDuration,
             introMinimumDuration + quakeMinimumDuration + postQuakeSettleDuration +
             SumBeatPacing(postQuakeBeats) + SumBeatPacing(corridorBeats) +
@@ -134,6 +146,7 @@ namespace Deprem.Story
         {
             sliceStartedTime = Time.time;
             gameManager = StoryGameManager.Instance != null ? StoryGameManager.Instance : gameManager;
+            gameManager?.BeginAct(StoryAct.Quake);
             ApplyPreparationState(false);
             DisableAllInteractions();
 
@@ -192,6 +205,24 @@ namespace Deprem.Story
             FireStoryTrigger(denizAnimator, StoryInspectHash);
             if (introIndex == 0)
                 FireStoryTrigger(canAnimator, StoryInteractHash);
+
+            if (revisedFlow)
+            {
+                ShowRevisedIntroSubtitle(introIndex);
+                introIndex++;
+                if (introIndex < introInspections.Length)
+                {
+                    StartCoroutine(EnableIntroStepAfterDelay(1.35f));
+                    return;
+                }
+
+                ui?.ShowObjective(
+                    "EVDE SIRADAN BİR AN",
+                    "Can çizimine geri döndü; radyo ve mutfak sesleri evin içinde sürüyor.");
+                StartCoroutine(BeginQuakeAfterDelay(revisedQuakeDelayAfterFamilyMoment));
+                return;
+            }
+
             ShowIntroSubtitle(introIndex);
             introIndex++;
 
@@ -205,6 +236,29 @@ namespace Deprem.Story
             ui?.ShowObjective("SAKİN ANI HATIRLA", "Güvenli masa, pencere, sabit dolap ve çıkışın yerini aklında tut.");
             ui?.ShowSubtitle("Can: Bir şey olursa yanından ayrılmayacağım.  Deniz: Önce olduğumuz yerde korunacağız.", 7f);
             StartCoroutine(BeginQuakeAfterDelay(remaining));
+        }
+
+        public void OnOptionalIntroRadioMoment()
+        {
+            if (!revisedFlow || phase != StorySlicePhase.CalmOpening || quakeStarted)
+                return;
+
+            FireStoryTrigger(denizAnimator, StoryInspectHash);
+            ui?.ShowSubtitle(
+                "Deniz radyonun sesini biraz kısıyor. Mutfaktan tabak ve çatal sesleri geliyor; evde sıradan bir öğleden sonra sürüyor.",
+                5.5f);
+        }
+
+        public void OnOptionalIntroPlanMoment()
+        {
+            if (!revisedFlow || phase != StorySlicePhase.CalmOpening || quakeStarted)
+                return;
+
+            FireStoryTrigger(denizAnimator, StoryInspectHash);
+            FireStoryTrigger(canAnimator, StoryInteractHash);
+            ui?.ShowSubtitle(
+                "Can, aile planındaki açık alanı turuncuya boyuyor. Deniz yanına küçük bir güneş çiziyor.",
+                5.5f);
         }
 
         public void OnSiblingCalmed()
@@ -295,6 +349,8 @@ namespace Deprem.Story
 
             if (completedBeatIndex == 9)
                 brokenGlassHazard?.SetAvailable(false);
+            if (revisedFlow && completedBeatIndex == revisedShoesBeatIndex)
+                brokenGlassHazard?.SetAvailable(false);
 
             if (postQuakeIndex < postQuakeBeats.Length)
                 StartCoroutine(EnablePostQuakeBeatAfterDelay(beat?.delayAfter ?? 2.5f));
@@ -315,9 +371,13 @@ namespace Deprem.Story
             SetActive(emergencyRouteLights, !hasFlashlight);
             corridorExit?.SetAvailable(true);
             ui?.ShowObjective("KAPIYA GÜVENLE YAKLAŞ", "Sarsıntı durdu. Can yanında; çıkış yolunu acele etmeden izle.");
-            ui?.ShowSubtitle(hasFlashlight
-                ? "Hazırladığın fener çalışıyor. Işığı zemine tutarak kırık parçaları gör."
-                : "Çantada fener yok. Zayıf acil aydınlatmayı izleyip adımlarını yavaşlat.", 7f);
+            ui?.ShowSubtitle(revisedFlow
+                ? hasFlashlight
+                    ? "Deniz feneri çantadan çıkarıp zemine çeviriyor. Hazırlıkta seçtiğin araç şimdi gerçek bir avantaj."
+                    : "Çantada fener yok. Deniz koridordaki zayıf acil lambayı bulup daha yavaş bir rota seçiyor."
+                : hasFlashlight
+                    ? "Hazırladığın fener çalışıyor. Işığı zemine tutarak kırık parçaları gör."
+                    : "Çantada fener yok. Zayıf acil aydınlatmayı izleyip adımlarını yavaşlat.", 7f);
         }
 
         public void OnCorridorReached()
@@ -368,10 +428,21 @@ namespace Deprem.Story
             cameraController?.SetImpulseEnabled(false);
             cameraController?.ActivateZone(StoryCameraZoneId.RoomOverview, true);
             ui?.HideAction();
-            ui?.ShowObjective("ODAYI OKU — 1/4", "Can'la birlikte güvenli masayı incele.");
-            ui?.ShowSubtitle("Sakin bir aile günü. Deniz ile Can salonda oyun oynuyor; evin sesleri her zamanki gibi.", 7f);
+            ui?.ShowObjective(
+                revisedFlow ? "CAN'IN OYUNUNA YARDIM ET" : "ODAYI OKU — 1/4",
+                revisedFlow
+                    ? "Masanın yanına yuvarlanan oyuncak tekerini doğrudan arabaya sürükle."
+                    : "Can'la birlikte güvenli masayı incele.");
+            ui?.ShowSubtitle(
+                revisedFlow
+                    ? "Salonda sıradan bir öğleden sonra. Can'ın oyuncak arabasının tekeri masanın yanına kaçıyor; radyoda hafif bir müzik çalıyor."
+                    : "Sakin bir aile günü. Deniz ile Can salonda oyun oynuyor; evin sesleri her zamanki gibi.",
+                7f);
             if (introInspections != null && introInspections.Length > 0)
                 introInspections[0]?.SetAvailable(true);
+            if (revisedFlow && introOptionalMoments != null)
+                foreach (StoryInteractable optionalMoment in introOptionalMoments)
+                    optionalMoment?.SetAvailable(true);
             StartCoroutine(IntroTimeout());
         }
 
@@ -388,6 +459,28 @@ namespace Deprem.Story
             if (phase != StorySlicePhase.CalmOpening || introIndex >= (introInspections?.Length ?? 0))
                 yield break;
             introInspections[introIndex]?.SetAvailable(true);
+            if (revisedFlow)
+            {
+                string[] revisedDetails =
+                {
+                    "Masanın yanındaki tekeri doğrudan oyuncak arabaya sürükle.",
+                    "Oyuncak arabayı masanın altından Can'a doğru sür.",
+                    "Radyonun sesini kendi düğmesi üzerinden biraz kıs.",
+                    "Can'ın çizimindeki aile buluşma noktasını birlikte işaretleyin."
+                };
+                string[] revisedTitles =
+                {
+                    "CAN'IN OYUNUNA YARDIM ET",
+                    "ARABAYI CAN'A GÖNDER",
+                    "RADYONUN SESİNİ KIS",
+                    "ÇİZİMİ BİRLİKTE TAMAMLA"
+                };
+                ui?.ShowObjective(
+                    revisedTitles[Mathf.Min(introIndex, revisedTitles.Length - 1)],
+                    revisedDetails[Mathf.Min(introIndex, revisedDetails.Length - 1)]);
+                yield break;
+            }
+
             string[] details =
             {
                 "Can'la birlikte güvenli masayı incele.",
@@ -522,8 +615,16 @@ namespace Deprem.Story
             player?.ClearMovementConstraint();
             siblingFollower?.SetFollowing(true);
             brokenGlassHazard?.SetAvailable(true);
-            ui?.ShowObjective("SARSINTI DURDU — BEKLE", "Önce yeni bir hareket, düşen parça veya kırık cam sesi var mı dinle.");
-            ui?.ShowSubtitle("Anne (engelin arkasından): Çocuklar, iyi misiniz? Olduğunuz yerde birbirinizi kontrol edin!", 8f);
+            ui?.ShowObjective(
+                revisedFlow ? "SARSINTI DURDU — BİRBİRİNİZİ KONTROL EDİN" : "SARSINTI DURDU — BEKLE",
+                revisedFlow
+                    ? "Can'a doğrudan dokunup birkaç saniye yanında kal; sonra zemini okuyun."
+                    : "Önce yeni bir hareket, düşen parça veya kırık cam sesi var mı dinle.");
+            ui?.ShowSubtitle(
+                revisedFlow
+                    ? "Bir an sessizlik oluyor. Anne, devrilen eşyanın arkasından sesleniyor: Çocuklar, iyi misiniz?"
+                    : "Anne (engelin arkasından): Çocuklar, iyi misiniz? Olduğunuz yerde birbirinizi kontrol edin!",
+                8f);
             StartCoroutine(EnablePostQuakeBeatAfterDelay(postQuakeSettleDuration));
         }
 
@@ -571,8 +672,16 @@ namespace Deprem.Story
             player?.SetNavigationEnabled(true);
             player?.ClearMovementConstraint();
             siblingFollower?.SetFollowing(true);
-            ui?.ShowObjective("KORİDOR EŞİĞİ", "Can yanında mı kontrol et; zemini ve tavandan gelen sesleri dinle.");
-            ui?.ShowSubtitle("Koridor karanlık ve dar. Deniz, Can'ı önüne alıp acele etmeden ilerliyor.", 7f);
+            ui?.ShowObjective(
+                "KORİDOR EŞİĞİ",
+                revisedFlow
+                    ? "Can'ın elini tut; feneri zeminde gezdirerek güvenli adımları bul."
+                    : "Can yanında mı kontrol et; zemini ve tavandan gelen sesleri dinle.");
+            ui?.ShowSubtitle(
+                revisedFlow
+                    ? "Ebeveynlerin sesi enkazın öte yanından geliyor. Deniz kapıda durup önce Can'ın elini buluyor."
+                    : "Koridor karanlık ve dar. Deniz, Can'ı önüne alıp acele etmeden ilerliyor.",
+                7f);
             StartCoroutine(EnableCorridorBeatAfterDelay(3f));
         }
 
@@ -594,6 +703,18 @@ namespace Deprem.Story
             siblingFollower?.SetFollowing(false);
             ui?.ShowObjective("ARTÇI SARSINTI HABERCİSİ", "İnce titreşim ve tavandan gelen sesi fark et; merdivene koşma.");
             impulseSource?.GenerateImpulseWithForce(0.28f);
+
+            if (revisedFlow)
+            {
+                float duration = Mathf.Max(3f, corridorWarningDuration);
+                ui?.ShowSubtitle("Can, tavandaki ince çıtırtıyı Deniz'den önce duyuyor: Dur... yine geliyor.", 4f);
+                yield return new WaitForSeconds(Mathf.Min(4f, duration));
+                ui?.ShowSubtitle("Deniz Can'ı açık noktada yanında tutuyor. İkisi de merdivene koşmadan artçının geçmesini bekliyor.", 5f);
+                yield return new WaitForSeconds(Mathf.Max(0f, duration - 4f));
+                CompleteSlice();
+                yield break;
+            }
+
             string[] lines =
             {
                 "Can: Yine mi sallanacak?  Deniz: Yanımda kal; acele etmeden bekleyeceğiz.",
@@ -610,10 +731,7 @@ namespace Deprem.Story
                 yield return new WaitForSeconds(10f);
             }
 
-            gameManager?.CompleteAct(StoryAct.Quake);
-            phase = StorySlicePhase.Completed;
-            ui?.ShowCompletion();
-            Debug.Log($"Story_03_Quake completed in {ElapsedSliceSeconds:F1} seconds with {gameManager?.CurrentState.mistakeCount ?? 0} mistakes.", this);
+            CompleteSlice();
         }
 
         private void SetupCompletedState()
@@ -651,6 +769,7 @@ namespace Deprem.Story
             SetActive(clearExitRoute, exitCleared);
             SetActive(clutteredExitRoute, !exitCleared);
             SetActive(brokenGlassVisual, afterQuake);
+            SetActive(canComfortItem, afterQuake && HasFlag(StoryFlag.BagComfortItem));
             SetActive(playerFlashlight, false);
             SetActive(emergencyRouteLights, false);
             SetDoorOpen(false);
@@ -662,6 +781,9 @@ namespace Deprem.Story
             if (introInspections != null)
                 foreach (StoryInteractable interactable in introInspections)
                     interactable?.SetAvailable(false);
+            if (introOptionalMoments != null)
+                foreach (StoryInteractable optionalMoment in introOptionalMoments)
+                    optionalMoment?.SetAvailable(false);
             calmSibling?.SetAvailable(false);
             crouchStep?.SetAvailable(false);
             coverHeadStep?.SetAvailable(false);
@@ -732,6 +854,11 @@ namespace Deprem.Story
             yield return new WaitForSeconds(seconds);
             if (version == safetyPromptVersion && phase == StorySlicePhase.Quake && quakeActive && !retrying)
             {
+                if (revisedFlow)
+                {
+                    ui?.ShowSubtitle("Can sana bakıyor. Uzaklaşma; hemen yanındaki güvenli masaya birlikte geçin.", 4f);
+                    yield break;
+                }
                 ui?.ShowSubtitle("Çok uzun bekledin; çevredeki eşya devrilmeden yakındaki güvenli harekete geç.", 3.5f);
                 OnUnsafeChoice();
             }
@@ -764,6 +891,18 @@ namespace Deprem.Story
             ui?.ShowSubtitle(subtitles[Mathf.Clamp(index, 0, subtitles.Length - 1)], 7f);
         }
 
+        private void ShowRevisedIntroSubtitle(int index)
+        {
+            string[] subtitles =
+            {
+                "Can: Tam oturdu! Şimdi araba masanın altından geçebiliyor.",
+                "Araba masanın altından Can'a ulaşıyor. Can gülüp çizimine geri dönüyor.",
+                "Deniz radyonun sesini kısıyor. Mutfaktan tabak ve çatal sesleri geliyor; kimse birazdan olacakları bilmiyor.",
+                "Can, aile planındaki açık alanı turuncuya boyuyor: Birbirimizi kaybedersek burada buluşacağız."
+            };
+            ui?.ShowSubtitle(subtitles[Mathf.Clamp(index, 0, subtitles.Length - 1)], 5.5f);
+        }
+
         private string ResolveConditionalText(string text)
         {
             if (string.IsNullOrEmpty(text))
@@ -780,7 +919,10 @@ namespace Deprem.Story
                     : "Su şişesi yok; bu eksik tahliyeyi durdurmuyor ama hazırlık raporuna işlenecek.")
                 .Replace("{FIRSTAID}", HasFlag(StoryFlag.BagFirstAid)
                     ? "İlk yardım paketi kapalı gözde duruyor; şu anda kullanmak gerekmiyor."
-                    : "İlk yardım paketi yok; kimse yaralı olmadığı için güvenli çıkışa devam edilebilir.");
+                    : "İlk yardım paketi yok; kimse yaralı olmadığı için güvenli çıkışa devam edilebilir.")
+                .Replace("{COMFORT}", HasFlag(StoryFlag.BagComfortItem)
+                    ? "Can, hazırlıkta Deniz'in ona verdiği oyuncak arabayı göğsüne çekip nefesini düzenliyor."
+                    : "Can, Deniz'in elini tutup nefesini onunla birlikte yavaşlatıyor.");
         }
 
         private bool HasFlag(StoryFlag flag)
@@ -791,6 +933,21 @@ namespace Deprem.Story
         private void AnimatePostQuakeBeat(int beatIndex)
         {
             ApplyPostQuakePhysicalResult(beatIndex);
+            if (revisedFlow)
+            {
+                if (beatIndex == 0)
+                {
+                    FaceSiblingsTowardsEachOther();
+                    FireStoryTrigger(denizAnimator, StoryCallHash);
+                    FireStoryTrigger(canAnimator, StoryInteractHash);
+                }
+                else if (beatIndex == revisedShoesBeatIndex || beatIndex == revisedBagBeatIndex)
+                    FireStoryTrigger(denizAnimator, StoryPickUpHash);
+                else
+                    FireStoryTrigger(denizAnimator, StoryInteractHash);
+                return;
+            }
+
             if (beatIndex >= 1 && beatIndex <= 3)
                 FaceSiblingsTowardsEachOther();
             if (beatIndex <= 1)
@@ -832,6 +989,28 @@ namespace Deprem.Story
 
         private void ApplyPostQuakePhysicalResult(int beatIndex)
         {
+            if (revisedFlow)
+            {
+                if (beatIndex == revisedShoesBeatIndex)
+                {
+                    SetActive(leftShoeWorld, false);
+                    SetActive(rightShoeWorld, false);
+                    SetActive(denizWornShoes, true);
+                }
+                else if (beatIndex == revisedCanShoesBeatIndex)
+                {
+                    FaceSiblingsTowardsEachOther();
+                    SetActive(canShoesWorld, false);
+                    SetActive(canWornShoes, true);
+                }
+                else if (beatIndex == revisedBagBeatIndex)
+                {
+                    SetActive(emergencyBagWorld, false);
+                    SetActive(denizWornBag, true);
+                }
+                return;
+            }
+
             switch (beatIndex)
             {
                 case 7:
@@ -918,6 +1097,14 @@ namespace Deprem.Story
         {
             if (target != null)
                 target.SetActive(active);
+        }
+
+        private void CompleteSlice()
+        {
+            gameManager?.CompleteAct(StoryAct.Quake);
+            phase = StorySlicePhase.Completed;
+            ui?.ShowCompletion();
+            Debug.Log($"Story_03_Quake completed in {ElapsedSliceSeconds:F1} seconds with {gameManager?.CurrentState.mistakeCount ?? 0} mistakes.", this);
         }
     }
 }

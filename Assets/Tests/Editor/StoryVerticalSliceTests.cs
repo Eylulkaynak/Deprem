@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Deprem.Story;
@@ -559,15 +560,22 @@ public sealed class StoryVerticalSliceTests
     }
 
     [Test]
-    public void BuildSettings_PreserveLegacyStartupAndAppendStorySlice()
+    public void BuildSettings_PublishOnlyRebuildStoryAndKeepLegacyFilesAsReferences()
     {
-        string[] paths = EditorBuildSettings.scenes.Select(scene => scene.path).ToArray();
-        Assert.That(paths.Length, Is.GreaterThanOrEqualTo(5));
-        Assert.That(paths[0], Does.EndWith("bolum1.unity").IgnoreCase);
-        Assert.That(paths[1], Does.EndWith("Bolum2.unity").IgnoreCase);
-        Assert.That(paths[2], Does.EndWith("Bolum3.unity").IgnoreCase);
-        Assert.That(paths[3], Does.EndWith("Bolum4.unity").IgnoreCase);
-        Assert.That(paths, Does.Contain(ScenePath));
+        string[] paths = EditorBuildSettings.scenes
+            .Where(scene => scene.enabled)
+            .Select(scene => scene.path)
+            .ToArray();
+        Assert.That(paths, Is.EqualTo(new[]
+        {
+            "Assets/Scenes/Story_Rebuild_MainMenu.unity",
+            "Assets/Scenes/Story_01_RebuildPreview.unity",
+            "Assets/Scenes/Story_02_RebuildPreview.unity",
+            "Assets/Scenes/Story_03_RebuildPreview.unity",
+            "Assets/Scenes/Story_04_RebuildPreview.unity"
+        }));
+        Assert.That(AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/bolum1.unity"), Is.Not.Null);
+        Assert.That(AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath), Is.Not.Null);
     }
 
     [Test]
@@ -610,9 +618,12 @@ public sealed class StoryVerticalSliceTests
         string[] states = controller.layers[0].stateMachine.states.Select(child => child.state.name).ToArray();
         foreach (string state in new[] { "Locomotion", "Interact", "Pick Up", "Inspect", "Call Sibling", "Startle", "Recover Balance", "Crouch", "Protect Head", "Hold Cover", "Work" })
             Assert.That(states, Does.Contain(state), state);
-        BlendTree locomotion = controller.layers[0].stateMachine.states
-            .Single(child => child.state.name == "Locomotion").state.motion as BlendTree;
+        AnimatorState locomotionState = controller.layers[0].stateMachine.states
+            .Single(child => child.state.name == "Locomotion").state;
+        BlendTree locomotion = locomotionState.motion as BlendTree;
         Assert.That(locomotion, Is.Not.Null);
+        Assert.That(locomotionState.iKOnFeet, Is.True,
+            "Locomotion ayak IK'sı yürüyüş boyunca tabanı zemine kilitlemeli.");
         string[] locomotionMotions = locomotion.children.Select(child => child.motion.name).ToArray();
         Assert.That(locomotionMotions, Does.Contain("ChildNeutralIdle"),
             "Story characters must use the corrected neutral child idle instead of the wide source stance.");
@@ -624,6 +635,18 @@ public sealed class StoryVerticalSliceTests
             "Eski çömelmiş/sneak görünümlü çocuk yürüyüşü Story locomotion'da kalmamalı.");
         Assert.That(locomotionMotions, Does.Not.Contain("boy_move_run"),
             "Ham NavMesh hızı karakteri yanlışlıkla koşu state'ine itmemeli.");
+        AnimatorStateTransition[] storyTransitions = controller.layers[0].stateMachine.anyStateTransitions
+            .Where(transition => transition.conditions.Any(condition =>
+                condition.parameter != "StoryReset" &&
+                StoryAnimationLibraryBuilder.RequiredTriggers.Contains(condition.parameter)))
+            .ToArray();
+        Assert.That(storyTransitions, Has.Length.EqualTo(
+            StoryAnimationLibraryBuilder.RequiredTriggers.Length - 1));
+        Assert.That(storyTransitions.All(transition => transition.conditions.Any(condition =>
+            condition.parameter == "Speed" &&
+            condition.mode == AnimatorConditionMode.Less &&
+            condition.threshold <= 0.08f)), Is.True,
+            "El-kol hikâye animasyonları karakter yürürken locomotion'ın üzerine geçmemeli.");
 
         Assert.That(controller.layers[0].stateMachine.states
                 .Single(child => child.state.name == "Protect Head").state.motion.name,
@@ -674,75 +697,102 @@ public sealed class StoryVerticalSliceTests
         var adultMotions = adult.layers[0].stateMachine.states
             .ToDictionary(child => child.state.name, child => child.state.motion != null ? child.state.motion.name : string.Empty);
         Assert.That(adultMotions["Adult Idle"], Is.EqualTo("AdultNeutralIdle"),
-            "Anne idle klibi yetişkin iskeletinde bacakları gereksiz açmamalı.");
+            "Anne uses the clean Synty-compatible humanoid idle.");
         AnimationClip adultIdle =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.AdultNeutralIdlePath);
         Assert.That(adultIdle, Is.Not.Null);
-        EditorCurveBinding adultLeftFootX = AnimationUtility.GetCurveBindings(adultIdle)
-            .Single(binding => binding.propertyName == "LeftFootT.x");
-        float adultFootOffset = Mathf.Abs(AnimationUtility.GetEditorCurve(adultIdle, adultLeftFootX).Evaluate(0f));
-        AnimationClip childIdle =
-            AssetDatabase.LoadAssetAtPath<AnimationClip>("Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_idle0.anim");
-        EditorCurveBinding childLeftFootX = AnimationUtility.GetCurveBindings(childIdle)
-            .Single(binding => binding.propertyName == "LeftFootT.x");
-        float childFootOffset = Mathf.Abs(AnimationUtility.GetEditorCurve(childIdle, childLeftFootX).Evaluate(0f));
-        Assert.That(adultFootOffset, Is.LessThan(0.001f),
-            "Yetişkin nötr duruşunda ayaklar çocuk klibindeki geniş açıklıkta kalmamalı.");
-        EditorCurveBinding adultLeftUpperLeg = AnimationUtility.GetCurveBindings(adultIdle)
-            .Single(binding => binding.propertyName == "Left Upper Leg In-Out");
-        float adultUpperLegInOut =
-            AnimationUtility.GetEditorCurve(adultIdle, adultLeftUpperLeg).Evaluate(0f);
-        Assert.That(adultUpperLegInOut, Is.LessThanOrEqualTo(-0.44f),
-            "Anne'nin yetişkin idle pozu tekrar geniş goril duruşuna dönememeli.");
-        AnimationClip correctedChildIdle =
+        AnimationClip cleanChildIdle =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildNeutralIdlePath);
-        EditorCurveBinding childIdleLeftUpperLeg = AnimationUtility.GetCurveBindings(correctedChildIdle)
-            .Single(binding => binding.propertyName == "Left Upper Leg In-Out");
-        float childIdleUpperLegInOut =
-            AnimationUtility.GetEditorCurve(correctedChildIdle, childIdleLeftUpperLeg).Evaluate(0f);
-        Assert.That(childIdleUpperLegInOut, Is.LessThanOrEqualTo(-0.42f),
-            "Deniz ve Can boşta dururken geniş goril siluetine geri dönememeli.");
-
-        AnimationClip naturalWalk =
+        AnimationClip cleanChildWalk =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildNaturalWalkPath);
-        Assert.That(naturalWalk, Is.Not.Null);
-        EditorCurveBinding naturalWalkFootX = AnimationUtility.GetCurveBindings(naturalWalk)
-            .Single(binding => binding.propertyName == "LeftFootT.x");
-        AnimationClip sourceWalk = AssetDatabase.LoadAssetAtPath<AnimationClip>(
-            "Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_move_walk.anim");
-        Assert.That(sourceWalk, Is.Not.Null);
-        EditorCurveBinding sourceWalkFootX = AnimationUtility.GetCurveBindings(sourceWalk)
-            .Single(binding => binding.propertyName == "LeftFootT.x");
-        float sampleTime = Mathf.Min(naturalWalk.length, sourceWalk.length) * 0.18f;
-        float correctedWalkFootX =
-            Mathf.Abs(AnimationUtility.GetEditorCurve(naturalWalk, naturalWalkFootX).Evaluate(sampleTime));
-        float rawWalkFootX =
-            Mathf.Abs(AnimationUtility.GetEditorCurve(sourceWalk, sourceWalkFootX).Evaluate(sampleTime));
-        Assert.That(correctedWalkFootX, Is.LessThan(rawWalkFootX * 0.2f),
-            "Çocuk yürüyüşü kendi rigindeki hareketi korurken yanal ayak açıklığını geri getirmemeli.");
-        EditorCurveBinding naturalWalkUpperLeg = AnimationUtility.GetCurveBindings(naturalWalk)
-            .Single(binding => binding.propertyName == "Left Upper Leg In-Out");
-        Assert.That(AnimationUtility.GetEditorCurve(naturalWalk, naturalWalkUpperLeg).Evaluate(sampleTime),
-            Is.LessThanOrEqualTo(-0.38f),
-            "Yürüyüş çocuk kalçasını yeniden dışa açmamalı.");
+        Assert.That(cleanChildIdle, Is.Not.Null);
+        Assert.That(cleanChildWalk, Is.Not.Null);
 
-        foreach (string preservedCurve in new[]
+        AnimationClip sourceIdle = AssetDatabase.LoadAllAssetsAtPath(
+                "Assets/Story/Animations/ThirdParty/KayKit/Rig_Medium_General.fbx")
+            .OfType<AnimationClip>()
+            .Single(clip => clip.name == "Idle_A");
+        AnimationClip sourceWalk =
+            MeshyFamilyCharacterImporter.LoadPrimaryAnimationClip(MeshyFamilyCharacterImporter.DenizWalkingPath);
+        Assert.That(sourceWalk, Is.Not.Null,
+            "ChildNaturalWalk must be a clean copy of Deniz's matching Humanoid walk source.");
+
+        foreach ((AnimationClip generated, AnimationClip source) in new[]
                  {
-                     "RootT.y",
-                     "Left Upper Leg Front-Back",
-                     "Right Upper Leg Front-Back",
-                     "Left Lower Leg Stretch",
-                     "Right Lower Leg Stretch"
+                     (cleanChildIdle, sourceIdle),
+                     (adultIdle, sourceIdle),
+                     (cleanChildWalk, sourceWalk)
                  })
         {
-            EditorCurveBinding generatedBinding = AnimationUtility.GetCurveBindings(naturalWalk)
-                .Single(binding => binding.propertyName == preservedCurve);
-            EditorCurveBinding sourceBinding = AnimationUtility.GetCurveBindings(sourceWalk)
-                .Single(binding => binding.propertyName == preservedCurve);
-            float generatedValue = AnimationUtility.GetEditorCurve(naturalWalk, generatedBinding).Evaluate(sampleTime);
-            float sourceValue = AnimationUtility.GetEditorCurve(sourceWalk, sourceBinding).Evaluate(sampleTime);
-            Assert.That(generatedValue, Is.EqualTo(sourceValue).Within(0.0001f),
-                preservedCurve + " çocuk modelinin kendi dik yürüyüşünden korunmalı; yetişkin klibi retarget edilmemeli.");
+            EditorCurveBinding[] generatedBindings = AnimationUtility.GetCurveBindings(generated);
+            EditorCurveBinding[] sourceBindings = AnimationUtility.GetCurveBindings(source);
+            Assert.That(generatedBindings.Length, Is.EqualTo(sourceBindings.Length),
+                generated.name + " must not add or remove humanoid correction curves.");
+            foreach (EditorCurveBinding sourceBinding in sourceBindings)
+            {
+                EditorCurveBinding generatedBinding = generatedBindings.Single(binding =>
+                    binding.path == sourceBinding.path &&
+                    binding.type == sourceBinding.type &&
+                    binding.propertyName == sourceBinding.propertyName);
+                AnimationCurve generatedCurve = AnimationUtility.GetEditorCurve(generated, generatedBinding);
+                AnimationCurve sourceCurve = AnimationUtility.GetEditorCurve(source, sourceBinding);
+                bool anchoredIdleRoot = (generated == cleanChildIdle || generated == adultIdle) &&
+                                        string.IsNullOrEmpty(sourceBinding.path) &&
+                                        (sourceBinding.propertyName.StartsWith("RootT.", StringComparison.Ordinal) ||
+                                         sourceBinding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal));
+                bool correctedWalkRoot = generated == cleanChildWalk &&
+                                         string.IsNullOrEmpty(sourceBinding.path) &&
+                                         sourceBinding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal);
+                if (anchoredIdleRoot || correctedWalkRoot)
+                    continue;
+                foreach (float ratio in new[] { 0f, 0.27f, 0.63f, 1f })
+                {
+                    float time = source.length * ratio;
+                    Assert.That(generatedCurve.Evaluate(time), Is.EqualTo(sourceCurve.Evaluate(time)).Within(0.0001f),
+                        generated.name + " must preserve " + sourceBinding.propertyName + " without old leg offsets.");
+                }
+            }
+        }
+
+        foreach (AnimationClip idle in new[] { cleanChildIdle, adultIdle })
+        {
+            EditorCurveBinding[] idleRootBindings = AnimationUtility.GetCurveBindings(idle)
+                .Where(binding =>
+                    string.IsNullOrEmpty(binding.path) &&
+                    (binding.propertyName.StartsWith("RootT.", StringComparison.Ordinal) ||
+                     binding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal)))
+                .ToArray();
+            Assert.That(idleRootBindings.Count(binding =>
+                binding.propertyName.StartsWith("RootT.", StringComparison.Ordinal)), Is.EqualTo(3));
+            Assert.That(idleRootBindings.Count(binding =>
+                binding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal)), Is.EqualTo(4));
+            foreach (EditorCurveBinding binding in idleRootBindings)
+            {
+                AnimationCurve curve = AnimationUtility.GetEditorCurve(idle, binding);
+                float[] samples = new[] { 0f, 0.27f, 0.63f, 1f }
+                    .Select(ratio => curve.Evaluate(idle.length * ratio))
+                    .ToArray();
+                Assert.That(samples.Max() - samples.Min(), Is.LessThan(0.00001f),
+                    idle.name + " must keep " + binding.propertyName +
+                    " anchored so idle cannot slide or rotate the visible rig.");
+            }
+        }
+
+        Dictionary<string, AnimationCurve> walkRootCurves = AnimationUtility.GetCurveBindings(cleanChildWalk)
+            .Where(binding => string.IsNullOrEmpty(binding.path) &&
+                              binding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal))
+            .ToDictionary(binding => binding.propertyName,
+                binding => AnimationUtility.GetEditorCurve(cleanChildWalk, binding));
+        foreach (float ratio in new[] { 0f, 0.27f, 0.63f, 1f })
+        {
+            float time = cleanChildWalk.length * ratio;
+            Quaternion rootRotation = Quaternion.Normalize(new Quaternion(
+                walkRootCurves["RootQ.x"].Evaluate(time),
+                walkRootCurves["RootQ.y"].Evaluate(time),
+                walkRootCurves["RootQ.z"].Evaluate(time),
+                walkRootCurves["RootQ.w"].Evaluate(time)));
+            Assert.That(Vector3.Dot(rootRotation * Vector3.forward, Vector3.forward), Is.GreaterThan(0.8f),
+                "Walk root must face the same forward axis as NavMesh movement.");
         }
         Assert.That(adultMotions["Adult Interact"], Is.EqualTo("Interact"));
         Assert.That(adultMotions["Adult Pick Up"], Is.EqualTo("PickUp"));

@@ -4,6 +4,10 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.SceneManagement;
+#endif
 
 namespace Deprem.Story
 {
@@ -34,8 +38,17 @@ namespace Deprem.Story
             StoryFlag.BagFirstAid
         };
 
+        [Header("Story route")]
+        [SerializeField] private string preparationSceneName = "Story_01_BagPreparation";
+        [SerializeField] private string homeSafetySceneName = "Story_02_HomeSafety";
+        [SerializeField] private string quakeSceneName = "Story_03_Quake";
+        [SerializeField] private string evacuationSceneName = "Story_04_Evacuation";
+
         public StorySessionState CurrentState { get; private set; }
         public string SavePath => Path.Combine(Application.persistentDataPath, "story-session.json");
+        public bool HasSaveData => File.Exists(SavePath);
+        public StoryAct CurrentAct => CurrentState != null ? CurrentState.activeAct : initialAct;
+        public bool IsFinalAct => CurrentAct == StoryAct.Evacuation;
 
         public event Action<StorySessionState> StateChanged;
 
@@ -95,6 +108,8 @@ namespace Deprem.Story
         public void BeginAct(StoryAct act)
         {
             EnsureState();
+            if (CurrentState.activeAct != act)
+                CurrentState.checkpoint = StoryCheckpoint.None;
             CurrentState.activeAct = act;
             CurrentState.activeScene = SceneManager.GetActiveScene().name;
             SaveState();
@@ -113,15 +128,51 @@ namespace Deprem.Story
             SaveState();
             Scene activeScene = SceneManager.GetActiveScene();
             if (activeScene.IsValid())
-                SceneManager.LoadScene(activeScene.name);
+                TryLoadStoryScene(activeScene.name);
         }
 
         public void ContinueStory()
         {
             EnsureState();
             string sceneName = CurrentState.activeScene;
-            if (!string.IsNullOrWhiteSpace(sceneName) && Application.CanStreamedLevelBeLoaded(sceneName))
-                SceneManager.LoadScene(sceneName);
+            if (string.IsNullOrWhiteSpace(sceneName) || sceneName == SceneManager.GetActiveScene().name)
+                sceneName = GetSceneName(CurrentState.activeAct);
+            TryLoadStoryScene(sceneName);
+        }
+
+        public void StartNewStory()
+        {
+            ResetStory();
+            OpenActInternal(StoryAct.Preparation, true);
+        }
+
+        public void ContinueToNextAct()
+        {
+            EnsureState();
+            if (CurrentState.activeAct >= StoryAct.Evacuation)
+                return;
+
+            StoryAct next = (StoryAct)((int)CurrentState.activeAct + 1);
+            OpenActInternal(next, false);
+        }
+
+        public void ReplayCurrentAct()
+        {
+            EnsureState();
+            StoryAct act = CurrentState.activeAct;
+            CurrentState.completedActs.RemoveAll(completed => completed == act);
+            CurrentState.checkpoint = StoryCheckpoint.None;
+            CurrentState.activeScene = SceneManager.GetActiveScene().name;
+            SaveState();
+            TryLoadStoryScene(CurrentState.activeScene);
+        }
+
+        public void OpenAct(int actValue)
+        {
+            if (!Enum.IsDefined(typeof(StoryAct), actValue))
+                return;
+
+            OpenActInternal((StoryAct)actValue, false);
         }
 
         public void ResetStory()
@@ -131,6 +182,18 @@ namespace Deprem.Story
 
             CurrentState = CreateInitialState();
             SaveState();
+        }
+
+        public string GetSceneName(StoryAct act)
+        {
+            return act switch
+            {
+                StoryAct.Preparation => preparationSceneName,
+                StoryAct.HomeSafety => homeSafetySceneName,
+                StoryAct.Quake => quakeSceneName,
+                StoryAct.Evacuation => evacuationSceneName,
+                _ => string.Empty
+            };
         }
 
         public void SaveState()
@@ -186,6 +249,61 @@ namespace Deprem.Story
                 state.SetFlag(flag, true);
 
             return state;
+        }
+
+        private void OpenActInternal(StoryAct act, bool clearCompletedActs)
+        {
+            EnsureState();
+            if (clearCompletedActs)
+            {
+                CurrentState.completedActs.Clear();
+            }
+            else
+            {
+                CurrentState.completedActs.RemoveAll(completed => (int)completed >= (int)act);
+            }
+
+            CurrentState.activeAct = act;
+            CurrentState.checkpoint = StoryCheckpoint.None;
+            CurrentState.activeScene = GetSceneName(act);
+            SaveState();
+            TryLoadStoryScene(CurrentState.activeScene);
+        }
+
+        private bool TryLoadStoryScene(string sceneName)
+        {
+            if (string.IsNullOrWhiteSpace(sceneName))
+                return false;
+
+            if (Application.CanStreamedLevelBeLoaded(sceneName))
+            {
+                SceneManager.LoadScene(sceneName);
+                return true;
+            }
+
+#if UNITY_EDITOR
+            if (Application.isPlaying)
+            {
+                string[] sceneGuids = AssetDatabase.FindAssets(sceneName + " t:Scene");
+                foreach (string guid in sceneGuids)
+                {
+                    string path = AssetDatabase.GUIDToAssetPath(guid);
+                    if (!string.Equals(
+                            Path.GetFileNameWithoutExtension(path),
+                            sceneName,
+                            StringComparison.Ordinal))
+                        continue;
+
+                    EditorSceneManager.LoadSceneInPlayMode(
+                        path,
+                        new LoadSceneParameters(LoadSceneMode.Single));
+                    return true;
+                }
+            }
+#endif
+
+            Debug.LogWarning($"Story scene is not available in the active build route: {sceneName}", this);
+            return false;
         }
 
         private void EnsureState()

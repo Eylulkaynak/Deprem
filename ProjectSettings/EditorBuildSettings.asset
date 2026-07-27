@@ -6,29 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/bolum1.unity
-    guid: 078801ebb7b3f124f8ee21f7814c8b69
+    path: Assets/Scenes/Story_Rebuild_MainMenu.unity
+    guid: 4e8fba7e38c62fb41b25821856ed2745
   - enabled: 1
-    path: Assets/Scenes/Bolum2.unity
-    guid: 35e4c1f4472e49f4eac22db55635ba51
+    path: Assets/Scenes/Story_01_RebuildPreview.unity
+    guid: 086706c31b5411749ab8fc0f27356d81
   - enabled: 1
-    path: Assets/Scenes/Bolum3.unity
-    guid: bac1e9aba83affc4a99bf88604643640
+    path: Assets/Scenes/Story_02_RebuildPreview.unity
+    guid: 18ed51fa4ce9b42408d820efc4ebd067
   - enabled: 1
-    path: Assets/Scenes/Bolum4.unity
-    guid: 10239e66f6022d14ebb0b39b2514ee58
+    path: Assets/Scenes/Story_03_RebuildPreview.unity
+    guid: 465d780e9ae00ee4386d092706d4aac9
   - enabled: 1
-    path: Assets/Scenes/Story_03_Quake.unity
-    guid: 37c37c7c0fa370e40bd416abbc395b9c
-  - enabled: 1
-    path: Assets/Scenes/Story_01_BagPreparation.unity
-    guid: 274a04a51c248674fa2e48c932be5d6b
-  - enabled: 1
-    path: Assets/Scenes/Story_02_HomeSafety.unity
-    guid: bf159a7babdc16444a4eb9e267aa1766
-  - enabled: 1
-    path: Assets/Scenes/Story_04_Evacuation.unity
-    guid: 78b41f02424d6324b8a40bc4854a366e
+    path: Assets/Scenes/Story_04_RebuildPreview.unity
+    guid: e5d771d151aedb046a393961216f505c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -50,6 +50,11 @@ namespace Deprem.Story
 
         public void ActivateZone(StoryCameraZoneId zone, bool instant)
         {
+            // None is the authored contract for interactions that should keep the current shot.
+            // Treating it as a missing binding polluted QA runs with false camera errors.
+            if (zone == StoryCameraZoneId.None)
+                return;
+
             if (cameras == null)
                 return;
 

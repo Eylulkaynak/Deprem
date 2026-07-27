@@ -205,6 +205,260 @@ internal static class StoryAuthoredPropFactory
         return root;
     }
 
+    internal static GameObject CreateEmergencyBackpack(
+        string name,
+        Transform parent,
+        Vector3 feetPosition,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material body,
+        Material pocket,
+        Material trim,
+        Material inside,
+        bool open,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "EmergencyBackpackRoundedBox",
+            () => CreatePrismMesh("EmergencyBackpackRoundedBox", RoundedRectangle, 1f));
+        Mesh handle = EnsureMesh("EmergencyBackpackHandle", () => CreateTubeMesh(
+            "EmergencyBackpackHandle",
+            new[]
+            {
+                new Vector3(-0.24f, 0.92f, 0.2f),
+                new Vector3(-0.22f, 1.09f, 0.2f),
+                new Vector3(0.22f, 1.09f, 0.2f),
+                new Vector3(0.24f, 0.92f, 0.2f)
+            },
+            0.035f,
+            9));
+
+        float bodyHeight = open ? 0.72f : 1f;
+        CreateMeshChild("BackpackBody", root.transform, roundedBox, body, Vector3.zero, Vector3.zero,
+            new Vector3(1.08f, bodyHeight, 0.68f));
+        CreateMeshChild("FrontPocket", root.transform, roundedBox, pocket, new Vector3(0f, 0.12f, -0.39f),
+            Vector3.zero, new Vector3(0.76f, 0.48f, 0.19f));
+        CreateMeshChild("PocketTrim", root.transform, roundedBox, trim, new Vector3(0f, 0.52f, -0.49f),
+            Vector3.zero, new Vector3(0.65f, 0.045f, 0.055f));
+        CreateMeshChild("EmergencyCrossVertical", root.transform, roundedBox, trim,
+            new Vector3(0f, 0.25f, -0.5f), Vector3.zero, new Vector3(0.12f, 0.3f, 0.045f));
+        CreateMeshChild("EmergencyCrossHorizontal", root.transform, roundedBox, trim,
+            new Vector3(0f, 0.34f, -0.505f), Vector3.zero, new Vector3(0.32f, 0.11f, 0.045f));
+        CreateMeshChild("LeftShoulderStrap", root.transform, roundedBox, pocket,
+            new Vector3(-0.31f, 0.13f, 0.36f), Vector3.zero, new Vector3(0.13f, 0.72f, 0.08f));
+        CreateMeshChild("RightShoulderStrap", root.transform, roundedBox, pocket,
+            new Vector3(0.31f, 0.13f, 0.36f), Vector3.zero, new Vector3(0.13f, 0.72f, 0.08f));
+        CreateMeshChild("TopHandle", root.transform, handle, trim, Vector3.zero, Vector3.zero, Vector3.one);
+
+        if (open)
+        {
+            CreateMeshChild("BagOpening", root.transform, roundedBox, inside, new Vector3(0f, 0.69f, 0f),
+                Vector3.zero, new Vector3(0.88f, 0.055f, 0.54f));
+            CreateMeshChild("OpenLid", root.transform, roundedBox, body, new Vector3(0f, 0.69f, 0.49f),
+                new Vector3(42f, 0f, 0f), new Vector3(0.98f, 0.12f, 0.62f));
+            CreateMeshChild("OpenLidInner", root.transform, roundedBox, inside, new Vector3(0f, 0.72f, 0.45f),
+                new Vector3(42f, 0f, 0f), new Vector3(0.82f, 0.035f, 0.5f));
+        }
+        else
+        {
+            CreateMeshChild("TopFlap", root.transform, roundedBox, body, new Vector3(0f, 0.78f, -0.08f),
+                Vector3.zero, new Vector3(0.94f, 0.24f, 0.62f));
+            CreateMeshChild("MainZipper", root.transform, roundedBox, trim, new Vector3(0f, 0.82f, -0.405f),
+                Vector3.zero, new Vector3(0.72f, 0.045f, 0.045f));
+        }
+
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
+    internal static GameObject CreateFirstAidKit(
+        string name,
+        Transform parent,
+        Vector3 feetPosition,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material body,
+        Material trim,
+        Material cross,
+        Material accent,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "FirstAidRoundedCase",
+            () => CreatePrismMesh("FirstAidRoundedCase", RoundedRectangle, 1f));
+        Mesh handle = EnsureMesh("FirstAidCaseHandle", () => CreateTubeMesh(
+            "FirstAidCaseHandle",
+            new[]
+            {
+                new Vector3(-0.24f, 0.67f, 0.12f),
+                new Vector3(-0.22f, 0.84f, 0.12f),
+                new Vector3(0.22f, 0.84f, 0.12f),
+                new Vector3(0.24f, 0.67f, 0.12f)
+            },
+            0.035f,
+            9));
+
+        CreateMeshChild("CaseBody", root.transform, roundedBox, body, Vector3.zero, Vector3.zero,
+            new Vector3(1.08f, 0.62f, 0.76f));
+        CreateMeshChild("CaseLid", root.transform, roundedBox, body, new Vector3(0f, 0.54f, 0f), Vector3.zero,
+            new Vector3(1.02f, 0.16f, 0.72f));
+        CreateMeshChild("ZipperFront", root.transform, roundedBox, trim, new Vector3(0f, 0.53f, -0.405f),
+            Vector3.zero, new Vector3(0.82f, 0.055f, 0.045f));
+        CreateMeshChild("ZipperBack", root.transform, roundedBox, trim, new Vector3(0f, 0.53f, 0.405f),
+            Vector3.zero, new Vector3(0.82f, 0.055f, 0.045f));
+        CreateMeshChild("FrontCrossVertical", root.transform, roundedBox, cross,
+            new Vector3(0f, 0.16f, -0.414f), Vector3.zero, new Vector3(0.13f, 0.32f, 0.035f));
+        CreateMeshChild("FrontCrossHorizontal", root.transform, roundedBox, cross,
+            new Vector3(0f, 0.255f, -0.416f), Vector3.zero, new Vector3(0.34f, 0.12f, 0.035f));
+        CreateMeshChild("TopCrossVertical", root.transform, roundedBox, cross,
+            new Vector3(0f, 0.705f, 0f), Vector3.zero, new Vector3(0.13f, 0.025f, 0.34f));
+        CreateMeshChild("TopCrossHorizontal", root.transform, roundedBox, cross,
+            new Vector3(0f, 0.708f, 0f), Vector3.zero, new Vector3(0.34f, 0.025f, 0.13f));
+        CreateMeshChild("LeftLatch", root.transform, roundedBox, accent,
+            new Vector3(-0.3f, 0.47f, -0.43f), Vector3.zero, new Vector3(0.1f, 0.13f, 0.055f));
+        CreateMeshChild("RightLatch", root.transform, roundedBox, accent,
+            new Vector3(0.3f, 0.47f, -0.43f), Vector3.zero, new Vector3(0.1f, 0.13f, 0.055f));
+        CreateMeshChild("CarryHandle", root.transform, handle, trim, Vector3.zero, Vector3.zero, Vector3.one);
+
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
+    internal static GameObject CreateEnvelope(
+        string name,
+        Transform parent,
+        Vector3 feetPosition,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material paper,
+        Material flap,
+        Material seal,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "EnvelopeRoundedBody",
+            () => CreatePrismMesh("EnvelopeRoundedBody", RoundedRectangle, 0.12f));
+        Mesh triangle = EnsureMesh(
+            "EnvelopeFlapTriangle",
+            () => CreatePrismMesh("EnvelopeFlapTriangle",
+                new[] { new Vector2(-0.5f, -0.32f), new Vector2(0.5f, -0.32f), new Vector2(0f, 0.5f) }, 0.025f));
+        CreateMeshChild("EnvelopeBody", root.transform, roundedBox, paper, Vector3.zero, Vector3.zero,
+            new Vector3(1f, 1f, 0.68f));
+        CreateMeshChild("EnvelopeFlap", root.transform, triangle, flap, new Vector3(0f, 0.125f, 0.04f),
+            Vector3.zero, new Vector3(0.92f, 1f, 0.58f));
+        CreateMeshChild("EnvelopeSeal", root.transform, roundedBox, seal, new Vector3(0f, 0.155f, 0.05f),
+            Vector3.zero, new Vector3(0.16f, 0.45f, 0.16f));
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
+    internal static GameObject CreatePictureFrame(
+        string name,
+        Transform parent,
+        Vector3 feetPosition,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material frame,
+        Material picture,
+        Material accent,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "StoryPictureFrameRoundedBox",
+            () => CreatePrismMesh("StoryPictureFrameRoundedBox", RoundedRectangle, 1f));
+        CreateMeshChild("FrameBack", root.transform, roundedBox, frame, Vector3.zero, Vector3.zero,
+            new Vector3(0.86f, 1f, 0.12f));
+        CreateMeshChild("Picture", root.transform, roundedBox, picture, new Vector3(0f, 0.12f, -0.071f),
+            Vector3.zero, new Vector3(0.66f, 0.72f, 0.035f));
+        CreateMeshChild("PictureSun", root.transform, roundedBox, accent, new Vector3(0.18f, 0.62f, -0.095f),
+            Vector3.zero, new Vector3(0.14f, 0.14f, 0.025f));
+        CreateMeshChild("PictureGround", root.transform, roundedBox, accent, new Vector3(-0.08f, 0.18f, -0.098f),
+            new Vector3(0f, 0f, -12f), new Vector3(0.48f, 0.12f, 0.025f));
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
+    internal static GameObject CreateToyWheel(
+        string name,
+        Transform parent,
+        Vector3 feetPosition,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material tire,
+        Material hub,
+        Material axle,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh tireMesh = EnsureMesh("ToyWheelTire", () => CreateLatheMesh("ToyWheelTire", new[]
+        {
+            new Vector2(0.34f, -0.13f),
+            new Vector2(0.43f, -0.08f),
+            new Vector2(0.47f, 0f),
+            new Vector2(0.43f, 0.08f),
+            new Vector2(0.34f, 0.13f)
+        }, 18, true, true));
+        Mesh hubMesh = EnsureMesh("ToyWheelHub", () => CreateLatheMesh("ToyWheelHub", new[]
+        {
+            new Vector2(0.22f, -0.145f),
+            new Vector2(0.25f, -0.12f),
+            new Vector2(0.25f, 0.12f),
+            new Vector2(0.22f, 0.145f)
+        }, 18, true, true));
+        Mesh axleMesh = EnsureMesh("ToyWheelAxle", () => CreateLatheMesh("ToyWheelAxle", new[]
+        {
+            new Vector2(0.08f, -0.18f),
+            new Vector2(0.08f, 0.18f)
+        }, 14, true, true));
+        CreateMeshChild("RubberTire", root.transform, tireMesh, tire, Vector3.zero, Vector3.zero, Vector3.one);
+        CreateMeshChild("BrightHub", root.transform, hubMesh, hub, Vector3.zero, Vector3.zero, Vector3.one);
+        CreateMeshChild("AxlePin", root.transform, axleMesh, axle, Vector3.zero, Vector3.zero, Vector3.one);
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
+    internal static GameObject CreateFoldedCloth(
+        string name,
+        Transform parent,
+        Vector3 feetPosition,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material cloth,
+        Material edge,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "FoldedClothRoundedLayerV2",
+            () => CreatePrismMesh("FoldedClothRoundedLayerV2", RoundedRectangle, 0.06f));
+        CreateMeshChild("ClothBottom", root.transform, roundedBox, edge, Vector3.zero, Vector3.zero,
+            new Vector3(1f, 1f, 0.76f));
+        CreateMeshChild("ClothMiddle", root.transform, roundedBox, cloth, new Vector3(0.04f, 0.045f, -0.02f),
+            new Vector3(0f, 2f, 0f), new Vector3(0.94f, 1f, 0.72f));
+        CreateMeshChild("ClothTop", root.transform, roundedBox, cloth, new Vector3(-0.02f, 0.09f, 0.03f),
+            new Vector3(0f, -3f, 0f), new Vector3(0.88f, 1f, 0.68f));
+        CreateMeshChild("FoldLine", root.transform, roundedBox, edge, new Vector3(0.18f, 0.145f, -0.14f),
+            Vector3.zero, new Vector3(0.035f, 0.6f, 0.38f));
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
     private static void CreateShoe(string name, Transform parent, Vector3 position, Vector3 euler, Material upper,
         Material sole)
     {
@@ -438,10 +692,34 @@ internal static class StoryAuthoredPropFactory
             bounds = default;
             return false;
         }
-        bounds = renderers[0].bounds;
-        for (int i = 1; i < renderers.Length; i++)
-            bounds.Encapsulate(renderers[i].bounds);
-        return true;
+        bool initialized = false;
+        bounds = default;
+        foreach (Renderer renderer in renderers)
+        {
+            if (renderer == null || !renderer.enabled)
+                continue;
+            Bounds local = renderer.localBounds;
+            Matrix4x4 matrix = renderer.localToWorldMatrix;
+            Vector3 min = local.min;
+            Vector3 max = local.max;
+            for (int x = 0; x < 2; x++)
+            for (int y = 0; y < 2; y++)
+            for (int z = 0; z < 2; z++)
+            {
+                Vector3 corner = matrix.MultiplyPoint3x4(new Vector3(
+                    x == 0 ? min.x : max.x,
+                    y == 0 ? min.y : max.y,
+                    z == 0 ? min.z : max.z));
+                if (!initialized)
+                {
+                    bounds = new Bounds(corner, Vector3.zero);
+                    initialized = true;
+                }
+                else
+                    bounds.Encapsulate(corner);
+            }
+        }
+        return initialized;
     }
 
     private static void EnsureBoxCollider(GameObject root)

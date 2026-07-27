@@ -9,11 +9,19 @@ namespace Deprem.Story
     public enum StoryHomeSafetyStage
     {
         Opening,
+        RouteTesting,
+        NeighborVisit,
+        PlacingNeighborPlan,
         Inspecting,
+        MappingRiskZones,
         ClearingExit,
+        TestingClearedExit,
         LoweringShelfItems,
+        MarkingShelfAnchor,
         SecuringShelf,
+        TestingShelf,
         SecuringWardrobe,
+        TestingWardrobe,
         TestingExit,
         Completed
     }
@@ -36,10 +44,36 @@ namespace Deprem.Story
         [SerializeField] private Animator parentAnimator;
         [SerializeField] private Animator canAnimator;
 
+        [Header("Opening Route Test")]
+        [SerializeField] private StoryInteractable testInitialRoute;
+        [SerializeField] private GameObject initialRouteCarStart;
+        [SerializeField] private GameObject initialRouteCarBlocked;
+        [SerializeField] private Animation initialRouteCarAnimation;
+
+        [Header("Neighbor Visit")]
+        [SerializeField] private StoryInteractable openDoorForNermin;
+        [SerializeField] private StoryInteractable returnNerminEnvelope;
+        [SerializeField] private GameObject nermin;
+        [SerializeField] private GameObject nerminEnvelopeStart;
+        [SerializeField] private GameObject nerminEnvelopeReturned;
+        [SerializeField] private StoryInteractable placeEvacuationPlan;
+        [SerializeField] private GameObject evacuationPlanInHand;
+        [SerializeField] private GameObject evacuationPlan;
+        [SerializeField] private Animation nerminExitAnimation;
+
         [Header("Room Inspection")]
         [SerializeField] private StoryInteractable inspectWardrobe;
         [SerializeField] private StoryInteractable inspectShelf;
         [SerializeField] private StoryInteractable inspectExit;
+
+        [Header("Physical Risk Map")]
+        [SerializeField] private bool physicalRouteFlow;
+        [SerializeField] private GameObject shelfRiskZoneUnstable;
+        [SerializeField] private GameObject shelfRiskZoneSecured;
+        [SerializeField] private GameObject wardrobeRiskZoneUnstable;
+        [SerializeField] private GameObject wardrobeRiskZoneSecured;
+        [SerializeField] private GameObject canReadingNestRisk;
+        [SerializeField] private GameObject canReadingNestSafe;
 
         [Header("Clear Exit")]
         [SerializeField] private StoryInteractable moveShoes;
@@ -48,6 +82,7 @@ namespace Deprem.Story
         [SerializeField] private GameObject[] exitClutterStart;
         [SerializeField] private GameObject[] exitClutterStored;
         [SerializeField] private Animation[] exitMoveAnimations;
+        [SerializeField] private StoryInteractable testClearedExitDoor;
 
         [Header("Lower Shelf Items")]
         [SerializeField] private StoryInteractable lowerBooks;
@@ -57,9 +92,12 @@ namespace Deprem.Story
         [SerializeField] private GameObject[] shelfItemsHigh;
         [SerializeField] private GameObject[] shelfItemsLow;
         [SerializeField] private Animation[] shelfMoveAnimations;
+        [SerializeField] private StoryInteractable markShelfAnchor;
         [SerializeField] private Animation shelfSecureAnimation;
         [SerializeField] private GameObject shelfAnchorStrap;
         [SerializeField] private ParticleSystem shelfDust;
+        [SerializeField] private StoryInteractable testSecuredShelf;
+        [SerializeField] private Animation shelfStabilityAnimation;
 
         [Header("Secure Wardrobe")]
         [SerializeField] private StoryInteractable testWardrobe;
@@ -69,6 +107,7 @@ namespace Deprem.Story
         [SerializeField] private Animation wardrobeSecureAnimation;
         [SerializeField] private GameObject wardrobeAnchorStrap;
         [SerializeField] private ParticleSystem wardrobeDust;
+        [SerializeField] private StoryInteractable testSecuredWardrobe;
 
         [Header("Safe Near Misses")]
         [SerializeField] private StoryInteractable unsafeHeavyLift;
@@ -89,6 +128,10 @@ namespace Deprem.Story
         [SerializeField] private GameObject closedDoor;
         [SerializeField] private GameObject openDoor;
         [SerializeField] private Animation doorOpenAnimation;
+        [SerializeField] private GameObject finalRouteCarStart;
+        [SerializeField] private GameObject finalRouteCarFinish;
+        [SerializeField] private GameObject canToyCarPocket;
+        [SerializeField] private Animation finalRouteCarAnimation;
         [SerializeField] private GameObject completionPanel;
         [SerializeField] private TMP_Text completionDetail;
 
@@ -122,7 +165,8 @@ namespace Deprem.Story
 
         private void Start()
         {
-            gameManager ??= StoryGameManager.Instance;
+            if (StoryGameManager.Instance != null)
+                gameManager = StoryGameManager.Instance;
             gameManager?.BeginAct(StoryAct.HomeSafety);
             DisableAllInteractions();
             RestoreWorldState();
@@ -152,20 +196,182 @@ namespace Deprem.Story
 
         public void InspectWardrobe()
         {
+            if (physicalRouteFlow && stage == StoryHomeSafetyStage.MappingRiskZones)
+                SetActive(wardrobeRiskZoneUnstable, true);
             RegisterInspection(0, inspectWardrobe, StoryCameraZoneId.HomeWardrobe,
-                "Deniz: Dolap uzun ve duvara bağlı görünmüyor.\nAnne: İçini boşaltmaya çalışmayacağız; önce riskini işaretleyip sabitlemeyi ben yapacağım.");
+                physicalRouteFlow
+                    ? "Deniz parmağını dolabın yüksekliğinden zemine indirdi. Turuncu alan, dolabın sabitlenmezse kapatabileceği geçişi gösterdi.\nAnne: Ağır dolabı çekmiyoruz; düşme alanını okuyup bağlantıyı yetişkin olarak ben yapacağım."
+                    : "Deniz: Dolap uzun ve duvara bağlı görünmüyor.\nAnne: İçini boşaltmaya çalışmayacağız; önce riskini işaretleyip sabitlemeyi ben yapacağım.");
         }
 
         public void InspectShelf()
         {
+            if (physicalRouteFlow && stage == StoryHomeSafetyStage.MappingRiskZones)
+                SetActive(shelfRiskZoneUnstable, true);
             RegisterInspection(1, inspectShelf, StoryCameraZoneId.HomeShelf,
-                "Can: Üst raftaki seramik saksı sallanırsa düşebilir.\nAnne: Hafif eşyaları aşağı alabilirsiniz. Rafın duvar bağlantısını yetişkin kontrol eder.");
+                physicalRouteFlow
+                    ? "Can raftan zemine uzanan turuncu alanı gördü.\nCan: Saksı buraya düşerse yol kapanır.\nAnne: Hafif eşyaları aşağı alabilirsiniz; raf bağlantısını ben kontrol edeceğim."
+                    : "Can: Üst raftaki seramik saksı sallanırsa düşebilir.\nAnne: Hafif eşyaları aşağı alabilirsiniz. Rafın duvar bağlantısını yetişkin kontrol eder.");
         }
 
         public void InspectExit()
         {
+            if (physicalRouteFlow)
+            {
+                SetActive(canReadingNestRisk, false);
+                SetActive(canReadingNestSafe, true);
+                canAnimator?.SetTrigger(PickUpTrigger);
+                RegisterInspection(2, inspectExit, StoryCameraZoneId.HomeOverview,
+                    "Can'ın okuma minderi turuncu düşme alanından ortak halının güvenli köşesine taşındı.\n" +
+                    "Can: Raf devrilse bile burada üstüme gelmez.\n" +
+                    "Deniz: Güvenli oda, yalnız mobilyayı değil nerede oturduğumuzu da düşünmek demek.");
+                return;
+            }
             RegisterInspection(2, inspectExit, StoryCameraZoneId.HomeExit,
                 "Deniz: Ayakkabı, oyuncak ve paket kapının açılacağı yerde.\nAnne: Çıkış yolu gündelik hayatta da boş kalmalı; bunları kendi yerlerine taşıyalım.");
+        }
+
+        public void TestInitialRoute()
+        {
+            if (stage != StoryHomeSafetyStage.RouteTesting)
+                return;
+
+            testInitialRoute?.SetAvailable(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
+            denizAnimator?.SetTrigger(InteractTrigger);
+            SetActive(initialRouteCarStart, false);
+            SetActive(initialRouteCarBlocked, true);
+            Play(initialRouteCarAnimation);
+            ShowDialogue(
+                "Can'ın arabası ayakkabıya çarpıp durdu.\nCan: Araba geçemedi.\nDeniz: Biz de karanlıkta aynı yerde takılırız.",
+                7.2f,
+                physicalRouteFlow ? BeginExitClearing : BeginNeighborVisit);
+        }
+
+        public void OpenDoorForNermin()
+        {
+            if (stage != StoryHomeSafetyStage.NeighborVisit)
+                return;
+
+            openDoorForNermin?.SetAvailable(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
+            SetActive(closedDoor, false);
+            SetActive(openDoor, true);
+            SetActive(nermin, true);
+            SetActive(nerminEnvelopeStart, true);
+            Play(doorOpenAnimation);
+            parentAnimator?.SetTrigger(CallTrigger);
+            ShowDialogue(
+                "Nermin: Apartmanın yeni tahliye planını getirdim.\nCan: Asansör niye çizilmemiş?\nNermin: Sarsıntıdan sonra merdiven kullanılır; yolu açık tutan biri bana yeter.",
+                9.2f,
+                () =>
+                {
+                    returnNerminEnvelope?.SetAvailable(true);
+                    ui?.ShowObjective(
+                        "DÜŞEN ZARFI NERMİN'E VER",
+                        "Zarfı yerden tutup Nermin'in açık eline bırak.");
+                });
+        }
+
+        public void ReturnNerminEnvelope()
+        {
+            if (stage != StoryHomeSafetyStage.NeighborVisit)
+                return;
+
+            returnNerminEnvelope?.SetAvailable(false);
+            denizAnimator?.SetTrigger(PickUpTrigger);
+            SetActive(nerminEnvelopeStart, false);
+            SetActive(nerminEnvelopeReturned, true);
+            SetActive(evacuationPlanInHand, placeEvacuationPlan != null);
+            SetActive(evacuationPlan, placeEvacuationPlan == null);
+            ShowDialogue(
+                "Deniz zarfı Nermin'in eline verdi. İçinden apartmanın yeni tahliye planı çıktı.\nNermin: Matkap sesini duyarsam artık nedenini bilirim.",
+                8.2f,
+                placeEvacuationPlan != null ? BeginPlanPlacement : FinishNeighborVisit);
+        }
+
+        public void PlaceEvacuationPlan()
+        {
+            if (stage != StoryHomeSafetyStage.PlacingNeighborPlan)
+                return;
+
+            placeEvacuationPlan?.SetAvailable(false);
+            denizAnimator?.SetTrigger(PickUpTrigger);
+            SetActive(evacuationPlanInHand, false);
+            SetActive(evacuationPlan, true);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeOverview);
+            ShowDialogue(
+                "Plan aile panosunun yanına yerleşti. Asansör işareti yoktu; merdiven rotası ve Nermin'in dairesi aynı çizgide görünüyordu.",
+                7.2f,
+                FinishNeighborVisit);
+        }
+
+        public void TestClearedExitDoor()
+        {
+            if (stage != StoryHomeSafetyStage.TestingClearedExit)
+                return;
+
+            testClearedExitDoor?.SetAvailable(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
+            SetActive(closedDoor, false);
+            SetActive(openDoor, true);
+            Play(doorOpenAnimation);
+            ShowDialogue(
+                "Kapı hiçbir eşyaya çarpmadan tam açıldı. Zemindeki kesintisiz çizgi artık oyuncak arabadan eşiğe kadar görülebiliyordu.",
+                7.2f,
+                () =>
+                {
+                    SetActive(closedDoor, true);
+                    SetActive(openDoor, false);
+                    BeginShelfSafety();
+                });
+        }
+
+        public void MarkShelfAnchor()
+        {
+            if (stage != StoryHomeSafetyStage.MarkingShelfAnchor)
+                return;
+
+            markShelfAnchor?.SetAvailable(false);
+            denizAnimator?.SetTrigger(InspectTrigger);
+            ShowDialogue(
+                "Deniz rafın üst bağlantı noktasını işaretledi. Anne duvar dikmesini kontrol edip uygun bağlantı parçasını çalışma örtüsüne koydu.",
+                6.8f,
+                BeginShelfSecuring);
+        }
+
+        public void TestSecuredShelf()
+        {
+            if (stage != StoryHomeSafetyStage.TestingShelf)
+                return;
+
+            testSecuredShelf?.SetAvailable(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeShelf);
+            denizAnimator?.SetTrigger(InspectTrigger);
+            Play(shelfStabilityAnimation);
+            SetActive(shelfRiskZoneUnstable, false);
+            SetActive(shelfRiskZoneSecured, true);
+            ShowDialogue(
+                "Anne rafı aynı noktadan hafifçe sınadı. Önceki sallanma yoktu; ağır kitaplar da artık alt bölmedeydi.",
+                7.2f,
+                BeginWardrobeSafety);
+        }
+
+        public void TestSecuredWardrobe()
+        {
+            if (stage != StoryHomeSafetyStage.TestingWardrobe)
+                return;
+
+            testSecuredWardrobe?.SetAvailable(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeWardrobe);
+            denizAnimator?.SetTrigger(InspectTrigger);
+            Play(wardrobeRockAnimation);
+            SetActive(wardrobeRiskZoneUnstable, false);
+            SetActive(wardrobeRiskZoneSecured, true);
+            ShowDialogue(
+                "Anne aynı kontrollü testi tekrarladı. Kayış gerildi, dolap duvardan ayrılmadı.\nDeniz: Risk aynı yerdeydi; davranışı değişti.",
+                7.6f,
+                BeginFinalExitTest);
         }
 
         public void MoveExitShoes()
@@ -215,9 +421,14 @@ namespace Deprem.Story
             gameManager?.CommitCheckpoint(StoryCheckpoint.HomeShelfPrepared);
             ShowDialogue(
                 "Deniz bağlantı parçasını uzattı. Anne rafı duvar dikmesine sabitledi; çocuklar matkap veya ağır rafla uğraşmadı.",
-                7.5f, () =>
+                9.2f, () =>
                 {
                     ReturnParentHome();
+                    if (testSecuredShelf != null)
+                    {
+                        BeginShelfStabilityTest();
+                        return;
+                    }
                     BeginWardrobeSafety();
                 });
         }
@@ -274,9 +485,14 @@ namespace Deprem.Story
             gameManager?.CommitCheckpoint(StoryCheckpoint.HomeWardrobeSecured);
             ShowDialogue(
                 "Anne kayışı iki noktadan sabitledi ve dolabı yeniden kontrol etti. Ağır işi yetişkin yaptı; Deniz güvenli mesafede kaldı.",
-                7.5f, () =>
+                9.2f, () =>
                 {
                     ReturnParentHome();
+                    if (testSecuredWardrobe != null)
+                    {
+                        BeginWardrobeStabilityTest();
+                        return;
+                    }
                     BeginFinalExitTest();
                 });
         }
@@ -287,6 +503,7 @@ namespace Deprem.Story
             gameManager?.AddMistake();
             cameraController?.ActivateZone(StoryCameraZoneId.HomeWardrobe);
             Play(heavyLiftNearMissAnimation);
+            Play(wardrobeRockAnimation);
             FaceParentTowards(unsafeHeavyLift != null ? unsafeHeavyLift.transform : null);
             parentAnimator?.SetTrigger(CallTrigger);
             ShowDialogue(
@@ -315,6 +532,9 @@ namespace Deprem.Story
             testExitDoor?.SetAvailable(false);
             DisableNearMisses();
             cameraController?.ActivateZone(StoryCameraZoneId.HomeFinalTest);
+            SetActive(finalRouteCarStart, false);
+            SetActive(finalRouteCarFinish, true);
+            Play(finalRouteCarAnimation);
             SetActive(closedDoor, false);
             SetActive(openDoor, true);
             Play(doorOpenAnimation);
@@ -332,10 +552,86 @@ namespace Deprem.Story
             stage = StoryHomeSafetyStage.Opening;
             gameManager?.CommitCheckpoint(StoryCheckpoint.HomeSafetyStart);
             cameraController?.ActivateZone(StoryCameraZoneId.HomeOverview, true);
-            ui?.ShowObjective("EVİ GÖZÜNLE TARA", "Dolap, raf ve çıkış yolunu sahnenin içinde incele; riskleri konuşarak bul.");
+            if (testInitialRoute != null)
+            {
+                ui?.ShowObjective(
+                    "ÇIKIŞ YOLUNU BİRLİKTE DENE",
+                    "Can'ın oyuncak arabasını tutup kapıya giden rota boyunca sürükle.");
+                ShowDialogue(
+                    "Çanta giriş rafındaydı. Can'ın oyuncak arabası yine kapıya giderken bir şeye takıldı.\nAnne: Bu kez arabaya değil, yoluna bakın.",
+                    7.5f,
+                    BeginRouteTest);
+                return;
+            }
+
+            ui?.ShowObjective(
+                "EVİ GÖZÜNLE TARA",
+                "Dolap, raf ve çıkış yolunu sahnenin içinde incele; riskleri konuşarak bul.");
             ShowDialogue(
                 "Çanta hazırlandıktan sonra aile salona geri döndü. Anne, Deniz ile Can'a odadaki eşyaların depremde nasıl davranabileceğini sordu.",
-                7.5f, BeginInspection);
+                7.5f,
+                BeginInspection);
+        }
+
+        private void BeginRouteTest()
+        {
+            stage = StoryHomeSafetyStage.RouteTesting;
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
+            testInitialRoute?.SetAvailable(true);
+            ui?.ShowObjective(
+                "ARABAYI KAPIYA DOĞRU SÜR",
+                "Oyuncak arabayı doğrudan tut; kapıya giden çizgi boyunca bırakmadan taşı.");
+        }
+
+        private void BeginNeighborVisit()
+        {
+            stage = StoryHomeSafetyStage.NeighborVisit;
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
+            openDoorForNermin?.SetAvailable(true);
+            returnNerminEnvelope?.SetAvailable(false);
+            ui?.ShowObjective(
+                "KAPIYI NERMİN İÇİN AÇ",
+                "Kapı kolunu sahnede yana çek; temizlenmesi gereken açılma yayını gör.");
+        }
+
+        private void FinishNeighborVisit()
+        {
+            if (physicalRouteFlow)
+            {
+                Play(nerminExitAnimation);
+                ShowDialogue(
+                    "Nermin kapıdan çıkarken bastonunu açık kalan çizginin üstüne koydu.\nNermin: Arabaya yetişemem ama sizi aşağıda yakalarım.",
+                    6.4f,
+                    () =>
+                    {
+                        CloseNeighborVisit();
+                        BeginRiskMapping();
+                    });
+                return;
+            }
+
+            CloseNeighborVisit();
+            BeginInspection();
+        }
+
+        private void CloseNeighborVisit()
+        {
+            SetActive(nerminEnvelopeReturned, false);
+            SetActive(evacuationPlanInHand, false);
+            SetActive(nermin, false);
+            SetActive(closedDoor, true);
+            SetActive(openDoor, false);
+            SetActive(initialRouteCarBlocked, false);
+        }
+
+        private void BeginPlanPlacement()
+        {
+            stage = StoryHomeSafetyStage.PlacingNeighborPlan;
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeOverview);
+            placeEvacuationPlan?.SetAvailable(true);
+            ui?.ShowObjective(
+                "TAHLİYE PLANINI AİLE PANOSUNA AS",
+                "Planı Nermin'in elinden tutup sol duvardaki aile panosuna bırak.");
         }
 
         private void BeginInspection()
@@ -348,9 +644,23 @@ namespace Deprem.Story
             UpdateInspectionObjective();
         }
 
+        private void BeginRiskMapping()
+        {
+            stage = StoryHomeSafetyStage.MappingRiskZones;
+            inspectWardrobe?.SetAvailable(!inspected[0]);
+            inspectShelf?.SetAvailable(!inspected[1]);
+            inspectExit?.SetAvailable(!inspected[2]);
+            EnableNearMisses();
+            UpdateRiskMapObjective();
+        }
+
         private void RegisterInspection(int index, StoryInteractable interactable, StoryCameraZoneId zone, string subtitle)
         {
-            if (stage != StoryHomeSafetyStage.Inspecting || index < 0 || index >= inspected.Length || inspected[index])
+            bool mappingPhysicalRisk = physicalRouteFlow && stage == StoryHomeSafetyStage.MappingRiskZones;
+            if ((!mappingPhysicalRisk && stage != StoryHomeSafetyStage.Inspecting) ||
+                index < 0 ||
+                index >= inspected.Length ||
+                inspected[index])
                 return;
 
             inspected[index] = true;
@@ -359,14 +669,24 @@ namespace Deprem.Story
             denizAnimator?.SetTrigger(InspectTrigger);
             ShowDialogue(subtitle, 6.5f, () =>
             {
-                if (InspectionsCompleted >= inspected.Length)
+                int requiredInspections = inspected.Length;
+                if (InspectionsCompleted >= requiredInspections)
                 {
+                    if (mappingPhysicalRisk)
+                    {
+                        gameManager?.CommitCheckpoint(StoryCheckpoint.HomeExitCleared);
+                        BeginShelfSafety();
+                        return;
+                    }
                     BeginExitClearing();
                     return;
                 }
 
                 cameraController?.ActivateZone(StoryCameraZoneId.HomeOverview);
-                UpdateInspectionObjective();
+                if (mappingPhysicalRisk)
+                    UpdateRiskMapObjective();
+                else
+                    UpdateInspectionObjective();
             });
         }
 
@@ -374,6 +694,13 @@ namespace Deprem.Story
         {
             ui?.ShowObjective($"ODAYI GÖZÜNLE TARA — {InspectionsCompleted}/3",
                 "Riskli nesnenin kendisine dokun: uzun dolap, yüksek raf ve kapı önü.");
+        }
+
+        private void UpdateRiskMapObjective()
+        {
+            ui?.ShowObjective(
+                $"RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — {Math.Min(InspectionsCompleted, 3)}/3",
+                "Raf ve dolabın düşme alanını zemine indir; sonra Can'ın minderini turuncu alanın dışına taşı.");
         }
 
         private void BeginExitClearing()
@@ -403,16 +730,37 @@ namespace Deprem.Story
                 if (ExitItemsMoved >= exitMoved.Length)
                 {
                     gameManager?.SetFlag(StoryFlag.ExitCleared, true);
+                    SetActive(initialRouteCarBlocked, false);
+                    if (physicalRouteFlow)
+                    {
+                        ShowDialogue(
+                            "Kapının açılma yayı tamamen boşaldı. Tam o anda zil çaldı; temizlenen yolu bu kez gerçekten kapıyı açarak sınayacaklardı.",
+                            6.8f,
+                            BeginNeighborVisit);
+                        return;
+                    }
+
                     gameManager?.CommitCheckpoint(StoryCheckpoint.HomeExitCleared);
                     ShowDialogue(
-                        "Kapı kanadı tam açılıyor ve rota boyunca takılacak eşya kalmadı. Şimdi üst raflardaki hafif riskleri indirebiliriz.",
-                        6.5f, BeginShelfSafety);
+                        "Ayakkabı, oyuncak kutusu ve paket artık kapının açılma yayının dışında. Şimdi kapının gerçekten tam açıldığını sınayalım.",
+                        6.5f,
+                        testClearedExitDoor != null ? BeginClearedExitTest : BeginShelfSafety);
                     return;
                 }
 
                 ui?.ShowObjective($"ÇIKIŞ YOLUNU FİZİKSEL OLARAK AÇ — {ExitItemsMoved}/3",
                     "Kalan nesneyi parmağınla tutup kendi saklama alanına çek.");
             });
+        }
+
+        private void BeginClearedExitTest()
+        {
+            stage = StoryHomeSafetyStage.TestingClearedExit;
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
+            testClearedExitDoor?.SetAvailable(true);
+            ui?.ShowObjective(
+                "TEMİZLENEN KAPI YAYINI SINAYIN",
+                "Kapı kolunu yana çek; kapının ayakkabı, kutu veya pakete çarpmadan açıldığını gör.");
         }
 
         private void BeginShelfSafety()
@@ -442,16 +790,44 @@ namespace Deprem.Story
             {
                 if (ShelfItemsMoved >= shelfMoved.Length)
                 {
-                    stage = StoryHomeSafetyStage.SecuringShelf;
-                    handShelfBracket?.SetAvailable(true);
-                    cameraController?.ActivateZone(StoryCameraZoneId.HomeParent);
-                    ui?.ShowObjective("RAF BAĞLANTISINI ANNEYE VER", "Bağlantı parçasını Deniz'in elinden Anne'nin çalışma alanına doğru çek.");
+                    if (markShelfAnchor != null)
+                    {
+                        stage = StoryHomeSafetyStage.MarkingShelfAnchor;
+                        markShelfAnchor.SetAvailable(true);
+                        cameraController?.ActivateZone(StoryCameraZoneId.HomeShelf);
+                        ui?.ShowObjective(
+                            "RAF BAĞLANTI NOKTASINI İŞARETLE",
+                            "Rafın üst köşesindeki güvenli bağlantı noktasına iki kez doğrudan dokun.");
+                        return;
+                    }
+
+                    BeginShelfSecuring();
                     return;
                 }
 
                 ui?.ShowObjective($"ÜST RAFTAKİ HAFİF EŞYALARI İNDİR — {ShelfItemsMoved}/3",
                     "Kalan hafif eşyayı doğrudan aşağı indir.");
             });
+        }
+
+        private void BeginShelfSecuring()
+        {
+            stage = StoryHomeSafetyStage.SecuringShelf;
+            handShelfBracket?.SetAvailable(true);
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeParent);
+            ui?.ShowObjective(
+                "RAF BAĞLANTISINI ANNEYE VER",
+                "Bağlantı parçasını Deniz'in elinden Anne'nin çalışma alanına doğru çek.");
+        }
+
+        private void BeginShelfStabilityTest()
+        {
+            stage = StoryHomeSafetyStage.TestingShelf;
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeShelf);
+            testSecuredShelf?.SetAvailable(true);
+            ui?.ShowObjective(
+                "SABİTLENEN RAFI AYNI YERDEN SINAYIN",
+                "Rafın yanındaki kontrol noktasında basılı tut; önceki sallanmayla karşılaştır.");
         }
 
         private void BeginWardrobeSafety()
@@ -470,8 +846,24 @@ namespace Deprem.Story
             stage = StoryHomeSafetyStage.TestingExit;
             DisableAllInteractions();
             cameraController?.ActivateZone(StoryCameraZoneId.HomeFinalTest);
+            SetActive(finalRouteCarStart, true);
+            SetActive(finalRouteCarFinish, false);
             testExitDoor?.SetAvailable(true);
-            ui?.ShowObjective("SON FİZİKSEL KONTROL", "Kapı kolunu yana çek; kapının ve yürüyüş rotasının tamamen açıldığını gör.");
+            ui?.ShowObjective(
+                "ROTAYI BİR KEZ DAHA DENE",
+                finalRouteCarStart != null
+                    ? "Can'ın arabasını aynı başlangıçtan kapı eşiğine kadar doğrudan sürükle."
+                    : "Kapı kolunu yana çek; kapının ve yürüyüş rotasının tamamen açıldığını gör.");
+        }
+
+        private void BeginWardrobeStabilityTest()
+        {
+            stage = StoryHomeSafetyStage.TestingWardrobe;
+            cameraController?.ActivateZone(StoryCameraZoneId.HomeWardrobe);
+            testSecuredWardrobe?.SetAvailable(true);
+            ui?.ShowObjective(
+                "SABİTLENEN DOLABI TEKRAR SINAYIN",
+                "Dolabın aynı yan kontrol noktasında basılı tut; kayışın sonucu görünür olsun.");
         }
 
         private void FinishExitTest()
@@ -481,13 +873,26 @@ namespace Deprem.Story
             gameManager?.CompleteAct(StoryAct.HomeSafety);
             gameManager?.CommitCheckpoint(StoryCheckpoint.HomeSafetyComplete);
             stage = StoryHomeSafetyStage.Completed;
-            canAnimator?.SetTrigger(CallTrigger);
+            if (physicalRouteFlow && canToyCarPocket != null)
+            {
+                SetActive(finalRouteCarFinish, false);
+                SetActive(canToyCarPocket, true);
+                canAnimator?.SetTrigger(PickUpTrigger);
+            }
+            else
+            {
+                canAnimator?.SetTrigger(CallTrigger);
+            }
             ui?.ShowObjective("2. PERDE TAMAMLANDI", "Çıkış açık; raf ve dolap yetişkin tarafından sabitlendi.");
             if (completionDetail != null)
                 completionDetail.text =
                     "Çıkış yolu temizlendi • Hafif eşyalar aşağı alındı • Ağır sabitlemeleri yetişkin yaptı";
             ShowDialogue(
-                "Can kapıdan rahatça geçebildi. Deniz, hazırlığın yalnızca eşya toplamak değil; evde düşebilecek ve yolu kapatabilecek riskleri azaltmak olduğunu gördü.",
+                finalRouteCarFinish != null
+                    ? physicalRouteFlow
+                        ? "Oyuncak araba eski engellerin yerinden hiç durmadan geçti. Can arabayı yerden alıp cebine koydu.\nKoridordan Nermin'in bastonu duyuldu: Ben aşağıda sizi bekliyorum.\nCan: Geçti.\nDeniz: Biz de geçeriz."
+                        : "Oyuncak araba ayakkabıların, kutunun ve paketin eski yerlerinden hiç durmadan geçti.\nCan: Geçti.\nDeniz: Biz de geçeriz."
+                    : "Can kapıdan rahatça geçebildi. Deniz, hazırlığın yalnızca eşya toplamak değil; evde düşebilecek ve yolu kapatabilecek riskleri azaltmak olduğunu gördü.",
                 8f, () => SetActive(completionPanel, true));
         }
 
@@ -498,6 +903,13 @@ namespace Deprem.Story
             cameraController?.ActivateZone(StoryCameraZoneId.HomeFinalTest, true);
             SetActive(closedDoor, false);
             SetActive(openDoor, true);
+            SetActive(finalRouteCarStart, false);
+            SetActive(finalRouteCarFinish, !physicalRouteFlow);
+            SetActive(canToyCarPocket, physicalRouteFlow);
+            SetActive(shelfRiskZoneUnstable, false);
+            SetActive(shelfRiskZoneSecured, true);
+            SetActive(wardrobeRiskZoneUnstable, false);
+            SetActive(wardrobeRiskZoneSecured, true);
             SetActive(completionPanel, true);
             ui?.ShowObjective("2. PERDE TAMAMLANDI", "Ev içindeki yapısal olmayan riskler azaltıldı.");
         }
@@ -509,6 +921,11 @@ namespace Deprem.Story
             bool exitReady = gameManager != null && gameManager.HasFlag(StoryFlag.ExitCleared);
             bool shelfReady = gameManager != null && gameManager.HasFlag(StoryFlag.ShelfSecured);
             bool wardrobeReady = gameManager != null && gameManager.HasFlag(StoryFlag.WardrobeSecured);
+            StoryCheckpoint checkpoint = gameManager?.CurrentState?.checkpoint ?? StoryCheckpoint.None;
+            bool preludeComplete = checkpoint is StoryCheckpoint.HomeExitCleared
+                or StoryCheckpoint.HomeShelfPrepared
+                or StoryCheckpoint.HomeWardrobeSecured
+                or StoryCheckpoint.HomeSafetyComplete;
             for (int i = 0; i < exitMoved.Length; i++)
             {
                 exitMoved[i] = exitReady;
@@ -523,6 +940,22 @@ namespace Deprem.Story
             }
             SetActive(shelfAnchorStrap, shelfReady);
             SetActive(wardrobeAnchorStrap, wardrobeReady);
+            SetActive(initialRouteCarStart, !preludeComplete);
+            SetActive(initialRouteCarBlocked, false);
+            SetActive(nermin, false);
+            SetActive(nerminEnvelopeStart, false);
+            SetActive(nerminEnvelopeReturned, false);
+            SetActive(evacuationPlanInHand, false);
+            SetActive(evacuationPlan, preludeComplete);
+            SetActive(finalRouteCarStart, false);
+            SetActive(finalRouteCarFinish, false);
+            SetActive(canToyCarPocket, false);
+            SetActive(shelfRiskZoneUnstable, physicalRouteFlow && preludeComplete && !shelfReady);
+            SetActive(shelfRiskZoneSecured, physicalRouteFlow && shelfReady);
+            SetActive(wardrobeRiskZoneUnstable, physicalRouteFlow && preludeComplete && !wardrobeReady);
+            SetActive(wardrobeRiskZoneSecured, physicalRouteFlow && wardrobeReady);
+            SetActive(canReadingNestRisk, physicalRouteFlow && !preludeComplete);
+            SetActive(canReadingNestSafe, physicalRouteFlow && preludeComplete);
             SetActive(closedDoor, true);
             SetActive(openDoor, false);
         }
@@ -533,7 +966,9 @@ namespace Deprem.Story
                      {
                          inspectWardrobe, inspectShelf, inspectExit, moveShoes, moveToy, moveParcel,
                          lowerBooks, lowerVase, lowerFrame, handShelfBracket, testWardrobe,
-                         markWardrobeAnchors, handWardrobeStrap, unsafeHeavyLift, unsafeDrill, testExitDoor
+                         markWardrobeAnchors, handWardrobeStrap, unsafeHeavyLift, unsafeDrill, testExitDoor,
+                         testInitialRoute, openDoorForNermin, returnNerminEnvelope, placeEvacuationPlan,
+                         testClearedExitDoor, markShelfAnchor, testSecuredShelf, testSecuredWardrobe
                      })
                 interactable?.SetAvailable(false);
         }
@@ -554,9 +989,16 @@ namespace Deprem.Story
         {
             cameraController?.ActivateZone(stage switch
             {
-                StoryHomeSafetyStage.ClearingExit => StoryCameraZoneId.HomeExit,
-                StoryHomeSafetyStage.LoweringShelfItems or StoryHomeSafetyStage.SecuringShelf => StoryCameraZoneId.HomeShelf,
-                StoryHomeSafetyStage.SecuringWardrobe => StoryCameraZoneId.HomeWardrobe,
+                StoryHomeSafetyStage.RouteTesting or StoryHomeSafetyStage.NeighborVisit
+                    or StoryHomeSafetyStage.ClearingExit or StoryHomeSafetyStage.TestingClearedExit
+                    => StoryCameraZoneId.HomeExit,
+                StoryHomeSafetyStage.PlacingNeighborPlan => StoryCameraZoneId.HomeOverview,
+                StoryHomeSafetyStage.MappingRiskZones => StoryCameraZoneId.HomeOverview,
+                StoryHomeSafetyStage.LoweringShelfItems or StoryHomeSafetyStage.MarkingShelfAnchor
+                    or StoryHomeSafetyStage.SecuringShelf or StoryHomeSafetyStage.TestingShelf
+                    => StoryCameraZoneId.HomeShelf,
+                StoryHomeSafetyStage.SecuringWardrobe or StoryHomeSafetyStage.TestingWardrobe
+                    => StoryCameraZoneId.HomeWardrobe,
                 StoryHomeSafetyStage.TestingExit => StoryCameraZoneId.HomeFinalTest,
                 _ => StoryCameraZoneId.HomeOverview
             });

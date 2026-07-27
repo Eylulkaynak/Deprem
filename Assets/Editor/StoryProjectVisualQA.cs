@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Deprem.Story;
+using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using Unity.Cinemachine;
@@ -10,34 +12,47 @@ internal static class StoryProjectVisualQA
 {
     private const string Root = "Tools/Deprem Story/QA/Project Visual/";
     private const string CaptureRoot = "Temp/StoryCameraQA";
+    private const string HudCaptureRoot = "Temp/StoryHudQA";
     private static int cameraIndex = -1;
     private static readonly List<(StoryCameraZoneId zone, string name, CinemachineCamera camera)> CaptureTargets = new();
     private static int captureIndex;
     private static string captureSceneName;
 
     [MenuItem(Root + "Open Story01")]
-    private static void OpenStory01() => OpenScene("Assets/Scenes/Story_01_BagPreparation.unity");
+    private static void OpenStory01() => OpenScene("Assets/Scenes/Story_01_RebuildPreview.unity");
 
     [MenuItem(Root + "Open Story02")]
-    private static void OpenStory02() => OpenScene("Assets/Scenes/Story_02_HomeSafety.unity");
+    private static void OpenStory02() => OpenScene("Assets/Scenes/Story_02_RebuildPreview.unity");
 
     [MenuItem(Root + "Open Story03")]
-    private static void OpenStory03() => OpenScene("Assets/Scenes/Story_03_Quake.unity");
+    private static void OpenStory03() => OpenScene("Assets/Scenes/Story_03_RebuildPreview.unity");
 
     [MenuItem(Root + "Open Story04")]
-    private static void OpenStory04() => OpenScene("Assets/Scenes/Story_04_Evacuation.unity");
+    private static void OpenStory04() => OpenScene("Assets/Scenes/Story_04_RebuildPreview.unity");
 
     [MenuItem(Root + "Runtime Load Story01")]
-    private static void RuntimeLoadStory01() => RuntimeLoadScene("Story_01_BagPreparation");
+    private static void RuntimeLoadStory01() => RuntimeLoadScene("Story_01_RebuildPreview");
 
     [MenuItem(Root + "Runtime Load Story02")]
-    private static void RuntimeLoadStory02() => RuntimeLoadScene("Story_02_HomeSafety");
+    private static void RuntimeLoadStory02() => RuntimeLoadScene("Story_02_RebuildPreview");
 
     [MenuItem(Root + "Runtime Load Story03")]
-    private static void RuntimeLoadStory03() => RuntimeLoadScene("Story_03_Quake");
+    private static void RuntimeLoadStory03() => RuntimeLoadScene("Story_03_RebuildPreview");
 
     [MenuItem(Root + "Runtime Load Story04")]
-    private static void RuntimeLoadStory04() => RuntimeLoadScene("Story_04_Evacuation");
+    private static void RuntimeLoadStory04() => RuntimeLoadScene("Story_04_RebuildPreview");
+
+    [MenuItem(Root + "Legacy/Open Story01 Reference")]
+    private static void OpenLegacyStory01() => OpenScene("Assets/Scenes/Story_01_BagPreparation.unity");
+
+    [MenuItem(Root + "Legacy/Open Story02 Reference")]
+    private static void OpenLegacyStory02() => OpenScene("Assets/Scenes/Story_02_HomeSafety.unity");
+
+    [MenuItem(Root + "Legacy/Open Story03 Reference")]
+    private static void OpenLegacyStory03() => OpenScene("Assets/Scenes/Story_03_Quake.unity");
+
+    [MenuItem(Root + "Legacy/Open Story04 Reference")]
+    private static void OpenLegacyStory04() => OpenScene("Assets/Scenes/Story_04_Evacuation.unity");
 
     [MenuItem(Root + "Next Camera")]
     private static void NextCamera()
@@ -83,9 +98,9 @@ internal static class StoryProjectVisualQA
     {
         StoryCameraController controller =
             Object.FindFirstObjectByType<StoryCameraController>(FindObjectsInactive.Include);
-        if (!Application.isPlaying || controller == null)
+        if (controller == null)
         {
-            Debug.LogWarning("Camera capture QA için bir Story sahnesini Play Mode'da çalıştır.");
+            Debug.LogWarning("Camera capture QA için aktif Story sahnesinde bir StoryCameraController bulunmalı.");
             return;
         }
 
@@ -122,7 +137,142 @@ internal static class StoryProjectVisualQA
     [MenuItem(Root + "Capture All Cameras", true)]
     private static bool CanCaptureAllCameras()
     {
-        return CanCycleCamera();
+        return Object.FindFirstObjectByType<StoryCameraController>(FindObjectsInactive.Include) != null;
+    }
+
+    [MenuItem(Root + "Capture Current HUD")]
+    private static void CaptureCurrentHud()
+    {
+        StoryUIController ui =
+            Object.FindFirstObjectByType<StoryUIController>(FindObjectsInactive.Include);
+        Canvas canvas = ui != null
+            ? ui.GetComponent<Canvas>()
+            : Object.FindFirstObjectByType<Canvas>(FindObjectsInactive.Include);
+        Camera camera = Object.FindFirstObjectByType<Camera>(FindObjectsInactive.Include);
+        if (canvas == null || camera == null)
+        {
+            Debug.LogError("HUD capture icin aktif Story sahnesinde Canvas ve Camera bulunmali.");
+            return;
+        }
+
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string outputRoot = Path.GetFullPath(HudCaptureRoot);
+        Directory.CreateDirectory(outputRoot);
+        CaptureHudToPng(canvas, camera, Path.Combine(outputRoot, sceneName + "_9x16.png"), 540, 960);
+        CaptureHudToPng(canvas, camera, Path.Combine(outputRoot, sceneName + "_9x19_5.png"), 540, 1170);
+        Debug.Log($"STORY_HUD_CAPTURE_COMPLETE scene={sceneName} root={outputRoot}");
+    }
+
+    [MenuItem(Root + "Capture Current HUD", true)]
+    private static bool CanCaptureCurrentHud()
+    {
+        StoryUIController ui =
+            Object.FindFirstObjectByType<StoryUIController>(FindObjectsInactive.Include);
+        Canvas canvas = ui != null
+            ? ui.GetComponent<Canvas>()
+            : Object.FindFirstObjectByType<Canvas>(FindObjectsInactive.Include);
+        return canvas != null &&
+               Object.FindFirstObjectByType<Camera>(FindObjectsInactive.Include) != null;
+    }
+
+    [MenuItem(Root + "Capture Story01 Blackout Search")]
+    private static void CaptureStory01BlackoutSearch()
+    {
+        CinemachineCamera[] sceneCameras = Object.FindObjectsByType<CinemachineCamera>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
+        string[] cameraNames =
+        {
+            "CM_PreparationFamilyPlan_Rebuild",
+            "CM_PreparationBag_Rebuild",
+            "CM_PreparationWarmth_Rebuild"
+        };
+        CinemachineCamera[] views = cameraNames
+            .Select(name => sceneCameras.FirstOrDefault(candidate => candidate.name == name))
+            .ToArray();
+        Camera outputCamera = Camera.main;
+        if (views.Any(view => view == null) || outputCamera == null)
+        {
+            Debug.LogWarning("Story01 karanlık QA için Story_01_RebuildPreview sahnesini aç.");
+            return;
+        }
+
+        string[] beamNames =
+        {
+            "BlackoutBeam_FamilyPlan",
+            "BlackoutBeam_SafeTable",
+            "BlackoutBeam_Can"
+        };
+        GameObject[] beams = beamNames.Select(FindSceneObject).ToArray();
+        if (beams.Any(beam => beam == null))
+        {
+            Debug.LogError("Story01 karanlık QA fener doğrultularını bulamadı.");
+            return;
+        }
+
+        Light[] sceneLights = Object.FindObjectsByType<Light>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
+        Dictionary<Light, float> originalIntensities = sceneLights.ToDictionary(light => light, light => light.intensity);
+        Dictionary<GameObject, bool> originalBeamStates = beams.ToDictionary(beam => beam, beam => beam.activeSelf);
+        Vector3 originalPosition = outputCamera.transform.position;
+        Quaternion originalRotation = outputCamera.transform.rotation;
+        float originalFieldOfView = outputCamera.fieldOfView;
+        float originalNearClip = outputCamera.nearClipPlane;
+        float originalFarClip = outputCamera.farClipPlane;
+
+        try
+        {
+            Directory.CreateDirectory(Path.GetFullPath(CaptureRoot));
+            foreach (Light light in sceneLights)
+            {
+                if (!light.name.StartsWith("BlackoutBeam_"))
+                    light.intensity *= 0.045f;
+            }
+
+            for (int index = 0; index < beams.Length; index++)
+            {
+                foreach (GameObject beam in beams)
+                    beam.SetActive(false);
+                beams[index].SetActive(true);
+                outputCamera.transform.SetPositionAndRotation(
+                    views[index].transform.position,
+                    views[index].transform.rotation);
+                outputCamera.fieldOfView = views[index].Lens.FieldOfView;
+                outputCamera.nearClipPlane = views[index].Lens.NearClipPlane;
+                outputCamera.farClipPlane = views[index].Lens.FarClipPlane;
+
+                string path = Path.GetFullPath(Path.Combine(
+                    CaptureRoot,
+                    $"Story_01_RebuildPreview_Blackout_{index + 1:D2}_{beamNames[index]}.png"));
+                CaptureCameraToPng(outputCamera, path);
+            }
+
+            Debug.Log($"STORY_BLACKOUT_CAPTURE_COMPLETE count={beams.Length} root={Path.GetFullPath(CaptureRoot)}");
+        }
+        finally
+        {
+            foreach ((Light light, float intensity) in originalIntensities)
+            {
+                if (light != null)
+                    light.intensity = intensity;
+            }
+            foreach ((GameObject beam, bool active) in originalBeamStates)
+            {
+                if (beam != null)
+                    beam.SetActive(active);
+            }
+            outputCamera.transform.SetPositionAndRotation(originalPosition, originalRotation);
+            outputCamera.fieldOfView = originalFieldOfView;
+            outputCamera.nearClipPlane = originalNearClip;
+            outputCamera.farClipPlane = originalFarClip;
+        }
+    }
+
+    [MenuItem(Root + "Capture Story01 Blackout Search", true)]
+    private static bool CanCaptureStory01BlackoutSearch()
+    {
+        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Story_01_RebuildPreview";
     }
 
     private static void CaptureAllCamerasSynchronously()
@@ -153,27 +303,44 @@ internal static class StoryProjectVisualQA
                 if (target.camera == null)
                     continue;
 
-                // Render the authored camera transform directly. This avoids stale Game-view
-                // buffers when Unity is paused/unfocused and gives deterministic world-only
-                // composition evidence without advancing story time.
-                outputCamera.transform.SetPositionAndRotation(
-                    target.camera.transform.position, target.camera.transform.rotation);
-                outputCamera.fieldOfView = target.camera.Lens.FieldOfView;
-                outputCamera.nearClipPlane = target.camera.Lens.NearClipPlane;
-                outputCamera.farClipPlane = target.camera.Lens.FarClipPlane;
-                RaycastHit[] centerHits = Physics.RaycastAll(
-                    new Ray(outputCamera.transform.position, outputCamera.transform.forward),
-                    120f, ~0, QueryTriggerInteraction.Ignore);
-                System.Array.Sort(centerHits, (left, right) => left.distance.CompareTo(right.distance));
-                string centerHit = centerHits.Length > 0
-                    ? $"{HierarchyPath(centerHits[0].transform)}@{centerHits[0].distance:F2}"
-                    : "<none>";
-                Debug.Log($"STORY_CAMERA_AUTHORED_RAY zone={target.zone} hit={centerHit}");
+                GameObject scenarioVisual = ResolveScenarioVisual(target.zone);
+                bool scenarioVisualWasActive = scenarioVisual != null && scenarioVisual.activeSelf;
+                try
+                {
+                    if (scenarioVisual != null)
+                        scenarioVisual.SetActive(true);
 
-                string fileName =
-                    $"{captureSceneName}_{captureIndex + 1:D2}_{Sanitize(target.zone + "_" + target.name)}.png";
-                string path = Path.GetFullPath(Path.Combine(CaptureRoot, fileName));
-                CaptureCameraToPng(outputCamera, path);
+                    // Render the authored camera transform directly. This avoids stale Game-view
+                    // buffers when Unity is paused/unfocused and gives deterministic world-only
+                    // composition evidence without advancing story time.
+                    outputCamera.transform.SetPositionAndRotation(
+                        target.camera.transform.position, target.camera.transform.rotation);
+                    outputCamera.fieldOfView = target.camera.Lens.FieldOfView;
+                    outputCamera.nearClipPlane = target.camera.Lens.NearClipPlane;
+                    outputCamera.farClipPlane = target.camera.Lens.FarClipPlane;
+                    RaycastHit[] centerHits = Physics.RaycastAll(
+                        new Ray(outputCamera.transform.position, outputCamera.transform.forward),
+                        120f, ~0, QueryTriggerInteraction.Ignore);
+                    System.Array.Sort(centerHits, (left, right) => left.distance.CompareTo(right.distance));
+                    string centerHit = centerHits.Length > 0
+                        ? $"{HierarchyPath(centerHits[0].transform)}@{centerHits[0].distance:F2}"
+                        : "<none>";
+                    Debug.Log($"STORY_CAMERA_AUTHORED_RAY zone={target.zone} hit={centerHit}");
+
+                    string fileName =
+                        $"{captureSceneName}_{captureIndex + 1:D2}_{Sanitize(target.zone + "_" + target.name)}.png";
+                    string path = Path.GetFullPath(Path.Combine(CaptureRoot, fileName));
+                    CaptureCameraToPng(outputCamera, path);
+                    string tallFileName =
+                        $"{captureSceneName}_{captureIndex + 1:D2}_{Sanitize(target.zone + "_" + target.name)}_Tall9x19_5.png";
+                    string tallPath = Path.GetFullPath(Path.Combine(CaptureRoot, tallFileName));
+                    CaptureCameraToPng(outputCamera, tallPath, 540, 1170);
+                }
+                finally
+                {
+                    if (scenarioVisual != null)
+                        scenarioVisual.SetActive(scenarioVisualWasActive);
+                }
             }
 
             Debug.Log($"STORY_CAMERA_CAPTURE_COMPLETE scene={captureSceneName} count={CaptureTargets.Count}");
@@ -195,18 +362,47 @@ internal static class StoryProjectVisualQA
         }
     }
 
-    private static void CaptureCameraToPng(Camera camera, string path)
+    private static GameObject ResolveScenarioVisual(StoryCameraZoneId zone)
     {
-        const int width = 540;
-        const int height = 960;
+        if (zone != StoryCameraZoneId.InspectBrokenGlass)
+            return null;
+
+        Transform[] transforms =
+            Object.FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (Transform candidate in transforms)
+        {
+            if (candidate.name == "BrokenGlass_Hazard")
+                return candidate.gameObject;
+        }
+
+        return null;
+    }
+
+    private static GameObject FindSceneObject(string name)
+    {
+        Transform[] transforms =
+            Object.FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (Transform candidate in transforms)
+        {
+            if (candidate.name == name)
+                return candidate.gameObject;
+        }
+
+        return null;
+    }
+
+    private static void CaptureCameraToPng(Camera camera, string path, int width = 540, int height = 960)
+    {
         RenderTexture previousActive = RenderTexture.active;
         RenderTexture previousTarget = camera.targetTexture;
+        float previousAspect = camera.aspect;
         RenderTexture renderTarget = new RenderTexture(width, height, 24, RenderTextureFormat.ARGB32);
         Texture2D texture = new Texture2D(width, height, TextureFormat.RGB24, false);
         try
         {
             renderTarget.Create();
             camera.targetTexture = renderTarget;
+            camera.aspect = (float)width / height;
             RenderTexture.active = renderTarget;
             camera.Render();
             texture.ReadPixels(new Rect(0f, 0f, width, height), 0, 0, false);
@@ -216,7 +412,55 @@ internal static class StoryProjectVisualQA
         finally
         {
             camera.targetTexture = previousTarget;
+            camera.aspect = previousAspect;
             RenderTexture.active = previousActive;
+            renderTarget.Release();
+            Object.DestroyImmediate(renderTarget);
+            Object.DestroyImmediate(texture);
+        }
+    }
+
+    private static void CaptureHudToPng(Canvas canvas, Camera camera, string path, int width, int height)
+    {
+        RenderMode previousMode = canvas.renderMode;
+        Camera previousCanvasCamera = canvas.worldCamera;
+        float previousPlaneDistance = canvas.planeDistance;
+        RenderTexture previousActive = RenderTexture.active;
+        RenderTexture previousTarget = camera.targetTexture;
+        float previousAspect = camera.aspect;
+        RenderTexture renderTarget = new RenderTexture(width, height, 24, RenderTextureFormat.ARGB32);
+        Texture2D texture = new Texture2D(width, height, TextureFormat.RGB24, false);
+        try
+        {
+            canvas.renderMode = RenderMode.ScreenSpaceCamera;
+            canvas.worldCamera = camera;
+            canvas.planeDistance = Mathf.Max(1f, camera.nearClipPlane + 0.5f);
+            camera.targetTexture = renderTarget;
+            camera.aspect = (float)width / height;
+            foreach (TMP_Text text in canvas.GetComponentsInChildren<TMP_Text>(true))
+            {
+                text.SetAllDirty();
+                text.ForceMeshUpdate();
+            }
+
+            Canvas.ForceUpdateCanvases();
+            renderTarget.Create();
+            RenderTexture.active = renderTarget;
+            GL.Clear(true, true, camera.backgroundColor);
+            camera.Render();
+            camera.Render();
+            texture.ReadPixels(new Rect(0f, 0f, width, height), 0, 0, false);
+            texture.Apply(false, false);
+            File.WriteAllBytes(path, texture.EncodeToPNG());
+        }
+        finally
+        {
+            camera.targetTexture = previousTarget;
+            camera.aspect = previousAspect;
+            RenderTexture.active = previousActive;
+            canvas.renderMode = previousMode;
+            canvas.worldCamera = previousCanvasCamera;
+            canvas.planeDistance = previousPlaneDistance;
             renderTarget.Release();
             Object.DestroyImmediate(renderTarget);
             Object.DestroyImmediate(texture);

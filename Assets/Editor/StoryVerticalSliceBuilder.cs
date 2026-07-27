@@ -20,7 +20,7 @@ using UnityEngine.Timeline;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public static class StoryVerticalSliceBuilder
+public static partial class StoryVerticalSliceBuilder
 {
     private const string ScenePath = "Assets/Scenes/Story_03_Quake.unity";
     private const string StoryRoot = "Assets/Story";
@@ -30,6 +30,10 @@ public static class StoryVerticalSliceBuilder
     private const string TimelineRoot = GeneratedRoot + "/Timelines";
     private const string PrefabRoot = StoryRoot + "/Prefabs";
     private const string CuteFurnitureRoot = "Assets/ithappy/Cute_Furniture_Free/Prefabs";
+    private const string KenneyBedrollPath =
+        "Assets/Story/Environment/ThirdParty/KenneySurvival/Models/bedroll-packed.fbx";
+    private const string KenneySurvivalMaterialPath =
+        "Assets/Story/Environment/ThirdParty/KenneySurvival/Materials/KenneySurvival_Atlas.mat";
 
     private static readonly Color Navy = new Color32(15, 30, 46, 255);
     private static readonly Color Teal = new Color32(25, 151, 151, 255);
@@ -119,6 +123,7 @@ public static class StoryVerticalSliceBuilder
     private sealed class InteractionReferences
     {
         public StoryInteractable[] intro;
+        public StoryInteractable[] introOptional;
         public StoryInteractable calmSibling;
         public StoryInteractable crouchStep;
         public StoryInteractable coverHeadStep;
@@ -359,9 +364,50 @@ public static class StoryVerticalSliceBuilder
         {
             material.shader = shader;
         }
-        material.SetColor("_BaseColor", new Color(0.72f, 0.65f, 0.52f, 0.5f));
+        material.SetColor("_BaseColor", new Color(0.78f, 0.71f, 0.6f, 0.42f));
+        if (material.HasProperty("_BaseMap"))
+            material.SetTexture("_BaseMap", GetOrCreateSoftDustTexture());
+        material.renderQueue = 3000;
         EditorUtility.SetDirty(material);
         return material;
+    }
+
+    private static Texture2D GetOrCreateSoftDustTexture()
+    {
+        const int size = 64;
+        string path = MaterialRoot + "/DustCloudTexture.asset";
+        Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        if (texture == null)
+        {
+            texture = new Texture2D(size, size, TextureFormat.RGBA32, false, true)
+            {
+                name = "DustCloudTexture",
+                wrapMode = TextureWrapMode.Clamp,
+                filterMode = FilterMode.Bilinear
+            };
+            AssetDatabase.CreateAsset(texture, path);
+        }
+
+        Color[] pixels = new Color[size * size];
+        for (int y = 0; y < size; y++)
+        {
+            for (int x = 0; x < size; x++)
+            {
+                Vector2 point = new Vector2(
+                    (x + 0.5f) / size * 2f - 1f,
+                    (y + 0.5f) / size * 2f - 1f);
+                float radial = Mathf.Clamp01(1f - point.magnitude);
+                radial = radial * radial * (3f - 2f * radial);
+                float noise = Mathf.PerlinNoise(x * 0.115f + 3.7f, y * 0.115f + 8.1f);
+                float alpha = Mathf.Pow(radial, 1.45f) * Mathf.Lerp(0.58f, 1f, noise);
+                pixels[y * size + x] = new Color(1f, 0.96f, 0.88f, alpha);
+            }
+        }
+
+        texture.SetPixels(pixels);
+        texture.Apply(false, false);
+        EditorUtility.SetDirty(texture);
+        return texture;
     }
 
     private static VolumeProfile CreateVolumeProfile()
@@ -426,8 +472,16 @@ public static class StoryVerticalSliceBuilder
         CreatePrimitive("CorridorFloor", PrimitiveType.Cube, new Vector3(2.5f, -0.11f, 9.4f), new Vector3(3f, 0.22f, 6.8f), m.corridor, corridor);
         // Overlap both floor colliders through the wall thickness. Two coplanar cubes that only
         // touched at z=6 baked as separate NavMesh islands on Unity 6 even with a wide opening.
-        CreatePrimitive("DoorwayFloorBridge", PrimitiveType.Cube, new Vector3(2.5f, -0.105f, 6f),
-            new Vector3(2.2f, 0.21f, 1.4f), m.corridor, corridor);
+        GameObject doorwayFloorBridge = CreatePrimitive(
+            "DoorwayFloorBridge",
+            PrimitiveType.Cube,
+            new Vector3(2.5f, -0.105f, 6f),
+            new Vector3(2.2f, 0.21f, 1.4f),
+            m.corridor,
+            corridor);
+        // This cube only joins the room and corridor navigation surfaces. Its collider must
+        // remain authored, but rendering it causes a visible slab across the doorway.
+        doorwayFloorBridge.GetComponent<MeshRenderer>().enabled = false;
         CreatePrimitive("CorridorLeftWall", PrimitiveType.Cube, new Vector3(0.98f, 1.7f, 9.4f), new Vector3(0.18f, 3.4f, 6.8f), m.wall, corridor);
         CreatePrimitive("CorridorRightWall", PrimitiveType.Cube, new Vector3(4.02f, 1.7f, 9.4f), new Vector3(0.18f, 3.4f, 6.8f), m.wall, corridor);
         CreatePrimitive("CorridorEnd", PrimitiveType.Cube, new Vector3(2.5f, 1.7f, 12.8f), new Vector3(3f, 3.4f, 0.18f), m.navy, corridor);
@@ -533,9 +587,16 @@ public static class StoryVerticalSliceBuilder
             new Vector3(-2.78f, 0f, -3.72f), Vector3.zero, new Vector3(3.5f, 1.25f, 1.42f));
         CreateInvisibleColliderPrimitive("FamilySofa_Collider", new Vector3(-2.78f, 0.58f, -3.72f),
             new Vector3(3.5f, 1.16f, 1.42f), sofa.transform);
-        StoryChapterBuilderCommon.InstantiateAsset("Assets/Bolum1Prefab/Quilt_514.prefab", "SofaThrow",
-            sofa.transform, new Vector3(-3.35f, 0.78f, -3.17f), new Vector3(0.78f, 0.42f, 0.2f),
-            new Vector3(-12f, 0f, 4f), false);
+        StoryChapterBuilderCommon.InstantiateAsset(
+            KenneyBedrollPath,
+            "KoltukBattaniyesi",
+            sofa.transform,
+            new Vector3(-3.35f, 0.57f, -3.6f),
+            new Vector3(0.76f, 0.24f, 0.3f),
+            new Vector3(0f, -8f, -5f),
+            false,
+            false,
+            AssetDatabase.LoadAssetAtPath<Material>(KenneySurvivalMaterialPath));
 
         GameObject lowCabinet = new GameObject("LowCabinet");
         lowCabinet.transform.SetParent(parent);
@@ -1536,7 +1597,7 @@ public static class StoryVerticalSliceBuilder
         StorySiblingFollower siblingFollower, StoryTouchManager touch, StoryCameraController camera, StoryUIController ui,
         Animator denizAnimator, Animator canAnimator, PlayableDirector quakeTimeline,
         CinemachineImpulseSource impulse, AudioSource impact, Light roomLight, InteractionReferences interactions,
-        WorldReferences world, GameObject flashlight, GameObject emergencyLights)
+        WorldReferences world, GameObject flashlight, GameObject emergencyLights, GameObject canComfortItem = null)
     {
         SerializedObject serialized = new SerializedObject(sequence);
         Set(serialized, "gameManager", manager);
@@ -1552,6 +1613,10 @@ public static class StoryVerticalSliceBuilder
         Set(serialized, "impactSource", impact);
         Set(serialized, "roomLight", roomLight);
         SetArray(serialized, "introInspections", interactions.intro.Cast<Object>().ToArray());
+        SetArray(
+            serialized,
+            "introOptionalMoments",
+            interactions.introOptional?.Cast<Object>().ToArray() ?? Array.Empty<Object>());
         Set(serialized, "calmSibling", interactions.calmSibling);
         Set(serialized, "crouchStep", interactions.crouchStep);
         Set(serialized, "coverHeadStep", interactions.coverHeadStep);
@@ -1586,6 +1651,7 @@ public static class StoryVerticalSliceBuilder
         Set(serialized, "denizWornShoes", world.denizWornShoes);
         Set(serialized, "denizWornBag", world.denizWornBag);
         Set(serialized, "canWornShoes", world.canWornShoes);
+        Set(serialized, "canComfortItem", canComfortItem);
         serialized.ApplyModifiedPropertiesWithoutUndo();
     }
 
@@ -1771,14 +1837,23 @@ public static class StoryVerticalSliceBuilder
         GameObject decor = new GameObject("RoomWallDecor");
         decor.transform.SetParent(parent);
 
-        StoryChapterBuilderCommon.InstantiateAsset(
+        GameObject artFrameLarge = StoryChapterBuilderCommon.InstantiateAsset(
             CuteFurnitureRoot + "/Decorations/Picture_21.prefab", "ArtFrameLarge", decor.transform,
             new Vector3(4.18f, 1.65f, 5.62f), new Vector3(0.92f, 0.86f, 0.16f), Vector3.zero,
             false, false);
-        StoryChapterBuilderCommon.InstantiateAsset(
+        artFrameLarge.transform.SetPositionAndRotation(
+            new Vector3(4.179999f, 2.08f, 5.898f),
+            Quaternion.Euler(0f, 180f, 0f));
+        artFrameLarge.transform.localScale = Vector3.one * 1.83469164f;
+
+        GameObject smallFrame = StoryChapterBuilderCommon.InstantiateAsset(
             CuteFurnitureRoot + "/Decorations/Picture_08.prefab", "SmallFrame", decor.transform,
             new Vector3(-4.78f, 1.5f, -0.05f), new Vector3(0.16f, 0.84f, 0.72f),
             new Vector3(0f, 90f, 0f), false, false);
+        smallFrame.transform.SetPositionAndRotation(
+            new Vector3(-4.85f, 1.91999984f, -2.484f),
+            Quaternion.Euler(0f, 90f, 0f));
+        smallFrame.transform.localScale = Vector3.one * 1.038648f;
     }
 
     private static Transform FindDescendant(Transform root, string name)

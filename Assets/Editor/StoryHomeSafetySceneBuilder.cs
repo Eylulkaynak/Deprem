@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-public static class StoryHomeSafetySceneBuilder
+public static partial class StoryHomeSafetySceneBuilder
 {
     public const string ScenePath = "Assets/Scenes/Story_02_HomeSafety.unity";
     private const string LegacyPath = "Assets/Scenes/Bolum2.unity";
@@ -53,6 +53,32 @@ public static class StoryHomeSafetySceneBuilder
         internal Animation heavyAnimation;
         internal Animation drillAnimation;
         internal Animation doorAnimation;
+        internal GameObject sharedHome;
+        internal GameObject initialRouteCarStart;
+        internal GameObject initialRouteCarBlocked;
+        internal Animation initialRouteCarAnimation;
+        internal GameObject nermin;
+        internal GameObject nerminDoorHandle;
+        internal GameObject nerminEnvelopeStart;
+        internal GameObject nerminEnvelopeReturned;
+        internal GameObject evacuationPlanInHand;
+        internal GameObject evacuationPlan;
+        internal Animation nerminExitAnimation;
+        internal GameObject finalRouteCarStart;
+        internal GameObject finalRouteCarFinish;
+        internal GameObject canToyCarPocket;
+        internal Animation finalRouteCarAnimation;
+        internal GameObject clearedDoorHandle;
+        internal GameObject shelfAnchorMark;
+        internal GameObject shelfStabilityHandle;
+        internal Animation shelfStabilityAnimation;
+        internal GameObject wardrobeStabilityHandle;
+        internal GameObject shelfRiskZoneUnstable;
+        internal GameObject shelfRiskZoneSecured;
+        internal GameObject wardrobeRiskZoneUnstable;
+        internal GameObject wardrobeRiskZoneSecured;
+        internal GameObject canReadingNestRisk;
+        internal GameObject canReadingNestSafe;
     }
 
     private sealed class HomeInteractions
@@ -73,6 +99,14 @@ public static class StoryHomeSafetySceneBuilder
         internal StoryInteractable unsafeHeavyLift;
         internal StoryInteractable unsafeDrill;
         internal StoryInteractable testExitDoor;
+        internal StoryInteractable testInitialRoute;
+        internal StoryInteractable openDoorForNermin;
+        internal StoryInteractable returnNerminEnvelope;
+        internal StoryInteractable placeEvacuationPlan;
+        internal StoryInteractable testClearedExitDoor;
+        internal StoryInteractable markShelfAnchor;
+        internal StoryInteractable testSecuredShelf;
+        internal StoryInteractable testSecuredWardrobe;
     }
 
     [MenuItem("Tools/Deprem Story/Build Story_02_HomeSafety")]
@@ -396,7 +430,10 @@ public static class StoryHomeSafetySceneBuilder
         Transform handSlot = parent.GetComponentsInChildren<Transform>(true)
             .FirstOrDefault(candidate => candidate.name == "IteamSlot.R") ??
                              parent.GetComponentsInChildren<Transform>(true)
-                                 .FirstOrDefault(candidate => candidate.name == "Hand.R");
+                                 .FirstOrDefault(candidate => candidate.name == "Hand.R") ??
+                             StoryChapterBuilderCommon.FindHumanoidBone(
+                                 parent.gameObject,
+                                 HumanBodyBones.RightHand);
         if (handSlot == null)
             throw new InvalidOperationException("Anne karakterinde sağ el eşya yuvası bulunamadı.");
 

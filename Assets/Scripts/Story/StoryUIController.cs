@@ -10,6 +10,13 @@ namespace Deprem.Story
     [DisallowMultipleComponent]
     public sealed class StoryUIController : MonoBehaviour
     {
+        [Serializable]
+        private sealed class DialogueVoiceBinding
+        {
+            [TextArea] public string subtitle;
+            public AudioClip clip;
+        }
+
         [Header("HUD")]
         [SerializeField] private TMP_Text objectiveTitle;
         [SerializeField] private TMP_Text objectiveDetail;
@@ -19,11 +26,25 @@ namespace Deprem.Story
         [SerializeField, Min(10f)] private float subtitleCharactersPerSecond = 52f;
         [SerializeField] private StoryPlayerMovement movementOwner;
 
+        [Header("Presentation")]
+        [SerializeField] private Animation objectivePresentation;
+        [SerializeField] private Animation subtitlePresentation;
+        [SerializeField] private Animation contextPresentation;
+        [SerializeField] private Animation pausePresentation;
+        [SerializeField] private Animation completionPresentation;
+        [SerializeField] private Animation chapterSelectionPresentation;
+
+        [Header("Dialogue Voice")]
+        [SerializeField] private AudioSource dialogueVoiceSource;
+        [SerializeField] private DialogueVoiceBinding[] dialogueVoices = Array.Empty<DialogueVoiceBinding>();
+
         [Header("Menus")]
         [SerializeField] private GameObject pausePanel;
         [SerializeField] private GameObject completionPanel;
         [SerializeField] private GameObject completionReportCard;
         [SerializeField] private GameObject chapterSelectionCard;
+        [SerializeField] private GameObject nextActButton;
+        [SerializeField] private TMP_Text nextActButtonLabel;
         [SerializeField] private Toggle reduceShakeToggle;
         [SerializeField] private TMP_Text reduceShakeState;
         [SerializeField] private TMP_Text completionPreparationValue;
@@ -34,6 +55,7 @@ namespace Deprem.Story
         private Coroutine subtitleRoutine;
         private Coroutine contextRoutine;
         private Action subtitleCompleted;
+        private Action subtitleCompletedAfterPointerRelease;
         private bool subtitleActive;
         private bool subtitleRevealComplete;
         private bool subtitleAdvanceRequested;
@@ -53,6 +75,8 @@ namespace Deprem.Story
                 pausePanel.SetActive(false);
             if (completionPanel != null)
                 completionPanel.SetActive(false);
+            if (chapterSelectionCard != null)
+                chapterSelectionCard.SetActive(false);
 
             bool reducedShake = PlayerPrefs.GetInt("story.reduceShake", 0) == 1;
             if (reduceShakeToggle != null)
@@ -68,6 +92,7 @@ namespace Deprem.Story
                 objectiveTitle.text = title;
             if (objectiveDetail != null)
                 objectiveDetail.text = detail;
+            PlayPresentation(objectivePresentation);
         }
 
         public void ShowSubtitle(string text)
@@ -93,7 +118,9 @@ namespace Deprem.Story
             ResetSubtitleState(false);
             subtitleCompleted = completed;
             SetSubtitleActive(true);
-            subtitleRoutine = StartCoroutine(ShowSubtitleTypewriter(text, duration));
+            AudioClip voiceClip = PlayDialogueVoice(text);
+            float voicedDuration = voiceClip != null ? voiceClip.length + 0.25f : 0f;
+            subtitleRoutine = StartCoroutine(ShowSubtitleTypewriter(text, Mathf.Max(duration, voicedDuration)));
         }
 
         public bool TryHandlePrimaryTap()
@@ -119,6 +146,9 @@ namespace Deprem.Story
             consumeWorldPointerUntilRelease = false;
             ApplyWorldInputLock();
             WorldInputBlockChanged?.Invoke(WorldInputBlocked);
+            Action completed = subtitleCompletedAfterPointerRelease;
+            subtitleCompletedAfterPointerRelease = null;
+            completed?.Invoke();
         }
 
         public void ShowContext(string text)
@@ -129,6 +159,18 @@ namespace Deprem.Story
             if (contextRoutine != null)
                 StopCoroutine(contextRoutine);
             contextRoutine = StartCoroutine(ShowTemporarily(contextPrompt, text, 2.25f));
+        }
+
+        public void ShowNarratedContext(string text)
+        {
+            if (contextPrompt == null)
+                return;
+
+            if (contextRoutine != null)
+                StopCoroutine(contextRoutine);
+            AudioClip voiceClip = PlayDialogueVoice(text);
+            float duration = voiceClip != null ? Mathf.Max(2.25f, voiceClip.length + 0.15f) : 2.25f;
+            contextRoutine = StartCoroutine(ShowTemporarily(contextPrompt, text, duration));
         }
 
         public void HideContext()
@@ -184,8 +226,7 @@ namespace Deprem.Story
             StoryGameManager manager = StoryGameManager.Instance;
             if (manager != null)
             {
-                manager.ResetStory();
-                manager.RetryCheckpoint();
+                manager.ReplayCurrentAct();
                 return;
             }
 
@@ -194,11 +235,49 @@ namespace Deprem.Story
                 SceneManager.LoadScene(activeScene.name);
         }
 
+        public void ContinueAfterAct()
+        {
+            SetPaused(false);
+            StoryGameManager manager = StoryGameManager.Instance;
+            if (manager == null)
+                return;
+
+            if (manager.IsFinalAct)
+            {
+                ShowChapterSelection();
+                return;
+            }
+
+            manager.ContinueToNextAct();
+        }
+
+        public void OpenPreparationAct()
+        {
+            StoryGameManager.Instance?.OpenAct((int)StoryAct.Preparation);
+        }
+
+        public void OpenHomeSafetyAct()
+        {
+            StoryGameManager.Instance?.OpenAct((int)StoryAct.HomeSafety);
+        }
+
+        public void OpenQuakeAct()
+        {
+            StoryGameManager.Instance?.OpenAct((int)StoryAct.Quake);
+        }
+
+        public void OpenEvacuationAct()
+        {
+            StoryGameManager.Instance?.OpenAct((int)StoryAct.Evacuation);
+        }
+
         private void SetPaused(bool value)
         {
             paused = value;
             if (pausePanel != null)
                 pausePanel.SetActive(paused);
+            if (paused)
+                PlayPresentation(pausePresentation);
             Time.timeScale = paused ? 0f : 1f;
             AudioListener.pause = paused;
             ApplyWorldInputLock();
@@ -217,6 +296,7 @@ namespace Deprem.Story
         {
             SetPaused(false);
             RefreshCompletionReport();
+            RefreshCompletionRoute();
             if (completionPanel != null)
                 completionPanel.SetActive(true);
             ShowCompletionReport();
@@ -230,18 +310,37 @@ namespace Deprem.Story
 
         public void ShowChapterSelection()
         {
+            RefreshCompletionRoute();
             if (completionReportCard != null)
                 completionReportCard.SetActive(false);
             if (chapterSelectionCard != null)
+            {
                 chapterSelectionCard.SetActive(true);
+                PlayPresentation(chapterSelectionPresentation);
+            }
         }
 
         public void ShowCompletionReport()
         {
             if (completionReportCard != null)
+            {
                 completionReportCard.SetActive(true);
+                PlayPresentation(completionPresentation);
+            }
             if (chapterSelectionCard != null)
                 chapterSelectionCard.SetActive(false);
+        }
+
+        private void RefreshCompletionRoute()
+        {
+            StoryGameManager manager = StoryGameManager.Instance;
+            bool hasRoute = manager != null && nextActButton != null;
+            if (nextActButton != null)
+                nextActButton.SetActive(hasRoute);
+            if (nextActButtonLabel != null)
+                nextActButtonLabel.text = manager != null && manager.IsFinalAct
+                    ? "BÖLÜM SEÇİMİ"
+                    : "SONRAKİ PERDE";
         }
 
         private IEnumerator ShowTemporarily(TMP_Text target, string text, float duration)
@@ -249,6 +348,7 @@ namespace Deprem.Story
             GameObject displayRoot = target.transform.parent != null ? target.transform.parent.gameObject : target.gameObject;
             target.text = text;
             displayRoot.SetActive(true);
+            PlayPresentation(contextPresentation);
             float remaining = Mathf.Max(0f, duration);
             while (remaining > 0f)
             {
@@ -267,6 +367,7 @@ namespace Deprem.Story
             subtitle.text = text ?? string.Empty;
             subtitle.maxVisibleCharacters = 0;
             displayRoot.SetActive(true);
+            PlayPresentation(subtitlePresentation);
             subtitle.ForceMeshUpdate();
 
             SetSubtitleActive(true);
@@ -315,6 +416,8 @@ namespace Deprem.Story
             Action completed = invokeCompleted ? subtitleCompleted : null;
             subtitleCompleted = null;
             subtitleRoutine = null;
+            if (dialogueVoiceSource != null)
+                dialogueVoiceSource.Stop();
             SetSubtitleActive(false);
             subtitleRevealComplete = false;
             subtitleAdvanceRequested = false;
@@ -328,7 +431,37 @@ namespace Deprem.Story
                 displayRoot.SetActive(false);
             }
 
+            if (completed != null && consumeWorldPointerUntilRelease)
+            {
+                // Altyazıyı kapatan dokunuş bırakılmadan sahne callback'ini çalıştırırsak,
+                // dünya giriş kilidi otomatik MoveTo gibi kontrollü hikâye hareketlerini de
+                // reddeder. Callback'i pointer guard kalktığı kareye taşı.
+                subtitleCompletedAfterPointerRelease = completed;
+                return;
+            }
+
             completed?.Invoke();
+        }
+
+        private AudioClip PlayDialogueVoice(string text)
+        {
+            if (dialogueVoiceSource == null || dialogueVoices == null || string.IsNullOrEmpty(text))
+                return null;
+
+            dialogueVoiceSource.Stop();
+            for (int i = 0; i < dialogueVoices.Length; i++)
+            {
+                DialogueVoiceBinding binding = dialogueVoices[i];
+                if (binding == null || binding.clip == null ||
+                    !string.Equals(binding.subtitle, text, StringComparison.Ordinal))
+                    continue;
+
+                dialogueVoiceSource.clip = binding.clip;
+                dialogueVoiceSource.Play();
+                return binding.clip;
+            }
+
+            return null;
         }
 
         private void SetSubtitleActive(bool value)
@@ -362,6 +495,16 @@ namespace Deprem.Story
         {
             if (reduceShakeState != null)
                 reduceShakeState.text = reduced ? "AÇIK" : "KAPALI";
+        }
+
+        private static void PlayPresentation(Animation presentation)
+        {
+            if (presentation == null || presentation.clip == null)
+                return;
+
+            presentation.Stop();
+            presentation.Rewind();
+            presentation.Play();
         }
 
         private void RefreshCompletionReport()

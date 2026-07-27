@@ -1,0 +1,10 @@
+newmtl Komsu_Material
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 2
+map_Kd Meshy_AI_Sunlit_Casual_Outfit_0726155738_texture.png
+map_Bump Meshy_AI_Sunlit_Casual_Outfit_0726155738_texture_normal.png
+map_Pr Meshy_AI_Sunlit_Casual_Outfit_0726155738_texture_roughness.png
+map_Pm Meshy_AI_Sunlit_Casual_Outfit_0726155738_texture_metallic.png

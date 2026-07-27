@@ -1,0 +1,10 @@
+newmtl Can_Material
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 2
+map_Kd Meshy_AI_Cartoon_Boy_in_Teal_H_0726155502_texture.png
+map_Bump Meshy_AI_Cartoon_Boy_in_Teal_H_0726155502_texture_normal.png
+map_Pr Meshy_AI_Cartoon_Boy_in_Teal_H_0726155502_texture_roughness.png
+map_Pm Meshy_AI_Cartoon_Boy_in_Teal_H_0726155502_texture_metallic.png

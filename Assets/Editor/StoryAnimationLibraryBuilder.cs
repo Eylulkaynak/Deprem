@@ -19,14 +19,13 @@ public static class StoryAnimationLibraryBuilder
 
     private const string KayKitRoot = "Assets/Story/Animations/ThirdParty/KayKit";
     private const string QuaterniusRoot = "Assets/Story/Animations/ThirdParty/Quaternius";
-    private const string ChildIdlePath = "Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_idle0.anim";
-    private const string ChildWalkPath = "Assets/KidsCharacterFree/AnimationClips/Humanoid/boy_move_walk.anim";
     private const string GeneralPath = KayKitRoot + "/Rig_Medium_General.fbx";
     private const string MovementBasicPath = KayKitRoot + "/Rig_Medium_MovementBasic.fbx";
     private const string MovementAdvancedPath = KayKitRoot + "/Rig_Medium_MovementAdvanced.fbx";
     private const string SimulationPath = KayKitRoot + "/Rig_Medium_Simulation.fbx";
     private const string ToolsPath = KayKitRoot + "/Rig_Medium_Tools.fbx";
     private const string UniversalPath = QuaterniusRoot + "/UAL1_Standard.fbx";
+    private const float ChildWalkPlaybackSpeed = 1.45f;
 
     private static readonly string[] SourceModels =
     {
@@ -47,6 +46,7 @@ public static class StoryAnimationLibraryBuilder
     public static RuntimeAnimatorController BuildLibrary(bool showDialog = false)
     {
         EnsureSourcesExist();
+        MeshyFamilyCharacterImporter.EnsurePrepared();
         EnsureFolder("Assets/Story/Animations/Generated");
 
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
@@ -132,11 +132,20 @@ public static class StoryAnimationLibraryBuilder
 
     private static RuntimeAnimatorController CreateChildController()
     {
-        // The KidsCharacterFree avatar has a narrow pelvis but the source idle still retargets
-        // into a conspicuous wide-legged squat in the portrait camera. The earlier -0.24
-        // correction reduced the source curve without actually closing the silhouette.
-        AnimationClip childIdle = CreateNeutralIdle(ChildNeutralIdlePath, "ChildNeutralIdle", -0.44f);
-        AnimationClip childWalk = CreateNaturalWalk();
+        // The Meshy family uses one clean Humanoid locomotion source. Deniz's generated walk has
+        // the correct forward direction for these rigs, so the old 180-degree root correction is
+        // deliberately not applied.
+        AnimationClip childIdle = CreateCleanClipCopy(
+            FindClip(GeneralPath, "Idle_A"),
+            ChildNeutralIdlePath,
+            "ChildNeutralIdle",
+            true);
+        AnimationClip meshyWalk = MeshyFamilyCharacterImporter.LoadPrimaryAnimationClip(
+            MeshyFamilyCharacterImporter.DenizWalkingPath);
+        if (meshyWalk == null || !meshyWalk.isHumanMotion)
+            throw new InvalidOperationException("Meshy Deniz Humanoid yürüyüş klibi bulunamadı.");
+        AnimationClip childWalk = CreateCleanClipCopy(
+            meshyWalk, ChildNaturalWalkPath, "ChildNaturalWalk");
         AnimationClip crouching = FindClip(MovementAdvancedPath, "Crouching");
         AnimationClip coverUpperPose = CreateFrozenPose(
             FindClip(SimulationPath, "Waving"), ChildCoverUpperPosePath, "ChildCoverUpperPose", 0.25f);
@@ -150,6 +159,13 @@ public static class StoryAnimationLibraryBuilder
         if (IsControllerComplete(existing, requiredStates) &&
             StateGraphUsesMotion(existing, "Locomotion", "ChildNeutralIdle") &&
             StateGraphUsesMotion(existing, "Locomotion", "ChildNaturalWalk") &&
+            StateGraphUsesMotionAtSpeed(
+                existing,
+                "Locomotion",
+                "ChildNaturalWalk",
+                ChildWalkPlaybackSpeed) &&
+            StateUsesFootIk(existing, "Locomotion") &&
+            StoryTransitionsRequireStationaryCharacter(existing) &&
             !StateGraphUsesMotion(existing, "Locomotion", "Walking_A") &&
             !StateGraphUsesMotion(existing, "Locomotion", "Walking_B") &&
             !StateGraphUsesMotion(existing, "Locomotion", "boy_move_walk") &&
@@ -166,17 +182,20 @@ public static class StoryAnimationLibraryBuilder
             controller.AddParameter(trigger, AnimatorControllerParameterType.Trigger);
 
         AnimatorState locomotion = controller.CreateBlendTreeInController("Locomotion", out BlendTree locomotionTree, 0);
+        locomotion.iKOnFeet = true;
         locomotionTree.blendType = BlendTreeType.Simple1D;
         locomotionTree.blendParameter = "Speed";
         locomotionTree.useAutomaticThresholds = false;
         locomotionTree.AddChild(childIdle, 0f);
-        // Story movement has one deliberate pace. The source child idle opens both upper legs
-        // outwards, which reads as a squat/gorilla stance from the portrait isometric camera.
-        // ChildNeutralIdle keeps its breathing motion while neutralising that lateral leg muscle.
-        // KayKit Walking_B supplies the upright gait, while ChildNaturalWalk corrects the source
-        // rig's lateral foot targets and outward upper-leg muscles for this child avatar.
-        // Values above 1 remain on this motion instead of selecting a run.
+        // Values above 1 remain on the same deliberate walking motion instead of selecting a run.
         locomotionTree.AddChild(childWalk, 1f);
+        ChildMotion[] locomotionChildren = locomotionTree.children;
+        for (int index = 0; index < locomotionChildren.Length; index++)
+        {
+            if (locomotionChildren[index].motion == childWalk)
+                locomotionChildren[index].timeScale = ChildWalkPlaybackSpeed;
+        }
+        locomotionTree.children = locomotionChildren;
 
         AnimatorStateMachine stateMachine = controller.layers[0].stateMachine;
         stateMachine.defaultState = locomotion;
@@ -201,7 +220,8 @@ public static class StoryAnimationLibraryBuilder
 
     private static RuntimeAnimatorController CreateAdultController()
     {
-        AnimationClip adultIdle = CreateAdultNeutralIdle();
+        AnimationClip adultIdle = CreateCleanClipCopy(
+            FindClip(GeneralPath, "Idle_A"), AdultNeutralIdlePath, "AdultNeutralIdle", true);
         AnimatorController existing = AssetDatabase.LoadAssetAtPath<AnimatorController>(AdultControllerPath);
         string[] requiredStates =
         {
@@ -290,6 +310,55 @@ public static class StoryAnimationLibraryBuilder
             .Select(child => child.state)
             .FirstOrDefault(candidate => candidate != null && candidate.name == stateName);
         return state != null && MotionGraphUsesMotion(state.motion, motionName);
+    }
+
+    private static bool StateGraphUsesMotionAtSpeed(
+        AnimatorController controller,
+        string stateName,
+        string motionName,
+        float expectedTimeScale)
+    {
+        if (controller == null || controller.layers.Length == 0)
+            return false;
+
+        AnimatorState state = controller.layers[0].stateMachine.states
+            .Select(child => child.state)
+            .FirstOrDefault(candidate => candidate != null && candidate.name == stateName);
+        if (state == null || !(state.motion is BlendTree tree))
+            return false;
+
+        return tree.children.Any(child =>
+            child.motion != null &&
+            child.motion.name == motionName &&
+            Mathf.Abs(child.timeScale - expectedTimeScale) < 0.001f);
+    }
+
+    private static bool StateUsesFootIk(AnimatorController controller, string stateName)
+    {
+        if (controller == null || controller.layers.Length == 0)
+            return false;
+
+        AnimatorState state = controller.layers[0].stateMachine.states
+            .Select(child => child.state)
+            .FirstOrDefault(candidate => candidate != null && candidate.name == stateName);
+        return state != null && state.iKOnFeet;
+    }
+
+    private static bool StoryTransitionsRequireStationaryCharacter(AnimatorController controller)
+    {
+        if (controller == null || controller.layers.Length == 0)
+            return false;
+
+        AnimatorStateTransition[] storyTransitions = controller.layers[0].stateMachine.anyStateTransitions
+            .Where(transition => transition.conditions.Any(condition =>
+                condition.parameter != "StoryReset" &&
+                RequiredTriggers.Contains(condition.parameter)))
+            .ToArray();
+        return storyTransitions.Length == RequiredTriggers.Length - 1 &&
+               storyTransitions.All(transition => transition.conditions.Any(condition =>
+                   condition.parameter == "Speed" &&
+                   condition.mode == AnimatorConditionMode.Less &&
+                   condition.threshold <= 0.08f));
     }
 
     private static bool HasChildCoverUpperBodyLayer(AnimatorController controller)
@@ -455,14 +524,6 @@ public static class StoryAnimationLibraryBuilder
         return tree.children.Any(child => MotionGraphUsesMotion(child.motion, motionName));
     }
 
-    private static AnimationClip CreateAdultNeutralIdle()
-    {
-        // RGPoly Anne has a much wider pelvis than the child source rig. A stronger inward
-        // correction is required so her feet settle beneath her body instead of forming the
-        // conspicuous wide "gorilla" silhouette visible from the portrait camera.
-        return CreateNeutralIdle(AdultNeutralIdlePath, "AdultNeutralIdle", -0.46f);
-    }
-
     private static AnimationClip CreateChildCoverPose()
     {
         AnimationClip crouching = FindClip(MovementAdvancedPath, "Crouching");
@@ -517,82 +578,12 @@ public static class StoryAnimationLibraryBuilder
         return clip;
     }
 
-    private static AnimationClip CreateNaturalWalk()
+    private static AnimationClip CreateCleanClipCopy(
+        AnimationClip source,
+        string assetPath,
+        string clipName,
+        bool anchorHumanoidRoot = false)
     {
-        // Keep the child's authored hip height, knee flex and stride. Retargeting KayKit's
-        // adult-proportioned walk onto this short rig produced the low, bent-knee "gorilla"
-        // silhouette even after its lateral stance was narrowed.
-        AnimationClip source = RequiredClip(ChildWalkPath);
-        AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(ChildNaturalWalkPath);
-        if (clip == null)
-        {
-            clip = UnityEngine.Object.Instantiate(source);
-            clip.name = "ChildNaturalWalk";
-            AssetDatabase.CreateAsset(clip, ChildNaturalWalkPath);
-        }
-        else
-        {
-            EditorUtility.CopySerialized(source, clip);
-            clip.name = "ChildNaturalWalk";
-        }
-
-        foreach (EditorCurveBinding binding in AnimationUtility.GetCurveBindings(source))
-        {
-            float multiplier = binding.propertyName switch
-            {
-                "LeftFootT.x" => 0.15f,
-                "RightFootT.x" => 0.15f,
-                "Left Upper Leg In-Out" => 0.15f,
-                "Right Upper Leg In-Out" => 0.15f,
-                "Left Upper Leg Twist In-Out" => 0.4f,
-                "Right Upper Leg Twist In-Out" => 0.4f,
-                "Left Foot Twist In-Out" => 0.4f,
-                "Right Foot Twist In-Out" => 0.4f,
-                _ => 1f
-            };
-            float offset = binding.propertyName switch
-            {
-                "Left Upper Leg In-Out" => -0.44f,
-                "Right Upper Leg In-Out" => -0.44f,
-                _ => 0f
-            };
-            if (Mathf.Approximately(multiplier, 1f) && Mathf.Approximately(offset, 0f))
-                continue;
-
-            AnimationCurve sourceCurve = AnimationUtility.GetEditorCurve(source, binding);
-            if (sourceCurve == null)
-                continue;
-
-            Keyframe[] keys = sourceCurve.keys;
-            for (int index = 0; index < keys.Length; index++)
-            {
-                Keyframe key = keys[index];
-                key.value = key.value * multiplier + offset;
-                key.inTangent *= multiplier;
-                key.outTangent *= multiplier;
-                keys[index] = key;
-            }
-
-            AnimationCurve corrected = new AnimationCurve(keys)
-            {
-                preWrapMode = sourceCurve.preWrapMode,
-                postWrapMode = sourceCurve.postWrapMode
-            };
-            AnimationUtility.SetEditorCurve(clip, binding, corrected);
-        }
-
-        AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(source);
-        settings.loopTime = true;
-        settings.loopBlend = true;
-        AnimationUtility.SetAnimationClipSettings(clip, settings);
-        clip.wrapMode = WrapMode.Loop;
-        EditorUtility.SetDirty(clip);
-        return clip;
-    }
-
-    private static AnimationClip CreateNeutralIdle(string assetPath, string clipName, float upperLegInOut)
-    {
-        AnimationClip source = RequiredClip(ChildIdlePath);
         AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(assetPath);
         if (clip == null)
         {
@@ -606,58 +597,121 @@ public static class StoryAnimationLibraryBuilder
             clip.name = clipName;
         }
 
-        foreach (EditorCurveBinding binding in AnimationUtility.GetCurveBindings(source))
-        {
-            float multiplier = binding.propertyName switch
-            {
-                "LeftFootT.x" => 0f,
-                "RightFootT.x" => 0f,
-                "Left Upper Leg In-Out" => 0f,
-                "Right Upper Leg In-Out" => 0f,
-                "Left Upper Leg Twist In-Out" => 0f,
-                "Right Upper Leg Twist In-Out" => 0f,
-                "Left Foot Twist In-Out" => 0f,
-                "Right Foot Twist In-Out" => 0f,
-                _ => 1f
-            };
-            float offset = binding.propertyName switch
-            {
-                "Left Upper Leg In-Out" => upperLegInOut,
-                "Right Upper Leg In-Out" => upperLegInOut,
-                _ => 0f
-            };
-            if (Mathf.Approximately(multiplier, 1f) && Mathf.Approximately(offset, 0f))
-                continue;
-
-            AnimationCurve sourceCurve = AnimationUtility.GetEditorCurve(source, binding);
-            if (sourceCurve == null)
-                continue;
-
-            Keyframe[] keys = sourceCurve.keys;
-            for (int index = 0; index < keys.Length; index++)
-            {
-                Keyframe key = keys[index];
-                key.value = key.value * multiplier + offset;
-                key.inTangent *= multiplier;
-                key.outTangent *= multiplier;
-                keys[index] = key;
-            }
-
-            AnimationCurve corrected = new AnimationCurve(keys)
-            {
-                preWrapMode = sourceCurve.preWrapMode,
-                postWrapMode = sourceCurve.postWrapMode
-            };
-            AnimationUtility.SetEditorCurve(clip, binding, corrected);
-        }
-
         AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(source);
         settings.loopTime = true;
         settings.loopBlend = true;
         AnimationUtility.SetAnimationClipSettings(clip, settings);
         clip.wrapMode = WrapMode.Loop;
+        if (anchorHumanoidRoot)
+            AnchorHumanoidIdleRoot(clip);
         EditorUtility.SetDirty(clip);
         return clip;
+    }
+
+    private static void AnchorHumanoidIdleRoot(AnimationClip clip)
+    {
+        EditorCurveBinding[] rootBindings = AnimationUtility.GetCurveBindings(clip)
+            .Where(binding =>
+                string.IsNullOrEmpty(binding.path) &&
+                (binding.propertyName.StartsWith("RootT.", StringComparison.Ordinal) ||
+                 binding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal)))
+            .ToArray();
+        if (rootBindings.Length == 0)
+            throw new InvalidOperationException(clip.name + " has no humanoid root curves to anchor.");
+
+        float duration = Mathf.Max(clip.length, 1f / Mathf.Max(clip.frameRate, 30f));
+        foreach (EditorCurveBinding binding in rootBindings.Where(binding =>
+                     binding.propertyName.StartsWith("RootT.", StringComparison.Ordinal)))
+        {
+            AnimationCurve sourceCurve = AnimationUtility.GetEditorCurve(clip, binding);
+            if (sourceCurve == null)
+                continue;
+            AnimationUtility.SetEditorCurve(
+                clip,
+                binding,
+                AnimationCurve.Constant(0f, duration, sourceCurve.Evaluate(0f)));
+        }
+
+        string[] rotationProperties = { "RootQ.x", "RootQ.y", "RootQ.z", "RootQ.w" };
+        Dictionary<string, EditorCurveBinding> rotationBindings = rootBindings
+            .Where(binding => rotationProperties.Contains(binding.propertyName))
+            .ToDictionary(binding => binding.propertyName, binding => binding);
+        if (rotationProperties.Any(property => !rotationBindings.ContainsKey(property)))
+            throw new InvalidOperationException(clip.name + " humanoid RootQ curves are incomplete.");
+
+        float[] anchoredComponents =
+        {
+            AnimationUtility.GetEditorCurve(clip, rotationBindings["RootQ.x"]).Evaluate(0f),
+            AnimationUtility.GetEditorCurve(clip, rotationBindings["RootQ.y"]).Evaluate(0f),
+            AnimationUtility.GetEditorCurve(clip, rotationBindings["RootQ.z"]).Evaluate(0f),
+            AnimationUtility.GetEditorCurve(clip, rotationBindings["RootQ.w"]).Evaluate(0f)
+        };
+        for (int index = 0; index < rotationProperties.Length; index++)
+        {
+            AnimationUtility.SetEditorCurve(
+                clip,
+                rotationBindings[rotationProperties[index]],
+                AnimationCurve.Constant(0f, duration, anchoredComponents[index]));
+        }
+    }
+
+    private static void NormalizeHumanoidRootFacing(AnimationClip clip, float yawCorrection)
+    {
+        // Quaternius' Walk_Loop is authored with a roughly 180 degree humanoid RootQ yaw.
+        // NavMesh correctly rotates the character GameObject toward its velocity, but that
+        // baked RootQ then turns the rendered body back around. Correct only the root facing;
+        // every muscle curve (including the legs) remains untouched.
+        string[] properties = { "RootQ.x", "RootQ.y", "RootQ.z", "RootQ.w" };
+        Dictionary<string, EditorCurveBinding> bindings = AnimationUtility.GetCurveBindings(clip)
+            .Where(binding => string.IsNullOrEmpty(binding.path) && properties.Contains(binding.propertyName))
+            .ToDictionary(binding => binding.propertyName, binding => binding);
+        if (properties.Any(property => !bindings.ContainsKey(property)))
+            throw new InvalidOperationException(clip.name + " humanoid RootQ curves are incomplete.");
+
+        AnimationCurve[] sourceCurves = properties
+            .Select(property => AnimationUtility.GetEditorCurve(clip, bindings[property]))
+            .ToArray();
+        List<Keyframe>[] correctedKeys = properties.Select(_ => new List<Keyframe>()).ToArray();
+        int sampleCount = Mathf.Max(2, Mathf.CeilToInt(clip.length * Mathf.Max(clip.frameRate, 30f)));
+        Quaternion correction = Quaternion.Euler(0f, yawCorrection, 0f);
+        Quaternion previous = Quaternion.identity;
+        bool hasPrevious = false;
+
+        for (int sample = 0; sample <= sampleCount; sample++)
+        {
+            float time = clip.length * sample / sampleCount;
+            Quaternion root = new Quaternion(
+                sourceCurves[0].Evaluate(time),
+                sourceCurves[1].Evaluate(time),
+                sourceCurves[2].Evaluate(time),
+                sourceCurves[3].Evaluate(time));
+            float rootMagnitudeSquared = root.x * root.x + root.y * root.y + root.z * root.z + root.w * root.w;
+            root = rootMagnitudeSquared > 0.0001f ? Quaternion.Normalize(root) : Quaternion.identity;
+            Quaternion corrected = Quaternion.Normalize(correction * root);
+            if (hasPrevious && Quaternion.Dot(previous, corrected) < 0f)
+                corrected = new Quaternion(-corrected.x, -corrected.y, -corrected.z, -corrected.w);
+
+            correctedKeys[0].Add(new Keyframe(time, corrected.x));
+            correctedKeys[1].Add(new Keyframe(time, corrected.y));
+            correctedKeys[2].Add(new Keyframe(time, corrected.z));
+            correctedKeys[3].Add(new Keyframe(time, corrected.w));
+            previous = corrected;
+            hasPrevious = true;
+        }
+
+        for (int curveIndex = 0; curveIndex < properties.Length; curveIndex++)
+        {
+            AnimationCurve correctedCurve = new AnimationCurve(correctedKeys[curveIndex].ToArray())
+            {
+                preWrapMode = WrapMode.Loop,
+                postWrapMode = WrapMode.Loop
+            };
+            for (int keyIndex = 0; keyIndex < correctedCurve.length; keyIndex++)
+                correctedCurve.SmoothTangents(keyIndex, 0f);
+            AnimationUtility.SetEditorCurve(clip, bindings[properties[curveIndex]], correctedCurve);
+        }
+
+        EditorUtility.SetDirty(clip);
     }
 
     private static void AddResetTransition(AnimatorStateMachine stateMachine, AnimatorState idleState)
@@ -681,6 +735,7 @@ public static class StoryAnimationLibraryBuilder
         enter.duration = 0.12f;
         enter.canTransitionToSelf = false;
         enter.AddCondition(AnimatorConditionMode.If, 0f, triggerName);
+        enter.AddCondition(AnimatorConditionMode.Less, 0.08f, "Speed");
 
         if (!persistent)
         {
@@ -689,14 +744,6 @@ public static class StoryAnimationLibraryBuilder
             exit.exitTime = 0.92f;
             exit.duration = 0.15f;
         }
-    }
-
-    private static AnimationClip RequiredClip(string path)
-    {
-        AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(path);
-        if (clip == null)
-            throw new InvalidOperationException("Animasyon klibi bulunamadi: " + path);
-        return clip;
     }
 
     private static AnimationClip FindClip(string modelPath, string clipName)

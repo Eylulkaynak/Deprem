@@ -11,6 +11,7 @@ namespace Deprem.Story
         [SerializeField] private StoryPlayerMovement player;
         [SerializeField] private StoryUIController ui;
         [SerializeField] private StoryCameraController cameraController;
+        [SerializeField] private StoryPreparationDirector preparationDirector;
         [SerializeField] private LayerMask raycastMask = ~0;
         [SerializeField, Min(10f)] private float maxRayDistance = 150f;
         [SerializeField] private bool directWorldGestures;
@@ -46,6 +47,7 @@ namespace Deprem.Story
             player ??= FindFirstObjectByType<StoryPlayerMovement>(FindObjectsInactive.Include);
             ui ??= FindFirstObjectByType<StoryUIController>(FindObjectsInactive.Include);
             cameraController ??= FindFirstObjectByType<StoryCameraController>(FindObjectsInactive.Include);
+            preparationDirector ??= FindFirstObjectByType<StoryPreparationDirector>(FindObjectsInactive.Include);
             pendingReadyCallback = PresentPendingInteraction;
             pendingCompleteCallback = CompletePendingInteraction;
         }
@@ -283,6 +285,9 @@ namespace Deprem.Story
                 case StoryInteractionGesture.DragToBag:
                     ui?.ShowContext(interactable.Prompt + " — NESNEYİ ÇANTA AĞZINA SÜRÜKLE");
                     return;
+                case StoryInteractionGesture.DragToTarget:
+                    ui?.ShowContext(interactable.Prompt + " — NESNEYİ SAHNEDEKİ HEDEFİNE SÜRÜKLE");
+                    return;
             }
         }
 
@@ -291,6 +296,14 @@ namespace Deprem.Story
             StoryInteractable interactable = pendingInteraction;
             if (interactable == null || !pendingPrepared)
                 return;
+
+            if (interactable.InteractionGesture == StoryInteractionGesture.DragToBag &&
+                preparationDirector != null &&
+                preparationDirector.TryBeginItemExplanation(interactable))
+            {
+                ClearPendingInteraction();
+                return;
+            }
 
             switch (interactable.InteractionGesture)
             {
@@ -314,6 +327,7 @@ namespace Deprem.Story
                     worldHoldActive = true;
                     break;
                 case StoryInteractionGesture.DragToBag:
+                case StoryInteractionGesture.DragToTarget:
                     managedDrag = interactable.GetComponent<DraggableItem>();
                     if (managedDrag == null || !managedDrag.BeginManagedDrag(screenPosition))
                     {
@@ -341,7 +355,11 @@ namespace Deprem.Story
                     if (released.EndManagedDrag(releasePosition))
                         CompletePendingInteraction();
                     else
-                        ui?.ShowContext("Nesneyi çantanın açık ağzına bırak.");
+                        ui?.ShowContext(
+                            pendingInteraction != null &&
+                            pendingInteraction.InteractionGesture == StoryInteractionGesture.DragToTarget
+                                ? "Nesneyi sahnedeki gerçek hedef alanına bırak."
+                                : "Nesneyi çantanın açık ağzına bırak.");
                 }
                 return true;
             }

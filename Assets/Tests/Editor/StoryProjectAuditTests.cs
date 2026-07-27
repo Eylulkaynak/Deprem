@@ -168,8 +168,8 @@ public sealed class StoryProjectAuditTests
         cameraController.ActivateZone(validZone, true);
         Dictionary<CinemachineCamera, int> prioritiesBeforeMissingZone =
             cameras.Values.ToDictionary(camera => camera, camera => camera.Priority.Value);
-        LogAssert.Expect(LogType.Error,
-            $"Story camera zone 'None' has no authored camera binding. Keeping '{validZone}' active.");
+        // None means "keep the current authored shot"; it must be a silent no-op rather
+        // than a false missing-camera error in interaction and visual QA runs.
         cameraController.ActivateZone(StoryCameraZoneId.None, true);
         Assert.That(cameraController.ActiveZone, Is.EqualTo(validZone),
             scenePath + " missing camera request must not blank every Cinemachine priority.");

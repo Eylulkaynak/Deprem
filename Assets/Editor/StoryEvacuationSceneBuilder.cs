@@ -7,7 +7,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class StoryEvacuationSceneBuilder
+public static partial class StoryEvacuationSceneBuilder
 {
     public const string ScenePath = "Assets/Scenes/Story_04_Evacuation.unity";
     private const string LegacyPath = "Assets/Scenes/Bolum4.unity";
@@ -234,6 +234,12 @@ public static class StoryEvacuationSceneBuilder
             new Vector3(2.5f, 5.35f, -4.25f), new Vector3(0.18f, 2.9f, 3.7f), m.wall, route);
         StoryChapterBuilderCommon.CreatePrimitive("UpperCorridorBackWall", PrimitiveType.Cube,
             new Vector3(0f, 5.35f, -6.05f), new Vector3(5f, 2.9f, 0.18f), m.wall, route);
+        StoryChapterBuilderCommon.CreatePrimitive("StairDoorWall_Left", PrimitiveType.Cube,
+            new Vector3(-1.75f, 5.35f, 0.08f), new Vector3(1.5f, 2.9f, 0.18f), m.wall, route);
+        StoryChapterBuilderCommon.CreatePrimitive("StairDoorWall_Right", PrimitiveType.Cube,
+            new Vector3(1.75f, 5.35f, 0.08f), new Vector3(1.5f, 2.9f, 0.18f), m.wall, route);
+        StoryChapterBuilderCommon.CreatePrimitive("StairDoorWall_Lintel", PrimitiveType.Cube,
+            new Vector3(0f, 6.53f, 0.08f), new Vector3(2f, 0.54f, 0.18f), m.wall, route);
         world.corridorThreshold = StoryChapterBuilderCommon.CreatePrimitive("CorridorSafetyThreshold", PrimitiveType.Cube,
             new Vector3(0f, 4.03f, -0.65f), new Vector3(3.5f, 0.08f, 0.72f), m.amber, route, true);
 
@@ -283,8 +289,10 @@ public static class StoryEvacuationSceneBuilder
     private static void BuildStairwell(Transform route, StoryChapterBuilderCommon.Materials m, EvacuationWorld world)
     {
         Quaternion slope = Quaternion.Euler(15.5f, 0f, 0f);
-        StoryChapterBuilderCommon.CreatePrimitive("UpperNavRamp", PrimitiveType.Cube, new Vector3(0f, 3.0f, 3.65f),
+        GameObject upperNavRamp = StoryChapterBuilderCommon.CreatePrimitive(
+            "UpperNavRamp", PrimitiveType.Cube, new Vector3(0f, 3.0f, 3.65f),
             new Vector3(3.25f, 0.22f, 7.55f), m.concrete, route, true, slope);
+        upperNavRamp.GetComponent<Renderer>().enabled = false;
         for (int i = 0; i < 13; i++)
         {
             float t = i / 12f;
@@ -304,8 +312,10 @@ public static class StoryEvacuationSceneBuilder
         StoryChapterBuilderCommon.CreatePrimitive("HandrailPostB", PrimitiveType.Cylinder,
             new Vector3(1.72f, 2.45f, 9.1f), new Vector3(0.06f, 0.55f, 0.06f), m.metal, route);
 
-        StoryChapterBuilderCommon.CreatePrimitive("LowerNavRamp", PrimitiveType.Cube, new Vector3(0f, 1.0f, 12.85f),
+        GameObject lowerNavRamp = StoryChapterBuilderCommon.CreatePrimitive(
+            "LowerNavRamp", PrimitiveType.Cube, new Vector3(0f, 1.0f, 12.85f),
             new Vector3(3.25f, 0.22f, 7.55f), m.concrete, route, true, slope);
+        lowerNavRamp.GetComponent<Renderer>().enabled = false;
         for (int i = 0; i < 13; i++)
         {
             float t = i / 12f;
@@ -411,8 +421,14 @@ public static class StoryEvacuationSceneBuilder
         }
         StoryChapterBuilderCommon.CreatePrimitive("FacadeEntranceHeader", PrimitiveType.Cube,
             new Vector3(0f, 3.18f, 21.18f), new Vector3(2.5f, 0.28f, 0.18f), m.teal, route, false);
-        StoryChapterBuilderCommon.CreatePrimitive("FacadeBaseBand", PrimitiveType.Cube,
-            new Vector3(0f, 0.42f, 21.18f), new Vector3(5.25f, 0.34f, 0.18f), m.navy, route, false);
+        // Keep the dark foundation trim on the facade, but preserve the actual door
+        // opening. A single full-width band previously passed through the door mesh.
+        StoryChapterBuilderCommon.CreatePrimitive("FacadeBaseBand_Left", PrimitiveType.Cube,
+            new Vector3(-2.38f, 0.42f, 21.18f), new Vector3(2.45f, 0.34f, 0.18f),
+            m.navy, route, false);
+        StoryChapterBuilderCommon.CreatePrimitive("FacadeBaseBand_Right", PrimitiveType.Cube,
+            new Vector3(2.38f, 0.42f, 21.18f), new Vector3(2.45f, 0.34f, 0.18f),
+            m.navy, route, false);
         StoryChapterBuilderCommon.CreateWorldLabel("BuildingAddressLabel", "BLOK A",
             new Vector3(0f, 3.58f, 21.22f), new Vector3(0f, 180f, 0f), 1.65f,
             StoryChapterBuilderCommon.Cream, route, new Vector2(1.8f, 0.36f));

@@ -125,8 +125,8 @@ public static class StoryVerticalSliceValidator
             Vector2 tableXZ = new Vector2(tableBounds.center.x, tableBounds.center.z);
             Vector2 shelfXZ = new Vector2(shelfBounds.center.x, shelfBounds.center.z);
             Require(Vector2.Distance(tableXZ, shelfXZ) >= 3.2f, "Masa ve raf arasında okunaklı mesafe");
-            Require(EditorBuildSettings.scenes.Take(4).All(scene => !scene.path.Contains("Story_", StringComparison.Ordinal)), "Eski dört sahne başlangıç sırasını koruyor");
-            Debug.Log("Story_03_Quake validation passed: input, NavMesh, checkpoints, cameras, character animation, authored VFX/Timeline and legacy scene order are present.");
+            Require(EditorBuildSettings.scenes.FirstOrDefault()?.path == "Assets/Scenes/Story_Rebuild_MainMenu.unity", "Yeni hikâye menüsü başlangıç sahnesi");
+            Debug.Log("Story_03_Quake validation passed: input, NavMesh, checkpoints, cameras, character animation, authored VFX/Timeline and published story route are present.");
             if (showDialog)
                 EditorUtility.DisplayDialog("Deprem Story", "Story_03_Quake yapısal doğrulamayı geçti.", "Tamam");
         }

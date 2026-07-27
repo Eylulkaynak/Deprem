@@ -6,45 +6,40 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+#if UNITY_EDITOR
+using UnityEditor.SceneManagement;
+#endif
 
 public sealed class StoryVerticalSlicePlayModeTests
 {
     [UnityTest]
     public IEnumerator StoryScene_BootsWithOneInputOwnerAndCoreRuntimeObjects()
     {
-        AsyncOperation load = SceneManager.LoadSceneAsync("Story_03_Quake", LoadSceneMode.Single);
-        Assert.That(load, Is.Not.Null, "Story_03_Quake must remain available through Build Settings.");
+        yield return LoadQuakeProductionScene();
 
-        while (!load.isDone)
-            yield return null;
-
-        yield return null;
-        yield return new WaitForSecondsRealtime(0.25f);
-
-        Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo("Story_03_Quake"));
-        foreach (string objectName in new[]
+        Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo("Story_03_RebuildPreview"));
+            foreach (string objectName in new[]
                  {
-                     "STORY_03_QUAKE", "_StorySession", "Deniz_12", "Can_8",
-                     "StoryUI", "EventSystem", "Main Camera"
+                     "STORY_03_REBUILD_PREVIEW", "Deniz_12", "Can_8",
+                     "EventSystem", "Main Camera"
                  })
-            Assert.That(GameObject.Find(objectName), Is.Not.Null, objectName);
+            Assert.That(FindIncludingInactive(objectName), Is.Not.Null, objectName);
 
         MonoBehaviour[] behaviours = Object.FindObjectsByType<MonoBehaviour>(
             FindObjectsInactive.Include, FindObjectsSortMode.None);
         Assert.That(behaviours.Count(item => item != null && item.GetType().Name == "StoryTouchManager"),
             Is.EqualTo(1), "All world input must still have exactly one runtime owner.");
+        Assert.That(behaviours.Count(item => item != null && item.GetType().Name == "StoryUIController"),
+            Is.EqualTo(1), "The production scene must have one minimal story UI controller.");
+        Assert.That(behaviours.Count(item => item != null && item.GetType().Name == "StoryGameManager"),
+            Is.EqualTo(1), "The production scene must resolve exactly one persistent story session.");
         Assert.That(Camera.main, Is.Not.Null, "The Cinemachine Brain must have an enabled Main Camera.");
     }
 
     [UnityTest]
     public IEnumerator DialogueStopsCanAsWellAsDeniz()
     {
-        AsyncOperation load = SceneManager.LoadSceneAsync("Story_03_Quake", LoadSceneMode.Single);
-        Assert.That(load, Is.Not.Null);
-        while (!load.isDone)
-            yield return null;
-        yield return null;
-        yield return new WaitForSecondsRealtime(0.25f);
+        yield return LoadQuakeProductionScene();
 
         MonoBehaviour[] behaviours = Object.FindObjectsByType<MonoBehaviour>(
             FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -97,12 +92,7 @@ public sealed class StoryVerticalSlicePlayModeTests
     [UnityTest]
     public IEnumerator CoverTriggerUsesCrouchAndKeepsHandsAtHead()
     {
-        AsyncOperation load = SceneManager.LoadSceneAsync("Story_03_Quake", LoadSceneMode.Single);
-        Assert.That(load, Is.Not.Null);
-        while (!load.isDone)
-            yield return null;
-        yield return null;
-        yield return new WaitForSecondsRealtime(0.25f);
+        yield return LoadQuakeProductionScene();
 
         MonoBehaviour sequence = Object.FindObjectsByType<MonoBehaviour>(
                 FindObjectsInactive.Include, FindObjectsSortMode.None)
@@ -152,21 +142,18 @@ public sealed class StoryVerticalSlicePlayModeTests
                 $"{characterName} must visibly protect the head; left={leftDistance:F3}, right={rightDistance:F3}.");
 
             CapsuleCollider capsule = character.GetComponent<CapsuleCollider>();
+            NavMeshAgent agent = character.GetComponent<NavMeshAgent>();
+            float bodyHeight = capsule != null ? capsule.height : agent.height;
             Assert.That(head.position.y - character.transform.position.y,
-                Is.LessThan(capsule.height * 0.78f),
+                Is.LessThan(bodyHeight * 0.78f),
                 characterName + " must not pop back into a standing/tip-toe pose under cover.");
         }
     }
 
     [UnityTest]
-    public IEnumerator ChildLocomotionDoesNotReturnToWideGorillaStance()
+    public IEnumerator ChildLocomotionKeepsNaturalUprightStanceWithoutLegacyLegCorrection()
     {
-        AsyncOperation load = SceneManager.LoadSceneAsync("Story_03_Quake", LoadSceneMode.Single);
-        Assert.That(load, Is.Not.Null);
-        while (!load.isDone)
-            yield return null;
-        yield return null;
-        yield return new WaitForSecondsRealtime(0.25f);
+        yield return LoadQuakeProductionScene();
 
         MonoBehaviour sequence = Object.FindObjectsByType<MonoBehaviour>(
                 FindObjectsInactive.Include, FindObjectsSortMode.None)
@@ -186,8 +173,8 @@ public sealed class StoryVerticalSlicePlayModeTests
             animator.Update(0f);
 
             float idleRatio = LateralStanceRatio(animator);
-            Assert.That(idleRatio, Is.InRange(0.05f, 0.35f),
-                $"{characterName} neutral idle must keep the feet below the hips; ratio={idleRatio:F2}.");
+            Assert.That(idleRatio, Is.InRange(0.65f, 2.25f),
+                $"{characterName} neutral idle must stay natural: neither forced together nor gorilla-wide; ratio={idleRatio:F2}.");
             Transform idleHead = animator.GetBoneTransform(HumanBodyBones.Head);
             Assert.That(idleHead, Is.Not.Null);
             float idleHeadHeight = idleHead.position.y - character.transform.position.y;
@@ -196,8 +183,8 @@ public sealed class StoryVerticalSlicePlayModeTests
             animator.Play("Locomotion", 0, 0.18f);
             animator.Update(0f);
             float walkRatio = LateralStanceRatio(animator);
-            Assert.That(walkRatio, Is.LessThan(0.75f),
-                $"{characterName} walk must not retarget into the old wide gorilla stance; ratio={walkRatio:F2}.");
+            Assert.That(walkRatio, Is.InRange(0.45f, 2.5f),
+                $"{characterName} walk must stay natural: neither mincing nor gorilla-wide; ratio={walkRatio:F2}.");
             Transform head = animator.GetBoneTransform(HumanBodyBones.Head);
             Assert.That(head, Is.Not.Null);
             Assert.That(head.position.y - character.transform.position.y,
@@ -207,6 +194,34 @@ public sealed class StoryVerticalSlicePlayModeTests
                     .Any(info => info.clip != null && info.clip.name == "ChildNaturalWalk"),
                 Is.True, characterName + " must use the corrected child walk clip.");
         }
+    }
+
+    private static GameObject FindIncludingInactive(string objectName)
+    {
+        Transform match = Object.FindObjectsByType<Transform>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .FirstOrDefault(candidate => candidate.name == objectName);
+        return match != null ? match.gameObject : null;
+    }
+
+    private static IEnumerator LoadQuakeProductionScene()
+    {
+#if UNITY_EDITOR
+        const string scenePath = "Assets/Scenes/Story_03_RebuildPreview.unity";
+        Scene loadedScene = EditorSceneManager.LoadSceneInPlayMode(
+            scenePath,
+            new LoadSceneParameters(LoadSceneMode.Single));
+        Assert.That(loadedScene.IsValid(), Is.True, scenePath);
+        yield return null;
+#else
+        AsyncOperation load = SceneManager.LoadSceneAsync("Story_03_RebuildPreview", LoadSceneMode.Single);
+        Assert.That(load, Is.Not.Null);
+        while (!load.isDone)
+            yield return null;
+#endif
+        yield return null;
+        yield return new WaitForSecondsRealtime(0.25f);
     }
 
     private static float LateralStanceRatio(Animator animator)

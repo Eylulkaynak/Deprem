@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "disclosure": "Bu yapımda yapay olarak üretilmiş prototip seslendirmeler kullanılmıştır.",
+  "entries": [
+    {
+      "id": "01_opening",
+      "subtitle": "Can: Oyuncak arabam da çantaya girebilir mi?\nAnne: Önce aile planını ve gerçekten gerekli malzemeleri hazırlayalım. Yer kalırsa bir küçük eşya seçeriz.\nDeniz: İlk kart Mahalle Parkı; üzerindeki bilgiyi okuyup doğru başlığa taşıyalım.",
+      "segments": [
+        { "speaker": "can", "text": "Oyuncak arabam da çantaya girebilir mi?" },
+        { "speaker": "anne", "text": "Önce aile planını ve gerçekten gerekli malzemeleri hazırlayalım. Yer kalırsa bir küçük eşya seçeriz." },
+        { "speaker": "deniz", "text": "İlk kart Mahalle Parkı. Üzerindeki bilgiyi okuyup doğru başlığa taşıyalım." }
+      ]
+    },
+    {
+      "id": "02_plan_park",
+      "subtitle": "Deniz: Mahalle parkı binalardan uzak açık alan; bu yüzden toplanma yerimiz.\nAnne: Şimdi Melek Teyze kartını oku. Ankara'da yaşaması, planın hangi bölümüne ait olduğunu gösteriyor.",
+      "segments": [
+        { "speaker": "deniz", "text": "Mahalle parkı binalardan uzak açık alan. Bu yüzden toplanma yerimiz." },
+        { "speaker": "anne", "text": "Şimdi Melek Teyze kartını oku. Ankara'da yaşaması, planın hangi bölümüne ait olduğunu gösteriyor." }
+      ]
+    },
+    {
+      "id": "03_plan_contact",
+      "subtitle": "Deniz: Melek Teyze başka şehirde olduğu için ortak iletişim kişimiz.\nAnne: Son kart Can'ın afet sırasında üstleneceği sorumluluğu anlatıyor; yazıyı okuyup başlığını bul.",
+      "segments": [
+        { "speaker": "deniz", "text": "Melek Teyze başka şehirde olduğu için ortak iletişim kişimiz." },
+        { "speaker": "anne", "text": "Son kart Can'ın afet sırasında üstleneceği sorumluluğu anlatıyor. Yazıyı okuyup başlığını bul." }
+      ]
+    },
+    {
+      "id": "04_plan_whistle",
+      "subtitle": "Deniz: Sarsıntı durmadan çantaya koşmak yok.\nCan: Önce yanında kalacağım. Sarsıntı durunca düdüğüm bende olacak.\nAnne: Çanta ancak planla birlikte işe yarar.",
+      "segments": [
+        { "speaker": "deniz", "text": "Sarsıntı durmadan çantaya koşmak yok." },
+        { "speaker": "can", "text": "Önce yanında kalacağım. Sarsıntı durunca düdüğüm bende olacak." },
+        { "speaker": "anne", "text": "Çanta ancak planla birlikte işe yarar." }
+      ]
+    },
+    {
+      "id": "05_bag_opened",
+      "subtitle": "Anne: Önce karanlıkta haber almayı ve birbirimizi bulmayı sağlayan parçaları seçelim.",
+      "segments": [
+        { "speaker": "anne", "text": "Önce karanlıkta haber almayı ve birbirimizi bulmayı sağlayan parçaları seçelim." }
+      ]
+    },
+    {
+      "id": "06_signal_review",
+      "subtitle": "Anne: Fener ve radyo pilleri ayrı poşette; düdük dış cepte. Elektrik kesilse bile haber alıp yerimizi belli edebiliriz.",
+      "segments": [
+        { "speaker": "anne", "text": "Fener ve radyo pilleri ayrı poşette, düdük dış cepte. Elektrik kesilse bile haber alıp yerimizi belli edebiliriz." }
+      ]
+    },
+    {
+      "id": "07_radio_tuned",
+      "subtitle": "Radyo: Acil durumlarda doğrulanmamış bilgileri paylaşmayın; resmî duyuruları takip edin.\nCan: Düdük benim görevimdi.",
+      "segments": [
+        { "speaker": "radyo", "text": "Acil durumlarda doğrulanmamış bilgileri paylaşmayın. Resmî duyuruları takip edin." },
+        { "speaker": "can", "text": "Düdük benim görevimdi." }
+      ]
+    },
+    {
+      "id": "08_food_intro",
+      "subtitle": "Can: Büyük şişe daha çok su demek.\nDeniz: Ancak taşıyabiliyorsak, kapağı sağlamsa ve tarihi geçmemişse. Etiketi birlikte okuyalım.",
+      "segments": [
+        { "speaker": "can", "text": "Büyük şişe daha çok su demek." },
+        { "speaker": "deniz", "text": "Ancak taşıyabiliyorsak, kapağı sağlamsa ve tarihi geçmemişse. Etiketi birlikte okuyalım." }
+      ]
+    },
+    {
+      "id": "09_water_checked",
+      "subtitle": "Deniz: Tarih uygun, kapak sağlam.\nCan: O zaman daha büyük olanı değil, taşıyabildiğimiz şişeyi alalım.",
+      "segments": [
+        { "speaker": "deniz", "text": "Tarih uygun, kapak sağlam." },
+        { "speaker": "can", "text": "O zaman daha büyük olanı değil, taşıyabildiğimiz şişeyi alalım." }
+      ]
+    },
+    {
+      "id": "10_food_review",
+      "subtitle": "Anne: Su sızdırmaz bölümde, dayanıklı yiyecek yanında. Çantayı gereksiz ağırlaştırmadığımız için Deniz tek başına taşıyabilir.",
+      "segments": [
+        { "speaker": "anne", "text": "Su sızdırmaz bölümde, dayanıklı yiyecek yanında. Çantayı gereksiz ağırlaştırmadığımız için Deniz tek başına taşıyabilir." }
+      ]
+    },
+    {
+      "id": "11_health_intro",
+      "subtitle": "Can: İlk yardım kutusu varsa her şeyi biz mi yapacağız?\nAnne: Hayır. Siz malzemeyi bulup yetişkine ulaştırırsınız. Önce paketin kapalı olduğunu kontrol edelim.",
+      "segments": [
+        { "speaker": "can", "text": "İlk yardım kutusu varsa her şeyi biz mi yapacağız?" },
+        { "speaker": "anne", "text": "Hayır. Siz malzemeyi bulup yetişkine ulaştırırsınız. Önce paketin kapalı olduğunu kontrol edelim." }
+      ]
+    },
+    {
+      "id": "12_bandage_checked",
+      "subtitle": "Deniz: Mühür açılmamış.\nAnne: Güzel. İlaç seçmiyorsunuz; kapalı malzemeyi bulup sorumlu yetişkine veriyorsunuz.",
+      "segments": [
+        { "speaker": "deniz", "text": "Mühür açılmamış." },
+        { "speaker": "anne", "text": "Güzel. İlaç seçmiyorsunuz. Kapalı malzemeyi bulup sorumlu yetişkine veriyorsunuz." }
+      ]
+    },
+    {
+      "id": "13_health_review",
+      "subtitle": "Anne: İlk yardım çantası yetişkin gözetiminde kullanılır. Belge kopyaları ve aile notu su geçirmez dosyada kalır.",
+      "segments": [
+        { "speaker": "anne", "text": "İlk yardım çantası yetişkin gözetiminde kullanılır. Belge kopyaları ve aile notu su geçirmez dosyada kalır." }
+      ]
+    },
+    {
+      "id": "14_warmth_review",
+      "subtitle": "Anne: Hafif battaniye ve mevsime uygun yedek kıyafet sıcak kalmamıza yardım eder. Şimdi çantanın ağırlığını deneyelim.",
+      "segments": [
+        { "speaker": "anne", "text": "Hafif battaniye ve mevsime uygun yedek kıyafet sıcak kalmamıza yardım eder. Şimdi çantanın ağırlığını deneyelim." }
+      ]
+    },
+    {
+      "id": "15_console_reveal",
+      "subtitle": "Can: Temel malzemeler tamam. Oyun konsolunu da koydum; oyuncak arabamdan daha eğlenceli.\nAnne: Önce çantanın taşıyabildiğimiz ağırlıkta kalıp kalmadığını birlikte görelim.",
+      "segments": [
+        { "speaker": "can", "text": "Temel malzemeler tamam. Oyun konsolunu da koydum. Oyuncak arabamdan daha eğlenceli." },
+        { "speaker": "anne", "text": "Önce çantanın taşıyabildiğimiz ağırlıkta kalıp kalmadığını birlikte görelim." }
+      ]
+    },
+    {
+      "id": "16_console_heavy",
+      "subtitle": "Deniz: Can, çanta birden ağırlaştı.\nCan: Evden çıkarsak konsol burada kalacak.\nDeniz: Ben de bazı şeyleri bırakmak istemem.\nAnne: Küçük bir hatıra taşıyabiliriz; ama taşıyamadığımız çanta kimseye yardım etmez.",
+      "segments": [
+        { "speaker": "deniz", "text": "Can, çanta birden ağırlaştı." },
+        { "speaker": "can", "text": "Evden çıkarsak konsol burada kalacak." },
+        { "speaker": "deniz", "text": "Ben de bazı şeyleri bırakmak istemem." },
+        { "speaker": "anne", "text": "Küçük bir hatıra taşıyabiliriz. Ama taşıyamadığımız çanta kimseye yardım etmez." }
+      ]
+    },
+    {
+      "id": "17_console_removed",
+      "subtitle": "Can: Küçük arabamı taşıyabilirim. Konsol eve göz kulak olsun.\nDeniz: Döndüğümüzde ilk sen açarsın.",
+      "segments": [
+        { "speaker": "can", "text": "Küçük arabamı taşıyabilirim. Konsol eve göz kulak olsun." },
+        { "speaker": "deniz", "text": "Döndüğümüzde ilk sen açarsın." }
+      ]
+    },
+    {
+      "id": "18_comfort_choice",
+      "subtitle": "Anne: Başta konuştuğumuz küçük eşya için şimdi yer var.\nCan: O zaman yalnızca oyuncak arabamı seçiyorum; konsol evde kalacak.",
+      "segments": [
+        { "speaker": "anne", "text": "Başta konuştuğumuz küçük eşya için şimdi yer var." },
+        { "speaker": "can", "text": "O zaman yalnızca oyuncak arabamı seçiyorum. Konsol evde kalacak." }
+      ]
+    },
+    {
+      "id": "19_comfort_chosen",
+      "subtitle": "Can: Küçük arabam dış cepte kalabilir mi?\nDeniz: Bir tane küçük şey olur. Korkarsan sana aile planını ve birlikte olduğumuzu hatırlatır.",
+      "segments": [
+        { "speaker": "can", "text": "Küçük arabam dış cepte kalabilir mi?" },
+        { "speaker": "deniz", "text": "Bir tane küçük şey olur. Korkarsan sana aile planını ve birlikte olduğumuzu hatırlatır." }
+      ]
+    },
+    {
+      "id": "20_balanced_lift",
+      "subtitle": "Can: Bu kez düşmedin.\nAnne: Ağırlık dengeli. Şimdi iki askıyı da ayarlayıp ellerini serbest bırak.",
+      "segments": [
+        { "speaker": "can", "text": "Bu kez düşmedin." },
+        { "speaker": "anne", "text": "Ağırlık dengeli. Şimdi iki askıyı da ayarlayıp ellerini serbest bırak." }
+      ]
+    },
+    {
+      "id": "21_straps",
+      "subtitle": "Anne: İki askı omuzda, eller serbest. Çanta ağır gelirse içindekileri yetişkinle yeniden düzenleriz.",
+      "segments": [
+        { "speaker": "anne", "text": "İki askı omuzda, eller serbest. Çanta ağır gelirse içindekileri yetişkinle yeniden düzenleriz." }
+      ]
+    },
+    {
+      "id": "22_finish",
+      "subtitle": "Anne: Deprem sırasında bu rafa koşmuyoruz. Sarsıntı durur, birbirimizi kontrol eder, sonra güvenle çıkarken çantayı alırız.",
+      "segments": [
+        { "speaker": "anne", "text": "Deprem sırasında bu rafa koşmuyoruz. Sarsıntı durur, birbirimizi kontrol eder, sonra güvenle çıkarken çantayı alırız." }
+      ]
+    },
+    {
+      "id": "23_blackout_can_question",
+      "subtitle": "Can: Elektrikler gidince ne yapıyoruz?",
+      "segments": [
+        { "speaker": "can", "text": "Elektrikler gidince ne yapıyoruz?" }
+      ]
+    },
+    {
+      "id": "24_blackout_deniz",
+      "subtitle": "Deniz: Can burada. Feneri hazırladığımız için karanlıkta birbirimizi görebiliyoruz.",
+      "segments": [
+        { "speaker": "deniz", "text": "Can burada. Feneri hazırladığımız için karanlıkta birbirimizi görebiliyoruz." }
+      ]
+    },
+    {
+      "id": "25_blackout_anne",
+      "subtitle": "Anne: Karanlıkta çıkışa koşmuyoruz; sakin kalıp güvenli yolu kontrol ediyoruz.",
+      "segments": [
+        { "speaker": "anne", "text": "Karanlıkta çıkışa koşmuyoruz. Sakin kalıp güvenli yolu kontrol ediyoruz." }
+      ]
+    },
+    {
+      "id": "26_blackout_can_whistle",
+      "subtitle": "Can: Düdüğüm bende. Ayrılırsak üç kısa sesle yerimi belli edebilirim.",
+      "segments": [
+        { "speaker": "can", "text": "Düdüğüm bende. Ayrılırsak üç kısa sesle yerimi belli edebilirim." }
+      ]
+    }
+  ],
+  "auditions": [
+    {
+      "id": "Cast_Deniz",
+      "segments": [
+        { "speaker": "deniz", "text": "Can, benimle kal. Önce birlikte kontrol edeceğiz, sonra güvenli yolu izleyeceğiz." }
+      ]
+    },
+    {
+      "id": "Cast_Can",
+      "segments": [
+        { "speaker": "can", "text": "Tamam Deniz, yanındayım. Düdüğüm de cebimde." }
+      ]
+    },
+    {
+      "id": "Cast_Anne",
+      "segments": [
+        { "speaker": "anne", "text": "Sakin kalın çocuklar. Birbirinizi kontrol edin ve sarsıntı durmadan yerinizden ayrılmayın." }
+      ]
+    },
+    {
+      "id": "Cast_Baba",
+      "segments": [
+        { "speaker": "baba", "text": "Sesinizi duyuyorum. Güvenli noktada kalın, yanınıza geleceğiz." }
+      ]
+    }
+  ]
+}

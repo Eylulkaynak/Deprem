@@ -45,11 +45,50 @@ public class DraggableItem : MonoBehaviour
     [Tooltip("Suruklerken esyanin zeminden ne kadar yukselecegi.")]
     [SerializeField] private float dragLift = 0.15f;
 
+    [Tooltip("Dikey pano gibi hedeflerde nesne parmağı ekran düzleminde takip etsin.")]
+    [SerializeField] private bool dragOnCameraPlane;
+
+    [Tooltip("Atandığında sürükleme düzleminin konumunu ve yönünü bu ortak nokta belirler. Dikey pano kartlarında anchor'ın forward ekseni pano normalidir.")]
+    [SerializeField] private Transform dragPlaneAnchor;
+
+    [Tooltip("Açıkken tutulan nesnenin merkezi bu dünya yüksekliğinin altına inemez.")]
+    [SerializeField] private bool clampDragMinimumY;
+
+    [Tooltip("Masa gibi katı yüzeylerden geçmeyi önleyen en düşük sürükleme merkezi.")]
+    [SerializeField] private float dragMinimumWorldY;
+
+    [Tooltip("Tutulunca düz nesneyi kameraya çevir; kart ve belge sürüklemeleri için.")]
+    [SerializeField] private bool faceCameraWhileDragging;
+
+    [Tooltip("Kameraya dönük kartın eldeyken yapacağı hafif salınım (derece).")]
+    [SerializeField, Min(0f)] private float dragHoverWobbleDegrees;
+
+    [Tooltip("Eldeki kart salınımının saniyedeki tur sayısı.")]
+    [SerializeField, Min(0f)] private float dragHoverWobbleSpeed = 1.6f;
+
+    [Tooltip("Yaklaşınca kartı hafifçe kendine çeken pano yuvaları. Doğru/yanlış bütün yuvalar burada olabilir.")]
+    [SerializeField] private Transform[] magneticSnapTargets;
+
+    [Tooltip("Manyetik çekimin ekranın kısa kenarına göre etki yarıçapı.")]
+    [SerializeField, Range(0.02f, 0.3f)] private float magneticSnapViewportRadius = 0.14f;
+
+    [Tooltip("Kart masadan gerçekten ayrılmadan slot çekiminin başlamaması için gereken en az parmak hareketi.")]
+    [SerializeField, Min(0f)] private float magneticSnapMinTravelPixels = 48f;
+
+    [Tooltip("Yuvaya yaklaşınca uygulanacak en yüksek çekim gücü.")]
+    [SerializeField, Range(0f, 1f)] private float magneticSnapStrength = 0.86f;
+
+    [Tooltip("Kartın manyetik hover pozunda slot yüzeyinin ne kadar önünde kalacağı.")]
+    [SerializeField, Min(0f)] private float magneticSnapSurfaceOffset;
+
     [Tooltip("Suruklerken esyanin buyume orani (1 = ayni boyut).")]
     [SerializeField] private float dragScale = 1.1f;
 
     [Tooltip("Kisa dokunmayla dogru esyayi dogrudan cantaya ekle.")]
     [SerializeField] private bool tapToBagEnabled = true;
+
+    [Tooltip("Story sahnelerinde nesnenin kendi fiziksel hedefi. Boşsa afet çantasının ortak drop zone'u kullanılır.")]
+    [SerializeField] private BagDropZone dropZoneOverride;
 
     [Tooltip("Dokunma sayilmasi icin izin verilen en fazla ekran hareketi (piksel).")]
     [SerializeField] private float tapMaxMovementPixels = 24f;
@@ -94,6 +133,7 @@ public class DraggableItem : MonoBehaviour
     public bool IsDragging => state == ItemState.Dragging;
     public static DraggableItem ActiveDrag => activeDrag;
     public float BagEntryDuration => moveToOpeningDuration + descendIntoBagDuration;
+    public BagDropZone DropZoneOverride => dropZoneOverride;
 
     public string DisplayName
     {
@@ -172,11 +212,15 @@ public class DraggableItem : MonoBehaviour
     private Collider itemCollider;
     private Vector3 startPosition;
     private Vector3 originalScale;
+    private Quaternion originalRotation;
+    private float dragStartedAt;
     private Vector3 dragStartWorldPosition;
     private Vector2 pointerDownScreenPosition;
     private Plane dragPlane;
     private Vector3 dragPointerOffset;
     private float dragPlaneHeight;
+    private float currentMagnetWeight;
+    private Transform currentMagneticTarget;
     private ItemState state = ItemState.Idle;
     private Coroutine activeRoutine;
 
@@ -187,6 +231,7 @@ public class DraggableItem : MonoBehaviour
         itemCollider.isTrigger = false;
         startPosition = transform.position;
         originalScale = transform.localScale;
+        originalRotation = transform.rotation;
     }
 
     private void Update()
@@ -229,17 +274,31 @@ public class DraggableItem : MonoBehaviour
     {
         activeDrag = this;
         state = ItemState.Dragging;
+        dragStartedAt = Time.unscaledTime;
         dragStartWorldPosition = transform.position;
         pointerDownScreenPosition = screenPosition;
         dragPlaneHeight = dragStartWorldPosition.y + dragLift;
-        dragPlane = new Plane(Vector3.up, new Vector3(0f, dragPlaneHeight, 0f));
+        currentMagnetWeight = 0f;
+        currentMagneticTarget = null;
+        bool useAnchoredPlane = dragOnCameraPlane && dragPlaneAnchor != null;
+        Vector3 dragPlanePoint = useAnchoredPlane
+            ? dragPlaneAnchor.position
+            : dragStartWorldPosition;
+        dragPlane = dragOnCameraPlane
+            ? new Plane(
+                useAnchoredPlane ? dragPlaneAnchor.forward : mainCamera.transform.forward,
+                dragPlanePoint)
+            : new Plane(Vector3.up, new Vector3(0f, dragPlaneHeight, 0f));
 
         Ray pointerRay = mainCamera.ScreenPointToRay(screenPosition);
         if (dragPlane.Raycast(pointerRay, out float enter))
         {
             Vector3 pointerWorld = pointerRay.GetPoint(enter);
-            dragPointerOffset = dragStartWorldPosition - pointerWorld;
-            dragPointerOffset.y = 0f;
+            dragPointerOffset = useAnchoredPlane
+                ? Vector3.zero
+                : dragStartWorldPosition - pointerWorld;
+            if (!dragOnCameraPlane || useAnchoredPlane)
+                dragPointerOffset.y = 0f;
         }
         else
         {
@@ -247,6 +306,7 @@ public class DraggableItem : MonoBehaviour
         }
 
         transform.localScale = originalScale * dragScale;
+        UpdateDragFacing();
         UpdateDrag(screenPosition);
     }
 
@@ -273,12 +333,134 @@ public class DraggableItem : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(screenPosition);
         if (!dragPlane.Raycast(ray, out float enter))
         {
+            // Kamera blend sırasında pano-paralel düzleme kısa süreli ters bakabilir.
+            // Konum o karede sabit kalsa da kart yeni kameraya dönük kalmalı.
+            UpdateDragFacing();
             return;
         }
 
         Vector3 target = ray.GetPoint(enter) + dragPointerOffset;
-        target.y = dragPlaneHeight;
+        if (dragOnCameraPlane)
+            target += Vector3.up * dragLift;
+        else
+            target.y = dragPlaneHeight;
+
+        currentMagnetWeight = 0f;
+        currentMagneticTarget = null;
+        if (TryGetMagneticSnap(
+                screenPosition,
+                out Vector3 snapPosition,
+                out float magnetWeight,
+                out Transform magneticTarget))
+        {
+            currentMagnetWeight = magnetWeight;
+            currentMagneticTarget = magneticTarget;
+            target = Vector3.Lerp(target, snapPosition, magnetWeight);
+        }
+
+        if (clampDragMinimumY)
+            target.y = Mathf.Max(target.y, dragMinimumWorldY);
+
         transform.position = target;
+        UpdateDragFacing();
+    }
+
+    private bool TryGetMagneticSnap(
+        Vector2 screenPosition,
+        out Vector3 snapPosition,
+        out float magnetWeight,
+        out Transform magneticTarget)
+    {
+        snapPosition = default;
+        magnetWeight = 0f;
+        magneticTarget = null;
+        if (mainCamera == null || magneticSnapTargets == null || magneticSnapTargets.Length == 0)
+            return false;
+        if (Vector2.Distance(screenPosition, pointerDownScreenPosition) < magneticSnapMinTravelPixels)
+            return false;
+
+        float radiusPixels = Mathf.Max(
+            32f,
+            Mathf.Min(Screen.width, Screen.height) * magneticSnapViewportRadius);
+        Transform nearest = null;
+        float nearestDistance = float.PositiveInfinity;
+        foreach (Transform candidate in magneticSnapTargets)
+        {
+            if (candidate == null || !candidate.gameObject.activeInHierarchy)
+                continue;
+
+            Vector3 candidateScreen = mainCamera.WorldToScreenPoint(candidate.position);
+            if (candidateScreen.z <= 0f)
+                continue;
+
+            float distance = Vector2.Distance(screenPosition, candidateScreen);
+            if (distance < nearestDistance)
+            {
+                nearest = candidate;
+                nearestDistance = distance;
+            }
+        }
+
+        if (nearest == null || nearestDistance > radiusPixels)
+            return false;
+
+        float proximity = 1f - nearestDistance / radiusPixels;
+        float insertionProgress = Mathf.InverseLerp(0.05f, 0.72f, proximity);
+        float smoothInsertion = insertionProgress * insertionProgress * (3f - 2f * insertionProgress);
+        magnetWeight = Mathf.Clamp01(smoothInsertion * magneticSnapStrength);
+        magneticTarget = nearest;
+        snapPosition = dragPlaneAnchor != null
+            ? nearest.position + dragPlaneAnchor.forward * magneticSnapSurfaceOffset
+            : dragPlane.ClosestPointOnPlane(nearest.position);
+        if (dragOnCameraPlane)
+            snapPosition += Vector3.up * dragLift;
+        else
+            snapPosition.y = dragPlaneHeight;
+        return true;
+    }
+
+    private bool IsWithinMagneticAcceptance(Vector2 screenPosition, BagDropZone dropZone)
+    {
+        if (mainCamera == null || dropZone == null ||
+            magneticSnapTargets == null || magneticSnapTargets.Length == 0)
+            return false;
+
+        Vector3 targetScreen = mainCamera.WorldToScreenPoint(dropZone.transform.position);
+        if (targetScreen.z <= 0f)
+            return false;
+
+        float radiusPixels = Mathf.Max(
+            28f,
+            Mathf.Min(Screen.width, Screen.height) * magneticSnapViewportRadius * 0.82f);
+        return Vector2.Distance(screenPosition, targetScreen) <= radiusPixels;
+    }
+
+    private void UpdateDragFacing()
+    {
+        if (!faceCameraWhileDragging || mainCamera == null)
+            return;
+
+        // Cinemachine kart tutulduktan sonra hâlâ blend ediyor olabilir.
+        // Açıyı her karede yenile; kart eski kamera açısıyla duvara saplanmasın.
+        Quaternion cameraFacing = Quaternion.LookRotation(
+            mainCamera.transform.up,
+            -mainCamera.transform.forward);
+        Quaternion dragRotation = cameraFacing;
+        if (currentMagneticTarget != null && dragPlaneAnchor != null)
+        {
+            Quaternion socketRotation = Quaternion.LookRotation(
+                dragPlaneAnchor.up,
+                dragPlaneAnchor.forward);
+            dragRotation = Quaternion.Slerp(dragRotation, socketRotation, currentMagnetWeight);
+        }
+        float wobble = dragHoverWobbleDegrees <= 0f
+            ? 0f
+            : Mathf.Sin(
+                (Time.unscaledTime - dragStartedAt) *
+                Mathf.Max(0.01f, dragHoverWobbleSpeed) *
+                Mathf.PI * 2f) * dragHoverWobbleDegrees *
+              Mathf.Lerp(1f, 0.58f, currentMagnetWeight);
+        transform.rotation = dragRotation * Quaternion.AngleAxis(wobble, Vector3.up);
     }
 
     private void EndDrag(Vector2 releasePosition)
@@ -299,9 +481,11 @@ public class DraggableItem : MonoBehaviour
             return;
         }
 
-        bool droppedOnBag = BagDropZone.Instance != null &&
-            (BagDropZone.Instance.ContainsScreenPoint(releasePosition, mainCamera) ||
-             BagDropZone.Instance.ContainsPoint(transform.position));
+        BagDropZone dropZone = ResolveDropZone();
+        bool droppedOnBag = dropZone != null &&
+            (dropZone.ContainsScreenPoint(releasePosition, mainCamera) ||
+             dropZone.ContainsPoint(transform.position) ||
+             IsWithinMagneticAcceptance(releasePosition, dropZone));
 
         if (droppedOnBag && isCorrectItem)
         {
@@ -335,7 +519,7 @@ public class DraggableItem : MonoBehaviour
     /// </summary>
     public bool SendToBag()
     {
-        if (state != ItemState.Idle || !isCorrectItem || BagDropZone.Instance == null)
+        if (state != ItemState.Idle || !isCorrectItem || ResolveDropZone() == null)
             return false;
 
         PlaceInBag();
@@ -373,9 +557,11 @@ public class DraggableItem : MonoBehaviour
         UpdateDrag(screenPosition);
         activeDrag = null;
         transform.localScale = originalScale;
-        bool droppedOnBag = BagDropZone.Instance != null &&
-            (BagDropZone.Instance.ContainsScreenPoint(screenPosition, mainCamera) ||
-             BagDropZone.Instance.ContainsPoint(transform.position));
+        BagDropZone dropZone = ResolveDropZone();
+        bool droppedOnBag = dropZone != null &&
+            (dropZone.ContainsScreenPoint(screenPosition, mainCamera) ||
+             dropZone.ContainsPoint(transform.position) ||
+             IsWithinMagneticAcceptance(screenPosition, dropZone));
         if (!droppedOnBag)
         {
             ReturnToStart();
@@ -425,6 +611,7 @@ public class DraggableItem : MonoBehaviour
         itemCollider.enabled = true;
         transform.position = startPosition;
         transform.localScale = originalScale;
+        transform.rotation = originalRotation;
         state = ItemState.Idle;
     }
 
@@ -432,20 +619,21 @@ public class DraggableItem : MonoBehaviour
 
     private IEnumerator AnimateIntoBag()
     {
-        if (BagDropZone.Instance == null)
+        BagDropZone dropZone = ResolveDropZone();
+        if (dropZone == null)
         {
             state = ItemState.InBag;
             yield break;
         }
 
-        Vector3 openingPosition = BagDropZone.Instance.GetOpeningPosition(transform.position);
+        Vector3 openingPosition = dropZone.GetOpeningPosition(transform.position);
 
         // Gorunur kalacaksa bos slot iste; slot yoksa otomatik gizlenir.
         Vector3 slotPosition = default;
         bool stayVisible = !hideItemInBag
-            && BagDropZone.Instance.TryClaimSlot(out slotPosition);
+            && dropZone.TryClaimSlot(out slotPosition);
 
-        Vector3 targetPosition = stayVisible ? slotPosition : BagDropZone.Instance.GetInsidePosition();
+        Vector3 targetPosition = stayVisible ? slotPosition : dropZone.GetInsidePosition();
         float targetMultiplier = stayVisible ? visibleInBagMultiplier : hiddenShrinkMultiplier;
         Vector3 targetScale = originalScale * targetMultiplier;
 
@@ -467,9 +655,22 @@ public class DraggableItem : MonoBehaviour
             gameObject.SetActive(false);
     }
 
+    private BagDropZone ResolveDropZone()
+    {
+        return dropZoneOverride != null ? dropZoneOverride : BagDropZone.Instance;
+    }
+
     private IEnumerator AnimateReturnToStart()
     {
-        yield return MoveAndScale(transform.position, startPosition, transform.localScale, originalScale, returnDuration, returnArcHeight);
+        yield return MoveAndScale(
+            transform.position,
+            startPosition,
+            transform.localScale,
+            originalScale,
+            returnDuration,
+            returnArcHeight,
+            faceCameraWhileDragging ? transform.rotation : null,
+            faceCameraWhileDragging ? originalRotation : null);
 
         itemCollider.enabled = true;
         state = ItemState.Idle;
@@ -485,12 +686,16 @@ public class DraggableItem : MonoBehaviour
         Vector3 fromScale,
         Vector3 toScale,
         float duration,
-        float arcHeight)
+        float arcHeight,
+        Quaternion? fromRotation = null,
+        Quaternion? toRotation = null)
     {
         if (duration <= 0f)
         {
             transform.position = toPosition;
             transform.localScale = toScale;
+            if (toRotation.HasValue)
+                transform.rotation = toRotation.Value;
             yield break;
         }
 
@@ -508,11 +713,15 @@ public class DraggableItem : MonoBehaviour
 
             transform.position = position;
             transform.localScale = Vector3.Lerp(fromScale, toScale, easedT);
+            if (fromRotation.HasValue && toRotation.HasValue)
+                transform.rotation = Quaternion.Slerp(fromRotation.Value, toRotation.Value, easedT);
             yield return null;
         }
 
         transform.position = toPosition;
         transform.localScale = toScale;
+        if (toRotation.HasValue)
+            transform.rotation = toRotation.Value;
     }
 
     // ---------- Coroutine yonetimi ----------

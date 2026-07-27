@@ -26,7 +26,8 @@ namespace Deprem.Story
         NeighborAssisted = 18,
         ElevatorAvoided = 19,
         StairRouteCompleted = 20,
-        AssemblyHeadcountComplete = 21
+        AssemblyHeadcountComplete = 21,
+        BagComfortItem = 22
     }
 
     public enum StoryCheckpoint
@@ -86,7 +87,8 @@ namespace Deprem.Story
         SwipeHorizontal,
         Approach,
         WorldHold,
-        DragToBag
+        DragToBag,
+        DragToTarget
     }
 
     public enum StoryCameraZoneId
@@ -130,7 +132,10 @@ namespace Deprem.Story
         EvacuationStairDoor = 36,
         EvacuationBuildingDoor = 37,
         EvacuationLowerLanding = 38,
-        EvacuationStreetInspect = 39
+        EvacuationStreetInspect = 39,
+        EvacuationAssemblyRadio = 40,
+        PreparationSiblingHandoff = 41,
+        PreparationFlashlight = 42
     }
 
     public enum StorySlicePhase

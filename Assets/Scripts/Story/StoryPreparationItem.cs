@@ -32,8 +32,12 @@ namespace Deprem.Story
         [SerializeField] private GameObject packedVisual;
         [SerializeField] private GameObject consequenceRoot;
         [SerializeField] private DraggableItem legacyBagMotion;
+        [SerializeField] private bool hideSourceWhenUnavailable;
+        [SerializeField] private float stageDelay;
 
         private Coroutine placementRoutine;
+        private Coroutine stagingRoutine;
+        private bool enableInteractionAfterStaging;
 
         public string ItemId => itemId;
         public string DisplayName => displayName;
@@ -53,13 +57,23 @@ namespace Deprem.Story
 
         public void SetAvailable(bool value)
         {
-            if (sourceRoot != null && !sourceRoot.activeSelf && value)
-                sourceRoot.SetActive(true);
+            if (sourceRoot != null)
+            {
+                if (hideSourceWhenUnavailable)
+                    sourceRoot.SetActive(value);
+                else if (!sourceRoot.activeSelf && value)
+                    sourceRoot.SetActive(true);
+            }
             interactable?.SetAvailable(value);
         }
 
         public void Restore(bool accepted)
         {
+            if (stagingRoutine != null)
+            {
+                StopCoroutine(stagingRoutine);
+                stagingRoutine = null;
+            }
             if (placementRoutine != null)
             {
                 StopCoroutine(placementRoutine);
@@ -73,14 +87,53 @@ namespace Deprem.Story
                 sourceRoot.SetActive(!accepted);
             if (!accepted)
             {
-                legacyBagMotion?.ResetInstant();
+                if (legacyBagMotion != null && legacyBagMotion.gameObject.activeInHierarchy)
+                    legacyBagMotion.ResetInstant();
                 interactable?.ResetInteraction();
             }
             interactable?.SetAvailable(false);
         }
 
+        public void StageForPacking()
+        {
+            BeginStaging(true);
+        }
+
+        public void StageForSelection()
+        {
+            BeginStaging(false);
+        }
+
+        private void BeginStaging(bool enableAfterStaging)
+        {
+            if (packedVisual != null && packedVisual.activeSelf)
+                return;
+
+            if (stagingRoutine != null)
+                StopCoroutine(stagingRoutine);
+            enableInteractionAfterStaging = enableAfterStaging;
+            if (sourceRoot != null)
+                sourceRoot.SetActive(true);
+            Animation stageAnimation = sourceRoot != null
+                ? sourceRoot.GetComponent<Animation>()
+                : null;
+            if (stageAnimation != null && stageAnimation.clip != null)
+            {
+                stageAnimation.Rewind();
+                stageAnimation.Play();
+            }
+            interactable?.ResetInteraction();
+            interactable?.SetAvailable(false);
+            stagingRoutine = StartCoroutine(FinishStaging());
+        }
+
         public void Accept()
         {
+            if (stagingRoutine != null)
+            {
+                StopCoroutine(stagingRoutine);
+                stagingRoutine = null;
+            }
             if (legacyBagMotion != null && legacyBagMotion.SendToBag())
             {
                 if (placementRoutine != null)
@@ -90,6 +143,15 @@ namespace Deprem.Story
             }
 
             ShowPackedState();
+        }
+
+        private IEnumerator FinishStaging()
+        {
+            if (stageDelay > 0f)
+                yield return new WaitForSeconds(stageDelay);
+            stagingRoutine = null;
+            if (enableInteractionAfterStaging)
+                interactable?.SetAvailable(true);
         }
 
         public void Reject()
