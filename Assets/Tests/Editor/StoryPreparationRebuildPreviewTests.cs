@@ -453,6 +453,31 @@ public sealed class StoryPreparationRebuildPreviewTests
     }
 
     [Test]
+    public void SignalDrawerCamera_DoesNotFrameThroughDeniz()
+    {
+        Transform camera = Find("CM_PreparationSignal_Rebuild");
+        Transform deniz = Find("Deniz_12");
+        Transform drawer = Find("SignalNightstandOpen");
+
+        Assert.That(camera, Is.Not.Null);
+        Assert.That(deniz, Is.Not.Null);
+        Assert.That(drawer, Is.Not.Null);
+
+        Vector3 cameraPosition = camera.position;
+        Vector3 drawerFocus = drawer.position + new Vector3(0f, 0.5f, 0.15f);
+        Vector3 viewDirection = (drawerFocus - cameraPosition).normalized;
+        float projection = Vector3.Dot(deniz.position - cameraPosition, viewDirection);
+        Vector3 closestPoint = cameraPosition + viewDirection *
+            Mathf.Clamp(projection, 0f, Vector3.Distance(cameraPosition, drawerFocus));
+        Vector3 denizPlanar = new Vector3(deniz.position.x, closestPoint.y, deniz.position.z);
+
+        Assert.That(Vector3.Distance(denizPlanar, closestPoint), Is.GreaterThan(0.8f),
+            "Deniz çekmece kamerası ile çekmece arasına girip kadrajı kapatmamalı.");
+        Assert.That(cameraPosition.y, Is.GreaterThan(1.55f),
+            "Çekmece kamerası kulp ve içeriği birlikte görecek kadar yukarıda olmalı.");
+    }
+
+    [Test]
     public void FoodAndHealthDiscoveries_GatePackingBehindDirectPhysicalInspection()
     {
         StoryPreparationDirector director = Object.FindFirstObjectByType<StoryPreparationDirector>();

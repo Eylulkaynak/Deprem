@@ -2989,9 +2989,9 @@ public static class StoryPreparationRebuildPreviewBuilder
             new(
                 StoryCameraZoneId.PreparationSignal,
                 "CM_PreparationSignal_Rebuild",
-                new Vector3(-0.76f, 1.28f, -2.15f),
-                new Vector3(-0.76f, 0.49f, -3.48f),
-                38f),
+                new Vector3(0.45f, 2.25f, -2.2f),
+                new Vector3(-0.76f, 0.5f, -3.57f),
+                42f),
             new(
                 StoryCameraZoneId.PreparationFlashlight,
                 "CM_PreparationFlashlight_Rebuild",
