@@ -1,0 +1,29 @@
+{
+  "role": "Firefighter",
+  "source_fbx": "Meshy_AI_Character_output (1).fbx",
+  "height_m": 1.7999998108341941,
+  "bounds_min": [
+    -0.5009769201278687,
+    -0.31289026141166687,
+    -9.693648905795271e-08
+  ],
+  "bounds_max": [
+    0.5009770393371582,
+    0.3128906488418579,
+    1.799999713897705
+  ],
+  "triangles": 4203,
+  "vertices": 2204,
+  "base_color": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\GameReady\\Firefighter_BaseColor.png",
+  "exports": {
+    "blend": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\GameReady\\Firefighter_MeshyPro.blend",
+    "fbx": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\GameReady\\Firefighter_MeshyPro_Unrigged.fbx",
+    "obj": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\GameReady\\Firefighter_MeshyPro.obj"
+  },
+  "previews": [
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\Preview\\Firefighter_Front_YMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\Preview\\Firefighter_Back_YPlus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\Preview\\Firefighter_Left_XMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Firefighter\\Preview\\Firefighter_ThreeQuarter.png"
+  ]
+}

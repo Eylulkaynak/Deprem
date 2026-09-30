@@ -1,0 +1,88 @@
+{
+  "purpose": "YanYana official Android toolchain stage",
+  "stage": "C:\\Users\\Gokturk\\AppData\\Local\\YanYanaAndroidSetup\\20260914-174700",
+  "target": "C:/Program Files/Unity/Hub/Editor/6000.0.58f2/Editor/Data/PlaybackEngines/AndroidPlayer",
+  "archives": [
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\jdk17.0.9-9_f12c2989c2f749b13282640a12d7d624097f6c2d45144d87331f21ad352ab63e.zip",
+      "sha256": "f12c2989c2f749b13282640a12d7d624097f6c2d45144d87331f21ad352ab63e",
+      "checksumVerification": "Unity archive SHA256",
+      "zipCrcVerified": true,
+      "files": 416,
+      "destination": "OpenJDK"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\android-ndk-r27c-windows.zip",
+      "sha256": "27e49f11e0cee5800983d8af8f4acd5bf09987aa6f790d4439dda9f3643d2494",
+      "checksumVerification": "Google repository sha1",
+      "zipCrcVerified": true,
+      "files": 7935,
+      "destination": "NDK"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\cmake-3.22.1-windows.zip",
+      "sha256": "c9a9d568452a20cf27d703cb21ef9529dd67bda6be048c4d4b884acb3ac3a2b8",
+      "checksumVerification": "Google repository sha1",
+      "zipCrcVerified": true,
+      "files": 2991,
+      "destination": "SDK/cmake/3.22.1"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\build-tools_r34-windows.zip",
+      "sha256": "9be665ad74ef22bf0e489b37db465074484df79b95f26d759945d5c25a47b326",
+      "checksumVerification": "Google repository sha1",
+      "zipCrcVerified": true,
+      "files": 169,
+      "destination": "SDK/build-tools/34.0.0"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\commandlinetools-win-12266719_latest.zip",
+      "sha256": "f9088c04a44f1f37a8a3a228a7663e11ae9445fa07529c96cef38acb985a88f3",
+      "checksumVerification": "Unity module manifest SHA384",
+      "zipCrcVerified": true,
+      "files": 107,
+      "destination": "SDK/cmdline-tools/16.0"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\platform-tools_r34.0.5-windows.zip",
+      "sha256": "3f8320152704377de150418a3c4c9d07d16d80a6c0d0d8f7289c22c499e33571",
+      "checksumVerification": null,
+      "zipCrcVerified": true,
+      "files": 14,
+      "destination": "SDK"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\platform-34-ext7_r02.zip",
+      "sha256": "5323311cc3e4ad614f0b8053c72b651726f3422448cedd39e48f00737cda8ad0",
+      "checksumVerification": "Google repository sha1",
+      "zipCrcVerified": true,
+      "files": 10963,
+      "destination": "SDK/platforms"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\platform-35_r01.zip",
+      "sha256": "ec20a0a65704e1b2554f8e3eebf588ef260569673c848c01aff2e29c28734cf4",
+      "checksumVerification": null,
+      "zipCrcVerified": true,
+      "files": 11162,
+      "destination": "SDK/platforms"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\platform-36_r02.zip",
+      "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+      "checksumVerification": "Google repository sha1",
+      "zipCrcVerified": true,
+      "files": 11342,
+      "destination": "SDK/platforms"
+    },
+    {
+      "archive": "C:\\Users\\Gokturk\\AppData\\Roaming\\UnityHub\\downloads\\sdk-tools-windows-4333796.zip",
+      "sha256": "7e81d69c303e47a4f0e748a6352d85cd0c8fd90a5a95ae4e076b5e5f960d3c7a",
+      "checksumVerification": "Google repository sha1",
+      "zipCrcVerified": true,
+      "files": 1825,
+      "destination": "SDK"
+    }
+  ],
+  "createdAt": "2026-09-14T17:47:50.421929+03:00"
+}

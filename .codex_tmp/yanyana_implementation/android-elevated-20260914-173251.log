@@ -1,0 +1,5 @@
+
+[install-state] file-claims-store: swept claims of dead pid=163924
+Progress:
+[Android Build Support] failed to install. Error given: The Windows elevation prompt was cancelled or timed out.
+Completed with errors.

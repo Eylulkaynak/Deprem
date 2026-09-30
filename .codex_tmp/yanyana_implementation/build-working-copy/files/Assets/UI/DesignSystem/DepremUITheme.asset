@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef404aa280147094db0ef443ec99aebf, type: 3}
+  m_Name: DepremUITheme
+  m_EditorClassIdentifier:
+  regularFont: {fileID: 11400000, guid: 64f02899e36958646ba9e446a7b0c5de, type: 2}
+  semiboldFont: {fileID: 11400000, guid: a59e31f1281554245be89161e99d4b14, type: 2}
+  boldFont: {fileID: 11400000, guid: 42e3020c9c8eae944a3f95ccf76131a0, type: 2}
+  roundedSprite: {fileID: 21300000, guid: febb154538ebc314f977c0932d589c93, type: 3}
+  referenceResolution: {x: 1080, y: 1920}
+  matchWidthOrHeight: 0.5
+  safeHorizontalInset: 46
+  safeTopInset: 30
+  safeBottomInset: 44
+  ink: {r: 0.018, g: 0.045, b: 0.11, a: 0.97}
+  overlay: {r: 0.006, g: 0.02, b: 0.065, a: 0.88}
+  panel: {r: 0.035, g: 0.11, b: 0.24, a: 0.88}
+  panelStrong: {r: 0.025, g: 0.075, b: 0.18, a: 0.96}
+  panelSoft: {r: 0.05, g: 0.19, b: 0.34, a: 0.74}
+  primary: {r: 0.08, g: 0.42, b: 1, a: 1}
+  accent: {r: 0.26, g: 0.85, b: 1, a: 1}
+  textPrimary: {r: 0.95, g: 0.98, b: 1, a: 1}
+  textSecondary: {r: 0.66, g: 0.76, b: 0.86, a: 1}
+  success: {r: 0.26, g: 0.82, b: 0.48, a: 1}
+  warning: {r: 1, g: 0.74, b: 0.25, a: 1}
+  danger: {r: 1, g: 0.34, b: 0.4, a: 1}
+  glassHighlight: {r: 0.95, g: 0.98, b: 1, a: 0.22}
+  glassOutline: {r: 0.26, g: 0.85, b: 1, a: 0.24}
+  shadow: {r: 0, g: 0, b: 0, a: 0.56}
+  outlineDistance: {x: 2, y: -2}
+  shadowDistance: {x: 0, y: -10}
+  displaySize: 72
+  titleSize: 42
+  bodySize: 28
+  labelSize: 20
+  buttonSize: 34

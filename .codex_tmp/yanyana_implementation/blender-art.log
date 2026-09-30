@@ -1,0 +1,218 @@
+AUTHOR CHARACTER Ada
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_art.py:50: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+00:06.078  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Ada.png'
+Info: Saved as "Ada.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Ada.fbx'
+(bpy.data.armatures['Ada_Skeleton'], 'POSE')
+export finished in 0.0436 sec.
+AUTHOR CHARACTER Efe
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_art.py:50: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+00:06.843  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Efe.png'
+Info: Saved as "Efe.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Efe.fbx'
+(bpy.data.armatures['Efe_Skeleton'], 'POSE')
+export finished in 0.0347 sec.
+AUTHOR CHARACTER Derya
+00:07.578  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Derya.png'
+Info: Saved as "Derya.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Derya.fbx'
+(bpy.data.armatures['Derya_Skeleton'], 'POSE')
+export finished in 0.0369 sec.
+AUTHOR CHARACTER Emre
+00:08.265  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Emre.png'
+Info: Saved as "Emre.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Emre.fbx'
+(bpy.data.armatures['Emre_Skeleton'], 'POSE')
+export finished in 0.0335 sec.
+AUTHOR CHARACTER Yusuf
+00:08.953  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Yusuf.png'
+Info: Saved as "Yusuf.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Yusuf.fbx'
+(bpy.data.armatures['Yusuf_Skeleton'], 'POSE')
+export finished in 0.0337 sec.
+AUTHOR CHARACTER Idil
+00:09.734  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Idil.png'
+Info: Saved as "Idil.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Idil.fbx'
+(bpy.data.armatures['Idil_Skeleton'], 'POSE')
+export finished in 0.0365 sec.
+AUTHOR CHARACTER Bora
+00:10.593  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Bora.png'
+Info: Saved as "Bora.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Bora.fbx'
+(bpy.data.armatures['Bora_Skeleton'], 'POSE')
+export finished in 0.0337 sec.
+AUTHOR PROP BackpackClosed
+Info: Saved as "BackpackClosed.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\BackpackClosed.fbx'
+export finished in 0.0116 sec.
+AUTHOR PROP BackpackOpen
+Info: Saved as "BackpackOpen.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\BackpackOpen.fbx'
+export finished in 0.0130 sec.
+AUTHOR PROP Flashlight
+Info: Saved as "Flashlight.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Flashlight.fbx'
+export finished in 0.0094 sec.
+AUTHOR PROP Radio
+Info: Saved as "Radio.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Radio.fbx'
+export finished in 0.0235 sec.
+AUTHOR PROP Battery
+Info: Saved as "Battery.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Battery.fbx'
+export finished in 0.0064 sec.
+AUTHOR PROP Water
+Info: Saved as "Water.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Water.fbx'
+export finished in 0.0077 sec.
+AUTHOR PROP Food
+Info: Saved as "Food.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Food.fbx'
+export finished in 0.0047 sec.
+AUTHOR PROP FirstAid
+Info: Saved as "FirstAid.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\FirstAid.fbx'
+export finished in 0.0069 sec.
+AUTHOR PROP Bandage
+Info: Saved as "Bandage.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Bandage.fbx'
+export finished in 0.0037 sec.
+AUTHOR PROP Documents
+Info: Saved as "Documents.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Documents.fbx'
+export finished in 0.0096 sec.
+AUTHOR PROP Blanket
+Info: Saved as "Blanket.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Blanket.fbx'
+export finished in 0.0094 sec.
+AUTHOR PROP Soap
+Info: Saved as "Soap.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Soap.fbx'
+export finished in 0.0040 sec.
+AUTHOR PROP FamilyCard
+Info: Saved as "FamilyCard.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\FamilyCard.fbx'
+export finished in 0.0099 sec.
+AUTHOR PROP Whistle
+Info: Saved as "Whistle.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Whistle.fbx'
+export finished in 0.0089 sec.
+AUTHOR PROP ComfortFox
+Info: Saved as "ComfortFox.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\ComfortFox.fbx'
+export finished in 0.0128 sec.
+AUTHOR PROP ShoePair
+Info: Saved as "ShoePair.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\ShoePair.fbx'
+export finished in 0.0137 sec.
+AUTHOR PROP WalkingCane
+Info: Saved as "WalkingCane.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\WalkingCane.fbx'
+export finished in 0.0049 sec.
+AUTHOR PROP Parcel
+Info: Saved as "Parcel.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Parcel.fbx'
+export finished in 0.0064 sec.
+AUTHOR PROP ToyBox
+Info: Saved as "ToyBox.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\ToyBox.fbx'
+export finished in 0.0070 sec.
+AUTHOR PROP Cushion
+Info: Saved as "Cushion.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Cushion.fbx'
+export finished in 0.0039 sec.
+AUTHOR PROP Bracket
+Info: Saved as "Bracket.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Bracket.fbx'
+export finished in 0.0075 sec.
+AUTHOR PROP SafetyStrap
+Info: Saved as "SafetyStrap.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\SafetyStrap.fbx'
+export finished in 0.0052 sec.
+AUTHOR PROP HoseNozzle
+Info: Saved as "HoseNozzle.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\HoseNozzle.fbx'
+export finished in 0.0068 sec.
+AUTHOR PROP Cone
+Info: Saved as "Cone.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Cone.fbx'
+export finished in 0.0076 sec.
+AUTHOR PROP Bench
+Info: Saved as "Bench.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Bench.fbx'
+export finished in 0.0136 sec.
+AUTHOR PROP Plant
+Info: Saved as "Plant.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Plant.fbx'
+export finished in 0.0165 sec.
+AUTHOR PROP Table
+Info: Saved as "Table.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Table.fbx'
+export finished in 0.0119 sec.
+AUTHOR PROP Shelf
+Info: Saved as "Shelf.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Shelf.fbx'
+export finished in 0.0198 sec.
+AUTHOR PROP Wardrobe
+Info: Saved as "Wardrobe.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Wardrobe.fbx'
+export finished in 0.0162 sec.
+Info: Saved as "Facade_1.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Facade_1.fbx'
+export finished in 0.1093 sec.
+Info: Saved as "Facade_2.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Facade_2.fbx'
+export finished in 0.1192 sec.
+Info: Saved as "Facade_3.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Facade_3.fbx'
+export finished in 0.1065 sec.
+Info: Saved as "Facade_4.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Facade_4.fbx'
+export finished in 0.1291 sec.
+YAN YANA ORIGINAL ART COMPLETE
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

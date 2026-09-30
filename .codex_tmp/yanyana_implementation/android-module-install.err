@@ -1,0 +1,13 @@
+[140828:0914/092124.020:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[140828:0914/092124.021:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[140828:0914/092124.021:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[140828:0914/092124.028:ERROR:net\disk_cache\disk_cache.cc:284] Unable to create cache
+[140828:0914/092124.028:ERROR:gpu\ipc\host\gpu_disk_cache.cc:737] Gpu Cache Creation failed: -2
+[140828:0914/092124.028:ERROR:net\disk_cache\disk_cache.cc:284] Unable to create cache
+[140828:0914/092124.028:ERROR:gpu\ipc\host\gpu_disk_cache.cc:737] Gpu Cache Creation failed: -2
+[140828:0914/092124.028:ERROR:net\disk_cache\disk_cache.cc:284] Unable to create cache
+[140828:0914/092124.028:ERROR:gpu\ipc\host\gpu_disk_cache.cc:737] Gpu Cache Creation failed: -2
+[140828:0914/092131.338:ERROR:storage\browser\quota\quota_database.cc:989] Could not open the quota database, resetting.
+[140828:0914/092134.299:ERROR:storage\browser\quota\quota_database.cc:989] Could not open the quota database, resetting.
+[140828:0914/092137.192:ERROR:storage\browser\quota\quota_database.cc:994] Failed to reset the quota database.
+[140828:0914/092137.192:ERROR:storage\browser\quota\quota_database.cc:994] Failed to reset the quota database.

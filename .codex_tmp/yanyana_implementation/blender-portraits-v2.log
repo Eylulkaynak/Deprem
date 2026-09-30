@@ -1,0 +1,57 @@
+AUTHOR CHARACTER Ada
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_art.py:51: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+00:02.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Ada.png'
+Info: Saved as "Ada.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Ada.fbx'
+(bpy.data.armatures['Ada_Skeleton'], 'POSE')
+export finished in 0.0430 sec.
+AUTHOR CHARACTER Efe
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_art.py:51: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+00:03.391  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Efe.png'
+Info: Saved as "Efe.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Efe.fbx'
+(bpy.data.armatures['Efe_Skeleton'], 'POSE')
+export finished in 0.0356 sec.
+AUTHOR CHARACTER Derya
+00:04.141  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Derya.png'
+Info: Saved as "Derya.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Derya.fbx'
+(bpy.data.armatures['Derya_Skeleton'], 'POSE')
+export finished in 0.0360 sec.
+AUTHOR CHARACTER Emre
+00:04.859  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Emre.png'
+Info: Saved as "Emre.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Emre.fbx'
+(bpy.data.armatures['Emre_Skeleton'], 'POSE')
+export finished in 0.0382 sec.
+AUTHOR CHARACTER Yusuf
+00:05.609  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Yusuf.png'
+Info: Saved as "Yusuf.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Yusuf.fbx'
+(bpy.data.armatures['Yusuf_Skeleton'], 'POSE')
+export finished in 0.0330 sec.
+AUTHOR CHARACTER Idil
+00:06.422  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Idil.png'
+Info: Saved as "Idil.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Idil.fbx'
+(bpy.data.armatures['Idil_Skeleton'], 'POSE')
+export finished in 0.0350 sec.
+AUTHOR CHARACTER Bora
+00:07.156  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\UI\Portraits\Bora.png'
+Info: Saved as "Bora.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Art\\Models\\Bora.fbx'
+(bpy.data.armatures['Bora_Skeleton'], 'POSE')
+export finished in 0.0323 sec.
+YAN YANA ORIGINAL ART COMPLETE
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

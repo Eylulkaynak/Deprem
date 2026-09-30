@@ -1,0 +1,25 @@
+{
+  "purpose": "YanYana isolated Android review build",
+  "source": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem",
+  "clone": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\yanyana_android_20260914-173827",
+  "createdAt": "2026-09-14T17:38:27.40381+03:00",
+  "scene": "Assets/YanYana/Scenes/YanYana_Adventure.unity",
+  "sceneSha256": "b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231",
+  "copied": {
+    "Assets": {
+      "files": 8142,
+      "bytes": 1547742913
+    },
+    "Packages": {
+      "files": 2,
+      "bytes": 17603
+    },
+    "ProjectSettings": {
+      "files": 26,
+      "bytes": 61067
+    }
+  },
+  "helperSha256": "6a352b332ed163ec524aef24332f3acd1fb6ba97960ffaf17bba72d39ee514ec",
+  "refreshedAt": "2026-09-15T01:27:13.924863+03:00",
+  "refreshedFiles": 29
+}

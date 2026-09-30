@@ -1,0 +1,29 @@
+{
+  "role": "Police",
+  "source_fbx": "Meshy_AI_Character_output.fbx",
+  "height_m": 1.79999998410063,
+  "bounds_min": [
+    -0.5519534945487976,
+    -0.4350588917732239,
+    8.742494372881993e-08
+  ],
+  "bounds_max": [
+    0.5519534349441528,
+    0.4350590407848358,
+    1.8000000715255737
+  ],
+  "triangles": 4203,
+  "vertices": 2180,
+  "base_color": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\GameReady\\Police_BaseColor.png",
+  "exports": {
+    "blend": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\GameReady\\Police_MeshyPro.blend",
+    "fbx": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\GameReady\\Police_MeshyPro_Unrigged.fbx",
+    "obj": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\GameReady\\Police_MeshyPro.obj"
+  },
+  "previews": [
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\Preview\\Police_Front_YMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\Preview\\Police_Back_YPlus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\Preview\\Police_Left_XMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\responder_import\\prepared\\Police\\Preview\\Police_ThreeQuarter.png"
+  ]
+}

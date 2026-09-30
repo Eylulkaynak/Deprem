@@ -1,0 +1,10 @@
+Adding module android-ndk-r27c as dependency of android-sdk-ndk-tools.
+Adding module cmake-3.22.1 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-build-tools-34.0.0 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platform-tools-34.0.5 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platforms-34 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platforms-35 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platforms-36 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-command-line-tools-16.0 as dependency of android-sdk-ndk-tools.
+{"type":"eula","moduleId":"android-sdk-ndk-tools","label":"Android SDK and NDK License Terms from Google","url":"https://dl.google.com/dl/android/repository/repository2-1.xml","accepted":true}
+{"type":"result","success":false,"command":"install-modules","data":null,"errors":[{"code":"ELEVATION_CANCELLED","message":"The Windows elevation prompt was cancelled or timed out."}],"warnings":[]}

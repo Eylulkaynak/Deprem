@@ -1,0 +1,15 @@
+
+[install-state] file-claims-store: swept claims of dead pid=140828
+[install-state] downloads-store: pruned 3 terminal row(s) older than 600000ms
+Progress:
+[Android Build Support] failed to install. Error given: The Windows elevation prompt was cancelled or timed out.
+Completed with errors.
+Adding module android-ndk-r27c as dependency of android-sdk-ndk-tools.
+Adding module cmake-3.22.1 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-build-tools-34.0.0 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platform-tools-34.0.5 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platforms-34 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platforms-35 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-platforms-36 as dependency of android-sdk-ndk-tools.
+Adding module android-sdk-command-line-tools-16.0 as dependency of android-sdk-ndk-tools.
+
