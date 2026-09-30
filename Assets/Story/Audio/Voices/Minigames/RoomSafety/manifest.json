@@ -1,0 +1,13 @@
+{
+  "scene": "Minigame_RoomSafety",
+  "entries": [
+    { "id": "01_clear_exit", "subtitle": "Anne: Çıkış yolu açık kalmalı. Ayakkabı, oyuncak ve koliyi güvenli sepete taşı.", "segments": [{ "speaker": "anne", "text": "Çıkış yolu açık kalmalı. Ayakkabı, oyuncak ve koliyi güvenli sepete taşı." }] },
+    { "id": "02_lower_objects", "subtitle": "Deniz: Yüksek raftaki kitap, vazo ve çerçeveyi aşağıdaki güvenli alana indiriyorum.", "segments": [{ "speaker": "deniz", "text": "Yüksek raftaki kitap, vazo ve çerçeveyi aşağıdaki güvenli alana indiriyorum." }] },
+    { "id": "03_shelf_anchor", "subtitle": "Anne: Rafın sağlam duvara bağlanacağı iki doğru noktayı işaretle.", "segments": [{ "speaker": "anne", "text": "Rafın sağlam duvara bağlanacağı iki doğru noktayı işaretle." }] },
+    { "id": "04_wardrobe_anchor", "subtitle": "Deniz: Dolabın üst köşelerini sağlam duvara bağlayacak yerleri seçiyorum.", "segments": [{ "speaker": "deniz", "text": "Dolabın üst köşelerini sağlam duvara bağlayacak yerleri seçiyorum." }] },
+    { "id": "05_pass_straps", "subtitle": "Anne: Kayışları sen uzat; matkabı ve ağır dolabı yalnız yetişkin kullanacak.", "segments": [{ "speaker": "anne", "text": "Kayışları sen uzat. Matkabı ve ağır dolabı yalnız yetişkin kullanacak." }] },
+    { "id": "06_adult_secures", "subtitle": "Anne: Güvenli mesafede bekle. Ankrajları şimdi ben sabitliyorum.", "segments": [{ "speaker": "anne", "text": "Güvenli mesafede bekle. Ankrajları şimdi ben sabitliyorum." }] },
+    { "id": "07_quake_test", "subtitle": "Can: Deprem testini başlatıyorum; hazırlıktan önce ve sonra farkı izleyelim.", "segments": [{ "speaker": "can", "text": "Deprem testini başlatıyorum. Hazırlıktan önce ve sonra farkı izleyelim." }] },
+    { "id": "08_review", "subtitle": "Deniz: Çıkış açık, ağır eşyalar aşağıda, raf ve dolap duvara bağlı.", "segments": [{ "speaker": "deniz", "text": "Çıkış açık, ağır eşyalar aşağıda, raf ve dolap duvara bağlı." }] }
+  ]
+}

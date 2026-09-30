@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,45 @@ namespace Deprem.Story
         {
             [TextArea] public string subtitle;
             public AudioClip clip;
+        }
+
+        [Serializable]
+        private sealed class DialogueActorBinding
+        {
+            public string[] aliases = Array.Empty<string>();
+            public Transform actorRoot;
+            public Transform head;
+            public Transform mouth;
+
+            [NonSerialized] public Vector3 mouthRestScale;
+            [NonSerialized] public Quaternion appliedHeadOffset = Quaternion.identity;
+            [NonSerialized] public float appliedHeadYaw;
+            [NonSerialized] public float appliedHeadPitch;
+            [NonSerialized] public bool initialized;
+
+            public string PrimaryAlias => aliases != null && aliases.Length > 0
+                ? aliases[0]
+                : string.Empty;
+        }
+
+        private readonly struct DialogueMarker
+        {
+            public readonly int index;
+            public readonly int tokenLength;
+            public readonly string alias;
+
+            public DialogueMarker(int index, int tokenLength, string alias)
+            {
+                this.index = index;
+                this.tokenLength = tokenLength;
+                this.alias = alias;
+            }
+        }
+
+        private sealed class DialogueSegment
+        {
+            public string alias;
+            public float endNormalized;
         }
 
         [Header("HUD")]
@@ -38,6 +78,13 @@ namespace Deprem.Story
         [SerializeField] private AudioSource dialogueVoiceSource;
         [SerializeField] private DialogueVoiceBinding[] dialogueVoices = Array.Empty<DialogueVoiceBinding>();
 
+        [Header("Dialogue Actors")]
+        [SerializeField] private DialogueActorBinding[] dialogueActors = Array.Empty<DialogueActorBinding>();
+        [SerializeField, Range(5f, 25f)] private float dialogueHeadYawLimit = 25f;
+        [SerializeField, Range(3f, 12f)] private float dialogueHeadPitchLimit = 12f;
+        [SerializeField, Min(15f)] private float dialogueBodyTurnSpeed = 90f;
+        [SerializeField, Min(1f)] private float dialogueHeadDamping = 14f;
+
         [Header("Menus")]
         [SerializeField] private GameObject pausePanel;
         [SerializeField] private GameObject completionPanel;
@@ -54,6 +101,7 @@ namespace Deprem.Story
 
         private Coroutine subtitleRoutine;
         private Coroutine contextRoutine;
+        private Coroutine dialoguePerformanceRoutine;
         private Action subtitleCompleted;
         private Action subtitleCompletedAfterPointerRelease;
         private bool subtitleActive;
@@ -61,15 +109,33 @@ namespace Deprem.Story
         private bool subtitleAdvanceRequested;
         private bool paused;
         private bool consumeWorldPointerUntilRelease;
+        private DialogueActorBinding activeDialogueActor;
+        private DialogueActorBinding activeDialogueListener;
+        private string activeDialogueSpeakerAlias = string.Empty;
+        private bool dialoguePerformanceActive;
+        private bool dialoguePerformanceUsesVoice;
+        private readonly float[] dialogueAudioSamples = new float[64];
+        private int dialogueVoiceLastTimeSamples = -1;
+        private float dialogueVoiceLastAdvanceAt;
+        private float activeDialogueEnvelope;
 
         public event Action<bool> WorldInputBlockChanged;
 
         public bool SubtitleActive => subtitleActive;
         public bool SubtitleRevealComplete => subtitleRevealComplete;
         public bool WorldInputBlocked => paused || subtitleActive || consumeWorldPointerUntilRelease;
+        public AudioSource ActiveDialogueVoiceSource => dialogueVoiceSource;
+        public string ActiveDialogueSpeakerAlias => activeDialogueSpeakerAlias;
+        public Transform ActiveDialogueMouth => activeDialogueActor?.mouth;
+        public Transform ActiveDialogueListenerRoot => activeDialogueListener?.actorRoot;
+        public float ActiveDialogueHeadYaw => activeDialogueActor?.appliedHeadYaw ?? 0f;
+        public float ActiveDialogueHeadPitch => activeDialogueActor?.appliedHeadPitch ?? 0f;
+        public float ActiveDialogueEnvelope => activeDialogueEnvelope;
+        public int DialogueActorCount => dialogueActors?.Length ?? 0;
 
         private void Awake()
         {
+            InitializeDialogueActors();
             movementOwner ??= FindFirstObjectByType<StoryPlayerMovement>(FindObjectsInactive.Include);
             if (pausePanel != null)
                 pausePanel.SetActive(false);
@@ -84,6 +150,12 @@ namespace Deprem.Story
             UpdateReducedShakeState(reducedShake);
             cameraController?.SetReducedShake(reducedShake);
             ApplyWorldInputLock();
+        }
+
+        private void LateUpdate()
+        {
+            if (dialoguePerformanceActive)
+                UpdateDialoguePerformanceVisuals();
         }
 
         public void ShowObjective(string title, string detail)
@@ -120,7 +192,9 @@ namespace Deprem.Story
             SetSubtitleActive(true);
             AudioClip voiceClip = PlayDialogueVoice(text);
             float voicedDuration = voiceClip != null ? voiceClip.length + 0.25f : 0f;
-            subtitleRoutine = StartCoroutine(ShowSubtitleTypewriter(text, Mathf.Max(duration, voicedDuration)));
+            float effectiveDuration = Mathf.Max(duration, voicedDuration);
+            StartDialoguePerformance(text, effectiveDuration, voiceClip != null);
+            subtitleRoutine = StartCoroutine(ShowSubtitleTypewriter(text, effectiveDuration));
         }
 
         public bool TryHandlePrimaryTap()
@@ -416,6 +490,7 @@ namespace Deprem.Story
             Action completed = invokeCompleted ? subtitleCompleted : null;
             subtitleCompleted = null;
             subtitleRoutine = null;
+            StopDialoguePerformance();
             if (dialogueVoiceSource != null)
                 dialogueVoiceSource.Stop();
             SetSubtitleActive(false);
@@ -441,6 +516,428 @@ namespace Deprem.Story
             }
 
             completed?.Invoke();
+        }
+
+        private void InitializeDialogueActors()
+        {
+            if (dialogueActors == null)
+                return;
+
+            foreach (DialogueActorBinding actor in dialogueActors)
+            {
+                if (actor == null || actor.actorRoot == null || actor.head == null || actor.mouth == null)
+                    continue;
+
+                actor.mouthRestScale = actor.mouth.localScale;
+                actor.appliedHeadOffset = Quaternion.identity;
+                actor.appliedHeadYaw = 0f;
+                actor.appliedHeadPitch = 0f;
+                actor.initialized = true;
+            }
+        }
+
+        private void StartDialoguePerformance(string text, float duration, bool usesVoice)
+        {
+            StopDialoguePerformance();
+            List<DialogueSegment> segments = ParseDialogueSegments(text);
+            if (segments.Count == 0 || dialogueActors == null || dialogueActors.Length == 0)
+                return;
+
+            dialoguePerformanceUsesVoice = usesVoice;
+            dialogueVoiceLastTimeSamples = -1;
+            dialogueVoiceLastAdvanceAt = Time.unscaledTime;
+            dialoguePerformanceRoutine = StartCoroutine(
+                DriveDialoguePerformance(segments, Mathf.Max(0.05f, duration)));
+        }
+
+        private IEnumerator DriveDialoguePerformance(List<DialogueSegment> segments, float duration)
+        {
+            dialoguePerformanceActive = true;
+            float elapsed = 0f;
+            int activeSegment = -1;
+            while (subtitleActive && elapsed < duration)
+            {
+                if (!paused)
+                    elapsed += Time.unscaledDeltaTime;
+
+                float normalized = Mathf.Clamp01(elapsed / duration);
+                int nextSegment = segments.Count - 1;
+                for (int index = 0; index < segments.Count; index++)
+                {
+                    if (normalized <= segments[index].endNormalized)
+                    {
+                        nextSegment = index;
+                        break;
+                    }
+                }
+
+                if (nextSegment != activeSegment)
+                {
+                    activeSegment = nextSegment;
+                    ActivateDialogueSegment(segments[activeSegment].alias);
+                }
+                yield return null;
+            }
+
+            dialoguePerformanceRoutine = null;
+            ClearDialoguePerformanceVisuals();
+        }
+
+        private List<DialogueSegment> ParseDialogueSegments(string text)
+        {
+            string source = text ?? string.Empty;
+            var markers = new List<DialogueMarker>();
+            if (dialogueActors != null)
+            {
+                foreach (DialogueActorBinding actor in dialogueActors)
+                {
+                    if (actor?.aliases == null)
+                        continue;
+                    foreach (string rawAlias in actor.aliases)
+                    {
+                        string alias = rawAlias?.Trim();
+                        if (string.IsNullOrEmpty(alias))
+                            continue;
+
+                        string token = alias + ":";
+                        int searchFrom = 0;
+                        while (searchFrom < source.Length)
+                        {
+                            int found = source.IndexOf(token, searchFrom, StringComparison.OrdinalIgnoreCase);
+                            if (found < 0)
+                                break;
+                            searchFrom = found + token.Length;
+                            if (found > 0 && !char.IsWhiteSpace(source[found - 1]))
+                                continue;
+                            markers.Add(new DialogueMarker(found, token.Length, alias));
+                        }
+                    }
+                }
+            }
+
+            markers.Sort((left, right) =>
+            {
+                int order = left.index.CompareTo(right.index);
+                return order != 0 ? order : right.tokenLength.CompareTo(left.tokenLength);
+            });
+            for (int index = markers.Count - 1; index > 0; index--)
+            {
+                if (markers[index].index == markers[index - 1].index)
+                    markers.RemoveAt(index);
+            }
+
+            var aliases = new List<string>();
+            var weights = new List<float>();
+            if (markers.Count == 0)
+            {
+                aliases.Add(string.Empty);
+                weights.Add(SpokenCharacterWeight(source));
+            }
+            else
+            {
+                if (markers[0].index > 0)
+                {
+                    string narration = source.Substring(0, markers[0].index);
+                    if (!string.IsNullOrWhiteSpace(narration))
+                    {
+                        aliases.Add(string.Empty);
+                        weights.Add(SpokenCharacterWeight(narration));
+                    }
+                }
+
+                for (int index = 0; index < markers.Count; index++)
+                {
+                    DialogueMarker marker = markers[index];
+                    int contentStart = marker.index + marker.tokenLength;
+                    int contentEnd = index + 1 < markers.Count ? markers[index + 1].index : source.Length;
+                    string spoken = contentEnd > contentStart
+                        ? source.Substring(contentStart, contentEnd - contentStart)
+                        : string.Empty;
+                    aliases.Add(marker.alias);
+                    weights.Add(SpokenCharacterWeight(spoken));
+                }
+            }
+
+            float totalWeight = 0f;
+            foreach (float weight in weights)
+                totalWeight += weight;
+            totalWeight = Mathf.Max(1f, totalWeight);
+
+            var result = new List<DialogueSegment>(aliases.Count);
+            float cumulative = 0f;
+            for (int index = 0; index < aliases.Count; index++)
+            {
+                cumulative += weights[index];
+                result.Add(new DialogueSegment
+                {
+                    alias = aliases[index],
+                    endNormalized = Mathf.Clamp01(cumulative / totalWeight)
+                });
+            }
+            return result;
+        }
+
+        private static float SpokenCharacterWeight(string text)
+        {
+            int count = 0;
+            foreach (char character in text ?? string.Empty)
+            {
+                if (!char.IsWhiteSpace(character))
+                    count++;
+            }
+            return Mathf.Max(1f, count);
+        }
+
+        private void ActivateDialogueSegment(string alias)
+        {
+            RestAllDialogueMouths();
+            RemoveAllDialogueHeadOffsets();
+            activeDialogueSpeakerAlias = alias ?? string.Empty;
+            activeDialogueActor = ResolveDialogueActor(activeDialogueSpeakerAlias);
+            activeDialogueListener = FindNearestDialogueListener(activeDialogueActor);
+        }
+
+        private DialogueActorBinding ResolveDialogueActor(string alias)
+        {
+            if (string.IsNullOrWhiteSpace(alias) || dialogueActors == null)
+                return null;
+
+            DialogueActorBinding inactiveMatch = null;
+            foreach (DialogueActorBinding actor in dialogueActors)
+            {
+                if (actor == null || !actor.initialized || actor.aliases == null)
+                    continue;
+                bool matches = false;
+                foreach (string candidate in actor.aliases)
+                {
+                    if (string.Equals(candidate?.Trim(), alias.Trim(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        matches = true;
+                        break;
+                    }
+                }
+                if (!matches)
+                    continue;
+                if (actor.actorRoot.gameObject.activeInHierarchy)
+                    return actor;
+                inactiveMatch ??= actor;
+            }
+            return inactiveMatch != null && inactiveMatch.actorRoot.gameObject.activeInHierarchy
+                ? inactiveMatch
+                : null;
+        }
+
+        private DialogueActorBinding FindNearestDialogueListener(DialogueActorBinding speaker)
+        {
+            if (speaker == null || speaker.actorRoot == null || dialogueActors == null)
+                return null;
+
+            DialogueActorBinding best = null;
+            float bestDistance = float.PositiveInfinity;
+            Vector3 speakerPosition = speaker.head != null ? speaker.head.position : speaker.actorRoot.position;
+            foreach (DialogueActorBinding candidate in dialogueActors)
+            {
+                if (candidate == null || candidate == speaker || !candidate.initialized ||
+                    candidate.actorRoot == null || candidate.actorRoot == speaker.actorRoot ||
+                    !candidate.actorRoot.gameObject.activeInHierarchy)
+                    continue;
+                Vector3 listenerPosition = candidate.head != null ? candidate.head.position : candidate.actorRoot.position;
+                float distance = (listenerPosition - speakerPosition).sqrMagnitude;
+                if (distance >= bestDistance)
+                    continue;
+                best = candidate;
+                bestDistance = distance;
+            }
+            return best;
+        }
+
+        private void UpdateDialoguePerformanceVisuals()
+        {
+            float envelope = DialogueSpeechEnvelope();
+            activeDialogueEnvelope = envelope;
+            float mouthBlend = 1f - Mathf.Exp(-16f * Time.unscaledDeltaTime);
+            if (dialogueActors != null)
+            {
+                foreach (DialogueActorBinding actor in dialogueActors)
+                {
+                    if (actor == null || !actor.initialized || actor.mouth == null)
+                        continue;
+                    Vector3 target = actor.mouthRestScale;
+                    if (actor == activeDialogueActor && actor.actorRoot.gameObject.activeInHierarchy)
+                    {
+                        target = new Vector3(
+                            actor.mouthRestScale.x * Mathf.Lerp(1f, 0.82f, envelope),
+                            // The authored mouth mesh is only a few millimetres
+                            // tall.  4.8x stayed below the visible runtime
+                            // aperture threshold on a portrait phone; 5.6x keeps
+                            // the motion readable without changing geometry.
+                            actor.mouthRestScale.y * Mathf.Lerp(1f, 5.6f, envelope),
+                            actor.mouthRestScale.z);
+                    }
+                    actor.mouth.localScale = Vector3.Lerp(actor.mouth.localScale, target, mouthBlend);
+                }
+            }
+
+            if (activeDialogueActor == null || activeDialogueListener == null)
+                return;
+            ApplyDialogueGaze(activeDialogueActor, activeDialogueListener);
+            ApplyDialogueGaze(activeDialogueListener, activeDialogueActor);
+        }
+
+        private float DialogueSpeechEnvelope()
+        {
+            if (!dialoguePerformanceUsesVoice)
+                return SubtitleSpeechEnvelope();
+            if (dialogueVoiceSource == null || dialogueVoiceSource.clip == null ||
+                !dialogueVoiceSource.isPlaying)
+                return SubtitleSpeechEnvelope();
+
+            int currentTimeSamples = dialogueVoiceSource.timeSamples;
+            if (currentTimeSamples != dialogueVoiceLastTimeSamples)
+            {
+                dialogueVoiceLastTimeSamples = currentTimeSamples;
+                dialogueVoiceLastAdvanceAt = Time.unscaledTime;
+            }
+            else if (Time.unscaledTime - dialogueVoiceLastAdvanceAt > 0.08f)
+            {
+                // Headless runners and output-disabled devices can report an
+                // isPlaying source whose DSP playhead is frozen.  A frozen RMS
+                // would hold the mouth permanently open, so use the specified
+                // subtitle rhythm until the voice playhead advances again.
+                return SubtitleSpeechEnvelope();
+            }
+
+            dialogueVoiceSource.GetOutputData(dialogueAudioSamples, 0);
+            float rms = DialogueRms(dialogueAudioSamples);
+            if (rms <= 0.0001f)
+            {
+                // GetOutputData can be silent in headless/Test Runner audio even
+                // while the source is advancing.  Sample the actual voice clip
+                // at the same playhead so runtime tests and muted devices still
+                // use voice RMS instead of freezing the mouth at rest.
+                AudioClip clip = dialogueVoiceSource.clip;
+                int frames = Mathf.Max(1, dialogueAudioSamples.Length / Mathf.Max(1, clip.channels));
+                int offset = Mathf.Clamp(dialogueVoiceSource.timeSamples, 0, Mathf.Max(0, clip.samples - frames));
+                if (clip.GetData(dialogueAudioSamples, offset))
+                    rms = DialogueRms(dialogueAudioSamples);
+            }
+
+            // A truly silent/missing voice region falls back to subtitle rhythm;
+            // otherwise the recorded waveform remains the driver.
+            if (rms <= 0.0001f)
+                return SubtitleSpeechEnvelope();
+            float rmsEnvelope = Mathf.Clamp01(Mathf.InverseLerp(0.0008f, 0.3f, rms));
+            // Mastered voice clips can hold an almost constant short-window RMS.
+            // Keep RMS as the amplitude driver, then add a small syllabic carrier
+            // so a sustained vowel does not freeze the mouth at one aperture.
+            float articulation = 0.35f +
+                                 Mathf.Abs(Mathf.Sin(Time.unscaledTime * 9.5f +
+                                                    dialogueVoiceSource.time * 1.7f)) * 0.65f;
+            return rmsEnvelope * articulation;
+        }
+
+        private static float DialogueRms(float[] samples)
+        {
+            float energy = 0f;
+            foreach (float sample in samples)
+                energy += sample * sample;
+            return samples.Length > 0 ? Mathf.Sqrt(energy / samples.Length) : 0f;
+        }
+
+        private static float SubtitleSpeechEnvelope()
+        {
+            return 0.2f + Mathf.Abs(Mathf.Sin(Time.unscaledTime * 8.5f)) * 0.62f;
+        }
+
+        private void ApplyDialogueGaze(DialogueActorBinding actor, DialogueActorBinding target)
+        {
+            if (actor?.actorRoot == null || actor.head == null || target?.actorRoot == null)
+                return;
+
+            Vector3 targetPosition = target.head != null ? target.head.position : target.actorRoot.position;
+            Vector3 flatDirection = targetPosition - actor.actorRoot.position;
+            flatDirection.y = 0f;
+            StoryPlayerMovement movingPlayer = actor.actorRoot.GetComponent<StoryPlayerMovement>();
+            if (flatDirection.sqrMagnitude > 0.0025f && (movingPlayer == null || !movingPlayer.IsMoving))
+            {
+                Quaternion bodyTarget = Quaternion.LookRotation(flatDirection.normalized, Vector3.up);
+                actor.actorRoot.rotation = Quaternion.RotateTowards(
+                    actor.actorRoot.rotation,
+                    bodyTarget,
+                    dialogueBodyTurnSpeed * Time.unscaledDeltaTime);
+            }
+
+            Vector3 headDirection = targetPosition - actor.head.position;
+            if (headDirection.sqrMagnitude < 0.0001f)
+                return;
+            Vector3 localDirection = actor.actorRoot.InverseTransformDirection(headDirection.normalized);
+            float horizontal = Mathf.Sqrt(localDirection.x * localDirection.x + localDirection.z * localDirection.z);
+            float desiredYaw = Mathf.Clamp(
+                Mathf.Atan2(localDirection.x, localDirection.z) * Mathf.Rad2Deg,
+                -dialogueHeadYawLimit,
+                dialogueHeadYawLimit);
+            float desiredPitch = Mathf.Clamp(
+                -Mathf.Atan2(localDirection.y, Mathf.Max(0.0001f, horizontal)) * Mathf.Rad2Deg,
+                -dialogueHeadPitchLimit,
+                dialogueHeadPitchLimit);
+            float blend = 1f - Mathf.Exp(-dialogueHeadDamping * Time.unscaledDeltaTime);
+            actor.appliedHeadYaw = Mathf.Lerp(actor.appliedHeadYaw, desiredYaw, blend);
+            actor.appliedHeadPitch = Mathf.Lerp(actor.appliedHeadPitch, desiredPitch, blend);
+
+            Quaternion animationRotation = actor.head.localRotation * Quaternion.Inverse(actor.appliedHeadOffset);
+            actor.appliedHeadOffset = Quaternion.Euler(
+                actor.appliedHeadPitch,
+                actor.appliedHeadYaw,
+                0f);
+            actor.head.localRotation = animationRotation * actor.appliedHeadOffset;
+        }
+
+        private void StopDialoguePerformance()
+        {
+            if (dialoguePerformanceRoutine != null)
+            {
+                StopCoroutine(dialoguePerformanceRoutine);
+                dialoguePerformanceRoutine = null;
+            }
+            ClearDialoguePerformanceVisuals();
+        }
+
+        private void ClearDialoguePerformanceVisuals()
+        {
+            dialoguePerformanceActive = false;
+            dialoguePerformanceUsesVoice = false;
+            activeDialogueEnvelope = 0f;
+            RestAllDialogueMouths();
+            RemoveAllDialogueHeadOffsets();
+            activeDialogueActor = null;
+            activeDialogueListener = null;
+            activeDialogueSpeakerAlias = string.Empty;
+        }
+
+        private void RestAllDialogueMouths()
+        {
+            if (dialogueActors == null)
+                return;
+            foreach (DialogueActorBinding actor in dialogueActors)
+            {
+                if (actor != null && actor.initialized && actor.mouth != null)
+                    actor.mouth.localScale = actor.mouthRestScale;
+            }
+        }
+
+        private void RemoveAllDialogueHeadOffsets()
+        {
+            if (dialogueActors == null)
+                return;
+            foreach (DialogueActorBinding actor in dialogueActors)
+            {
+                if (actor == null || !actor.initialized || actor.head == null)
+                    continue;
+                actor.head.localRotation = actor.head.localRotation * Quaternion.Inverse(actor.appliedHeadOffset);
+                actor.appliedHeadOffset = Quaternion.identity;
+                actor.appliedHeadYaw = 0f;
+                actor.appliedHeadPitch = 0f;
+            }
         }
 
         private AudioClip PlayDialogueVoice(string text)

@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Deprem.Story;
+using Deprem.Minigames;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEditor;
@@ -17,14 +18,7 @@ public static class StoryRebuildFlowMenuBuilder
 {
     public const string ScenePath = "Assets/Scenes/Story_Rebuild_MainMenu.unity";
     private const string SharedHomePrefabPath = "Assets/Story/Prefabs/Home/StoryHome_Shared.prefab";
-    private static readonly string[] PublishedScenePaths =
-    {
-        ScenePath,
-        "Assets/Scenes/Story_01_RebuildPreview.unity",
-        "Assets/Scenes/Story_02_RebuildPreview.unity",
-        "Assets/Scenes/Story_03_RebuildPreview.unity",
-        "Assets/Scenes/Story_04_RebuildPreview.unity"
-    };
+    private static string[] PublishedScenePaths => MinigameSceneCatalog.OrderedScenePaths;
 
     [MenuItem("Tools/Deprem Story/Rebuild Preview/Build Story Main Menu")]
     public static void BuildFromMenu()
@@ -120,7 +114,10 @@ public static class StoryRebuildFlowMenuBuilder
                 freshStart.boolValue = false;
             managerData.ApplyModifiedPropertiesWithoutUndo();
 
-            BuildMenuUI(root.transform, manager);
+            MinigameProgressManager minigameProgress = sessionObject.AddComponent<MinigameProgressManager>();
+            MinigameHubManager minigameNavigation = sessionObject.AddComponent<MinigameHubManager>();
+            StoryChapterBuilderCommon.SetReference(minigameNavigation, "progressManager", minigameProgress);
+            BuildMenuUI(root.transform, manager, minigameNavigation);
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             PublishBuildRoute();
@@ -166,17 +163,20 @@ public static class StoryRebuildFlowMenuBuilder
 
         Button continueButton = FindRequired("ContinueStoryButton").GetComponent<Button>();
         Button newStoryButton = FindRequired("StartNewStoryButton").GetComponent<Button>();
+        Button minigamesButton = FindRequired("OpenMinigamesButton").GetComponent<Button>();
         if (continueButton == null || continueButton.onClick.GetPersistentEventCount() != 1)
             throw new InvalidOperationException("Devam Et düğmesi hikâye manager'ına bağlı değil.");
         if (newStoryButton == null || newStoryButton.onClick.GetPersistentEventCount() != 1)
             throw new InvalidOperationException("Yeni Hikâye düğmesi hikâye manager'ına bağlı değil.");
+        if (minigamesButton == null || minigamesButton.onClick.GetPersistentEventCount() != 1)
+            throw new InvalidOperationException("MİNİ OYUNLAR düğmesi minigame merkezine bağlı değil.");
         string[] publishedScenes = EditorBuildSettings.scenes
             .Where(entry => entry.enabled)
             .Select(entry => entry.path)
             .ToArray();
         if (!publishedScenes.SequenceEqual(PublishedScenePaths))
             throw new InvalidOperationException(
-                "Build Settings yalnız ana menü ve yeni dört perdelik hikâye rotasını içermeli.");
+                "Build Settings merkezi hikâye + sekiz minigame kataloğuyla eşleşmeli.");
         if (!scene.IsValid())
             throw new InvalidOperationException("Ana menü sahnesi geçerli değil.");
 
@@ -187,12 +187,13 @@ public static class StoryRebuildFlowMenuBuilder
 
     private static void PublishBuildRoute()
     {
-        EditorBuildSettings.scenes = PublishedScenePaths
-            .Select(path => new EditorBuildSettingsScene(path, true))
-            .ToArray();
+        MinigameSceneCatalog.PublishBuildSettings();
     }
 
-    private static void BuildMenuUI(Transform parent, StoryGameManager manager)
+    private static void BuildMenuUI(
+        Transform parent,
+        StoryGameManager manager,
+        MinigameHubManager minigameNavigation)
     {
         StoryChapterBuilderCommon.LoadPlayfulStoryFonts(
             out TMP_FontAsset regular,
@@ -255,8 +256,8 @@ public static class StoryRebuildFlowMenuBuilder
             safeArea.transform,
             Vector2.one * 0.5f,
             Vector2.one * 0.5f,
-            new Vector2(0f, -490f),
-            new Vector2(920f, 690f),
+            new Vector2(0f, -430f),
+            new Vector2(920f, 840f),
             Color.white,
             true,
             StoryChapterBuilderCommon.StoryUIPanelStyle.PlayfulNavyPanel);
@@ -321,7 +322,7 @@ public static class StoryRebuildFlowMenuBuilder
             "DEVAM ET",
             bold,
             Vector2.one * 0.5f,
-            new Vector2(0f, -108f),
+            new Vector2(0f, -72f),
             new Vector2(650f, 126f),
             StoryChapterBuilderCommon.Teal,
             Color.white);
@@ -331,12 +332,27 @@ public static class StoryRebuildFlowMenuBuilder
             "YENİ HİKÂYE",
             semibold,
             Vector2.one * 0.5f,
-            new Vector2(0f, -250f),
+            new Vector2(0f, -210f),
             new Vector2(650f, 116f),
             new Color(0.12f, 0.2f, 0.25f, 1f),
             StoryChapterBuilderCommon.Cream);
         UnityEventTools.AddPersistentListener(continueButton.onClick, manager.ContinueStory);
         UnityEventTools.AddPersistentListener(newStoryButton.onClick, manager.StartNewStory);
+
+        Button minigamesButton = StoryChapterBuilderCommon.CreateButton(
+            "OpenMinigamesButton",
+            card.transform,
+            "MİNİ OYUNLAR",
+            bold,
+            Vector2.one * 0.5f,
+            new Vector2(0f, -348f),
+            new Vector2(650f, 116f),
+            StoryChapterBuilderCommon.Teal,
+            Color.white);
+        UnityEventTools.AddStringPersistentListener(
+            minigamesButton.onClick,
+            minigameNavigation.OpenScene,
+            "Minigame_Hub");
 
         GameObject eventSystem = new GameObject(
             "EventSystem",

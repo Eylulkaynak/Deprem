@@ -413,8 +413,10 @@ public sealed class StoryVerticalSliceTests
             Vector3 denizToCan = siblingFollower.transform.position - storyPlayer.transform.position;
             denizToCan.y = 0f;
             Vector3 canToDeniz = -denizToCan;
-            Assert.That(Vector3.Dot(storyPlayer.transform.forward, denizToCan.normalized), Is.GreaterThan(0.98f));
-            Assert.That(Vector3.Dot(siblingFollower.transform.forward, canToDeniz.normalized), Is.GreaterThan(0.98f));
+            Quaternion playerFacingTarget = GetPrivate<Quaternion>(storyPlayer, "scriptedFacingRotation");
+            Quaternion siblingFacingTarget = GetPrivate<Quaternion>(siblingFollower, "scriptedFacingRotation");
+            Assert.That(Vector3.Dot(playerFacingTarget * Vector3.forward, denizToCan.normalized), Is.GreaterThan(0.98f));
+            Assert.That(Vector3.Dot(siblingFacingTarget * Vector3.forward, canToDeniz.normalized), Is.GreaterThan(0.98f));
 
             MethodInfo applyPhysicalResult = typeof(StorySequenceDirector).GetMethod("ApplyPostQuakePhysicalResult", BindingFlags.Instance | BindingFlags.NonPublic);
             Assert.That(applyPhysicalResult, Is.Not.Null);
@@ -560,20 +562,13 @@ public sealed class StoryVerticalSliceTests
     }
 
     [Test]
-    public void BuildSettings_PublishOnlyRebuildStoryAndKeepLegacyFilesAsReferences()
+    public void BuildSettings_UsesCentralStoryAndSevenMinigameCatalog()
     {
         string[] paths = EditorBuildSettings.scenes
             .Where(scene => scene.enabled)
             .Select(scene => scene.path)
             .ToArray();
-        Assert.That(paths, Is.EqualTo(new[]
-        {
-            "Assets/Scenes/Story_Rebuild_MainMenu.unity",
-            "Assets/Scenes/Story_01_RebuildPreview.unity",
-            "Assets/Scenes/Story_02_RebuildPreview.unity",
-            "Assets/Scenes/Story_03_RebuildPreview.unity",
-            "Assets/Scenes/Story_04_RebuildPreview.unity"
-        }));
+        Assert.That(paths, Is.EqualTo(MinigameSceneCatalog.OrderedScenePaths));
         Assert.That(AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/bolum1.unity"), Is.Not.Null);
         Assert.That(AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath), Is.Not.Null);
     }
@@ -616,14 +611,18 @@ public sealed class StoryVerticalSliceTests
             Assert.That(parameters, Does.Contain(trigger), trigger);
 
         string[] states = controller.layers[0].stateMachine.states.Select(child => child.state.name).ToArray();
-        foreach (string state in new[] { "Locomotion", "Interact", "Pick Up", "Inspect", "Call Sibling", "Startle", "Recover Balance", "Crouch", "Protect Head", "Hold Cover", "Work" })
+        foreach (string state in new[] { "Locomotion", "Talk", "Interact", "Pick Up", "Inspect", "Call Sibling", "Startle", "Recover Balance", "Crouch", "Protect Head", "Hold Cover", "Work" })
             Assert.That(states, Does.Contain(state), state);
+        Assert.That(controller.layers[0].stateMachine.states
+                .Single(child => child.state.name == "Talk").state.motion.name,
+            Is.EqualTo("ChildTalkingIdle"),
+            "Konuşan çocuk doğal konuşma jesti kullanmalı; nötr idle üzerinde donmamalı.");
         AnimatorState locomotionState = controller.layers[0].stateMachine.states
             .Single(child => child.state.name == "Locomotion").state;
         BlendTree locomotion = locomotionState.motion as BlendTree;
         Assert.That(locomotion, Is.Not.Null);
-        Assert.That(locomotionState.iKOnFeet, Is.True,
-            "Locomotion ayak IK'sı yürüyüş boyunca tabanı zemine kilitlemeli.");
+        Assert.That(locomotionState.iKOnFeet, Is.False,
+            "Meshy rig'in bozuk ayak hedefleri diz ve bilekleri katlamasın diye Foot IK kapalı kalmalı.");
         string[] locomotionMotions = locomotion.children.Select(child => child.motion.name).ToArray();
         Assert.That(locomotionMotions, Does.Contain("ChildNeutralIdle"),
             "Story characters must use the corrected neutral child idle instead of the wide source stance.");
@@ -650,11 +649,11 @@ public sealed class StoryVerticalSliceTests
 
         Assert.That(controller.layers[0].stateMachine.states
                 .Single(child => child.state.name == "Protect Head").state.motion.name,
-            Is.EqualTo("Crouching"),
+            Is.EqualTo("ChildCoverPose"),
             "Protect Head alt gövdede güvenilir çömelme klibini kullanmalı.");
         Assert.That(controller.layers[0].stateMachine.states
                 .Single(child => child.state.name == "Hold Cover").state.motion.name,
-            Is.EqualTo("Crouching"),
+            Is.EqualTo("ChildCoverPose"),
             "Hold Cover alt gövdede güvenilir çömelme klibini kullanmalı.");
         AnimatorControllerLayer coverLayer = controller.layers
             .Single(layer => layer.name == "Cover Upper Body");
@@ -676,13 +675,21 @@ public sealed class StoryVerticalSliceTests
         AnimationClip coverUpperPose = AssetDatabase.LoadAssetAtPath<AnimationClip>(
             StoryAnimationLibraryBuilder.ChildCoverUpperPosePath);
         Assert.That(coverUpperPose, Is.Not.Null);
-        foreach (string forearm in new[] { "Left Forearm Stretch", "Right Forearm Stretch" })
+        EditorCurveBinding[] upperBindings = AnimationUtility.GetCurveBindings(coverUpperPose);
+        Assert.That(upperBindings.Any(binding => binding.propertyName == "Left Forearm Stretch"), Is.True);
+        Assert.That(upperBindings.Any(binding => binding.propertyName == "Right Forearm Stretch"), Is.True);
+        Assert.That(upperBindings.Any(binding =>
+            binding.propertyName.StartsWith("LeftHandT", StringComparison.Ordinal) ||
+            binding.propertyName.StartsWith("LeftHandQ", StringComparison.Ordinal) ||
+            binding.propertyName.StartsWith("RightHandT", StringComparison.Ordinal) ||
+            binding.propertyName.StartsWith("RightHandQ", StringComparison.Ordinal)), Is.False,
+            "Retargeted hand IK goals must not twist the two child rigs into different poses.");
+        foreach (EditorCurveBinding binding in upperBindings.Where(binding =>
+                     binding.propertyName.Contains("Arm") || binding.propertyName.Contains("Forearm")))
         {
-            EditorCurveBinding binding = AnimationUtility.GetCurveBindings(coverUpperPose)
-                .Single(curve => curve.propertyName == forearm);
-            Assert.That(AnimationUtility.GetEditorCurve(coverUpperPose, binding).Evaluate(0f),
-                Is.LessThan(-0.85f),
-                forearm + " must remain folded so the hands cover the head instead of hanging at the floor.");
+            AnimationCurve curve = AnimationUtility.GetEditorCurve(coverUpperPose, binding);
+            Assert.That(curve.keys.Select(key => key.value).Distinct().Count(), Is.EqualTo(1),
+                binding.propertyName + " must be a frozen protective pose, not an arm-cycle animation.");
         }
 
         AnimatorController adult =
@@ -692,26 +699,38 @@ public sealed class StoryVerticalSliceTests
         foreach (string trigger in StoryAnimationLibraryBuilder.RequiredTriggers)
             Assert.That(adultParameters, Does.Contain(trigger), "adult " + trigger);
         string[] adultStates = adult.layers[0].stateMachine.states.Select(child => child.state.name).ToArray();
-        foreach (string state in new[] { "Adult Idle", "Adult Interact", "Adult Pick Up", "Adult Inspect", "Adult Call", "Adult Work" })
+        foreach (string state in new[] { "Adult Idle", "Adult Talk", "Adult Interact", "Adult Pick Up", "Adult Inspect", "Adult Call", "Adult Work" })
             Assert.That(adultStates, Does.Contain(state), state);
         var adultMotions = adult.layers[0].stateMachine.states
             .ToDictionary(child => child.state.name, child => child.state.motion != null ? child.state.motion.name : string.Empty);
         Assert.That(adultMotions["Adult Idle"], Is.EqualTo("AdultNeutralIdle"),
             "Anne uses the clean Synty-compatible humanoid idle.");
+        Assert.That(adultMotions["Adult Talk"], Is.EqualTo("AdultTalkingIdle"),
+            "Konuşan yetişkin doğal konuşma jesti kullanmalı.");
         AnimationClip adultIdle =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.AdultNeutralIdlePath);
+        AnimationClip adultTalkingIdle =
+            AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.AdultTalkingIdlePath);
         Assert.That(adultIdle, Is.Not.Null);
         AnimationClip cleanChildIdle =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildNeutralIdlePath);
+        AnimationClip cleanChildTalkingIdle =
+            AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildTalkingIdlePath);
         AnimationClip cleanChildWalk =
             AssetDatabase.LoadAssetAtPath<AnimationClip>(StoryAnimationLibraryBuilder.ChildNaturalWalkPath);
         Assert.That(cleanChildIdle, Is.Not.Null);
+        Assert.That(cleanChildTalkingIdle, Is.Not.Null);
+        Assert.That(adultTalkingIdle, Is.Not.Null);
         Assert.That(cleanChildWalk, Is.Not.Null);
 
         AnimationClip sourceIdle = AssetDatabase.LoadAllAssetsAtPath(
-                "Assets/Story/Animations/ThirdParty/KayKit/Rig_Medium_General.fbx")
+                "Assets/Story/Animations/ThirdParty/Quaternius/UAL1_Standard.fbx")
             .OfType<AnimationClip>()
-            .Single(clip => clip.name == "Idle_A");
+            .Single(clip => clip.name == "Armature|Idle_Loop");
+        AnimationClip sourceTalkingIdle = AssetDatabase.LoadAllAssetsAtPath(
+                "Assets/Story/Animations/ThirdParty/Quaternius/UAL1_Standard.fbx")
+            .OfType<AnimationClip>()
+            .Single(clip => clip.name == "Armature|Idle_Talking_Loop");
         AnimationClip sourceWalk =
             MeshyFamilyCharacterImporter.LoadPrimaryAnimationClip(MeshyFamilyCharacterImporter.DenizWalkingPath);
         Assert.That(sourceWalk, Is.Not.Null,
@@ -721,6 +740,8 @@ public sealed class StoryVerticalSliceTests
                  {
                      (cleanChildIdle, sourceIdle),
                      (adultIdle, sourceIdle),
+                     (cleanChildTalkingIdle, sourceTalkingIdle),
+                     (adultTalkingIdle, sourceTalkingIdle),
                      (cleanChildWalk, sourceWalk)
                  })
         {
@@ -736,7 +757,20 @@ public sealed class StoryVerticalSliceTests
                     binding.propertyName == sourceBinding.propertyName);
                 AnimationCurve generatedCurve = AnimationUtility.GetEditorCurve(generated, generatedBinding);
                 AnimationCurve sourceCurve = AnimationUtility.GetEditorCurve(source, sourceBinding);
-                bool anchoredIdleRoot = (generated == cleanChildIdle || generated == adultIdle) &&
+                if (generated == cleanChildIdle)
+                {
+                    float frozenValue = sourceCurve.Evaluate(source.length * 0.18f);
+                    foreach (float ratio in new[] { 0f, 0.27f, 0.63f, 1f })
+                    {
+                        Assert.That(generatedCurve.Evaluate(generated.length * ratio),
+                            Is.EqualTo(frozenValue).Within(0.0001f),
+                            generated.name + " must hold its authored grounded idle frame for " +
+                            sourceBinding.propertyName + ".");
+                    }
+                    continue;
+                }
+                bool anchoredIdleRoot = (generated == cleanChildIdle || generated == adultIdle ||
+                                         generated == cleanChildTalkingIdle || generated == adultTalkingIdle) &&
                                         string.IsNullOrEmpty(sourceBinding.path) &&
                                         (sourceBinding.propertyName.StartsWith("RootT.", StringComparison.Ordinal) ||
                                          sourceBinding.propertyName.StartsWith("RootQ.", StringComparison.Ordinal));
@@ -754,7 +788,10 @@ public sealed class StoryVerticalSliceTests
             }
         }
 
-        foreach (AnimationClip idle in new[] { cleanChildIdle, adultIdle })
+        foreach (AnimationClip idle in new[]
+                 {
+                     cleanChildIdle, adultIdle, cleanChildTalkingIdle, adultTalkingIdle
+                 })
         {
             EditorCurveBinding[] idleRootBindings = AnimationUtility.GetCurveBindings(idle)
                 .Where(binding =>
@@ -791,8 +828,8 @@ public sealed class StoryVerticalSliceTests
                 walkRootCurves["RootQ.y"].Evaluate(time),
                 walkRootCurves["RootQ.z"].Evaluate(time),
                 walkRootCurves["RootQ.w"].Evaluate(time)));
-            Assert.That(Vector3.Dot(rootRotation * Vector3.forward, Vector3.forward), Is.GreaterThan(0.8f),
-                "Walk root must face the same forward axis as NavMesh movement.");
+            Assert.That(Vector3.Dot(rootRotation * Vector3.forward, Vector3.back), Is.GreaterThan(0.8f),
+                "Walk RootQ must cancel the Meshy clip's second 180-degree turn; the prefab Visual correction supplies the shared forward axis.");
         }
         Assert.That(adultMotions["Adult Interact"], Is.EqualTo("Interact"));
         Assert.That(adultMotions["Adult Pick Up"], Is.EqualTo("PickUp"));

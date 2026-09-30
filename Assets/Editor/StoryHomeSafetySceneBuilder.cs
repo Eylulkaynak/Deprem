@@ -444,7 +444,7 @@ public static partial class StoryHomeSafetySceneBuilder
 
         world.parentHeldDrill = StoryChapterBuilderCommon.InstantiateAsset(
             "Assets/Sprites/Drill/Drill_01.obj", "ParentHeldPoweredDrill", mountObject.transform,
-            mountObject.transform.position, new Vector3(0.48f, 0.31f, 0.24f), Vector3.zero, false, false);
+            mountObject.transform.position, new Vector3(0.32f, 0.2f, 0.13f), Vector3.zero, false, false);
         // InstantiateAsset dünya rotasyonunu uygular. Elde taşınan prop ise el yuvasının yerel
         // yönünü izlemeli; aksi halde animasyon sırasında matkap ucu zemine dönük kalır.
         world.parentHeldDrill.transform.localRotation = Quaternion.identity;

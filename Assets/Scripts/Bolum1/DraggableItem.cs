@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 /// <summary>
 /// Surukle-birak esyasi. Dokunma (mobil) ve mouse (editor) ile calisir.
@@ -78,6 +79,9 @@ public class DraggableItem : MonoBehaviour
     [Tooltip("Yuvaya yaklaşınca uygulanacak en yüksek çekim gücü.")]
     [SerializeField, Range(0f, 1f)] private float magneticSnapStrength = 0.86f;
 
+    [Tooltip("Manyetik çekimin hedefe ne kadar yumuşak yaklaşacağı. Düşük değer daha ağır/yumuşak hareket eder.")]
+    [SerializeField, Range(2f, 24f)] private float magneticSnapResponse = 9f;
+
     [Tooltip("Kartın manyetik hover pozunda slot yüzeyinin ne kadar önünde kalacağı.")]
     [SerializeField, Min(0f)] private float magneticSnapSurfaceOffset;
 
@@ -128,12 +132,21 @@ public class DraggableItem : MonoBehaviour
     [Tooltip("Tum hareket animasyonlarinda kullanilan hiz egrisi.")]
     [SerializeField] private AnimationCurve moveCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
+    [Header("Sonuç Olayları")]
+    [Tooltip("Nesne doğru hedef tarafından kabul edildiğinde çalışır. Eski sahnelerde boş kaldığı için geriye uyumludur.")]
+    [SerializeField] private UnityEvent onAccepted = new UnityEvent();
+
+    [Tooltip("Nesne yanlış hedefe veya hedef dışına bırakıldığında çalışır. Eski sahnelerde boş kaldığı için geriye uyumludur.")]
+    [SerializeField] private UnityEvent onRejected = new UnityEvent();
+
     public bool IsCorrectItem => isCorrectItem;
     public bool IsInBag => state == ItemState.InBag;
     public bool IsDragging => state == ItemState.Dragging;
     public static DraggableItem ActiveDrag => activeDrag;
     public float BagEntryDuration => moveToOpeningDuration + descendIntoBagDuration;
     public BagDropZone DropZoneOverride => dropZoneOverride;
+    public UnityEvent OnAccepted => onAccepted;
+    public UnityEvent OnRejected => onRejected;
 
     public string DisplayName
     {
@@ -214,6 +227,8 @@ public class DraggableItem : MonoBehaviour
     private Vector3 originalScale;
     private Quaternion originalRotation;
     private float dragStartedAt;
+    private float dragLastRealtime;
+    private float dragSmoothingDelta;
     private Vector3 dragStartWorldPosition;
     private Vector2 pointerDownScreenPosition;
     private Plane dragPlane;
@@ -275,6 +290,8 @@ public class DraggableItem : MonoBehaviour
         activeDrag = this;
         state = ItemState.Dragging;
         dragStartedAt = Time.unscaledTime;
+        dragLastRealtime = Time.realtimeSinceStartup;
+        dragSmoothingDelta = 1f / 120f;
         dragStartWorldPosition = transform.position;
         pointerDownScreenPosition = screenPosition;
         dragPlaneHeight = dragStartWorldPosition.y + dragLift;
@@ -330,6 +347,17 @@ public class DraggableItem : MonoBehaviour
 
     private void UpdateDrag(Vector2 screenPosition)
     {
+        float realtimeNow = Time.realtimeSinceStartup;
+        float realtimeDelta = Mathf.Max(0f, realtimeNow - dragLastRealtime);
+        dragLastRealtime = realtimeNow;
+        // Unity Test Runner and an occasional editor hitch can report a tiny/huge
+        // frame delta. Realtime keeps the magnetic spring visually consistent,
+        // while the cap prevents a hitch from turning it back into a teleport.
+        dragSmoothingDelta = Mathf.Clamp(
+            Mathf.Max(Time.unscaledDeltaTime, realtimeDelta),
+            1f / 240f,
+            1f / 20f);
+
         Ray ray = mainCamera.ScreenPointToRay(screenPosition);
         if (!dragPlane.Raycast(ray, out float enter))
         {
@@ -361,7 +389,23 @@ public class DraggableItem : MonoBehaviour
         if (clampDragMinimumY)
             target.y = Mathf.Max(target.y, dragMinimumWorldY);
 
-        transform.position = target;
+        if (currentMagneticTarget != null)
+        {
+            float response = 1f - Mathf.Exp(
+                -Mathf.Max(2f, magneticSnapResponse) * dragSmoothingDelta);
+            transform.position = Vector3.Lerp(transform.position, target, response);
+        }
+        else
+        {
+            transform.position = target;
+        }
+
+        if (clampDragMinimumY && transform.position.y < dragMinimumWorldY)
+        {
+            Vector3 clamped = transform.position;
+            clamped.y = dragMinimumWorldY;
+            transform.position = clamped;
+        }
         UpdateDragFacing();
     }
 
@@ -405,7 +449,10 @@ public class DraggableItem : MonoBehaviour
             return false;
 
         float proximity = 1f - nearestDistance / radiusPixels;
-        float insertionProgress = Mathf.InverseLerp(0.05f, 0.72f, proximity);
+        // Reach full insertion only very near the socket. The old 0.72 cutoff
+        // completed the whole pull while the pointer was still far away and felt
+        // like a hard teleport.
+        float insertionProgress = Mathf.InverseLerp(0.04f, 0.95f, proximity);
         float smoothInsertion = insertionProgress * insertionProgress * (3f - 2f * insertionProgress);
         magnetWeight = Mathf.Clamp01(smoothInsertion * magneticSnapStrength);
         magneticTarget = nearest;
@@ -460,7 +507,17 @@ public class DraggableItem : MonoBehaviour
                 Mathf.Max(0.01f, dragHoverWobbleSpeed) *
                 Mathf.PI * 2f) * dragHoverWobbleDegrees *
               Mathf.Lerp(1f, 0.58f, currentMagnetWeight);
-        transform.rotation = dragRotation * Quaternion.AngleAxis(wobble, Vector3.up);
+        Quaternion targetRotation = dragRotation * Quaternion.AngleAxis(wobble, Vector3.up);
+        if (currentMagneticTarget != null)
+        {
+            float response = 1f - Mathf.Exp(
+                -Mathf.Max(2f, magneticSnapResponse * 1.15f) * dragSmoothingDelta);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, response);
+        }
+        else
+        {
+            transform.rotation = targetRotation;
+        }
     }
 
     private void EndDrag(Vector2 releasePosition)
@@ -476,7 +533,10 @@ public class DraggableItem : MonoBehaviour
             if (isCorrectItem)
                 PlaceInBag();
             else
+            {
+                onRejected.Invoke();
                 Bolum1GameManager.Instance?.OnWrongItemPlaced(this);
+            }
 
             return;
         }
@@ -496,10 +556,12 @@ public class DraggableItem : MonoBehaviour
         if (droppedOnBag && !isCorrectItem)
         {
             // Manager mesaji gosterir; donus animasyonunu ReturnToStart baslatir.
+            onRejected.Invoke();
             Bolum1GameManager.Instance?.OnWrongItemPlaced(this);
             return;
         }
 
+        onRejected.Invoke();
         ReturnToStart();
     }
 
@@ -510,6 +572,7 @@ public class DraggableItem : MonoBehaviour
         transform.localScale = originalScale * bagEntryPopScale;
         if (notifyGameManager)
             Bolum1GameManager.Instance?.OnCorrectItemPlaced(this);
+        onAccepted.Invoke();
         StartRoutine(AnimateIntoBag());
     }
 
@@ -564,18 +627,45 @@ public class DraggableItem : MonoBehaviour
              IsWithinMagneticAcceptance(screenPosition, dropZone));
         if (!droppedOnBag)
         {
+            onRejected.Invoke();
             ReturnToStart();
             return false;
         }
 
         if (!isCorrectItem)
         {
+            onRejected.Invoke();
             ReturnToStart();
             return true;
         }
 
+        // A magnetic target must finish as a real physical insertion. During the drag we
+        // blend toward the socket so the motion stays soft, but accepting the release while
+        // leaving the object a few centimetres away makes batteries/cards look detached.
+        // Bag drops do not define magnetic targets and keep their authored entry animation.
+        Transform acceptedTarget = currentMagneticTarget;
+        if (acceptedTarget == null && magneticSnapTargets != null)
+        {
+            foreach (Transform target in magneticSnapTargets)
+            {
+                if (target == null || !target.gameObject.activeInHierarchy)
+                    continue;
+                acceptedTarget = target;
+                break;
+            }
+        }
+        if (acceptedTarget != null)
+        {
+            Vector3 acceptedPosition = acceptedTarget.position;
+            if (dragPlaneAnchor != null)
+                acceptedPosition += dragPlaneAnchor.forward * magneticSnapSurfaceOffset;
+            transform.position = acceptedPosition;
+            transform.rotation = acceptedTarget.rotation;
+        }
+
         state = ItemState.Idle;
         itemCollider.enabled = true;
+        onAccepted.Invoke();
         return true;
     }
 

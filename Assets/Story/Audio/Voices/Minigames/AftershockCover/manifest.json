@@ -1,0 +1,15 @@
+{
+  "scene": "Minigame_AftershockCover",
+  "entries": [
+    { "id": "01_main_crouch", "subtitle": "Anne: Sarsıntı başladı. Koşma; bulunduğun yerde aşağı kaydır ve ÇÖK.", "segments": [{ "speaker": "anne", "text": "Sarsıntı başladı. Koşma. Bulunduğun yerde aşağı kaydır ve çök." }] },
+    { "id": "02_main_cover", "subtitle": "Deniz: Dizlerimin üstündeyim; başımı ve ensemi kollarımla koruyorum.", "segments": [{ "speaker": "deniz", "text": "Dizlerimin üstündeyim. Başımı ve ensemi kollarımla koruyorum." }] },
+    { "id": "03_main_hold", "subtitle": "Anne: Sağlam masanın ayağını bırakma. Sarsıntı bitene kadar TUTUN.", "segments": [{ "speaker": "anne", "text": "Sağlam masanın ayağını bırakma. Sarsıntı bitene kadar tutun." }] },
+    { "id": "04_dark_crouch", "subtitle": "Can: Işıklar gitti ama koşmuyorum. Yeniden ÇÖKÜYORUM.", "segments": [{ "speaker": "can", "text": "Işıklar gitti ama koşmuyorum. Yeniden çöküyorum." }] },
+    { "id": "05_dark_cover", "subtitle": "Deniz: Camdan ve dolaptan uzağım; KAPANIP başımı ve ensemi koruyorum.", "segments": [{ "speaker": "deniz", "text": "Camdan ve dolaptan uzağım. Kapanıp başımı ve ensemi koruyorum." }] },
+    { "id": "06_dark_hold", "subtitle": "Anne: Artçı kısa da olsa masa ayağını sıkıca TUTUN.", "segments": [{ "speaker": "anne", "text": "Artçı kısa da olsa masa ayağını sıkıca tutun." }] },
+    { "id": "07_master_crouch", "subtitle": "Deniz: Bu kez işaret yok; doğru sırayı biliyorum. Önce ÇÖK.", "segments": [{ "speaker": "deniz", "text": "Bu kez işaret yok. Doğru sırayı biliyorum. Önce çök." }] },
+    { "id": "08_master_cover", "subtitle": "Can: Sonra KAPAN; başını ve enseni kollarınla koru.", "segments": [{ "speaker": "can", "text": "Sonra kapan. Başını ve enseni kollarınla koru." }] },
+    { "id": "09_master_hold", "subtitle": "Deniz: Ve sağlam masanın ayağına TUTUN.", "segments": [{ "speaker": "deniz", "text": "Ve sağlam masanın ayağına tutun." }] },
+    { "id": "10_check_sibling", "subtitle": "Anne: Tamamen durmasını bekle; sonra kardeşini kontrol et ve birlikte kal.", "segments": [{ "speaker": "anne", "text": "Tamamen durmasını bekle. Sonra kardeşini kontrol et ve birlikte kal." }] }
+  ]
+}

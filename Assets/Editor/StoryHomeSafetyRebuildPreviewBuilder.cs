@@ -72,6 +72,12 @@ public static partial class StoryHomeSafetySceneBuilder
                 "EVİN RİSKLERİ AZALTILDI",
                 "Deniz riski bulur ve hafif eşyayı taşır; ağır sabitlemeyi yetişkin yapar.",
                 StoryAct.HomeSafety);
+            StoryChapterBuilderCommon.ConfigureDialogueActors(
+                ui.controller,
+                new StoryChapterBuilderCommon.DialogueActorSpec(family.deniz, "Deniz"),
+                new StoryChapterBuilderCommon.DialogueActorSpec(family.can, "Can"),
+                new StoryChapterBuilderCommon.DialogueActorSpec(family.parent, "Anne", "Ayşe", "Ayse"),
+                new StoryChapterBuilderCommon.DialogueActorSpec(world.nermin, "Nermin", "Nermin Teyze"));
             StoryChapterBuilderCommon.SetReference(ui.controller, "movementOwner", movement);
             ConfigureRebuildPreviewText(root.transform);
 
@@ -151,7 +157,10 @@ public static partial class StoryHomeSafetySceneBuilder
             EditorSceneManager.SaveScene(scene, RebuildPreviewScenePath);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+            EditorSceneManager.SaveScene(scene, RebuildPreviewScenePath);
 
+            StoryKktcSceneArt.ApplyToScene(scene);
+            EditorSceneManager.SaveScene(scene, RebuildPreviewScenePath);
             StoryHomeSafetyRebuildPreviewValidator.Validate(false);
             Selection.activeGameObject = root;
             Debug.Log("Story_02_RebuildPreview üretildi: " + RebuildPreviewScenePath);
@@ -191,6 +200,7 @@ public static partial class StoryHomeSafetySceneBuilder
         world.sharedHome.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         world.sharedHome.transform.localScale = Vector3.one;
         ConfigureRebuildPreviewHomeState(world.sharedHome.transform);
+        StoryChapterBuilderCommon.ApplyCanonicalIndoorHomeShell(world.sharedHome.transform);
         StoryChapterBuilderCommon.RestyleEmergencyBag(
             FindPreviewRequired(world.sharedHome.transform, "EmergencyBag").gameObject,
             materials,
@@ -207,12 +217,26 @@ public static partial class StoryHomeSafetySceneBuilder
         world.openDoor = FindPreviewRequired(world.sharedHome.transform, "Door_Open").gameObject;
         StoryChapterBuilderCommon.ConfigureDynamicNavigationBlocker(world.closedDoor);
 
+        GameObject safeTable = FindPreviewRequired(world.sharedHome.transform, "SafeTable").gameObject;
+        if (!TryGetBounds(safeTable, out Bounds safeTableBounds))
+            throw new InvalidOperationException("Story 02 çalışma masasının görünür yüzeyi bulunamadı.");
+        float hardwareSurfaceY = safeTableBounds.max.y + 0.032f;
+        StoryChapterBuilderCommon.CreatePrimitive(
+            "SecuringHardwareWorkMat",
+            PrimitiveType.Cube,
+            new Vector3(0.96f, safeTableBounds.max.y + 0.01f, 0.78f),
+            new Vector3(1.38f, 0.02f, 0.84f),
+            materials.cream,
+            dressing,
+            false,
+            Quaternion.Euler(0f, -4f, 0f));
+
         BuildRebuildPreviewRiskHotspots(dressing, materials, world);
         BuildRebuildPreviewRiskFootprints(dressing, materials, world);
         BuildRebuildPreviewSafePlayCorner(dressing, materials, world);
         BuildRebuildPreviewExit(dressing, materials, world);
-        BuildRebuildPreviewShelf(dressing, materials, world);
-        BuildRebuildPreviewWardrobe(dressing, materials, world);
+        BuildRebuildPreviewShelf(dressing, materials, world, hardwareSurfaceY);
+        BuildRebuildPreviewWardrobe(dressing, materials, world, hardwareSurfaceY);
         BuildRebuildPreviewRouteCars(dressing, world);
         BuildRebuildPreviewNeighbor(dressing, materials, adultController, world);
         BuildRebuildPreviewContinuity(dressing, materials, world);
@@ -224,32 +248,34 @@ public static partial class StoryHomeSafetySceneBuilder
             "Assets/Sprites/Drill/Drill_01.obj",
             "UnsafePoweredDrill_Rebuild",
             dressing,
-            new Vector3(1.6f, 0.42f, 2.55f),
-            new Vector3(0.95f, 0.62f, 0.42f),
-            new Vector3(0f, 90f, -8f),
+            new Vector3(0.62f, hardwareSurfaceY, 0.48f),
+            new Vector3(0.48f, 0.3f, 0.2f),
+            new Vector3(0f, 90f, -4f),
             false,
             true);
 
-        world.exitAnimations = CreatePreviewMoveAnimations(
-            world.exitStart,
+        AlignVisibleBottomToSurface(world.unsafeDrill, 0.62f, 0.48f, hardwareSurfaceY);
+
+        world.exitAnimations = CreatePreviewSettleAnimations(
             world.exitStored,
             "Story02Rebuild_ExitMove_",
-            0.58f);
-        world.shelfAnimations = CreatePreviewMoveAnimations(
-            world.shelfHigh,
+            0.055f,
+            0.28f);
+        world.shelfAnimations = CreatePreviewSettleAnimations(
             world.shelfLow,
             "Story02Rebuild_ShelfMove_",
-            0.62f);
+            0.045f,
+            0.3f);
         world.shelfSecureAnimation = StoryChapterBuilderCommon.CreateMoveAnimation(
             world.shelfAnchorStrap,
             "Story02Rebuild_ShelfBracketSecure",
-            new Vector3(-2.45f, -1.65f, 1.1f),
-            0.72f);
+            new Vector3(-0.12f, 0f, 0f),
+            0.34f);
         world.shelfStabilityAnimation = StoryChapterBuilderCommon.CreateRockAnimation(
             world.shelfFrame,
             "Story02Rebuild_ShelfStabilityTest",
-            0.75f,
-            0.7f);
+            0.28f,
+            0.48f);
         world.wardrobeRockAnimation = StoryChapterBuilderCommon.CreateRockAnimation(
             world.wardrobe,
             "Story02Rebuild_WardrobeRock",
@@ -258,8 +284,8 @@ public static partial class StoryHomeSafetySceneBuilder
         world.wardrobeSecureAnimation = StoryChapterBuilderCommon.CreateMoveAnimation(
             world.wardrobeAnchorStrap,
             "Story02Rebuild_WardrobeStrapSecure",
-            new Vector3(5.83f, -1.85f, -0.03f),
-            0.78f);
+            new Vector3(0.12f, 0f, 0f),
+            0.34f);
         world.heavyAnimation = StoryChapterBuilderCommon.CreateRockAnimation(
             world.unsafeHeavyBox,
             "Story02Rebuild_HeavyNearMiss",
@@ -315,6 +341,10 @@ public static partial class StoryHomeSafetySceneBuilder
         SetPreviewActive(home, "Shoes_PostQuake", false);
         SetPreviewActive(home, "BrokenGlass_Hazard", false);
         SetPreviewActive(home, "EmergencyBag", true);
+        SetPreviewActive(home, "FamilyBoardGame", false);
+        SetPreviewActive(home, "DenizLeftShoe_World", false);
+        SetPreviewActive(home, "DenizRightShoe_World", false);
+        SetPreviewActive(home, "CanShoes_World", false);
 
         // The canonical Story 03 wardrobe was authored against the back-left window.
         // In the wider Story 02 shots its body and curtain occupied the same silhouette.
@@ -449,16 +479,16 @@ public static partial class StoryHomeSafetySceneBuilder
         world.canReadingNestRisk = BuildReadingNest(
             "CanReadingNest_Risk",
             parent,
-            new Vector3(3.08f, 0.045f, 1.55f),
+            new Vector3(3.08f, 0.018f, 1.55f),
             new Vector3(0f, -10f, 0f),
-            materials.amber,
             materials.coral);
         world.canReadingNestSafe = BuildReadingNest(
             "CanReadingNest_Safe",
             parent,
-            new Vector3(0.95f, 0.045f, -0.72f),
+            // Oda köşesindeki güvenli konum, sabit final-route kadrajında
+            // kaynak minderle birlikte 9:16 ve 20:9 güvenli bölgede kalır.
+            new Vector3(1.55f, 0.018f, -0.72f),
             new Vector3(0f, 14f, 0f),
-            materials.teal,
             materials.amber);
         world.canReadingNestSafe.SetActive(false);
     }
@@ -468,37 +498,25 @@ public static partial class StoryHomeSafetySceneBuilder
         Transform parent,
         Vector3 position,
         Vector3 euler,
-        Material rugMaterial,
         Material cushionMaterial)
     {
-        GameObject root = new GameObject(name);
-        root.transform.SetParent(parent);
-        root.transform.SetPositionAndRotation(position, Quaternion.Euler(euler));
-
-        StoryChapterBuilderCommon.CreatePrimitive(
-            "ReadingMat",
-            PrimitiveType.Cylinder,
+        StoryChapterBuilderCommon.Materials materials = LoadPreviewMaterials();
+        GameObject root = StoryAuthoredPropFactory.CreateFloorCushion(
+            name,
+            parent,
             position,
-            new Vector3(0.82f, 0.035f, 0.68f),
-            rugMaterial,
-            root.transform,
-            false);
-        StoryChapterBuilderCommon.CreatePrimitive(
-            "ReadingCushion",
-            PrimitiveType.Sphere,
-            position + new Vector3(-0.12f, 0.12f, 0.03f),
-            new Vector3(0.48f, 0.18f, 0.42f),
+            new Vector3(0.82f, 0.18f, 0.68f),
+            euler,
             cushionMaterial,
-            root.transform,
-            false,
-            Quaternion.Euler(0f, euler.y - 8f, -4f));
+            materials.cream,
+            materials.teal);
         StoryChapterBuilderCommon.InstantiateFurniture(
             "Decorations/Book_08.prefab",
             "CanComicBook",
             root.transform,
-            position + new Vector3(0.24f, 0.095f, -0.08f),
-            new Vector3(0.34f, 0.08f, 0.46f),
-            new Vector3(0f, euler.y + 18f, 0f),
+            position + new Vector3(0.09f, 0.182f, -0.02f),
+            new Vector3(0.28f, 0.04f, 0.36f),
+            new Vector3(0f, euler.y + 7f, 0f),
             false);
         return root;
     }
@@ -508,57 +526,111 @@ public static partial class StoryHomeSafetySceneBuilder
         StoryChapterBuilderCommon.Materials materials,
         HomeWorld world)
     {
+        GameObject shoeTray = StoryChapterBuilderCommon.CreatePrimitive(
+            "ExitShoeTray",
+            PrimitiveType.Cube,
+            new Vector3(4.08f, 0.025f, 4.38f),
+            new Vector3(0.82f, 0.05f, 0.56f),
+            materials.navy,
+            parent,
+            false,
+            Quaternion.Euler(0f, 4f, 0f));
+        foreach ((string name, Vector3 offset, Vector3 size) in new[]
+                 {
+                     ("ExitShoeTray_RimFront", new Vector3(0f, 0.055f, -0.275f), new Vector3(0.84f, 0.07f, 0.035f)),
+                     ("ExitShoeTray_RimBack", new Vector3(0f, 0.055f, 0.275f), new Vector3(0.84f, 0.07f, 0.035f)),
+                     ("ExitShoeTray_RimLeft", new Vector3(-0.405f, 0.055f, 0f), new Vector3(0.035f, 0.07f, 0.52f)),
+                     ("ExitShoeTray_RimRight", new Vector3(0.405f, 0.055f, 0f), new Vector3(0.035f, 0.07f, 0.52f))
+                 })
+        {
+            StoryChapterBuilderCommon.CreatePrimitive(
+                name,
+                PrimitiveType.Cube,
+                shoeTray.transform.TransformPoint(offset),
+                size,
+                materials.wood,
+                parent,
+                false,
+                shoeTray.transform.rotation);
+        }
+
+        Material storageCrateMaterial = AssetDatabase.LoadAssetAtPath<Material>(
+            "Assets/Story/Environment/ThirdParty/KenneySurvival/Materials/KenneySurvival_Atlas.mat");
+        GameObject toyBasket = StoryChapterBuilderCommon.InstantiateAsset(
+            "Assets/Story/Environment/ThirdParty/KenneySurvival/Models/box-open.fbx",
+            "ExitToyStorageBasket",
+            parent,
+            new Vector3(3.72f, 0f, 3.52f),
+            new Vector3(0.64f, 0.35f, 0.56f),
+            new Vector3(0f, -5f, 0f),
+            false,
+            false,
+            storageCrateMaterial);
+        if (toyBasket == null)
+            throw new InvalidOperationException("Story 02 oyuncak sepeti üretilemedi.");
+
+        for (int index = -1; index <= 1; index++)
+        {
+            StoryChapterBuilderCommon.CreatePrimitive(
+                "ExitParcelPalletSlat_" + (index + 1),
+                PrimitiveType.Cube,
+                new Vector3(4.22f + index * 0.22f, 0.025f, 5.5f),
+                new Vector3(0.18f, 0.05f, 0.62f),
+                materials.wood,
+                parent,
+                false,
+                Quaternion.Euler(0f, 2f, 0f));
+        }
+
         GameObject shoes = StoryAuthoredPropFactory.CreateShoePair(
             "ExitShoes_Start",
             parent,
-            new Vector3(2.05f, 0f, 4.35f),
-            new Vector3(0.92f, 0.28f, 0.72f),
+            new Vector3(2.05f, 0f, 4.32f),
+            new Vector3(0.46f, 0.15f, 0.36f),
             new Vector3(0f, 14f, 0f),
             materials.coral,
-            materials.navy);
+            materials.cream);
         GameObject shoesStored = StoryAuthoredPropFactory.CreateShoePair(
             "ExitShoes_Stored",
             parent,
-            new Vector3(4.2f, 0f, 4.35f),
-            new Vector3(0.78f, 0.25f, 0.76f),
+            new Vector3(4.08f, 0.052f, 4.38f),
+            new Vector3(0.46f, 0.15f, 0.36f),
             new Vector3(0f, 90f, 0f),
             materials.teal,
-            materials.navy);
+            materials.cream);
         GameObject toy = StoryChapterBuilderCommon.InstantiateFurniture(
-            "Decorations/Toy_02.prefab",
+            "Decorations/Toy_03.prefab",
             "ExitToy_Start",
             parent,
             new Vector3(2.82f, 0f, 4.92f),
-            new Vector3(0.62f, 0.32f, 0.68f),
+            new Vector3(0.38f, 0.22f, 0.34f),
             new Vector3(0f, 8f, 0f),
             true);
         GameObject toyStored = StoryChapterBuilderCommon.InstantiateFurniture(
-            "Decorations/Toy_02.prefab",
+            "Decorations/Toy_03.prefab",
             "ExitToy_Stored",
             parent,
-            new Vector3(4.08f, 0f, 3.55f),
-            new Vector3(0.62f, 0.32f, 0.68f),
+            new Vector3(3.72f, 0.12f, 3.52f),
+            new Vector3(0.34f, 0.2f, 0.3f),
             new Vector3(0f, -5f, 0f),
             true);
-        GameObject parcel = StoryAuthoredPropFactory.CreateParcel(
+        GameObject parcel = StoryChapterBuilderCommon.InstantiateAsset(
+            "Assets/Story/Environment/SyntyTown/SM_Prop_CardboardBox_01.fbx",
             "ExitParcel_Start",
             parent,
-            new Vector3(2.55f, 0f, 5.55f),
-            new Vector3(0.72f, 0.58f, 0.64f),
+            new Vector3(2.55f, 0f, 5.48f),
+            new Vector3(0.43f, 0.34f, 0.4f),
             new Vector3(0f, -12f, 0f),
-            materials.amber,
-            materials.cream,
-            materials.coral,
+            true,
             true);
-        GameObject parcelStored = StoryAuthoredPropFactory.CreateParcel(
+        GameObject parcelStored = StoryChapterBuilderCommon.InstantiateAsset(
+            "Assets/Story/Environment/SyntyTown/SM_Prop_CardboardBox_01.fbx",
             "ExitParcel_Stored",
             parent,
-            new Vector3(4.12f, 0f, 5.65f),
-            new Vector3(0.72f, 0.58f, 0.64f),
+            new Vector3(4.22f, 0.052f, 5.5f),
+            new Vector3(0.43f, 0.34f, 0.4f),
             new Vector3(0f, 7f, 0f),
-            materials.teal,
-            materials.cream,
-            materials.amber,
+            true,
             true);
 
         shoesStored.SetActive(false);
@@ -576,54 +648,70 @@ public static partial class StoryHomeSafetySceneBuilder
     private static void BuildRebuildPreviewShelf(
         Transform parent,
         StoryChapterBuilderCommon.Materials materials,
-        HomeWorld world)
+        HomeWorld world,
+        float hardwareSurfaceY)
     {
+        if (!TryGetBounds(world.shelfFrame, out Bounds shelfBounds))
+            throw new InvalidOperationException("Story 02 raf gövdesinin görünür bounds'u bulunamadı.");
+
+        // The bookcase faces into the room along -X. Derive every prop position from the
+        // actual imported bookcase bounds instead of scattering world-space guesses in front
+        // of it. The two values below coincide with its authored upper and lower shelf boards.
+        float shelfFrontX = shelfBounds.min.x + Mathf.Min(0.055f, shelfBounds.size.x * 0.14f);
+        float upperShelfY = shelfBounds.min.y + shelfBounds.size.y * 0.658f;
+        float lowerShelfY = shelfBounds.min.y + shelfBounds.size.y * 0.509f;
+        float booksZ = shelfBounds.center.z;
+        float vaseZ = shelfBounds.center.z - shelfBounds.size.z * 0.32f;
+        float frameZ = shelfBounds.center.z + shelfBounds.size.z * 0.32f;
+
         GameObject booksHigh = new GameObject("ShelfBooks_High");
         booksHigh.transform.SetParent(parent);
+        booksHigh.transform.position = new Vector3(shelfFrontX, upperShelfY, booksZ);
         GameObject booksLow = new GameObject("ShelfBooks_Low");
         booksLow.transform.SetParent(parent);
-        for (int index = 0; index < 2; index++)
-        {
-            float z = 1.28f + index * 0.42f;
-            StoryChapterBuilderCommon.InstantiateFurniture(
-                index % 2 == 0 ? "Decorations/Book_03.prefab" : "Decorations/Book_08.prefab",
-                "Book_" + index,
-                booksHigh.transform,
-                new Vector3(4.17f, 1.46f, z),
-                new Vector3(0.18f, 0.46f + index * 0.025f, 0.34f),
-                new Vector3(0f, 90f, index * 3f),
-                false);
-            StoryChapterBuilderCommon.InstantiateFurniture(
-                index % 2 == 0 ? "Decorations/Book_03.prefab" : "Decorations/Book_08.prefab",
-                "Book_" + index,
-                booksLow.transform,
-                new Vector3(4.0f, 0.28f, z),
-                new Vector3(0.18f, 0.46f + index * 0.025f, 0.34f),
-                new Vector3(0f, 90f, index * 3f),
-                false);
-        }
+        booksLow.transform.position = new Vector3(shelfFrontX, lowerShelfY, booksZ);
+
+        GameObject highBookSet = StoryChapterBuilderCommon.InstantiateFurniture(
+            "Decorations/Book_08.prefab",
+            "BookSet",
+            booksHigh.transform,
+            new Vector3(shelfFrontX, upperShelfY, booksZ),
+            new Vector3(0.24f, 0.2f, 0.42f),
+            new Vector3(0f, 90f, 0f),
+            false);
+        AlignVisibleBottomToSurface(highBookSet, shelfFrontX, booksZ, upperShelfY);
+
+        GameObject lowBookSet = StoryChapterBuilderCommon.InstantiateFurniture(
+            "Decorations/Book_08.prefab",
+            "BookSet",
+            booksLow.transform,
+            new Vector3(shelfFrontX, lowerShelfY, booksZ),
+            new Vector3(0.24f, 0.2f, 0.42f),
+            new Vector3(0f, 90f, 0f),
+            false);
+        AlignVisibleBottomToSurface(lowBookSet, shelfFrontX, booksZ, lowerShelfY);
 
         GameObject vaseHigh = StoryChapterBuilderCommon.InstantiateFurniture(
             "Plants/Plants_05.prefab",
             "ShelfVase_High",
             parent,
-            new Vector3(4.16f, 1.45f, 1.02f),
-            new Vector3(0.28f, 0.36f, 0.28f),
-            new Vector3(0f, 18f, 0f),
+            new Vector3(shelfFrontX, upperShelfY, vaseZ),
+            new Vector3(0.24f, 0.34f, 0.24f),
+            Vector3.zero,
             false);
         GameObject vaseLow = StoryChapterBuilderCommon.InstantiateFurniture(
             "Plants/Plants_05.prefab",
             "ShelfVase_Low",
             parent,
-            new Vector3(3.86f, 0.28f, 1.02f),
-            new Vector3(0.28f, 0.36f, 0.28f),
-            new Vector3(0f, -15f, 0f),
+            new Vector3(shelfFrontX, lowerShelfY, vaseZ),
+            new Vector3(0.24f, 0.34f, 0.24f),
+            Vector3.zero,
             false);
         GameObject frameHigh = StoryAuthoredPropFactory.CreatePictureFrame(
             "ShelfFrame_High",
             parent,
-            new Vector3(4.17f, 1.44f, 2.02f),
-            new Vector3(0.1f, 0.34f, 0.32f),
+            new Vector3(shelfFrontX, upperShelfY, frameZ),
+            new Vector3(0.07f, 0.3f, 0.24f),
             new Vector3(0f, 90f, 0f),
             materials.wood,
             materials.cream,
@@ -632,13 +720,15 @@ public static partial class StoryHomeSafetySceneBuilder
         GameObject frameLow = StoryAuthoredPropFactory.CreatePictureFrame(
             "ShelfFrame_Low",
             parent,
-            new Vector3(3.9f, 0.28f, 2.02f),
-            new Vector3(0.1f, 0.34f, 0.32f),
+            new Vector3(shelfFrontX, lowerShelfY, frameZ),
+            new Vector3(0.07f, 0.3f, 0.24f),
             new Vector3(0f, 90f, 0f),
             materials.wood,
             materials.cream,
             materials.amber,
             false);
+        AlignVisibleBottomToSurface(frameHigh, shelfFrontX, frameZ, upperShelfY);
+        AlignVisibleBottomToSurface(frameLow, shelfFrontX, frameZ, lowerShelfY);
 
         booksLow.SetActive(false);
         vaseLow.SetActive(false);
@@ -648,16 +738,16 @@ public static partial class StoryHomeSafetySceneBuilder
         world.shelfBracket = StoryAuthoredPropFactory.CreateMetalBracket(
             "ShelfBracketInHand",
             parent,
-            new Vector3(1.1f, 0.68f, 2.25f),
-            new Vector3(0.48f, 0.3f, 0.4f),
-            new Vector3(0f, -24f, 0f),
+            new Vector3(1.28f, hardwareSurfaceY, 0.96f),
+            new Vector3(0.36f, 0.24f, 0.26f),
+            new Vector3(0f, -18f, 0f),
             materials.metal,
             materials.amber);
         world.shelfAnchorStrap = StoryAuthoredPropFactory.CreateMetalBracket(
             "ShelfWallBracket",
             parent,
-            new Vector3(4.48f, 2.38f, 1.55f),
-            new Vector3(1.36f, 0.48f, 0.38f),
+            new Vector3(4.82f, 2.22f, 1.55f),
+            new Vector3(0.22f, 0.28f, 0.38f),
             new Vector3(0f, 90f, 0f),
             materials.metal,
             materials.teal,
@@ -677,10 +767,23 @@ public static partial class StoryHomeSafetySceneBuilder
             parent);
     }
 
+    private static void AlignVisibleBottomToSurface(
+        GameObject item,
+        float centerX,
+        float centerZ,
+        float surfaceY)
+    {
+        Vector3 position = item.transform.position;
+        item.transform.position = new Vector3(centerX, position.y, centerZ);
+        if (TryGetBounds(item, out Bounds bounds))
+            item.transform.position += Vector3.up * (surfaceY - bounds.min.y);
+    }
+
     private static void BuildRebuildPreviewWardrobe(
         Transform parent,
         StoryChapterBuilderCommon.Materials materials,
-        HomeWorld world)
+        HomeWorld world,
+        float hardwareSurfaceY)
     {
         world.wardrobeTestHandle = CreatePreviewHotspot(
             "WardrobeTestHandle_Rebuild",
@@ -688,31 +791,25 @@ public static partial class StoryHomeSafetySceneBuilder
             new Vector3(0.18f, 0.55f, 0.28f),
             materials.metal,
             parent);
-        world.wardrobeAnchorMarks = StoryAuthoredPropFactory.CreateMetalBracket(
+        world.wardrobeAnchorMarks = CreatePreviewHotspot(
             "WardrobeAnchorMarks",
-            parent,
-            new Vector3(-4.78f, 2.72f, 2.7f),
-            new Vector3(0.34f, 0.42f, 1.15f),
-            Vector3.zero,
-            materials.metal,
-            materials.amber);
-        world.wardrobeHandStrap = StoryAuthoredPropFactory.CreateMetalBracket(
+            // Dolap gövdesinin arkasındaki işaret ışını BodyCollider'da
+            // kesiliyordu. İnce dokunma yüzeyi oda tarafında, fizik gövdesinin
+            // hemen önünde kalır; görsel bağlantı yine aynı üst şeridi anlatır.
+            new Vector3(-4.08f, 2.48f, 2.7f),
+            new Vector3(0.14f, 0.32f, 0.9f),
+            materials.amber,
+            parent);
+        world.wardrobeHandStrap = StoryAuthoredPropFactory.CreateSafetyStrap(
             "WardrobeHandStrap",
             parent,
-            new Vector3(0.95f, 0.7f, 2.4f),
-            new Vector3(0.78f, 0.36f, 0.42f),
-            new Vector3(0f, -18f, 0f),
-            materials.metal,
-            materials.teal);
-        world.wardrobeAnchorStrap = StoryAuthoredPropFactory.CreateMetalBracket(
-            "WardrobeAnchorStrap",
-            parent,
-            new Vector3(-4.78f, 2.68f, 2.7f),
-            new Vector3(0.36f, 0.46f, 1.28f),
-            Vector3.zero,
-            materials.metal,
+            new Vector3(0.82f, hardwareSurfaceY, 1.08f),
+            new Vector3(0.46f, 0.12f, 0.2f),
+            new Vector3(0f, -12f, 0f),
             materials.teal,
-            false);
+            materials.metal,
+            materials.amber);
+        world.wardrobeAnchorStrap = BuildWardrobeAnchorStraps(parent, materials);
         world.wardrobeAnchorStrap.SetActive(false);
         world.wardrobeStabilityHandle = CreatePreviewHotspot(
             "WardrobeStabilityHandle_Hotspot",
@@ -722,25 +819,62 @@ public static partial class StoryHomeSafetySceneBuilder
             parent);
     }
 
+    private static GameObject BuildWardrobeAnchorStraps(
+        Transform parent,
+        StoryChapterBuilderCommon.Materials materials)
+    {
+        GameObject root = new GameObject("WardrobeAnchorStrap");
+        root.transform.SetParent(parent, false);
+
+        StoryAuthoredPropFactory.CreateSafetyStrap(
+            "LeftSafetyStrap",
+            root.transform,
+            new Vector3(-4.74f, 2.3f, 2.42f),
+            new Vector3(0.11f, 0.22f, 0.36f),
+            new Vector3(0f, 90f, 0f),
+            materials.teal,
+            materials.metal,
+            materials.amber,
+            false);
+        StoryAuthoredPropFactory.CreateSafetyStrap(
+            "RightSafetyStrap",
+            root.transform,
+            new Vector3(-4.74f, 2.3f, 3.02f),
+            new Vector3(0.11f, 0.22f, 0.36f),
+            new Vector3(0f, 90f, 0f),
+            materials.teal,
+            materials.metal,
+            materials.amber,
+            false);
+        return root;
+    }
+
     private static void BuildRebuildPreviewRouteCars(Transform parent, HomeWorld world)
     {
         world.initialRouteCarStart = FindPreviewRequired(
             world.sharedHome.transform,
             "Can_ToyCar").gameObject;
         world.initialRouteCarStart.name = "Can_ToyCar_InitialRoute";
-        world.initialRouteCarStart.transform.localScale *= 1.35f;
+        FitVisibleLongestDimension(world.initialRouteCarStart, 0.34f);
+        // Araba, rota koridorunun üzerinde ve HomeExit kadrajının içinde başlar.
+        // (Prefab'taki eski konumu kameranın tamamen arkasındaydı; oyuncu "arabayı
+        // sür" görevinde arabayı hiç göremiyordu.)
+        AlignVisibleBottomToSurface(world.initialRouteCarStart, 1.7f, 2.35f, 0.012f);
         world.initialRouteCarBlocked = Object.Instantiate(world.initialRouteCarStart, parent);
         world.initialRouteCarBlocked.name = "Can_ToyCar_Blocked";
-        world.initialRouteCarBlocked.transform.position = new Vector3(2.02f, 0.08f, 4.05f);
+        AlignVisibleBottomToSurface(world.initialRouteCarBlocked, 2.02f, 4.05f, 0.012f);
         world.initialRouteCarBlocked.SetActive(false);
 
         world.finalRouteCarStart = Object.Instantiate(world.initialRouteCarStart, parent);
         world.finalRouteCarStart.name = "Can_ToyCar_FinalStart";
-        world.finalRouteCarStart.transform.position = new Vector3(-1.15f, 0.08f, -2.7f);
+        // Final tur oda ortasından açık kapıya sürülür; iki uç HomeFinalTest
+        // kadrajında birlikte görünür. Başlangıç, SafeTable tablasının kamera
+        // gölgesinin dışındadır (masa arkasında kalan araba tıklanamıyordu).
+        AlignVisibleBottomToSurface(world.finalRouteCarStart, 2.1f, 2.2f, 0.012f);
         world.finalRouteCarStart.SetActive(false);
         world.finalRouteCarFinish = Object.Instantiate(world.initialRouteCarStart, parent);
         world.finalRouteCarFinish.name = "Can_ToyCar_FinalFinish";
-        world.finalRouteCarFinish.transform.position = new Vector3(2.62f, 0.08f, 6.02f);
+        AlignVisibleBottomToSurface(world.finalRouteCarFinish, 2.62f, 6.02f, 0.012f);
         world.finalRouteCarFinish.SetActive(false);
     }
 
@@ -823,7 +957,7 @@ public static partial class StoryHomeSafetySceneBuilder
             "NerminEnvelope_Start",
             parent,
             new Vector3(1.78f, 0.06f, 4.92f),
-            new Vector3(0.34f, 0.06f, 0.24f),
+            new Vector3(0.24f, 0.025f, 0.17f),
             new Vector3(0f, 18f, 0f),
             materials.cream,
             materials.amber,
@@ -832,7 +966,7 @@ public static partial class StoryHomeSafetySceneBuilder
             "NerminEnvelope_Returned",
             parent,
             new Vector3(1.55f, 1.03f, 5.12f),
-            new Vector3(0.3f, 0.05f, 0.22f),
+            new Vector3(0.22f, 0.025f, 0.16f),
             new Vector3(0f, 18f, 0f),
             materials.cream,
             materials.amber,
@@ -856,15 +990,20 @@ public static partial class StoryHomeSafetySceneBuilder
         StoryChapterBuilderCommon.Materials materials,
         HomeWorld world)
     {
+        // Tahliye planı panosu ÇIKIŞ KAPISININ yanındadır: hem gerçek hayattaki
+        // doğru yerleşim hem de asma sürüklemesi, Nermin'in elindeki planla aynı
+        // HomeExit kadrajında kalır. (Eski batı duvarı hedefi kadrajın tamamen
+        // dışındaydı; ayrıca panel primitive'i yanlışlıkla dünya origin'inde
+        // duruyordu.)
         Transform board = StoryChapterBuilderCommon.NewChild(parent, "FamilyPlanBoard_Continuity");
         board.SetPositionAndRotation(
-            new Vector3(-4.84f, 2.0f, 1.05f),
-            Quaternion.Euler(0f, 90f, 0f));
+            new Vector3(4.02f, 1.7f, 5.97f),
+            Quaternion.Euler(0f, 180f, 0f));
         StoryChapterBuilderCommon.CreatePrimitive(
             "Board",
             PrimitiveType.Cube,
-            Vector3.zero,
-            new Vector3(2.5f, 1.35f, 0.1f),
+            new Vector3(4.02f, 1.7f, 5.97f),
+            new Vector3(1.35f, 1.05f, 0.08f),
             materials.wood,
             board,
             false);
@@ -872,7 +1011,7 @@ public static partial class StoryHomeSafetySceneBuilder
             "Nermin_EvacuationPlan_InHand",
             PrimitiveType.Cube,
             new Vector3(1.55f, 1.02f, 5.12f),
-            new Vector3(0.3f, 0.05f, 0.22f),
+            new Vector3(0.24f, 0.018f, 0.17f),
             materials.cream,
             parent,
             true,
@@ -880,16 +1019,16 @@ public static partial class StoryHomeSafetySceneBuilder
         world.evacuationPlan = StoryChapterBuilderCommon.CreatePrimitive(
             "Nermin_EvacuationPlan",
             PrimitiveType.Cube,
-            new Vector3(-4.77f, 1.92f, 1.1f),
-            new Vector3(0.04f, 0.86f, 0.62f),
+            new Vector3(3.99f, 1.62f, 5.91f),
+            new Vector3(0.62f, 0.86f, 0.04f),
             materials.cream,
             parent,
             false);
         StoryChapterBuilderCommon.CreatePrimitive(
             "PlanRouteLine",
             PrimitiveType.Cube,
-            new Vector3(-4.74f, 1.92f, 1.1f),
-            new Vector3(0.025f, 0.09f, 0.42f),
+            new Vector3(3.99f, 1.62f, 5.885f),
+            new Vector3(0.42f, 0.09f, 0.025f),
             materials.teal,
             world.evacuationPlan.transform,
             false);
@@ -909,12 +1048,12 @@ public static partial class StoryHomeSafetySceneBuilder
             new(
                 StoryCameraZoneId.HomeOverview,
                 "CM_HomeOverview_Rebuild",
-                new Vector3(10.2f, 11.2f, -13.2f),
+                new Vector3(1.7f, 5.2f, -7.8f),
                 new Vector3(-0.05f, 0.9f, 0.95f),
                 48f,
                 false,
                 deniz,
-                18.5f,
+                10.5f,
                 new Vector2(-0.18f, 0.16f)),
             new(
                 StoryCameraZoneId.HomeWardrobe,
@@ -928,23 +1067,36 @@ public static partial class StoryHomeSafetySceneBuilder
                 new Vector3(-0.7f, 3.15f, -1.65f),
                 new Vector3(4.2f, 1.35f, 1.58f),
                 43f),
+            // Kapı bölgesindeki tüm sürükleme kaynakları VE bırakma hedefleri
+            // (ayakkabılık, oyuncak kutusu, paket, Nermin'in eli, plan panosu,
+            // rota arabası) bu tek dikey kadraja sığar.
             new(
                 StoryCameraZoneId.HomeExit,
                 "CM_HomeExit_Rebuild",
-                new Vector3(2.35f, 4.0f, -2.6f),
-                new Vector3(2.55f, 0.72f, 4.9f),
-                43f),
+                // 20:9'da rota başlangıcı ile Nermin/plan hedefleri karşı
+                // kenarlara taşmasın diye aynı eksende daha geriden bakar.
+                // Sağdan gelen ışın, rota arabasının önündeki SafeTable
+                // tablasına takılmadan doğrudan dokunma hotspot'una ulaşır.
+                new Vector3(3.2f, 5.0f, -5.0f),
+                new Vector3(2.55f, 0.62f, 4.75f),
+                50f),
             new(
                 StoryCameraZoneId.HomeParent,
                 "CM_HomeParentWork_Rebuild",
-                new Vector3(4.3f, 3.2f, 4.9f),
-                new Vector3(1.45f, 1.0f, 2.45f),
-                44f),
+                new Vector3(4.3f, 3.2f, 4.65f),
+                // Anne, raftan getirilen bağlantı parçası ve yerdeki güvenlik
+                // matkabı aynı dar portre kadrajında kalır.
+                new Vector3(1.18f, 1.0f, 1.48f),
+                50f),
+            // Final rota testi: araba başlangıcı (oda ortası) ve kapı eşiği aynı
+            // dikey kadrajda. Eski açı iki ucu zıt kenarlardan dışarı taşırıyordu.
             new(
                 StoryCameraZoneId.HomeFinalTest,
                 "CM_HomeFinalRoute_Rebuild",
-                new Vector3(10.8f, 12.2f, -15.2f),
-                new Vector3(0.45f, 0.5f, 1.75f),
+                // Sağ duvarın içindeki eski x=4.9 konumu motor testinde gri
+                // ekran/collider çakışmasına yol açıyordu.
+                new Vector3(4.55f, 5.6f, -5.6f),
+                new Vector3(1.9f, 0.35f, 3.2f),
                 50f)
         };
         return StoryChapterBuilderCommon.BuildCameras(
@@ -964,11 +1116,12 @@ public static partial class StoryHomeSafetySceneBuilder
         Transform points = StoryChapterBuilderCommon.NewChild(
             world.environment.transform,
             "HomeInteractionPoints_Rebuild");
+        // Rota testlerinde oyuncu arabanın yanında, kadraj içinde durur.
         Transform routePoint = StoryChapterBuilderCommon.CreatePoint(
             "InitialRouteStand",
             points,
-            new Vector3(-0.75f, 0f, -2.05f),
-            new Vector3(2.2f, 0.4f, 4.3f));
+            new Vector3(0.9f, 0f, 1.6f),
+            new Vector3(2.02f, 0.4f, 4.05f));
         Transform exitPoint = StoryChapterBuilderCommon.CreatePoint(
             "ExitInspectStand",
             points,
@@ -1064,10 +1217,10 @@ public static partial class StoryHomeSafetySceneBuilder
             world.evacuationPlanInHand,
             world.evacuationPlan,
             "home.neighbor.plan",
-            "TAHLİYE PLANINI AİLE PANOSUNA AS",
+            "TAHLİYE PLANINI KAPI YANINDAKİ PANOYA AS",
             StoryInteractionKind.Collect,
             exitPoint,
-            StoryCameraZoneId.HomeOverview,
+            StoryCameraZoneId.HomeExit,
             points,
             new Vector3(0.85f, 1.0f, 0.85f));
 
@@ -1102,7 +1255,10 @@ public static partial class StoryHomeSafetySceneBuilder
             "CAN'IN OKUMA KÖŞESİNİ TURUNCU ALANDAN TAŞI",
             StoryInteractionKind.HelpSibling,
             safePlayPoint,
-            StoryCameraZoneId.HomeOverview,
+            // Takip kamerası Deniz yaklaşırken hareket edip yerdeki bırakma
+            // hedefini portre altından çıkarıyordu. Bu iki uç için oda/çıkışın
+            // tamamını gören sabit rota kamerasını kullan.
+            StoryCameraZoneId.HomeFinalTest,
             points,
             new Vector3(1.4f, 0.35f, 1.2f));
         interactions.moveShoes = AddPreviewDragInteraction(
@@ -1340,10 +1496,23 @@ public static partial class StoryHomeSafetySceneBuilder
             1,
             1.25f,
             2.4f);
+        // Hedef bir konteyner kökü olabilir (ör. ShelfBooks_Low origin'de durur,
+        // kitaplar çocuk objelerdir). Drop bölgesi görünür içeriğin merkezine
+        // kurulur; boş kök pozisyonuna kurulunca bırakma alanı sahnenin alakasız
+        // bir noktasına düşüyordu.
+        Renderer[] targetRenderers = target.GetComponentsInChildren<Renderer>(true);
+        Vector3 dropCenter = target.transform.position;
+        if (targetRenderers.Length > 0)
+        {
+            Bounds targetBounds = targetRenderers[0].bounds;
+            foreach (Renderer renderer in targetRenderers.Skip(1))
+                targetBounds.Encapsulate(renderer.bounds);
+            dropCenter = targetBounds.center;
+        }
         BagDropZone zone = CreatePreviewDropZone(
             "Drop_" + id.Replace('.', '_'),
             dropZoneParent,
-            target.transform.position,
+            dropCenter,
             dropZoneSize);
         ConfigurePreviewDrag(interaction, zone);
         return interaction;
@@ -1429,23 +1598,34 @@ public static partial class StoryHomeSafetySceneBuilder
         serialized.ApplyModifiedPropertiesWithoutUndo();
     }
 
-    private static Animation[] CreatePreviewMoveAnimations(
-        GameObject[] starts,
+    private static Animation[] CreatePreviewSettleAnimations(
         GameObject[] results,
         string namePrefix,
+        float verticalOffset,
         float duration)
     {
-        Animation[] animations = new Animation[Math.Min(starts.Length, results.Length)];
+        Animation[] animations = new Animation[results?.Length ?? 0];
         for (int index = 0; index < animations.Length; index++)
         {
-            Vector3 offset = starts[index].transform.localPosition - results[index].transform.localPosition;
             animations[index] = StoryChapterBuilderCommon.CreateMoveAnimation(
                 results[index],
                 namePrefix + index,
-                offset,
+                new Vector3(0f, Mathf.Max(0.01f, verticalOffset), 0f),
                 duration);
         }
         return animations;
+    }
+
+    private static void FitVisibleLongestDimension(GameObject item, float targetDimension)
+    {
+        if (item == null || targetDimension <= 0f || !TryGetBounds(item, out Bounds bounds))
+            return;
+
+        float longest = Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z);
+        if (longest <= 0.001f)
+            return;
+
+        item.transform.localScale *= targetDimension / longest;
     }
 
     private static GameObject CreatePreviewHotspot(
@@ -1610,6 +1790,9 @@ public static class StoryHomeSafetyRebuildPreviewValidator
                 StorySharedHomePrefabBuilder.PrefabPath,
                 "bağlantılı ortak ev prefabı");
             Require(
+                StoryChapterBuilderCommon.HasCanonicalStory01HomeShell(sharedHome.transform),
+                "Story 01 ile aynı kanonik ev kabuğu");
+            Require(
                 root.GetComponentsInChildren<NavMeshSurface>(true).Length == 1,
                 "sahneye ait tek NavMeshSurface");
             Require(
@@ -1660,7 +1843,7 @@ public static class StoryHomeSafetyRebuildPreviewValidator
                 "altı bestelenmiş Cinemachine kamera");
             foreach (CinemachineCamera camera in root.GetComponentsInChildren<CinemachineCamera>(true))
                 Require(
-                    camera.Lens.FieldOfView >= 38f && camera.Lens.FieldOfView <= 50f,
+                    camera.Lens.FieldOfView >= 38f && camera.Lens.FieldOfView <= 54f,
                     camera.name + " lens aralığı");
             Require(
                 EditorBuildSettings.scenes.Any(candidate =>

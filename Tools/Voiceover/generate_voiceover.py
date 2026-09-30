@@ -46,6 +46,11 @@ VOICE_CONFIG = {
         "rate": "-10%",
         "pitch": "-12Hz",
     },
+    "operator": {
+        "voice": "tr-TR-AhmetNeural",
+        "rate": "-5%",
+        "pitch": "-5Hz",
+    },
 }
 
 

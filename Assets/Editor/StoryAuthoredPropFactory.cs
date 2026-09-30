@@ -205,6 +205,61 @@ internal static class StoryAuthoredPropFactory
         return root;
     }
 
+    internal static GameObject CreateSafetyStrap(string name, Transform parent, Vector3 feetPosition,
+        Vector3 targetSize, Vector3 euler, Material strap, Material metal, Material accent, bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "SafetyStrapRoundedBox",
+            () => CreatePrismMesh("SafetyStrapRoundedBox", RoundedRectangle, 0.22f));
+
+        CreateMeshChild("Webbing", root.transform, roundedBox, strap, Vector3.zero, Vector3.zero,
+            new Vector3(1f, 0.16f, 0.34f));
+        CreateMeshChild("LeftWallPlate", root.transform, roundedBox, metal, new Vector3(-0.43f, 0f, 0f),
+            Vector3.zero, new Vector3(0.18f, 0.28f, 0.5f));
+        CreateMeshChild("RightWallPlate", root.transform, roundedBox, metal, new Vector3(0.43f, 0f, 0f),
+            Vector3.zero, new Vector3(0.18f, 0.28f, 0.5f));
+        CreateMeshChild("Buckle", root.transform, roundedBox, accent, new Vector3(0.08f, 0.035f, 0f),
+            Vector3.zero, new Vector3(0.2f, 0.26f, 0.44f));
+
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
+    internal static GameObject CreateFloorCushion(string name, Transform parent, Vector3 feetPosition,
+        Vector3 targetSize, Vector3 euler, Material fabric, Material piping, Material tuft, bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, feetPosition, euler);
+        Mesh roundedBox = EnsureMesh(
+            "FloorCushionRoundedBox",
+            () => CreatePrismMesh("FloorCushionRoundedBox", RoundedRectangle, 0.34f));
+
+        CreateMeshChild("PipedBase", root.transform, roundedBox, piping, Vector3.zero, Vector3.zero,
+            new Vector3(1.04f, 0.42f, 1.04f));
+        CreateMeshChild("CushionBody", root.transform, roundedBox, fabric, new Vector3(0f, 0.055f, 0f),
+            Vector3.zero, new Vector3(1f, 0.62f, 1f));
+
+        Vector3[] tuftPositions =
+        {
+            new(-0.2f, 0.18f, -0.2f),
+            new(0.2f, 0.18f, -0.2f),
+            new(-0.2f, 0.18f, 0.2f),
+            new(0.2f, 0.18f, 0.2f)
+        };
+        for (int index = 0; index < tuftPositions.Length; index++)
+        {
+            CreateMeshChild("Tuft_" + (index + 1), root.transform, roundedBox, tuft, tuftPositions[index],
+                Vector3.zero, new Vector3(0.075f, 0.08f, 0.075f));
+        }
+
+        FitToSize(root, feetPosition, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
     internal static GameObject CreateEmergencyBackpack(
         string name,
         Transform parent,
@@ -431,6 +486,40 @@ internal static class StoryAuthoredPropFactory
         return root;
     }
 
+    internal static GameObject CreateBracelet(
+        string name,
+        Transform parent,
+        Vector3 position,
+        Vector3 targetSize,
+        Vector3 euler,
+        Material material,
+        bool collider = true)
+    {
+        GameObject root = CreateRoot(name, parent, position, euler);
+        Mesh braceletMesh = EnsureMesh("StorySupportBracelet", () => CreateLatheMesh(
+            "StorySupportBracelet",
+            new[]
+            {
+                new Vector2(0.34f, 0f),
+                new Vector2(0.365f, -0.055f),
+                new Vector2(0.42f, -0.08f),
+                new Vector2(0.475f, -0.055f),
+                new Vector2(0.5f, 0f),
+                new Vector2(0.475f, 0.055f),
+                new Vector2(0.42f, 0.08f),
+                new Vector2(0.365f, 0.055f)
+            },
+            24,
+            true,
+            true));
+        CreateMeshChild("BraceletRing", root.transform, braceletMesh, material, Vector3.zero, Vector3.zero,
+            Vector3.one);
+        FitToSize(root, position, targetSize);
+        if (collider)
+            EnsureBoxCollider(root);
+        return root;
+    }
+
     internal static GameObject CreateFoldedCloth(
         string name,
         Transform parent,
@@ -470,10 +559,18 @@ internal static class StoryAuthoredPropFactory
             new Vector3(0.78f, 1f, 1.3f));
         CreateMeshChild("Upper", root.transform, upperMesh, upper, new Vector3(0f, 0.12f, 0.05f), Vector3.zero,
             new Vector3(0.7f, 1f, 1.05f));
+        CreateMeshChild("Tongue", root.transform, insetMesh, upper, new Vector3(0f, 0.39f, 0.08f), Vector3.zero,
+            new Vector3(0.42f, 0.42f, 0.42f));
         CreateMeshChild("Collar", root.transform, insetMesh, sole, new Vector3(0f, 0.43f, -0.2f), Vector3.zero,
-            new Vector3(0.34f, 1f, 0.34f));
-        CreateMeshChild("ToeAccent", root.transform, insetMesh, sole, new Vector3(0f, 0.31f, 0.45f), Vector3.zero,
-            new Vector3(0.46f, 0.34f, 0.12f));
+            new Vector3(0.36f, 1f, 0.34f));
+        CreateMeshChild("RubberToe", root.transform, insetMesh, sole, new Vector3(0f, 0.34f, 0.4f), Vector3.zero,
+            new Vector3(0.54f, 0.36f, 0.24f));
+        CreateMeshChild("ShoeLace_1", root.transform, insetMesh, sole, new Vector3(0f, 0.44f, -0.01f), Vector3.zero,
+            new Vector3(0.4f, 0.32f, 0.045f));
+        CreateMeshChild("ShoeLace_2", root.transform, insetMesh, sole, new Vector3(0f, 0.45f, 0.1f), Vector3.zero,
+            new Vector3(0.44f, 0.32f, 0.045f));
+        CreateMeshChild("ShoeLace_3", root.transform, insetMesh, sole, new Vector3(0f, 0.43f, 0.21f), Vector3.zero,
+            new Vector3(0.47f, 0.32f, 0.045f));
     }
 
     private static GameObject CreateRoot(string name, Transform parent, Vector3 position, Vector3 euler,

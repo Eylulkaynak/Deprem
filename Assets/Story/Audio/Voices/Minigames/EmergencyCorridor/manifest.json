@@ -1,0 +1,12 @@
+{
+  "scene": "Minigame_EmergencyCorridor",
+  "entries": [
+    { "id": "01_route_cars", "subtitle": "Operatör: Araçlara dokunma; rota komutlarını güvenli ceplere sürükle.", "segments": [{ "speaker": "operator", "text": "Araçlara dokunma. Rota komutlarını güvenli ceplere sürükle." }] },
+    { "id": "02_barriers", "subtitle": "Operatör: Bariyer yerlerini işaretle; ağır bariyerleri yetişkin ekip taşıyacak.", "segments": [{ "speaker": "operator", "text": "Bariyer yerlerini işaretle. Ağır bariyerleri yetişkin ekip taşıyacak." }] },
+    { "id": "03_pedestrians", "subtitle": "Operatör: Kalabalığı taşıt yolundan çıkarıp güvenli kaldırıma yönlendir.", "segments": [{ "speaker": "operator", "text": "Kalabalığı taşıt yolundan çıkarıp güvenli kaldırıma yönlendir." }] },
+    { "id": "04_facade", "subtitle": "Operatör: Hasarlı cephe sonrası kırmızı rotayı kapat; güvenli alternatifi seç.", "segments": [{ "speaker": "operator", "text": "Hasarlı cephe sonrası kırmızı rotayı kapat. Güvenli alternatifi seç." }] },
+    { "id": "05_cross_traffic", "subtitle": "Operatör: Çapraz trafiği durdur ve acil koridoru tamamen boş bırak.", "segments": [{ "speaker": "operator", "text": "Çapraz trafiği durdur ve acil koridoru tamamen boş bırak." }] },
+    { "id": "06_green_wave", "subtitle": "Operatör: Kavşaklar hazır. İtfaiye için yeşil dalgayı basılı tutarak etkinleştir.", "segments": [{ "speaker": "operator", "text": "Kavşaklar hazır. İtfaiye için yeşil dalgayı basılı tutarak etkinleştir." }] },
+    { "id": "07_arrival", "subtitle": "Operatör: Koridor açık; ekip güvenli ve kesintisiz biçimde olay yerine ulaştı.", "segments": [{ "speaker": "operator", "text": "Koridor açık. Ekip güvenli ve kesintisiz biçimde olay yerine ulaştı." }] }
+  ]
+}

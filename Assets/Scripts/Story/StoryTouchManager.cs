@@ -179,6 +179,9 @@ namespace Deprem.Story
             if (interactionsEnabled)
             {
                 StoryInteractable selected = FindBestInteractable(screenPosition, hitCount);
+                // Şişman parmak affı: ışın küçük/kenardaki collider'ı ıskaladıysa,
+                // ekranda dokunuşa yakın duran görünür ve önü açık etkileşim seçilir.
+                selected ??= FindNearbyInteractableOnScreen(screenPosition);
                 if (directWorldGestures && pendingPrepared && selected == pendingInteraction)
                 {
                     BeginDirectWorldGesture(screenPosition);
@@ -213,7 +216,9 @@ namespace Deprem.Story
 
             if (!worldNavigationEnabled)
             {
-                ui?.ShowContext("Sarsıntı sürerken bulunduğun güvenli alanda kal.");
+                ui?.ShowContext(preparationDirector != null
+                    ? "Bu adımda yürümek yerine vurgulanan nesnenin üzerinden dokunma veya sürüklemeyi başlat."
+                    : "Sarsıntı sürerken bulunduğun güvenli alanda kal.");
                 return;
             }
 
@@ -221,6 +226,10 @@ namespace Deprem.Story
             {
                 RaycastHit hit = hitBuffer[i];
                 if (hit.collider.isTrigger)
+                    continue;
+                // Kendi gövdesine dokunmak yürüyüşü kendi konumuna kilitlemesin;
+                // ışın karakterin arkasındaki gerçek zemine geçer.
+                if (hit.collider.GetComponentInParent<StoryPlayerMovement>() != null)
                     continue;
 
                 // Mobilya ve duvara dokunulduğunda en yakın erişilebilir zemin çözülür.
@@ -276,6 +285,9 @@ namespace Deprem.Story
                 case StoryInteractionGesture.SwipeDown:
                     ui?.ShowContext(interactable.Prompt + " — NESNENİN ÜZERİNDE AŞAĞI ÇEK");
                     return;
+                case StoryInteractionGesture.SwipeDiagonalDownRight:
+                    ui?.ShowContext(interactable.Prompt + " — NESNENİN ÜZERİNDE SAĞ ALTA ÇEK");
+                    return;
                 case StoryInteractionGesture.SwipeHorizontal:
                     ui?.ShowContext(interactable.Prompt + " — NESNENİN ÜZERİNDE TUTUP ÇEK");
                     return;
@@ -315,6 +327,7 @@ namespace Deprem.Story
                         ui?.ShowContext($"{interactable.Prompt} — NESNEYE DOKUN {completedDirectGestureCount}/{Mathf.Max(2, interactable.RequiredGestureCount)}");
                     break;
                 case StoryInteractionGesture.SwipeDown:
+                case StoryInteractionGesture.SwipeDiagonalDownRight:
                 case StoryInteractionGesture.SwipeHorizontal:
                     directGestureStartPosition = screenPosition;
                     directGestureActive = true;
@@ -349,18 +362,7 @@ namespace Deprem.Story
                     managedDrag.UpdateManagedDrag(dragPosition);
 
                 if (TryGetPointerUp(out Vector2 releasePosition))
-                {
-                    DraggableItem released = managedDrag;
-                    managedDrag = null;
-                    if (released.EndManagedDrag(releasePosition))
-                        CompletePendingInteraction();
-                    else
-                        ui?.ShowContext(
-                            pendingInteraction != null &&
-                            pendingInteraction.InteractionGesture == StoryInteractionGesture.DragToTarget
-                                ? "Nesneyi sahnedeki gerçek hedef alanına bırak."
-                                : "Nesneyi çantanın açık ağzına bırak.");
-                }
+                    ReleaseManagedDrag(releasePosition);
                 return true;
             }
 
@@ -374,17 +376,28 @@ namespace Deprem.Story
                 StoryInteractionGesture gesture = pendingInteraction != null
                     ? pendingInteraction.InteractionGesture
                     : StoryInteractionGesture.Tap;
-                bool valid = gesture == StoryInteractionGesture.SwipeDown
-                    ? delta.y <= -worldSwipeThreshold && Mathf.Abs(delta.y) > Mathf.Abs(delta.x) * 1.2f
-                    : Mathf.Abs(delta.x) >= worldSwipeThreshold && Mathf.Abs(delta.x) > Mathf.Abs(delta.y) * 1.2f;
+                bool valid = gesture switch
+                {
+                    StoryInteractionGesture.SwipeDown =>
+                        delta.y <= -worldSwipeThreshold && Mathf.Abs(delta.y) > Mathf.Abs(delta.x) * 1.2f,
+                    StoryInteractionGesture.SwipeDiagonalDownRight =>
+                        IsDiagonalDownRight(delta, worldSwipeThreshold),
+                    _ => Mathf.Abs(delta.x) >= worldSwipeThreshold &&
+                         Mathf.Abs(delta.x) > Mathf.Abs(delta.y) * 1.2f
+                };
                 if (valid && gesture == StoryInteractionGesture.SwipeHorizontal)
                     valid = IsHorizontalGestureHeadingToSceneTarget(delta);
                 if (valid)
                     CompletePendingInteraction();
                 else
-                    ui?.ShowContext(gesture == StoryInteractionGesture.SwipeDown
-                        ? "Nesnenin üzerinden aşağı doğru tutup çek."
-                        : "Nesnenin üzerinden yana doğru tutup çek.");
+                    ui?.ShowContext(gesture switch
+                    {
+                        StoryInteractionGesture.SwipeDown =>
+                            "Nesnenin üzerinden aşağı doğru tutup çek.",
+                        StoryInteractionGesture.SwipeDiagonalDownRight =>
+                            "Kulpu tutup kamerada göründüğü yönde sağ alta doğru çek.",
+                        _ => "Nesnenin üzerinden yana doğru tutup çek."
+                    });
             }
             return true;
         }
@@ -400,6 +413,12 @@ namespace Deprem.Story
                 StoryInteractable interactable = hitBuffer[i].collider.GetComponentInParent<StoryInteractable>();
                 if (interactable == null)
                 {
+                    // Oyuncunun kendi gövde kapsülü dokunuşu yutmaz; karakter hedefin
+                    // önünde dursa bile arkasındaki nesne seçilebilir. (Sırttaki çanta
+                    // gibi oyuncuya bağlı etkileşimler kendi StoryInteractable'ını
+                    // taşıdığı için bu daldan geçmez.)
+                    if (hitBuffer[i].collider.GetComponentInParent<StoryPlayerMovement>() != null)
+                        continue;
                     // İlk opak fizik yüzeyi duvar/mobilyaysa arkasındaki görünmez hotspot seçilemez.
                     // Trigger'lar yalnızca etkileşim hacmi olduğundan görüşü kapatmaz.
                     if (!hitBuffer[i].collider.isTrigger)
@@ -430,6 +449,55 @@ namespace Deprem.Story
             return best;
         }
 
+        private StoryInteractable FindNearbyInteractableOnScreen(Vector2 screenPosition)
+        {
+            // Telefonda ~9 mm'lik bir yakınlık affı; ekran yüksekliğine oranlanır.
+            float assistRadius = Mathf.Max(48f, Screen.height * 0.045f);
+            float bestDistance = assistRadius * assistRadius;
+            StoryInteractable best = null;
+            foreach (StoryInteractable candidate in FindObjectsByType<StoryInteractable>(
+                         FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+            {
+                if (!candidate.IsAvailable || !candidate.WorldSelectable)
+                    continue;
+
+                Renderer visibleRenderer = candidate.GetComponentInChildren<Renderer>();
+                Vector3 center = visibleRenderer != null
+                    ? visibleRenderer.bounds.center
+                    : candidate.transform.position;
+                Vector3 projected = worldCamera.WorldToScreenPoint(center);
+                if (projected.z <= 0f)
+                    continue;
+                float screenDistance = ((Vector2)projected - screenPosition).sqrMagnitude;
+                if (screenDistance >= bestDistance)
+                    continue;
+
+                // Önü statik geometriyle kapalı nesne affa girmez; oyuncunun kendi
+                // gövdesi ve diğer etkileşimler engel sayılmaz.
+                Vector3 origin = worldCamera.transform.position;
+                Vector3 direction = center - origin;
+                bool occluded = false;
+                int occlusionHits = Physics.RaycastNonAlloc(
+                    origin, direction.normalized, hitBuffer, direction.magnitude - 0.05f,
+                    raycastMask, QueryTriggerInteraction.Ignore);
+                for (int i = 0; i < occlusionHits; i++)
+                {
+                    Collider blocker = hitBuffer[i].collider;
+                    if (blocker.GetComponentInParent<StoryInteractable>() != null ||
+                        blocker.GetComponentInParent<StoryPlayerMovement>() != null)
+                        continue;
+                    occluded = true;
+                    break;
+                }
+                if (occluded)
+                    continue;
+
+                bestDistance = screenDistance;
+                best = candidate;
+            }
+            return best;
+        }
+
         private bool IsHorizontalGestureHeadingToSceneTarget(Vector2 gestureDelta)
         {
             StoryInteractable interactable = pendingInteraction;
@@ -449,6 +517,15 @@ namespace Deprem.Story
             if (Mathf.Abs(expectedX) < 24f)
                 return true;
             return Mathf.Sign(gestureDelta.x) == Mathf.Sign(expectedX);
+        }
+
+        private static bool IsDiagonalDownRight(Vector2 gestureDelta, float threshold)
+        {
+            if (gestureDelta.magnitude < threshold)
+                return false;
+
+            Vector2 expected = new Vector2(1f, -1f).normalized;
+            return Vector2.Dot(gestureDelta.normalized, expected) >= 0.82f;
         }
 
         private void BeginWorldHold(StoryInteractable interactable)
@@ -475,13 +552,23 @@ namespace Deprem.Story
                 return;
             }
 
+            UpdateWorldHoldAt(currentPosition, Time.unscaledTime);
+        }
+
+        // Girdi okuma tek yerde kalır; ilerleme hesabı ise aynı manager yolu
+        // üzerinden deterministik PlayMode doğrulamasına da açılır.
+        private void UpdateWorldHoldAt(Vector2 currentPosition, float unscaledNow)
+        {
+            if (!worldHoldActive)
+                return;
+
             if ((currentPosition - worldHoldStartPosition).sqrMagnitude > WorldHoldDriftLimit * WorldHoldDriftLimit)
             {
                 CancelWorldHold("Parmağını hedefin üzerinde tut.");
                 return;
             }
 
-            float progress = Mathf.Clamp01((Time.unscaledTime - worldHoldStartedAt) / worldHoldDuration);
+            float progress = Mathf.Clamp01((unscaledNow - worldHoldStartedAt) / worldHoldDuration);
             int step = Mathf.FloorToInt(progress * 10f);
             if (step != worldHoldProgressStep)
             {
@@ -494,6 +581,27 @@ namespace Deprem.Story
                 worldHoldActive = false;
                 CompletePendingInteraction();
             }
+        }
+
+        // PointerUp okuması UpdateDirectWorldGesture'da kalır; fiziksel bırakma
+        // ve StoryInteractable tamamlama tek, test edilebilir manager yoludur.
+        private bool ReleaseManagedDrag(Vector2 releasePosition)
+        {
+            if (managedDrag == null)
+                return false;
+
+            DraggableItem released = managedDrag;
+            managedDrag = null;
+            bool accepted = released.EndManagedDrag(releasePosition);
+            if (accepted)
+                CompletePendingInteraction();
+            else
+                ui?.ShowContext(
+                    pendingInteraction != null &&
+                    pendingInteraction.InteractionGesture == StoryInteractionGesture.DragToTarget
+                        ? "Nesneyi sahnedeki gerçek hedef alanına bırak."
+                        : "Nesneyi çantanın açık ağzına bırak.");
+            return accepted;
         }
 
         private void CancelWorldHold(string message)

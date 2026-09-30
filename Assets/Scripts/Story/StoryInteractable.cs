@@ -80,7 +80,10 @@ namespace Deprem.Story
             Transform point = interactionPoint != null ? interactionPoint : transform;
             if (interactFromAnywhere || player == null || Vector3.Distance(player.transform.position, point.position) <= interactionRange)
             {
-                player?.FaceTowards(transform.position);
+                // Uzaktan/doğrudan etkileşimler karakteri authored koruma yönünden çevirmemeli.
+                // Yaklaşmalı etkileşimlerdeki doğal yönelme aşağıdaki rota akışında korunuyor.
+                if (!interactFromAnywhere)
+                    player?.FaceTowards(transform.position);
                 ready?.Invoke();
                 return true;
             }

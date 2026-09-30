@@ -16,6 +16,12 @@ public static class StoryAnimationLibraryBuilder
     public const string ChildCoverMaskPath = "Assets/Story/Animations/Generated/ChildCoverUpperBody.mask";
     public const string ChildCoverUpperPosePath = "Assets/Story/Animations/Generated/ChildCoverUpperPose.anim";
     public const string AdultNeutralIdlePath = "Assets/Story/Animations/Generated/AdultNeutralIdle.anim";
+    public const string ChildTalkingIdlePath = "Assets/Story/Animations/Generated/ChildTalkingIdle.anim";
+    public const string AdultTalkingIdlePath = "Assets/Story/Animations/Generated/AdultTalkingIdle.anim";
+    public const string AdultInjuredSeatedPosePath =
+        "Assets/Story/Animations/Generated/AdultInjuredSeatedPose.anim";
+    public const string AdultInjuredControllerPath =
+        "Assets/Story/Animations/Generated/StoryAdultInjuredAnimator.controller";
 
     private const string KayKitRoot = "Assets/Story/Animations/ThirdParty/KayKit";
     private const string QuaterniusRoot = "Assets/Story/Animations/ThirdParty/Quaternius";
@@ -25,6 +31,11 @@ public static class StoryAnimationLibraryBuilder
     private const string SimulationPath = KayKitRoot + "/Rig_Medium_Simulation.fbx";
     private const string ToolsPath = KayKitRoot + "/Rig_Medium_Tools.fbx";
     private const string UniversalPath = QuaterniusRoot + "/UAL1_Standard.fbx";
+    // Quaternius' 2.5 s neutral loop reads as a restless sway on a portrait phone.
+    // Keep locomotion responsive, but let the resting pose breathe at roughly one
+    // calm cycle every six seconds.  Faster playback made the whole torso sway
+    // continuously in portrait close-ups and read as nervous/nauseating motion.
+    private const float NeutralIdlePlaybackSpeed = 0.42f;
     private const float ChildWalkPlaybackSpeed = 1.45f;
 
     private static readonly string[] SourceModels =
@@ -55,6 +66,7 @@ public static class StoryAnimationLibraryBuilder
 
         RuntimeAnimatorController controller = CreateChildController();
         CreateAdultController();
+        CreateAdultInjuredController();
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
 
@@ -78,6 +90,21 @@ public static class StoryAnimationLibraryBuilder
         RuntimeAnimatorController controller = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(AdultControllerPath);
         if (controller == null)
             throw new InvalidOperationException("Yetişkin Story Animator oluşturulamadı: " + AdultControllerPath);
+        return controller;
+    }
+
+    public static RuntimeAnimatorController LoadAdultInjuredController()
+    {
+        RuntimeAnimatorController controller =
+            AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(AdultInjuredControllerPath);
+        if (controller != null)
+            return controller;
+
+        BuildLibrary(false);
+        controller = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(AdultInjuredControllerPath);
+        if (controller == null)
+            throw new InvalidOperationException(
+                "Yaralı yetişkin Animator oluşturulamadı: " + AdultInjuredControllerPath);
         return controller;
     }
 
@@ -110,7 +137,7 @@ public static class StoryAnimationLibraryBuilder
             {
                 bool loop = ShouldLoop(clip.name);
                 if (clip.loopTime != loop || !clip.loopPose || !clip.lockRootRotation ||
-                    !clip.lockRootHeightY || !clip.lockRootPositionXZ)
+                    !clip.lockRootHeightY || !clip.lockRootPositionXZ || clip.heightFromFeet)
                     reimport = true;
 
                 clip.loopTime = loop;
@@ -121,7 +148,9 @@ public static class StoryAnimationLibraryBuilder
                 clip.lockRootRotation = true;
                 clip.lockRootHeightY = true;
                 clip.lockRootPositionXZ = true;
-                clip.heightFromFeet = true;
+                // Meshy avatars report an exaggerated feetBottomHeight. Root extraction from
+                // that value folds ankles/knees when the same clips are retargeted near props.
+                clip.heightFromFeet = false;
             }
             importer.clipAnimations = clips;
         }
@@ -132,45 +161,69 @@ public static class StoryAnimationLibraryBuilder
 
     private static RuntimeAnimatorController CreateChildController()
     {
-        // The Meshy family uses one clean Humanoid locomotion source. Deniz's generated walk has
-        // the correct forward direction for these rigs, so the old 180-degree root correction is
-        // deliberately not applied.
-        AnimationClip childIdle = CreateCleanClipCopy(
-            FindClip(GeneralPath, "Idle_A"),
+        // Meshy source geometry is normalized once on the prefab Visual root. Its authored walk
+        // carries the opposite Humanoid RootQ facing, so cancel that second 180-degree turn here;
+        // idle, talk and locomotion then share one visible forward axis.
+        // A phone-close 2.5D character needs a planted rest pose. The source idle's
+        // full-body sway makes both retargeted children appear to hover even with root
+        // motion locked, so freeze one balanced frame while keeping the walk blend live.
+        AnimationClip childIdle = CreateFrozenPose(
+            FindClip(UniversalPath, "Armature|Idle_Loop"),
             ChildNeutralIdlePath,
             "ChildNeutralIdle",
+            0.18f);
+        AnchorHumanoidIdleRoot(childIdle);
+        AnimationClip childTalkingIdle = CreateCleanClipCopy(
+            FindClip(UniversalPath, "Armature|Idle_Talking_Loop"),
+            ChildTalkingIdlePath,
+            "ChildTalkingIdle",
             true);
+        EnsureRootHeightFromFeet(MeshyFamilyCharacterImporter.DenizWalkingPath);
         AnimationClip meshyWalk = MeshyFamilyCharacterImporter.LoadPrimaryAnimationClip(
             MeshyFamilyCharacterImporter.DenizWalkingPath);
         if (meshyWalk == null || !meshyWalk.isHumanMotion)
             throw new InvalidOperationException("Meshy Deniz Humanoid yürüyüş klibi bulunamadı.");
         AnimationClip childWalk = CreateCleanClipCopy(
             meshyWalk, ChildNaturalWalkPath, "ChildNaturalWalk");
-        AnimationClip crouching = FindClip(MovementAdvancedPath, "Crouching");
+        NormalizeHumanoidRootFacing(childWalk, 180f);
+        // Use the library's actual crouch-idle. KayKit's Crouching clip is a locomotion cycle and
+        // visibly walks in place when the NavMesh agents are stopped.
+        AnimationClip crouchingPose = CreateChildCoverPose();
         AnimationClip coverUpperPose = CreateFrozenPose(
-            FindClip(SimulationPath, "Waving"), ChildCoverUpperPosePath, "ChildCoverUpperPose", 0.25f);
+            FindClip(UniversalPath, "Armature|Hit_Head"),
+            ChildCoverUpperPosePath,
+            "ChildCoverUpperPose",
+            0.46f);
         AuthorProtectiveUpperBodyPose(coverUpperPose);
         AnimatorController existing = AssetDatabase.LoadAssetAtPath<AnimatorController>(ControllerPath);
         string[] requiredStates =
         {
-            "Locomotion", "Interact", "Pick Up", "Inspect", "Call Sibling", "Startle",
+            "Locomotion", "Talk", "Interact", "Pick Up", "Inspect", "Call Sibling", "Startle",
             "Recover Balance", "Crouch", "Protect Head", "Hold Cover", "Work"
         };
         if (IsControllerComplete(existing, requiredStates) &&
             StateGraphUsesMotion(existing, "Locomotion", "ChildNeutralIdle") &&
-            StateGraphUsesMotion(existing, "Locomotion", "ChildNaturalWalk") &&
+             StateGraphUsesMotion(existing, "Locomotion", "ChildNaturalWalk") &&
+             StateUsesMotion(existing, "Talk", "ChildTalkingIdle") &&
+             StateUsesMotion(existing, "Call Sibling", "ChildTalkingIdle") &&
+            StateGraphUsesMotionAtSpeed(
+                existing,
+                "Locomotion",
+                "ChildNeutralIdle",
+                NeutralIdlePlaybackSpeed) &&
             StateGraphUsesMotionAtSpeed(
                 existing,
                 "Locomotion",
                 "ChildNaturalWalk",
                 ChildWalkPlaybackSpeed) &&
-            StateUsesFootIk(existing, "Locomotion") &&
+            !StateUsesFootIk(existing, "Locomotion") &&
             StoryTransitionsRequireStationaryCharacter(existing) &&
             !StateGraphUsesMotion(existing, "Locomotion", "Walking_A") &&
             !StateGraphUsesMotion(existing, "Locomotion", "Walking_B") &&
             !StateGraphUsesMotion(existing, "Locomotion", "boy_move_walk") &&
-            StateUsesMotion(existing, "Protect Head", "Crouching") &&
-            StateUsesMotion(existing, "Hold Cover", "Crouching") &&
+            StateUsesMotion(existing, "Crouch", "ChildCoverPose") &&
+            StateUsesMotion(existing, "Protect Head", "ChildCoverPose") &&
+            StateUsesMotion(existing, "Hold Cover", "ChildCoverPose") &&
             HasChildCoverUpperBodyLayer(existing))
             return existing;
         if (existing != null)
@@ -182,7 +235,9 @@ public static class StoryAnimationLibraryBuilder
             controller.AddParameter(trigger, AnimatorControllerParameterType.Trigger);
 
         AnimatorState locomotion = controller.CreateBlendTreeInController("Locomotion", out BlendTree locomotionTree, 0);
-        locomotion.iKOnFeet = true;
+        // The generated Meshy avatars do not provide reliable humanoid foot-goal metadata.
+        // Forcing Mecanim Foot IK bends their ankles and knees around the preparation table.
+        locomotion.iKOnFeet = false;
         locomotionTree.blendType = BlendTreeType.Simple1D;
         locomotionTree.blendParameter = "Speed";
         locomotionTree.useAutomaticThresholds = false;
@@ -192,7 +247,9 @@ public static class StoryAnimationLibraryBuilder
         ChildMotion[] locomotionChildren = locomotionTree.children;
         for (int index = 0; index < locomotionChildren.Length; index++)
         {
-            if (locomotionChildren[index].motion == childWalk)
+            if (locomotionChildren[index].motion == childIdle)
+                locomotionChildren[index].timeScale = NeutralIdlePlaybackSpeed;
+            else if (locomotionChildren[index].motion == childWalk)
                 locomotionChildren[index].timeScale = ChildWalkPlaybackSpeed;
         }
         locomotionTree.children = locomotionChildren;
@@ -200,15 +257,19 @@ public static class StoryAnimationLibraryBuilder
         AnimatorStateMachine stateMachine = controller.layers[0].stateMachine;
         stateMachine.defaultState = locomotion;
 
+        AddStoryState(stateMachine, locomotion, "Talk", "StoryTalk", childTalkingIdle, true);
         AddStoryState(stateMachine, locomotion, "Interact", "StoryInteract", FindClip(GeneralPath, "Interact"), false);
         AddStoryState(stateMachine, locomotion, "Pick Up", "StoryPickUp", FindClip(GeneralPath, "PickUp"), false);
         AddStoryState(stateMachine, locomotion, "Inspect", "StoryInspect", FindClip(UniversalPath, "Armature|Interact"), false);
-        AddStoryState(stateMachine, locomotion, "Call Sibling", "StoryCall", FindClip(SimulationPath, "Waving"), false);
+        // KayKit's Waving clip retargets the Meshy child's left ankle through
+        // roughly 147 degrees. The grounded talking idle still reads as calling
+        // once face/gaze is active and keeps both feet on the authored base pose.
+        AddStoryState(stateMachine, locomotion, "Call Sibling", "StoryCall", childTalkingIdle, false);
         AddStoryState(stateMachine, locomotion, "Startle", "StoryFear", FindClip(GeneralPath, "Hit_A"), false);
         AddStoryState(stateMachine, locomotion, "Recover Balance", "StoryDizzy", FindClip(GeneralPath, "Hit_B"), false);
-        AddStoryState(stateMachine, locomotion, "Crouch", "StoryCrouch", crouching, true);
-        AddStoryState(stateMachine, locomotion, "Protect Head", "StoryCover", crouching, true);
-        AddStoryState(stateMachine, locomotion, "Hold Cover", "StoryHold", crouching, true);
+        AddStoryState(stateMachine, locomotion, "Crouch", "StoryCrouch", crouchingPose, true);
+        AddStoryState(stateMachine, locomotion, "Protect Head", "StoryCover", crouchingPose, true);
+        AddStoryState(stateMachine, locomotion, "Hold Cover", "StoryHold", crouchingPose, true);
         AddStoryState(stateMachine, locomotion, "Work", "StoryWork", FindClip(ToolsPath, "Working_A"), false);
 
         AddResetTransition(stateMachine, locomotion);
@@ -221,15 +282,25 @@ public static class StoryAnimationLibraryBuilder
     private static RuntimeAnimatorController CreateAdultController()
     {
         AnimationClip adultIdle = CreateCleanClipCopy(
-            FindClip(GeneralPath, "Idle_A"), AdultNeutralIdlePath, "AdultNeutralIdle", true);
+            FindClip(UniversalPath, "Armature|Idle_Loop"),
+            AdultNeutralIdlePath,
+            "AdultNeutralIdle",
+            true);
+        AnimationClip adultTalkingIdle = CreateCleanClipCopy(
+            FindClip(UniversalPath, "Armature|Idle_Talking_Loop"),
+            AdultTalkingIdlePath,
+            "AdultTalkingIdle",
+            true);
         AnimatorController existing = AssetDatabase.LoadAssetAtPath<AnimatorController>(AdultControllerPath);
         string[] requiredStates =
         {
-            "Adult Idle", "Adult Interact", "Adult Pick Up", "Adult Inspect", "Adult Call",
+            "Adult Idle", "Adult Talk", "Adult Interact", "Adult Pick Up", "Adult Inspect", "Adult Call",
             "Adult Startle", "Adult Recover", "Adult Crouch", "Adult Cover", "Adult Hold", "Adult Work"
         };
         if (IsControllerComplete(existing, requiredStates) &&
             StateUsesMotion(existing, "Adult Idle", "AdultNeutralIdle") &&
+            StateUsesPlaybackSpeed(existing, "Adult Idle", NeutralIdlePlaybackSpeed) &&
+            StateUsesMotion(existing, "Adult Talk", "AdultTalkingIdle") &&
             StateUsesMotion(existing, "Adult Interact", "Interact") &&
             StateUsesMotion(existing, "Adult Pick Up", "PickUp") &&
             StateUsesMotion(existing, "Adult Work", "Working_B"))
@@ -245,9 +316,11 @@ public static class StoryAnimationLibraryBuilder
         AnimatorStateMachine stateMachine = controller.layers[0].stateMachine;
         AnimatorState idle = stateMachine.AddState("Adult Idle");
         idle.motion = adultIdle;
+        idle.speed = NeutralIdlePlaybackSpeed;
         idle.writeDefaultValues = true;
         stateMachine.defaultState = idle;
 
+        AddStoryState(stateMachine, idle, "Adult Talk", "StoryTalk", adultTalkingIdle, true);
         // RGPoly yetişkin iskeletinin kalçası çocuk iskeletinden geniş. Çocuk idle klibindeki ayak IK
         // hedefleri doğrudan retarget edilince bacaklar gereksiz açılıyordu. Yetişkin idle'ı aynı güvenilir
         // klibin kök hareketi korunmuş, yalnız yatay ayak açıklığı ve kalça dışa açısı azaltılmış kopyasıdır.
@@ -277,6 +350,36 @@ public static class StoryAnimationLibraryBuilder
         return controller;
     }
 
+    private static RuntimeAnimatorController CreateAdultInjuredController()
+    {
+        // The neighbor is an authored, stationary story prop. A frozen seated frame reads as
+        // injured/resting without adding any runtime pose code or a looping hover animation.
+        AnimationClip seatedPose = CreateFrozenPose(
+            FindClip(UniversalPath, "Armature|Sitting_Idle_Loop"),
+            AdultInjuredSeatedPosePath,
+            "AdultInjuredSeatedPose",
+            0.42f);
+        AnchorHumanoidIdleRoot(seatedPose);
+
+        AnimatorController existing =
+            AssetDatabase.LoadAssetAtPath<AnimatorController>(AdultInjuredControllerPath);
+        if (StateUsesMotion(existing, "Injured Seated", "AdultInjuredSeatedPose"))
+            return existing;
+        if (existing != null)
+            AssetDatabase.DeleteAsset(AdultInjuredControllerPath);
+
+        AnimatorController controller =
+            AnimatorController.CreateAnimatorControllerAtPath(AdultInjuredControllerPath);
+        AnimatorStateMachine stateMachine = controller.layers[0].stateMachine;
+        AnimatorState seated = stateMachine.AddState("Injured Seated");
+        seated.motion = seatedPose;
+        seated.writeDefaultValues = true;
+        seated.iKOnFeet = false;
+        stateMachine.defaultState = seated;
+        EditorUtility.SetDirty(controller);
+        return controller;
+    }
+
     private static bool IsControllerComplete(AnimatorController controller, IReadOnlyCollection<string> requiredStates)
     {
         if (controller == null || controller.layers.Length == 0)
@@ -299,6 +402,20 @@ public static class StoryAnimationLibraryBuilder
             .Select(child => child.state)
             .FirstOrDefault(candidate => candidate != null && candidate.name == stateName);
         return state != null && state.motion != null && state.motion.name == motionName;
+    }
+
+    private static bool StateUsesPlaybackSpeed(
+        AnimatorController controller,
+        string stateName,
+        float expectedSpeed)
+    {
+        if (controller == null || controller.layers.Length == 0)
+            return false;
+
+        AnimatorState state = controller.layers[0].stateMachine.states
+            .Select(child => child.state)
+            .FirstOrDefault(candidate => candidate != null && candidate.name == stateName);
+        return state != null && Mathf.Abs(state.speed - expectedSpeed) < 0.001f;
     }
 
     private static bool StateGraphUsesMotion(AnimatorController controller, string stateName, string motionName)
@@ -473,33 +590,42 @@ public static class StoryAnimationLibraryBuilder
 
     private static void AuthorProtectiveUpperBodyPose(AnimationClip clip)
     {
-        // The source wave only raises a straight arm and reads as both hands resting on the floor
-        // once combined with the crouch. Shape the humanoid muscles into an unmistakable
-        // head-and-neck cover: elbows forward, forearms folded back over the crown.
-        SetConstantMuscleCurve(clip, "Spine Front-Back", 0.28f);
-        SetConstantMuscleCurve(clip, "Chest Front-Back", 0.34f);
-        SetConstantMuscleCurve(clip, "UpperChest Front-Back", 0.24f);
-        SetConstantMuscleCurve(clip, "Head Nod Down-Up", -0.32f);
+        // Humanoid hand goal curves can override the retargeted arm muscles and pin wrists in front
+        // of the chest on one child while twisting them behind the neck on the other.
+        foreach (EditorCurveBinding binding in AnimationUtility.GetCurveBindings(clip))
+        {
+            string property = binding.propertyName ?? string.Empty;
+            bool handIk = property.StartsWith("LeftHandT", StringComparison.Ordinal) ||
+                          property.StartsWith("LeftHandQ", StringComparison.Ordinal) ||
+                          property.StartsWith("RightHandT", StringComparison.Ordinal) ||
+                          property.StartsWith("RightHandQ", StringComparison.Ordinal);
+            if (handIk)
+                AnimationUtility.SetEditorCurve(clip, binding, null);
+        }
 
-        SetConstantMuscleCurve(clip, "Left Shoulder Down-Up", 0.25f);
-        SetConstantMuscleCurve(clip, "Left Shoulder Front-Back", -0.24f);
-        SetConstantMuscleCurve(clip, "Left Arm Down-Up", 0.82f);
-        SetConstantMuscleCurve(clip, "Left Arm Front-Back", -0.38f);
-        SetConstantMuscleCurve(clip, "Left Arm Twist In-Out", -0.42f);
-        SetConstantMuscleCurve(clip, "Left Forearm Stretch", -0.92f);
-        SetConstantMuscleCurve(clip, "Left Forearm Twist In-Out", -0.18f);
-        SetConstantMuscleCurve(clip, "Left Hand Down-Up", -0.18f);
-        SetConstantMuscleCurve(clip, "Left Hand In-Out", 0.08f);
+        // Symmetric child-safe protective silhouette: shoulders forward, elbows beside the head,
+        // forearms folded inward over the crown. Avoid the source clip's asymmetric recoil pose.
+        SetConstantMuscleCurve(clip, "Head Nod Down-Up", -0.48f);
 
-        SetConstantMuscleCurve(clip, "Right Shoulder Down-Up", 0.25f);
-        SetConstantMuscleCurve(clip, "Right Shoulder Front-Back", -0.24f);
-        SetConstantMuscleCurve(clip, "Right Arm Down-Up", 0.82f);
-        SetConstantMuscleCurve(clip, "Right Arm Front-Back", -0.38f);
-        SetConstantMuscleCurve(clip, "Right Arm Twist In-Out", 0.42f);
-        SetConstantMuscleCurve(clip, "Right Forearm Stretch", -0.92f);
-        SetConstantMuscleCurve(clip, "Right Forearm Twist In-Out", 0.18f);
-        SetConstantMuscleCurve(clip, "Right Hand Down-Up", 0.18f);
-        SetConstantMuscleCurve(clip, "Right Hand In-Out", -0.08f);
+        SetConstantMuscleCurve(clip, "Left Shoulder Down-Up", 1f);
+        SetConstantMuscleCurve(clip, "Left Shoulder Front-Back", -1f);
+        SetConstantMuscleCurve(clip, "Left Arm Down-Up", 0.6856f);
+        SetConstantMuscleCurve(clip, "Left Arm Front-Back", -1f);
+        SetConstantMuscleCurve(clip, "Left Arm Twist In-Out", 0.4875f);
+        SetConstantMuscleCurve(clip, "Left Forearm Stretch", -0.45f);
+        SetConstantMuscleCurve(clip, "Left Forearm Twist In-Out", -0.7838f);
+        SetConstantMuscleCurve(clip, "Left Hand Down-Up", 0f);
+        SetConstantMuscleCurve(clip, "Left Hand In-Out", 0f);
+
+        SetConstantMuscleCurve(clip, "Right Shoulder Down-Up", 1f);
+        SetConstantMuscleCurve(clip, "Right Shoulder Front-Back", -1f);
+        SetConstantMuscleCurve(clip, "Right Arm Down-Up", 0.6856f);
+        SetConstantMuscleCurve(clip, "Right Arm Front-Back", -1f);
+        SetConstantMuscleCurve(clip, "Right Arm Twist In-Out", 0.4875f);
+        SetConstantMuscleCurve(clip, "Right Forearm Stretch", -0.45f);
+        SetConstantMuscleCurve(clip, "Right Forearm Twist In-Out", -0.7838f);
+        SetConstantMuscleCurve(clip, "Right Hand Down-Up", 0f);
+        SetConstantMuscleCurve(clip, "Right Hand In-Out", 0f);
         EditorUtility.SetDirty(clip);
     }
 
@@ -526,56 +652,72 @@ public static class StoryAnimationLibraryBuilder
 
     private static AnimationClip CreateChildCoverPose()
     {
-        AnimationClip crouching = FindClip(MovementAdvancedPath, "Crouching");
-        AnimationClip waving = FindClip(SimulationPath, "Waving");
-        AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(ChildCoverPosePath);
-        if (clip == null)
+        // A take-cover state is a held safety posture, not an idle locomotion loop. Freeze one
+        // grounded frame so knees, shoes and hips cannot visibly cycle while the player holds.
+        AnimationClip pose = CreateFrozenPose(
+            FindClip(UniversalPath, "Armature|Crouch_Idle_Loop"),
+            ChildCoverPosePath,
+            "ChildCoverPose",
+            0.35f);
+        AnchorHumanoidIdleRoot(pose);
+        // Kaynak crouch dik gövdeli; masa altına sığması ve "başını koru" öğretisini
+        // okutması için omurga/baş kas eğrileriyle belirgin biçimde öne bükülür.
+        // (Negatif Front-Back = öne fleksiyon, negatif Nod = başı eğme.)
+        foreach ((string muscle, float value) in new[]
+                 {
+                     ("Spine Front-Back", -0.55f),
+                     ("Chest Front-Back", -0.45f),
+                     ("UpperChest Front-Back", -0.4f),
+                     ("Neck Nod Down-Up", -0.5f),
+                     ("Head Nod Down-Up", -0.6f)
+                 })
         {
-            clip = UnityEngine.Object.Instantiate(crouching);
-            clip.name = "ChildCoverPose";
-            AssetDatabase.CreateAsset(clip, ChildCoverPosePath);
+            pose.SetCurve(
+                string.Empty,
+                typeof(Animator),
+                muscle,
+                AnimationCurve.Constant(0f, pose.length, value));
         }
-        else
-        {
-            EditorUtility.CopySerialized(crouching, clip);
-            clip.name = "ChildCoverPose";
-        }
+        EditorUtility.SetDirty(pose);
+        return pose;
+    }
 
-        // The first wave apex gives a clear hand-over-head silhouette on the actual child avatar.
-        float overlayTime = waving.length * 0.25f;
-        float poseLength = Mathf.Max(1f / 30f, crouching.length);
-        foreach (EditorCurveBinding binding in AnimationUtility.GetCurveBindings(waving))
+    /// <summary>
+    /// Yürüyüş FBX'inin kök yükseklik ayarını bilinen-iyi durumda tutar.
+    /// DİKKAT: heightFromFeet bu rig'lerde etkin OLMAMALI — Meshy avatar'ının ayak
+    /// taban verisi bozuk (feetBottomHeight abartılı); ayak-tabanlı kök hesabı
+    /// karakteri yanlış yüksekliğe oturtup Foot IK ile bilekleri 180 derece
+    /// büküyor. Orijinal kök korunur; zemin oturması build sırasında
+    /// GroundCharacterFromHumanoidFeet ve agent.baseOffset ile sağlanır.
+    /// </summary>
+    private static void EnsureRootHeightFromFeet(string modelPath)
+    {
+        ModelImporter importer = AssetImporter.GetAtPath(modelPath) as ModelImporter;
+        if (importer == null)
+            throw new InvalidOperationException("Yürüyüş klibi ModelImporter'ı bulunamadı: " + modelPath);
+
+        ModelImporterClipAnimation[] clips = importer.clipAnimations;
+        if (clips == null || clips.Length == 0)
+            clips = importer.defaultClipAnimations;
+        if (clips == null || clips.Length == 0)
+            return;
+
+        bool changed = false;
+        foreach (ModelImporterClipAnimation clip in clips)
         {
-            string property = binding.propertyName ?? string.Empty;
-            bool humanoidHandIk = property.StartsWith("LeftHandT", StringComparison.Ordinal) ||
-                                  property.StartsWith("LeftHandQ", StringComparison.Ordinal) ||
-                                  property.StartsWith("RightHandT", StringComparison.Ordinal) ||
-                                  property.StartsWith("RightHandQ", StringComparison.Ordinal);
-            bool upperLimb = property.IndexOf("Shoulder", StringComparison.OrdinalIgnoreCase) >= 0 ||
-                             property.IndexOf("Arm", StringComparison.OrdinalIgnoreCase) >= 0 ||
-                             property.IndexOf("Forearm", StringComparison.OrdinalIgnoreCase) >= 0 ||
-                             property.IndexOf("Hand", StringComparison.OrdinalIgnoreCase) >= 0;
-            if (!upperLimb || humanoidHandIk)
+            if (clip.keepOriginalPositionY && !clip.heightFromFeet && clip.lockRootHeightY)
                 continue;
-
-            AnimationCurve sourceCurve = AnimationUtility.GetEditorCurve(waving, binding);
-            if (sourceCurve == null)
-                continue;
-
-            float value = sourceCurve.Evaluate(overlayTime);
-            AnimationCurve poseCurve = AnimationCurve.Constant(0f, poseLength, value);
-            poseCurve.preWrapMode = WrapMode.ClampForever;
-            poseCurve.postWrapMode = WrapMode.ClampForever;
-            AnimationUtility.SetEditorCurve(clip, binding, poseCurve);
+            clip.keepOriginalPositionY = true;
+            clip.heightFromFeet = false;
+            clip.lockRootHeightY = true;
+            changed = true;
         }
 
-        AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(crouching);
-        settings.loopTime = true;
-        settings.loopBlend = true;
-        AnimationUtility.SetAnimationClipSettings(clip, settings);
-        clip.wrapMode = WrapMode.Loop;
-        EditorUtility.SetDirty(clip);
-        return clip;
+        if (!changed)
+            return;
+        importer.clipAnimations = clips;
+        importer.SaveAndReimport();
+        Debug.Log("STORY_ANIMATION_LIBRARY yürüyüş kök yüksekliği ayarı onarıldı: " + modelPath);
     }
 
     private static AnimationClip CreateCleanClipCopy(
@@ -657,10 +799,9 @@ public static class StoryAnimationLibraryBuilder
 
     private static void NormalizeHumanoidRootFacing(AnimationClip clip, float yawCorrection)
     {
-        // Quaternius' Walk_Loop is authored with a roughly 180 degree humanoid RootQ yaw.
-        // NavMesh correctly rotates the character GameObject toward its velocity, but that
-        // baked RootQ then turns the rendered body back around. Correct only the root facing;
-        // every muscle curve (including the legs) remains untouched.
+        // Some Humanoid clips carry an authored RootQ yaw that disagrees with the reusable
+        // character prefab's visible forward axis. Correct only root facing; every muscle
+        // curve (including the legs) remains untouched.
         string[] properties = { "RootQ.x", "RootQ.y", "RootQ.z", "RootQ.w" };
         Dictionary<string, EditorCurveBinding> bindings = AnimationUtility.GetCurveBindings(clip)
             .Where(binding => string.IsNullOrEmpty(binding.path) && properties.Contains(binding.propertyName))
@@ -729,6 +870,9 @@ public static class StoryAnimationLibraryBuilder
         AnimatorState state = stateMachine.AddState(stateName);
         state.motion = clip;
         state.writeDefaultValues = true;
+        // Keep authored lower-body curves. Mecanim Foot IK uses the Meshy avatar's invalid
+        // feetBottomHeight and visibly folds the legs during close interaction shots.
+        state.iKOnFeet = false;
 
         AnimatorStateTransition enter = stateMachine.AddAnyStateTransition(state);
         enter.hasExitTime = false;
@@ -803,7 +947,7 @@ public static class StoryAnimationLibraryBuilder
 
     public static readonly string[] RequiredTriggers =
     {
-        "StoryReset", "StoryInteract", "StoryPickUp", "StoryInspect", "StoryCall",
+        "StoryReset", "StoryTalk", "StoryInteract", "StoryPickUp", "StoryInspect", "StoryCall",
         "StoryFear", "StoryDizzy", "StoryCrouch", "StoryCover", "StoryHold", "StoryWork"
     };
 }

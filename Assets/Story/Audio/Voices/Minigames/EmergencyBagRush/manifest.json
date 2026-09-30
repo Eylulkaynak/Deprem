@@ -1,0 +1,13 @@
+{
+  "scene": "Minigame_EmergencyBagRush",
+  "entries": [
+    { "id": "01_signal", "subtitle": "Anne: Otuz saniye! Fener, radyo, yedek pil ve düdüğü çantaya sürükle.", "segments": [{ "speaker": "anne", "text": "Otuz saniye. Fener, radyo, yedek pil ve düdüğü çantaya sürükle." }] },
+    { "id": "02_blackout", "subtitle": "Can: Elektrik kesildi. Fener yolu gösteriyor, radyo resmî duyuruyu taşıyor.", "segments": [{ "speaker": "can", "text": "Elektrik kesildi. Fener yolu gösteriyor, radyo resmî duyuruyu taşıyor." }] },
+    { "id": "03_food_water", "subtitle": "Deniz: Kapağı kapalı suyu ve dayanıklı yiyeceği seç; sızdıranı alma.", "segments": [{ "speaker": "deniz", "text": "Kapağı kapalı suyu ve dayanıklı yiyeceği seç. Sızdıranı alma." }] },
+    { "id": "04_health_docs", "subtitle": "Anne: Kapalı ilk yardım malzemesi, belge dosyası ve hafif battaniye sırada.", "segments": [{ "speaker": "anne", "text": "Kapalı ilk yardım malzemesi, belge dosyası ve hafif battaniye sırada." }] },
+    { "id": "05_weight_test", "subtitle": "Deniz: Çanta ağırlaştı. Ağırlık testini başlatıp dengesini kontrol et.", "segments": [{ "speaker": "deniz", "text": "Çanta ağırlaştı. Ağırlık testini başlatıp dengesini kontrol et." }] },
+    { "id": "06_remove_console", "subtitle": "Can: Konsol çok ağır. Onu çıkarıp çantayı yeniden dengeliyorum.", "segments": [{ "speaker": "can", "text": "Konsol çok ağır. Onu çıkarıp çantayı yeniden dengeliyorum." }] },
+    { "id": "07_comfort", "subtitle": "Anne: Temel malzemeler tamamlandıysa yalnız bir küçük rahatlatıcı eşya seç.", "segments": [{ "speaker": "anne", "text": "Temel malzemeler tamamlandıysa yalnız bir küçük rahatlatıcı eşya seç." }] },
+    { "id": "08_straps", "subtitle": "Deniz: İki askıyı da ayarlıyorum; ellerim serbest ve ağırlık dengeli.", "segments": [{ "speaker": "deniz", "text": "İki askıyı da ayarlıyorum. Ellerim serbest ve ağırlık dengeli." }] }
+  ]
+}

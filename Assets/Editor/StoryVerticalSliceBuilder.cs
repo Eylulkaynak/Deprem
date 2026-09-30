@@ -130,6 +130,10 @@ public static partial class StoryVerticalSliceBuilder
         public StoryInteractable safeCover;
         public StoryInteractable unsafeDoor;
         public StoryInteractable unsafeWindow;
+        public Transform coverApproachAnchor;
+        public Transform denizCoverAnchor;
+        public Transform canCoverAnchor;
+        public Transform postQuakeSafeReturn;
         public BeatDefinition[] postQuakeBeats;
         public StoryInteractable lightWithFlashlight;
         public StoryInteractable lightWithoutFlashlight;
@@ -717,14 +721,14 @@ public static partial class StoryVerticalSliceBuilder
         GameObject shoesRoot = new GameObject("Shoes_PostQuake");
         shoesRoot.transform.SetParent(parent);
         world.leftShoeWorld = StoryAuthoredPropFactory.CreateSingleShoe("DenizLeftShoe_World",
-            shoesRoot.transform, new Vector3(-2.92f, 0.02f, -2.22f), new Vector3(0.34f, 0.22f, 0.55f),
+            shoesRoot.transform, new Vector3(-2.92f, 0.02f, -2.22f), new Vector3(0.18f, 0.1f, 0.28f),
             new Vector3(0f, -12f, 0f), m.coral, m.cream);
         world.rightShoeWorld = StoryAuthoredPropFactory.CreateSingleShoe("DenizRightShoe_World",
-            shoesRoot.transform, new Vector3(-2.36f, 0.02f, -2.02f), new Vector3(0.34f, 0.22f, 0.55f),
+            shoesRoot.transform, new Vector3(-2.36f, 0.02f, -2.02f), new Vector3(0.18f, 0.1f, 0.28f),
             new Vector3(0f, 8f, 0f), m.coral, m.cream);
         world.canShoesWorld = StoryAuthoredPropFactory.CreateShoePair("CanShoes_World", shoesRoot.transform,
-            new Vector3(-1.52f, 0.02f, -1.31f), new Vector3(0.62f, 0.2f, 0.52f),
-            new Vector3(0f, 4f, 0f), m.amber, m.navy);
+            new Vector3(-1.52f, 0.02f, -1.31f), new Vector3(0.38f, 0.13f, 0.31f),
+            new Vector3(0f, 4f, 0f), m.amber, m.cream);
         world.leftShoeFocus = CreateFocus("LeftShoeFocus", new Vector3(-3.12f, 0.1f, -1.82f), shoesRoot.transform);
         world.rightShoeFocus = CreateFocus("RightShoeFocus", new Vector3(-2.13f, 0.1f, -1.66f), shoesRoot.transform);
         world.shoesFocus = CreateFocus("ShoesFocus", new Vector3(-2.54f, 0.1f, -1.48f), shoesRoot.transform);
@@ -1623,13 +1627,15 @@ public static partial class StoryVerticalSliceBuilder
         Set(serialized, "safeCover", interactions.safeCover);
         Set(serialized, "unsafeDoor", interactions.unsafeDoor);
         Set(serialized, "unsafeWindow", interactions.unsafeWindow);
+        Set(serialized, "denizCoverAnchor", interactions.denizCoverAnchor);
+        Set(serialized, "canCoverAnchor", interactions.canCoverAnchor);
         Set(serialized, "quakeMovementCenter", world.tableFocus);
         SetBeats(serialized, "postQuakeBeats", interactions.postQuakeBeats);
         Set(serialized, "lightWithFlashlight", interactions.lightWithFlashlight);
         Set(serialized, "lightWithoutFlashlight", interactions.lightWithoutFlashlight);
         Set(serialized, "corridorExit", interactions.exit);
         Set(serialized, "brokenGlassHazard", interactions.brokenGlassHazard);
-        Set(serialized, "postQuakeSafeReturn", world.tableFocus);
+        Set(serialized, "postQuakeSafeReturn", interactions.postQuakeSafeReturn ?? world.tableFocus);
         SetBeats(serialized, "corridorBeats", interactions.corridorBeats);
         Set(serialized, "wardrobeSecured", world.wardrobeSecured);
         Set(serialized, "wardrobeUnsecured", world.wardrobeUnsecured);
@@ -1734,6 +1740,11 @@ public static partial class StoryVerticalSliceBuilder
     {
         string fullPath = Path.GetFullPath(assetPath);
         Directory.CreateDirectory(Path.GetDirectoryName(fullPath) ?? string.Empty);
+        // Bu sesler deterministik ve bir kez üretilen editör varlıklarıdır. Sahne rebuild'i
+        // sırasında Unity AudioImporter dosyayı memory-map etmiş olabilir; mevcut geçerli WAV'ı
+        // tekrar yazmaya çalışmak Windows'ta ERROR_USER_MAPPED_FILE (1224) üretir.
+        if (File.Exists(fullPath) && new FileInfo(fullPath).Length > 44)
+            return;
         int sampleCount = Mathf.CeilToInt(duration * sampleRate);
         System.Random random = new System.Random(assetPath.GetHashCode());
         using FileStream stream = File.Create(fullPath);

@@ -21,6 +21,9 @@ namespace Deprem.Story
         private Vector3 lastTargetPosition;
         private bool following;
         private StoryPlayerMovement targetMovement;
+        private bool scriptedFacing;
+        private Quaternion scriptedFacingRotation;
+        private bool authoredPoseActive;
 
         public Transform Target => target;
         public bool IsFollowing => following;
@@ -50,15 +53,23 @@ namespace Deprem.Story
             if (targetMovement != null && targetMovement.StoryInputLocked)
             {
                 StopFollowingMotion();
+                UpdateScriptedFacing();
                 return;
             }
 
             Vector3 velocity = agent.velocity;
             velocity.y = 0f;
-            if (velocity.sqrMagnitude > 0.01f)
+            if (scriptedFacing)
+            {
+                UpdateScriptedFacing();
+            }
+            else if (velocity.sqrMagnitude > 0.01f)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(velocity.normalized, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation,
+                    targetRotation,
+                    TurnBlend(Time.deltaTime));
             }
             if (animator != null && animator.isActiveAndEnabled)
                 animator.SetFloat(speedHash, velocity.magnitude, 0.12f, Time.deltaTime);
@@ -81,7 +92,10 @@ namespace Deprem.Story
             nextRepathAt = Time.time + repathInterval;
             lastTargetPosition = target.position;
             if (NavMesh.SamplePosition(target.position, out NavMeshHit sampled, 1.25f, agent.areaMask))
+            {
+                scriptedFacing = false;
                 agent.SetDestination(sampled.position);
+            }
         }
 
         public void SetFollowing(bool enabled)
@@ -90,6 +104,74 @@ namespace Deprem.Story
             nextRepathAt = 0f;
             if (!enabled)
                 StopFollowingMotion();
+        }
+
+        public void FaceTowards(Vector3 worldPosition)
+        {
+            Vector3 direction = worldPosition - transform.position;
+            direction.y = 0f;
+            if (direction.sqrMagnitude <= 0.01f)
+                return;
+
+            StopFollowingMotion();
+            scriptedFacingRotation = Quaternion.LookRotation(direction.normalized, Vector3.up);
+            scriptedFacing = true;
+        }
+
+        public void SetAuthoredPose(Vector3 worldPosition, Quaternion worldRotation)
+        {
+            if (!authoredPoseActive)
+            {
+                following = false;
+                StopFollowingMotion();
+                scriptedFacing = false;
+                if (agent != null)
+                    agent.updatePosition = false;
+                authoredPoseActive = true;
+            }
+
+            transform.SetPositionAndRotation(worldPosition, worldRotation);
+            if (animator != null && animator.isActiveAndEnabled)
+                animator.SetFloat(speedHash, 0f);
+        }
+
+        public void ReleaseAuthoredPose(Vector3 preferredWorldPosition)
+        {
+            if (!authoredPoseActive)
+                return;
+
+            authoredPoseActive = false;
+            if (agent != null)
+            {
+                agent.updatePosition = true;
+                if (NavMesh.SamplePosition(preferredWorldPosition, out NavMeshHit hit, 2.5f, agent.areaMask))
+                {
+                    transform.position = hit.position;
+                    agent.Warp(hit.position);
+                }
+            }
+            StopFollowingMotion();
+        }
+
+        private void UpdateScriptedFacing()
+        {
+            if (!scriptedFacing)
+                return;
+
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                scriptedFacingRotation,
+                TurnBlend(Time.deltaTime));
+            if (Quaternion.Angle(transform.rotation, scriptedFacingRotation) > 0.6f)
+                return;
+
+            transform.rotation = scriptedFacingRotation;
+            scriptedFacing = false;
+        }
+
+        private float TurnBlend(float deltaTime)
+        {
+            return 1f - Mathf.Exp(-Mathf.Max(2f, turnSpeed) * deltaTime);
         }
 
         private void StopFollowingMotion()

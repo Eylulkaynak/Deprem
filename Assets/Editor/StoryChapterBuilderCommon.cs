@@ -24,6 +24,7 @@ internal static class StoryChapterBuilderCommon
     internal const string MaterialRoot = GeneratedRoot + "/Materials";
     internal const string AnimationRoot = GeneratedRoot + "/Animations/Chapters";
     internal const string AudioRoot = GeneratedRoot + "/Audio";
+    internal const string NavMeshRoot = GeneratedRoot + "/NavMesh";
     internal const string LicensedSfxRoot = "Assets/Story/Audio/ThirdParty/rubberduck_sfx100v2";
     internal const string StoryPrefabRoot = "Assets/Story/Prefabs";
     internal const string FurnitureRoot = "Assets/ithappy/Cute_Furniture_Free/Prefabs";
@@ -38,15 +39,17 @@ internal static class StoryChapterBuilderCommon
     internal const string KenneyMiniCanPath =
         "Assets/Story/Characters/ThirdParty/KenneyMini/FBX/character-male-d.fbx";
     internal const string StorySkyboxMaterialPath = MaterialRoot + "/Story_ProceduralSkybox.mat";
+    internal const string CharacterFaceAliveClipPath =
+        GeneratedRoot + "/Animations/Expressions/ChildFaceAliveLoop.anim";
     internal const string KenneyInputPromptRoot = "Assets/Story/UI/ThirdParty/KenneyInputPrompts";
     internal const string KenneyUiAdventureRoot = "Assets/Story/UI/ThirdParty/KenneyUIAdventure";
     internal const string CartoonUiRoot = "Assets/Story/UI/ThirdParty/CartoonUIPack";
     internal const string CasualUiRoot = "Assets/Story/UI/ThirdParty/CasualUILab";
     internal const string StoryLogoPath = "Assets/Story/UI/Brand/DepremLogo.png";
     internal const string PlayfulFontRoot = "Assets/Fonts/StoryPlayful";
-    internal const string PlayfulRegularFontAssetPath = PlayfulFontRoot + "/Lexend Regular SDF.asset";
-    internal const string PlayfulSemiboldFontAssetPath = PlayfulFontRoot + "/Lexend SemiBold SDF.asset";
-    internal const string PlayfulDisplayFontAssetPath = PlayfulFontRoot + "/Lexend Bold SDF.asset";
+    internal const string PlayfulRegularFontAssetPath = PlayfulFontRoot + "/Nunito SDF.asset";
+    internal const string PlayfulSemiboldFontAssetPath = PlayfulFontRoot + "/Nunito SemiBold SDF.asset";
+    internal const string PlayfulDisplayFontAssetPath = PlayfulFontRoot + "/Baloo 2 ExtraBold SDF.asset";
     internal const string RebuildPreparationSceneName = "Story_01_RebuildPreview";
     internal const string RebuildHomeSafetySceneName = "Story_02_RebuildPreview";
     internal const string RebuildQuakeSceneName = "Story_03_RebuildPreview";
@@ -121,6 +124,18 @@ internal static class StoryChapterBuilderCommon
         internal TMP_Text completionDetail;
     }
 
+    internal readonly struct DialogueActorSpec
+    {
+        internal readonly GameObject actor;
+        internal readonly string[] aliases;
+
+        internal DialogueActorSpec(GameObject actor, params string[] aliases)
+        {
+            this.actor = actor;
+            this.aliases = aliases ?? Array.Empty<string>();
+        }
+    }
+
     [Serializable]
     private sealed class DialogueVoiceManifest
     {
@@ -168,6 +183,7 @@ internal static class StoryChapterBuilderCommon
         EnsureFolder(MaterialRoot);
         EnsureFolder(GeneratedRoot + "/Animations");
         EnsureFolder(AnimationRoot);
+        EnsureFolder(NavMeshRoot);
         EnsureFolder("Assets/Scenes/LegacyBackups");
     }
 
@@ -316,9 +332,15 @@ internal static class StoryChapterBuilderCommon
             animator.runtimeAnimatorController = controller;
             animator.applyRootMotion = false;
             animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
-            animator.stabilizeFeet = true;
+            // Meshy humanoid feet metadata is not trustworthy. Animator foot stabilization
+            // delegates to the same bad goals as state Foot IK and folds legs beside furniture.
+            animator.stabilizeFeet = false;
             GroundCharacterFromHumanoidFeet(instance, animator, feetPosition.y);
         }
+        EnsureCharacterFaceRig(
+            instance,
+            targetHeight,
+            name.IndexOf("Can", StringComparison.OrdinalIgnoreCase) >= 0);
         foreach (Renderer renderer in instance.GetComponentsInChildren<Renderer>(true))
         {
             renderer.shadowCastingMode = ShadowCastingMode.Off;
@@ -376,6 +398,14 @@ internal static class StoryChapterBuilderCommon
     private static string ResolveCharacterPrefabPath(string fallbackPath, string roleName)
     {
         MeshyFamilyCharacterImporter.EnsurePrepared();
+        // Explicit emergency-responder prefabs already encode the intended role.
+        // Do not let generic scene names such as "AssemblyWorker" redirect them
+        // back to the family Baba fallback.
+        if (!string.IsNullOrEmpty(fallbackPath) &&
+            fallbackPath.Replace('\\', '/').StartsWith(
+                "Assets/Story/Characters/MeshyResponders/Prefabs/",
+                StringComparison.OrdinalIgnoreCase))
+            return fallbackPath;
         if (roleName.IndexOf("Deniz", StringComparison.OrdinalIgnoreCase) >= 0)
             return MeshyFamilyPrefabRoot + "/Deniz.prefab";
         if (roleName.IndexOf("Can", StringComparison.OrdinalIgnoreCase) >= 0)
@@ -387,7 +417,7 @@ internal static class StoryChapterBuilderCommon
             return MeshyFamilyPrefabRoot + "/Komsu.prefab";
         if (roleName.IndexOf("Worker", StringComparison.OrdinalIgnoreCase) >= 0 ||
             roleName.IndexOf("Görevli", StringComparison.OrdinalIgnoreCase) >= 0)
-            return SyntyCityCharacterRoot + "/Character_Paramedic_01.prefab";
+            return MeshyFamilyPrefabRoot + "/Baba.prefab";
         if (roleName.IndexOf("Baba", StringComparison.OrdinalIgnoreCase) >= 0 ||
             roleName.IndexOf("Father", StringComparison.OrdinalIgnoreCase) >= 0)
             return MeshyFamilyPrefabRoot + "/Baba.prefab";
@@ -658,6 +688,161 @@ internal static class StoryChapterBuilderCommon
                 candidate.name.Equals(name, StringComparison.OrdinalIgnoreCase)));
     }
 
+    internal static void EnsureCharacterFaceRig(
+        GameObject character,
+        float targetHeight,
+        bool worriedBrows = false)
+    {
+        if (character == null || character.GetComponentsInChildren<Transform>(true)
+                .Any(candidate => candidate.name == "Mouth_Center"))
+            return;
+
+        Transform head = FindHumanoidBone(character, HumanBodyBones.Head);
+        if (head == null)
+            return;
+
+        float faceScale = Mathf.Clamp(targetHeight / 1.5f, 0.82f, 1.16f);
+        GameObject rigObject = new GameObject(character.name + "_FaceRig");
+        Transform rig = rigObject.transform;
+        rig.position = head.position +
+                       Vector3.up * (0.095f * faceScale) +
+                       character.transform.forward * (0.118f * faceScale);
+        rig.rotation = character.transform.rotation;
+        rig.SetParent(head, true);
+
+        Material dark = GetOrCreateMaterial(
+            "CharacterFace_Dark",
+            new Color32(62, 39, 36, 255),
+            0.08f);
+        Material skin = GetOrCreateMaterial(
+            "ChildFace_SkinWarm",
+            new Color32(218, 178, 151, 255),
+            0.12f);
+        Quaternion leftBrowRotation = rig.rotation *
+                                       Quaternion.Euler(0f, 0f, worriedBrows ? -13f : 7f);
+        Quaternion rightBrowRotation = rig.rotation *
+                                        Quaternion.Euler(0f, 0f, worriedBrows ? 13f : -7f);
+
+        CreateFaceFeature(
+            "Brow_L",
+            rig,
+            new Vector3(-0.047f, 0.112f, 0f) * faceScale,
+            new Vector3(0.036f, 0.006f, 0.006f) * faceScale,
+            dark,
+            leftBrowRotation);
+        CreateFaceFeature(
+            "Brow_R",
+            rig,
+            new Vector3(0.047f, 0.112f, 0f) * faceScale,
+            new Vector3(0.036f, 0.006f, 0.006f) * faceScale,
+            dark,
+            rightBrowRotation);
+        // The Meshy eyes are part of the head texture/mesh. These thin skin-coloured
+        // lids pass over them during the legacy blink clip; without the actual lid
+        // objects the authored animation had no target and the eyes stayed frozen.
+        CreateFaceFeature(
+            "Eyelid_L",
+            rig,
+            new Vector3(-0.047f, 0.076f, 0.003f) * faceScale,
+            new Vector3(0.038f, 0.001f, 0.007f) * faceScale,
+            skin,
+            rig.rotation);
+        CreateFaceFeature(
+            "Eyelid_R",
+            rig,
+            new Vector3(0.047f, 0.076f, 0.003f) * faceScale,
+            new Vector3(0.038f, 0.001f, 0.007f) * faceScale,
+            skin,
+            rig.rotation);
+        CreateFaceFeature(
+            "Mouth_Center",
+            rig,
+            new Vector3(0f, 0f, 0.004f),
+            new Vector3(0.026f, 0.0035f, 0.005f) * faceScale,
+            dark,
+            rig.rotation);
+
+        AnimationClip faceClip = GetOrCreateCharacterFaceAliveClip();
+        if (faceClip != null)
+        {
+            Animation faceAnimation = rigObject.AddComponent<Animation>();
+            faceAnimation.AddClip(faceClip, faceClip.name);
+            faceAnimation.clip = faceClip;
+            faceAnimation.playAutomatically = true;
+            faceAnimation.wrapMode = WrapMode.Loop;
+        }
+    }
+
+    private static AnimationClip GetOrCreateCharacterFaceAliveClip()
+    {
+        AnimationClip clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(CharacterFaceAliveClipPath);
+        if (clip == null)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(CharacterFaceAliveClipPath) ??
+                                      GeneratedRoot + "/Animations/Expressions");
+            clip = new AnimationClip
+            {
+                name = "ChildFaceAliveLoop",
+                legacy = true,
+                frameRate = 30f
+            };
+            AssetDatabase.CreateAsset(clip, CharacterFaceAliveClipPath);
+        }
+
+        clip.legacy = true;
+        clip.wrapMode = WrapMode.Loop;
+        clip.ClearCurves();
+        AnimationCurve blink = new AnimationCurve(
+            new Keyframe(0f, 0.001f),
+            new Keyframe(1.7f, 0.001f),
+            new Keyframe(1.74f, 0.032f),
+            new Keyframe(1.88f, 0.032f),
+            new Keyframe(1.92f, 0.001f),
+            new Keyframe(3.9f, 0.001f),
+            new Keyframe(3.94f, 0.032f),
+            new Keyframe(4.08f, 0.032f),
+            new Keyframe(4.12f, 0.001f),
+            new Keyframe(5.2f, 0.001f));
+        AnimationCurve width = AnimationCurve.Constant(0f, 5.2f, 0.038f);
+        AnimationCurve depth = AnimationCurve.Constant(0f, 5.2f, 0.007f);
+        foreach (string eyelid in new[] { "Eyelid_L", "Eyelid_R" })
+        {
+            clip.SetCurve(eyelid, typeof(Transform), "localScale.x", width);
+            clip.SetCurve(eyelid, typeof(Transform), "localScale.y", blink);
+            clip.SetCurve(eyelid, typeof(Transform), "localScale.z", depth);
+        }
+
+        // Mouth is intentionally absent from this metronomic idle clip. The shared
+        // StoryUIController drives only the active speaker from voice RMS/subtitle rhythm.
+        EditorUtility.SetDirty(clip);
+        AssetDatabase.SaveAssets();
+        return clip;
+    }
+
+    private static void CreateFaceFeature(
+        string name,
+        Transform rig,
+        Vector3 localPosition,
+        Vector3 localScale,
+        Material material,
+        Quaternion worldRotation)
+    {
+        GameObject feature = CreatePrimitive(
+            name,
+            PrimitiveType.Cube,
+            rig.TransformPoint(localPosition),
+            localScale,
+            material,
+            rig,
+            false,
+            worldRotation);
+        foreach (Renderer renderer in feature.GetComponentsInChildren<Renderer>(true))
+        {
+            renderer.shadowCastingMode = ShadowCastingMode.Off;
+            renderer.receiveShadows = false;
+        }
+    }
+
     private static void CopyLegacyCostumeProps(string carrierPath, GameObject destination, string roleName)
     {
         GameObject carrier = AssetDatabase.LoadAssetAtPath<GameObject>(carrierPath);
@@ -669,7 +854,15 @@ internal static class StoryChapterBuilderCommon
             CopyLegacyChild(carrier, destination, "Deniz_12_WornShoes");
             GameObject wornBag = CopyLegacyChild(carrier, destination, "Deniz_WornEmergencyBag");
             if (wornBag != null)
-                RestyleEmergencyBag(wornBag, CreateMaterials(), new Vector3(0.46f, 0.58f, 0.28f), false);
+            {
+                RestyleEmergencyBag(wornBag, CreateMaterials(), new Vector3(0.36f, 0.46f, 0.22f), false);
+                MountEmergencyBackpackToTorso(
+                    destination,
+                    wornBag,
+                    destination.transform.rotation,
+                    -0.015f,
+                    0.018f);
+            }
         }
         else if (roleName.IndexOf("Can", StringComparison.OrdinalIgnoreCase) >= 0)
             CopyLegacyChild(carrier, destination, "Can_8_WornShoes");
@@ -712,7 +905,8 @@ internal static class StoryChapterBuilderCommon
         GameObject bagRoot,
         Materials materials,
         Vector3 targetSize,
-        bool open)
+        bool open,
+        bool tealBody = false)
     {
         if (bagRoot == null)
             throw new ArgumentNullException(nameof(bagRoot));
@@ -737,14 +931,49 @@ internal static class StoryChapterBuilderCommon
             feetPosition,
             targetSize,
             uprightEuler,
-            materials.coral,
-            materials.teal,
+            tealBody ? materials.teal : materials.coral,
+            tealBody ? materials.navy : materials.teal,
             materials.cream,
             materials.navy,
             open,
             false);
         bagRoot.SetActive(wasActive);
         return cleanVisual;
+    }
+
+    internal static Transform MountEmergencyBackpackToTorso(
+        GameObject character,
+        GameObject bagRoot,
+        Quaternion worldRotation,
+        float verticalOffset = -0.055f,
+        float backClearance = 0.025f)
+    {
+        if (character == null)
+            throw new ArgumentNullException(nameof(character));
+        if (bagRoot == null)
+            throw new ArgumentNullException(nameof(bagRoot));
+
+        Transform torso = FindHumanoidBone(character, HumanBodyBones.UpperChest) ??
+                          FindHumanoidBone(character, HumanBodyBones.Chest) ??
+                          FindHumanoidBone(character, HumanBodyBones.Spine);
+        if (torso == null)
+            throw new InvalidOperationException(character.name + " için sırt çantası bağlanacak gövde kemiği bulunamadı.");
+
+        bool wasActive = bagRoot.activeSelf;
+        bagRoot.SetActive(true);
+        bagRoot.transform.rotation = worldRotation;
+        if (!TryGetSizingBounds(bagRoot, out Bounds bounds))
+            throw new InvalidOperationException(bagRoot.name + " görünür sırt çantası sınırı üretmedi.");
+
+        Vector3 characterForward = character.transform.forward.normalized;
+        Vector3 characterUp = character.transform.up.normalized;
+        Vector3 desiredCenter = torso.position +
+                                characterUp * verticalOffset -
+                                characterForward * (bounds.extents.z + backClearance);
+        bagRoot.transform.position += desiredCenter - bounds.center;
+        bagRoot.transform.SetParent(torso, true);
+        bagRoot.SetActive(wasActive);
+        return torso;
     }
 
     internal static StoryPlayerMovement ConfigurePlayer(GameObject deniz)
@@ -757,7 +986,10 @@ internal static class StoryChapterBuilderCommon
         agent.angularSpeed = 540f;
         agent.radius = 0.24f;
         agent.height = 1.48f;
-        agent.baseOffset = 0f;
+        // The imported Meshy rig's shoe sole sits roughly 5.5 cm above its navigation root
+        // once the NavMeshAgent takes ownership at runtime. Compensate on the agent itself so
+        // the renderer stays planted without moving the baked route or adding a runtime fixer.
+        agent.baseOffset = -0.055f;
         agent.stoppingDistance = 0.13f;
 
         CapsuleCollider capsule = deniz.GetComponent<CapsuleCollider>();
@@ -789,19 +1021,28 @@ internal static class StoryChapterBuilderCommon
         agent.angularSpeed = 520f;
         agent.radius = 0.21f;
         agent.height = 1.24f;
-        agent.baseOffset = 0f;
-        agent.stoppingDistance = 1.05f;
+        agent.baseOffset = -0.045f;
+        // A one-metre centre-line gap still made Can's head and torso visually
+        // merge into Deniz in the portrait follow shots.  Keep him close enough
+        // for the sibling read while leaving two clearly separate silhouettes.
+        const float siblingFollowDistance = 1.3f;
+        agent.stoppingDistance = siblingFollowDistance;
         StorySiblingFollower follower = can.GetComponent<StorySiblingFollower>();
         if (follower == null)
             follower = can.AddComponent<StorySiblingFollower>();
         SetReference(follower, "target", target);
         SetReference(follower, "animator", can.GetComponentInChildren<Animator>(true));
+        SerializedObject followerData = new SerializedObject(follower);
+        followerData.FindProperty("followDistance").floatValue = siblingFollowDistance;
+        followerData.ApplyModifiedPropertiesWithoutUndo();
         return follower;
     }
 
     internal static StoryCameraController BuildCameras(Transform parent, StoryCameraZoneId initialZone, CameraSpec[] specs,
         out Camera mainCamera, out CinemachineBrain brain)
     {
+        ValidateFixedCameraClearance(specs);
+
         Transform cameraRoot = NewChild(parent, "StoryCameras");
         GameObject main = new GameObject("Main Camera");
         main.transform.SetParent(cameraRoot);
@@ -830,7 +1071,10 @@ internal static class StoryChapterBuilderCommon
             cameraObject.transform.rotation = LookAt(spec.position, spec.target);
             CinemachineCamera virtualCamera = cameraObject.AddComponent<CinemachineCamera>();
             LensSettings lens = LensSettings.Default;
-            lens.FieldOfView = Mathf.Clamp(spec.fieldOfView, 38f, 50f);
+            // Extra-tall mobile profiles are substantially narrower horizontally.
+            // Most authored shots stay at or below 50°, while an explicitly authored
+            // wider shot may use up to 60° to keep both interaction edges tappable.
+            lens.FieldOfView = Mathf.Clamp(spec.fieldOfView, 38f, 60f);
             lens.NearClipPlane = 0.08f;
             lens.FarClipPlane = 180f;
             virtualCamera.Lens = lens;
@@ -839,17 +1083,44 @@ internal static class StoryChapterBuilderCommon
             if (spec.follow != null)
             {
                 virtualCamera.Follow = spec.follow;
+                // Takip kamerası hedefin arkasında sabit mesafe ararken oda
+                // duvarlarının içine girebiliyordu (gri ekran). Deoccluder kamerayı
+                // engelin önüne çeker ve masa gibi görüş hattının yanında
+                // kalan hacimlerden de kamera yarıçapını koruyarak uzaklaştırır.
+                CinemachineDeoccluder deoccluder = cameraObject.AddComponent<CinemachineDeoccluder>();
+                deoccluder.CollideAgainst = ~0;
+                deoccluder.MinimumDistanceFromTarget = 0.35f;
+                CinemachineDeoccluder.ObstacleAvoidance avoidance = deoccluder.AvoidObstacles;
+                avoidance.Enabled = true;
+                avoidance.CameraRadius = 0.28f;
+                avoidance.Strategy =
+                    CinemachineDeoccluder.ObstacleAvoidance.ResolutionStrategy.PreserveCameraHeight;
+                avoidance.MaximumEffort = 4;
+                avoidance.SmoothingTime = 0f;
+                avoidance.Damping = 0.25f;
+                // Kameranın collider içinden kademeli çıkması kabul edilemez;
+                // engel yönündeki düzeltme ilk fizik karesinde tam uygulanır.
+                avoidance.DampingWhenOccluded = 0f;
+                CinemachineDeoccluder.ObstacleAvoidance.FollowTargetSettings followAvoidance =
+                    avoidance.UseFollowTarget;
+                followAvoidance.Enabled = true;
+                followAvoidance.YOffset = 0.82f;
+                avoidance.UseFollowTarget = followAvoidance;
+                deoccluder.AvoidObstacles = avoidance;
                 CinemachinePositionComposer composer = cameraObject.AddComponent<CinemachinePositionComposer>();
                 composer.CameraDistance = spec.followDistance;
                 composer.TargetOffset = new Vector3(0f, 0.82f, 0f);
-                composer.Damping = new Vector3(0.36f, 0.28f, 0.48f);
-                composer.DeadZoneDepth = 0.4f;
+                // Sakin kadraj: yüksek sönümleme + lookahead, dünyayı parmağın
+                // altından sürekli kaydırıyordu; dokunma hedefleri vuruş anında
+                // başka yerdeydi. Geniş ölü bölge kamera hareketini zaten azaltır.
+                composer.Damping = new Vector3(0.12f, 0.1f, 0.18f);
+                composer.DeadZoneDepth = 0.55f;
                 composer.CenterOnActivate = false;
-                composer.Lookahead = new LookaheadSettings { Enabled = true, Time = 0.2f, Smoothing = 8f, IgnoreY = true };
+                composer.Lookahead = new LookaheadSettings { Enabled = false, Time = 0f, Smoothing = 0f, IgnoreY = true };
                 ScreenComposerSettings composition = ScreenComposerSettings.Default;
                 composition.ScreenPosition = spec.screenPosition;
                 composition.DeadZone.Enabled = true;
-                composition.DeadZone.Size = new Vector2(0.1f, 0.08f);
+                composition.DeadZone.Size = new Vector2(0.16f, 0.12f);
                 composition.HardLimits.Enabled = true;
                 composition.HardLimits.Size = new Vector2(0.72f, 0.64f);
                 composer.Composition = composition;
@@ -880,6 +1151,156 @@ internal static class StoryChapterBuilderCommon
         }
         serialized.ApplyModifiedPropertiesWithoutUndo();
         return controller;
+    }
+
+    private static void ValidateFixedCameraClearance(IEnumerable<CameraSpec> specs)
+    {
+        const float clearanceRadius = 0.2f;
+        // Builder'lar collider ve kamera transformlarını aynı editor frame'inde
+        // yazar. Physics world senkronize edilmezse OverlapSphere eski collider
+        // pozlarını görüp duvarın içindeki bir kamerayı yanlışlıkla kabul eder.
+        Physics.SyncTransforms();
+        foreach (CameraSpec spec in specs)
+        {
+            // Takip kameraları çalışma zamanında CinemachineDeoccluder ile
+            // çözülür. Sabit kameraların güvenli konumu ise builder'ın
+            // sorumluluğudur ve hatalı sahne üretimine izin verilmez.
+            if (spec.follow != null)
+                continue;
+
+            Collider overlap = Physics.OverlapSphere(
+                    spec.position,
+                    clearanceRadius,
+                    ~0,
+                    QueryTriggerInteraction.Ignore)
+                .FirstOrDefault(candidate =>
+                    candidate != null && candidate.GetComponentInParent<Animator>() == null);
+            if (overlap == null)
+                continue;
+
+            throw new InvalidOperationException(
+                $"Sabit kamera '{spec.name}' {clearanceRadius:F2} m güvenlik hacminde " +
+                $"'{overlap.name}' collider'ıyla çakışıyor. CameraSpec builder içinde düzeltilmeli.");
+        }
+    }
+
+    internal static void ApplyCanonicalIndoorHomeShell(Transform home)
+    {
+        if (home == null)
+            throw new ArgumentNullException(nameof(home));
+
+        // Story 01 established the finished indoor presentation: full-height walls,
+        // corrected wall art, a floor-seated plant and child-scale table proportions.
+        // Keep that shell identical in every chapter that takes place inside this home.
+        Transform rightWall = RequireSharedHomeDescendant(home, "LowRightWall");
+        rightWall.name = "RightWall_Story01";
+        rightWall.localPosition = new Vector3(5f, 3f, 0.25f);
+        rightWall.localRotation = Quaternion.identity;
+        rightWall.localScale = new Vector3(0.22f, 6f, 11.5f);
+        SetSharedHomeLocalTransform(home, "LeftWall",
+            new Vector3(-5f, 3f, 0.25f), Vector3.zero, new Vector3(0.22f, 6f, 11.5f));
+        Transform backWallLeft = RequireSharedHomeDescendant(home, "BackWall_Left");
+        SetSharedHomeLocalTransform(home, "BackWall_Left",
+            new Vector3(-1.8f, 4f, 6f), Vector3.zero, new Vector3(6.4f, 8f, 0.22f));
+        SetSharedHomeLocalTransform(home, "BackWall_Right",
+            new Vector3(4.3f, 4f, 6f), Vector3.zero, new Vector3(1.4f, 8f, 0.22f));
+
+        // The two back-wall segments intentionally leave a 2.2 m doorway, but the
+        // prefab left that opening all the way to the top of the six-metre diorama
+        // wall. Low cover cameras therefore rendered a rectangular patch of sky
+        // above the corridor door. Close only the structural header; the doorway
+        // and corridor sightline below 2.8 m remain fully open.
+        GameObject doorwayHeader = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        doorwayHeader.name = "SharedHomeDoorwayUpperWall";
+        doorwayHeader.transform.SetParent(home, false);
+        doorwayHeader.transform.localPosition = new Vector3(2.5f, 5.4f, 6f);
+        doorwayHeader.transform.localRotation = Quaternion.identity;
+        doorwayHeader.transform.localScale = new Vector3(2.2f, 5.2f, 0.22f);
+        Renderer backWallRenderer = backWallLeft.GetComponentInChildren<Renderer>(true);
+        if (backWallRenderer == null)
+            throw new InvalidOperationException("Ortak ev arka duvar malzemesi bulunamadı.");
+        doorwayHeader.GetComponent<Renderer>().sharedMaterial = backWallRenderer.sharedMaterial;
+        NavMeshModifier doorwayHeaderModifier = doorwayHeader.AddComponent<NavMeshModifier>();
+        doorwayHeaderModifier.ignoreFromBuild = true;
+        SetSharedHomeLocalTransform(home, "Skirting_Right",
+            new Vector3(4.82f, 0.18f, 0.25f), Vector3.zero, new Vector3(0.12f, 0.18f, 11.26f));
+        SetSharedHomeLocalTransform(home, "ArtFrameLarge",
+            new Vector3(4.179999f, 2.08f, 5.898f), new Vector3(0f, 180f, 0f),
+            Vector3.one * 1.83469164f);
+        SetSharedHomeLocalTransform(home, "SmallFrame",
+            new Vector3(-4.85f, 1.91999984f, -2.484f), new Vector3(0f, 90f, 0f),
+            Vector3.one * 1.038648f);
+
+        Transform roomPlant = RequireSharedHomeDescendant(home, "RoomPlant");
+        Bounds plantBounds = VisibleBounds(roomPlant.gameObject);
+        roomPlant.position += new Vector3(-4.25f - plantBounds.center.x, -plantBounds.min.y,
+            -0.45f - plantBounds.center.z);
+        // The source plant uses a sibling blocker rather than a child collider.
+        // Moving only the visible plant left an invisible obstacle 0.8 m behind it,
+        // directly inside Story 01's BagFit follow-camera clearance volume.
+        Transform roomPlantCollider = RequireSharedHomeDescendant(home, "RoomPlant_Collider");
+        roomPlantCollider.position = new Vector3(-4.25f, roomPlantCollider.position.y, -0.45f);
+
+        // Ortak kabukta masa çocuk-ölçekli kalır (Story_01'in masa üstü düzeni bu
+        // yüksekliğe göre yazılmıştır). Deprem bölümü, masa altına sığınma
+        // çalışabilsin diye SafeTable'ı KENDİ sahnesinde tam yüksekliğe çıkarır.
+        Transform safeTable = RequireSharedHomeDescendant(home, "SafeTable");
+        Vector3 tableScale = safeTable.localScale;
+        safeTable.localScale = new Vector3(tableScale.x, tableScale.y * 0.74f, tableScale.z);
+    }
+
+    internal static bool HasCanonicalStory01HomeShell(Transform home)
+    {
+        if (home == null)
+            return false;
+
+        Transform rightWall = StorySharedHomePrefabBuilder.FindDescendant(home, "RightWall_Story01");
+        Transform leftWall = StorySharedHomePrefabBuilder.FindDescendant(home, "LeftWall");
+        Transform doorwayHeader = StorySharedHomePrefabBuilder.FindDescendant(
+            home,
+            "SharedHomeDoorwayUpperWall");
+        return rightWall != null &&
+               leftWall != null &&
+               doorwayHeader != null &&
+               Vector3.Distance(rightWall.localPosition, new Vector3(5f, 3f, 0.25f)) < 0.01f &&
+               Vector3.Distance(rightWall.localScale, new Vector3(0.22f, 6f, 11.5f)) < 0.01f &&
+               Vector3.Distance(leftWall.localPosition, new Vector3(-5f, 3f, 0.25f)) < 0.01f &&
+               Vector3.Distance(leftWall.localScale, new Vector3(0.22f, 6f, 11.5f)) < 0.01f;
+    }
+
+    private static void SetSharedHomeLocalTransform(
+        Transform home,
+        string objectName,
+        Vector3 localPosition,
+        Vector3 localEuler,
+        Vector3 localScale)
+    {
+        Transform target = RequireSharedHomeDescendant(home, objectName);
+        target.localPosition = localPosition;
+        target.localRotation = Quaternion.Euler(localEuler);
+        target.localScale = localScale;
+    }
+
+    private static Transform RequireSharedHomeDescendant(Transform home, string objectName)
+    {
+        Transform match = StorySharedHomePrefabBuilder.FindDescendant(home, objectName);
+        if (match == null)
+            throw new InvalidOperationException("Ortak ev nesnesi bulunamadı: " + objectName);
+        return match;
+    }
+
+    private static Bounds VisibleBounds(GameObject root)
+    {
+        Renderer[] renderers = root.GetComponentsInChildren<Renderer>(true)
+            .Where(renderer => renderer != null && renderer.enabled)
+            .ToArray();
+        if (renderers.Length == 0)
+            throw new InvalidOperationException("Görsel sınır üretmeyen ortak ev nesnesi: " + root.name);
+
+        Bounds bounds = renderers[0].bounds;
+        for (int i = 1; i < renderers.Length; i++)
+            bounds.Encapsulate(renderers[i].bounds);
+        return bounds;
     }
 
     internal static void ConfigureStorySkybox(Camera camera)
@@ -1310,6 +1731,53 @@ internal static class StoryChapterBuilderCommon
         EditorUtility.SetDirty(controller);
     }
 
+    internal static void ConfigureDialogueActors(
+        StoryUIController controller,
+        params DialogueActorSpec[] actorSpecs)
+    {
+        if (controller == null)
+            throw new ArgumentNullException(nameof(controller));
+
+        DialogueActorSpec[] validSpecs = (actorSpecs ?? Array.Empty<DialogueActorSpec>())
+            .Where(spec => spec.actor != null)
+            .ToArray();
+        SerializedObject serializedController = new SerializedObject(controller);
+        SerializedProperty actors = serializedController.FindProperty("dialogueActors");
+        if (actors == null)
+            throw new InvalidOperationException("StoryUIController dialogueActors alanı bulunamadı.");
+        actors.arraySize = validSpecs.Length;
+
+        for (int index = 0; index < validSpecs.Length; index++)
+        {
+            DialogueActorSpec spec = validSpecs[index];
+            Transform head = FindHumanoidBone(spec.actor, HumanBodyBones.Head);
+            Transform mouth = spec.actor.GetComponentsInChildren<Transform>(true)
+                .FirstOrDefault(candidate => candidate.name == "Mouth_Center");
+            if (head == null || mouth == null)
+                throw new InvalidOperationException(
+                    spec.actor.name + " için serialized konuşma head/Mouth_Center binding'i kurulamadı.");
+
+            SerializedProperty actor = actors.GetArrayElementAtIndex(index);
+            SerializedProperty aliases = actor.FindPropertyRelative("aliases");
+            string[] cleanAliases = (spec.aliases ?? Array.Empty<string>())
+                .Where(alias => !string.IsNullOrWhiteSpace(alias))
+                .Select(alias => alias.Trim())
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToArray();
+            if (cleanAliases.Length == 0)
+                throw new InvalidOperationException(spec.actor.name + " için konuşmacı alias'ı eksik.");
+            aliases.arraySize = cleanAliases.Length;
+            for (int aliasIndex = 0; aliasIndex < cleanAliases.Length; aliasIndex++)
+                aliases.GetArrayElementAtIndex(aliasIndex).stringValue = cleanAliases[aliasIndex];
+            actor.FindPropertyRelative("actorRoot").objectReferenceValue = spec.actor.transform;
+            actor.FindPropertyRelative("head").objectReferenceValue = head;
+            actor.FindPropertyRelative("mouth").objectReferenceValue = mouth;
+        }
+
+        serializedController.ApplyModifiedPropertiesWithoutUndo();
+        EditorUtility.SetDirty(controller);
+    }
+
     internal static StoryInteractable AddInteractable(GameObject visualRoot, string id, string prompt,
         StoryInteractionKind kind, Transform interactionPoint, StoryInteractionGesture gesture, StoryCameraZoneId cameraZone,
         bool interactFromAnywhere = false, int gestureCount = 1, float interactionSeconds = 1.2f, float range = 1.45f)
@@ -1336,9 +1804,70 @@ internal static class StoryChapterBuilderCommon
         serialized.FindProperty("availableOnStart").boolValue = false;
         serialized.FindProperty("highlightRoot").objectReferenceValue = objectiveMarker;
         serialized.ApplyModifiedPropertiesWithoutUndo();
+        EnsureMobileTouchHotspot(visualRoot);
         if (objectiveMarker != null)
             objectiveMarker.SetActive(false);
         return interactable;
+    }
+
+    /// <summary>
+    /// Küçük veya ince prop collider'ları telefonda parmakla seçilemeyecek kadar
+    /// dar kalabiliyor. Hotspot builder tarafından sahneye yazılır; çalışma
+    /// zamanında hedef büyüten ayrı bir component gerekmez. Trigger olduğu için
+    /// NavMesh'i ve karakter rotalarını etkilemez.
+    /// </summary>
+    private static void EnsureMobileTouchHotspot(GameObject visualRoot)
+    {
+        const float minimumWorldDiameter = 0.68f;
+
+        Transform existing = visualRoot.transform.Find("MobileTouchHotspot");
+        GameObject hotspot = existing != null
+            ? existing.gameObject
+            : new GameObject("MobileTouchHotspot");
+        hotspot.transform.SetParent(visualRoot.transform, false);
+
+        Bounds worldBounds;
+        if (!TryGetRendererBounds(visualRoot, out worldBounds))
+        {
+            Collider[] colliders = visualRoot.GetComponentsInChildren<Collider>(true)
+                .Where(candidate => candidate.gameObject != hotspot)
+                .ToArray();
+            worldBounds = colliders.Length > 0
+                ? colliders[0].bounds
+                : new Bounds(visualRoot.transform.position, Vector3.one * minimumWorldDiameter);
+            foreach (Collider collider in colliders.Skip(1))
+                worldBounds.Encapsulate(collider.bounds);
+        }
+
+        hotspot.transform.localPosition = visualRoot.transform.InverseTransformPoint(worldBounds.center);
+        hotspot.transform.localRotation = Quaternion.identity;
+        hotspot.transform.localScale = Vector3.one;
+
+        Vector3 lossyScale = visualRoot.transform.lossyScale;
+        Vector3 minimumLocalSize = new Vector3(
+            minimumWorldDiameter / Mathf.Max(0.0001f, Mathf.Abs(lossyScale.x)),
+            minimumWorldDiameter / Mathf.Max(0.0001f, Mathf.Abs(lossyScale.y)),
+            minimumWorldDiameter / Mathf.Max(0.0001f, Mathf.Abs(lossyScale.z)));
+        Vector3 visibleLocalSize = new Vector3(
+            worldBounds.size.x / Mathf.Max(0.0001f, Mathf.Abs(lossyScale.x)),
+            worldBounds.size.y / Mathf.Max(0.0001f, Mathf.Abs(lossyScale.y)),
+            worldBounds.size.z / Mathf.Max(0.0001f, Mathf.Abs(lossyScale.z)));
+
+        // UnityEngine.Object'ın C# null-coalescing davranışı, prefab override
+        // üretiminde native tarafta yok edilmiş bir component sarmalayıcısını
+        // gerçek null sanmayabiliyor. Unity'nin overload edilmiş == kontrolünü
+        // açık kullan.
+        BoxCollider box = hotspot.GetComponent<BoxCollider>();
+        if (box == null)
+            box = hotspot.AddComponent<BoxCollider>();
+        box.center = Vector3.zero;
+        box.size = Vector3.Max(visibleLocalSize, minimumLocalSize);
+        box.isTrigger = true;
+
+        NavMeshModifier modifier = hotspot.GetComponent<NavMeshModifier>();
+        if (modifier == null)
+            modifier = hotspot.AddComponent<NavMeshModifier>();
+        modifier.ignoreFromBuild = true;
     }
 
     private static GameObject CreateObjectiveMarker(GameObject visualRoot, StoryInteractionGesture gesture)
@@ -1379,6 +1908,8 @@ internal static class StoryChapterBuilderCommon
             0.31f,
             Cream,
             41);
+        if (gesture == StoryInteractionGesture.SwipeDiagonalDownRight)
+            marker.transform.Find("ObjectiveGestureIcon").localRotation = Quaternion.Euler(0f, 0f, 45f);
         CreateObjectiveMarkerSprite(
             "ObjectiveArrow",
             arrowSprite,
@@ -1398,6 +1929,7 @@ internal static class StoryChapterBuilderCommon
             StoryInteractionGesture.DragToTarget => "touch_swipe_move.png",
             StoryInteractionGesture.SwipeHorizontal => "touch_swipe_horizontal.png",
             StoryInteractionGesture.SwipeDown => "touch_swipe_down.png",
+            StoryInteractionGesture.SwipeDiagonalDownRight => "touch_swipe_down.png",
             StoryInteractionGesture.WorldHold => "touch_tap_hold.png",
             StoryInteractionGesture.RepeatedTap => "touch_tap_double.png",
             _ => "touch_tap.png"
@@ -1483,12 +2015,17 @@ internal static class StoryChapterBuilderCommon
     internal static Animation CreateRockAnimation(GameObject target, string assetName, float degrees, float duration)
     {
         AnimationClip clip = GetOrCreateLegacyClip(assetName);
+        Vector3 settledEuler = target.transform.localEulerAngles;
+        clip.SetCurve(string.Empty, typeof(Transform), "localEulerAnglesRaw.x",
+            AnimationCurve.Constant(0f, duration, settledEuler.x));
+        clip.SetCurve(string.Empty, typeof(Transform), "localEulerAnglesRaw.y",
+            AnimationCurve.Constant(0f, duration, settledEuler.y));
         AnimationCurve curve = new AnimationCurve(
-            new Keyframe(0f, 0f),
-            new Keyframe(duration * 0.25f, degrees),
-            new Keyframe(duration * 0.5f, -degrees * 0.7f),
-            new Keyframe(duration * 0.75f, degrees * 0.35f),
-            new Keyframe(duration, 0f));
+            new Keyframe(0f, settledEuler.z),
+            new Keyframe(duration * 0.25f, settledEuler.z + degrees),
+            new Keyframe(duration * 0.5f, settledEuler.z - degrees * 0.7f),
+            new Keyframe(duration * 0.75f, settledEuler.z + degrees * 0.35f),
+            new Keyframe(duration, settledEuler.z));
         clip.SetCurve(string.Empty, typeof(Transform), "localEulerAnglesRaw.z", curve);
         EditorUtility.SetDirty(clip);
         return AttachAnimation(target, clip);
@@ -1749,11 +2286,69 @@ internal static class StoryChapterBuilderCommon
 
     internal static void BuildNavigation(GameObject environment)
     {
-        NavMeshSurface surface = environment.GetComponent<NavMeshSurface>() ?? environment.AddComponent<NavMeshSurface>();
+        if (environment == null)
+            throw new ArgumentNullException(nameof(environment));
+
+        NavMeshSurface surface = environment.GetComponent<NavMeshSurface>();
+        if (surface == null)
+            surface = environment.AddComponent<NavMeshSurface>();
+
         surface.collectObjects = CollectObjects.Children;
         surface.useGeometry = NavMeshCollectGeometry.PhysicsColliders;
         surface.layerMask = ~0;
-        surface.BuildNavMesh();
+
+        // NavMeshSurface.BuildNavMesh creates an in-memory NavMeshData object.  It
+        // works until the editor reloads the scene, but Unity cannot serialize that
+        // transient object into the .unity file.  Persist one generated asset per
+        // chapter so the exact NavMesh used by the builder guards is also present
+        // when the scene is loaded by PlayMode or on device.
+        EnsureFolder(NavMeshRoot);
+        string sceneName = environment.scene.name;
+        if (string.IsNullOrEmpty(sceneName))
+            throw new InvalidOperationException("NavMesh bake öncesinde sahne kaydedilmemiş.");
+        string assetPath = NavMeshRoot + "/" + sceneName + "_NavMesh.asset";
+        NavMeshData previousData = AssetDatabase.LoadAssetAtPath<NavMeshData>(assetPath);
+        if (previousData != null)
+        {
+            surface.RemoveData();
+            if (surface.navMeshData == previousData)
+                surface.navMeshData = null;
+            if (!AssetDatabase.DeleteAsset(assetPath))
+                throw new InvalidOperationException("Eski NavMesh asset'i değiştirilemedi: " + assetPath);
+        }
+
+        Collider[] dynamicBlockerColliders = environment
+            .GetComponentsInChildren<NavMeshObstacle>(true)
+            .SelectMany(obstacle => obstacle.GetComponents<Collider>())
+            .Where(collider => collider != null && collider.enabled)
+            .ToArray();
+        foreach (Collider collider in dynamicBlockerColliders)
+            collider.enabled = false;
+        try
+        {
+            // Closed doors retain a physical BoxCollider next to their carving
+            // NavMeshObstacle.  That collider must not become permanent bake
+            // geometry; the obstacle owns the runtime closed/open state.
+            surface.BuildNavMesh();
+        }
+        finally
+        {
+            foreach (Collider collider in dynamicBlockerColliders)
+            {
+                if (collider != null)
+                    collider.enabled = true;
+            }
+        }
+        foreach (NavMeshLink link in environment.GetComponentsInChildren<NavMeshLink>(true))
+            link.UpdateLink();
+        NavMeshData bakedData = surface.navMeshData;
+        if (bakedData == null)
+            throw new InvalidOperationException(sceneName + " için NavMeshData üretilemedi.");
+
+        AssetDatabase.CreateAsset(bakedData, assetPath);
+        EditorUtility.SetDirty(surface);
+        EditorSceneManager.MarkSceneDirty(environment.scene);
+        AssetDatabase.SaveAssets();
     }
 
     internal static void ConfigureDynamicNavigationBlocker(GameObject root)
@@ -1767,8 +2362,34 @@ internal static class StoryChapterBuilderCommon
         // FBX model-prefab köklerine NavMeshObstacle eklemek Unity 6'da yok edilmiş bir
         // component referansı döndürebiliyor. Kapının fizik ve navigasyon temsilini,
         // sahneye ait düzenlenebilir bir child üzerinde tut.
+        Collider retainedDragCollider = null;
         foreach (Collider collider in root.GetComponentsInChildren<Collider>(true))
+        {
+            // AddInteractable authors a dedicated trigger volume for mobile
+            // fingers.  Some rebuild props become carving blockers only after
+            // their drag interaction has been authored; deleting every collider
+            // here silently stripped that hotspot and left an untappable prop.
+            // Keep only the scene-authored touch trigger.  The physical model
+            // colliders are still replaced by the single blocker below.
+            if (collider != null && collider.isTrigger &&
+                collider.transform.name == "MobileTouchHotspot")
+                continue;
+
+            // DraggableItem aynı GameObject'te bir Collider zorunlu tutar. Unity bu
+            // collider'ı silme isteğini reddedip builder console'una Error basar.
+            // Onu tek fizik hacmi olarak koru; NavMesh bake'e ise modifier ile sokma.
+            DraggableItem draggable = collider != null ? collider.GetComponent<DraggableItem>() : null;
+            if (draggable != null && retainedDragCollider == null &&
+                draggable.GetComponent<Collider>() == collider)
+            {
+                retainedDragCollider = collider;
+                NavMeshModifier retainedModifier =
+                    collider.GetComponent<NavMeshModifier>() ?? collider.gameObject.AddComponent<NavMeshModifier>();
+                retainedModifier.ignoreFromBuild = true;
+                continue;
+            }
             Object.DestroyImmediate(collider);
+        }
 
         GameObject blocker = new GameObject("DynamicNavigationBlocker");
         blocker.transform.SetParent(root.transform, false);
@@ -1794,9 +2415,19 @@ internal static class StoryChapterBuilderCommon
         Bounds local = new Bounds(root.transform.InverseTransformPoint(corners[0]), Vector3.zero);
         foreach (Vector3 corner in corners.Skip(1))
             local.Encapsulate(root.transform.InverseTransformPoint(corner));
-        BoxCollider blockerCollider = blocker.AddComponent<BoxCollider>();
-        blockerCollider.center = local.center;
-        blockerCollider.size = local.size;
+        if (retainedDragCollider is BoxCollider retainedBox && retainedBox.transform == root.transform)
+        {
+            retainedBox.center = local.center;
+            retainedBox.size = local.size;
+            retainedBox.isTrigger = false;
+            retainedBox.enabled = true;
+        }
+        else
+        {
+            BoxCollider blockerCollider = blocker.AddComponent<BoxCollider>();
+            blockerCollider.center = local.center;
+            blockerCollider.size = local.size;
+        }
         obstacle.center = local.center;
         obstacle.size = local.size;
     }
@@ -2219,17 +2850,17 @@ internal static class StoryChapterBuilderCommon
         out TMP_FontAsset bold)
     {
         regular = GetOrCreateStoryFontAsset(
-            PlayfulFontRoot + "/Lexend-Regular.ttf",
+            PlayfulFontRoot + "/Nunito-Regular.ttf",
             PlayfulRegularFontAssetPath,
-            "Lexend Regular SDF");
+            "Nunito SDF");
         semibold = GetOrCreateStoryFontAsset(
-            PlayfulFontRoot + "/Lexend-SemiBold.ttf",
+            PlayfulFontRoot + "/Nunito-SemiBold.ttf",
             PlayfulSemiboldFontAssetPath,
-            "Lexend SemiBold SDF");
+            "Nunito SemiBold SDF");
         bold = GetOrCreateStoryFontAsset(
-            PlayfulFontRoot + "/Lexend-Bold.ttf",
+            PlayfulFontRoot + "/Baloo2-ExtraBold.ttf",
             PlayfulDisplayFontAssetPath,
-            "Lexend Bold SDF");
+            "Baloo 2 ExtraBold SDF");
         if (regular == null || semibold == null || bold == null)
             throw new InvalidOperationException("Hikâye fontları üretilemedi.");
     }
@@ -2513,6 +3144,8 @@ internal static class StoryChapterBuilderCommon
             return "Yellow";
         if (name.Contains("HomeSafety", StringComparison.Ordinal))
             return "Blue";
+        if (name.Contains("Minigames", StringComparison.Ordinal))
+            return "Green";
         if (name.Contains("Quake", StringComparison.Ordinal))
             return "Purple";
         if (name.Contains("Evacuation", StringComparison.Ordinal) ||

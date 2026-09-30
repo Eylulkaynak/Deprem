@@ -24,6 +24,7 @@ public class StairChoiceManager : MonoBehaviour
     public bool hideChoicesOnCorrect = true;
     public StairPathWalker stairPathWalker;
     public UnityEvent onCorrectChoice;
+    public UnityEvent onWrongChoice;
 
     private bool pathEventRegistered;
 
@@ -104,10 +105,12 @@ public class StairChoiceManager : MonoBehaviour
         switch (target.choice)
         {
             case StairChoiceTarget.StairChoice.Elevator:
+                onWrongChoice?.Invoke();
                 ShowMessageAndShake(elevatorMessage);
                 break;
 
             case StairChoiceTarget.StairChoice.MiddleStairs:
+                onWrongChoice?.Invoke();
                 ShowMessageAndShake(middleStairsMessage);
                 break;
 

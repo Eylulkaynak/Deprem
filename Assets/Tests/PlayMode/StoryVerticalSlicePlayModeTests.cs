@@ -122,7 +122,7 @@ public sealed class StoryVerticalSlicePlayModeTests
             Animator animator = character.GetComponentInChildren<Animator>(true);
             Assert.That(animator.GetCurrentAnimatorStateInfo(0).IsName("Hold Cover"), Is.True,
                 characterName + " StoryHold trigger must enter the persistent cover state.");
-            Assert.That(animator.GetCurrentAnimatorClipInfo(0).Single().clip.name, Is.EqualTo("Crouching"),
+            Assert.That(animator.GetCurrentAnimatorClipInfo(0).Single().clip.name, Is.EqualTo("ChildCoverPose"),
                 characterName + " lower body must remain in a stable crouch.");
             Assert.That(animator.GetCurrentAnimatorClipInfo(1).Single().clip.name,
                 Is.EqualTo("ChildCoverUpperPose"),
@@ -138,8 +138,22 @@ public sealed class StoryVerticalSlicePlayModeTests
             float scale = Mathf.Max(0.001f, animator.humanScale);
             float leftDistance = Vector3.Distance(leftHand.position, head.position) / scale;
             float rightDistance = Vector3.Distance(rightHand.position, head.position) / scale;
-            Assert.That(Mathf.Max(leftDistance, rightDistance), Is.LessThan(0.95f),
+            Transform leftShoulder = animator.GetBoneTransform(HumanBodyBones.LeftShoulder);
+            Transform rightShoulder = animator.GetBoneTransform(HumanBodyBones.RightShoulder);
+            float leftAboveShoulder = (leftHand.position.y - leftShoulder.position.y) / scale;
+            float rightAboveShoulder = (rightHand.position.y - rightShoulder.position.y) / scale;
+            Assert.That(Mathf.Max(leftDistance, rightDistance), Is.LessThan(0.55f),
                 $"{characterName} must visibly protect the head; left={leftDistance:F3}, right={rightDistance:F3}.");
+            float shoulderToHead = Mathf.Max(
+                Vector3.Distance(leftShoulder.position, head.position),
+                Vector3.Distance(rightShoulder.position, head.position)) / scale;
+            if (shoulderToHead > 0.08f)
+            {
+                Assert.That(Mathf.Min(leftAboveShoulder, rightAboveShoulder), Is.GreaterThan(0.04f),
+                    $"{characterName} must raise both hands above the shoulders instead of making a T-rex pose; " +
+                    $"left={leftAboveShoulder:F3}, right={rightAboveShoulder:F3}, " +
+                    $"leftToHead={leftDistance:F3}, rightToHead={rightDistance:F3}.");
+            }
 
             CapsuleCollider capsule = character.GetComponent<CapsuleCollider>();
             NavMeshAgent agent = character.GetComponent<NavMeshAgent>();

@@ -1,0 +1,12 @@
+{
+  "scene": "Minigame_RubbleSignal",
+  "entries": [
+    { "id": "01_calibrate", "subtitle": "Operatör: Bilinen üç vuruşla yönlü mikrofonu kalibre et.", "segments": [{ "speaker": "operator", "text": "Bilinen üç vuruşla yönlü mikrofonu kalibre et." }] },
+    { "id": "02_scan", "subtitle": "Operatör: A, B ve C sektörlerini sırayla tara; enkaza girme.", "segments": [{ "speaker": "operator", "text": "A, B ve C sektörlerini sırayla tara. Enkaza girme." }] },
+    { "id": "03_noise", "subtitle": "Operatör: Su damlası düzenli, metal gıcırtısı uzun; insan vuruşu üç kısa darbedir.", "segments": [{ "speaker": "operator", "text": "Su damlası düzenli, metal gıcırtısı uzun. İnsan vuruşu üç kısa darbedir." }] },
+    { "id": "04_primary", "subtitle": "Operatör: En temiz üçlü vuruşun geldiği B sektörünü seç.", "segments": [{ "speaker": "operator", "text": "En temiz üçlü vuruşun geldiği B sektörünü seç." }] },
+    { "id": "05_triangulate", "subtitle": "Operatör: İkinci sensörü eşleşen çizgiye sürükleyip konumu üçgenle.", "segments": [{ "speaker": "operator", "text": "İkinci sensörü eşleşen çizgiye sürükleyip konumu üçgenle." }] },
+    { "id": "06_mark", "subtitle": "Operatör: Güvenli boşluğu işaretle; kazıyı yalnız profesyonel ekip yapacak.", "segments": [{ "speaker": "operator", "text": "Güvenli boşluğu işaretle. Kazıyı yalnız profesyonel ekip yapacak." }] },
+    { "id": "07_rescue", "subtitle": "Operatör: Sinyal doğrulandı. Profesyonel ekip işaretli güvenli boşluğa ulaşıyor.", "segments": [{ "speaker": "operator", "text": "Sinyal doğrulandı. Profesyonel ekip işaretli güvenli boşluğa ulaşıyor." }] }
+  ]
+}

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
@@ -116,6 +117,7 @@ public sealed class StoryChapterPlayModeTests
 
         Invoke(director, "ReachLowerLanding");
         AssertStage(director, "HelpingNeighbor");
+        yield return AdvanceSubtitlesUntilIdle(ui);
         Invoke(director, "CallNeighbor");
         yield return AdvanceSubtitlesUntilIdle(ui);
         Invoke(director, "MoveNeighborCane");
@@ -512,6 +514,35 @@ public sealed class StoryChapterPlayModeTests
     }
 
     [UnityTest]
+    public IEnumerator EvacuationRebuild_PlayerWalksIntoTheCorridorChoiceWithoutTeleporting()
+    {
+        yield return LoadFreshSceneByPath("Assets/Scenes/Story_04_RebuildPreview.unity");
+        MonoBehaviour director = FindBehaviour("StoryEvacuationDirector");
+        MonoBehaviour ui = FindBehaviour("StoryUIController");
+        MonoBehaviour player = FindBehaviour("StoryPlayerMovement");
+        yield return AdvanceSubtitlesUntilIdle(ui);
+
+        AssertStage(director, "CorridorCheck");
+        Vector3 start = player.transform.position;
+        Vector3 threshold = Find("CorridorSafetyThreshold").transform.position;
+        MethodInfo move = player.GetType().GetMethod("TrySetDestination", new[] { typeof(Vector3) });
+        Assert.That(move, Is.Not.Null);
+        Assert.That((bool)move.Invoke(player, new object[] { threshold }), Is.True,
+            "The first corridor objective must be reachable through the baked NavMesh.");
+
+        float timeout = Time.realtimeSinceStartup + 8f;
+        while (Property(director, "Stage").GetValue(director).ToString() != "RouteChoice" &&
+               Time.realtimeSinceStartup < timeout)
+            yield return null;
+
+        AssertStage(director, "RouteChoice");
+        Assert.That(Vector3.Distance(start, player.transform.position), Is.GreaterThan(2f),
+            "The corridor transition must come from visible player movement, not a teleport.");
+        Assert.That(Find("StairChoiceHeaderText"), Is.Not.Null);
+        Assert.That(Find("ElevatorChoiceHeaderText"), Is.Not.Null);
+    }
+
+    [UnityTest]
     public IEnumerator EvacuationRebuild_CompletesPhysicalNeighborEquipmentAndVisibleReunion()
     {
         yield return LoadFreshSceneByPath("Assets/Scenes/Story_04_RebuildPreview.unity");
@@ -519,6 +550,10 @@ public sealed class StoryChapterPlayModeTests
         MonoBehaviour manager = FindBehaviour("StoryGameManager");
         MonoBehaviour ui = FindBehaviour("StoryUIController");
         MonoBehaviour player = FindBehaviour("StoryPlayerMovement");
+        ParticleSystem gasVapor = Find("GasLeakVapor").GetComponent<ParticleSystem>();
+        AudioSource gasHiss = Find("GasLeak_Hiss").GetComponent<AudioSource>();
+        Assert.That(gasVapor.isPlaying, Is.False, "Gaz efekti bina içindeyken başlamamalı.");
+        Assert.That(gasHiss.isPlaying, Is.False, "Gaz sesi bina içindeyken duyulmamalı.");
         Field(director, "revisedAftershockMinimumDuration").SetValue(director, 0.05f);
 
         yield return AdvanceSubtitlesUntilIdle(ui);
@@ -529,6 +564,14 @@ public sealed class StoryChapterPlayModeTests
         InvokeNonPublic(corridorEntry, "OnTriggerEnter", player.GetComponent<Collider>());
         yield return AdvanceSubtitlesUntilIdle(ui);
         AssertStage(director, "RouteChoice");
+        Invoke(director, "TryElevator");
+        yield return AdvanceSubtitlesUntilIdle(ui);
+        AssertStage(director, "RouteChoice");
+        MonoBehaviour stairsChoice = (MonoBehaviour)Field(director, "chooseStairs").GetValue(director);
+        Assert.That(
+            (bool)Property(stairsChoice, "IsAvailable").GetValue(stairsChoice),
+            Is.True,
+            "Güvensiz asansör denemesinden sonra merdiven seçeneği yeniden açılmalı.");
         Invoke(director, "ChooseStairs");
         yield return AdvanceSubtitlesUntilIdle(ui);
         AssertStage(director, "UpperStairs");
@@ -541,8 +584,20 @@ public sealed class StoryChapterPlayModeTests
         AssertStage(director, "LowerStairs");
 
         Invoke(director, "ReachLowerLanding");
+        AssertStage(director, "HelpingNeighbor");
+        MonoBehaviour callNeighbor = (MonoBehaviour)Field(director, "callNeighbor").GetValue(director);
+        MonoBehaviour moveNeighborCardboard = (MonoBehaviour)Field(director, "moveNeighborCardboard").GetValue(director);
+        Assert.That((bool)Property(callNeighbor, "IsAvailable").GetValue(callNeighbor), Is.False,
+            "Nermin'in ilk seslenişi bitmeden görev işareti konuşmanın üstüne binmemeli.");
+        Assert.That((bool)Property(moveNeighborCardboard, "IsAvailable").GetValue(moveNeighborCardboard), Is.False,
+            "Çocuklar Nermin'in ihtiyacını dinlemeden yardım nesneleri açılmamalı.");
+        yield return AdvanceSubtitlesUntilIdle(ui);
+        Assert.That((bool)Property(callNeighbor, "IsAvailable").GetValue(callNeighbor), Is.True,
+            "Nermin çocukları çağırdıktan sonra doğrudan karakter üzerindeki konuşma etkileşimi açılmalı.");
         Invoke(director, "CallNeighbor");
         yield return AdvanceSubtitlesUntilIdle(ui);
+        Assert.That((bool)Property(moveNeighborCardboard, "IsAvailable").GetValue(moveNeighborCardboard), Is.True,
+            "Karşılıklı konuşma tamamlanınca Nermin'in tarif ettiği ilk fiziksel yardım açılmalı.");
         foreach (string method in new[]
                  {
                      "MoveNeighborCardboard",
@@ -557,27 +612,47 @@ public sealed class StoryChapterPlayModeTests
         AssertStage(director, "BuildingExit");
         AssertFlag(manager, "NeighborAssisted", true);
 
-        Invoke(player, "Warp", new Vector3(0f, 0.02f, 20f));
+        Vector3 positionBeforeOpeningDoor = player.transform.position;
         Invoke(director, "OpenBuildingExit");
-        yield return WaitForSubtitle(ui, 7f);
+        yield return null;
+        Assert.That(
+            Vector3.Distance(positionBeforeOpeningDoor, player.transform.position),
+            Is.LessThan(0.08f),
+            "Kapı kolunu çekmek Deniz'i bina dışına ışınlamamalı.");
         yield return AdvanceSubtitlesUntilIdle(ui);
         AssertStage(director, "FacadeClear");
         Invoke(director, "MoveAwayFromFacade");
         yield return AdvanceSubtitlesUntilIdle(ui);
         AssertStage(director, "StreetRoute");
+        Assert.That(gasVapor.isPlaying, Is.False,
+            "Gaz kaynağı gösterilmeden efekt başlamamalı.");
+        Assert.That(gasHiss.isPlaying, Is.False,
+            "Merdiven ve bina önü akışında kaynaksız gaz sesi duyulmamalı.");
 
-        MonoBehaviour streetRead = FindStoryInteractable("StreetGlassAndLooseSign_Hazard");
-        Invoke(streetRead, "CompletePreparedInteraction");
-        yield return null;
-        Assert.That(Find("LooseFacadeSign").GetComponent<Animation>().isPlaying, Is.True);
-        Assert.That(Find("StreetWarningGlassShard_Slide").GetComponent<Animation>().isPlaying, Is.True);
-        Assert.That(Find("StreetFacadeDust").GetComponent<ParticleSystem>().isPlaying, Is.True);
-        Assert.That(Find("StreetWarning_LooseSignCreak").GetComponent<AudioSource>().isPlaying, Is.True);
+        MonoBehaviour gasRead = FindStoryInteractable("DamagedGasPipe_BrokenElbow");
+        MonoBehaviour gasChoice = FindStoryInteractable("GasServiceCylinder_Fallen");
+        MonoBehaviour safeChoice = FindStoryInteractable("SafeOpenSidewalk");
+        Assert.That((bool)Property(gasRead, "IsAvailable").GetValue(gasRead), Is.True);
+        Assert.That((bool)Property(gasChoice, "IsAvailable").GetValue(gasChoice), Is.False);
+        Assert.That((bool)Property(safeChoice, "IsAvailable").GetValue(safeChoice), Is.False);
+        Invoke(director, "InspectStreetHazard");
         yield return AdvanceSubtitlesUntilIdle(ui);
+        Assert.That(gasVapor.isPlaying, Is.True);
+        Assert.That(gasHiss.isPlaying, Is.True);
+        Assert.That((bool)Property(gasChoice, "IsAvailable").GetValue(gasChoice), Is.True);
+        Assert.That((bool)Property(safeChoice, "IsAvailable").GetValue(safeChoice), Is.True);
+        Invoke(director, "TryUnsafeShortcut");
+        yield return AdvanceSubtitlesUntilIdle(ui);
+        AssertStage(director, "StreetRoute");
+        Assert.That((bool)Property(gasChoice, "IsAvailable").GetValue(gasChoice), Is.True,
+            "Gaz kaçağı ramak kalasından sonra karar seçenekleri yeniden açılmalı.");
+        Assert.That((bool)Property(safeChoice, "IsAvailable").GetValue(safeChoice), Is.True);
         Invoke(director, "TakeSafeSidewalk");
         yield return WaitForSubtitle(ui, 12f);
         yield return AdvanceSubtitlesUntilIdle(ui);
         AssertStage(director, "AssemblyChecks");
+        Assert.That(gasVapor.isPlaying, Is.False);
+        Assert.That(gasHiss.isPlaying, Is.False);
         AssertCheckpoint(manager, "AssemblyAreaReached");
         foreach (string passiveWorldResult in new[]
                  {
@@ -873,6 +948,194 @@ public sealed class StoryChapterPlayModeTests
         Invoke(whistle, "SetAvailable", true);
         Assert.That((int)Property(whistle, "RequiredGestureCount").GetValue(whistle), Is.EqualTo(3));
         Assert.That((bool)Property(whistle, "IsAvailable").GetValue(whistle), Is.True);
+    }
+
+    [UnityTest]
+    public IEnumerator RebuildChapters_PlayerLocomotionFacesTravelDirectionWithoutSnaps()
+    {
+        string[] scenePaths =
+        {
+            "Assets/Scenes/Story_01_RebuildPreview.unity",
+            "Assets/Scenes/Story_02_RebuildPreview.unity",
+            "Assets/Scenes/Story_03_RebuildPreview.unity",
+            "Assets/Scenes/Story_04_RebuildPreview.unity"
+        };
+
+        foreach (string scenePath in scenePaths)
+        {
+            yield return LoadFreshSceneByPath(scenePath);
+            MonoBehaviour[] behaviours = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None);
+            MonoBehaviour movement = behaviours.Single(item =>
+                item != null && item.GetType().Name == "StoryPlayerMovement");
+            MonoBehaviour ui = behaviours.Single(item =>
+                item != null && item.GetType().Name == "StoryUIController");
+            if ((bool)Property(ui, "SubtitleActive").GetValue(ui))
+                yield return AdvanceSubtitlesUntilIdle(ui);
+
+            foreach (MonoBehaviour behaviour in behaviours.Where(item =>
+                         item != null &&
+                         (item.GetType().Name.EndsWith("Director", StringComparison.Ordinal) ||
+                          item.GetType().Name == "StoryTouchManager" ||
+                          item.GetType().Name == "StoryCameraController" ||
+                          item.GetType().Name == "StoryUIController" ||
+                          item.GetType().Name == "StorySiblingFollower")))
+                behaviour.enabled = false;
+
+            Invoke(movement, "SetStoryInputLocked", false);
+            Invoke(movement, "SetNavigationEnabled", true);
+            Invoke(movement, "Stop");
+            NavMeshAgent agent = movement.GetComponent<NavMeshAgent>();
+            Assert.That(agent, Is.Not.Null, scenePath);
+            Assert.That(agent.isOnNavMesh, Is.True, scenePath);
+            Vector3 destination = FindReachableTravelPoint(agent);
+            Assert.That(Vector3.Distance(destination, movement.transform.position), Is.GreaterThan(1.35f), scenePath);
+            Assert.That((bool)InvokeWithResult(movement, "TrySetDestination", destination), Is.True, scenePath);
+
+            float velocityTimeout = Time.realtimeSinceStartup + 3f;
+            while (agent.velocity.sqrMagnitude < 0.12f && Time.realtimeSinceStartup < velocityTimeout)
+                yield return null;
+            Assert.That(agent.velocity.sqrMagnitude, Is.GreaterThan(0.12f), scenePath);
+            yield return new WaitForSecondsRealtime(0.22f);
+
+            Vector3 planarVelocity = Vector3.ProjectOnPlane(agent.velocity, Vector3.up).normalized;
+            Animator animator = movement.GetComponentInChildren<Animator>();
+            Assert.That(animator, Is.Not.Null, scenePath);
+            Transform leftUpperArm = animator.GetBoneTransform(HumanBodyBones.LeftUpperArm);
+            Transform rightUpperArm = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
+            Assert.That(leftUpperArm, Is.Not.Null, scenePath);
+            Assert.That(rightUpperArm, Is.Not.Null, scenePath);
+            Vector3 shoulderRight = Vector3.ProjectOnPlane(
+                rightUpperArm.position - leftUpperArm.position,
+                Vector3.up).normalized;
+            Vector3 visibleBodyForward = Vector3.Cross(shoulderRight, Vector3.up).normalized;
+            Assert.That(Vector3.Dot(visibleBodyForward, planarVelocity), Is.GreaterThan(0.78f),
+                scenePath + " — Deniz ekranda yürüdüğü yöne bakmalı; geri geri yürümemeli.");
+            Assert.That(animator.GetCurrentAnimatorClipInfo(0)
+                    .Any(info => info.clip != null && info.clip.name == "ChildNaturalWalk"),
+                Is.True,
+                scenePath + " — bütün bölümlerde aynı düzeltilmiş doğal yürüyüş klibi kullanılmalı.");
+            Invoke(movement, "Stop");
+        }
+    }
+
+    [UnityTest]
+    public IEnumerator QuakeSiblingFacing_TurnsSmoothlyInsteadOfTeleporting()
+    {
+        yield return LoadFreshSceneByPath("Assets/Scenes/Story_03_RebuildPreview.unity");
+        MonoBehaviour sequence = FindBehaviour("StorySequenceDirector");
+        MonoBehaviour follower = FindBehaviour("StorySiblingFollower");
+        sequence.enabled = false;
+        Invoke(follower, "SetFollowing", false);
+        follower.transform.rotation = Quaternion.identity;
+        Vector3 target = follower.transform.position + Vector3.right * 3f;
+        Quaternion expected = Quaternion.LookRotation(Vector3.right, Vector3.up);
+
+        Invoke(follower, "FaceTowards", target);
+        Assert.That(Quaternion.Angle(follower.transform.rotation, expected), Is.GreaterThan(80f),
+            "Can'ın konuşma yönü tek karede atlamamalı.");
+        yield return null;
+        Assert.That(Quaternion.Angle(follower.transform.rotation, expected), Is.InRange(35f, 89.9f));
+        yield return new WaitForSecondsRealtime(0.6f);
+        Assert.That(Quaternion.Angle(follower.transform.rotation, expected), Is.LessThan(1.2f));
+    }
+
+    [UnityTest]
+    public IEnumerator QuakeAndEvacuation_CanFacesFollowerVelocityWithoutWalkingBackward()
+    {
+        foreach (string scenePath in new[]
+                 {
+                     "Assets/Scenes/Story_03_RebuildPreview.unity",
+                     "Assets/Scenes/Story_04_RebuildPreview.unity"
+                 })
+        {
+            yield return LoadFreshSceneByPath(scenePath);
+            MonoBehaviour[] behaviours = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None);
+            MonoBehaviour movement = behaviours.Single(item =>
+                item != null && item.GetType().Name == "StoryPlayerMovement");
+            MonoBehaviour follower = behaviours.Single(item =>
+                item != null && item.GetType().Name == "StorySiblingFollower");
+            MonoBehaviour ui = behaviours.Single(item =>
+                item != null && item.GetType().Name == "StoryUIController");
+            if ((bool)Property(ui, "SubtitleActive").GetValue(ui))
+                yield return AdvanceSubtitlesUntilIdle(ui);
+
+            foreach (MonoBehaviour behaviour in behaviours.Where(item =>
+                         item != null &&
+                         (item.GetType().Name.EndsWith("Director", StringComparison.Ordinal) ||
+                          item.GetType().Name == "StoryTouchManager" ||
+                          item.GetType().Name == "StoryCameraController" ||
+                          item.GetType().Name == "StoryUIController")))
+                behaviour.enabled = false;
+
+            Invoke(movement, "SetStoryInputLocked", false);
+            Invoke(movement, "Stop");
+            Invoke(follower, "SetFollowing", false);
+            NavMeshAgent followerAgent = follower.GetComponent<NavMeshAgent>();
+            Assert.That(followerAgent, Is.Not.Null, scenePath);
+            Vector3 target = FindReachableTravelPoint(followerAgent);
+            Assert.That(Vector3.Distance(target, follower.transform.position), Is.GreaterThan(1.35f), scenePath);
+            followerAgent.isStopped = false;
+            Assert.That(followerAgent.SetDestination(target), Is.True, scenePath);
+
+            float velocityTimeout = Time.realtimeSinceStartup + 3f;
+            while (followerAgent.velocity.sqrMagnitude < 0.12f && Time.realtimeSinceStartup < velocityTimeout)
+            {
+                Invoke(movement, "SetStoryInputLocked", false);
+                if (!followerAgent.hasPath && !followerAgent.pathPending)
+                    followerAgent.SetDestination(target);
+                yield return null;
+            }
+            Assert.That(followerAgent.velocity.sqrMagnitude, Is.GreaterThan(0.12f), scenePath);
+            yield return new WaitForSecondsRealtime(0.22f);
+
+            Vector3 velocity = Vector3.ProjectOnPlane(followerAgent.velocity, Vector3.up).normalized;
+            Animator animator = follower.GetComponentInChildren<Animator>();
+            Transform leftUpperArm = animator.GetBoneTransform(HumanBodyBones.LeftUpperArm);
+            Transform rightUpperArm = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
+            Vector3 shoulderRight = Vector3.ProjectOnPlane(
+                rightUpperArm.position - leftUpperArm.position,
+                Vector3.up).normalized;
+            Vector3 visibleBodyForward = Vector3.Cross(shoulderRight, Vector3.up).normalized;
+            Assert.That(Vector3.Dot(visibleBodyForward, velocity), Is.GreaterThan(0.78f),
+                scenePath + " — Can Deniz'i takip ederken geri geri yürümemeli.");
+            Assert.That(animator.GetCurrentAnimatorClipInfo(0)
+                    .Any(info => info.clip != null && info.clip.name == "ChildNaturalWalk"),
+                Is.True,
+                scenePath + " — Can da düzeltilmiş doğal yürüyüş klibini kullanmalı.");
+            Invoke(follower, "SetFollowing", false);
+        }
+    }
+
+    private static Vector3 FindReachableTravelPoint(NavMeshAgent agent)
+    {
+        NavMeshPath path = new NavMeshPath();
+        Vector3 origin = agent.nextPosition;
+        Vector3 best = origin;
+        float bestDistance = 0f;
+        for (int radiusIndex = 0; radiusIndex < 3; radiusIndex++)
+        {
+            float radius = 4f - radiusIndex;
+            for (int index = 0; index < 16; index++)
+            {
+                float angle = index * Mathf.PI * 2f / 16f;
+                Vector3 request = origin + new Vector3(Mathf.Cos(angle), 0f, Mathf.Sin(angle)) * radius;
+                if (!NavMesh.SamplePosition(request, out NavMeshHit hit, 1.25f, agent.areaMask) ||
+                    !agent.CalculatePath(hit.position, path) ||
+                    path.status != NavMeshPathStatus.PathComplete)
+                    continue;
+
+                float distance = Vector3.Distance(origin, hit.position);
+                if (distance <= bestDistance)
+                    continue;
+                best = hit.position;
+                bestDistance = distance;
+            }
+        }
+        return best;
     }
 
     private static IEnumerator LoadFreshSceneByPath(string scenePath)

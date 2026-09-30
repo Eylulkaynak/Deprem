@@ -1,0 +1,170 @@
+// Editor-only build helper. prepare_android_review.py copies this into a disposable project.
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Security.Cryptography;
+using System.Text.RegularExpressions;
+using Microsoft.Win32;
+using UnityEditor;
+using UnityEditor.Android;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
+using UnityEditor.Build.Profile;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.Rendering;
+
+namespace YanYana.Editor
+{
+    public static class YanYanaAndroidReviewBuild
+    {
+        [Serializable] private class CopyMarker
+        {
+            public string purpose, source, clone, createdAt, scene, sceneSha256;
+        }
+
+        public static void Build()
+        {
+            string root = Directory.GetParent(Application.dataPath).FullName;
+            string markerPath = Path.Combine(root, "yanyana-android-copy.json");
+            if (!File.Exists(markerPath)) throw new InvalidOperationException("Build only an explicitly prepared Android copy.");
+            var marker = JsonUtility.FromJson<CopyMarker>(File.ReadAllText(markerPath));
+            if (marker.purpose != "YanYana isolated Android review build" ||
+                !string.Equals(Path.GetFullPath(marker.clone), root, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(Path.GetFullPath(marker.source), root, StringComparison.OrdinalIgnoreCase) ||
+                !root.StartsWith(Path.Combine(Path.GetFullPath(marker.source), ".codex_tmp") + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidOperationException("The Android copy marker does not match this project.");
+            if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.Android)
+                throw new InvalidOperationException("Launch this copy with -buildTarget Android.");
+            const string scene = "Assets/YanYana/Scenes/YanYana_Adventure.unity";
+            if (marker.scene != scene || Hash(scene) != marker.sceneSha256)
+                throw new InvalidOperationException("The source scene changed before Android build.");
+
+            string delivery = Path.Combine(marker.source, "ClientExports/YanYana/Android");
+            string reports = Path.Combine(marker.source, "ClientExports/YanYana/Reports");
+            Directory.CreateDirectory(delivery);
+            Directory.CreateDirectory(reports);
+            string reportPath = Path.Combine(reports, "android-build.txt");
+            File.WriteAllText(reportPath, "Status=Starting\nStartedUtc=" + DateTime.UtcNow.ToString("O") + "\nSceneSha256=" + marker.sceneSha256 + "\n");
+
+            PlayerSettings.companyName = "YanYana";
+            PlayerSettings.productName = "Deprem";
+            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.yanyana.adventure.review");
+            PlayerSettings.bundleVersion = "0.1.0";
+            PlayerSettings.Android.bundleVersionCode = 1;
+            PlayerSettings.Android.useCustomKeystore = false;
+            PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
+            PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel26;
+            PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel35;
+            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
+            PlayerSettings.SetManagedStrippingLevel(NamedBuildTarget.Android, ManagedStrippingLevel.Minimal);
+            PlayerSettings.defaultInterfaceOrientation = UIOrientation.Portrait;
+            PlayerSettings.use32BitDisplayBuffer = true;
+            PlayerSettings.SetUseDefaultGraphicsAPIs(BuildTarget.Android, false);
+            PlayerSettings.SetGraphicsAPIs(BuildTarget.Android, new[] { GraphicsDeviceType.OpenGLES3 });
+            EditorUserBuildSettings.buildAppBundle = false;
+            EditorUserBuildSettings.exportAsGoogleAndroidProject = false;
+            EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
+            // Visual Scripting's AOT scan also reads this list. This is the copy's list only.
+            EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(scene, true) };
+
+            // The authored graphs and StandaloneInputModule use UnityEngine.Input.
+            // Select that single input backend in the isolated copy; Android rejects Both.
+            // Resolve the same global PlayerSettings instance as Input System 1.14.2.
+            // AssetDatabase.LoadAssetAtPath does not load files from ProjectSettings.
+            if (BuildProfile.GetActiveBuildProfile() != null)
+                throw new InvalidOperationException("Use the built-in Android target, without a profile override.");
+            var settingsField = typeof(BuildProfile).GetField("s_GlobalPlayerSettings", BindingFlags.Static | BindingFlags.NonPublic);
+            var settingsInstance = settingsField?.GetValue(null) as PlayerSettings;
+            if (settingsInstance == null) throw new InvalidOperationException("Cannot resolve global PlayerSettings.");
+            var serializedSettings = new SerializedObject(settingsInstance);
+            var input = serializedSettings.FindProperty("activeInputHandler");
+            if (input == null) throw new InvalidOperationException("Cannot configure the Android input backend.");
+            input.intValue = 0;
+            serializedSettings.ApplyModifiedPropertiesWithoutUndo();
+            AssetDatabase.SaveAssets();
+
+            EditorSceneManager.OpenScene(scene, OpenSceneMode.Single);
+            string apk = Path.Combine(delivery, "Deprem-Android-Inceleme-" + DateTime.Now.ToString("yyyyMMdd-HHmmss") + ".apk");
+            BuildReport report;
+            using (var tools = new ToolPreferencesScope(root, reports))
+            {
+                AndroidExternalToolsSettings.sdkRootPath = string.Empty;
+                AndroidExternalToolsSettings.ndkRootPath = string.Empty;
+                AndroidExternalToolsSettings.jdkRootPath = string.Empty;
+                AndroidExternalToolsSettings.gradlePath = string.Empty;
+                File.WriteAllText(Path.Combine(reports, "android-build-tool-paths.txt"),
+                    "SDK=" + AndroidExternalToolsSettings.sdkRootPath + "\nNDK=" + AndroidExternalToolsSettings.ndkRootPath +
+                    "\nJDK=" + AndroidExternalToolsSettings.jdkRootPath + "\nGradle=" + AndroidExternalToolsSettings.gradlePath + "\n");
+                report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
+                    scenes = new[] { scene }, locationPathName = apk, target = BuildTarget.Android,
+                    options = BuildOptions.CompressWithLz4HC
+                });
+            }
+            var summary = report.summary;
+            string messages = string.Join("\n", report.steps.SelectMany(step => step.messages)
+                .Where(message => message.type == LogType.Error || message.type == LogType.Exception || message.type == LogType.Warning)
+                .Select(message => message.type + ": " + message.content));
+            File.WriteAllText(reportPath,
+                "Result=" + summary.result + "\nScenes=" + scene + "\nSceneSha256=" + marker.sceneSha256 +
+                "\nUnity=" + Application.unityVersion + "\nArchitecture=ARM64\nBackend=IL2CPP\nInput=Legacy\nGraphics=OpenGLES3\n" +
+                "Package=com.yanyana.adventure.review\nMinSdk=26\nTargetSdk=35\nSigning=Android debug certificate (local review)\n" +
+                "Apk=" + apk + "\nBytes=" + summary.totalSize + "\nErrors=" + summary.totalErrors +
+                "\nWarnings=" + summary.totalWarnings + "\nDuration=" + summary.totalTime + "\n" + messages + "\n");
+            if (summary.result != BuildResult.Succeeded)
+                throw new InvalidOperationException("Android build failed. See android-build.txt and the isolated Editor log.");
+            File.AppendAllText(reportPath, "ApkSha256=" + Hash(apk) + "\n");
+            Debug.Log("YAN YANA ANDROID BUILD SUCCEEDED: " + apk);
+        }
+
+        [Serializable] private class ToolPreference { public string name, text; public int number; public bool integer; }
+        [Serializable] private class ToolPreferenceSnapshot { public ToolPreference[] values; }
+        private sealed class ToolPreferencesScope : IDisposable
+        {
+            private readonly string pending, report;
+            private readonly ToolPreferenceSnapshot snapshot;
+            private static IEnumerable<string> Names()
+            {
+                using (var registry = Registry.CurrentUser.OpenSubKey(@"Software\Unity Technologies\Unity Editor 5.x"))
+                    return registry.GetValueNames()
+                        .Where(name => Regex.IsMatch(name, @"^(Android(Sdk|Ndk|Jdk)|Jdk|Gradle|Sdk|Ndk)(Root|Path|Use|Home|Installed|Version)"))
+                        .Select(name => Regex.Replace(name, @"_h[0-9]+$", "")).ToArray();
+            }
+            public ToolPreferencesScope(string root, string reports)
+            {
+                pending = Path.Combine(root, "yanyana-tool-preferences.pending.json");
+                report = Path.Combine(reports, "android-tool-preferences-restoration.txt");
+                if (File.Exists(pending)) Restore(JsonUtility.FromJson<ToolPreferenceSnapshot>(File.ReadAllText(pending)));
+                snapshot = new ToolPreferenceSnapshot { values = Names().Select(name => {
+                    bool integer = name.EndsWith("UseEmbedded", StringComparison.Ordinal);
+                    return new ToolPreference { name = name, integer = integer, number = integer ? EditorPrefs.GetInt(name) : 0, text = integer ? null : EditorPrefs.GetString(name) };
+                }).ToArray() };
+                File.WriteAllText(pending, JsonUtility.ToJson(snapshot, true));
+            }
+            private static void Restore(ToolPreferenceSnapshot saved)
+            {
+                var before = new HashSet<string>(saved.values.Select(value => value.name));
+                foreach (string name in Names()) if (!before.Contains(name)) EditorPrefs.DeleteKey(name);
+                foreach (var value in saved.values)
+                    if (value.integer) EditorPrefs.SetInt(value.name, value.number); else EditorPrefs.SetString(value.name, value.text);
+            }
+            public void Dispose()
+            {
+                Restore(snapshot);
+                bool valid = snapshot.values.All(value => value.integer ? EditorPrefs.GetInt(value.name) == value.number : EditorPrefs.GetString(value.name) == value.text);
+                File.WriteAllText(report, "Restored=" + valid + "\nSavedToolPreferences=" + snapshot.values.Length + "\nCheckedUtc=" + DateTime.UtcNow.ToString("O") + "\n");
+                if (!valid) throw new InvalidOperationException("Android tool preference restoration failed.");
+                File.Delete(pending);
+            }
+        }
+
+        private static string Hash(string path)
+        {
+            using (var stream = File.OpenRead(path))
+            using (var sha = SHA256.Create())
+                return BitConverter.ToString(sha.ComputeHash(stream)).Replace("-", "").ToLowerInvariant();
+        }
+    }
+}

@@ -89,7 +89,13 @@ namespace Deprem.Story
                 return;
             Vector2 delta = eventData.position - dragStart;
             float threshold = EffectiveSwipeThreshold();
-            float directedDistance = gesture == StoryInteractionGesture.SwipeDown ? Mathf.Max(0f, -delta.y) : Mathf.Abs(delta.x);
+            float directedDistance = gesture switch
+            {
+                StoryInteractionGesture.SwipeDown => Mathf.Max(0f, -delta.y),
+                StoryInteractionGesture.SwipeDiagonalDownRight =>
+                    Mathf.Max(0f, Vector2.Dot(delta, new Vector2(1f, -1f).normalized)),
+                _ => Mathf.Abs(delta.x)
+            };
             if (progressFill != null)
                 progressFill.fillAmount = Mathf.Clamp01(directedDistance / threshold);
         }
@@ -143,7 +149,9 @@ namespace Deprem.Story
 
         private bool IsSwipeGesture()
         {
-            return gesture == StoryInteractionGesture.SwipeDown || gesture == StoryInteractionGesture.SwipeHorizontal;
+            return gesture == StoryInteractionGesture.SwipeDown ||
+                   gesture == StoryInteractionGesture.SwipeDiagonalDownRight ||
+                   gesture == StoryInteractionGesture.SwipeHorizontal;
         }
 
         private void BeginSwipe(Vector2 pointerPosition)
@@ -163,9 +171,15 @@ namespace Deprem.Story
             Vector2 delta = pointerPosition - dragStart;
             dragging = false;
             float threshold = EffectiveSwipeThreshold();
-            bool directionValid = gesture == StoryInteractionGesture.SwipeDown
-                ? delta.y <= -threshold && Mathf.Abs(delta.y) > Mathf.Abs(delta.x) * 1.2f
-                : Mathf.Abs(delta.x) >= threshold && Mathf.Abs(delta.x) > Mathf.Abs(delta.y) * 1.2f;
+            bool directionValid = gesture switch
+            {
+                StoryInteractionGesture.SwipeDown =>
+                    delta.y <= -threshold && Mathf.Abs(delta.y) > Mathf.Abs(delta.x) * 1.2f,
+                StoryInteractionGesture.SwipeDiagonalDownRight =>
+                    delta.magnitude >= threshold &&
+                    Vector2.Dot(delta.normalized, new Vector2(1f, -1f).normalized) >= 0.82f,
+                _ => Mathf.Abs(delta.x) >= threshold && Mathf.Abs(delta.x) > Mathf.Abs(delta.y) * 1.2f
+            };
             if (directionValid)
             {
                 completedGestureCount = requiredGestureCount;
@@ -201,6 +215,9 @@ namespace Deprem.Story
                     break;
                 case StoryInteractionGesture.SwipeDown:
                     label.text = prefix + actionLabel + " — AŞAĞI KAYDIR";
+                    break;
+                case StoryInteractionGesture.SwipeDiagonalDownRight:
+                    label.text = prefix + actionLabel + " — SAĞ ALTA ÇEK";
                     break;
                 case StoryInteractionGesture.SwipeHorizontal:
                     label.text = prefix + actionLabel + " — KAYDIR";

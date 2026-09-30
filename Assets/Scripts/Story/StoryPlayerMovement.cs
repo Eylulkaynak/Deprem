@@ -32,6 +32,10 @@ namespace Deprem.Story
         private float movementConstraintRadius;
         private bool storyInputLocked;
         private Vector3 activeDestination;
+        private bool scriptedFacing;
+        private Quaternion scriptedFacingRotation;
+        private Action onFaced;
+        private bool authoredPoseActive;
 
         public bool NavigationEnabled => navigationEnabled;
         public bool StoryInputLocked => storyInputLocked;
@@ -65,15 +69,25 @@ namespace Deprem.Story
                     agent.isStopped = true;
                 if (agent.hasPath || destinationPending || agent.velocity.sqrMagnitude > 0.0001f)
                     Stop();
+                UpdateScriptedFacing();
+                if (animator != null && animator.isActiveAndEnabled)
+                    animator.SetFloat(speedHash, 0f);
                 return;
             }
 
             Vector3 velocity = agent.velocity;
             velocity.y = 0f;
-            if (velocity.sqrMagnitude > 0.01f)
+            if (scriptedFacing)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(velocity.normalized, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+                UpdateScriptedFacing();
+            }
+            else if (velocity.sqrMagnitude > 0.01f)
+            {
+                Quaternion targetRotation = FacingRotation(velocity.normalized);
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation,
+                    targetRotation,
+                    TurnBlend(Time.deltaTime));
             }
 
             if (animator != null && animator.isActiveAndEnabled)
@@ -91,7 +105,11 @@ namespace Deprem.Story
                     Vector3 facing = arrivalFacing;
                     facing.y = 0f;
                     if (facing.sqrMagnitude > 0.01f)
-                        transform.rotation = Quaternion.LookRotation(facing, Vector3.up);
+                    {
+                        faceOnArrival = false;
+                        BeginScriptedFacing(facing, callback);
+                        return;
+                    }
                 }
                 faceOnArrival = false;
                 callback?.Invoke();
@@ -120,6 +138,7 @@ namespace Deprem.Story
             if (!agent.CalculatePath(resolvedDestination, reusablePath) || reusablePath.status != NavMeshPathStatus.PathComplete)
                 return false;
 
+            CancelScriptedFacing();
             onArrived = arrivedCallback;
             faceOnArrival = shouldFaceOnArrival;
             arrivalFacing = facing;
@@ -261,7 +280,59 @@ namespace Deprem.Story
             Vector3 facing = worldPosition - transform.position;
             facing.y = 0f;
             if (facing.sqrMagnitude > 0.01f)
-                transform.rotation = Quaternion.LookRotation(facing, Vector3.up);
+            {
+                Stop();
+                BeginScriptedFacing(facing, null);
+            }
+        }
+
+        private void BeginScriptedFacing(Vector3 direction, Action completed)
+        {
+            direction.y = 0f;
+            if (direction.sqrMagnitude <= 0.01f)
+            {
+                completed?.Invoke();
+                return;
+            }
+
+            scriptedFacingRotation = FacingRotation(direction);
+            scriptedFacing = true;
+            onFaced = completed;
+        }
+
+        private void UpdateScriptedFacing()
+        {
+            if (!scriptedFacing)
+                return;
+
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                scriptedFacingRotation,
+                TurnBlend(Time.deltaTime));
+            if (Quaternion.Angle(transform.rotation, scriptedFacingRotation) > 0.6f)
+                return;
+
+            transform.rotation = scriptedFacingRotation;
+            scriptedFacing = false;
+            Action callback = onFaced;
+            onFaced = null;
+            callback?.Invoke();
+        }
+
+        private void CancelScriptedFacing()
+        {
+            scriptedFacing = false;
+            onFaced = null;
+        }
+
+        private float TurnBlend(float deltaTime)
+        {
+            return 1f - Mathf.Exp(-Mathf.Max(2f, turnSpeed) * deltaTime);
+        }
+
+        private Quaternion FacingRotation(Vector3 direction)
+        {
+            return Quaternion.LookRotation(direction.normalized, Vector3.up);
         }
 
         public void SetMovementConstraint(Vector3 center, float radius)
@@ -314,6 +385,51 @@ namespace Deprem.Story
                 agent.Warp(worldPosition);
             else
                 transform.position = worldPosition;
+        }
+
+        public void SetAuthoredPose(Vector3 worldPosition, Quaternion worldRotation)
+        {
+            if (!authoredPoseActive)
+            {
+                Stop();
+                navigationEnabled = false;
+                CancelScriptedFacing();
+                if (agent != null)
+                {
+                    if (agent.isOnNavMesh)
+                    {
+                        agent.ResetPath();
+                        agent.isStopped = true;
+                        agent.velocity = Vector3.zero;
+                    }
+                    agent.updatePosition = false;
+                }
+                authoredPoseActive = true;
+            }
+
+            transform.SetPositionAndRotation(worldPosition, worldRotation);
+            if (animator != null && animator.isActiveAndEnabled)
+                animator.SetFloat(speedHash, 0f);
+        }
+
+        public void ReleaseAuthoredPose(Vector3 preferredWorldPosition)
+        {
+            if (!authoredPoseActive)
+                return;
+
+            authoredPoseActive = false;
+            if (agent != null)
+            {
+                agent.updatePosition = true;
+                if (NavMesh.SamplePosition(preferredWorldPosition, out NavMeshHit hit, 2.5f, agent.areaMask))
+                {
+                    transform.position = hit.position;
+                    agent.Warp(hit.position);
+                }
+                if (agent.isOnNavMesh)
+                    agent.isStopped = false;
+            }
+            navigationEnabled = true;
         }
 
         private void ApplyAgentLockState()

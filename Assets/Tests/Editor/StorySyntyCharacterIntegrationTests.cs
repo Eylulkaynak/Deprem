@@ -3,6 +3,7 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class StorySyntyCharacterIntegrationTests
 {
@@ -12,28 +13,25 @@ public sealed class StorySyntyCharacterIntegrationTests
     [TestCase("Assets/Scenes/Story_04_RebuildPreview.unity")]
     public void RebuildPreview_UsesChibiChildrenWithValidHumanoidAvatars(string scenePath)
     {
-        EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+        Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
 
-        AssertCharacter("Deniz_12", "character-male-a");
-        AssertCharacter("Can_8", "character-male-d");
-        Assert.That(AssetDatabase.LoadAssetAtPath<TextAsset>(
-            "Assets/Story/Characters/ThirdParty/KenneyMini/LICENSE.txt"), Is.Not.Null);
+        AssertCharacter(scene, "Deniz_12", "Deniz");
+        AssertCharacter(scene, "Can_8", "Can");
     }
 
     [Test]
     public void AdultRoles_UseChibiFamilyAndDistinctEmergencyCast()
     {
-        EditorSceneManager.OpenScene(
+        Scene scene = EditorSceneManager.OpenScene(
             "Assets/Scenes/Story_04_RebuildPreview.unity",
             OpenSceneMode.Single);
 
-        AssertRoleSource("Anne_Assembly_Reunion", "merchantpr");
-        AssertRoleSource("Baba_Assembly_Reunion", "merchantpr");
-        AssertRoleSource("AssemblyWorker", "Character_Paramedic_01");
-        Assert.That(Object.FindObjectsByType<Transform>(
-                FindObjectsInactive.Include,
-                FindObjectsSortMode.None)
-            .Select(item => item.name), Does.Contain("CharacterSource_Character_Grandma_01"));
+        AssertRoleSource(scene, "Anne_Assembly_Reunion", "Anne");
+        AssertRoleSource(scene, "Baba_Assembly_Reunion", "Baba");
+        AssertRoleSource(scene, "AssemblyWorker", "RescueWorker");
+        AssertRoleSource(scene, "AssemblyPolice", "Police");
+        AssertRoleSource(scene, "EmergencyFirefighter", "Firefighter");
+        Assert.That(SceneTransforms(scene).Select(item => item.name), Does.Contain("CharacterSource_Komsu"));
     }
 
     [Test]
@@ -58,9 +56,9 @@ public sealed class StorySyntyCharacterIntegrationTests
         }
     }
 
-    private static void AssertCharacter(string roleName, string sourceName)
+    private static void AssertCharacter(Scene scene, string roleName, string sourceName)
     {
-        GameObject role = GameObject.Find(roleName);
+        GameObject role = FindInScene(scene, roleName);
         Assert.That(role, Is.Not.Null, roleName);
         Assert.That(
             role.transform.Find("CharacterSource_" + sourceName),
@@ -71,8 +69,7 @@ public sealed class StorySyntyCharacterIntegrationTests
             .GetComponentsInChildren<SkinnedMeshRenderer>(true)
             .Where(renderer => renderer.gameObject.activeSelf)
             .ToArray();
-        Assert.That(visibleMeshes.Select(renderer => renderer.name),
-            Does.Contain("head-mesh"), roleName);
+        Assert.That(visibleMeshes, Is.Not.Empty, roleName);
 
         Animator animator = role.GetComponentInChildren<Animator>(true);
         Assert.That(animator, Is.Not.Null, roleName);
@@ -82,14 +79,26 @@ public sealed class StorySyntyCharacterIntegrationTests
         Assert.That(animator.runtimeAnimatorController, Is.Not.Null, roleName);
     }
 
-    private static void AssertRoleSource(string roleName, string sourceName)
+    private static void AssertRoleSource(Scene scene, string roleName, string sourceName)
     {
-        GameObject role = Object.FindObjectsByType<Transform>(
-                FindObjectsInactive.Include,
-                FindObjectsSortMode.None)
+        GameObject role = SceneTransforms(scene)
             .FirstOrDefault(item => item.name == roleName)
             ?.gameObject;
         Assert.That(role, Is.Not.Null, roleName);
         Assert.That(role.transform.Find("CharacterSource_" + sourceName), Is.Not.Null, roleName);
+    }
+
+    private static GameObject FindInScene(Scene scene, string objectName)
+    {
+        return SceneTransforms(scene)
+            .FirstOrDefault(item => item.name == objectName)
+            ?.gameObject;
+    }
+
+    private static Transform[] SceneTransforms(Scene scene)
+    {
+        return scene.GetRootGameObjects()
+            .SelectMany(root => root.GetComponentsInChildren<Transform>(true))
+            .ToArray();
     }
 }

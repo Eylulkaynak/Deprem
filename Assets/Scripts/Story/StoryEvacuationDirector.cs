@@ -167,6 +167,7 @@ namespace Deprem.Story
         private static readonly int InteractTrigger = Animator.StringToHash("StoryInteract");
         private static readonly int PickUpTrigger = Animator.StringToHash("StoryPickUp");
         private static readonly int CallTrigger = Animator.StringToHash("StoryCall");
+        private static readonly int TalkTrigger = Animator.StringToHash("StoryTalk");
 
         public StoryEvacuationStage Stage => stage;
         public bool RevisedFlow => revisedFlow;
@@ -222,10 +223,9 @@ namespace Deprem.Story
                 return;
 
             inspectCorridor?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InspectTrigger);
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationCorridor);
             ShowDialogue(
-                "Can: Tavan sustu.  Deniz: Merdiven yolu açık; asansörün paneli karanlık. Önce kapıyı kontrol edelim.",
+                "Can: Ses kesildi.\nDeniz: Birlikte kalalım. Merdiven kapısını kontrol edeceğim.",
                 4.8f, BeginRouteChoice);
         }
 
@@ -238,13 +238,15 @@ namespace Deprem.Story
             tryElevator?.SetAvailable(false);
             gameManager?.SetFlag(StoryFlag.ElevatorAvoided, true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.StairwellEntered);
-            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationStairsTop);
+            // Kapı daha açılmadan takip kamerasını merdiven boşluğuna taşımak,
+            // Deoccluder'ın duvar yüzünden Deniz'in omzuna kadar çekilmesine neden oluyordu.
+            // Kapı animasyonu ve açıklama boyunca iki seçeneği okutan koridor kadrajında kal.
+            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationStairDoor);
             SetActive(stairDoorClosed, false);
             SetActive(stairDoorOpen, true);
             Play(stairDoorAnimation);
-            denizAnimator?.SetTrigger(InteractTrigger);
             ShowDialogue(
-                "Deniz merdiven kapısını kontrollü açtı. Asansör kullanılmadı; Can korkuluğun iç tarafında ve Deniz'in hemen arkasında kaldı.",
+                "Deniz: Kapı açıldı. Can, hemen arkamdan gel; korkuluğun iç yanında kalalım.",
                 7f, BeginUpperStairRoute);
         }
 
@@ -259,7 +261,7 @@ namespace Deprem.Story
             Play(elevatorNearMissAnimation);
             elevatorAudio?.Play();
             ShowDialogue(
-                "Düğme bir an yandı, sonra koridor ışığı söndü. Deprem sonrasında elektrik kesilebilir ve asansör katlar arasında kalabilir; güvenli rota merdiven.",
+                "Can: Işık söndü!\nDeniz: Asansör kat arasında kalabilir. Merdiveni kullanacağız.",
                 7.2f, () =>
                 {
                     cameraController?.ActivateZone(StoryCameraZoneId.EvacuationCorridor);
@@ -285,7 +287,7 @@ namespace Deprem.Story
             aftershockAudio?.Play();
             ui?.ShowObjective("ARTÇI — KORKULUĞA TUTUN", "Koşma veya basamak değiştirme; korkuluk üzerinde basılı tut.");
             ShowDialogue(
-                "Merdiven boşluğundan ince bir titreşim geçti. Deniz bulunduğu basamakta kaldı, Can'a çömelmesini söyledi ve korkuluğa uzandı.",
+                "Deniz: Yine sallanıyor! Olduğun basamakta çömel Can, korkuluğa tutunalım.",
                 6.5f, () => holdHandrail?.SetAvailable(true));
         }
 
@@ -295,7 +297,6 @@ namespace Deprem.Story
                 return;
 
             holdHandrail?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InteractTrigger);
             if (revisedFlow)
             {
                 if (revisedAftershockCompletionQueued)
@@ -325,7 +326,7 @@ namespace Deprem.Story
             aftershockDust?.Stop();
             gameManager?.CommitCheckpoint(StoryCheckpoint.AftershockHeld);
             ShowDialogue(
-                "Artçı sona erdi. Deniz korkuluğu bırakmadan önce birkaç saniye dinledi; basamaklarda yeni bir kırık olmadığını gördü.",
+                "Can: Geçti mi?\nDeniz: Biraz dinleyelim… Tamam, basamaklara bakarak devam edelim.",
                 6.5f, BeginLowerStairRoute);
         }
 
@@ -337,9 +338,22 @@ namespace Deprem.Story
             reachLowerLanding?.SetAvailable(false);
             stage = StoryEvacuationStage.HelpingNeighbor;
             canFollower?.SetFollowing(false);
+            player?.Stop();
+            touchManager?.SetWorldNavigationEnabled(false);
+            touchManager?.SetInteractionsEnabled(false);
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationNeighbor);
-            callNeighbor?.SetAvailable(true);
-            ui?.ShowObjective("KOMŞUYA SESLEN", "Komşuya yaklaş; ağır parçayı kaldırmadan önce iyi olup olmadığını sor.");
+            neighborAnimator?.SetFloat("Speed", 0f);
+            ShowDialogue(
+                "Nermin: Çocuklar, buradayım! Ağır ağır gelin; basamakların iç yanında kalın.",
+                4.8f, () =>
+                {
+                    touchManager?.SetWorldNavigationEnabled(true);
+                    touchManager?.SetInteractionsEnabled(true);
+                    callNeighbor?.SetAvailable(true);
+                    ui?.ShowObjective(
+                        "NERMİN TEYZEYİ KONTROL ET",
+                        "Nermin teyzeye dokunup yanına yaklaş; önce iyi olup olmadığını sor.");
+                });
         }
 
         public void CallNeighbor()
@@ -348,43 +362,70 @@ namespace Deprem.Story
                 return;
 
             callNeighbor?.SetAvailable(false);
-            denizAnimator?.SetTrigger(CallTrigger);
-            neighborAnimator?.SetTrigger(CallTrigger);
+            player?.Stop();
+            touchManager?.SetWorldNavigationEnabled(false);
+            touchManager?.SetInteractionsEnabled(false);
+            if (neighbor != null)
+            {
+                player?.FaceTowards(neighbor.position);
+                canFollower?.FaceTowards(neighbor.position);
+            }
+            denizAnimator?.SetFloat("Speed", 0f);
+            denizAnimator?.SetTrigger(TalkTrigger);
             ShowDialogue(
-                "Deniz: Nermin teyze, iyi misiniz?\nNermin: İyiyim; bastonum kutunun arkasında kaldı. Ağır dolaba dokunmayın, yalnızca hafif parçaları kenara alın.",
-                7f, () =>
+                "Deniz: Nermin teyze, iyi misiniz? Bir yeriniz acıyor mu?",
+                3.6f, () =>
                 {
-                    if (revisedFlow)
-                    {
-                        moveNeighborCardboard?.SetAvailable(!neighborTasks[2]);
-                        ui?.ShowObjective(
-                            "KUTUYU GEÇİŞTEN AL",
-                            "Hafif karton kutuyu doğrudan boş duvar kenarına sürükle; ağır dolaba dokunma.");
-                        return;
-                    }
-
-                    moveNeighborCane?.SetAvailable(!neighborTasks[0]);
-                    clearLightDebris?.SetAvailable(!neighborTasks[1]);
-                    UpdateNeighborObjective();
+                    neighborAnimator?.SetFloat("Speed", 0f);
+                    neighborAnimator?.SetTrigger(TalkTrigger);
+                    ShowDialogue(
+                        "Nermin: İyiyim oğlum. Bastonum kutunun arkasında. Hafif parçaları kenara alabiliriz; ağır dolaba dokunmayın.",
+                        6.2f, () =>
+                        {
+                            canAnimator?.SetFloat("Speed", 0f);
+                            canAnimator?.SetTrigger(TalkTrigger);
+                            ShowDialogue(
+                                "Can: Şu hafif kutuyu kenara alayım mı?\nDeniz: Alalım, sonra bastona ulaşırız.",
+                                4.8f,
+                                BeginNeighborHelpTasks);
+                        });
                 });
+        }
+
+        private void BeginNeighborHelpTasks()
+        {
+            touchManager?.SetWorldNavigationEnabled(true);
+            touchManager?.SetInteractionsEnabled(true);
+            if (revisedFlow)
+            {
+                moveNeighborCardboard?.SetAvailable(!neighborTasks[2]);
+                ui?.ShowObjective(
+                    "KUTUYU GEÇİŞTEN AL",
+                    "Nermin teyzenin gösterdiği hafif karton kutuyu boş duvar kenarına sürükle; ağır dolaba dokunma.");
+                return;
+            }
+
+            moveNeighborCane?.SetAvailable(!neighborTasks[0]);
+            clearLightDebris?.SetAvailable(!neighborTasks[1]);
+            UpdateNeighborObjective();
         }
 
         public void MoveNeighborCardboard()
         {
             CompleteNeighborTask(2, moveNeighborCardboard, cardboardMoveAnimation, cardboardBlocking, cardboardCleared,
-                "Deniz hafif karton kutuyu kaldırmadan, zeminde boş duvar kenarına sürükledi. Nermin teyzenin dizlerinin önü açıldı.");
+                "Deniz: Kutuyu duvar kenarına çektim Nermin teyze. Önünüz açıldı.");
         }
 
         public void MoveNeighborCane()
         {
             CompleteNeighborTask(0, moveNeighborCane, caneMoveAnimation, caneBlocked, caneReachable,
-                "Baston hafif kutunun arkasından çekilip Nermin teyzenin uzanabileceği yere bırakıldı.");
+                "Deniz: Bastonunuz burada, elinizin yanında.\nNermin: Sağ ol oğlum.");
         }
 
         public void ClearLightDebris()
         {
             CompleteNeighborTask(1, clearLightDebris, debrisMoveAnimation, lightDebrisBlocking, lightDebrisCleared,
-                "Yürüyüş yolundaki hafif köpük parça kenara itildi; ağır dolap ve duvar parçasına dokunulmadı.");
+                "Can: Köpük de kenarda.\nDeniz: Ağır parçalara dokunmuyoruz, yolumuz buradan açık.");
         }
 
         public void GuideNeighbor()
@@ -394,14 +435,12 @@ namespace Deprem.Story
 
             guideNeighbor?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationNeighbor);
-            denizAnimator?.SetTrigger(InteractTrigger);
-            neighborAnimator?.SetTrigger(InteractTrigger);
             Play(neighborRiseAnimation);
             SetActive(neighborAtLanding, false);
             gameManager?.SetFlag(StoryFlag.NeighborAssisted, true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.NeighborHelped);
             ShowDialogue(
-                "Deniz Nermin teyzenin kolunu çekmedi; bastonunu kavramasını bekleyip yanında yürüdü. Can merdivenin iç tarafında yolu açık tuttu.",
+                "Deniz: Bastonunuz elinizde mi Nermin teyze? Yanınızdan geliyorum.\nNermin: Tamamdır oğlum, acelemiz yok.",
                 7.2f, BeginBuildingExit);
         }
 
@@ -411,13 +450,19 @@ namespace Deprem.Story
                 return;
 
             openBuildingExit?.SetAvailable(false);
-            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
+            // Keep the straight-on doorway shot until the children actually cross the threshold.
+            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingDoor);
             SetActive(buildingDoorClosed, false);
             SetActive(buildingDoorOpen, true);
             Play(buildingDoorAnimation);
+            player?.Stop();
+            canFollower?.SetFollowing(true);
+
+            // Kapı görsel olarak açıldıktan sonra eşiği gerçekten geç. Rebuild akışında
+            // yalnızca sonraki hedefi açmak karakterleri içeride bırakıyor ve kapı açılmış
+            // görünse bile tahliye okunmuyordu.
             touchManager?.SetInteractionsEnabled(false);
             touchManager?.SetWorldNavigationEnabled(false);
-            canFollower?.SetFollowing(true);
             StartCoroutine(BeginBuildingExitTraversal());
         }
 
@@ -426,7 +471,7 @@ namespace Deprem.Story
             // Carving obstacle devre dışı kaldıktan sonra NavMesh güncellemesi bir sonraki
             // pre-update'e sarkabilir. Aynı karede rota istersek kapı görsel olarak açılıp
             // yürüyüş reddedilir ve hikâye yanlışlıkla dışarı çıkılmış sayılır.
-            for (int attempt = 0; attempt < 8; attempt++)
+            for (int attempt = 0; attempt < 60; attempt++)
             {
                 yield return null;
                 if (stage != StoryEvacuationStage.BuildingExit)
@@ -444,9 +489,12 @@ namespace Deprem.Story
 
             // Authored NavMesh beklenmedik biçimde güncellenemezse oyuncuyu kapalı akışta
             // bırakma. Bu yalnızca son güvenlik ağıdır; normal akış yukarıdaki rota ile yürür.
-            if (player != null && outsideStandPoint != null)
-                player.Warp(outsideStandPoint.position);
-            FinishBuildingExit();
+            touchManager?.SetInteractionsEnabled(true);
+            touchManager?.SetWorldNavigationEnabled(true);
+            openBuildingExit?.SetAvailable(true);
+            ui?.ShowObjective(
+                "KAPIDAN DÜMDÜZ DIŞARI ÇIK",
+                "Kapı açık. Deniz ve Can'ı kapının karşısındaki kaldırıma yürütmek için kapıya yeniden dokun.");
         }
 
         public void InspectStreetHazard()
@@ -456,7 +504,24 @@ namespace Deprem.Story
 
             inspectStreetHazard?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationStreetInspect);
-            denizAnimator?.SetTrigger(InspectTrigger);
+            if (revisedFlow)
+            {
+                streetDust?.Play();
+                streetInspectCreak?.Play();
+                ShowDialogue(
+                    "Deniz: Ses şu kırık borudan geliyor. Yaklaşmayalım; vanaya da düğmelere de dokunmayın. Açık kaldırımdan uzaklaşalım.",
+                    6.2f, () =>
+                    {
+                        cameraController?.ActivateZone(StoryCameraZoneId.EvacuationStreet);
+                        takeSafeSidewalk?.SetAvailable(true);
+                        tryUnsafeShortcut?.SetAvailable(true);
+                        ui?.ShowObjective(
+                            "GAZ KAÇAĞINDAN UZAK ROTAYI SEÇ",
+                            "Kaynağı gördün. Hasarlı boruya yaklaşma; açık kaldırımdaki güvenli rotaya dokun.");
+                    });
+                return;
+            }
+
             Play(streetInspectSignAnimation);
             Play(streetInspectShardAnimation);
             streetDust?.Play();
@@ -483,16 +548,62 @@ namespace Deprem.Story
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationHazard);
             Play(unsafeShortcutAnimation);
             streetDust?.Play();
+            streetInspectCreak?.Play();
             player?.Stop();
-            if (outsideStandPoint != null)
-                player?.Warp(outsideStandPoint.position);
+            if (revisedFlow)
+            {
+                ShowDialogue(
+                    "Deniz: Dur Can, boruya yaklaşma! Hiçbir şeye dokunmadan açık kaldırıma geri dönelim.",
+                    7f,
+                    BeginUnsafeShortcutReturn);
+                return;
+            }
+
             ShowDialogue(
                 "Gevşek tabela sallandı ve camlı bölüm kapandı. Kimse yaralanmadı; Deniz bina cephesinden ve düşebilecek parçalardan uzak açık kaldırımla yeniden deneyecek.",
-                7f, () =>
-                {
-                    cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
-                    inspectStreetHazard?.SetAvailable(true);
-                });
+                7f,
+                BeginUnsafeShortcutReturn);
+        }
+
+        private void BeginUnsafeShortcutReturn()
+        {
+            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
+            if (revisedFlow)
+            {
+                FinishUnsafeShortcutReturn();
+                return;
+            }
+
+            touchManager?.SetInteractionsEnabled(false);
+            touchManager?.SetWorldNavigationEnabled(false);
+            bool moving = player != null && outsideStandPoint != null &&
+                          player.MoveTo(
+                              outsideStandPoint,
+                              buildingDoorOpen != null
+                                  ? buildingDoorOpen.transform.position
+                                  : outsideStandPoint.position + outsideStandPoint.forward,
+                              FinishUnsafeShortcutReturn);
+            if (moving)
+                return;
+
+            FinishUnsafeShortcutReturn();
+        }
+
+        private void FinishUnsafeShortcutReturn()
+        {
+            touchManager?.SetInteractionsEnabled(true);
+            touchManager?.SetWorldNavigationEnabled(true);
+            if (revisedFlow)
+            {
+                takeSafeSidewalk?.SetAvailable(true);
+                tryUnsafeShortcut?.SetAvailable(true);
+                ui?.ShowObjective(
+                    "GAZ KAÇAĞINDAN UZAK ROTAYI SEÇ",
+                    "Tıslayan boruya yaklaşma; açık kaldırımdaki güvenli rota işaretine dokun.");
+                return;
+            }
+
+            inspectStreetHazard?.SetAvailable(true);
         }
 
         public void TakeSafeSidewalk()
@@ -522,9 +633,14 @@ namespace Deprem.Story
                     yield break;
             }
 
-            if (player != null && assemblyApproachPoint != null)
-                player.Warp(assemblyApproachPoint.position);
-            FinishSafeStreetRoute();
+            touchManager?.SetWorldNavigationEnabled(true);
+            touchManager?.SetInteractionsEnabled(true);
+            canFollower?.SetFollowing(false);
+            takeSafeSidewalk?.SetAvailable(true);
+            tryUnsafeShortcut?.SetAvailable(true);
+            ui?.ShowObjective(
+                revisedFlow ? "GÜVENLİ KALDIRIMI TEKRAR SEÇ" : "AÇIK YAN KALDIRIMDAN İLERLE",
+                "Rota şu anda kapalı görünüyor; açık kaldırım işaretine yeniden dokun.");
         }
 
         public void ReadAssemblySign()
@@ -595,7 +711,6 @@ namespace Deprem.Story
 
         public void HandNeighborToWorker()
         {
-            neighborAnimator?.SetTrigger(CallTrigger);
             CompleteRevisedAssemblyStep(
                 0,
                 handNeighborToWorker != null ? handNeighborToWorker : checkNeighbor,
@@ -630,7 +745,6 @@ namespace Deprem.Story
 
         public void UseFirstAid()
         {
-            canAnimator?.SetTrigger(InteractTrigger);
             CompleteRevisedAssemblyStep(
                 1,
                 useFirstAid,
@@ -640,7 +754,6 @@ namespace Deprem.Story
 
         public void UseStationCloth()
         {
-            canAnimator?.SetTrigger(InteractTrigger);
             CompleteRevisedAssemblyStep(
                 1,
                 useStationCloth,
@@ -698,7 +811,7 @@ namespace Deprem.Story
             CompleteRevisedAssemblyStep(
                 7,
                 useRegistrySheet,
-                "Kart yoktu. Deniz aile adını ve çocuk sayısını görevlinin kayıt sayfasına yazdı; alandan ayrılıp ailesini aramadı.",
+                "Görevli: Kartınız yoksa aile adınızı buraya yazalım. Annenizle babanızı burada bekleyin, haber vereceğiz.",
                 InspectTrigger);
         }
 
@@ -711,11 +824,10 @@ namespace Deprem.Story
 
             SetActive(familyHeadcountPendingWorld, false);
             SetActive(familyHeadcountCompleteWorld, true);
-            canAnimator?.SetTrigger(InteractTrigger);
             CompleteRevisedAssemblyStep(
                 3,
                 reuniteFamily,
-                "Deniz Anne'ye doğru yürüdü; Can hemen yanında kaldı. Anne Can'ın göz hizasına indi, Baba Deniz'in omzuna dokundu ve görevli dört kişiyi aynı noktada gördü.",
+                "Can: Anne! Baba!\nAnne: Gelin yanıma. İkiniz de buradasınız, çok şükür.\nBaba: Birlikte kalmışsınız çocuklar.",
                 InteractTrigger);
         }
 
@@ -727,7 +839,7 @@ namespace Deprem.Story
             canFollower?.SetFollowing(true);
             ui?.ShowObjective("KORİDORU DİNLE", "Sarsıntı durdu; kapı eşiğine yaklaşarak yeni düşme sesi ve açık rota kontrolü yap.");
             ShowDialogue(
-                "Koridordaki ince titreşim durdu. Engel arkasından Anne'nin sesi geldi: “Birlikte kalın, merdiveni kullanın; aşağıda buluşacağız.”",
+                "Anne: Çocuklar, birlikte kalın. Merdiveni kullanın; aşağıda buluşacağız.",
                 7.2f, () =>
                 {
                     stage = StoryEvacuationStage.CorridorCheck;
@@ -752,7 +864,9 @@ namespace Deprem.Story
             touchManager?.SetWorldNavigationEnabled(true);
             touchManager?.SetInteractionsEnabled(true);
             canFollower?.SetFollowing(true);
-            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationStairsTop);
+            // Oyuncu henüz basamağa hareket etmedi; kapı kadrajını koru. Sahanlık
+            // etkileşimi kendi bestelenmiş kamerasını yürüyüş başlarken devralır.
+            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationStairDoor);
             reachUpperLanding?.SetAvailable(true);
             ui?.ShowObjective("İLK SAHANLIĞA İN", "Basamakların iç tarafındaki aydınlık sahanlığa dokun; koşmadan Can'la birlikte ilerle.");
         }
@@ -779,7 +893,6 @@ namespace Deprem.Story
 
             neighborTasks[index] = true;
             interactable?.SetAvailable(false);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             Play(animation);
             SetActive(blocked, false);
             SetActive(cleared, true);
@@ -821,7 +934,7 @@ namespace Deprem.Story
             if (revisedFlow)
             {
                 ui?.ShowObjective(
-                    "NİNEYE GÜVENLİ GEÇİŞ AÇ",
+                    "NERMİN TEYZENİN YOLUNU AÇ",
                     "Kutuyu, hafif köpüğü ve bastonu sahnedeki gerçek hedeflerine taşı; ağır dolaba dokunma.");
                 return;
             }
@@ -837,7 +950,7 @@ namespace Deprem.Story
             touchManager?.SetWorldNavigationEnabled(true);
             touchManager?.SetInteractionsEnabled(true);
             canFollower?.SetFollowing(true);
-            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
+            cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingDoor);
             openBuildingExit?.SetAvailable(true);
             ui?.ShowObjective("BİNA ÇIKIŞINI KONTROLLÜ AÇ", "Dış kapı kolunu yana çek; önce açık alanı gör, sonra birlikte dışarı çık.");
         }
@@ -847,25 +960,25 @@ namespace Deprem.Story
             touchManager?.SetWorldNavigationEnabled(true);
             touchManager?.SetInteractionsEnabled(true);
             gameManager?.SetFlag(StoryFlag.StairRouteCompleted, true);
-            SetActive(neighborAtLanding, false);
-            SetActive(neighborAtStreet, true);
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
             if (revisedFlow)
             {
                 stage = StoryEvacuationStage.FacadeClear;
                 moveAwayFromFacade?.SetAvailable(true);
                 ui?.ShowObjective(
-                    "BİNA CEPHESİNDEN UZAKLAŞ",
-                    "Kapı önünde bekleme; üç kişiyi açık kaldırım noktasına götür.");
+                    "AÇIK KALDIRIMA ÇIK",
+                    "Kapı açıldı. Eşiğin dışındaki güvenli noktaya dokun; bina cephesinin altında bekleme.");
                 ShowDialogue(
-                    "Dışarı çıktılar ama henüz güvende değillerdi. Deniz yukarıdaki kırık camı gördü ve kapı önünde durmadı.",
-                    4.8f);
+                    "Kapı açıldı; Deniz önce dışarıdaki zemini ve yukarıdaki kırık camı kontrol etti. Şimdi açık kaldırım noktasına yürümeleri gerekiyor.",
+                    4.2f);
                 return;
             }
 
+            SetActive(neighborAtLanding, false);
+            SetActive(neighborAtStreet, true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.BuildingExited);
             ShowDialogue(
-                "Üçü bina cephesinden uzak açık noktaya çıktı. Deniz girişin önünde beklemedi; artçıların hasarlı cepheden parça düşürebileceğini hatırladı.",
+                "Deniz: Kapının önünde durmayalım. Cepheden parça düşebilir; açık tarafa geçelim.",
                 6.8f, BeginStreetRoute);
         }
 
@@ -875,10 +988,12 @@ namespace Deprem.Story
                 return;
 
             moveAwayFromFacade?.SetAvailable(false);
+            SetActive(neighborAtLanding, false);
+            SetActive(neighborAtStreet, true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.BuildingExited);
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
             ShowDialogue(
-                "Deniz, Can ve Nermin teyze bina yüksekliğinden uzak açık noktaya geçti. Şimdi toplanma alanına giden sokağı okuyabilirler.",
+                "Nermin: Zeytin Sokak'tan parka çıkacağız çocuklar.\nDeniz: Önce kaldırımın açık tarafına bakalım.",
                 5.5f, BeginStreetRoute);
         }
 
@@ -886,6 +1001,19 @@ namespace Deprem.Story
         {
             stage = StoryEvacuationStage.StreetRoute;
             cameraController?.ActivateZone(StoryCameraZoneId.EvacuationBuildingFront);
+            if (revisedFlow)
+            {
+                streetDust?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                streetInspectCreak?.Stop();
+                inspectStreetHazard?.SetAvailable(true);
+                takeSafeSidewalk?.SetAvailable(false);
+                tryUnsafeShortcut?.SetAvailable(false);
+                ui?.ShowObjective(
+                    "TISLAMANIN KAYNAĞINI UZAKTAN BUL",
+                    "Hasarlı borunun işaretine dokun; Deniz uzakta durarak sesi dinlesin.");
+                return;
+            }
+
             inspectStreetHazard?.SetAvailable(true);
             tryUnsafeShortcut?.SetAvailable(true);
             ui?.ShowObjective("SOKAĞI OKU", "Camlı kestirme ile açık yan kaldırımın fiziksel durumunu incele.");
@@ -893,6 +1021,8 @@ namespace Deprem.Story
 
         private void FinishSafeStreetRoute()
         {
+            streetDust?.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            streetInspectCreak?.Stop();
             touchManager?.SetWorldNavigationEnabled(true);
             touchManager?.SetInteractionsEnabled(true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.StreetRouteCleared);
@@ -900,7 +1030,7 @@ namespace Deprem.Story
             SetActive(neighborAtStreet, false);
             SetActive(neighborAtAssembly, true);
             ShowDialogue(
-                "Deniz araç yoluna çıkmadan ve bina cephelerinden uzak kalarak toplanma levhasına ulaştı. Can ve Nermin teyze yanındaydı.",
+                "Can: Parkın levhasını gördüm!\nDeniz: Nermin teyze de yanımızda. Araç yoluna çıkmadan ilerleyelim.",
                 6.5f, BeginAssemblyChecks);
         }
 
@@ -967,7 +1097,6 @@ namespace Deprem.Story
 
             bool hasComfortItem = HasFlag(StoryFlag.BagComfortItem);
             SetActive(comfortToyAtAssembly, hasComfortItem);
-            canAnimator?.SetTrigger(InspectTrigger);
             ShowDialogue(
                 hasRadio
                     ? "Can levhadaki sarı simgeyi aile planındaki işaretle eşleştirdi. Görevli üç kişiyi gördü; çantadaki radyo ayarı yakalayıp resmî artçı duyurusunu sahnenin içinden vermeye başladı."
@@ -1089,7 +1218,6 @@ namespace Deprem.Story
 
             assemblyChecks[3] = true;
             interactable?.SetAvailable(false);
-            denizAnimator?.SetTrigger(CallTrigger);
             ShowDialogue(subtitle, 5.5f, CompleteAssemblyCheckOrContinue);
         }
 
@@ -1123,7 +1251,7 @@ namespace Deprem.Story
                     : "Merdiven kullanıldı • Artçıda duruldu • Komşuya hafif destek verildi • Toplanma kontrolü tamamlandı";
             ShowDialogue(
                 revisedFlow
-                    ? "Aile artık aynı kadrajdaydı. Deniz, Can, Anne ve Baba alandan ayrılmadan resmî duyuruyu dinledi; Nermin teyze görevlinin yanında güvendeydi."
+                    ? "Baba: Buradasınız ya, içim rahatladı.\nAnne: Birlikte kalalım. Sivil Savunma görevlisinin duyurusunu dinleyelim.\nCan: Nermin teyze de burada."
                     : "Anne birkaç dakika sonra görevli yönlendirmesiyle aynı levhaya ulaştı. Aile, caddeyi kapatmadan alanda kaldı ve resmî duyuruları bekledi.",
                 8f, () => SetActive(completionPanel, true));
         }
@@ -1138,6 +1266,7 @@ namespace Deprem.Story
             SetActive(neighborAtAssembly, true);
             if (revisedFlow)
             {
+                SetActive(workerAtAssembly, false);
                 SetActive(motherAtAssembly, true);
                 SetActive(fatherAtAssembly, true);
                 SetActive(familyHeadcountPendingWorld, false);

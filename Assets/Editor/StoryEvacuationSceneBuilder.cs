@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using Deprem.Story;
+using Unity.AI.Navigation;
 using Unity.Cinemachine;
 using UnityEditor;
 using UnityEditor.Events;
@@ -14,6 +16,7 @@ public static partial class StoryEvacuationSceneBuilder
     private const string BackupPath = "Assets/Scenes/LegacyBackups/Bolum4_OriginalGameplay_2026-07-17.unity";
     private const string DoorPath = "Assets/Sprites/FBX-20260707T100149Z-3-001/FBX/Door2.fbx";
     private const string ElevatorPath = "Assets/asansör/SM_Prop_Elevator_Enterance_01.fbx";
+    private const string FlashlightPrefabPath = "Assets/Bolum1Prefab/Item_Fener.prefab";
     private const string EmergencyLampPath =
         "Assets/ithappy/Cute_Furniture_Free/Prefabs/Decorations/Light_05.prefab";
     private const string StreetSignRoot =
@@ -112,9 +115,7 @@ public static partial class StoryEvacuationSceneBuilder
             StoryChapterBuilderCommon.Characters family = StoryChapterBuilderCommon.BuildFamily(root.transform, controller, false,
                 new Vector3(-0.45f, 4.03f, -4.4f), new Vector3(0.65f, 4.03f, -4.75f), Vector3.zero);
 
-            world.flashlightBeam.transform.SetParent(family.deniz.transform, true);
-            world.flashlightBeam.transform.localPosition = new Vector3(0f, 0.9f, 0.18f);
-            world.flashlightBeam.transform.localRotation = Quaternion.Euler(7f, 0f, 0f);
+            BindFlashlightToHand(world, family.deniz);
 
             GameObject sessionObject = new GameObject("_StorySession");
             StoryGameManager gameManager = sessionObject.AddComponent<StoryGameManager>();
@@ -284,6 +285,131 @@ public static partial class StoryEvacuationSceneBuilder
         world.stairDoorAnimation = StoryChapterBuilderCommon.CreateRotationAnimation(world.stairDoorOpen,
             "Evac_StairDoorOpen", Vector3.zero, new Vector3(0f, -92f, 0f), 0.68f);
         world.stairDoorOpen.SetActive(false);
+
+        FitDoorOpeningToFrame(
+            world.stairDoorClosed,
+            route.Find("StairDoorWall_Left"),
+            route.Find("StairDoorWall_Right"),
+            route.Find("StairDoorWall_Lintel"));
+    }
+
+    private static void FitDoorOpeningToFrame(
+        GameObject closedDoor,
+        Transform leftWall,
+        Transform rightWall,
+        Transform lintel)
+    {
+        const float frameOverlap = 0.025f;
+        Bounds frameBounds = GetDoorFrameBounds(closedDoor);
+        Bounds leftBounds = GetRendererBounds(leftWall);
+        Bounds rightBounds = GetRendererBounds(rightWall);
+
+        // The wall terminates underneath the wooden casing. A positive clearance
+        // leaves a bright seam at oblique camera angles, even when it is only a
+        // few centimetres wide.
+        float openingLeft = frameBounds.min.x + frameOverlap;
+        float openingRight = frameBounds.max.x - frameOverlap;
+        float openingTop = frameBounds.max.y - frameOverlap;
+        float wallTop = Mathf.Max(leftBounds.max.y, rightBounds.max.y);
+
+        ResizeAxisAlignedPrimitive(
+            leftWall,
+            new Vector3(
+                (leftBounds.min.x + openingLeft) * 0.5f,
+                leftBounds.center.y,
+                leftBounds.center.z),
+            new Vector3(
+                openingLeft - leftBounds.min.x,
+                leftBounds.size.y,
+                leftBounds.size.z));
+        ResizeAxisAlignedPrimitive(
+            rightWall,
+            new Vector3(
+                (openingRight + rightBounds.max.x) * 0.5f,
+                rightBounds.center.y,
+                rightBounds.center.z),
+            new Vector3(
+                rightBounds.max.x - openingRight,
+                rightBounds.size.y,
+                rightBounds.size.z));
+
+        Bounds lintelBounds = GetRendererBounds(lintel);
+        ResizeAxisAlignedPrimitive(
+            lintel,
+            new Vector3(
+                frameBounds.center.x,
+                (openingTop + wallTop) * 0.5f,
+                lintelBounds.center.z),
+            new Vector3(
+                openingRight - openingLeft,
+                wallTop - openingTop,
+                lintelBounds.size.z));
+    }
+
+    private static void FitDoorSidePairToFrame(
+        GameObject closedDoor,
+        Transform leftPiece,
+        Transform rightPiece)
+    {
+        const float frameOverlap = 0.025f;
+        Bounds frameBounds = GetDoorFrameBounds(closedDoor);
+        Bounds leftBounds = GetRendererBounds(leftPiece);
+        Bounds rightBounds = GetRendererBounds(rightPiece);
+        float openingLeft = frameBounds.min.x + frameOverlap;
+        float openingRight = frameBounds.max.x - frameOverlap;
+
+        ResizeAxisAlignedPrimitive(
+            leftPiece,
+            new Vector3(
+                (leftBounds.min.x + openingLeft) * 0.5f,
+                leftBounds.center.y,
+                leftBounds.center.z),
+            new Vector3(
+                openingLeft - leftBounds.min.x,
+                leftBounds.size.y,
+                leftBounds.size.z));
+        ResizeAxisAlignedPrimitive(
+            rightPiece,
+            new Vector3(
+                (openingRight + rightBounds.max.x) * 0.5f,
+                rightBounds.center.y,
+                rightBounds.center.z),
+            new Vector3(
+                rightBounds.max.x - openingRight,
+                rightBounds.size.y,
+                rightBounds.size.z));
+    }
+
+    private static Bounds GetDoorFrameBounds(GameObject closedDoor)
+    {
+        Renderer frameRenderer = closedDoor.GetComponentsInChildren<Renderer>(true)
+            .FirstOrDefault(renderer => renderer.name == "DoorFrame");
+        if (frameRenderer == null)
+            throw new InvalidOperationException(closedDoor.name + " kapı kasası renderer'ı bulunamadı.");
+        return frameRenderer.bounds;
+    }
+
+    private static Bounds GetRendererBounds(Transform target)
+    {
+        if (target == null)
+            throw new InvalidOperationException("Kapı açıklığını çevreleyen duvar parçası bulunamadı.");
+        Renderer renderer = target.GetComponent<Renderer>();
+        if (renderer == null)
+            throw new InvalidOperationException(target.name + " renderer'ı bulunamadı.");
+        return renderer.bounds;
+    }
+
+    private static void ResizeAxisAlignedPrimitive(Transform target, Vector3 worldCenter, Vector3 worldSize)
+    {
+        if (worldSize.x <= 0f || worldSize.y <= 0f || worldSize.z <= 0f)
+            throw new InvalidOperationException(target.name + " için geçersiz kapı çevresi ölçüsü üretildi.");
+
+        Vector3 parentScale = target.parent != null ? target.parent.lossyScale : Vector3.one;
+        target.position = worldCenter;
+        target.localScale = new Vector3(
+            worldSize.x / Mathf.Abs(parentScale.x),
+            worldSize.y / Mathf.Abs(parentScale.y),
+            worldSize.z / Mathf.Abs(parentScale.z));
     }
 
     private static void BuildStairwell(Transform route, StoryChapterBuilderCommon.Materials m, EvacuationWorld world)
@@ -293,6 +419,19 @@ public static partial class StoryEvacuationSceneBuilder
             "UpperNavRamp", PrimitiveType.Cube, new Vector3(0f, 3.0f, 3.65f),
             new Vector3(3.25f, 0.22f, 7.55f), m.concrete, route, true, slope);
         upperNavRamp.GetComponent<Renderer>().enabled = false;
+        GameObject upperDoorNavBridge = StoryChapterBuilderCommon.CreatePrimitive(
+            "UpperDoorNavBridge", PrimitiveType.Cube, new Vector3(0f, 3.96f, -0.3f),
+            new Vector3(2.0f, 0.12f, 1.5f), m.concrete, route, true);
+        upperDoorNavBridge.GetComponent<Renderer>().enabled = false;
+        GameObject upperDoorLinkObject = new GameObject("UpperDoorNavLink");
+        upperDoorLinkObject.transform.SetParent(route, false);
+        NavMeshLink upperDoorLink = upperDoorLinkObject.AddComponent<NavMeshLink>();
+        upperDoorLink.agentTypeID = 0;
+        upperDoorLink.startPoint = new Vector3(0f, 4.09f, -0.5f);
+        upperDoorLink.endPoint = new Vector3(0f, 4.01f, 0.67f);
+        upperDoorLink.width = 0f;
+        upperDoorLink.bidirectional = true;
+        upperDoorLink.autoUpdate = false;
         for (int i = 0; i < 13; i++)
         {
             float t = i / 12f;
@@ -334,7 +473,7 @@ public static partial class StoryEvacuationSceneBuilder
         RuntimeAnimatorController controller, EvacuationWorld world)
     {
         world.lowerLanding = StoryChapterBuilderCommon.CreatePrimitive("LowerLandingFloor", PrimitiveType.Cube,
-            new Vector3(0f, -0.1f, 18.7f), new Vector3(5f, 0.2f, 5.0f), m.concrete, route, true);
+            new Vector3(0f, -0.1f, 18.69f), new Vector3(5f, 0.2f, 4.98f), m.concrete, route, true);
         StoryChapterBuilderCommon.CreatePrimitive("LowerLandingLeftWall", PrimitiveType.Cube,
             new Vector3(-2.5f, 1.35f, 18.7f), new Vector3(0.18f, 2.9f, 5f), m.wall, route);
         StoryChapterBuilderCommon.CreatePrimitive("LowerLandingRightWall", PrimitiveType.Cube,
@@ -357,8 +496,10 @@ public static partial class StoryEvacuationSceneBuilder
             world.neighborAtLanding.transform, true);
         world.neighborSupportHand.GetComponent<Renderer>().enabled = false;
 
+        // Nermin solda, üç taşınabilir engel sağ duvar boyunca ayrı derinliklerde
+        // durur. Merdivenin merkezindeki iniş/kaçış çizgisi fiziksel olarak açıktır.
         world.caneBlocked = StoryAuthoredPropFactory.CreateWalkingCane(
-            "NeighborCane_Blocked", route, new Vector3(-1.88f, 0.02f, 17.55f),
+            "NeighborCane_Blocked", route, new Vector3(0.88f, 0.02f, 17.82f),
             new Vector3(0.85f, 1.15f, 0.22f), new Vector3(0f, 0f, 58f), m.wood, m.dark);
         world.caneReachable = StoryAuthoredPropFactory.CreateWalkingCane(
             "NeighborCane_Reachable", route, new Vector3(-0.9f, 0.02f, 18.05f),
@@ -366,10 +507,10 @@ public static partial class StoryEvacuationSceneBuilder
         world.caneReachable.SetActive(false);
 
         world.debrisBlocking = StoryAuthoredPropFactory.CreateDebrisCluster(
-            "LightDebris_Blocking", route, new Vector3(0.62f, 0.02f, 18.12f),
+            "LightDebris_Blocking", route, new Vector3(0.72f, 0.02f, 19.15f),
             new Vector3(1.55f, 0.5f, 1.15f), new Vector3(0f, 18f, 0f), m.coral, m.cream);
         world.debrisCleared = StoryAuthoredPropFactory.CreateDebrisCluster(
-            "LightDebris_Cleared", route, new Vector3(1.72f, 0.02f, 19.35f),
+            "LightDebris_Cleared", route, new Vector3(1.72f, 0.02f, 18.82f),
             new Vector3(1.35f, 0.46f, 1.0f), new Vector3(0f, -12f, 0f), m.teal, m.cream);
         world.debrisCleared.SetActive(false);
 
@@ -387,6 +528,8 @@ public static partial class StoryEvacuationSceneBuilder
         world.buildingDoorOpen = StoryChapterBuilderCommon.InstantiateAsset(
             DoorPath, "BuildingExitDoor_Open", route, new Vector3(-0.84f, 0f, 22f),
             new Vector3(0.2f, 2.24f, 1.9f), new Vector3(0f, -92f, 0f), true, true);
+        foreach (Collider doorCollider in world.buildingDoorOpen.GetComponentsInChildren<Collider>(true))
+            doorCollider.enabled = false;
         world.buildingDoorAnimation = StoryChapterBuilderCommon.CreateRotationAnimation(world.buildingDoorOpen,
             "Evac_BuildingDoorOpen", Vector3.zero, new Vector3(0f, -92f, 0f), 0.68f);
         world.buildingDoorOpen.SetActive(false);
@@ -396,8 +539,8 @@ public static partial class StoryEvacuationSceneBuilder
 
     private static void BuildExterior(Transform route, StoryChapterBuilderCommon.Materials m, EvacuationWorld world)
     {
-        StoryChapterBuilderCommon.CreatePrimitive("OutdoorGround", PrimitiveType.Cube, new Vector3(0f, -0.12f, 33.0f),
-            new Vector3(11f, 0.24f, 24f), m.concrete, route);
+        StoryChapterBuilderCommon.CreatePrimitive("OutdoorGround", PrimitiveType.Cube, new Vector3(0f, -0.12f, 33.09f),
+            new Vector3(11f, 0.24f, 23.82f), m.concrete, route);
         StoryChapterBuilderCommon.CreatePrimitive("EmergencyVehicleRoad", PrimitiveType.Cube,
             new Vector3(3.9f, 0.015f, 33.0f), new Vector3(3.0f, 0.05f, 22f), m.asphalt, route, false);
         for (int i = 0; i < 8; i++)
@@ -429,6 +572,17 @@ public static partial class StoryEvacuationSceneBuilder
         StoryChapterBuilderCommon.CreatePrimitive("FacadeBaseBand_Right", PrimitiveType.Cube,
             new Vector3(2.38f, 0.42f, 21.18f), new Vector3(2.45f, 0.34f, 0.18f),
             m.navy, route, false);
+
+        FitDoorOpeningToFrame(
+            world.buildingDoorClosed,
+            route.Find("BuildingFacade_Left"),
+            route.Find("BuildingFacade_Right"),
+            route.Find("BuildingFacade_Lintel"));
+        FitDoorSidePairToFrame(
+            world.buildingDoorClosed,
+            route.Find("FacadeBaseBand_Left"),
+            route.Find("FacadeBaseBand_Right"));
+
         StoryChapterBuilderCommon.CreateWorldLabel("BuildingAddressLabel", "BLOK A",
             new Vector3(0f, 3.58f, 21.22f), new Vector3(0f, 180f, 0f), 1.65f,
             StoryChapterBuilderCommon.Cream, route, new Vector2(1.8f, 0.36f));
@@ -486,6 +640,19 @@ public static partial class StoryEvacuationSceneBuilder
         flashlight.innerSpotAngle = 25f;
         flashlight.shadows = LightShadows.Soft;
 
+        GameObject flashlightVisual = StoryChapterBuilderCommon.InstantiateAsset(
+            FlashlightPrefabPath,
+            "DenizHandFlashlight",
+            world.flashlightBeam.transform,
+            Vector3.zero,
+            new Vector3(0.09f, 0.09f, 0.18f),
+            Vector3.zero,
+            false,
+            false);
+        // The flashlight's long axis is +Z. Keep the handle crossing the palm instead of
+        // offsetting the whole prop behind Deniz's hand.
+        flashlightVisual.transform.localPosition = new Vector3(0f, -0.01f, 0.018f);
+
         world.emergencyLightRoute = new GameObject("WeakEmergencyLightRoute");
         world.emergencyLightRoute.transform.SetParent(route);
         foreach (Vector3 position in new[]
@@ -505,6 +672,29 @@ public static partial class StoryEvacuationSceneBuilder
             light.range = 4.2f;
             light.shadows = LightShadows.None;
         }
+    }
+
+    private static void BindFlashlightToHand(EvacuationWorld world, GameObject deniz)
+    {
+        if (world?.flashlightBeam == null || deniz == null)
+            throw new InvalidOperationException("Deniz fener rig'i oluşturulamadı.");
+
+        Transform rightHand = StoryChapterBuilderCommon.FindHumanoidBone(deniz, HumanBodyBones.RightHand);
+        if (rightHand == null)
+            throw new InvalidOperationException("Deniz sağ el kemiği bulunamadı; fener karakter köküne bağlanmayacak.");
+
+        Vector3 aimedForward = (deniz.transform.forward + Vector3.down * 0.12f).normalized;
+        GameObject socketObject = new GameObject("DenizFlashlightGripSocket");
+        Transform socket = socketObject.transform;
+        socket.position = rightHand.position + deniz.transform.forward * 0.052f - Vector3.up * 0.008f;
+        socket.rotation = Quaternion.LookRotation(aimedForward, Vector3.up);
+        socket.SetParent(rightHand, true);
+
+        Transform rig = world.flashlightBeam.transform;
+        rig.SetParent(socket, false);
+        rig.localPosition = Vector3.zero;
+        rig.localRotation = Quaternion.identity;
+        rig.localScale = Vector3.one;
     }
 
     private static void BuildEffects(Transform route, StoryChapterBuilderCommon.Materials m, EvacuationWorld world)

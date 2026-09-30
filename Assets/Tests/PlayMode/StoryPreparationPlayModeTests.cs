@@ -225,12 +225,31 @@ public sealed class StoryPreparationPlayModeTests
         snappedSlot.y = Mathf.Max(snappedSlot.y, minimumY);
 
         Invoke(draggable, "UpdateManagedDrag", nearSlot);
+        Vector3 firstMagneticPosition = card.transform.position;
+        Assert.That(
+            Vector3.Distance(firstMagneticPosition, snappedSlot),
+            Is.GreaterThan(0.025f),
+            "Kart manyetik alana girer girmez socket merkezine sertçe ışınlanmamalı.");
+        for (int frame = 0; frame < 24; frame++)
+        {
+            yield return new WaitForSecondsRealtime(1f / 60f);
+            Invoke(draggable, "UpdateManagedDrag", nearSlot);
+        }
         Assert.That(
             Vector3.Distance(card.transform.position, snappedSlot),
-            Is.LessThan(Vector3.Distance(rawPosition, snappedSlot) * 0.82f),
-            "Kart doğru yuvaya yaklaşınca parmak konumundan yumuşakça socket merkezine çekilmeli.");
+            Is.LessThan(Vector3.Distance(firstMagneticPosition, snappedSlot) * 0.72f),
+            "Kart doğru yuvaya yaklaşınca hedefe kareler boyunca yumuşakça çekilmeli.");
         Vector2 centerSlot = camera.WorldToScreenPoint(socket.position);
         Invoke(draggable, "UpdateManagedDrag", centerSlot);
+        Assert.That(Field(draggable, "currentMagneticTarget").GetValue(draggable), Is.EqualTo(socket),
+            "Slot merkezinde manyetik hedef kaybolmamalı.");
+        Assert.That((float)Field(draggable, "currentMagnetWeight").GetValue(draggable),
+            Is.GreaterThan(0.98f), "Slot merkezindeki çekim tam yerleşim ağırlığına ulaşmalı.");
+        for (int frame = 0; frame < 32; frame++)
+        {
+            yield return new WaitForSecondsRealtime(1f / 60f);
+            Invoke(draggable, "UpdateManagedDrag", centerSlot);
+        }
         Assert.That(Vector3.Distance(card.transform.position, snappedSlot), Is.LessThan(0.015f),
             "Kart slot merkezine gelince hover'da kalmamalı; gerçek yerleşim konumuna ilerlemeli.");
         Assert.That(Vector3.Dot(card.transform.up, planeAnchor.forward), Is.GreaterThan(0.995f),
@@ -249,7 +268,7 @@ public sealed class StoryPreparationPlayModeTests
     }
 
     [UnityTest]
-    public IEnumerator OpeningDialogue_SelectsTheMatchingSyntheticVoiceClip()
+    public IEnumerator OpeningDialogue_ShowsRevisedSubtitlesWithoutStaleVoiceAudio()
     {
         MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(
                 FindObjectsInactive.Include,
@@ -269,12 +288,259 @@ public sealed class StoryPreparationPlayModeTests
                 FindObjectsSortMode.None)
             .Single(item => item != null && item.GetType().Name == "StoryUIController");
         AudioSource voiceSource = (AudioSource)Field(ui, "dialogueVoiceSource").GetValue(ui);
-        float timeout = Time.realtimeSinceStartup + 2f;
-        while (voiceSource.clip == null && Time.realtimeSinceStartup < timeout)
+        yield return new WaitForSecondsRealtime(1f);
+        Assert.That(voiceSource.clip, Is.Null);
+        Assert.That(voiceSource.isPlaying, Is.False);
+        Assert.That(PropertyValue<bool>(ui, "SubtitleActive"), Is.True);
+        Assert.That(PropertyValue<int>(ui, "DialogueActorCount"), Is.EqualTo(3));
+    }
+
+    [UnityTest]
+    public IEnumerator OpeningDialogue_UsesOnlyTheActiveCommonMouthAndKeepsGazeBounded()
+    {
+        MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .FirstOrDefault(item => item != null && item.GetType().Name == "StoryGameManager");
+        if (existingManager != null)
+        {
+            Object.Destroy(existingManager.gameObject);
+            yield return null;
+        }
+        DeleteStorySave();
+
+        yield return LoadPreparationRebuildScene();
+
+        MonoBehaviour ui = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .Single(item => item != null && item.GetType().Name == "StoryUIController");
+        Assert.That(ui, Is.Not.Null);
+        Invoke(ui, "ShowSubtitle",
+            "Can: Oyuncak arabam da çantaya girebilir mi?\n" +
+            "Anne: Önce aile planını ve gerçekten gerekli malzemeleri hazırlayalım. Yer kalırsa bir küçük eşya seçeriz.\n" +
+            "Deniz: İlk kart Mahalle Parkı; üzerindeki bilgiyi okuyup doğru başlığa taşıyalım.",
+            60f);
+        yield return null;
+        Assert.That(PropertyValue<int>(ui, "DialogueActorCount"), Is.EqualTo(3));
+        Transform canMouth = Find("Can_8_FaceRig").transform.Find("Mouth_Center");
+        Transform denizMouth = Find("Deniz_12_FaceRig").transform.Find("Mouth_Center");
+        Transform parentMouth = Find("Anne_Ayse_FaceRig").transform.Find("Mouth_Center");
+        Assert.That(canMouth, Is.Not.Null);
+        Assert.That(denizMouth, Is.Not.Null);
+        Assert.That(parentMouth, Is.Not.Null);
+
+        int activationFrames = 0;
+        while ((PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias") != "Can" ||
+                PropertyValue<Transform>(ui, "ActiveDialogueMouth") == null) &&
+               activationFrames++ < 120)
             yield return null;
 
-        Assert.That(voiceSource.clip, Is.Not.Null);
-        Assert.That(voiceSource.clip.name, Is.EqualTo("01_opening"));
+        Assert.That(PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias"), Is.EqualTo("Can"));
+        Assert.That(PropertyValue<Transform>(ui, "ActiveDialogueMouth"), Is.SameAs(canMouth));
+        Assert.That(PropertyValue<Transform>(ui, "ActiveDialogueListenerRoot"), Is.Not.Null);
+        Assert.That(PropertyValue<Transform>(ui, "ActiveDialogueListenerRoot"),
+            Is.Not.SameAs(Find("Can_8").transform));
+
+        Vector3 denizRest = denizMouth.localScale;
+        Vector3 parentRest = parentMouth.localScale;
+        float canMinimum = canMouth.localScale.y;
+        float canMaximum = canMinimum;
+        float envelopeMinimum = float.PositiveInfinity;
+        float envelopeMaximum = float.NegativeInfinity;
+        int mouthSampleCount = 0;
+        // Twelve frames may cover less than one subtitle pulse on a fast editor.
+        // Sample a real interval while retaining all inactive-mouth and gaze assertions.
+        float mouthSampleDeadline = Time.realtimeSinceStartup + 0.6f;
+        while (Time.realtimeSinceStartup < mouthSampleDeadline &&
+               PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias") == "Can")
+        {
+            canMinimum = Mathf.Min(canMinimum, canMouth.localScale.y);
+            canMaximum = Mathf.Max(canMaximum, canMouth.localScale.y);
+            float envelope = PropertyValue<float>(ui, "ActiveDialogueEnvelope");
+            envelopeMinimum = Mathf.Min(envelopeMinimum, envelope);
+            envelopeMaximum = Mathf.Max(envelopeMaximum, envelope);
+            mouthSampleCount++;
+            Assert.That(Vector3.Distance(denizMouth.localScale, denizRest), Is.LessThan(0.0001f),
+                "Aktif olmayan Deniz'in ağzı hareket etmemeli.");
+            Assert.That(Vector3.Distance(parentMouth.localScale, parentRest), Is.LessThan(0.0001f),
+                "Aktif olmayan annenin ağzı hareket etmemeli.");
+            Assert.That(Mathf.Abs(PropertyValue<float>(ui, "ActiveDialogueHeadYaw")),
+                Is.LessThanOrEqualTo(25.05f));
+            Assert.That(Mathf.Abs(PropertyValue<float>(ui, "ActiveDialogueHeadPitch")),
+                Is.LessThanOrEqualTo(12.05f));
+            yield return null;
+        }
+
+        Assert.That(envelopeMaximum, Is.GreaterThan(envelopeMinimum + 0.08f),
+            $"Ses RMS'i veya altyazı ritmi konuşma zarfını değiştirmeli. samples={mouthSampleCount}");
+        Assert.That(canMaximum, Is.GreaterThan(canMinimum + 0.001f),
+            $"Aktif konuşmacının ağzı ortak UI sürücüsüyle görünür biçimde açılıp kapanmalı. " +
+            $"envelope={envelopeMinimum:F3}..{envelopeMaximum:F3}");
+        InvokeNonPublic(ui, "ResetSubtitleState", false);
+    }
+
+    [UnityTest]
+    public IEnumerator FaceRig_BlinksAndActiveSpeakerMouthActuallyMoves()
+    {
+        MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .FirstOrDefault(item => item != null && item.GetType().Name == "StoryGameManager");
+        if (existingManager != null)
+        {
+            Object.Destroy(existingManager.gameObject);
+            yield return null;
+        }
+        DeleteStorySave();
+
+        yield return LoadPreparationRebuildScene();
+
+        MonoBehaviour ui = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .Single(item => item != null && item.GetType().Name == "StoryUIController");
+        Assert.That(ui, Is.Not.Null);
+        yield return AdvanceSubtitlesUntilIdle(ui);
+
+        Transform canMouth = Find("Can_8_FaceRig").transform.Find("Mouth_Center");
+        Transform denizMouth = Find("Deniz_12_FaceRig").transform.Find("Mouth_Center");
+        Assert.That(canMouth, Is.Not.Null);
+        Assert.That(denizMouth, Is.Not.Null);
+        Transform leftEyelid = canMouth.parent.Find("Eyelid_L");
+        Transform rightEyelid = canMouth.parent.Find("Eyelid_R");
+        Assert.That(leftEyelid, Is.Not.Null);
+        Assert.That(rightEyelid, Is.Not.Null);
+
+        Animation faceAnimation = canMouth.parent.GetComponent<Animation>();
+        Assert.That(faceAnimation, Is.Not.Null);
+        Assert.That(faceAnimation.clip, Is.Not.Null);
+        AnimationState blinkState = faceAnimation[faceAnimation.clip.name];
+        Assert.That(blinkState, Is.Not.Null);
+        faceAnimation.Stop();
+        blinkState.enabled = true;
+        blinkState.weight = 1f;
+
+        blinkState.time = 1.70f;
+        faceAnimation.Sample();
+        float openHeight = leftEyelid.localScale.y;
+        blinkState.time = 1.75f;
+        faceAnimation.Sample();
+        Vector3 closedStart = leftEyelid.localScale;
+        Vector3 rightClosedStart = rightEyelid.localScale;
+        blinkState.time = 1.87f;
+        faceAnimation.Sample();
+        Vector3 closedEnd = leftEyelid.localScale;
+        blinkState.time = 1.93f;
+        faceAnimation.Sample();
+        float reopenedHeight = leftEyelid.localScale.y;
+
+        Assert.That(closedStart.y, Is.GreaterThan(openHeight + 0.015f));
+        Assert.That(closedEnd.y, Is.EqualTo(closedStart.y).Within(0.001f),
+            "Blink tam kapalı görünümü en az 120 ms korumalı.");
+        Assert.That(reopenedHeight, Is.LessThan(closedStart.y - 0.015f));
+        Assert.That(closedStart.x, Is.LessThanOrEqualTo(0.05f));
+        Assert.That(closedStart.y, Is.LessThanOrEqualTo(0.04f));
+        Assert.That(closedStart.z, Is.LessThanOrEqualTo(0.01f));
+        Assert.That(rightClosedStart.x, Is.LessThanOrEqualTo(0.05f));
+        Assert.That(rightClosedStart.y, Is.LessThanOrEqualTo(0.04f));
+        Assert.That(rightClosedStart.z, Is.LessThanOrEqualTo(0.01f));
+        blinkState.enabled = false;
+        faceAnimation.Play();
+
+        Vector3 canRest = canMouth.localScale;
+        Vector3 denizRest = denizMouth.localScale;
+        Invoke(ui, "ShowSubtitle",
+            "Can: Can şimdi ilk cümleyi söylüyor.\nDeniz: Deniz şimdi ikinci cümleyi yanıtlıyor.",
+            3.2f);
+        yield return null;
+        Assert.That(PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias"), Is.EqualTo("Can"));
+        Assert.That(PropertyValue<Transform>(ui, "ActiveDialogueMouth"), Is.SameAs(canMouth));
+
+        float canMinimum = canMouth.localScale.y;
+        float canMaximum = canMinimum;
+        float canSampleEnd = Time.realtimeSinceStartup + 0.55f;
+        while (Time.realtimeSinceStartup < canSampleEnd &&
+               PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias") == "Can")
+        {
+            canMinimum = Mathf.Min(canMinimum, canMouth.localScale.y);
+            canMaximum = Mathf.Max(canMaximum, canMouth.localScale.y);
+            Assert.That(Vector3.Distance(denizMouth.localScale, denizRest), Is.LessThan(0.0001f));
+            yield return null;
+        }
+        Assert.That(canMaximum, Is.GreaterThan(canMinimum + 0.001f));
+
+        float switchTimeout = Time.realtimeSinceStartup + 2f;
+        while (PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias") != "Deniz" &&
+               Time.realtimeSinceStartup < switchTimeout)
+            yield return null;
+        Assert.That(PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias"), Is.EqualTo("Deniz"),
+            "Çok satırlı altyazı karakter ağırlığına göre ikinci konuşmacıya geçmeli.");
+        Assert.That(PropertyValue<Transform>(ui, "ActiveDialogueMouth"), Is.SameAs(denizMouth));
+        Assert.That(Vector3.Distance(canMouth.localScale, canRest), Is.LessThan(0.0001f),
+            "Konuşmacı değişince Can'ın ağzı rest scale'e dönmeli.");
+
+        float denizMinimum = denizMouth.localScale.y;
+        float denizMaximum = denizMinimum;
+        float denizSampleEnd = Time.realtimeSinceStartup + 0.45f;
+        while (Time.realtimeSinceStartup < denizSampleEnd &&
+               PropertyValue<string>(ui, "ActiveDialogueSpeakerAlias") == "Deniz")
+        {
+            denizMinimum = Mathf.Min(denizMinimum, denizMouth.localScale.y);
+            denizMaximum = Mathf.Max(denizMaximum, denizMouth.localScale.y);
+            Assert.That(Vector3.Distance(canMouth.localScale, canRest), Is.LessThan(0.0001f));
+            Assert.That(Mathf.Abs(PropertyValue<float>(ui, "ActiveDialogueHeadYaw")),
+                Is.LessThanOrEqualTo(25.05f));
+            Assert.That(Mathf.Abs(PropertyValue<float>(ui, "ActiveDialogueHeadPitch")),
+                Is.LessThanOrEqualTo(12.05f));
+            yield return null;
+        }
+        Assert.That(denizMaximum, Is.GreaterThan(denizMinimum + 0.001f));
+
+        InvokeNonPublic(ui, "ResetSubtitleState", false);
+        Assert.That(Vector3.Distance(canMouth.localScale, canRest), Is.LessThan(0.0001f));
+        Assert.That(Vector3.Distance(denizMouth.localScale, denizRest), Is.LessThan(0.0001f));
+        Assert.That(PropertyValue<Transform>(ui, "ActiveDialogueMouth"), Is.Null);
+    }
+
+    [UnityTest]
+    public IEnumerator PreparationScene_FinalBagWeightDialogueKeepsBothChildrenGrounded()
+    {
+        MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+            .FirstOrDefault(item => item != null && item.GetType().Name == "StoryGameManager");
+        if (existingManager != null)
+        {
+            Object.Destroy(existingManager.gameObject);
+            yield return null;
+        }
+        DeleteStorySave();
+
+        yield return LoadPreparationRebuildScene();
+
+        MonoBehaviour director = Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+            .Single(item => item != null && item.GetType().Name == "StoryPreparationDirector");
+        MonoBehaviour uiController = Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+            .Single(item => item != null && item.GetType().Name == "StoryUIController");
+        yield return AdvanceSubtitlesUntilIdle(uiController);
+
+        Animator denizAnimator = Find("Deniz_12").GetComponentInChildren<Animator>(true);
+        Animator canAnimator = Find("Can_8").GetComponentInChildren<Animator>(true);
+        denizAnimator.Play("Locomotion", 0, 0.14f);
+        canAnimator.Play("Locomotion", 0, 0.58f);
+        denizAnimator.Update(0f);
+        canAnimator.Update(0f);
+
+        Invoke(director, "OnBagWeightTested");
+        yield return null;
+
+        Assert.That(denizAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pick Up"), Is.False,
+            "Final çanta diyaloğu Deniz'de ayakları havaya kaldıran PickUp klibini başlatmamalı.");
+        Assert.That(canAnimator.GetCurrentAnimatorStateInfo(0).IsName("Call Sibling"), Is.False,
+            "Final çanta diyaloğu Can'da bileği ters büken Waving klibini başlatmamalı.");
+        Assert.That(ActiveRendererBounds(Find("Deniz_12")).min.y, Is.InRange(-0.05f, 0.05f),
+            "Deniz final çanta diyaloğunda zeminde kalmalı.");
+        Assert.That(ActiveRendererBounds(Find("Can_8")).min.y, Is.InRange(-0.05f, 0.05f),
+            "Can final çanta diyaloğunda zeminde kalmalı.");
     }
 
     [UnityTest]
@@ -462,16 +728,28 @@ public sealed class StoryPreparationPlayModeTests
         Assert.That(flashlightPacked.activeSelf, Is.True, "Fenerin çanta içindeki kalıcı görseli açılmalı.");
         Assert.That((bool)Property(uiController, "SubtitleActive").GetValue(uiController), Is.False,
             "Açıklama yerleştirmeden önce oynadığı için çantaya girişten sonra ikinci kez açılmamalı.");
-        object batteries = items.Single(item =>
-            Property(item, "ItemId").GetValue(item).ToString() == "Batteries");
-        object batteriesInteractable = Property(batteries, "Interactable").GetValue(batteries);
-        Assert.That((bool)Property(batteriesInteractable, "IsAvailable").GetValue(batteriesInteractable), Is.True,
-            "Fener çantaya tamamen girdikten sonra sıradaki yedek pil açıklaması açılmalı.");
+        object radioItem = items.Single(item =>
+            Property(item, "ItemId").GetValue(item).ToString() == "Radio");
+        object radioItemInteractable = Property(radioItem, "Interactable").GetValue(radioItem);
+        Assert.That((bool)Property(radioItemInteractable, "IsAvailable").GetValue(radioItemInteractable), Is.True,
+            "Fener çantaya girdikten sonra radyo testi açılmalı; yedek pil testten önce paketlenmemeli.");
 
         yield return SelectRecommendedAndAdvance(director, items, "Signal", uiController);
-        Invoke(director, "OnSignalRadioTuned");
         GameObject whistleHandoff = Find("Review_WhistleHandoff");
         GameObject whistleTarget = Find("Review_WhistleCanDropZone");
+        GameObject can = Find("Can_8");
+        Transform whistleCanPose = (Transform)Field(director, "signalWhistleCanPose").GetValue(director);
+        Assert.That(can.activeSelf, Is.True, "Düdük konuşması açılmadan Can sahnede etkin olmalı.");
+        // Can gerçek yürüme hızıyla (1.35 m/sn) sahnenin öbür tarafından gelir;
+        // eski 1.4 sn sınırı testte hareketi yarıda kesip sonraki görevleri yanlış pozda denetliyordu.
+        float canArrivalTimeout = Time.realtimeSinceStartup + 4.6f;
+        while ((Vector3.Distance(can.transform.position, whistleCanPose.position) >= 0.05f ||
+                Property(cameraController, "ActiveZone").GetValue(cameraController).ToString() !=
+                "PreparationSiblingHandoff") &&
+               Time.realtimeSinceStartup < canArrivalTimeout)
+            yield return null;
+        Assert.That(Vector3.Distance(can.transform.position, whistleCanPose.position), Is.LessThan(0.05f),
+            "Düdük adımında Can kamera dışındaki eski konumunda değil, masa yanındaki hedef pozda olmalı.");
         Assert.That(whistleHandoff.activeSelf, Is.False,
             "Can konuşurken düdük sürüklemesi erken açılmamalı; ekrana dokunarak diyalog bitirilmeli.");
         Assert.That(whistleTarget.activeSelf, Is.False,
@@ -480,9 +758,13 @@ public sealed class StoryPreparationPlayModeTests
             Is.EqualTo("PreparationSiblingHandoff"),
             "Can konuşmaya başlamadan önce Can ve düdüğü birlikte gösteren kadraj açılmalı.");
         Bounds denizBoundsAtHandoff = ActiveRendererBounds(Find("Deniz_12"));
-        Assert.That(denizBoundsAtHandoff.min.y, Is.InRange(-0.015f, 0.045f),
+        Assert.That(denizBoundsAtHandoff.min.y, Is.InRange(-0.05f, 0.05f),
             "Düdük aşamasında Deniz'in ayakkabıları zeminden kopmamalı.");
         yield return AdvanceSubtitlesUntilIdle(uiController);
+        float whistleReadyTimeout = Time.realtimeSinceStartup + 2f;
+        while ((!whistleHandoff.activeSelf || !whistleTarget.activeSelf) &&
+               Time.realtimeSinceStartup < whistleReadyTimeout)
+            yield return null;
         Assert.That(whistleHandoff.activeSelf, Is.True);
         Assert.That(whistleTarget.activeSelf, Is.True);
         cameraTimeout = Time.realtimeSinceStartup + 3f;
@@ -517,20 +799,46 @@ public sealed class StoryPreparationPlayModeTests
         MonoBehaviour foodDiscovery = FindInteraction("Discover_FoodCabinet");
         Assert.That((bool)Property(foodDiscovery, "IsAvailable").GetValue(foodDiscovery), Is.True,
             "The kitchen cabinet must become interactive when the food step starts.");
+        Assert.That(foodDiscovery.gameObject.name, Is.EqualTo("SM_Prop_Kitchen_Counter_01_Door_01"));
+        Assert.That(((GameObject)Property(foodDiscovery, "HighlightRoot").GetValue(foodDiscovery)).activeSelf,
+            Is.True, "Açılacak sol kapak üzerinde yatay sürükleme göstergesi görünmeli.");
+        GameObject waterRoot = Find("WorldItem_Water");
+        MonoBehaviour waterInspection = Find("WaterExpiryLabel_Unchecked").GetComponents<MonoBehaviour>()
+            .Single(item => item.GetType().Name == "StoryInteractable");
         Invoke(foodDiscovery, "CompletePreparedInteraction");
+        yield return null;
+        Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+            Is.EqualTo("PreparationFood"),
+            "Kapak açılır açılmaz su kamerasına atlanmamalı; açılma sonucu önce dolap kadrajında görülmeli.");
+        Assert.That((bool)Property(waterInspection, "IsAvailable").GetValue(waterInspection), Is.False,
+            "Su etiketi, dolabın açılma açıklaması bitmeden etkileşim almamalı.");
+        object openingObjective = Field(uiController, "objectiveTitle").GetValue(uiController);
+        Assert.That(Property(openingObjective, "text").GetValue(openingObjective),
+            Is.EqualTo("DOLAP AÇILDI — İÇERİ BAK"));
+        Assert.That(Find("KitchenLowCabinet").activeSelf, Is.False);
+        GameObject openedKitchenCabinet = Find("KitchenCabinetDoorLeft");
+        Assert.That(openedKitchenCabinet.activeSelf, Is.True);
+        yield return new WaitForSecondsRealtime(0.85f);
+        Transform openedLeftDoor = openedKitchenCabinet.transform.Find("SM_Prop_Kitchen_Counter_01_Door_01");
+        Transform openedRightDoor = openedKitchenCabinet.transform.Find("SM_Prop_Kitchen_Counter_01_Door_02");
+        Assert.That(Mathf.Abs(Mathf.DeltaAngle(openedLeftDoor.localEulerAngles.y, -105f)), Is.LessThan(3f));
+        Assert.That(Mathf.Abs(Mathf.DeltaAngle(openedRightDoor.localEulerAngles.y, 105f)), Is.LessThan(3f),
+            "İki kapak, kapalı dolap modelinin bir karede kaybolması yerine göz önünde yana açılmalı.");
+        Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+            Is.EqualTo("PreparationFood"));
         yield return AdvanceSubtitlesUntilIdle(uiController);
         yield return new WaitForSecondsRealtime(0.4f);
         cameraTimeout = Time.realtimeSinceStartup + 3f;
         while ((bool)Property(cameraController, "WorldNavigationBlocked").GetValue(cameraController) &&
                Time.realtimeSinceStartup < cameraTimeout)
             yield return null;
-        GameObject waterRoot = Find("WorldItem_Water");
-        MonoBehaviour waterInspection = Find("WaterExpiryLabel_Unchecked").GetComponents<MonoBehaviour>()
-            .Single(item => item.GetType().Name == "StoryInteractable");
         Assert.That(waterRoot.activeInHierarchy, Is.True,
             "The water bottle must remain visible after the cabinet transition.");
         Assert.That((bool)Property(waterInspection, "IsAvailable").GetValue(waterInspection), Is.True,
             "The visible bottle label must be interactive after the dialogue.");
+        Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+            Is.EqualTo("PreparationWaterInspection"),
+            "Dolabın açılması gösterilip açıklandıktan sonra kamera şişe etiketine geçmeli.");
         Vector3 waterViewport = storyCamera.WorldToViewportPoint(
             Find("WaterExpiryLabel_Unchecked").GetComponent<BoxCollider>().bounds.center);
         Assert.That(waterViewport.z, Is.GreaterThan(0f));
@@ -554,9 +862,32 @@ public sealed class StoryPreparationPlayModeTests
         Assert.That(Property(director, "CurrentCategory").GetValue(director).ToString(), Is.EqualTo("Health"));
 
         Invoke(director, "DiscoverHealthCategory");
+        yield return null;
+        Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+            Is.EqualTo("PreparationBandageInspection"),
+            "Sargı kontrolü başlayınca kamera genel dolap kadrajında kalmamalı; mühür paketini göstermeli.");
+        Renderer bandageRenderer = Find("BandageSeal_Unchecked").GetComponentInChildren<Renderer>(true);
+        Vector3 bandageViewport = storyCamera.WorldToViewportPoint(bandageRenderer.bounds.center);
+        cameraTimeout = Time.realtimeSinceStartup + 3f;
+        while ((bandageViewport.z <= 0f ||
+                bandageViewport.x < 0.06f || bandageViewport.x > 0.94f ||
+                bandageViewport.y < 0.06f || bandageViewport.y > 0.94f) &&
+               Time.realtimeSinceStartup < cameraTimeout)
+        {
+            yield return null;
+            bandageViewport = storyCamera.WorldToViewportPoint(bandageRenderer.bounds.center);
+        }
+        Assert.That(bandageViewport.z, Is.GreaterThan(0f));
+        Assert.That(bandageViewport.x, Is.InRange(0.06f, 0.94f));
+        Assert.That(bandageViewport.y, Is.InRange(0.06f, 0.94f),
+            "Sargı paketi otomatik yakın çekimde telefon kadrajında görünür olmalı.");
+        Assert.That(Find("BandageSealInspection").GetComponents<MonoBehaviour>()
+                .Any(component => component != null && component.GetType().Name == "StoryInteractable"),
+            Is.False,
+            "Sargı kontrolü tekrar basma veya basılı tutma istememeli.");
         yield return AdvanceSubtitlesUntilIdle(uiController);
-        Invoke(director, "OnBandageSealChecked");
-        yield return AdvanceSubtitlesUntilIdle(uiController);
+        Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+            Is.EqualTo("PreparationBag"));
         yield return SelectRecommendedAndAdvance(director, items, "Health", uiController);
         Invoke(director, "ReviewHealthCategory");
         yield return AdvanceSubtitlesUntilIdle(uiController);
@@ -569,7 +900,60 @@ public sealed class StoryPreparationPlayModeTests
         yield return AdvanceSubtitlesUntilIdle(uiController);
         AssertCheckpoint(manager, "WarmthPacked");
 
-        Invoke(director, "OnBagWeightTested");
+        GameObject visibleBag = Find("EmergencyBag_Open_Packing");
+        MonoBehaviour bagWeightInteraction = FindInteraction("Final_TestBagWeight");
+        Assert.That(visibleBag.activeInHierarchy, Is.True,
+            "Ağırlık görevi açıldığında etkileşim verilen gerçek çanta gizlenmemeli.");
+        Assert.That((bool)Property(bagWeightInteraction, "IsAvailable").GetValue(bagWeightInteraction), Is.True,
+            "Görünür çanta doğrudan sürüklenebilir olmalı.");
+        Assert.That(Property(bagWeightInteraction, "InteractionGesture").GetValue(bagWeightInteraction).ToString(),
+            Is.EqualTo("DragToTarget"));
+        Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+            Is.EqualTo("PreparationBag"),
+            "Ağırlık görevi karakter kadrajında değil, çantayı gösteren kamerada açılmalı.");
+        Renderer bagRenderer = visibleBag.GetComponentsInChildren<Renderer>(true)
+            .First(renderer => renderer.gameObject.name == "EmergencyBag_Open_Visual" ||
+                               renderer.transform.IsChildOf(Find("EmergencyBag_Open_Visual").transform));
+        Vector3 bagViewport = storyCamera.WorldToViewportPoint(bagRenderer.bounds.center);
+        cameraTimeout = Time.realtimeSinceStartup + 3f;
+        while ((bagViewport.z <= 0f ||
+                bagViewport.x < 0.08f || bagViewport.x > 0.92f ||
+                bagViewport.y < 0.08f || bagViewport.y > 0.92f) &&
+               Time.realtimeSinceStartup < cameraTimeout)
+        {
+            yield return null;
+            bagViewport = storyCamera.WorldToViewportPoint(bagRenderer.bounds.center);
+        }
+        Assert.That(bagViewport.z, Is.GreaterThan(0f));
+        Assert.That(bagViewport.x, Is.InRange(0.08f, 0.92f));
+        Assert.That(bagViewport.y, Is.InRange(0.08f, 0.92f),
+            "Oyuncu kaldırması istenen çantayı telefon kadrajında görebilmeli.");
+
+        MonoBehaviour bagDraggable = visibleBag.GetComponents<MonoBehaviour>()
+            .Single(component => component != null && component.GetType().Name == "DraggableItem");
+        Transform bagLiftTarget = (Transform)Property(bagWeightInteraction, "GestureTarget")
+            .GetValue(bagWeightInteraction);
+        Vector2 bagDragStart = storyCamera.WorldToScreenPoint(visibleBag.transform.position);
+        Vector2 bagDragEnd = storyCamera.WorldToScreenPoint(bagLiftTarget.position);
+        Assert.That((bool)InvokeWithResult(bagDraggable, "BeginManagedDrag", bagDragStart), Is.True);
+        Invoke(bagDraggable, "UpdateManagedDrag", Vector2.Lerp(bagDragStart, bagDragEnd, 0.65f));
+        Assert.That((bool)InvokeWithResult(bagDraggable, "EndManagedDrag", bagDragEnd), Is.True,
+            "Çantayı ekranda yukarıdaki hedefe sürükleyip bırakmak gerçekten kabul edilmeli.");
+        Invoke(bagWeightInteraction, "CompletePreparedInteraction");
+        yield return null;
+
+        Animator denizWeightAnimator = Find("Deniz_12").GetComponentInChildren<Animator>(true);
+        Animator canWeightAnimator = Find("Can_8").GetComponentInChildren<Animator>(true);
+        Assert.That(denizWeightAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pick Up"), Is.False,
+            "Final çanta kontrolü Deniz'de Meshy rigini havaya kaldıran KayKit PickUp klibini tetiklememeli.");
+        Assert.That(canWeightAnimator.GetCurrentAnimatorStateInfo(0).IsName("Call Sibling"), Is.False,
+            "Final çanta kontrolü Can'ın ayağını ters büken KayKit Waving klibini tetiklememeli.");
+        Bounds denizWeightBounds = ActiveRendererBounds(Find("Deniz_12"));
+        Bounds canWeightBounds = ActiveRendererBounds(Find("Can_8"));
+        Assert.That(denizWeightBounds.min.y, Is.InRange(-0.05f, 0.05f),
+            "Final çanta diyaloğunda Deniz zeminden kopmamalı veya zemine gömülmemeli.");
+        Assert.That(canWeightBounds.min.y, Is.InRange(-0.05f, 0.05f),
+            "Final çanta diyaloğunda Can zeminden kopmamalı veya zemine gömülmemeli.");
         yield return AdvanceSubtitlesUntilIdle(uiController);
         Invoke(director, "OnConsoleRemoved");
         yield return AdvanceSubtitlesUntilIdle(uiController);
@@ -747,6 +1131,121 @@ public sealed class StoryPreparationPlayModeTests
     }
 
     [UnityTest]
+    public IEnumerator ScriptedFacing_TurnsSmoothlyAndFinishesWhileDialogueLocksMovement()
+    {
+        MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .FirstOrDefault(item => item != null && item.GetType().Name == "StoryGameManager");
+        if (existingManager != null)
+        {
+            Object.Destroy(existingManager.gameObject);
+            yield return null;
+        }
+        DeleteStorySave();
+
+        yield return LoadPreparationRebuildScene();
+
+        MonoBehaviour[] behaviours = Object.FindObjectsByType<MonoBehaviour>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
+        MonoBehaviour movement = behaviours.Single(item =>
+            item != null && item.GetType().Name == "StoryPlayerMovement");
+        foreach (MonoBehaviour behaviour in behaviours.Where(item =>
+                     item != null &&
+                     (item.GetType().Name == "StoryPreparationDirector" ||
+                      item.GetType().Name == "StoryTouchManager" ||
+                      item.GetType().Name == "StoryCameraController" ||
+                      item.GetType().Name == "StoryUIController")))
+            behaviour.enabled = false;
+
+        Invoke(movement, "SetStoryInputLocked", false);
+        Invoke(movement, "Stop");
+        movement.transform.rotation = Quaternion.identity;
+        Vector3 target = movement.transform.position + Vector3.right * 3f;
+        Quaternion expected = Quaternion.LookRotation(Vector3.right, Vector3.up);
+
+        Invoke(movement, "FaceTowards", target);
+        Assert.That(Quaternion.Angle(movement.transform.rotation, expected), Is.GreaterThan(80f),
+            "FaceTowards must schedule a turn instead of teleporting the character rotation in one frame.");
+
+        yield return null;
+        float firstFrameAngle = Quaternion.Angle(movement.transform.rotation, expected);
+        Assert.That(firstFrameAngle, Is.InRange(35f, 89.9f),
+            "The first turn frame must visibly progress without snapping straight to the target.");
+
+        Invoke(movement, "SetStoryInputLocked", true);
+        yield return new WaitForSecondsRealtime(0.55f);
+        Assert.That(Quaternion.Angle(movement.transform.rotation, expected), Is.LessThan(1.2f),
+            "A dialogue lock must stop walking but allow the already-authored smooth facing turn to finish.");
+        Assert.That((bool)Property(movement, "IsMoving").GetValue(movement), Is.False);
+    }
+
+    [UnityTest]
+    public IEnumerator PlayerWalk_FacesTheNavMeshVelocityInsteadOfWalkingBackward()
+    {
+        MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None)
+            .FirstOrDefault(item => item != null && item.GetType().Name == "StoryGameManager");
+        if (existingManager != null)
+        {
+            Object.Destroy(existingManager.gameObject);
+            yield return null;
+        }
+        DeleteStorySave();
+
+        yield return LoadPreparationRebuildScene();
+
+        MonoBehaviour[] behaviours = Object.FindObjectsByType<MonoBehaviour>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
+        MonoBehaviour movement = behaviours.Single(item =>
+            item != null && item.GetType().Name == "StoryPlayerMovement");
+        MonoBehaviour uiController = behaviours.Single(item =>
+            item != null && item.GetType().Name == "StoryUIController");
+        if ((bool)Property(uiController, "SubtitleActive").GetValue(uiController))
+            yield return AdvanceSubtitlesUntilIdle(uiController);
+
+        // Keep this regression focused on locomotion. The preparation director can
+        // start the next authored camera/dialogue beat one frame after the intro,
+        // which correctly stops free navigation but makes the facing check flaky.
+        foreach (MonoBehaviour behaviour in behaviours.Where(item =>
+                     item != null &&
+                     (item.GetType().Name == "StoryPreparationDirector" ||
+                      item.GetType().Name == "StoryTouchManager" ||
+                      item.GetType().Name == "StoryCameraController" ||
+                      item.GetType().Name == "StoryUIController")))
+            behaviour.enabled = false;
+        Invoke(movement, "SetStoryInputLocked", false);
+
+        NavMeshAgent agent = movement.GetComponent<NavMeshAgent>();
+        Vector3 destination = ReachablePointNearOpenBag();
+        Assert.That((bool)InvokeWithResult(movement, "TrySetDestination", destination), Is.True);
+
+        float timeout = Time.realtimeSinceStartup + 2.5f;
+        while (agent.velocity.sqrMagnitude < 0.12f && Time.realtimeSinceStartup < timeout)
+            yield return null;
+        Assert.That(agent.velocity.sqrMagnitude, Is.GreaterThan(0.12f));
+
+        yield return new WaitForSecondsRealtime(0.22f);
+        Vector3 planarVelocity = Vector3.ProjectOnPlane(agent.velocity, Vector3.up).normalized;
+        Animator animator = movement.GetComponentInChildren<Animator>();
+        Assert.That(animator, Is.Not.Null);
+        Transform leftUpperArm = animator.GetBoneTransform(HumanBodyBones.LeftUpperArm);
+        Transform rightUpperArm = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
+        Assert.That(leftUpperArm, Is.Not.Null);
+        Assert.That(rightUpperArm, Is.Not.Null);
+        // Measure the rendered Humanoid body from its shoulder line. Root/Visual transform
+        // arrows can both look correct while an authored RootQ turns the animated body around.
+        Vector3 shoulderRight =
+            Vector3.ProjectOnPlane(rightUpperArm.position - leftUpperArm.position, Vector3.up).normalized;
+        Vector3 visibleBodyForward = Vector3.Cross(shoulderRight, Vector3.up).normalized;
+        Assert.That(Vector3.Dot(visibleBodyForward, planarVelocity), Is.GreaterThan(0.82f),
+            "Deniz'in ekranda görünen yüzü yürüdüğü yöne bakmalı.");
+    }
+
+    [UnityTest]
     public IEnumerator FurnitureDiscovery_FirstPullOpensRealDrawerAndRevealsContents()
     {
         MonoBehaviour existingManager = Object.FindObjectsByType<MonoBehaviour>(
@@ -773,7 +1272,8 @@ public sealed class StoryPreparationPlayModeTests
         GameObject openNightstand = Find("SignalNightstandOpen");
         Transform movingDrawer = openNightstand.GetComponentsInChildren<Transform>(true)
             .Single(item => item.name == "Nightstand_02_Door");
-        float closedDrawerZ = movingDrawer.localPosition.z;
+        Transform drawerSlide = movingDrawer.parent;
+        Vector3 closedSlidePosition = drawerSlide.position;
         Vector3 closedDrawerCenter = movingDrawer.GetComponent<Renderer>().bounds.center;
 
         yield return AdvanceSubtitlesUntilIdle(uiController);
@@ -781,13 +1281,13 @@ public sealed class StoryPreparationPlayModeTests
             Property(cameraController, "ActiveZone").PropertyType,
             "PreparationSignal");
         Invoke(cameraController, "ActivateZone", signalZone, true);
-        yield return null;
+        yield return new WaitForSeconds(0.6f);
         Camera storyCamera = Camera.main;
         Assert.That(storyCamera, Is.Not.Null);
         Vector3 cameraHorizontalForward = Vector3.ProjectOnPlane(storyCamera.transform.forward, Vector3.up).normalized;
         float signalCameraDownAngle = Vector3.Angle(storyCamera.transform.forward, cameraHorizontalForward);
-        Assert.That(signalCameraDownAngle, Is.InRange(24f, 38f),
-            "The drawer shot must read as a forward pull, not a top-down vertical drop.");
+        Assert.That(signalCameraDownAngle, Is.InRange(40f, 47f),
+            "The drawer shot must keep the authored 45-degree three-quarter view.");
         Invoke(discovery, "SetAvailable", true);
 
         Vector2 screenPosition = storyCamera.WorldToScreenPoint(
@@ -802,24 +1302,35 @@ public sealed class StoryPreparationPlayModeTests
             "The visible drawer must win the world raycast instead of the furniture collider in front of it.");
         Assert.That((bool)Field(touchManager, "directGestureActive").GetValue(touchManager), Is.True,
             "The first pointer-down on the drawer must begin the swipe; it must not be consumed as a hidden approach tap.");
-        Assert.That(Property(discovery, "InteractionGesture").GetValue(discovery).ToString(), Is.EqualTo("SwipeDown"));
+        Assert.That(Property(discovery, "InteractionGesture").GetValue(discovery).ToString(),
+            Is.EqualTo("SwipeDiagonalDownRight"));
+
+        Vector3 authoredOpenCenter = closedDrawerCenter +
+                                     openNightstand.transform.TransformVector(Vector3.forward * 0.145f);
+        Vector2 authoredScreenDelta =
+            (Vector2)storyCamera.WorldToScreenPoint(authoredOpenCenter) -
+            (Vector2)storyCamera.WorldToScreenPoint(closedDrawerCenter);
+        Assert.That(authoredScreenDelta.x, Is.GreaterThan(0f));
+        Assert.That(authoredScreenDelta.y, Is.LessThan(0f));
+        Assert.That(Vector2.Angle(authoredScreenDelta, new Vector2(1f, -1f)), Is.LessThan(18f),
+            "Çekmece kamera kadrajında düz aşağı/yana değil yaklaşık 45 derece sağ alta açılmalı.");
 
         InvokeNonPublic(touchManager, "CompletePendingInteraction");
         yield return new WaitForSeconds(0.62f);
 
         Assert.That(closedNightstand.activeSelf, Is.False);
         Assert.That(openNightstand.activeSelf, Is.True);
-        float drawerTravel = movingDrawer.localPosition.z - closedDrawerZ;
-        Assert.That(drawerTravel, Is.InRange(0.16f, 0.2f),
-            "The drawer must open far enough to reveal its contents without leaving its rails.");
         Bounds cabinetBounds = openNightstand.GetComponent<Renderer>().bounds;
         Bounds openDrawerBounds = movingDrawer.GetComponent<Renderer>().bounds;
-        Vector3 drawerMotion = openDrawerBounds.center - closedDrawerCenter;
+        float drawerTravel = Vector3.Distance(drawerSlide.position, closedSlidePosition);
+        Assert.That(drawerTravel, Is.InRange(0.17f, 0.2f),
+            "The drawer must open far enough to reveal its contents without leaving its rails.");
+        Vector3 drawerMotion = drawerSlide.position - closedSlidePosition;
         Vector3 drawerToCamera = storyCamera.transform.position - closedDrawerCenter;
         drawerMotion.y = 0f;
         drawerToCamera.y = 0f;
-        Assert.That(Vector3.Dot(drawerMotion.normalized, drawerToCamera.normalized), Is.GreaterThan(0.95f),
-            "The drawer must travel toward the camera on its rail axis rather than downward.");
+        Assert.That(Vector3.Angle(drawerMotion, drawerToCamera), Is.InRange(32f, 48f),
+            "The camera must show the rail pull from an approximately 45-degree diagonal.");
         float railOverlap = Mathf.Min(cabinetBounds.max.z, openDrawerBounds.max.z) -
                             Mathf.Max(cabinetBounds.min.z, openDrawerBounds.min.z);
         Assert.That(railOverlap, Is.GreaterThan(openDrawerBounds.size.z * 0.3f),
@@ -900,7 +1411,109 @@ public sealed class StoryPreparationPlayModeTests
                 (bool)InvokeWithResult(director, "TryBeginItemExplanation", interactable),
                 Is.True,
                 Property(item, "ItemId").GetValue(item) + " çantaya girmeden önce açıklanmalı.");
-            yield return AdvanceSubtitlesUntilIdle(uiController);
+            string itemId = Property(item, "ItemId").GetValue(item).ToString();
+            if (string.Equals(itemId, "Radio", System.StringComparison.Ordinal))
+            {
+                MonoBehaviour insertBattery =
+                    (MonoBehaviour)Field(director, "reviewSignalRadioBatteryInsert").GetValue(director);
+                MonoBehaviour powerRadio =
+                    (MonoBehaviour)Field(director, "reviewSignalRadio").GetValue(director);
+                MonoBehaviour removeBattery =
+                    (MonoBehaviour)Field(director, "reviewSignalRadioBatteryRemove").GetValue(director);
+                MonoBehaviour cameraController = Object.FindObjectsByType<MonoBehaviour>(
+                        FindObjectsInactive.Include, FindObjectsSortMode.None)
+                    .Single(item => item != null && item.GetType().Name == "StoryCameraController");
+
+                Assert.That(Property(cameraController, "ActiveZone").GetValue(cameraController).ToString(),
+                    Is.EqualTo("PreparationRadio"),
+                    "Radyo seçildiğinde masa üzerindeki pil ve radyo yakın planı açılmalı.");
+                Assert.That((bool)Property(insertBattery, "IsAvailable").GetValue(insertBattery), Is.True);
+                float radioBlendTimeout = Time.realtimeSinceStartup + 3f;
+                while ((bool)Property(cameraController, "WorldNavigationBlocked").GetValue(cameraController) &&
+                       Time.realtimeSinceStartup < radioBlendTimeout)
+                    yield return null;
+                MonoBehaviour touchManager = Object.FindObjectsByType<MonoBehaviour>(
+                        FindObjectsInactive.Include, FindObjectsSortMode.None)
+                    .Single(item => item != null && item.GetType().Name == "StoryTouchManager");
+                Collider batteryTouchCollider = insertBattery.GetComponent<Collider>();
+                Camera touchCamera = (Camera)Field(touchManager, "worldCamera").GetValue(touchManager);
+                Vector2 batteryScreenPosition =
+                    touchCamera.WorldToScreenPoint(batteryTouchCollider.bounds.center);
+                Ray batteryRay = touchCamera.ScreenPointToRay(batteryScreenPosition);
+                string batteryRayHits = string.Join(
+                    " -> ",
+                    Physics.RaycastAll(batteryRay, 150f, ~0, QueryTriggerInteraction.Collide)
+                        .OrderBy(hit => hit.distance)
+                        .Select(hit => $"{hit.collider.name}[{hit.collider.GetComponentInParent<MonoBehaviour>()?.GetType().Name}]"));
+                InvokeNonPublic(touchManager, "HandleWorldTap", batteryScreenPosition);
+                MonoBehaviour batteryDrag = insertBattery.GetComponents<MonoBehaviour>()
+                    .Single(component => component.GetType().Name == "DraggableItem");
+                Assert.That(Field(touchManager, "managedDrag").GetValue(touchManager),
+                    Is.SameAs(batteryDrag),
+                    "The visible battery must begin dragging from a direct tap on its enlarged touch volume. Hits: " +
+                    batteryRayHits +
+                    $"; active={insertBattery.gameObject.activeInHierarchy}, colliderEnabled={batteryTouchCollider.enabled}, " +
+                    $"bounds={batteryTouchCollider.bounds}, objectPosition={insertBattery.transform.position}, " +
+                    $"screen={batteryScreenPosition}");
+                Transform batteryInsertTarget =
+                    (Transform)Property(insertBattery, "GestureTarget").GetValue(insertBattery);
+                Vector2 batteryInsertTargetScreen = touchCamera.WorldToScreenPoint(batteryInsertTarget.position);
+                Invoke(batteryDrag, "UpdateManagedDrag", batteryInsertTargetScreen);
+                Assert.That(
+                    (bool)InvokeWithResult(batteryDrag, "EndManagedDrag", batteryInsertTargetScreen),
+                    Is.True,
+                    "Masadaki gerçek yedek pil radyonun görünür pil yuvasına bırakılabilmeli.");
+                InvokeNonPublic(touchManager, "ClearPendingInteraction");
+                Invoke(insertBattery, "CompletePreparedInteraction");
+                Assert.That(Find("Review_RadioBatteryLoose").activeSelf, Is.True,
+                    "Pil takılınca aynı fiziksel hiyerarşi açık kalmalı; görsel takası yapılmamalı.");
+                Assert.That(Find("Review_RadioBatteryInserted").activeSelf, Is.True,
+                    "Aynı pil görselini taşıyan çıkarma etkileşimi radyoda kalmalı.");
+                Bounds insertedBatteryVisualBounds =
+                    ActiveRendererBounds(Find("Review_RadioBatteryInserted"));
+                Bounds inspectionRadioBounds =
+                    ActiveRendererBounds(Find("BagReview_EmergencyRadio"));
+                Assert.That(
+                    insertedBatteryVisualBounds.Intersects(inspectionRadioBounds),
+                    Is.True,
+                    "Takılmış pil masada ayrı durmamalı; radyo gövdesinin içine oturmalı.");
+                Assert.That(insertedBatteryVisualBounds.size.y,
+                    Is.GreaterThan(insertedBatteryVisualBounds.size.x * 1.35f),
+                    "Takılan pil radyodan yatay çubuk gibi çıkmamalı; haznede dik durmalı.");
+                Assert.That(insertedBatteryVisualBounds.max.x - inspectionRadioBounds.max.x,
+                    Is.LessThan(0.08f),
+                    "Pilin tamamı radyo dışına taşmamalı; yalnız tutulabilir ince yüzü görünmeli.");
+                Assert.That((bool)Property(powerRadio, "IsAvailable").GetValue(powerRadio), Is.True,
+                    "Pil takılınca radyonun fiziksel güç düğmesi etkinleşmeli.");
+                Invoke(powerRadio, "CompletePreparedInteraction");
+                Assert.That((bool)Property(uiController, "SubtitleActive").GetValue(uiController), Is.True,
+                    "Radyo açılınca acil yayın amacı açıklanmalı.");
+                yield return AdvanceSubtitlesUntilIdle(uiController);
+                Assert.That((bool)Property(removeBattery, "IsAvailable").GetValue(removeBattery), Is.True,
+                    "Yayın kontrolünden sonra pil radyodan çıkarılabilmeli.");
+                MonoBehaviour removeBatteryDrag = removeBattery.GetComponents<MonoBehaviour>()
+                    .Single(component => component.GetType().Name == "DraggableItem");
+                Collider removeBatteryCollider = removeBattery.GetComponent<Collider>();
+                Vector2 removeBatteryScreen = touchCamera.WorldToScreenPoint(removeBatteryCollider.bounds.center);
+                Transform batteryReturnTarget =
+                    (Transform)Property(removeBattery, "GestureTarget").GetValue(removeBattery);
+                Vector2 batteryReturnTargetScreen = touchCamera.WorldToScreenPoint(batteryReturnTarget.position);
+                Assert.That(
+                    (bool)InvokeWithResult(removeBatteryDrag, "BeginManagedDrag", removeBatteryScreen),
+                    Is.True,
+                    "Radyoya takılan aynı pil çıkarma adımında yeniden tutulabilmeli.");
+                Invoke(removeBatteryDrag, "UpdateManagedDrag", batteryReturnTargetScreen);
+                Assert.That(
+                    (bool)InvokeWithResult(removeBatteryDrag, "EndManagedDrag", batteryReturnTargetScreen),
+                    Is.True,
+                    "Aynı pil radyodan çıkarılıp masadaki fiziksel yerine geri bırakılabilmeli.");
+                Invoke(removeBattery, "CompletePreparedInteraction");
+                yield return AdvanceSubtitlesUntilIdle(uiController);
+                Assert.That((bool)Property(interactable, "IsAvailable").GetValue(interactable), Is.True,
+                    "Pil çıkarıldıktan sonra radyo masadan açık çantaya sürüklenebilmeli.");
+            }
+            else
+                yield return AdvanceSubtitlesUntilIdle(uiController);
 
             Invoke(director, "ResolveChoice", item);
             MonoBehaviour motion = (MonoBehaviour)Property(item, "LegacyBagMotion").GetValue(item);
@@ -983,6 +1596,11 @@ public sealed class StoryPreparationPlayModeTests
         PropertyInfo property = target.GetType().GetProperty(name, BindingFlags.Instance | BindingFlags.Public);
         Assert.That(property, Is.Not.Null, name);
         return property;
+    }
+
+    private static T PropertyValue<T>(object target, string name)
+    {
+        return (T)Property(target, name).GetValue(target);
     }
 
     private static FieldInfo Field(object target, string name)

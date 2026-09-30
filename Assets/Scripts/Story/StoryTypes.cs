@@ -88,7 +88,8 @@ namespace Deprem.Story
         Approach,
         WorldHold,
         DragToBag,
-        DragToTarget
+        DragToTarget,
+        SwipeDiagonalDownRight
     }
 
     public enum StoryCameraZoneId
@@ -135,7 +136,10 @@ namespace Deprem.Story
         EvacuationStreetInspect = 39,
         EvacuationAssemblyRadio = 40,
         PreparationSiblingHandoff = 41,
-        PreparationFlashlight = 42
+        PreparationFlashlight = 42,
+        PreparationRadio = 43,
+        PreparationWaterInspection = 44,
+        PreparationBandageInspection = 45
     }
 
     public enum StorySlicePhase

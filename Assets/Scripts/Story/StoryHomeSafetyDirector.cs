@@ -142,6 +142,7 @@ namespace Deprem.Story
         private Vector3 parentHomePosition;
         private Quaternion parentHomeRotation;
         private Coroutine drillWorkRoutine;
+        private Coroutine parentTravelRoutine;
 
         private static readonly int InspectTrigger = Animator.StringToHash("StoryInspect");
         private static readonly int InteractTrigger = Animator.StringToHash("StoryInteract");
@@ -220,7 +221,6 @@ namespace Deprem.Story
             {
                 SetActive(canReadingNestRisk, false);
                 SetActive(canReadingNestSafe, true);
-                canAnimator?.SetTrigger(PickUpTrigger);
                 RegisterInspection(2, inspectExit, StoryCameraZoneId.HomeOverview,
                     "Can'ın okuma minderi turuncu düşme alanından ortak halının güvenli köşesine taşındı.\n" +
                     "Can: Raf devrilse bile burada üstüme gelmez.\n" +
@@ -238,12 +238,11 @@ namespace Deprem.Story
 
             testInitialRoute?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.HomeExit);
-            denizAnimator?.SetTrigger(InteractTrigger);
             SetActive(initialRouteCarStart, false);
             SetActive(initialRouteCarBlocked, true);
             Play(initialRouteCarAnimation);
             ShowDialogue(
-                "Can'ın arabası ayakkabıya çarpıp durdu.\nCan: Araba geçemedi.\nDeniz: Biz de karanlıkta aynı yerde takılırız.",
+                "Can: Araba yine ayakkabıya takıldı.\nDeniz: Biz de karanlıkta takılırız burada. Yolu açalım.",
                 7.2f,
                 physicalRouteFlow ? BeginExitClearing : BeginNeighborVisit);
         }
@@ -260,9 +259,8 @@ namespace Deprem.Story
             SetActive(nermin, true);
             SetActive(nerminEnvelopeStart, true);
             Play(doorOpenAnimation);
-            parentAnimator?.SetTrigger(CallTrigger);
             ShowDialogue(
-                "Nermin: Apartmanın yeni tahliye planını getirdim.\nCan: Asansör niye çizilmemiş?\nNermin: Sarsıntıdan sonra merdiven kullanılır; yolu açık tutan biri bana yeter.",
+                "Nermin: Komşular, apartmanın planını getirdim.\nCan: Asansör nerede?\nNermin: Sarsıntıdan sonra merdivenden ineriz oğlum. Önüm açık olsun, yeter.",
                 9.2f,
                 () =>
                 {
@@ -279,13 +277,12 @@ namespace Deprem.Story
                 return;
 
             returnNerminEnvelope?.SetAvailable(false);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             SetActive(nerminEnvelopeStart, false);
             SetActive(nerminEnvelopeReturned, true);
             SetActive(evacuationPlanInHand, placeEvacuationPlan != null);
             SetActive(evacuationPlan, placeEvacuationPlan == null);
             ShowDialogue(
-                "Deniz zarfı Nermin'in eline verdi. İçinden apartmanın yeni tahliye planı çıktı.\nNermin: Matkap sesini duyarsam artık nedenini bilirim.",
+                "Nermin: Sağ ol Deniz. Planı panoya koyalım.\nAnne: Hazır gelmişken kahven de var komşum.",
                 8.2f,
                 placeEvacuationPlan != null ? BeginPlanPlacement : FinishNeighborVisit);
         }
@@ -296,12 +293,11 @@ namespace Deprem.Story
                 return;
 
             placeEvacuationPlan?.SetAvailable(false);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             SetActive(evacuationPlanInHand, false);
             SetActive(evacuationPlan, true);
             cameraController?.ActivateZone(StoryCameraZoneId.HomeOverview);
             ShowDialogue(
-                "Plan aile panosunun yanına yerleşti. Asansör işareti yoktu; merdiven rotası ve Nermin'in dairesi aynı çizgide görünüyordu.",
+                "Deniz: Bizim daire, Nermin teyzenin dairesi, merdiven… Hepsi burada.",
                 7.2f,
                 FinishNeighborVisit);
         }
@@ -317,7 +313,7 @@ namespace Deprem.Story
             SetActive(openDoor, true);
             Play(doorOpenAnimation);
             ShowDialogue(
-                "Kapı hiçbir eşyaya çarpmadan tam açıldı. Zemindeki kesintisiz çizgi artık oyuncak arabadan eşiğe kadar görülebiliyordu.",
+                "Can: Kapı da açıldı, arabam da geçiyor!\nAnne: Tamamdır. Bu yolu açık tutalım.",
                 7.2f,
                 () =>
                 {
@@ -333,9 +329,8 @@ namespace Deprem.Story
                 return;
 
             markShelfAnchor?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InspectTrigger);
             ShowDialogue(
-                "Deniz rafın üst bağlantı noktasını işaretledi. Anne duvar dikmesini kontrol edip uygun bağlantı parçasını çalışma örtüsüne koydu.",
+                "Deniz: Bağlantı yeri burada mı anne?\nAnne: Burada. Duvara uygun parçayı hazırlayayım.",
                 6.8f,
                 BeginShelfSecuring);
         }
@@ -347,12 +342,11 @@ namespace Deprem.Story
 
             testSecuredShelf?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.HomeShelf);
-            denizAnimator?.SetTrigger(InspectTrigger);
             Play(shelfStabilityAnimation);
             SetActive(shelfRiskZoneUnstable, false);
             SetActive(shelfRiskZoneSecured, true);
             ShowDialogue(
-                "Anne rafı aynı noktadan hafifçe sınadı. Önceki sallanma yoktu; ağır kitaplar da artık alt bölmedeydi.",
+                "Anne: Hah, şimdi sağlam. Ağır kitaplar da aşağıda.",
                 7.2f,
                 BeginWardrobeSafety);
         }
@@ -364,12 +358,10 @@ namespace Deprem.Story
 
             testSecuredWardrobe?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.HomeWardrobe);
-            denizAnimator?.SetTrigger(InspectTrigger);
-            Play(wardrobeRockAnimation);
             SetActive(wardrobeRiskZoneUnstable, false);
             SetActive(wardrobeRiskZoneSecured, true);
             ShowDialogue(
-                "Anne aynı kontrollü testi tekrarladı. Kayış gerildi, dolap duvardan ayrılmadı.\nDeniz: Risk aynı yerdeydi; davranışı değişti.",
+                "Anne: Kayış tuttu, dolap duvardan ayrılmıyor.\nDeniz: Önceki gibi sallanmıyor artık.",
                 7.6f,
                 BeginFinalExitTest);
         }
@@ -410,9 +402,9 @@ namespace Deprem.Story
                 return;
 
             handShelfBracket?.SetAvailable(false);
+            SetActive(handShelfBracket != null ? handShelfBracket.gameObject : null, false);
             DisableNearMisses();
             cameraController?.ActivateZone(StoryCameraZoneId.HomeShelf);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             BeginParentDrillWork(shelfParentWorkPoint);
             SetActive(shelfAnchorStrap, true);
             Play(shelfSecureAnimation);
@@ -420,7 +412,7 @@ namespace Deprem.Story
             gameManager?.SetFlag(StoryFlag.ShelfSecured, true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.HomeShelfPrepared);
             ShowDialogue(
-                "Deniz bağlantı parçasını uzattı. Anne rafı duvar dikmesine sabitledi; çocuklar matkap veya ağır rafla uğraşmadı.",
+                "Deniz: Parça burada anne.\nAnne: Sağ ol. Sabitlemeyi ben yapıyorum; siz biraz geride durun.",
                 9.2f, () =>
                 {
                     ReturnParentHome();
@@ -440,11 +432,10 @@ namespace Deprem.Story
 
             testWardrobe?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.HomeWardrobe);
-            denizAnimator?.SetTrigger(InspectTrigger);
             Play(wardrobeRockAnimation);
             wardrobeDust?.Play();
             ShowDialogue(
-                "Dolap hafifçe esnedi. Deniz zorlamayı bıraktı.\nAnne: Ağır mobilyayı çekmiyoruz; yalnızca bağlantı noktalarını işaretliyoruz.",
+                "Anne: Tamam Deniz, bırak şimdi. Dolabı çekmeden bağlantı yerlerini işaretleyelim.",
                 6.8f, () =>
                 {
                     markWardrobeAnchors?.SetAvailable(true);
@@ -458,9 +449,8 @@ namespace Deprem.Story
                 return;
 
             markWardrobeAnchors?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InspectTrigger);
             ShowDialogue(
-                "Deniz iki bağlantı noktasını kalemle işaretledi. Anne uygun dübel ve kayışı hazırladı.",
+                "Deniz: İki yeri de işaretledim.\nAnne: Sağ ol oğlum, dübel ve kayış hazır.",
                 5.8f, () =>
                 {
                     handWardrobeStrap?.SetAvailable(true);
@@ -474,9 +464,9 @@ namespace Deprem.Story
                 return;
 
             handWardrobeStrap?.SetAvailable(false);
+            SetActive(handWardrobeStrap != null ? handWardrobeStrap.gameObject : null, false);
             DisableNearMisses();
             cameraController?.ActivateZone(StoryCameraZoneId.HomeWardrobe);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             BeginParentDrillWork(wardrobeParentWorkPoint);
             SetActive(wardrobeAnchorStrap, true);
             Play(wardrobeSecureAnimation);
@@ -484,7 +474,7 @@ namespace Deprem.Story
             gameManager?.SetFlag(StoryFlag.WardrobeSecured, true);
             gameManager?.CommitCheckpoint(StoryCheckpoint.HomeWardrobeSecured);
             ShowDialogue(
-                "Anne kayışı iki noktadan sabitledi ve dolabı yeniden kontrol etti. Ağır işi yetişkin yaptı; Deniz güvenli mesafede kaldı.",
+                "Anne: İki bağlantı da tamam. Bir daha kontrol edeyim, siz orada durun.",
                 9.2f, () =>
                 {
                     ReturnParentHome();
@@ -505,7 +495,6 @@ namespace Deprem.Story
             Play(heavyLiftNearMissAnimation);
             Play(wardrobeRockAnimation);
             FaceParentTowards(unsafeHeavyLift != null ? unsafeHeavyLift.transform : null);
-            parentAnimator?.SetTrigger(CallTrigger);
             ShowDialogue(
                 "Anne: Dur Deniz! Ağır mobilyayı tek başına çekmek devrilme ve sıkışma riski oluşturur. Yalnızca hafif eşyaları taşıyoruz.",
                 7f, ReturnToCurrentStageCamera);
@@ -518,9 +507,8 @@ namespace Deprem.Story
             cameraController?.ActivateZone(StoryCameraZoneId.HomeParent);
             Play(drillNearMissAnimation);
             FaceParentTowards(unsafeDrill != null ? unsafeDrill.transform : null);
-            parentAnimator?.SetTrigger(PickUpTrigger);
             ShowDialogue(
-                "Anne matkabı çalıştırmadan fişten çekip kendi çalışma alanına aldı. Elektrikli alet ve duvar bağlantısı yetişkin sorumluluğunda.",
+                "Anne: Matkabı bana bırak Deniz. Fişini çektim; bu işi ben yapacağım.",
                 7f, ReturnToCurrentStageCamera);
         }
 
@@ -558,7 +546,7 @@ namespace Deprem.Story
                     "ÇIKIŞ YOLUNU BİRLİKTE DENE",
                     "Can'ın oyuncak arabasını tutup kapıya giden rota boyunca sürükle.");
                 ShowDialogue(
-                    "Çanta giriş rafındaydı. Can'ın oyuncak arabası yine kapıya giderken bir şeye takıldı.\nAnne: Bu kez arabaya değil, yoluna bakın.",
+                    "Can: Yahu, arabam yine geçemedi!\nAnne: Kapının önüne bakalım bir. Çanta hazır ama yolumuz açık mı?",
                     7.5f,
                     BeginRouteTest);
                 return;
@@ -600,7 +588,7 @@ namespace Deprem.Story
             {
                 Play(nerminExitAnimation);
                 ShowDialogue(
-                    "Nermin kapıdan çıkarken bastonunu açık kalan çizginin üstüne koydu.\nNermin: Arabaya yetişemem ama sizi aşağıda yakalarım.",
+                    "Nermin: Bak, bastonum da takılmadan geçiyor. Elinize sağlık çocuklar.",
                     6.4f,
                     () =>
                     {
@@ -631,7 +619,7 @@ namespace Deprem.Story
             placeEvacuationPlan?.SetAvailable(true);
             ui?.ShowObjective(
                 "TAHLİYE PLANINI AİLE PANOSUNA AS",
-                "Planı Nermin'in elinden tutup sol duvardaki aile panosuna bırak.");
+                "Planı Nermin'in elinden tutup kapı yanındaki aile panosuna bırak.");
         }
 
         private void BeginInspection()
@@ -666,7 +654,6 @@ namespace Deprem.Story
             inspected[index] = true;
             interactable?.SetAvailable(false);
             cameraController?.ActivateZone(zone);
-            denizAnimator?.SetTrigger(InspectTrigger);
             ShowDialogue(subtitle, 6.5f, () =>
             {
                 int requiredInspections = inspected.Length;
@@ -721,7 +708,6 @@ namespace Deprem.Story
 
             exitMoved[index] = true;
             interactable?.SetAvailable(false);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             SetActive(Index(exitClutterStart, index), false);
             SetActive(Index(exitClutterStored, index), true);
             Play(Index(exitMoveAnimations, index));
@@ -734,7 +720,7 @@ namespace Deprem.Story
                     if (physicalRouteFlow)
                     {
                         ShowDialogue(
-                            "Kapının açılma yayı tamamen boşaldı. Tam o anda zil çaldı; temizlenen yolu bu kez gerçekten kapıyı açarak sınayacaklardı.",
+                            "Can: Zil çaldı!\nAnne: Bakalım kapı rahat açılıyor mu?",
                             6.8f,
                             BeginNeighborVisit);
                         return;
@@ -742,7 +728,7 @@ namespace Deprem.Story
 
                     gameManager?.CommitCheckpoint(StoryCheckpoint.HomeExitCleared);
                     ShowDialogue(
-                        "Ayakkabı, oyuncak kutusu ve paket artık kapının açılma yayının dışında. Şimdi kapının gerçekten tam açıldığını sınayalım.",
+                        "Deniz: Ayakkabılar, kutu, paket… Hepsi kenarda.\nAnne: Kapıyı da sonuna kadar açalım.",
                         6.5f,
                         testClearedExitDoor != null ? BeginClearedExitTest : BeginShelfSafety);
                     return;
@@ -782,7 +768,6 @@ namespace Deprem.Story
 
             shelfMoved[index] = true;
             interactable?.SetAvailable(false);
-            denizAnimator?.SetTrigger(PickUpTrigger);
             SetActive(Index(shelfItemsHigh, index), false);
             SetActive(Index(shelfItemsLow, index), true);
             Play(Index(shelfMoveAnimations, index));
@@ -877,11 +862,9 @@ namespace Deprem.Story
             {
                 SetActive(finalRouteCarFinish, false);
                 SetActive(canToyCarPocket, true);
-                canAnimator?.SetTrigger(PickUpTrigger);
             }
             else
             {
-                canAnimator?.SetTrigger(CallTrigger);
             }
             ui?.ShowObjective("2. PERDE TAMAMLANDI", "Çıkış açık; raf ve dolap yetişkin tarafından sabitlendi.");
             if (completionDetail != null)
@@ -890,7 +873,7 @@ namespace Deprem.Story
             ShowDialogue(
                 finalRouteCarFinish != null
                     ? physicalRouteFlow
-                        ? "Oyuncak araba eski engellerin yerinden hiç durmadan geçti. Can arabayı yerden alıp cebine koydu.\nKoridordan Nermin'in bastonu duyuldu: Ben aşağıda sizi bekliyorum.\nCan: Geçti.\nDeniz: Biz de geçeriz."
+                        ? "Can: Geçti! Arabamı cebime koyuyorum.\nDeniz: Bizim yolumuz da açık.\nNermin: Elinize sağlık, ben aşağıdayım çocuklar."
                         : "Oyuncak araba ayakkabıların, kutunun ve paketin eski yerlerinden hiç durmadan geçti.\nCan: Geçti.\nDeniz: Biz de geçeriz."
                     : "Can kapıdan rahatça geçebildi. Deniz, hazırlığın yalnızca eşya toplamak değil; evde düşebilecek ve yolu kapatabilecek riskleri azaltmak olduğunu gördü.",
                 8f, () => SetActive(completionPanel, true));
@@ -940,6 +923,8 @@ namespace Deprem.Story
             }
             SetActive(shelfAnchorStrap, shelfReady);
             SetActive(wardrobeAnchorStrap, wardrobeReady);
+            SetActive(handShelfBracket != null ? handShelfBracket.gameObject : null, !shelfReady);
+            SetActive(handWardrobeStrap != null ? handWardrobeStrap.gameObject : null, !wardrobeReady);
             SetActive(initialRouteCarStart, !preludeComplete);
             SetActive(initialRouteCarBlocked, false);
             SetActive(nermin, false);
@@ -1028,13 +1013,19 @@ namespace Deprem.Story
         private void BeginParentDrillWork(Transform workPoint)
         {
             EndParentDrillWork();
+            SetActive(unsafeDrill != null ? unsafeDrill.gameObject : null, false);
+            SetActive(parentHeldDrill, false);
             if (parent != null && workPoint != null)
             {
-                parent.position = workPoint.position;
-                parent.rotation = workPoint.rotation;
+                StartParentTravel(workPoint.position, workPoint.rotation, StartParentDrillAnimation);
+                return;
             }
 
-            SetActive(unsafeDrill != null ? unsafeDrill.gameObject : null, false);
+            StartParentDrillAnimation();
+        }
+
+        private void StartParentDrillAnimation()
+        {
             SetActive(parentHeldDrill, true);
             parentAnimator?.ResetTrigger(ResetTrigger);
             parentAnimator?.SetTrigger(WorkTrigger);
@@ -1075,8 +1066,7 @@ namespace Deprem.Story
         {
             if (parent == null)
                 return;
-            parent.position = parentHomePosition;
-            parent.rotation = parentHomeRotation;
+            StartParentTravel(parentHomePosition, parentHomeRotation, null);
         }
 
         private void FaceParentTowards(Transform target)
@@ -1086,12 +1076,83 @@ namespace Deprem.Story
             Vector3 direction = target.position - parent.position;
             direction.y = 0f;
             if (direction.sqrMagnitude > 0.001f)
-                parent.rotation = Quaternion.LookRotation(direction.normalized, Vector3.up);
+                StartParentTravel(
+                    parent.position,
+                    Quaternion.LookRotation(direction.normalized, Vector3.up),
+                    null);
+        }
+
+        private void StartParentTravel(Vector3 targetPosition, Quaternion targetRotation, Action completed)
+        {
+            if (parent == null)
+            {
+                completed?.Invoke();
+                return;
+            }
+
+            if (parentTravelRoutine != null)
+                StopCoroutine(parentTravelRoutine);
+            parentTravelRoutine = StartCoroutine(SmoothParentTravel(targetPosition, targetRotation, completed));
+        }
+
+        private IEnumerator SmoothParentTravel(Vector3 targetPosition, Quaternion targetRotation, Action completed)
+        {
+            Vector3 startPosition = parent.position;
+            Quaternion startRotation = parent.rotation;
+            Vector3 travelDirection = targetPosition - startPosition;
+            travelDirection.y = 0f;
+            bool hasTravel = travelDirection.sqrMagnitude > 0.0025f;
+            Quaternion travelRotation = hasTravel
+                ? Quaternion.LookRotation(travelDirection.normalized, Vector3.up)
+                : targetRotation;
+            float distanceSeconds = Vector3.Distance(startPosition, targetPosition) / 3f;
+            float rotationSeconds = Quaternion.Angle(startRotation, targetRotation) / 220f;
+            float duration = Mathf.Clamp(Mathf.Max(distanceSeconds, rotationSeconds), 0.22f, 1.05f);
+            float elapsed = 0f;
+
+            parentAnimator?.ResetTrigger(WorkTrigger);
+            parentAnimator?.SetTrigger(ResetTrigger);
+            while (elapsed < duration && parent != null)
+            {
+                elapsed += Time.deltaTime;
+                float normalized = Mathf.Clamp01(elapsed / duration);
+                if (hasTravel)
+                {
+                    float travel = Mathf.Clamp01(normalized / 0.72f);
+                    float travelEased = travel * travel * (3f - 2f * travel);
+                    parent.position = Vector3.Lerp(startPosition, targetPosition, travelEased);
+                    parent.rotation = travel < 1f
+                        ? Quaternion.Slerp(startRotation, travelRotation, Mathf.Clamp01(travel * 2.5f))
+                        : Quaternion.Slerp(
+                            travelRotation,
+                            targetRotation,
+                            Mathf.SmoothStep(0f, 1f, (normalized - 0.72f) / 0.28f));
+                }
+                else
+                {
+                    float eased = normalized * normalized * (3f - 2f * normalized);
+                    parent.rotation = Quaternion.Slerp(startRotation, targetRotation, eased);
+                }
+                yield return null;
+            }
+
+            if (parent != null)
+            {
+                parent.position = targetPosition;
+                parent.rotation = targetRotation;
+            }
+            parentTravelRoutine = null;
+            completed?.Invoke();
         }
 
         private void OnDisable()
         {
             EndParentDrillWork();
+            if (parentTravelRoutine != null)
+            {
+                StopCoroutine(parentTravelRoutine);
+                parentTravelRoutine = null;
+            }
         }
 
         private static void SetActive(GameObject target, bool value)

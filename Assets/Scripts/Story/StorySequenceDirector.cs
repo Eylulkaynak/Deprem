@@ -65,8 +65,12 @@ namespace Deprem.Story
         [SerializeField] private StoryInteractable crouchStep;
         [SerializeField] private StoryInteractable coverHeadStep;
         [SerializeField] private StoryInteractable safeCover;
+        // Çök-Kapan-Tutun sıra-eşleme ilerlemesi: 0=çök bekleniyor, 1=kapan, 2=tutun.
+        private int cktProgress;
         [SerializeField] private StoryInteractable unsafeDoor;
         [SerializeField] private StoryInteractable unsafeWindow;
+        [SerializeField] private Transform denizCoverAnchor;
+        [SerializeField] private Transform canCoverAnchor;
         [SerializeField] private Transform quakeMovementCenter;
         [SerializeField, Range(1.5f, 3f)] private float quakeMovementRadius = 2.15f;
         [SerializeField, Range(6f, 15f)] private float safetyDecisionSeconds = 10f;
@@ -129,6 +133,8 @@ namespace Deprem.Story
         private static readonly int StoryCrouchHash = Animator.StringToHash("StoryCrouch");
         private static readonly int StoryCoverHash = Animator.StringToHash("StoryCover");
         private static readonly int StoryHoldHash = Animator.StringToHash("StoryHold");
+        private static readonly int SpeedHash = Animator.StringToHash("Speed");
+        private static readonly int LocomotionHash = Animator.StringToHash("Locomotion");
 
         public StorySlicePhase CurrentPhase => phase;
         public float ElapsedSliceSeconds => Mathf.Max(0f, Time.time - sliceStartedTime);
@@ -202,9 +208,7 @@ namespace Deprem.Story
 
             StoryInteractable completed = introInspections[introIndex];
             completed?.SetAvailable(false);
-            FireStoryTrigger(denizAnimator, StoryInspectHash);
-            if (introIndex == 0)
-                FireStoryTrigger(canAnimator, StoryInteractHash);
+            // Süs jest tetikleri kaldırıldı: retarget klipler Meshy rig'de pozu bozuyor.
 
             if (revisedFlow)
             {
@@ -243,9 +247,8 @@ namespace Deprem.Story
             if (!revisedFlow || phase != StorySlicePhase.CalmOpening || quakeStarted)
                 return;
 
-            FireStoryTrigger(denizAnimator, StoryInspectHash);
             ui?.ShowSubtitle(
-                "Deniz radyonun sesini biraz kısıyor. Mutfaktan tabak ve çatal sesleri geliyor; evde sıradan bir öğleden sonra sürüyor.",
+                "Anne: Sofra birazdan hazır çocuklar.\nDeniz: Tamam anne, radyoyu kısıyorum.",
                 5.5f);
         }
 
@@ -254,10 +257,8 @@ namespace Deprem.Story
             if (!revisedFlow || phase != StorySlicePhase.CalmOpening || quakeStarted)
                 return;
 
-            FireStoryTrigger(denizAnimator, StoryInspectHash);
-            FireStoryTrigger(canAnimator, StoryInteractHash);
             ui?.ShowSubtitle(
-                "Can, aile planındaki açık alanı turuncuya boyuyor. Deniz yanına küçük bir güneş çiziyor.",
+                "Can: Parkı turuncuya boyadım.\nDeniz: Yanına güneş de çizelim; kolay hatırlarız.",
                 5.5f);
         }
 
@@ -286,37 +287,97 @@ namespace Deprem.Story
         {
             if (phase != StorySlicePhase.Quake || !quakeActive)
                 return;
+            if (cktProgress != 2)
+            {
+                OnWrongCktOrder("TUTUN en son gelir");
+                return;
+            }
 
             gameManager?.CommitCheckpoint(StoryCheckpoint.UnderCover);
             SetUnderCoverState();
             StartCoroutine(CompleteCoverSequence());
         }
 
+        /// <summary>
+        /// Çök-Kapan-Tutun bir sıra-eşleme mini oyunudur: üç adım da aynı anda
+        /// ekrandadır, oyuncu doğru sırayı kendisi uygular. Yanlış adım seçilirse
+        /// dizi başa sarar ve kısa bir sarsıntı + ipucu verilir.
+        /// </summary>
+        private void OnWrongCktOrder(string hint)
+        {
+            if (phase != StorySlicePhase.Quake || !quakeActive || retrying)
+                return;
+
+            cktProgress = 0;
+            gameManager?.AddMistake();
+            impulseSource?.GenerateImpulseWithForce(0.5f);
+            FireStoryTrigger(denizAnimator, StoryResetHash);
+            FireStoryTrigger(canAnimator, StoryResetHash);
+            player?.SetNavigationEnabled(true);
+            touchManager?.SetInteractionsEnabled(true);
+            cameraController?.ActivateZone(StoryCameraZoneId.QuakeClose);
+            ResetCktSteps();
+            ArmSafetyDeadline(10f);
+            ui?.ShowObjective(
+                "SIRA KARIŞTI — BAŞTAN: ÇÖK → KAPAN → TUTUN",
+                "Önce çömel, sonra başını koru, en son masa ayağına tutun.");
+            ui?.ShowSubtitle("Deniz: Sıra önemli! " + hint + ". Baştan: önce ÇÖK!", 4f);
+        }
+
+        private void ResetCktSteps()
+        {
+            foreach (StoryInteractable step in new[] { crouchStep, coverHeadStep, safeCover })
+            {
+                if (step == null)
+                    continue;
+                step.ResetInteraction();
+                step.SetAvailable(true);
+            }
+        }
+
         public void OnCrouchStep()
         {
             if (phase != StorySlicePhase.Quake || !quakeActive)
                 return;
+            if (cktProgress != 0)
+            {
+                OnWrongCktOrder("Çökme adımı en başta");
+                return;
+            }
+
+            cktProgress = 1;
             FireStoryTrigger(denizAnimator, StoryCrouchHash);
             FireStoryTrigger(canAnimator, StoryCrouchHash);
             crouchStep?.SetAvailable(false);
-            coverHeadStep?.SetAvailable(true);
-            ArmSafetyDeadline(7f);
+            touchManager?.SetInteractionsEnabled(false);
+            player?.SetNavigationEnabled(false);
+            siblingFollower?.SetFollowing(false);
             cameraController?.ActivateZone(StoryCameraZoneId.UnderTable);
-            ui?.ShowObjective("KAPAN — BAŞINI KORU", "Masanın altındaki koruma noktasında parmağını sabit tut; başını ve enseni kollarınla kapat.");
-            ui?.ShowSubtitle("Deniz dizlerinin üzerine çöktü. Şimdi başını ve ensesini koruyor.", 5f);
+            ui?.ShowObjective("MASANIN ALTINA GEÇ", "Deniz ve Can birlikte çömelerek masanın altındaki ayrı koruma noktalarına giriyor.");
+            ui?.ShowSubtitle("Deniz: Yanımdan ayrılma Can. Birlikte masanın altına geçiyoruz.", 4f);
+            StartCoroutine(EnterUnderTablePose());
         }
 
         public void OnCoverHeadStep()
         {
             if (phase != StorySlicePhase.Quake || !quakeActive)
                 return;
+            if (cktProgress != 1)
+            {
+                OnWrongCktOrder("Başını korumadan önce çök");
+                return;
+            }
+
+            cktProgress = 2;
             FireStoryTrigger(denizAnimator, StoryCoverHash);
             FireStoryTrigger(canAnimator, StoryCoverHash);
             coverHeadStep?.SetAvailable(false);
             safeCover?.SetAvailable(true);
-            ArmSafetyDeadline(7f);
+            // The table-leg action is a deliberate long hold through the strongest shake.
+            // Its deadline must not expire while the player is still holding correctly.
+            ArmSafetyDeadline(12f);
             ui?.ShowObjective("TUTUN — DENGENİ KORU", "Sarsıntı kamerayı oynatırken masa ayağının üzerinde basılı tut; parmağını hedefte sabit tut.");
-            ui?.ShowSubtitle("Can da başını koruyor. Deniz boşta kalan eliyle masa ayağına uzanıyor.", 5f);
+            ui?.ShowSubtitle("Deniz: Başını ve enseni koru Can. Ben de masa ayağına tutunuyorum.", 5f);
         }
 
         public void OnUnsafeChoice()
@@ -349,7 +410,9 @@ namespace Deprem.Story
 
             if (completedBeatIndex == 9)
                 brokenGlassHazard?.SetAvailable(false);
-            if (revisedFlow && completedBeatIndex == revisedShoesBeatIndex)
+            // Cam sınırı okunduktan sonra yönetilen güvenli rota artık aynı tehlike trigger'ıyla
+            // cezalandırılmamalı. Ayakkabıya yürüyüş başlamadan kapat; cam görseli sahnede kalır.
+            if (revisedFlow && completedBeatIndex == Mathf.Max(0, revisedShoesBeatIndex - 1))
                 brokenGlassHazard?.SetAvailable(false);
 
             if (postQuakeIndex < postQuakeBeats.Length)
@@ -365,16 +428,17 @@ namespace Deprem.Story
 
             lightWithFlashlight?.SetAvailable(false);
             lightWithoutFlashlight?.SetAvailable(false);
-            FireStoryTrigger(denizAnimator, StoryInteractHash);
             bool hasFlashlight = HasFlag(StoryFlag.BagFlashlight);
             SetActive(playerFlashlight, hasFlashlight);
             SetActive(emergencyRouteLights, !hasFlashlight);
+            if (revisedFlow)
+                cameraController?.ActivateZone(StoryCameraZoneId.InspectExit);
             corridorExit?.SetAvailable(true);
             ui?.ShowObjective("KAPIYA GÜVENLE YAKLAŞ", "Sarsıntı durdu. Can yanında; çıkış yolunu acele etmeden izle.");
             ui?.ShowSubtitle(revisedFlow
                 ? hasFlashlight
-                    ? "Deniz feneri çantadan çıkarıp zemine çeviriyor. Hazırlıkta seçtiğin araç şimdi gerçek bir avantaj."
-                    : "Çantada fener yok. Deniz koridordaki zayıf acil lambayı bulup daha yavaş bir rota seçiyor."
+                    ? "Deniz: Fener çantada, buldum. Işığı yere tutayım.\nCan: Önümüzü görüyorum şimdi."
+                    : "Deniz: Fenerimiz yok. Acil lambanın aydınlattığı taraftan, ağır ağır gidelim."
                 : hasFlashlight
                     ? "Hazırladığın fener çalışıyor. Işığı zemine tutarak kırık parçaları gör."
                     : "Çantada fener yok. Zayıf acil aydınlatmayı izleyip adımlarını yavaşlat.", 7f);
@@ -431,11 +495,11 @@ namespace Deprem.Story
             ui?.ShowObjective(
                 revisedFlow ? "CAN'IN OYUNUNA YARDIM ET" : "ODAYI OKU — 1/4",
                 revisedFlow
-                    ? "Masanın yanına yuvarlanan oyuncak tekerini doğrudan arabaya sürükle."
+                    ? "Masanın üzerindeki oyuncak tekerini doğrudan arabaya sürükle."
                     : "Can'la birlikte güvenli masayı incele.");
             ui?.ShowSubtitle(
                 revisedFlow
-                    ? "Salonda sıradan bir öğleden sonra. Can'ın oyuncak arabasının tekeri masanın yanına kaçıyor; radyoda hafif bir müzik çalıyor."
+                    ? "Can: Teker yine çıktı Deniz. Şunu takmama yardım eder misin?\nDeniz: Getir bakalım."
                     : "Sakin bir aile günü. Deniz ile Can salonda oyun oynuyor; evin sesleri her zamanki gibi.",
                 7f);
             if (introInspections != null && introInspections.Length > 0)
@@ -463,8 +527,8 @@ namespace Deprem.Story
             {
                 string[] revisedDetails =
                 {
-                    "Masanın yanındaki tekeri doğrudan oyuncak arabaya sürükle.",
-                    "Oyuncak arabayı masanın altından Can'a doğru sür.",
+                    "Masanın üzerindeki tekeri doğrudan oyuncak arabaya sürükle.",
+                    "Oyuncak arabayı masadan Can'ın önündeki hedefe sür.",
                     "Radyonun sesini kendi düğmesi üzerinden biraz kıs.",
                     "Can'ın çizimindeki aile buluşma noktasını birlikte işaretleyin."
                 };
@@ -512,12 +576,13 @@ namespace Deprem.Story
             cameraController?.SetImpulseEnabled(true);
             cameraController?.ActivateZone(StoryCameraZoneId.QuakeClose);
             FireStoryTrigger(denizAnimator, StoryFearHash);
-            FireStoryTrigger(canAnimator, StoryFearHash);
+            // Can'ın çocuk rig'inde genel Hit_A retarget klibi sol ayağı ters çeviriyor.
+            // Deprem tepkisi yüz/beden yönelimiyle okunur; taban pozu korunur.
             calmSibling?.SetAvailable(true);
             unsafeDoor?.SetAvailable(true);
             unsafeWindow?.SetAvailable(true);
-            ui?.ShowObjective("SARSINTI BAŞLADI", "Koşma. Can'a seslen; yalnızca kol mesafesindeki güvenli masayı kullan.");
-            ui?.ShowSubtitle("Can! Benimle kal. Pencereden uzak dur!", 6f);
+            ui?.ShowObjective("SARSINTI BAŞLADI", "Koşma. Can'ın omzunda basılı tut; sonra yakındaki güvenli masaya geçin.");
+            ui?.ShowSubtitle("Deniz: Can! Benimle kal. Pencereden uzak dur!", 6f);
             earthquakeTimeline?.Play();
             impactSource?.Play();
             StartCoroutine(ImpulseLoop());
@@ -528,21 +593,26 @@ namespace Deprem.Story
         {
             if (commit)
                 gameManager?.CommitCheckpoint(StoryCheckpoint.SiblingCalmed);
-            FireStoryTrigger(denizAnimator, StoryCallHash);
-            FireStoryTrigger(canAnimator, StoryInteractHash);
+            siblingFollower?.SetFollowing(true);
             FaceSiblingsTowardsEachOther();
             calmSibling?.SetAvailable(false);
-            crouchStep?.SetAvailable(true);
-            coverHeadStep?.SetAvailable(false);
-            safeCover?.SetAvailable(false);
-            cameraController?.ActivateZone(StoryCameraZoneId.UnderTable);
-            ArmSafetyDeadline(8f);
-            ui?.ShowObjective("ÇÖK — GÜVENLİ NOKTAYA GEÇ", "Can'ı kol mesafende tutarak masanın yakın tarafındaki halkaya dokun.");
-            ui?.ShowSubtitle("Deniz: Benimle kal. Önce olduğumuz yerde çökeceğiz!", 6f);
+            // Çök-Kapan-Tutun mini oyunu: üç adım birden ekrandadır; oyuncu doğru
+            // sırayı kendisi kurar, yanlış adım diziyi başa sarar.
+            cktProgress = 0;
+            ResetCktSteps();
+            // Masaya giriş halkası seçilene kadar geniş iki-çocuk kadrajını koru. Alçak
+            // masa-altı kamerasına erken geçmek gerçek hedefi ekran dışına atıyordu.
+            cameraController?.ActivateZone(StoryCameraZoneId.QuakeClose);
+            ArmSafetyDeadline(10f);
+            ui?.ShowObjective(
+                "SIRAYI SEN UYGULA: ÇÖK → KAPAN → TUTUN",
+                "Üç adım da ekranda. Doğru sırayla uygula; yanlış adımı seçersen baştan başlarsın.");
+            ui?.ShowSubtitle("Deniz: Benimle kal. Sırayı hatırla: önce ÇÖK, sonra KAPAN, sonra TUTUN!", 6f);
         }
 
         private void SetUnderCoverState()
         {
+            SetChildrenAtCoverAnchors();
             FireStoryTrigger(denizAnimator, StoryHoldHash);
             FireStoryTrigger(canAnimator, StoryHoldHash);
             phase = StorySlicePhase.UnderCover;
@@ -555,17 +625,66 @@ namespace Deprem.Story
             siblingFollower?.SetFollowing(false);
             cameraController?.ActivateZone(StoryCameraZoneId.UnderTable);
             ui?.ShowObjective("ÇÖK • KAPAN • TUTUN", "Başını ve enseni koru. Sarsıntı bitene kadar masaya tutun.");
-            ui?.ShowSubtitle("Masa hareket ediyor; Deniz bir eliyle Can'ı, diğeriyle masa ayağını tutuyor.", 8f);
+            ui?.ShowSubtitle("Deniz: Buradayım Can. Başını koru, masaya tutun. Sarsıntı bitene kadar kalkmıyoruz.", 8f);
+        }
+
+        private IEnumerator EnterUnderTablePose()
+        {
+            if (player == null || siblingFollower == null || denizCoverAnchor == null || canCoverAnchor == null)
+            {
+                FinishEnteringUnderTable();
+                yield break;
+            }
+
+            Vector3 denizStart = player.transform.position;
+            Vector3 canStart = siblingFollower.transform.position;
+            Quaternion denizStartRotation = player.transform.rotation;
+            Quaternion canStartRotation = siblingFollower.transform.rotation;
+            const float duration = 1.05f;
+            float elapsed = 0f;
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(elapsed / duration);
+                float eased = 0.5f - Mathf.Cos(t * Mathf.PI) * 0.5f;
+                player.SetAuthoredPose(
+                    Vector3.Lerp(denizStart, denizCoverAnchor.position, eased),
+                    Quaternion.Slerp(denizStartRotation, denizCoverAnchor.rotation, eased));
+                siblingFollower.SetAuthoredPose(
+                    Vector3.Lerp(canStart, canCoverAnchor.position, eased),
+                    Quaternion.Slerp(canStartRotation, canCoverAnchor.rotation, eased));
+                yield return null;
+            }
+
+            SetChildrenAtCoverAnchors();
+            FinishEnteringUnderTable();
+        }
+
+        private void FinishEnteringUnderTable()
+        {
+            touchManager?.SetInteractionsEnabled(true);
+            coverHeadStep?.SetAvailable(true);
+            ArmSafetyDeadline(7f);
+            ui?.ShowObjective("KAPAN — BAŞINI KORU", "Deniz'in başında basılı tut; iki çocuk da başını ve ensesini kollarıyla kapatsın.");
+            ui?.ShowSubtitle("Can: Seni görüyorum.\nDeniz: Ben de seni. Başımızı ve ensemizi koruyalım.", 5f);
+        }
+
+        private void SetChildrenAtCoverAnchors()
+        {
+            if (denizCoverAnchor != null)
+                player?.SetAuthoredPose(denizCoverAnchor.position, denizCoverAnchor.rotation);
+            if (canCoverAnchor != null)
+                siblingFollower?.SetAuthoredPose(canCoverAnchor.position, canCoverAnchor.rotation);
         }
 
         private IEnumerator CompleteCoverSequence()
         {
             string[] shelterLines =
             {
-                "Dizlerini karnına çek, başını koru. Sarsıntı hâlâ sürüyor.",
-                "Can nefesini düzenliyor. Dolaptan ses geliyor ama güvenli rota açık.",
-                "Sarsıntı azalıyor; yine de tamamen durmadan yerinden kalkma.",
-                "Son hareketleri bekle. Pencereden ve devrilebilecek eşyalardan uzak kal."
+                "Deniz: Biraz daha Can. Başını koru, hâlâ sallanıyor.",
+                "Can: Dolaptan ses geldi!\nDeniz: Burada kalalım, birlikte nefes alalım.",
+                "Can: Azaldı mı?\nDeniz: Azalıyor. Tamamen durmasını bekleyelim.",
+                "Deniz: Daha kalkmıyoruz. Camdan ve dolaptan uzağız burada."
             };
             int line = 0;
             while (quakeActive)
@@ -595,8 +714,14 @@ namespace Deprem.Story
 
         private void SetupPostQuake()
         {
-            FireStoryTrigger(denizAnimator, StoryDizzyHash);
-            FireStoryTrigger(canAnimator, StoryDizzyHash);
+            Vector3 safeReturn = postQuakeSafeReturn != null
+                ? postQuakeSafeReturn.position
+                : player != null ? player.transform.position : Vector3.zero;
+            player?.ReleaseAuthoredPose(safeReturn);
+            siblingFollower?.ReleaseAuthoredPose(safeReturn + Vector3.right * 0.9f);
+            ResetCoverPose(denizAnimator);
+            ResetCoverPose(canAnimator);
+            StartCoroutine(EnterPostQuakeRecoveryPose());
             phase = StorySlicePhase.PostQuake;
             quakeStarted = true;
             quakeActive = false;
@@ -622,10 +747,32 @@ namespace Deprem.Story
                     : "Önce yeni bir hareket, düşen parça veya kırık cam sesi var mı dinle.");
             ui?.ShowSubtitle(
                 revisedFlow
-                    ? "Bir an sessizlik oluyor. Anne, devrilen eşyanın arkasından sesleniyor: Çocuklar, iyi misiniz?"
+                    ? "Anne: Çocuklar, iyi misiniz? Ses verin bana!"
                     : "Anne (engelin arkasından): Çocuklar, iyi misiniz? Olduğunuz yerde birbirinizi kontrol edin!",
                 8f);
             StartCoroutine(EnablePostQuakeBeatAfterDelay(postQuakeSettleDuration));
+        }
+
+        private static void ResetCoverPose(Animator animator)
+        {
+            if (animator == null)
+                return;
+
+            animator.SetFloat(SpeedHash, 0f);
+            FireStoryTrigger(animator, StoryResetHash);
+            // Hold Cover kalıcı bir state'tir. Dizzy tetikleyicisini aynı karede
+            // göndermek reset geçişiyle yarışıyor ve Can'ın ayaklarını cover
+            // pozunda ters bırakıyordu. Taban pozu aynı karede geri yüklenir;
+            // kısa toparlanma hareketi bir sonraki adımda başlatılır.
+            animator.Play(LocomotionHash, 0, 0f);
+            animator.Update(0f);
+        }
+
+        private IEnumerator EnterPostQuakeRecoveryPose()
+        {
+            yield return new WaitForSeconds(0.16f);
+            FireStoryTrigger(denizAnimator, StoryDizzyHash);
+            FireStoryTrigger(canAnimator, StoryDizzyHash);
         }
 
         private IEnumerator EnablePostQuakeBeatAfterDelay(float delay)
@@ -634,8 +781,39 @@ namespace Deprem.Story
             if (phase != StorySlicePhase.PostQuake || postQuakeIndex >= (postQuakeBeats?.Length ?? 0))
                 yield break;
             StoryAuthoredBeat beat = postQuakeBeats[postQuakeIndex];
+
+            // Dinlemek fiziksel bir nesne etkileşimi değildir. Masanın içine gömülü görünmez bir
+            // "basılı tut" yüzeyi istemek sahte oynanış üretiyordu. Bu ilk an çevre sesiyle kendi
+            // süresini yaşar; oyuncunun ilk gerçek girdisi görünür Can'ı kontrol etmektir.
+            if (revisedFlow && beat?.interactable != null &&
+                beat.interactable.InteractionId == "quake.post.listen")
+            {
+                beat.interactable.SetAvailable(false);
+                ui?.ShowObjective(
+                    beat.objectiveTitle ?? "ÖNCE DİNLE",
+                    ResolveConditionalText(beat.objectiveDetail));
+                yield return new WaitForSeconds(Mathf.Max(2.8f, beat.delayAfter));
+                if (phase == StorySlicePhase.PostQuake && postQuakeIndex == 0)
+                    OnPostQuakeStep();
+                yield break;
+            }
+
+            PresentCurrentPostQuakeBeat();
+        }
+
+        private void PresentCurrentPostQuakeBeat()
+        {
+            if (phase != StorySlicePhase.PostQuake || postQuakeIndex >= (postQuakeBeats?.Length ?? 0))
+                return;
+
+            StoryAuthoredBeat beat = postQuakeBeats[postQuakeIndex];
+            if (revisedFlow && beat?.interactable != null &&
+                beat.interactable.FocusCameraZone != StoryCameraZoneId.None)
+                cameraController?.ActivateZone(beat.interactable.FocusCameraZone);
             beat?.interactable?.SetAvailable(true);
-            ui?.ShowObjective(beat?.objectiveTitle ?? "ÇEVREYİ KONTROL ET", ResolveConditionalText(beat?.objectiveDetail));
+            ui?.ShowObjective(
+                beat?.objectiveTitle ?? "ÇEVREYİ KONTROL ET",
+                ResolveConditionalText(beat?.objectiveDetail));
         }
 
         private IEnumerator EnableLightChoiceAfterDelay(float delay)
@@ -645,6 +823,8 @@ namespace Deprem.Story
                 yield break;
             bool hasFlashlight = HasFlag(StoryFlag.BagFlashlight);
             StoryInteractable choice = hasFlashlight ? lightWithFlashlight : lightWithoutFlashlight;
+            if (revisedFlow && choice != null && choice.FocusCameraZone != StoryCameraZoneId.None)
+                cameraController?.ActivateZone(choice.FocusCameraZone);
             choice?.SetAvailable(true);
             ui?.ShowObjective(hasFlashlight ? "FENERİ DENE" : "ACİL IŞIĞI BUL",
                 hasFlashlight ? "Çantadaki feneri zemine yönelt ve çalıştığını kontrol et."
@@ -679,7 +859,7 @@ namespace Deprem.Story
                     : "Can yanında mı kontrol et; zemini ve tavandan gelen sesleri dinle.");
             ui?.ShowSubtitle(
                 revisedFlow
-                    ? "Ebeveynlerin sesi enkazın öte yanından geliyor. Deniz kapıda durup önce Can'ın elini buluyor."
+                    ? "Anne: Sesinizi duyuyorum çocuklar. Birlikte kalın.\nDeniz: Can, elin burada mı? Tamam, yanımdasın."
                     : "Koridor karanlık ve dar. Deniz, Can'ı önüne alıp acele etmeden ilerliyor.",
                 7f);
             StartCoroutine(EnableCorridorBeatAfterDelay(3f));
@@ -707,9 +887,9 @@ namespace Deprem.Story
             if (revisedFlow)
             {
                 float duration = Mathf.Max(3f, corridorWarningDuration);
-                ui?.ShowSubtitle("Can, tavandaki ince çıtırtıyı Deniz'den önce duyuyor: Dur... yine geliyor.", 4f);
+                ui?.ShowSubtitle("Can: Dur Deniz… Tavandan yine ses geliyor.", 4f);
                 yield return new WaitForSeconds(Mathf.Min(4f, duration));
-                ui?.ShowSubtitle("Deniz Can'ı açık noktada yanında tutuyor. İkisi de merdivene koşmadan artçının geçmesini bekliyor.", 5f);
+                ui?.ShowSubtitle("Deniz: Duydum. Yanımda kal, merdivene koşmayalım. Geçmesini bekleyelim.", 5f);
                 yield return new WaitForSeconds(Mathf.Max(0f, duration - 4f));
                 CompleteSlice();
                 yield break;
@@ -856,7 +1036,7 @@ namespace Deprem.Story
             {
                 if (revisedFlow)
                 {
-                    ui?.ShowSubtitle("Can sana bakıyor. Uzaklaşma; hemen yanındaki güvenli masaya birlikte geçin.", 4f);
+                    ui?.ShowSubtitle("Can: Deniz, yanımda kal!\nDeniz: Buradayım. Birlikte masanın altına geçelim.", 4f);
                     yield break;
                 }
                 ui?.ShowSubtitle("Çok uzun bekledin; çevredeki eşya devrilmeden yakındaki güvenli harekete geç.", 3.5f);
@@ -867,8 +1047,17 @@ namespace Deprem.Story
         private IEnumerator ReturnFromGlassHazard()
         {
             yield return new WaitForSeconds(0.55f);
+            while (player != null && player.StoryInputLocked)
+                yield return null;
             if (postQuakeSafeReturn != null)
             {
+                bool moving = player != null && player.MoveTo(
+                    postQuakeSafeReturn,
+                    postQuakeSafeReturn.position + postQuakeSafeReturn.forward,
+                    () => hazardRetrying = false);
+                if (moving)
+                    yield break;
+
                 player?.Warp(postQuakeSafeReturn.position);
                 player?.FaceTowards(postQuakeSafeReturn.position + postQuakeSafeReturn.forward);
             }
@@ -895,10 +1084,10 @@ namespace Deprem.Story
         {
             string[] subtitles =
             {
-                "Can: Tam oturdu! Şimdi araba masanın altından geçebiliyor.",
-                "Araba masanın altından Can'a ulaşıyor. Can gülüp çizimine geri dönüyor.",
-                "Deniz radyonun sesini kısıyor. Mutfaktan tabak ve çatal sesleri geliyor; kimse birazdan olacakları bilmiyor.",
-                "Can, aile planındaki açık alanı turuncuya boyuyor: Birbirimizi kaybedersek burada buluşacağız."
+                "Can: Tam oturdu! Teker artık yerinden çıkmıyor.",
+                "Can: Hah, şimdi gidiyor! Ben resmimi bitireyim.",
+                "Anne: Çocuklar, sofrayı kuruyorum.\nDeniz: Tamam anne, radyonun sesini de kıstım.",
+                "Can: Parkı turuncuya boyadım. Ayrılırsak burada buluşacağız, değil mi?\nDeniz: Evet, aile planımızdaki yerde."
             };
             ui?.ShowSubtitle(subtitles[Mathf.Clamp(index, 0, subtitles.Length - 1)], 5.5f);
         }
@@ -939,7 +1128,8 @@ namespace Deprem.Story
                 {
                     FaceSiblingsTowardsEachOther();
                     FireStoryTrigger(denizAnimator, StoryCallHash);
-                    FireStoryTrigger(canAnimator, StoryInteractHash);
+                    // Can stays on the recovered idle pose here. The generic Interact clip is
+                    // retargeted incorrectly for this rig and turns the left foot upside-down.
                 }
                 else if (beatIndex == revisedShoesBeatIndex || beatIndex == revisedBagBeatIndex)
                     FireStoryTrigger(denizAnimator, StoryPickUpHash);
@@ -981,10 +1171,7 @@ namespace Deprem.Story
                 return;
 
             player.FaceTowards(siblingFollower.transform.position);
-            Vector3 direction = player.transform.position - siblingFollower.transform.position;
-            direction.y = 0f;
-            if (direction.sqrMagnitude > 0.001f)
-                siblingFollower.transform.rotation = Quaternion.LookRotation(direction.normalized, Vector3.up);
+            siblingFollower.FaceTowards(player.transform.position);
         }
 
         private void ApplyPostQuakePhysicalResult(int beatIndex)
@@ -1062,6 +1249,10 @@ namespace Deprem.Story
         {
             if (animator == null || !animator.isActiveAndEnabled)
                 return;
+
+            // Story states are authored as stationary actions. A stale follower/agent Speed value
+            // can otherwise make one child miss the same-frame transition while the other enters it.
+            animator.SetFloat(SpeedHash, 0f);
 
             foreach (AnimatorControllerParameter parameter in animator.parameters)
             {

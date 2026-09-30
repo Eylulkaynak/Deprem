@@ -45,18 +45,27 @@ namespace Deprem.Story
         [SerializeField] private StoryInteractable[] signalDrawerItems;
         [SerializeField] private StoryInteractable reviewSignal;
         [SerializeField] private StoryInteractable reviewSignalFlashlightOff;
+        [SerializeField] private StoryInteractable reviewSignalRadioBatteryInsert;
         [SerializeField] private StoryInteractable reviewSignalRadio;
+        [SerializeField] private StoryInteractable reviewSignalRadioBatteryRemove;
         [SerializeField] private StoryInteractable reviewSignalWhistle;
         [SerializeField] private Transform signalFlashlightApproachPoint;
         [SerializeField] private GameObject signalRadioReviewRoot;
         [SerializeField] private GameObject signalRadioTuningBeforeRoot;
         [SerializeField] private GameObject signalWhistleTargetRoot;
+        [SerializeField] private Transform signalWhistleCanPose;
         [SerializeField] private StoryInteractable reviewFood;
         [SerializeField] private StoryInteractable reviewHealth;
         [SerializeField] private StoryInteractable reviewWarmth;
 
         [Header("Final Bag Check")]
         [SerializeField] private StoryInteractable chooseComfortItem;
+        [Tooltip("Rahatlatıcı eşya sahnesinde Can'ın yürüyeceği, Warmth kadrajında görünen poz.")]
+        [SerializeField] private Transform comfortCanPose;
+        [Tooltip("Final çanta yerleştirmeden önce Deniz'in yürüyeceği, ExitShelf kadrajında görünen zemin noktası.")]
+        [SerializeField] private Transform exitShelfApproachPoint;
+        [Tooltip("Raf üzerindeki görünür yeşil bırakma halkası; yalnız final sürükleme sırasında açık kalır.")]
+        [SerializeField] private GameObject exitShelfDropRing;
         [SerializeField] private StoryInteractable testBagWeight;
         [SerializeField] private StoryInteractable removeConsole;
         [SerializeField] private StoryInteractable testBalancedBag;
@@ -76,15 +85,15 @@ namespace Deprem.Story
         private Coroutine consequenceRoutine;
         private Coroutine signalPhaseRoutine;
         private Coroutine packingAdvanceRoutine;
+        private Coroutine characterFacingRoutine;
+        private Coroutine canRepositionRoutine;
         private bool categoryTransitionPending;
         private bool signalPackingPhase;
+        private bool signalHandoffCanReady;
+        private bool signalHandoffDialogueDone;
         private StoryPreparationItem activeFlashlightInspection;
+        private StoryPreparationItem activeRadioInspection;
         private readonly HashSet<string> explainedPackingItems = new HashSet<string>();
-
-        private static readonly int InteractTrigger = Animator.StringToHash("StoryInteract");
-        private static readonly int InspectTrigger = Animator.StringToHash("StoryInspect");
-        private static readonly int PickUpTrigger = Animator.StringToHash("StoryPickUp");
-        private static readonly int CallTrigger = Animator.StringToHash("StoryCall");
 
         public StoryPreparationCategory CurrentCategory => currentCategory;
         public StoryPreparationItem[] Items => items;
@@ -108,10 +117,15 @@ namespace Deprem.Story
 
             if (string.Equals(item.ItemId, "Flashlight", StringComparison.Ordinal))
                 return BeginSignalFlashlightInspection(item);
+            if (string.Equals(item.ItemId, "Radio", StringComparison.Ordinal))
+                return BeginSignalRadioInspection(item);
 
             SetCategoryItemInteractions(currentCategory, null);
-            denizAnimator?.SetTrigger(InspectTrigger);
-            parentAnimator?.SetTrigger(InteractTrigger);
+            player?.Stop();
+            player?.FaceTowards(interaction.transform.position);
+            // Eşya açıklamalarında süs Inspect/Interact tetikleri yok: retarget
+            // edilmiş tek seferlik klipler bu rig'lerde eğilmiş/bükülmüş pozlar
+            // bırakıyordu. Konuşma vurgusunu ses senkronlu Talk sistemi taşır.
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
             ui?.ShowObjective(ItemExplanationTitle(item.ItemId), ItemPurpose(item.ItemId));
             ShowDialogue(
@@ -129,6 +143,7 @@ namespace Deprem.Story
             RestoreItemVisuals();
             DisableAllInteractions();
             SetBagState(true, false, false, false);
+            SeedNaturalIdlePhases();
             if (completionPanel != null)
                 completionPanel.SetActive(false);
 
@@ -177,8 +192,7 @@ namespace Deprem.Story
             if (revisedFlow)
             {
                 FaceEachOther(deniz, can);
-                canAnimator?.SetTrigger(CallTrigger);
-                denizAnimator?.SetTrigger(InspectTrigger);
+                // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
                 startFamilyPlan?.SetAvailable(false);
                 placeContactCard?.SetAvailable(false);
                 assignCanWhistleRole?.SetAvailable(false);
@@ -188,15 +202,14 @@ namespace Deprem.Story
                     "AİLE PLANINI TAMAMLA • 2/3",
                     "“Melek Teyze” kartındaki ipuçlarını oku ve doğru bölümü seç.");
                 ShowDialogue(
-                    "Deniz: Mahalle parkı binalardan uzak açık alan; bu yüzden toplanma yerimiz.\nAnne: Şimdi Melek Teyze kartını oku. Ankara'da yaşaması, planın hangi bölümüne ait olduğunu gösteriyor.",
+                    "Deniz: Park binalardan uzak. Buluşma yerimiz burası.\nAnne: Sırada Melek teyzenin kartı var. Ankara’da, adanın dışında yaşıyor.",
                     8f,
                     () => placeContactCard?.SetAvailable(true));
                 return;
             }
 
             FaceEachOther(deniz, parent);
-            parentAnimator?.SetTrigger(InteractTrigger);
-            denizAnimator?.SetTrigger(InspectTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             startFamilyPlan?.SetAvailable(false);
             inspectEmptyBag?.SetAvailable(false);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationParent);
@@ -212,15 +225,14 @@ namespace Deprem.Story
 
             placeContactCard?.SetAvailable(false);
             assignCanWhistleRole?.SetAvailable(false);
-            parentAnimator?.SetTrigger(InteractTrigger);
-            canAnimator?.SetTrigger(InspectTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             FaceEachOther(parent, can);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationParent);
             ui?.ShowObjective(
                 "AİLE PLANINI TAMAMLA • 3/3",
                 "Can'ın sorumluluk kartını oku ve doğru bölüme yerleştir.");
             ShowDialogue(
-                "Deniz: Melek Teyze başka şehirde olduğu için ortak iletişim kişimiz.\nAnne: Son kart Can'ın afet sırasında üstleneceği sorumluluğu anlatıyor; yazıyı okuyup başlığını bul.",
+                "Deniz: Melek teyzeye hepimiz haber vereceğiz. Ada dışındaki ortak kişimiz o.\nAnne: Şimdi Can’ın kartına bakalım; ona hangi işi ayırmıştık?",
                 7.5f,
                 () => assignCanWhistleRole?.SetAvailable(true));
         }
@@ -231,15 +243,14 @@ namespace Deprem.Story
                 return;
 
             assignCanWhistleRole?.SetAvailable(false);
-            canAnimator?.SetTrigger(InteractTrigger);
-            denizAnimator?.SetTrigger(InteractTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             FaceEachOther(deniz, can);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationParent);
             ui?.ShowObjective(
                 "ÇANTAYI HAZIRLAMAYA BAŞLA",
                 "Çanta zaten açık. İlk olarak karanlıkta haberleşmeyi sağlayan parçaları bul.");
             ShowDialogue(
-                "Deniz: Sarsıntı durmadan çantaya koşmak yok.\nCan: Önce yanında kalacağım. Sarsıntı durunca düdüğüm bende olacak.\nAnne: Çanta ancak planla birlikte işe yarar.",
+                "Deniz: Sarsıntı sürerken çantaya koşmuyoruz.\nCan: Senin yanında kalıyorum. Sonra düdüğüm bende.\nAnne: Tamamdır. Planımızı da biliyoruz artık.",
                 8f,
                 OnBagInspected);
         }
@@ -247,7 +258,6 @@ namespace Deprem.Story
         public void OnBagInspected()
         {
             inspectEmptyBag?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InspectTrigger);
             SetBagState(true, false, false, false);
             gameManager?.CommitCheckpoint(StoryCheckpoint.BagInspected);
             DisableAllInteractions();
@@ -256,7 +266,7 @@ namespace Deprem.Story
                 StartCategory(StoryPreparationCategory.Signal);
                 return;
             }
-            ShowDialogue("Anne: Önce karanlıkta haber almayı ve birbirimizi bulmayı sağlayan parçaları seçelim.",
+            ShowDialogue("Anne: Önce feneri, radyoyu, pilleri bulalım. Elektrik giderse elimizin altında olsunlar.",
                 4f, () => StartCategory(StoryPreparationCategory.Signal));
         }
 
@@ -265,7 +275,6 @@ namespace Deprem.Story
             if (item == null || item.Category != currentCategory)
                 return;
 
-            FaceEachOther(deniz, parent);
             if (item.Recommended)
             {
                 if (revisedFlow && !explainedPackingItems.Contains(item.ItemId))
@@ -279,7 +288,9 @@ namespace Deprem.Story
                 // Eşyanın masadan çantaya hareketi StoryPreparationItem tarafından zaten
                 // fiziksel olarak oynatılıyor. KayKit pickup klibini burada ikinci kez
                 // tetiklemek Meshy çocuk riginde ayakları zemine gömüyordu.
-                parentAnimator?.SetTrigger(InteractTrigger);
+                player?.Stop();
+                if (openBagRoot != null)
+                    player?.FaceTowards(openBagRoot.transform.position);
                 item.Accept();
                 if (item.Flag != StoryFlag.None)
                     gameManager?.SetFlag(item.Flag, true);
@@ -304,8 +315,8 @@ namespace Deprem.Story
                 return;
             }
 
-            denizAnimator?.SetTrigger(InspectTrigger);
-            parentAnimator?.SetTrigger(InteractTrigger);
+            FaceEachOther(deniz, parent);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             item.Reject();
             gameManager?.AddMistake();
             ui?.ShowSubtitle($"Deniz: {item.ChildLine}\nAnne: {item.ParentLine}", 7f);
@@ -317,7 +328,7 @@ namespace Deprem.Story
         public void ReviewSignalCategory()
         {
             CompleteCategory(StoryPreparationCategory.Signal, StoryCheckpoint.CommunicationPacked,
-                "Anne: Fener ve radyo pilleri ayrı poşette; düdük dış cepte. Elektrik kesilse bile haber alıp yerimizi belli edebiliriz.");
+                "Anne: Piller ayrı poşette, düdük dış cepte. Elektrik kesilse de haber alabiliriz.");
         }
 
         public void OnSignalFlashlightTested()
@@ -340,8 +351,8 @@ namespace Deprem.Story
                 "Işık çalışıyor. Açık alev kullanmadan karanlıkta güvenli yolu görmemizi sağlar.");
             ui?.ShowContext("El feneri çalışıyor.");
             ShowDialogue(
-                "Deniz: Açıldı! Elektrik kesilirse karanlıkta yolu bununla görebiliriz.\n" +
-                "Anne: Evet. Mum yerine el feneri kullanır, yedek pilini de yanında tutarız.",
+                "Deniz: Yandı! Düğmesi de burada.\n" +
+                "Anne: Tamamdır. Mum yerine fener, yanında da yedek pil.",
                 5.8f,
                 () =>
                 {
@@ -370,25 +381,78 @@ namespace Deprem.Story
             ui?.ShowContext("Fener kapatıldı ve çantaya yerleştirmeye hazır.");
         }
 
-        public void OnSignalRadioTuned()
+        public void OnSignalRadioBatteryInserted()
         {
-            if (!revisedFlow)
+            if (!revisedFlow || activeRadioInspection == null)
+                return;
+
+            reviewSignalRadioBatteryInsert?.SetAvailable(false);
+            reviewSignalRadio?.SetAvailable(true);
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationRadio);
+            ui?.ShowObjective(
+                "BEYAZ GÜÇ DÜĞMESİNE DOKUN",
+                "Radyonun sağ üstünde, antenin yanındaki beyaz kare düğmeye doğrudan dokun.");
+            ui?.ShowContext("Sarı ayar parçasına değil; antenin dibindeki beyaz kare düğmeye dokun.");
+        }
+
+        public void OnSignalRadioPowered()
+        {
+            if (!revisedFlow || activeRadioInspection == null)
                 return;
 
             reviewSignalRadio?.SetAvailable(false);
-            reviewSignalWhistle?.SetAvailable(false);
-            if (reviewSignalWhistle != null)
-                reviewSignalWhistle.gameObject.SetActive(false);
-            if (signalWhistleTargetRoot != null)
-                signalWhistleTargetRoot.SetActive(false);
-            cameraController?.ActivateZone(StoryCameraZoneId.PreparationSiblingHandoff);
+            reviewSignalRadioBatteryRemove?.SetAvailable(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationRadio);
             ui?.ShowObjective(
-                "CAN'I DİNLE",
-                "Konuşmayı ilerletmek için ekrana dokun. Sonra soldaki düdüğü Can'ın göğsündeki yeşil klipse sürükle.");
+                "RADYO ÇALIŞIYOR",
+                "Resmî yayın duyuldu. Dinleme bitince aynı pili çıkarıp masadaki yerine geri koyacağız.");
             ShowDialogue(
-                "Radyo: Acil durumlarda doğrulanmamış bilgileri paylaşmayın; resmî duyuruları takip edin.\nCan: Düdük benim görevimdi.",
-                7f,
-                BeginSignalWhistleHandoff);
+                "Radyo: KKTC Sivil Savunma duyurularını takip edin. Doğrulanmamış haberleri paylaşmayın.\n" +
+                "Anne: Yayın geldi. Kapatıp pili ayrı koyalım; çantada boşuna tükenmesin.",
+                6.2f,
+                () =>
+                {
+                    if (activeRadioInspection == null)
+                        return;
+                    reviewSignalRadioBatteryRemove?.SetAvailable(true);
+                    ui?.ShowObjective(
+                        "AYNI PİLİ GERİ ÇIKAR",
+                        "Radyodaki pili tutup masadaki boş pil yerine geri sürükle.");
+                    ui?.ShowContext("Radyoya taktığın pilin kendisini çıkar; yeni pil oluşmayacak.");
+                });
+        }
+
+        public void OnSignalRadioTuned()
+        {
+            OnSignalRadioPowered();
+        }
+
+        public void OnSignalRadioBatteryRemoved()
+        {
+            if (!revisedFlow || activeRadioInspection == null)
+                return;
+
+            reviewSignalRadioBatteryRemove?.SetAvailable(false);
+            ui?.ShowObjective(
+                "RADYO TESTİ TAMAM",
+                "Radyo çalıştı ve aynı yedek pil masaya döndü. Önce radyoyu, ardından pili açık çantaya yerleştir.");
+            ShowDialogue(
+                "Deniz: Çalıştığını gördük.\n" +
+                "Anne: Pili de geri aldık. İkisini sırayla çantaya koyalım.",
+                4.8f,
+                () =>
+                {
+                    StoryPreparationItem item = activeRadioInspection;
+                    activeRadioInspection = null;
+                    if (signalRadioReviewRoot != null)
+                        signalRadioReviewRoot.SetActive(false);
+                    if (item?.Interactable != null)
+                        item.Interactable.gameObject.SetActive(true);
+                    cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
+                    touchManager?.SetInteractionsEnabled(true);
+                    touchManager?.SetWorldNavigationEnabled(true);
+                    CompleteItemExplanation(item);
+                });
         }
 
         private void BeginSignalWhistleHandoff()
@@ -411,19 +475,19 @@ namespace Deprem.Story
         public void ReviewFoodCategory()
         {
             CompleteCategory(StoryPreparationCategory.Food, StoryCheckpoint.FoodPacked,
-                "Anne: Su sızdırmaz bölümde, dayanıklı yiyecek yanında. Çantayı gereksiz ağırlaştırmadığımız için Deniz tek başına taşıyabilir.");
+                "Anne: Su sızdırmaz bölümde, yiyecek yanında. Çantayı da taşıyabileceğimiz kadar doldurduk.");
         }
 
         public void ReviewHealthCategory()
         {
             CompleteCategory(StoryPreparationCategory.Health, StoryCheckpoint.HealthPacked,
-                "Anne: İlk yardım çantası yetişkin gözetiminde kullanılır. Belge kopyaları ve aile notu su geçirmez dosyada kalır.");
+                "Anne: İlk yardım malzemesi yetişkin gözetiminde kullanılır. Kimlik kopyalarıyla aile notunu da su geçirmez dosyaya koyalım.");
         }
 
         public void ReviewWarmthCategory()
         {
             CompleteCategory(StoryPreparationCategory.Warmth, StoryCheckpoint.WarmthPacked,
-                "Anne: Hafif battaniye ve mevsime uygun yedek kıyafet sıcak kalmamıza yardım eder. Şimdi çantanın ağırlığını deneyelim.");
+                "Anne: İnce battaniye de tamam. Mevsime uygun kıyafet koyduk mu? Hadi, ağırlığını deneyelim.");
         }
 
         public void DiscoverSignalCategory()
@@ -473,12 +537,20 @@ namespace Deprem.Story
         {
             if (revisedFlow && inspectWaterDate != null)
             {
-                BeginPrePackInspection(
-                    StoryPreparationCategory.Food,
-                    inspectWaterDate,
-                    "SUYUN TAR\u0130H\u0130N\u0130 KONTROL ET",
-                    "\u015ei\u015fenin kendi etiketini yana \u00e7evir; tarihi ve kapa\u011f\u0131 birlikte kontrol et.",
-                    "Can: B\u00fcy\u00fck \u015fi\u015fe daha \u00e7ok su demek.\nDeniz: Ancak ta\u015f\u0131yabiliyorsak, kapa\u011f\u0131 sa\u011flamsa ve tarihi ge\u00e7memi\u015fse. Etiketi birlikte okuyal\u0131m.");
+                discoverFood?.SetAvailable(false);
+                cameraController?.ActivateZone(StoryCameraZoneId.PreparationFood);
+                ui?.ShowObjective(
+                    "DOLAP A\u00c7ILDI \u2014 \u0130\u00c7ER\u0130 BAK",
+                    "Kapaklar a\u00e7\u0131l\u0131rken dolapta kal; su \u015fi\u015fesini ve dayan\u0131kl\u0131 g\u0131day\u0131 bul.");
+                ShowDialogue(
+                    "Deniz: Kapaklar a\u00e7\u0131ld\u0131; i\u00e7eride yedek su \u015fi\u015feleri duruyor. Masadaki \u015fi\u015fenin kapa\u011f\u0131na ve tarih etiketine yak\u0131ndan bakal\u0131m.",
+                    4.6f,
+                    () => BeginPrePackInspection(
+                        StoryPreparationCategory.Food,
+                        inspectWaterDate,
+                        "SUYUN TAR\u0130H\u0130N\u0130 KONTROL ET",
+                        "\u015ei\u015fenin kendi etiketini yana \u00e7evir; tarihi ve kapa\u011f\u0131 birlikte kontrol et.",
+                        "Can: Büyük şişede daha çok su var.\nDeniz: Var ama taşıyabilecek miyiz? Kapağına ve tarihine de bakalım."));
                 return;
             }
 
@@ -487,18 +559,39 @@ namespace Deprem.Story
 
         public void DiscoverHealthCategory()
         {
-            if (revisedFlow && inspectBandageSeal != null)
+            if (revisedFlow)
             {
-                BeginPrePackInspection(
-                    StoryPreparationCategory.Health,
-                    inspectBandageSeal,
-                    "SARGI PAKET\u0130N\u0130N M\u00dcHR\u00dcN\u00dc KONTROL ET",
-                    "Kapal\u0131 sarg\u0131 paketinin m\u00fch\u00fcr \u015feridinde bas\u0131l\u0131 tut; a\u00e7\u0131lmad\u0131\u011f\u0131n\u0131 g\u00f6r.",
-                    "Can: \u0130lk yard\u0131m kutusu varsa her \u015feyi biz mi yapaca\u011f\u0131z?\nAnne: Hay\u0131r. Siz malzemeyi bulup yeti\u015fkine ula\u015ft\u0131r\u0131rs\u0131n\u0131z. \u00d6nce paketin kapal\u0131 oldu\u011funu kontrol edelim.");
+                BeginAutomaticBandageInspection();
                 return;
             }
 
             RevealCategory(StoryPreparationCategory.Health);
+        }
+
+        private void BeginAutomaticBandageInspection()
+        {
+            if (currentCategory != StoryPreparationCategory.Health || categoryTransitionPending)
+                return;
+
+            DisablePrePackInspections();
+            DiscoveryFor(StoryPreparationCategory.Health)?.SetAvailable(false);
+            foreach (StoryPreparationItem item in items ?? Array.Empty<StoryPreparationItem>())
+            {
+                if (item != null)
+                    item.SetAvailable(false);
+            }
+
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationBandageInspection);
+            ui?.ShowObjective(
+                "KAPALI PAKET\u0130 G\u00d6ZLE KONTROL ET",
+                "Kamera yakla\u015f\u0131rken paketin kenarlar\u0131n\u0131 ve a\u00e7\u0131lmam\u0131\u015f ambalaj\u0131n\u0131 incele.");
+            ShowDialogue(
+                "Can: \u0130lk yard\u0131m kutusundaki her \u015feyi biz mi kullanaca\u011f\u0131z?\n" +
+                "Deniz: Hay\u0131r. Bu paketin kenarlar\u0131 a\u00e7\u0131lmam\u0131\u015f; ambalaj\u0131 sa\u011flam.\n" +
+                "Anne: Do\u011fru. Malzemeyi a\u00e7madan sorumlu yeti\u015fkine ula\u015ft\u0131r\u0131yoruz.",
+                6.2f,
+                () => RevealCategory(StoryPreparationCategory.Health));
         }
 
         public void OnWaterDateChecked()
@@ -507,11 +600,10 @@ namespace Deprem.Story
                 return;
 
             inspectWaterDate?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InspectTrigger);
-            canAnimator?.SetTrigger(InteractTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
             ShowDialogue(
-                "Deniz: Tarih uygun, kapak sa\u011flam.\nCan: O zaman daha b\u00fcy\u00fck olan\u0131 de\u011fil, ta\u015f\u0131yabildi\u011fimiz \u015fi\u015feyi alal\u0131m.",
+                "Deniz: Tarihi uygun, kapağı da sağlam.\nCan: Tamam, taşıyabildiğimiz şişeyi alalım.",
                 5.5f,
                 () => RevealCategory(StoryPreparationCategory.Food));
         }
@@ -522,11 +614,10 @@ namespace Deprem.Story
                 return;
 
             inspectBandageSeal?.SetAvailable(false);
-            denizAnimator?.SetTrigger(InspectTrigger);
-            parentAnimator?.SetTrigger(InteractTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
             ShowDialogue(
-                "Deniz: M\u00fch\u00fcr a\u00e7\u0131lmam\u0131\u015f.\nAnne: G\u00fczel. \u0130la\u00e7 se\u00e7miyorsunuz; kapal\u0131 malzemeyi bulup sorumlu yeti\u015fkine veriyorsunuz.",
+                "Deniz: Mührü açılmamış.\nAnne: Tamamdır. İlaç seçmiyoruz; kapalı malzemeyi sorumlu yetişkine veriyoruz.",
                 5.5f,
                 () => RevealCategory(StoryPreparationCategory.Health));
         }
@@ -543,15 +634,14 @@ namespace Deprem.Story
 
             chooseComfortItem?.SetAvailable(false);
             gameManager?.SetFlag(StoryFlag.BagComfortItem, true);
-            denizAnimator?.SetTrigger(PickUpTrigger);
-            canAnimator?.SetTrigger(InteractTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             FaceEachOther(deniz, can);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationWarmth);
             ui?.ShowObjective(
                 "CAN'IN KÜÇÜK SEÇİMİ",
                 "Temel malzemelerin yerini almayan tek bir küçük rahatlatıcı eşya seçildi.");
             ShowDialogue(
-                "Can: Küçük arabam dış cepte kalabilir mi?\nDeniz: Bir tane küçük şey olur. Korkarsan sana aile planını ve birlikte olduğumuzu hatırlatır.",
+                "Can: Arabam dış cepte dursun mu?\nDeniz: Dursun. Yanındayım ben de.",
                 6.5f,
                 SetupFinalBagCheck);
         }
@@ -562,21 +652,25 @@ namespace Deprem.Story
             {
                 testBagWeight?.SetAvailable(false);
                 removeConsole?.SetAvailable(false);
-                denizAnimator?.SetTrigger(PickUpTrigger);
-                canAnimator?.SetTrigger(CallTrigger);
+                SetBagState(false, false, false, false);
+                if (consoleConflictRoot != null)
+                    consoleConflictRoot.SetActive(true);
+                // Do not force the KayKit PickUp/Waving one-shots here. Their limb proportions
+                // do not retarget cleanly to the Meshy children: Deniz floated above the rug and
+                // Can's ankle folded backwards. The speaker-aware dialogue system below already
+                // gives both children a grounded, readable reaction using ChildTalkingIdle.
                 cameraController?.ActivateZone(StoryCameraZoneId.PreparationWrongChoice);
                 ui?.ShowObjective(
                     "AĞIRLIĞIN NEDENİNİ BUL",
                     "Çantanın ağzından görünen oyun konsolunu tutup masaya geri sürükle.");
                 ShowDialogue(
-                    "Deniz: Can, çanta birden ağırlaştı.\nCan: Evden çıkarsak konsol burada kalacak.\nDeniz: Ben de bazı şeyleri bırakmak istemem.\nAnne: Küçük bir hatıra taşıyabiliriz; ama taşıyamadığımız çanta kimseye yardım etmez.",
+                    "Deniz: Oof, ağır olmuş!\nCan: Konsol evde mi kalacak yani?\nAnne: Küçük araban gelir. Çantayı rahat taşıyabilmemiz lazım.",
                     10f,
                     () => removeConsole?.SetAvailable(true));
                 return;
             }
 
-            denizAnimator?.SetTrigger(PickUpTrigger);
-            canAnimator?.SetTrigger(CallTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             SetBagState(false, false, true, false);
             testBagWeight?.SetAvailable(false);
             adjustBagStraps?.SetAvailable(false);
@@ -600,12 +694,13 @@ namespace Deprem.Story
                 consoleInBagRoot.SetActive(false);
             if (consoleReturnedRoot != null)
                 consoleReturnedRoot.SetActive(true);
-            denizAnimator?.SetTrigger(PickUpTrigger);
-            canAnimator?.SetTrigger(InteractTrigger);
-            FaceEachOther(deniz, can);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationWarmth);
+            // Can repliğini söylerken oyuncağının yanına yürür; diyalog bittiğinde
+            // Warmth kadrajının içinde, sürükleme hedefi olarak hazırdır.
+            PositionCan(comfortCanPose, null);
             ShowDialogue(
-                "Can: Küçük arabamı taşıyabilirim. Konsol eve göz kulak olsun.\nDeniz: Döndüğümüzde ilk sen açarsın.",
+                "Can: Konsol eve göz kulak olsun. Arabam bana yeter.\nDeniz: Hah, şimdi daha hafif.",
                 6.5f,
                 SetupComfortChoice);
         }
@@ -616,15 +711,14 @@ namespace Deprem.Story
                 return;
 
             testBalancedBag?.SetAvailable(false);
-            denizAnimator?.SetTrigger(PickUpTrigger);
-            canAnimator?.SetTrigger(CallTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             SetBagState(false, false, true, false);
             adjustBagStraps?.SetAvailable(false);
             FaceEachOther(deniz, can);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationBagFit);
             ui?.ShowObjective("İKİ ASKINI AYARLA", "Çantayı iki omuza eşit dağıt; ellerin serbest kalsın.");
             ShowDialogue(
-                "Can: Bu kez düşmedin.\nAnne: Ağırlık dengeli. Şimdi iki askıyı da ayarlayıp ellerini serbest bırak.",
+                "Can: Şimdi rahat kalktı!\nAnne: Ağırlık dengeli. İki askıyı da omzuna al Deniz.",
                 7f,
                 () => adjustBagStraps?.SetAvailable(true));
         }
@@ -636,13 +730,18 @@ namespace Deprem.Story
             gameManager?.CommitCheckpoint(StoryCheckpoint.BagFitted);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationOverview);
             ui?.ShowObjective("ÇANTAYI GÜVENLİ RAFA BIRAK", "Çıkışı kapatmadan, kuru ve kolay hatırlanan alçak rafa yerleştir.");
-            ShowDialogue("Anne: İki askı omuzda, eller serbest. Çanta ağır gelirse içindekileri yetişkinle yeniden düzenleriz.",
+            ShowDialogue("Anne: İki askı omuzda, ellerin serbest. Ağır gelirse birlikte azaltırız.",
                 5.5f, () => placeBagAtExit?.SetAvailable(true));
         }
 
         public void OnBagPlacedAtExit()
         {
             placeBagAtExit?.SetAvailable(false);
+            if (exitShelfDropRing != null)
+                exitShelfDropRing.SetActive(false);
+            // Final sürükleme için kapatılan serbest dolaşım, kapanış ve karanlık
+            // tatbikat akışına eski varsayılan durumuyla devredilir.
+            touchManager?.SetWorldNavigationEnabled(true);
             SetBagState(false, false, false, true);
             gameManager?.SetFlag(StoryFlag.BagReady, true);
             gameManager?.CompleteAct(StoryAct.Preparation);
@@ -658,7 +757,7 @@ namespace Deprem.Story
                     ? "Işık, haberleşme, su, gıda, sağlık, belge ve sıcak kalma parçaları ailece kontrol edildi."
                     : $"Tüm temel parçalar ailece kontrol edildi. {corrected} riskli seçim, gerekçesi görülerek güvenle düzeltildi.";
             }
-            ShowDialogue("Anne: Deprem sırasında bu rafa koşmuyoruz. Sarsıntı durur, birbirimizi kontrol eder, sonra güvenle çıkarken çantayı alırız.",
+            ShowDialogue("Anne: Çanta burada hazır dursun. Sarsıntı bitince birbirimizi kontrol eder, güvenle çıkarken alırız.",
                 8f, ShowCompletionCard);
         }
 
@@ -677,7 +776,7 @@ namespace Deprem.Story
             if (revisedFlow)
             {
                 ShowDialogue(
-                    "Can: Oyuncak arabam da çantaya girebilir mi?\nAnne: Önce aile planını ve gerçekten gerekli malzemeleri hazırlayalım. Yer kalırsa bir küçük eşya seçeriz.\nDeniz: İlk kart Mahalle Parkı; üzerindeki bilgiyi okuyup doğru başlığa taşıyalım.",
+                    "Can: Arabam da gelsin mi?\nAnne: Önce gerekenler oğlum. Arabana sonra yer bakarız.\nDeniz: Bak, ilk kart mahalle parkı. Panoda yerini bulalım.",
                     10f,
                     () =>
                     {
@@ -789,8 +888,7 @@ namespace Deprem.Story
                 if (item != null && item.Category == category)
                     item.SetAvailable(false);
             }
-            parentAnimator?.SetTrigger(InteractTrigger);
-            denizAnimator?.SetTrigger(InteractTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             FaceEachOther(deniz, parent);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationParent);
             gameManager?.CommitCheckpoint(checkpoint);
@@ -813,6 +911,9 @@ namespace Deprem.Story
                 return;
 
             explainedPackingItems.Add(item.ItemId);
+            player?.Stop();
+            if (openBagRoot != null)
+                player?.FaceTowards(openBagRoot.transform.position);
             SetCategoryItemInteractions(item.Category, item);
             ui?.ShowObjective(
                 ItemPackingTitle(item.ItemId),
@@ -875,9 +976,27 @@ namespace Deprem.Story
             DisablePrePackInspections();
             DiscoveryFor(category)?.SetAvailable(false);
             foreach (StoryPreparationItem item in items ?? new StoryPreparationItem[0])
-                item?.SetAvailable(false);
+            {
+                if (item?.Interactable == null)
+                    continue;
 
-            cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
+                bool ownsInspectionObject =
+                    interaction.transform == item.Interactable.transform ||
+                    interaction.transform.IsChildOf(item.Interactable.transform);
+                if (ownsInspectionObject)
+                {
+                    // The inspection target lives on the real bottle. Keep that same physical
+                    // object visible while disabling its later bag-drag interaction.
+                    item.Interactable.gameObject.SetActive(true);
+                    item.Interactable.SetAvailable(false);
+                }
+                else
+                {
+                    item.SetAvailable(false);
+                }
+            }
+
+            cameraController?.ActivateZone(interaction.FocusCameraZone);
             ui?.ShowObjective(title, detail);
             ShowDialogue(dialogue, 5.5f, () => interaction.SetAvailable(true));
         }
@@ -902,8 +1021,7 @@ namespace Deprem.Story
             }
             SetSignalDrawerItemsAvailable(category == StoryPreparationCategory.Signal);
 
-            denizAnimator?.SetTrigger(InspectTrigger);
-            parentAnimator?.SetTrigger(InteractTrigger);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
             cameraController?.ActivateZone(
                 category == StoryPreparationCategory.Signal
                     ? StoryCameraZoneId.PreparationSignal
@@ -919,15 +1037,25 @@ namespace Deprem.Story
                 SetSignalDrawerItemsAvailable(false);
                 reviewSignal?.SetAvailable(false);
                 reviewSignalFlashlightOff?.SetAvailable(false);
+                reviewSignalRadioBatteryInsert?.SetAvailable(false);
+                reviewSignalRadio?.SetAvailable(false);
+                reviewSignalRadioBatteryRemove?.SetAvailable(false);
                 if (signalRadioReviewRoot != null)
-                    signalRadioReviewRoot.SetActive(true);
-                if (signalRadioTuningBeforeRoot != null)
-                    signalRadioTuningBeforeRoot.SetActive(true);
-                reviewSignalRadio?.SetAvailable(true);
-                cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
-                ui?.ShowObjective(
-                    "RADYOYU PARAZİTTEN ÇIKAR",
-                    "Radyonun renkli frekans düğmesini nesnenin üstünden yana çevir.");
+                    signalRadioReviewRoot.SetActive(false);
+                if (reviewSignalWhistle != null)
+                    reviewSignalWhistle.gameObject.SetActive(false);
+                if (signalWhistleTargetRoot != null)
+                    signalWhistleTargetRoot.SetActive(false);
+                // Can yürürken diyalog paralel akar; ölü bekleme olmaz. Sürükleme
+                // ancak hem Can pozuna varınca hem konuşma bitince açılır.
+                signalHandoffCanReady = false;
+                signalHandoffDialogueDone = false;
+                PositionCanForSignalHandoff(() =>
+                {
+                    signalHandoffCanReady = true;
+                    TryBeginSignalWhistleHandoff();
+                });
+                PresentSignalWhistleDialogue();
                 return;
             }
 
@@ -1002,6 +1130,148 @@ namespace Deprem.Story
                 "FENERİ DENE",
                 "Yakın plandaki el fenerinin üstündeki küçük düğmeye dokun.");
             ui?.ShowContext("Düğme fenerin üstünde; doğrudan nesneye dokun.");
+        }
+
+        private bool BeginSignalRadioInspection(StoryPreparationItem item)
+        {
+            if (item == null || signalRadioReviewRoot == null ||
+                reviewSignalRadioBatteryInsert == null || reviewSignalRadio == null ||
+                reviewSignalRadioBatteryRemove == null)
+                return false;
+
+            activeRadioInspection = item;
+            SetCategoryItemInteractions(item.Category, null);
+            item.Interactable.gameObject.SetActive(false);
+            signalRadioReviewRoot.SetActive(true);
+            if (signalRadioTuningBeforeRoot != null)
+                signalRadioTuningBeforeRoot.SetActive(true);
+            reviewSignalRadio.SetAvailable(false);
+            reviewSignalRadioBatteryRemove.SetAvailable(false);
+            reviewSignalRadioBatteryInsert.SetAvailable(true);
+            touchManager?.SetInteractionsEnabled(true);
+            touchManager?.SetWorldNavigationEnabled(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationRadio);
+            // Tek seferlik jest tetiği yok: retarget klipler Meshy rig'de pozu bozuyor.
+            ui?.ShowObjective(
+                "YEDEK PİLİ RADYOYA TAK",
+                "Masadaki yedek pili tutup radyonun sağ yan yüzeyine sürükle.");
+            ui?.ShowContext("Pili radyonun sağ yanına bırak; yerine kendiliğinden oturur.");
+            return true;
+        }
+
+        private void PositionCanForSignalHandoff(Action completed)
+        {
+            PositionCan(signalWhistleCanPose, completed);
+        }
+
+        private void PositionCan(Transform pose, Action completed)
+        {
+            if (can == null || pose == null)
+            {
+                completed?.Invoke();
+                return;
+            }
+
+            can.gameObject.SetActive(true);
+            if (canRepositionRoutine != null)
+                StopCoroutine(canRepositionRoutine);
+            canRepositionRoutine = StartCoroutine(SmoothPositionCan(pose, completed));
+        }
+
+        private IEnumerator SmoothPositionCan(Transform pose, Action completed)
+        {
+            Vector3 startPosition = can.position;
+            Quaternion startRotation = can.rotation;
+            Vector3 targetPosition = pose.position;
+            Quaternion targetRotation = pose.rotation;
+            Vector3 travelDirection = targetPosition - startPosition;
+            travelDirection.y = 0f;
+            bool hasTravel = travelDirection.sqrMagnitude > 0.0025f;
+            Quaternion travelRotation = hasTravel
+                ? Quaternion.LookRotation(travelDirection.normalized, Vector3.up)
+                : targetRotation;
+            // Gerçek çocuk yürüyüş hızı. Eski 0.9 sn tavanı 4-5 metrelik yolu
+            // kayarak ışınlanmaya çeviriyordu.
+            float distance = Vector3.Distance(startPosition, targetPosition);
+            float duration = Mathf.Clamp(distance / 1.35f, 0.38f, 4.2f);
+            // Animator'ın Speed parametresi oyuncu hareketiyle aynı birimde (m/sn)
+            // çalışır; gerçek lerp hızını vermek ayak kaymasını önler.
+            float animatorSpeed = duration > 0.01f ? distance / duration : 0f;
+            float elapsed = 0f;
+            if (hasTravel && canAnimator != null && canAnimator.gameObject.activeInHierarchy)
+            {
+                // Önceki beat'ten kalan Interact/Talk pozu yürüyüşe bükülmüş kollarla
+                // taşınmasın; Can temiz Locomotion durumunda yola çıkar.
+                canAnimator.Play("Locomotion", 0, 0f);
+                canAnimator.Update(0f);
+            }
+            canAnimator?.SetFloat("Speed", hasTravel ? animatorSpeed : 0f);
+
+            while (elapsed < duration && can != null && pose != null)
+            {
+                elapsed += Time.deltaTime;
+                float normalized = Mathf.Clamp01(elapsed / duration);
+                if (hasTravel)
+                {
+                    float travel = Mathf.Clamp01(normalized / 0.72f);
+                    float travelEased = travel * travel * (3f - 2f * travel);
+                    can.position = Vector3.Lerp(startPosition, targetPosition, travelEased);
+                    can.rotation = travel < 1f
+                        ? Quaternion.Slerp(startRotation, travelRotation, Mathf.Clamp01(travel * 2.5f))
+                        : Quaternion.Slerp(
+                            travelRotation,
+                            targetRotation,
+                            Mathf.SmoothStep(0f, 1f, (normalized - 0.72f) / 0.28f));
+                    canAnimator?.SetFloat("Speed", travel < 1f ? animatorSpeed : 0f);
+                }
+                else
+                {
+                    float eased = normalized * normalized * (3f - 2f * normalized);
+                    can.rotation = Quaternion.Slerp(startRotation, targetRotation, eased);
+                    canAnimator?.SetFloat("Speed", 0f);
+                }
+                yield return null;
+            }
+
+            if (can != null)
+            {
+                can.SetPositionAndRotation(targetPosition, targetRotation);
+                canAnimator?.SetFloat("Speed", 0f);
+                // Varışta ekstra Interact tetiği yok: retarget edilmiş tek seferlik
+                // klipler Meshy rig'de bükülmüş kol pozu bırakıyordu.
+            }
+            canRepositionRoutine = null;
+            completed?.Invoke();
+        }
+
+        private void TryBeginSignalWhistleHandoff()
+        {
+            if (signalHandoffCanReady && signalHandoffDialogueDone)
+                BeginSignalWhistleHandoff();
+        }
+
+        private void PresentSignalWhistleDialogue()
+        {
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationSiblingHandoff);
+            ui?.ShowObjective(
+                "CAN'I DİNLE",
+                "Can masaya geliyor. Konuşmayı ilerlet; sonra masadaki düdüğü göğsündeki yeşil klipse sürükle.");
+            ShowDialogue(
+                "Can: Düdük benim görevimdi. Acil durumda üç kısa kez çalacağım.\n" +
+                "Anne: Evet, düdüğü şimdi Can'ın klipsine takalım.",
+                5.2f,
+                () =>
+                {
+                    signalHandoffDialogueDone = true;
+                    TryBeginSignalWhistleHandoff();
+                });
+            // Deniz is only listening in this shot. Skip the outgoing inspection clip
+            // immediately so its retargeted transition cannot leave both shoes floating.
+            if (denizAnimator != null && denizAnimator.gameObject.activeInHierarchy)
+            {
+                denizAnimator.Play("Locomotion", 0, 0f);
+                denizAnimator.Update(0f);
+            }
         }
 
         private void BeginAutomaticCategoryReview(StoryPreparationCategory category)
@@ -1099,20 +1369,24 @@ namespace Deprem.Story
                 consoleInBagRoot.SetActive(false);
             if (consoleReturnedRoot != null)
                 consoleReturnedRoot.SetActive(false);
-            cameraController?.ActivateZone(StoryCameraZoneId.PreparationWarmth);
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
             ui?.ShowObjective(
-                "ÇANTANIN AĞIRLIĞINI DENE",
-                "Can son bir şey ekledi. Çantanın iki askısında basılı tutup kaldırmayı dene.");
+                "ÇANTAYI KALDIRMAYI DENE",
+                "Can son bir eşya ekledi. Konuşma bitince kamera çantayı gösterecek.");
             ShowDialogue(
-                "Can: Temel malzemeler tamam. Oyun konsolunu da koydum; oyuncak arabamdan daha eğlenceli.\nAnne: Önce çantanın taşıyabildiğimiz ağırlıkta kalıp kalmadığını birlikte görelim.",
+                "Can: Konsolu da koydum ben.\nAnne: Bir kaldıralım bakalım, taşıyabilecek miyiz?",
                 7f,
                 () =>
                 {
-                    SetBagState(false, false, false, false);
+                    SetBagState(true, false, false, false);
                     if (consoleConflictRoot != null)
-                        consoleConflictRoot.SetActive(true);
+                        consoleConflictRoot.SetActive(false);
                     if (consoleInBagRoot != null)
                         consoleInBagRoot.SetActive(true);
+                    cameraController?.ActivateZone(StoryCameraZoneId.PreparationBag);
+                    ui?.ShowObjective(
+                        "ÇANTAYI YUKARI KALDIR",
+                        "Görünen çantayı sapından tut; yukarıdaki hedefe sürükleyip bırak.");
                     testBagWeight?.SetAvailable(true);
                 });
         }
@@ -1120,13 +1394,16 @@ namespace Deprem.Story
         private void SetupComfortChoice()
         {
             DisableAllInteractions();
-            chooseComfortItem?.SetAvailable(true);
             cameraController?.ActivateZone(StoryCameraZoneId.PreparationWarmth);
             ui?.ShowObjective(
                 "CAN DA PLANA KATILIYOR",
                 "Can'ın küçük oyuncak arabasını doğrudan ona doğru çek; temel malzemeler çantada kalacak.");
+            // Can sinyal aşamasında masanın yanına taşınmıştı. "Ona doğru çek" hedefi
+            // Can'ı takip ettiği için önce Can kadraja, oyuncağının yanına yürür;
+            // etkileşim ancak hedef gerçekten görünür olduğunda açılır.
+            PositionCan(comfortCanPose, () => chooseComfortItem?.SetAvailable(true));
             ShowDialogue(
-                "Anne: Başta konuştuğumuz küçük eşya için şimdi yer var.\nCan: O zaman yalnızca oyuncak arabamı seçiyorum; konsol evde kalacak.",
+                "Anne: Küçük eşyan için yer açıldı.\nCan: Arabamı seçiyorum. Ötekiler evde kalsın.",
                 5.5f);
         }
 
@@ -1139,6 +1416,39 @@ namespace Deprem.Story
             }
 
             completed?.Invoke();
+        }
+
+        private void SeedNaturalIdlePhases()
+        {
+            PlayIdlePhase(denizAnimator, "Locomotion", 0.14f);
+            PlayIdlePhase(canAnimator, "Locomotion", 0.58f);
+            PlayIdlePhase(parentAnimator, "Adult Idle", 0.34f);
+        }
+
+        private static void PlayIdlePhase(Animator animator, string stateName, float phase)
+        {
+            if (animator == null)
+                return;
+            int stateHash = Animator.StringToHash(stateName);
+            if (!animator.HasState(0, stateHash))
+                return;
+            animator.SetFloat("Speed", 0f);
+            animator.Play(stateHash, 0, Mathf.Repeat(phase, 1f));
+        }
+
+        private void OnDisable()
+        {
+            if (characterFacingRoutine != null)
+            {
+                StopCoroutine(characterFacingRoutine);
+                characterFacingRoutine = null;
+            }
+            if (canRepositionRoutine != null)
+            {
+                StopCoroutine(canRepositionRoutine);
+                canRepositionRoutine = null;
+            }
+            canAnimator?.SetFloat("Speed", 0f);
         }
 
         private void ShowCompletionCard()
@@ -1161,24 +1471,70 @@ namespace Deprem.Story
                     consoleReturnedRoot.SetActive(true);
             }
             gameManager?.CommitCheckpoint(StoryCheckpoint.BagFitted);
-            cameraController?.ActivateZone(StoryCameraZoneId.PreparationBagFit);
+            // Sırttaki çanta ile raf aynı sabit kadraja sığmıyor; önce takip kamerası
+            // altında Deniz rafın yanına yürür, sonra ExitShelf kadrajında hem çanta
+            // hem bırakma hedefi birlikte görünürken sürükleme açılır.
+            touchManager?.SetInteractionsEnabled(false);
+            touchManager?.SetWorldNavigationEnabled(false);
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationOverview);
             ui?.ShowObjective(
                 "ÇANTAYI GÜVENLİ RAFA TAŞI",
-                "Deniz'in sırtındaki gerçek çantayı tutup çıkış yanındaki alçak rafa sürükle.");
+                "Deniz çıkış rafına yürüyecek; ardından sırtındaki çantayı rafa sürükleyip bırakacaksın.");
             ShowDialogue(
                 "Deniz: Konsol masada, küçük araba dış cepte. Çanta artık dengeli.\n" +
                 "Anne: İki askı omzunda ve ellerin serbest. Şimdi çantayı çıkışı kapatmayacak alçak rafa bırak.",
                 6.5f,
-                () => placeBagAtExit?.SetAvailable(true));
+                BeginExitShelfWalk);
+        }
+
+        private void BeginExitShelfWalk()
+        {
+            bool moving = player != null && exitShelfApproachPoint != null &&
+                          player.MoveTo(exitShelfApproachPoint, PresentExitShelfPlacement);
+            if (moving)
+                return;
+
+            // Rota kurulamazsa oyuncuyu kilitli bırakma; karakteri doğrudan rafın
+            // yanına al ki final adım her koşulda oynanabilir kalsın.
+            if (player != null && exitShelfApproachPoint != null)
+            {
+                player.Warp(exitShelfApproachPoint.position);
+                player.FaceTowards(exitShelfApproachPoint.position + exitShelfApproachPoint.forward);
+            }
+            PresentExitShelfPlacement();
+        }
+
+        private void PresentExitShelfPlacement()
+        {
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationExitShelf);
+            touchManager?.SetInteractionsEnabled(true);
+            placeBagAtExit?.SetAvailable(true);
+            if (exitShelfDropRing != null)
+                exitShelfDropRing.SetActive(true);
+            ui?.ShowObjective(
+                "ÇANTAYI GÜVENLİ RAFA BIRAK",
+                "Sırtındaki çantayı tutup raftaki yeşil halkaya sürükleyip bırak.");
+            ui?.ShowContext("Çanta Deniz'in sırtında; tut ve yeşil halkaya sürükle.");
         }
 
         private void SetupExitPlacement()
         {
             DisableAllInteractions();
             SetBagState(false, false, true, false);
+            // Checkpoint'ten dönüşte de aynı oynanabilir kadraj kurulur: Deniz raf
+            // yanında, çanta ve bırakma hedefi aynı ekranda.
+            touchManager?.SetWorldNavigationEnabled(false);
+            touchManager?.SetInteractionsEnabled(true);
+            if (player != null && exitShelfApproachPoint != null)
+            {
+                player.Warp(exitShelfApproachPoint.position);
+                player.FaceTowards(exitShelfApproachPoint.position + exitShelfApproachPoint.forward);
+            }
             placeBagAtExit?.SetAvailable(true);
-            cameraController?.ActivateZone(StoryCameraZoneId.PreparationOverview, true);
-            ui?.ShowObjective("ÇANTAYI GÜVENLİ RAFA BIRAK", "Çıkışı kapatmadan, kuru ve kolay hatırlanan alçak rafa yerleştir.");
+            if (exitShelfDropRing != null)
+                exitShelfDropRing.SetActive(true);
+            cameraController?.ActivateZone(StoryCameraZoneId.PreparationExitShelf, true);
+            ui?.ShowObjective("ÇANTAYI GÜVENLİ RAFA BIRAK", "Sırtındaki çantayı raftaki yeşil halkaya sürükleyip bırak.");
         }
 
         private void ShowCompletedState()
@@ -1315,7 +1671,9 @@ namespace Deprem.Story
         {
             reviewSignal?.SetAvailable(false);
             reviewSignalFlashlightOff?.SetAvailable(false);
+            reviewSignalRadioBatteryInsert?.SetAvailable(false);
             reviewSignalRadio?.SetAvailable(false);
+            reviewSignalRadioBatteryRemove?.SetAvailable(false);
             reviewSignalWhistle?.SetAvailable(false);
             if (reviewSignalWhistle != null)
                 reviewSignalWhistle.gameObject.SetActive(false);
@@ -1368,6 +1726,7 @@ namespace Deprem.Story
                 packingAdvanceRoutine = null;
             }
             activeFlashlightInspection = null;
+            activeRadioInspection = null;
             startFamilyPlan?.SetAvailable(false);
             placeContactCard?.SetAvailable(false);
             assignCanWhistleRole?.SetAvailable(false);
@@ -1381,6 +1740,8 @@ namespace Deprem.Story
             testBalancedBag?.SetAvailable(false);
             adjustBagStraps?.SetAvailable(false);
             placeBagAtExit?.SetAvailable(false);
+            if (exitShelfDropRing != null)
+                exitShelfDropRing.SetActive(false);
             SetSignalDrawerItemsAvailable(false);
             foreach (StoryPreparationItem item in items ?? new StoryPreparationItem[0])
                 item?.SetAvailable(false);
@@ -1398,7 +1759,7 @@ namespace Deprem.Story
                 exitShelfBagRoot.SetActive(atExit);
         }
 
-        private static void FaceEachOther(Transform first, Transform second)
+        private void FaceEachOther(Transform first, Transform second)
         {
             if (first == null || second == null)
                 return;
@@ -1406,8 +1767,55 @@ namespace Deprem.Story
             direction.y = 0f;
             if (direction.sqrMagnitude < 0.01f)
                 return;
-            first.rotation = Quaternion.LookRotation(direction.normalized, Vector3.up);
-            second.rotation = Quaternion.LookRotation(-direction.normalized, Vector3.up);
+
+            player?.Stop();
+            if (characterFacingRoutine != null)
+                StopCoroutine(characterFacingRoutine);
+            bool playerFacesFirst = player != null && first == deniz;
+            bool playerFacesSecond = player != null && second == deniz;
+            if (playerFacesFirst)
+                player.FaceTowards(second.position);
+            else if (playerFacesSecond)
+                player.FaceTowards(first.position);
+            characterFacingRoutine = StartCoroutine(SmoothFaceEachOther(
+                first,
+                second,
+                direction,
+                playerFacesFirst,
+                playerFacesSecond));
+        }
+
+        private IEnumerator SmoothFaceEachOther(
+            Transform first,
+            Transform second,
+            Vector3 direction,
+            bool playerFacesFirst,
+            bool playerFacesSecond)
+        {
+            Quaternion firstStart = first.rotation;
+            Quaternion secondStart = second.rotation;
+            Quaternion firstTarget = Quaternion.LookRotation(direction.normalized, Vector3.up);
+            Quaternion secondTarget = Quaternion.LookRotation(-direction.normalized, Vector3.up);
+            const float duration = 0.42f;
+            float elapsed = 0f;
+
+            while (elapsed < duration && first != null && second != null)
+            {
+                elapsed += Time.deltaTime;
+                float normalized = Mathf.Clamp01(elapsed / duration);
+                float eased = normalized * normalized * (3f - 2f * normalized);
+                if (!playerFacesFirst)
+                    first.rotation = Quaternion.Slerp(firstStart, firstTarget, eased);
+                if (!playerFacesSecond)
+                    second.rotation = Quaternion.Slerp(secondStart, secondTarget, eased);
+                yield return null;
+            }
+
+            if (first != null && !playerFacesFirst)
+                first.rotation = firstTarget;
+            if (second != null && !playerFacesSecond)
+                second.rotation = secondTarget;
+            characterFacingRoutine = null;
         }
 
         private static StoryCameraZoneId CategoryCamera(StoryPreparationCategory category)
@@ -1541,7 +1949,7 @@ namespace Deprem.Story
             return category switch
             {
                 StoryPreparationCategory.Signal => "Sarı işaretli çekmece kulpunu tut; aşağı doğru çekip bırak.",
-                StoryPreparationCategory.Food => "Sarı işaretli alt dolap kapağına bas; sağa ya da sola kaydırıp bırak.",
+                StoryPreparationCategory.Food => "Alt dolaptaki sol kapağın üzerindeki el işaretini tut; parmağını sağa kaydırıp bırak.",
                 StoryPreparationCategory.Health => "Sarı işaretli ilk yardım dolabına bas; sağa ya da sola kaydırıp bırak.",
                 _ => "Sarı işaretli sandığa bas; sağa ya da sola kaydırıp bırak."
             };

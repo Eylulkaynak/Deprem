@@ -17,11 +17,6 @@ public static class StorySharedHomePrefabBuilder
 
     private const string SourceRootName = "STORY_03_QUAKE";
     private const string SourceEnvironmentName = "Environment_StoryHome";
-    private const string KenneyBedrollPath =
-        "Assets/Story/Environment/ThirdParty/KenneySurvival/Models/bedroll-packed.fbx";
-    private const string KenneySurvivalMaterialPath =
-        "Assets/Story/Environment/ThirdParty/KenneySurvival/Materials/KenneySurvival_Atlas.mat";
-
     [MenuItem("Tools/Deprem Story/Build Shared Story Home Prefab")]
     public static void BuildFromMenu()
     {
@@ -67,6 +62,9 @@ public static class StorySharedHomePrefabBuilder
             clone.transform.localScale = Vector3.one;
             SceneManager.MoveGameObjectToScene(clone, sourceScene);
             TurnTallShelfVariantsAround(clone.transform);
+            ReplaceInconsistentTallShelfVisuals(
+                clone.transform,
+                StoryChapterBuilderCommon.CreateMaterials());
             ReplaceUnreadableSofaThrow(clone.transform);
             HideDoorwayFloorBridgeMesh(clone.transform);
 
@@ -75,6 +73,8 @@ public static class StorySharedHomePrefabBuilder
             foreach (NavMeshSurface surface in clone.GetComponentsInChildren<NavMeshSurface>(true))
                 Object.DestroyImmediate(surface);
 
+            if (AssetDatabase.LoadAssetAtPath<GameObject>(StoryKktcArtLibrary.Root + "/Prefabs/CoffeeSet.prefab") != null)
+                StoryKktcSceneArt.DressHome(clone.transform);
             savedPrefab = PrefabUtility.SaveAsPrefabAsset(clone, PrefabPath, out bool success);
             Object.DestroyImmediate(clone);
             if (!success || savedPrefab == null)
@@ -141,6 +141,149 @@ public static class StorySharedHomePrefabBuilder
         }
     }
 
+    private static void ReplaceInconsistentTallShelfVisuals(
+        Transform home,
+        StoryChapterBuilderCommon.Materials materials)
+    {
+        foreach (string shelfName in new[] { "Shelf_Secured", "Shelf_Unsecured", "Shelf_Fallen" })
+        {
+            Transform shelf = FindDescendant(home, shelfName);
+            Transform importedVisual = shelf != null ? FindDescendant(shelf, "Bookcase_Visual") : null;
+            if (shelf == null || importedVisual == null)
+                throw new InvalidOperationException($"Ortak evde yenilenecek raf görseli bulunamadı: {shelfName}");
+
+            Renderer[] importedRenderers = importedVisual.GetComponentsInChildren<Renderer>(true);
+            if (importedRenderers.Length == 0)
+                throw new InvalidOperationException($"{shelfName} görünür raf bounds'u üretmedi.");
+
+            Bounds localBounds = CalculateLocalBounds(shelf, importedRenderers);
+            foreach (Renderer renderer in importedRenderers)
+                renderer.enabled = false;
+
+            Transform skin = new GameObject("StoryShelfVisual").transform;
+            skin.SetParent(shelf, false);
+
+            float width = localBounds.size.x;
+            float height = localBounds.size.y;
+            float depth = localBounds.size.z;
+            float side = Mathf.Max(0.055f, width * 0.065f);
+            float board = Mathf.Max(0.045f, height * 0.032f);
+            float back = Mathf.Max(0.028f, depth * 0.075f);
+            float frontZ = localBounds.max.z;
+            float backZ = localBounds.min.z + back * 0.5f;
+            float innerWidth = Mathf.Max(0.1f, width - side * 2f);
+            float lowerDoorHeight = height * 0.29f;
+
+            CreateShelfPanel("LeftFrame", skin,
+                new Vector3(localBounds.min.x + side * 0.5f, localBounds.center.y, localBounds.center.z),
+                new Vector3(side, height, depth), materials.teal);
+            CreateShelfPanel("RightFrame", skin,
+                new Vector3(localBounds.max.x - side * 0.5f, localBounds.center.y, localBounds.center.z),
+                new Vector3(side, height, depth), materials.teal);
+            CreateShelfPanel("TopFrame", skin,
+                new Vector3(localBounds.center.x, localBounds.max.y - board * 0.5f, localBounds.center.z),
+                new Vector3(innerWidth, board, depth), materials.teal);
+            CreateShelfPanel("BottomFrame", skin,
+                new Vector3(localBounds.center.x, localBounds.min.y + board * 0.5f, localBounds.center.z),
+                new Vector3(innerWidth, board, depth), materials.teal);
+            CreateShelfPanel("BackPanel", skin,
+                new Vector3(localBounds.center.x, localBounds.center.y, backZ),
+                new Vector3(innerWidth, height - board * 2f, back), materials.cream);
+
+            float lowerTopY = localBounds.min.y + lowerDoorHeight;
+            foreach (float normalizedY in new[] { 0.31f, 0.51f, 0.7f, 0.87f })
+            {
+                CreateShelfPanel(
+                    "ShelfBoard_" + Mathf.RoundToInt(normalizedY * 100f),
+                    skin,
+                    new Vector3(
+                        localBounds.center.x,
+                        Mathf.Lerp(localBounds.min.y, localBounds.max.y, normalizedY),
+                        localBounds.center.z),
+                    new Vector3(innerWidth, board, depth - back),
+                    materials.wood);
+            }
+
+            float doorGap = Mathf.Max(0.018f, width * 0.018f);
+            float doorWidth = (innerWidth - doorGap * 3f) * 0.5f;
+            float doorDepth = Mathf.Max(0.035f, depth * 0.065f);
+            float doorY = localBounds.min.y + lowerDoorHeight * 0.5f;
+            float leftDoorX = localBounds.center.x - doorWidth * 0.5f - doorGap * 0.5f;
+            float rightDoorX = localBounds.center.x + doorWidth * 0.5f + doorGap * 0.5f;
+            foreach ((string name, float x) in new[]
+                     {
+                         ("LowerDoorLeft", leftDoorX),
+                         ("LowerDoorRight", rightDoorX)
+                     })
+            {
+                CreateShelfPanel(name, skin,
+                    new Vector3(x, doorY, frontZ - doorDepth * 0.5f),
+                    new Vector3(doorWidth, lowerDoorHeight - board * 1.4f, doorDepth),
+                    materials.coral);
+                CreateShelfPanel(name + "Knob", skin,
+                    new Vector3(
+                        x + (name.EndsWith("Left", StringComparison.Ordinal) ? doorWidth * 0.32f : -doorWidth * 0.32f),
+                        doorY,
+                        frontZ + doorDepth * 0.12f),
+                    Vector3.one * Mathf.Max(0.04f, width * 0.035f),
+                    materials.amber,
+                    PrimitiveType.Sphere);
+            }
+
+            // Keep shelf contents above the cabinet doors; this also gives the quake
+            // variants a stable, readable surface instead of an ornamental silhouette.
+            if (lowerTopY <= localBounds.min.y + board)
+                throw new InvalidOperationException($"{shelfName} alt dolap ölçüsü geçersiz üretildi.");
+        }
+    }
+
+    private static Bounds CalculateLocalBounds(Transform root, Renderer[] renderers)
+    {
+        bool initialized = false;
+        Bounds result = default;
+        foreach (Renderer renderer in renderers)
+        {
+            Bounds world = renderer.bounds;
+            for (int corner = 0; corner < 8; corner++)
+            {
+                Vector3 point = new Vector3(
+                    (corner & 1) == 0 ? world.min.x : world.max.x,
+                    (corner & 2) == 0 ? world.min.y : world.max.y,
+                    (corner & 4) == 0 ? world.min.z : world.max.z);
+                Vector3 localPoint = root.InverseTransformPoint(point);
+                if (!initialized)
+                {
+                    result = new Bounds(localPoint, Vector3.zero);
+                    initialized = true;
+                }
+                else
+                {
+                    result.Encapsulate(localPoint);
+                }
+            }
+        }
+        return result;
+    }
+
+    private static GameObject CreateShelfPanel(
+        string name,
+        Transform parent,
+        Vector3 localPosition,
+        Vector3 localScale,
+        Material material,
+        PrimitiveType primitiveType = PrimitiveType.Cube)
+    {
+        GameObject panel = GameObject.CreatePrimitive(primitiveType);
+        panel.name = name;
+        panel.transform.SetParent(parent, false);
+        panel.transform.localPosition = localPosition;
+        panel.transform.localRotation = Quaternion.identity;
+        panel.transform.localScale = localScale;
+        panel.GetComponent<Renderer>().sharedMaterial = material;
+        Object.DestroyImmediate(panel.GetComponent<Collider>());
+        return panel;
+    }
+
     private static void ReplaceUnreadableSofaThrow(Transform home)
     {
         Transform sofa = FindDescendant(home, "FamilySofa");
@@ -155,20 +298,9 @@ public static class StorySharedHomePrefabBuilder
                 Object.DestroyImmediate(obsolete.gameObject);
         }
 
-        Material material = AssetDatabase.LoadAssetAtPath<Material>(KenneySurvivalMaterialPath);
-        if (material == null)
-            throw new FileNotFoundException("Kenney battaniye materyali bulunamadÄ±.", KenneySurvivalMaterialPath);
-
-        StoryChapterBuilderCommon.InstantiateAsset(
-            KenneyBedrollPath,
-            "KoltukBattaniyesi",
-            sofa,
-            new Vector3(-3.35f, 0.57f, -3.6f),
-            new Vector3(0.76f, 0.24f, 0.3f),
-            new Vector3(0f, -8f, -5f),
-            false,
-            false,
-            material);
+        // The packed bedroll replacement read as an orange pipe/log on the sofa.
+        // This is only decoration, so keep the cushion clean instead of adding
+        // an ambiguous prop that competes with real interaction objects.
     }
 
     private static void HideDoorwayFloorBridgeMesh(Transform home)

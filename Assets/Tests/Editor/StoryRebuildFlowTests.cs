@@ -1,9 +1,11 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using Deprem.Minigames;
 using Deprem.Story;
 using NUnit.Framework;
 using TMPro;
+using Unity.Cinemachine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -22,8 +24,66 @@ public sealed class StoryRebuildFlowTests
         ("Assets/Scenes/Story_04_RebuildPreview.unity", StoryAct.Evacuation, "BÖLÜM SEÇİMİ")
     };
 
+    [TestCase("Assets/Scenes/Story_01_RebuildPreview.unity")]
+    [TestCase("Assets/Scenes/Story_02_RebuildPreview.unity")]
+    [TestCase("Assets/Scenes/Story_03_RebuildPreview.unity")]
+    [TestCase("Assets/Scenes/Story_04_RebuildPreview.unity")]
+    public void RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(string scenePath)
+    {
+        EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+
+        Camera[] cameras = Object.FindObjectsByType<Camera>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
+        Assert.That(cameras, Has.Length.EqualTo(1), scenePath);
+        Assert.That(cameras[0].CompareTag("MainCamera"), Is.True, scenePath);
+
+        CinemachineBrain brain = cameras[0].GetComponent<CinemachineBrain>();
+        Assert.That(brain, Is.Not.Null, scenePath);
+        Assert.That(brain.DefaultBlend.Style,
+            Is.EqualTo(CinemachineBlendDefinition.Styles.EaseInOut), scenePath);
+        Assert.That(brain.DefaultBlend.Time, Is.InRange(0.68f, 0.9f),
+            scenePath + " kamera geçişi çocuk oyuncu için ani olmamalı.");
+        Assert.That(Object.FindObjectsByType<StoryCameraController>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None), Has.Length.EqualTo(1), scenePath);
+    }
+
+    [TestCase("Assets/Scenes/Story_01_RebuildPreview.unity")]
+    [TestCase("Assets/Scenes/Story_02_RebuildPreview.unity")]
+    [TestCase("Assets/Scenes/Story_03_RebuildPreview.unity")]
+    public void IndoorChapter_UsesStory01FinishedHomeShell(string scenePath)
+    {
+        EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+
+        Transform rightWall = FindRequired("RightWall_Story01").transform;
+        Assert.That(rightWall.localPosition, Is.EqualTo(new Vector3(5f, 3f, 0.25f)), scenePath);
+        Assert.That(rightWall.localScale, Is.EqualTo(new Vector3(0.22f, 6f, 11.5f)), scenePath);
+
+        Transform leftWall = FindRequired("LeftWall").transform;
+        Assert.That(leftWall.localPosition, Is.EqualTo(new Vector3(-5f, 3f, 0.25f)), scenePath);
+        Assert.That(leftWall.localScale, Is.EqualTo(new Vector3(0.22f, 6f, 11.5f)), scenePath);
+
+        Transform largeFrame = FindRequired("ArtFrameLarge").transform;
+        Assert.That(Quaternion.Angle(largeFrame.localRotation, Quaternion.Euler(0f, 180f, 0f)),
+            Is.LessThan(0.1f), scenePath);
+        Transform smallFrame = FindRequired("SmallFrame").transform;
+        Assert.That(smallFrame.localPosition,
+            Is.EqualTo(new Vector3(-4.85f, 1.91999984f, -2.484f)), scenePath);
+
+        Transform roomPlant = FindRequired("RoomPlant").transform;
+        Renderer[] plantRenderers = roomPlant.GetComponentsInChildren<Renderer>(true);
+        Assert.That(plantRenderers, Is.Not.Empty, scenePath);
+        Bounds plantBounds = plantRenderers[0].bounds;
+        foreach (Renderer renderer in plantRenderers.Skip(1))
+            plantBounds.Encapsulate(renderer.bounds);
+        Assert.That(plantBounds.center.x, Is.EqualTo(-4.25f).Within(0.02f), scenePath);
+        Assert.That(plantBounds.center.z, Is.EqualTo(-0.45f).Within(0.02f), scenePath);
+        Assert.That(plantBounds.min.y, Is.EqualTo(0f).Within(0.02f), scenePath);
+    }
+
     [Test]
-    public void MainMenu_OffersContinueAndNewStoryAsPublishedBuildEntry()
+    public void MainMenu_OffersStoryAndEightMinigamesAsPublishedBuildEntries()
     {
         Assert.That(AssetDatabase.LoadAssetAtPath<SceneAsset>(MainMenuScene), Is.Not.Null);
         string[] publishedScenes = EditorBuildSettings.scenes
@@ -31,9 +91,8 @@ public sealed class StoryRebuildFlowTests
             .Select(entry => entry.path)
             .ToArray();
         Assert.That(publishedScenes.First(), Is.EqualTo(MainMenuScene));
-        Assert.That(publishedScenes,
-            Is.EqualTo(new[] { MainMenuScene }.Concat(RebuildScenes.Select(item => item.path))),
-            "Yayın build'i legacy mini oyunları veya eski Story referans sahnelerini paketlememeli.");
+        Assert.That(publishedScenes, Is.EqualTo(MinigameSceneCatalog.OrderedScenePaths),
+            "Yayın build'i tek merkezi hikâye + minigame kataloğunu kullanmalı.");
 
         EditorSceneManager.OpenScene(MainMenuScene, OpenSceneMode.Single);
         StoryGameManager manager = Object.FindFirstObjectByType<StoryGameManager>();
@@ -58,6 +117,7 @@ public sealed class StoryRebuildFlowTests
             Is.EqualTo(StoryChapterBuilderCommon.PlayfulSemiboldFontAssetPath));
         AssertCasualUiSprite("ContinueStoryButton", "Yellow", "Normal");
         AssertCasualUiSprite("StartNewStoryButton", "Blue", "Normal");
+        AssertCasualUiSprite("OpenMinigamesButton", "Green", "Normal");
         Assert.That(FindRequired("ContinueStoryButton").GetComponent<Button>().transition,
             Is.EqualTo(Selectable.Transition.SpriteSwap));
         Assert.That(AssetDatabase.GetAssetPath(
@@ -67,6 +127,9 @@ public sealed class StoryRebuildFlowTests
             Is.EqualTo(StoryChapterBuilderCommon.PlayfulSemiboldFontAssetPath));
         AssertButtonEvent("ContinueStoryButton", manager, nameof(StoryGameManager.ContinueStory));
         AssertButtonEvent("StartNewStoryButton", manager, nameof(StoryGameManager.StartNewStory));
+        MinigameHubManager minigameNavigation = Object.FindFirstObjectByType<MinigameHubManager>();
+        Assert.That(minigameNavigation, Is.Not.Null);
+        AssertButtonEvent("OpenMinigamesButton", minigameNavigation, nameof(MinigameHubManager.OpenScene));
 
         SerializedObject managerData = new SerializedObject(manager);
         Assert.That(managerData.FindProperty("initialAct").intValue,
@@ -273,7 +336,9 @@ public sealed class StoryRebuildFlowTests
         Assert.That(AssetDatabase.LoadAssetAtPath<TextAsset>(
             StoryChapterBuilderCommon.CasualUiRoot + "/SOURCE.md"), Is.Not.Null);
         Assert.That(AssetDatabase.LoadAssetAtPath<TextAsset>(
-            StoryChapterBuilderCommon.PlayfulFontRoot + "/OFL-Lexend.txt"), Is.Not.Null);
+            StoryChapterBuilderCommon.PlayfulFontRoot + "/OFL-Baloo2.txt"), Is.Not.Null);
+        Assert.That(AssetDatabase.LoadAssetAtPath<TextAsset>(
+            StoryChapterBuilderCommon.PlayfulFontRoot + "/OFL-Nunito.txt"), Is.Not.Null);
         Assert.That(Object.FindObjectsByType<Image>(FindObjectsInactive.Include, FindObjectsSortMode.None)
             .Where(image => image.sprite != null)
             .Select(image => AssetDatabase.GetAssetPath(image.sprite))
@@ -283,7 +348,7 @@ public sealed class StoryRebuildFlowTests
     }
 
     [TestCaseSource(nameof(PublishedSceneCases))]
-    public void PublishedScene_UsesOnlyLexendForAuthoredText(string scenePath)
+    public void PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(string scenePath)
     {
         EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
 
@@ -362,6 +427,7 @@ public sealed class StoryRebuildFlowTests
             StoryInteractionGesture.DragToTarget => "touch_swipe_move.png",
             StoryInteractionGesture.SwipeHorizontal => "touch_swipe_horizontal.png",
             StoryInteractionGesture.SwipeDown => "touch_swipe_down.png",
+            StoryInteractionGesture.SwipeDiagonalDownRight => "touch_swipe_down.png",
             StoryInteractionGesture.WorldHold => "touch_tap_hold.png",
             StoryInteractionGesture.RepeatedTap => "touch_tap_double.png",
             _ => "touch_tap.png"
