@@ -1,0 +1,31 @@
+{
+  "role": "Police",
+  "source_fbx": "Meshy_AI_Character_output.fbx",
+  "height_m": 1.79999998410063,
+  "bounds_min": [
+    -0.5519534945487976,
+    -0.4350588917732239,
+    8.742494372881993e-08
+  ],
+  "bounds_max": [
+    0.5519534349441528,
+    0.4350590407848358,
+    1.8000000715255737
+  ],
+  "triangles": 4203,
+  "vertices": 2180,
+  "base_color": "../GameReady/Police_BaseColor.png",
+  "exports": {
+    "blend": "../GameReady/Police.blend",
+    "fbx_unrigged": "../GameReady/Police_Unrigged.fbx",
+    "fbx_rigged": "../GameReady/Police_Rigged.fbx",
+    "obj": "../GameReady/Police.obj"
+  },
+  "previews": [
+    "../Preview/Police_Front_YMinus.png",
+    "../Preview/Police_Back_YPlus.png",
+    "../Preview/Police_Left_XMinus.png",
+    "../Preview/Police_ThreeQuarter.png",
+    "../Preview/Police_RigPreview.png"
+  ]
+}

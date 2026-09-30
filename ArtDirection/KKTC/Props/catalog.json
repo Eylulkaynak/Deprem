@@ -1,0 +1,250 @@
+[
+  {
+    "id": "Backpack_Closed",
+    "triangles": 14550,
+    "source": "ArtDirection/KKTC/Props/Backpack_Closed.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Backpack_Closed.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Backpack_Closed.prefab",
+    "preview": "ClientExports/KKTC/Props/Backpack_Closed.png"
+  },
+  {
+    "id": "Backpack_Open",
+    "triangles": 13956,
+    "source": "ArtDirection/KKTC/Props/Backpack_Open.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Backpack_Open.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Backpack_Open.prefab",
+    "preview": "ClientExports/KKTC/Props/Backpack_Open.png"
+  },
+  {
+    "id": "Bandage",
+    "triangles": 1104,
+    "source": "ArtDirection/KKTC/Props/Bandage.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Bandage.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Bandage.prefab",
+    "preview": "ClientExports/KKTC/Props/Bandage.png"
+  },
+  {
+    "id": "BasilPot",
+    "triangles": 12042,
+    "source": "ArtDirection/KKTC/Props/BasilPot.blend",
+    "model": "Assets/Story/Art/KKTC/Models/BasilPot.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/BasilPot.prefab",
+    "preview": "ClientExports/KKTC/Props/BasilPot.png"
+  },
+  {
+    "id": "Batteries",
+    "triangles": 3492,
+    "source": "ArtDirection/KKTC/Props/Batteries.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Batteries.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Batteries.prefab",
+    "preview": "ClientExports/KKTC/Props/Batteries.png"
+  },
+  {
+    "id": "Blanket",
+    "triangles": 5316,
+    "source": "ArtDirection/KKTC/Props/Blanket.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Blanket.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Blanket.prefab",
+    "preview": "ClientExports/KKTC/Props/Blanket.png"
+  },
+  {
+    "id": "BookStack",
+    "triangles": 2256,
+    "source": "ArtDirection/KKTC/Props/BookStack.blend",
+    "model": "Assets/Story/Art/KKTC/Models/BookStack.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/BookStack.prefab",
+    "preview": "ClientExports/KKTC/Props/BookStack.png"
+  },
+  {
+    "id": "BreadBasket",
+    "triangles": 36838,
+    "source": "ArtDirection/KKTC/Props/BreadBasket.blend",
+    "model": "Assets/Story/Art/KKTC/Models/BreadBasket.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/BreadBasket.prefab",
+    "preview": "ClientExports/KKTC/Props/BreadBasket.png"
+  },
+  {
+    "id": "Clothes",
+    "triangles": 1112,
+    "source": "ArtDirection/KKTC/Props/Clothes.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Clothes.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Clothes.prefab",
+    "preview": "ClientExports/KKTC/Props/Clothes.png"
+  },
+  {
+    "id": "CoffeeSet",
+    "triangles": 3732,
+    "source": "ArtDirection/KKTC/Props/CoffeeSet.blend",
+    "model": "Assets/Story/Art/KKTC/Models/CoffeeSet.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/CoffeeSet.prefab",
+    "preview": "ClientExports/KKTC/Props/CoffeeSet.png"
+  },
+  {
+    "id": "Console",
+    "triangles": 2264,
+    "source": "ArtDirection/KKTC/Props/Console.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Console.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Console.prefab",
+    "preview": "ClientExports/KKTC/Props/Console.png"
+  },
+  {
+    "id": "Cup",
+    "triangles": 854,
+    "source": "ArtDirection/KKTC/Props/Cup.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Cup.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Cup.prefab",
+    "preview": "ClientExports/KKTC/Props/Cup.png"
+  },
+  {
+    "id": "Documents",
+    "triangles": 1452,
+    "source": "ArtDirection/KKTC/Props/Documents.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Documents.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Documents.prefab",
+    "preview": "ClientExports/KKTC/Props/Documents.png"
+  },
+  {
+    "id": "FirstAid",
+    "triangles": 2608,
+    "source": "ArtDirection/KKTC/Props/FirstAid.blend",
+    "model": "Assets/Story/Art/KKTC/Models/FirstAid.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/FirstAid.prefab",
+    "preview": "ClientExports/KKTC/Props/FirstAid.png"
+  },
+  {
+    "id": "Flashlight",
+    "triangles": 6556,
+    "source": "ArtDirection/KKTC/Props/Flashlight.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Flashlight.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Flashlight.prefab",
+    "preview": "ClientExports/KKTC/Props/Flashlight.png"
+  },
+  {
+    "id": "FoodCan",
+    "triangles": 6452,
+    "source": "ArtDirection/KKTC/Props/FoodCan.blend",
+    "model": "Assets/Story/Art/KKTC/Models/FoodCan.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/FoodCan.prefab",
+    "preview": "ClientExports/KKTC/Props/FoodCan.png"
+  },
+  {
+    "id": "GlassBottle",
+    "triangles": 1416,
+    "source": "ArtDirection/KKTC/Props/GlassBottle.blend",
+    "model": "Assets/Story/Art/KKTC/Models/GlassBottle.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/GlassBottle.prefab",
+    "preview": "ClientExports/KKTC/Props/GlassBottle.png"
+  },
+  {
+    "id": "LefkaraCloth",
+    "triangles": 19788,
+    "source": "ArtDirection/KKTC/Props/LefkaraCloth.blend",
+    "model": "Assets/Story/Art/KKTC/Models/LefkaraCloth.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/LefkaraCloth.prefab",
+    "preview": "ClientExports/KKTC/Props/LefkaraCloth.png"
+  },
+  {
+    "id": "OliveVase",
+    "triangles": 19302,
+    "source": "ArtDirection/KKTC/Props/OliveVase.blend",
+    "model": "Assets/Story/Art/KKTC/Models/OliveVase.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/OliveVase.prefab",
+    "preview": "ClientExports/KKTC/Props/OliveVase.png"
+  },
+  {
+    "id": "Pan",
+    "triangles": 4758,
+    "source": "ArtDirection/KKTC/Props/Pan.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Pan.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Pan.prefab",
+    "preview": "ClientExports/KKTC/Props/Pan.png"
+  },
+  {
+    "id": "Parcel",
+    "triangles": 736,
+    "source": "ArtDirection/KKTC/Props/Parcel.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Parcel.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Parcel.prefab",
+    "preview": "ClientExports/KKTC/Props/Parcel.png"
+  },
+  {
+    "id": "Radio",
+    "triangles": 7508,
+    "source": "ArtDirection/KKTC/Props/Radio.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Radio.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Radio.prefab",
+    "preview": "ClientExports/KKTC/Props/Radio.png"
+  },
+  {
+    "id": "SafetyBracket",
+    "triangles": 1520,
+    "source": "ArtDirection/KKTC/Props/SafetyBracket.blend",
+    "model": "Assets/Story/Art/KKTC/Models/SafetyBracket.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/SafetyBracket.prefab",
+    "preview": "ClientExports/KKTC/Props/SafetyBracket.png"
+  },
+  {
+    "id": "SafetyStrap",
+    "triangles": 1260,
+    "source": "ArtDirection/KKTC/Props/SafetyStrap.blend",
+    "model": "Assets/Story/Art/KKTC/Models/SafetyStrap.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/SafetyStrap.prefab",
+    "preview": "ClientExports/KKTC/Props/SafetyStrap.png"
+  },
+  {
+    "id": "ShoePair",
+    "triangles": 2420,
+    "source": "ArtDirection/KKTC/Props/ShoePair.blend",
+    "model": "Assets/Story/Art/KKTC/Models/ShoePair.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/ShoePair.prefab",
+    "preview": "ClientExports/KKTC/Props/ShoePair.png"
+  },
+  {
+    "id": "Soap",
+    "triangles": 624,
+    "source": "ArtDirection/KKTC/Props/Soap.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Soap.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Soap.prefab",
+    "preview": "ClientExports/KKTC/Props/Soap.png"
+  },
+  {
+    "id": "ToyCar",
+    "triangles": 2824,
+    "source": "ArtDirection/KKTC/Props/ToyCar.blend",
+    "model": "Assets/Story/Art/KKTC/Models/ToyCar.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/ToyCar.prefab",
+    "preview": "ClientExports/KKTC/Props/ToyCar.png"
+  },
+  {
+    "id": "WalkingCane",
+    "triangles": 1752,
+    "source": "ArtDirection/KKTC/Props/WalkingCane.blend",
+    "model": "Assets/Story/Art/KKTC/Models/WalkingCane.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/WalkingCane.prefab",
+    "preview": "ClientExports/KKTC/Props/WalkingCane.png"
+  },
+  {
+    "id": "WaterBottle",
+    "triangles": 22456,
+    "source": "ArtDirection/KKTC/Props/WaterBottle.blend",
+    "model": "Assets/Story/Art/KKTC/Models/WaterBottle.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/WaterBottle.prefab",
+    "preview": "ClientExports/KKTC/Props/WaterBottle.png"
+  },
+  {
+    "id": "WetWipes",
+    "triangles": 616,
+    "source": "ArtDirection/KKTC/Props/WetWipes.blend",
+    "model": "Assets/Story/Art/KKTC/Models/WetWipes.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/WetWipes.prefab",
+    "preview": "ClientExports/KKTC/Props/WetWipes.png"
+  },
+  {
+    "id": "Whistle",
+    "triangles": 1600,
+    "source": "ArtDirection/KKTC/Props/Whistle.blend",
+    "model": "Assets/Story/Art/KKTC/Models/Whistle.fbx",
+    "prefab": "Assets/Story/Art/KKTC/Prefabs/Whistle.prefab",
+    "preview": "ClientExports/KKTC/Props/Whistle.png"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "role": "RescueWorker",
+  "source_fbx": "Meshy_AI_Character_output (2).fbx",
+  "height_m": 1.7999998613904609,
+  "bounds_min": [
+    -0.49570414423942566,
+    -0.24169927835464478,
+    9.092582331504673e-08
+  ],
+  "bounds_max": [
+    0.4957039952278137,
+    0.24169984459877014,
+    1.7999999523162842
+  ],
+  "triangles": 4344,
+  "vertices": 2221,
+  "base_color": "../GameReady/RescueWorker_BaseColor.png",
+  "exports": {
+    "blend": "../GameReady/RescueWorker.blend",
+    "fbx_unrigged": "../GameReady/RescueWorker_Unrigged.fbx",
+    "fbx_rigged": "../GameReady/RescueWorker_Rigged.fbx",
+    "obj": "../GameReady/RescueWorker.obj"
+  },
+  "previews": [
+    "../Preview/RescueWorker_Front_YMinus.png",
+    "../Preview/RescueWorker_Back_YPlus.png",
+    "../Preview/RescueWorker_Left_XMinus.png",
+    "../Preview/RescueWorker_ThreeQuarter.png",
+    "../Preview/RescueWorker_RigPreview.png"
+  ]
+}

@@ -1,0 +1,3309 @@
+{
+  "title": "Deprem",
+  "subtitle": "Birlikte hazırlanalım. Birlikte yol bulalım.",
+  "schemaVersion": 1,
+  "chapters": [
+    "Bizim mahalle",
+    "Hazır mıyız?",
+    "Güvenli ev",
+    "Sarsıntı",
+    "Birlikte dışarı",
+    "İdil’in görevi",
+    "Yardım noktası",
+    "Bizim sonumuz"
+  ],
+  "chapterMinutes": [
+    2,
+    5,
+    4,
+    4,
+    5,
+    4,
+    4,
+    2
+  ],
+  "flags": [
+    "FamilyPlan",
+    "FlashlightReady",
+    "RadioReady",
+    "WaterReady",
+    "FoodReady",
+    "AidReady",
+    "BlanketReady",
+    "ContactCard",
+    "WhistleReady",
+    "Comfort",
+    "BagReady",
+    "ShelfSecured",
+    "WardrobeSecured",
+    "ExitCleared",
+    "SiblingSupported",
+    "NeighborTogether",
+    "FacadeReported",
+    "FireAssisted",
+    "InfoVerified",
+    "Ending"
+  ],
+  "beats": [
+    {
+      "id": "welcome",
+      "chapter": 0,
+      "station": "living",
+      "title": "Efe’nin yanına git",
+      "line": "Efe: Uçurtmamızın kuyruğu nerede?",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Efe’ye yaklaş",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "kite_ribbon",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "kite_ribbon",
+      "chapter": 0,
+      "station": "living",
+      "title": "Kurdeleyi uçurtmaya tak",
+      "line": "Ada: Buldum! Birlikte uçuralım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kurdeleyi tak",
+          "model": "SafetyStrap",
+          "gesture": "drag",
+          "next": "family_photo",
+          "flags": "",
+          "target": "ComfortFox",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "family_photo",
+      "chapter": 0,
+      "station": "living",
+      "title": "Ailene katıl",
+      "line": "Derya: Önce mahalle planımıza bakalım.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Aileye yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "plan_choice",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "plan_choice",
+      "chapter": 0,
+      "station": "plan",
+      "title": "Buluşma yerini tanı",
+      "line": "Emre: Ayrılırsak bu işaretin yanında buluşalım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Planı dene",
+          "model": "FamilyCard",
+          "gesture": "tap",
+          "next": "plan_place",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Çantaya bak",
+          "model": "BackpackClosed",
+          "gesture": "tap",
+          "next": "bag_open",
+          "flags": "FamilyPlan=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "plan_place",
+      "chapter": 0,
+      "station": "plan",
+      "title": "Aile işaretini plana yerleştir",
+      "line": "Efe: Büyük turkuaz ağacı gördüm!",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "İşareti yerleştir",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "plan_rehearse",
+          "flags": "",
+          "target": "Plant",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "plan_rehearse",
+      "chapter": 0,
+      "station": "plan",
+      "title": "Efe’ye buluşma yerini göster",
+      "line": "Ada: Sen göster, ben takip edeyim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Birlikte göster",
+          "model": "Plant",
+          "gesture": "hold",
+          "next": "bag_open",
+          "flags": "FamilyPlan=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_open",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Çantayı aç",
+      "line": "Derya: Hazırladığımız şeyleri birlikte deneyelim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Fermuarı çek",
+          "model": "BackpackClosed",
+          "gesture": "drag",
+          "next": "flashlight_choice",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "flashlight_choice",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Feneri incele",
+      "line": "Efe: Işığı yanıyor mu?",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Pili kontrol et",
+          "model": "Flashlight",
+          "gesture": "tap",
+          "next": "flashlight_battery",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Çantaya koy",
+          "model": "Flashlight",
+          "gesture": "drag",
+          "next": "radio_choice",
+          "flags": "FlashlightReady=0",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "flashlight_battery",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Pili fenerin yuvasına yerleştir",
+      "line": "Ada: Pil yerinde. Şimdi deneyelim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Pili yerleştir",
+          "model": "Battery",
+          "gesture": "drag",
+          "next": "flashlight_test",
+          "flags": "",
+          "target": "Flashlight",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "flashlight_test",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Feneri çalıştır",
+      "line": "Efe: Işığı gördüm!",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Düğmeye bas",
+          "model": "Flashlight",
+          "gesture": "hold",
+          "next": "flashlight_pack",
+          "flags": "FlashlightReady=1",
+          "target": "Table",
+          "effect": "light_on",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "flashlight_pack",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Feneri dış cebe koy",
+      "line": "Ada: Gerektiğinde kolayca ulaşabiliriz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Cebe yerleştir",
+          "model": "Flashlight",
+          "gesture": "drag",
+          "next": "radio_choice",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "radio_choice",
+      "chapter": 1,
+      "station": "radio",
+      "title": "Radyoyu dene",
+      "line": "Emre: Bilgiyi nereden alacağımızı da düşünelim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Pilleri tak",
+          "model": "Battery",
+          "gesture": "drag",
+          "next": "radio_tune",
+          "flags": "",
+          "target": "Radio",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Sonra bakarız",
+          "model": "Radio",
+          "gesture": "drag",
+          "next": "water_find",
+          "flags": "RadioReady=0",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "radio_tune",
+      "chapter": 1,
+      "station": "radio",
+      "title": "Yayını bul",
+      "line": "Radyo: Mahalle hazırlık günü başladı.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Düğmeyi çevir",
+          "model": "Radio",
+          "gesture": "drag",
+          "next": "radio_test",
+          "flags": "",
+          "target": "Radio",
+          "effect": "radio_tune",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "radio_test",
+      "chapter": 1,
+      "station": "radio",
+      "title": "Yayını birlikte dinle",
+      "line": "Efe: Sesini şimdi duyabiliyorum.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Yayını doğrula",
+          "model": "Radio",
+          "gesture": "hold",
+          "next": "radio_pack",
+          "flags": "RadioReady=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "radio_pack",
+      "chapter": 1,
+      "station": "radio",
+      "title": "Radyoyu çantaya yerleştir",
+      "line": "Ada: Radyo da hazır.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Radyoyu yerleştir",
+          "model": "Radio",
+          "gesture": "drag",
+          "next": "water_find",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "water_find",
+      "chapter": 1,
+      "station": "kitchen",
+      "title": "Suyu seç",
+      "line": "Derya: Etiketine ve kapağına bakalım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu incele",
+          "model": "Water",
+          "gesture": "tap",
+          "next": "water_check",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Hızlıca yerleştir",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "food_pick",
+          "flags": "WaterReady=0",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "water_check",
+      "chapter": 1,
+      "station": "kitchen",
+      "title": "Tarih etiketini çevir",
+      "line": "Ada: Etiketi şimdi okuyabiliyoruz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Etiketi göster",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "water_seal",
+          "flags": "",
+          "target": "Water",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "water_seal",
+      "chapter": 1,
+      "station": "kitchen",
+      "title": "Kapağı kontrol et",
+      "line": "Efe: Bu şişenin kapağı kapalı.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kapağı incele",
+          "model": "Water",
+          "gesture": "hold",
+          "next": "water_pack",
+          "flags": "WaterReady=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "water_pack",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Suyu dik yerleştir",
+      "line": "Ada: Yan cebine sığdı.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu yerleştir",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "food_pick",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "food_pick",
+      "chapter": 1,
+      "station": "kitchen",
+      "title": "Kapalı yiyecek paketini seç",
+      "line": "Derya: Bozulmamış, kapalı paketi alalım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kapalı paket",
+          "model": "Food",
+          "gesture": "drag",
+          "next": "aid_choice",
+          "flags": "FoodReady=1",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Açık paket",
+          "model": "Parcel",
+          "gesture": "tap",
+          "next": "aid_choice",
+          "flags": "",
+          "target": "Table",
+          "effect": "unsafe_packet",
+          "safe": false
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "aid_choice",
+      "chapter": 1,
+      "station": "aid",
+      "title": "İlk yardım setine bak",
+      "line": "Ada: Paketin koruması sağlam mı?",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Mührü kontrol et",
+          "model": "Bandage",
+          "gesture": "hold",
+          "next": "aid_pack",
+          "flags": "AidReady=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Kontrol etmeden koy",
+          "model": "FirstAid",
+          "gesture": "drag",
+          "next": "blanket_pack",
+          "flags": "AidReady=0",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "aid_pack",
+      "chapter": 1,
+      "station": "aid",
+      "title": "Seti çantaya yerleştir",
+      "line": "Derya: Gerektiğinde bir yetişkin kullanacak.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Seti yerleştir",
+          "model": "FirstAid",
+          "gesture": "drag",
+          "next": "blanket_pack",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "blanket_pack",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Battaniyeyi katla",
+      "line": "Efe: Böyle daha az yer kaplıyor.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Battaniyeyi katla",
+          "model": "Blanket",
+          "gesture": "drag",
+          "next": "card_pack",
+          "flags": "BlanketReady=1",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "card_pack",
+      "chapter": 1,
+      "station": "plan",
+      "title": "Aile kartını güvenli cebe koy",
+      "line": "Emre: Gerekirse bu kartı görevliye gösterebilirsiniz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kartı yerleştir",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "whistle_find",
+          "flags": "ContactCard=1",
+          "target": "Documents",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "whistle_find",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Düdüğü Efe’ye ver",
+      "line": "Efe: Aile işaretimizi hatırlıyorum.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Düdüğü ver",
+          "model": "Whistle",
+          "gesture": "drag",
+          "next": "comfort_choice",
+          "flags": "WhistleReady=1",
+          "target": "ComfortFox",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "comfort_choice",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Efe’nin küçük eşyasını seç",
+      "line": "Efe: Tilkim ya da aile fotoğrafımız gelebilir.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Küçük tilki",
+          "model": "ComfortFox",
+          "gesture": "drag",
+          "next": "bag_balance",
+          "flags": "Comfort=1",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Aile fotoğrafı",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "bag_balance",
+          "flags": "Comfort=2",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_balance",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Çantayı dengeli yerleştir",
+      "line": "Ada: Ağır parçayı aşağıya alalım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu aşağı al",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "bag_close",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_close",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Çantanın fermuarını kapat",
+      "line": "Efe: Dış cebi açıkta kalmasın.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Fermuarı kapat",
+          "model": "BackpackOpen",
+          "gesture": "drag",
+          "next": "bag_lift",
+          "flags": "",
+          "target": "BackpackClosed",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_lift",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Çantayı kaldırıp dene",
+      "line": "Ada: Taşıyabiliyorum. Askısını da ayarlayayım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Çantayı kaldır",
+          "model": "BackpackClosed",
+          "gesture": "hold",
+          "next": "bag_fit",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_fit",
+      "chapter": 1,
+      "station": "bag",
+      "title": "Askıyı kendine göre ayarla",
+      "line": "Derya: Rahat taşıyabilmen önemli.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Askıyı çek",
+          "model": "SafetyStrap",
+          "gesture": "drag",
+          "next": "bag_stage",
+          "flags": "BagReady=1",
+          "target": "BackpackClosed",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_stage",
+      "chapter": 1,
+      "station": "door",
+      "title": "Çantayı çıkış yanına bırak",
+      "line": "Ada: Buradan kolayca alabiliriz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Rafa yerleştir",
+          "model": "BackpackClosed",
+          "gesture": "drag",
+          "next": "safety_look",
+          "flags": "",
+          "target": "Shelf",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "safety_look",
+      "chapter": 2,
+      "station": "living",
+      "title": "Odaya Efe’yle bak",
+      "line": "Efe: Çıkışa yürürken neler karşımıza çıkıyor?",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Yolu birlikte incele",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "exit_choice",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "exit_choice",
+      "chapter": 2,
+      "station": "door",
+      "title": "Geçiş yolunu kontrol et",
+      "line": "Ada: Ayakkabılar ve kutu yolu daraltıyor.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Yolu aç",
+          "model": "ShoePair",
+          "gesture": "tap",
+          "next": "exit_shoes",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Rafa bakalım",
+          "model": "Shelf",
+          "gesture": "tap",
+          "next": "shelf_choice",
+          "flags": "ExitCleared=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "exit_shoes",
+      "chapter": 2,
+      "station": "door",
+      "title": "Ayakkabıları yerine koy",
+      "line": "Efe: Şimdi burası daha geniş.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Ayakkabıları taşı",
+          "model": "ShoePair",
+          "gesture": "drag",
+          "next": "exit_box",
+          "flags": "",
+          "target": "Shelf",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "exit_box",
+      "chapter": 2,
+      "station": "door",
+      "title": "Hafif kutuyu kenara al",
+      "line": "Ada: Kapının önünü açık bırakalım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kutuyu taşı",
+          "model": "ToyBox",
+          "gesture": "drag",
+          "next": "exit_test",
+          "flags": "",
+          "target": "Shelf",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "exit_test",
+      "chapter": 2,
+      "station": "door",
+      "title": "Açılan yolu dene",
+      "line": "Efe: Birlikte rahatça geçebiliyoruz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Eşiğe yürü",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "shelf_choice",
+          "flags": "ExitCleared=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "shelf_choice",
+      "chapter": 2,
+      "station": "shelf",
+      "title": "Rafın çevresine bak",
+      "line": "Derya: Sabitlemeyi ben yapabilirim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Yetişkine haber ver",
+          "model": "Bracket",
+          "gesture": "tap",
+          "next": "shelf_books",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Dolaba bak",
+          "model": "Wardrobe",
+          "gesture": "tap",
+          "next": "wardrobe_choice",
+          "flags": "ShelfSecured=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "shelf_books",
+      "chapter": 2,
+      "station": "shelf",
+      "title": "Hafif kitapları aşağıya yerleştir",
+      "line": "Ada: Ağır işleri anneme bırakıyorum.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Hafif paketi taşı",
+          "model": "Documents",
+          "gesture": "drag",
+          "next": "shelf_bracket",
+          "flags": "",
+          "target": "Shelf",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "shelf_bracket",
+      "chapter": 2,
+      "station": "shelf",
+      "title": "Sabitleme parçasını Derya’ya ver",
+      "line": "Derya: Teşekkür ederim. Ben sabitliyorum.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Parçayı ver",
+          "model": "Bracket",
+          "gesture": "drag",
+          "next": "reading_corner",
+          "flags": "ShelfSecured=1",
+          "target": "FamilyCard",
+          "effect": "adult_secure",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "reading_corner",
+      "chapter": 2,
+      "station": "shelf",
+      "title": "Efe’nin minderini güvenli yere taşı",
+      "line": "Efe: Kitabımı burada okuyabilirim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Minderi taşı",
+          "model": "Cushion",
+          "gesture": "drag",
+          "next": "wardrobe_choice",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "wardrobe_choice",
+      "chapter": 2,
+      "station": "wardrobe",
+      "title": "Dolap için destek iste",
+      "line": "Emre: Bu dolaba birlikte müdahale etmeyelim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Emre’ye göster",
+          "model": "SafetyStrap",
+          "gesture": "tap",
+          "next": "wardrobe_strap",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Komşuya git",
+          "model": "WalkingCane",
+          "gesture": "tap",
+          "next": "neighbor_intro",
+          "flags": "WardrobeSecured=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "wardrobe_strap",
+      "chapter": 2,
+      "station": "wardrobe",
+      "title": "Kayışı yetişkine uzat",
+      "line": "Emre: Sabitlemeyi ben tamamlayacağım.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kayışı ver",
+          "model": "SafetyStrap",
+          "gesture": "drag",
+          "next": "wardrobe_space",
+          "flags": "WardrobeSecured=1",
+          "target": "FamilyCard",
+          "effect": "adult_secure",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "wardrobe_space",
+      "chapter": 2,
+      "station": "wardrobe",
+      "title": "Dolabın önünü boş bırak",
+      "line": "Ada: Efe’nin oyuncakları başka yerde durabilir.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Oyuncağı taşı",
+          "model": "ComfortFox",
+          "gesture": "drag",
+          "next": "neighbor_intro",
+          "flags": "",
+          "target": "ToyBox",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_intro",
+      "chapter": 2,
+      "station": "door",
+      "title": "Yusuf Amca’yı karşıla",
+      "line": "Yusuf: Merdivende gerektiğinde birbirimize haber verelim.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Kapıya yaklaş",
+          "model": "WalkingCane",
+          "gesture": "approach",
+          "next": "neighbor_cane",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_cane",
+      "chapter": 2,
+      "station": "door",
+      "title": "Bastonu Yusuf’a uzat",
+      "line": "Efe: Bastonun burada kalmış.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Bastonu uzat",
+          "model": "WalkingCane",
+          "gesture": "drag",
+          "next": "home_ready",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "home_ready",
+      "chapter": 2,
+      "station": "living",
+      "title": "Hazırlığını Efe’ye göster",
+      "line": "Ada: Hazırladıklarımızı artık nasıl kullanacağımızı biliyoruz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Birlikte bak",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "next_day",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "next_day",
+      "chapter": 3,
+      "station": "living",
+      "title": "Efe’nin yanına otur",
+      "line": "Ertesi gün. Efe: Tilkime bir ev yapalım mı?",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Masaya yaklaş",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "toy_build",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "next_day"
+    },
+    {
+      "id": "toy_build",
+      "chapter": 3,
+      "station": "table",
+      "title": "Küçük çatıyı yerleştir",
+      "line": "Ada: Bu parça buraya uyuyor.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Parçayı yerleştir",
+          "model": "Parcel",
+          "gesture": "drag",
+          "next": "crouch",
+          "flags": "",
+          "target": "ToyBox",
+          "effect": "quake_start",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "crouch",
+      "chapter": 3,
+      "station": "cover",
+      "title": "Olduğun yerde çök",
+      "line": "Ada: Efe, ben buradayım. Birlikte korunuyoruz.",
+      "role": "Ada",
+      "camera": "cover",
+      "actions": [
+        {
+          "label": "Çök",
+          "model": "Cushion",
+          "gesture": "swipe",
+          "next": "cover_head",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Kapıya koş",
+          "model": "FamilyCard",
+          "gesture": "tap",
+          "next": "cover_head",
+          "flags": "",
+          "target": "Table",
+          "effect": "unsafe_quake",
+          "safe": false
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "cover_head",
+      "chapter": 3,
+      "station": "cover",
+      "title": "Başını ve enseni koru",
+      "line": "Efe: Yanındayım.",
+      "role": "Ada",
+      "camera": "cover",
+      "actions": [
+        {
+          "label": "Başını koru",
+          "model": "ComfortFox",
+          "gesture": "swipe",
+          "next": "hold_table",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Pencereye git",
+          "model": "Water",
+          "gesture": "tap",
+          "next": "hold_table",
+          "flags": "",
+          "target": "Table",
+          "effect": "unsafe_quake",
+          "safe": false
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "hold_table",
+      "chapter": 3,
+      "station": "cover",
+      "title": "Masa ayağına tutun",
+      "line": "Ada: Sarsıntı bitene kadar buradayız.",
+      "role": "Ada",
+      "camera": "cover",
+      "actions": [
+        {
+          "label": "Tutun",
+          "model": "Table",
+          "gesture": "hold",
+          "next": "hold_after",
+          "flags": "",
+          "target": "Table",
+          "effect": "quake_hold",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "hold_after",
+      "chapter": 3,
+      "station": "cover",
+      "title": "Konumunu koru",
+      "line": "Efe: Masa hareket ediyor. Tutunmayı sürdürüyorum.",
+      "role": "Ada",
+      "camera": "cover",
+      "actions": [
+        {
+          "label": "Tutunmayı sürdür",
+          "model": "Table",
+          "gesture": "hold",
+          "next": "sibling_choice",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "quake_end"
+    },
+    {
+      "id": "sibling_choice",
+      "chapter": 3,
+      "station": "table",
+      "title": "Efe’yi kontrol et",
+      "line": "Efe: Biraz korktum.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Efe’yi dinle",
+          "model": "ComfortFox",
+          "gesture": "hold",
+          "next": "light_route",
+          "flags": "SiblingSupported=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Yolu birlikte incele",
+          "model": "FamilyCard",
+          "gesture": "tap",
+          "next": "light_route",
+          "flags": "SiblingSupported=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "light_route",
+      "chapter": 3,
+      "station": "living",
+      "title": "",
+      "line": "",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [],
+      "condition": "FlashlightReady",
+      "yes": "use_flashlight",
+      "no": "find_emergency_light",
+      "effect": ""
+    },
+    {
+      "id": "use_flashlight",
+      "chapter": 3,
+      "station": "bag",
+      "title": "Feneri dış cepten çıkar",
+      "line": "Ada: Önceden denediğimiz fener işe yarıyor.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Feneri çıkar",
+          "model": "Flashlight",
+          "gesture": "drag",
+          "next": "room_after",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "light_on",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "find_emergency_light",
+      "chapter": 3,
+      "station": "door",
+      "title": "Acil aydınlatmayı bul",
+      "line": "Efe: Kapının yanında bir ışık görüyorum.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Işığa yaklaş",
+          "model": "Flashlight",
+          "gesture": "approach",
+          "next": "emergency_light_on",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "emergency_light_on",
+      "chapter": 3,
+      "station": "door",
+      "title": "Acil ışığı kendine çevir",
+      "line": "Ada: Bu ışıkla önümüzü görebiliyoruz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Işığı yönelt",
+          "model": "Flashlight",
+          "gesture": "drag",
+          "next": "room_after",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "light_on",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "room_after",
+      "chapter": 3,
+      "station": "living",
+      "title": "Odadaki değişikliği incele",
+      "line": "Ada: Eşyaların çevresine dikkat edelim.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Geçişe bak",
+          "model": "Shelf",
+          "gesture": "approach",
+          "next": "exit_route",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "apply_damage"
+    },
+    {
+      "id": "exit_route",
+      "chapter": 3,
+      "station": "door",
+      "title": "",
+      "line": "",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [],
+      "condition": "ExitCleared",
+      "yes": "shoes_after",
+      "no": "exit_support",
+      "effect": ""
+    },
+    {
+      "id": "exit_support",
+      "chapter": 3,
+      "station": "door",
+      "title": "Güvenli taraftan yardım iste",
+      "line": "Derya: Ağır engeli ben kontrol edeceğim.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Yetişkine haber ver",
+          "model": "FamilyCard",
+          "gesture": "hold",
+          "next": "shoes_after",
+          "flags": "",
+          "target": "Table",
+          "effect": "adult_clear",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "shoes_after",
+      "chapter": 3,
+      "station": "door",
+      "title": "Ayakkabılarını giy",
+      "line": "Ada: Zemine dikkat ederek hazırlanıyoruz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Ayakkabıları giy",
+          "model": "ShoePair",
+          "gesture": "drag",
+          "next": "bag_after",
+          "flags": "",
+          "target": "Cushion",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bag_after",
+      "chapter": 3,
+      "station": "door",
+      "title": "Erişilebilir çantanı al",
+      "line": "Efe: Çanta çıkışın yanında.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Çantayı al",
+          "model": "BackpackClosed",
+          "gesture": "hold",
+          "next": "home_leave",
+          "flags": "",
+          "target": "Table",
+          "effect": "wear_bag",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "home_leave",
+      "chapter": 3,
+      "station": "door",
+      "title": "Kapıyı açıp çevreye bak",
+      "line": "Ada: Sarsıntı durdu. Çevremizi kontrol ediyoruz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Eşiğe yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "corridor",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "corridor",
+      "chapter": 4,
+      "station": "corridor",
+      "title": "Koridoru birlikte incele",
+      "line": "Efe: Merdiven işareti bu tarafta.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "İşarete yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "elevator",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "elevator",
+      "chapter": 4,
+      "station": "corridor",
+      "title": "Merdiven yolunu seç",
+      "line": "Ada: Merdiven işaretini takip edelim.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Merdivene yürü",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "landing",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Asansöre dokun",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "landing",
+          "flags": "",
+          "target": "Table",
+          "effect": "unsafe_elevator",
+          "safe": false
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "landing",
+      "chapter": 4,
+      "station": "stairs",
+      "title": "Sahanlığa dikkatle ilerle",
+      "line": "Efe: Birlikte gidelim.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Sahanlığa yürü",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "aftershock",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "aftershock",
+      "chapter": 4,
+      "station": "stairs",
+      "title": "Dur ve başını koru",
+      "line": "Ada: Yeniden sallanıyor. Olduğumuz yerde korunuyoruz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Korun",
+          "model": "Cushion",
+          "gesture": "hold",
+          "next": "stairs_check",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Koşmaya devam et",
+          "model": "ShoePair",
+          "gesture": "tap",
+          "next": "stairs_check",
+          "flags": "",
+          "target": "Table",
+          "effect": "unsafe_quake",
+          "safe": false
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "aftershock"
+    },
+    {
+      "id": "stairs_check",
+      "chapter": 4,
+      "station": "stairs",
+      "title": "Sarsıntı sonrası yolu kontrol et",
+      "line": "Ada: Önümüzdeki boş geçişi görüyorum.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Geçişi incele",
+          "model": "FamilyCard",
+          "gesture": "hold",
+          "next": "neighbor_choice",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_choice",
+      "chapter": 4,
+      "station": "neighbor",
+      "title": "Yusuf Amca’ya nasıl yardım edelim?",
+      "line": "Yusuf: Önce neye ihtiyacım olduğunu konuşalım.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Sor ve yanında kal",
+          "model": "WalkingCane",
+          "gesture": "tap",
+          "next": "neighbor_ask",
+          "flags": "NeighborTogether=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Görevliye haber ver",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "neighbor_report",
+          "flags": "NeighborTogether=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_ask",
+      "chapter": 4,
+      "station": "neighbor",
+      "title": "Yusuf Amca’yı dinle",
+      "line": "Yusuf: Bastonuma ulaşmam ve yolun açılması yeterli.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Birlikte konuş",
+          "model": "FamilyCard",
+          "gesture": "hold",
+          "next": "neighbor_light_box",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_light_box",
+      "chapter": 4,
+      "station": "neighbor",
+      "title": "Hafif kutuyu kenara taşı",
+      "line": "Ada: Ağır eşyalara dokunmadan yolu açıyorum.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Hafif kutuyu taşı",
+          "model": "Parcel",
+          "gesture": "drag",
+          "next": "neighbor_return_cane",
+          "flags": "",
+          "target": "ToyBox",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_return_cane",
+      "chapter": 4,
+      "station": "neighbor",
+      "title": "Bastonu Yusuf’a ver",
+      "line": "Yusuf: Teşekkür ederim. Birlikte ilerleyebiliriz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Bastonu ver",
+          "model": "WalkingCane",
+          "gesture": "drag",
+          "next": "building_exit",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_report",
+      "chapter": 4,
+      "station": "neighbor",
+      "title": "Yusuf’un yerini görevliye göster",
+      "line": "Bora: Ekibimiz ona destek olacak.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Konumu göster",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "neighbor_wait_ack",
+          "flags": "",
+          "target": "Radio",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "neighbor_wait_ack",
+      "chapter": 4,
+      "station": "neighbor",
+      "title": "Yardımın ulaştığını doğrula",
+      "line": "Ada: Görevli Yusuf Amca’nın yanında.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Görevliye bak",
+          "model": "Radio",
+          "gesture": "hold",
+          "next": "building_exit",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "building_exit",
+      "chapter": 4,
+      "station": "front",
+      "title": "Bina önünden açık alana ilerle",
+      "line": "Efe: Açık kaldırım bu tarafta.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Açık alana yürü",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "street_hazard",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "street_hazard",
+      "chapter": 4,
+      "station": "street",
+      "title": "Sokaktaki geçişleri incele",
+      "line": "Ada: O cephede gevşek bir parça görüyorum.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Görevliye göster",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "glass_boundary",
+          "flags": "FacadeReported=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Açık geçişi izle",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "glass_boundary",
+          "flags": "FacadeReported=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "glass_boundary",
+      "chapter": 4,
+      "station": "street",
+      "title": "Camlı sınırdan uzak geç",
+      "line": "Efe: Buradaki boş yolu kullanabiliriz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Açık yolu takip et",
+          "model": "Cone",
+          "gesture": "approach",
+          "next": "emergency_lane",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Camların yanına git",
+          "model": "Water",
+          "gesture": "tap",
+          "next": "emergency_lane",
+          "flags": "",
+          "target": "Table",
+          "effect": "unsafe_glass",
+          "safe": false
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "emergency_lane",
+      "chapter": 4,
+      "station": "street",
+      "title": "Ekiplerin geçişini açık bırak",
+      "line": "Ada: Araç yolunun dışından ilerliyoruz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Yaya tarafına geç",
+          "model": "Cone",
+          "gesture": "drag",
+          "next": "meet_idil",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "meet_idil",
+      "chapter": 4,
+      "station": "fire_entry",
+      "title": "Güvenli taraftaki İdil’e yaklaş",
+      "line": "İdil: Buradan gördüğünüzü anlatabilirsiniz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "İdil’e yaklaş",
+          "model": "HoseNozzle",
+          "gesture": "approach",
+          "next": "fire_report",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "fire_report",
+      "chapter": 5,
+      "station": "fire_entry",
+      "title": "Dumanın yerini göster",
+      "line": "Ada: Duman şu ahşap bölümden geliyor.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Bölümü işaret et",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "idil_role",
+          "flags": "",
+          "target": "Parcel",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "idil_role",
+      "chapter": 5,
+      "station": "fire",
+      "title": "İdil’in görevine katıl",
+      "line": "Şimdi İdil. Çocuklar güvenli alanda bekliyor.",
+      "role": "Idil",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Ekipmanını kontrol et",
+          "model": "HoseNozzle",
+          "gesture": "hold",
+          "next": "fire_hose",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "role_idil"
+    },
+    {
+      "id": "fire_hose",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Hortum bağlantısını kontrol et",
+      "line": "İdil: Ekibim güvenli müdahale alanını hazırladı.",
+      "role": "Idil",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Bağlantıyı kontrol et",
+          "model": "HoseNozzle",
+          "gesture": "drag",
+          "next": "fire_position",
+          "flags": "",
+          "target": "Radio",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "fire_position",
+      "chapter": 5,
+      "station": "fire",
+      "title": "İlk müdahale noktasına geç",
+      "line": "İdil: Önce bize yakın olan odağı kontrol ediyorum.",
+      "role": "Idil",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "İlk noktaya ilerle",
+          "model": "Cone",
+          "gesture": "approach",
+          "next": "fire_group_1",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "fire_group_1",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Suyu ilk odağa yönlendir",
+      "line": "İdil: Parmağını sürükle, suyu yönlendir.",
+      "role": "Idil",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu yönlendir",
+          "model": "HoseNozzle",
+          "gesture": "spray",
+          "next": "fire_reposition",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Ekiple birlikte",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "fire_assistance",
+          "flags": "FireAssisted=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "fire_1"
+    },
+    {
+      "id": "fire_reposition",
+      "chapter": 5,
+      "station": "fire",
+      "title": "İkinci noktaya geç",
+      "line": "İdil: İlk bölüm söndü. Konumumu değiştiriyorum.",
+      "role": "Idil",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "İkinci noktaya geç",
+          "model": "Cone",
+          "gesture": "approach",
+          "next": "fire_group_2",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "fire_group_2",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Yandaki odağı kontrol et",
+      "line": "İdil: Yeni açıdan daha iyi görebiliyorum.",
+      "role": "Idil",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu yönlendir",
+          "model": "HoseNozzle",
+          "gesture": "spray",
+          "next": "fire_inspect",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Ekiple birlikte",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "fire_assistance",
+          "flags": "FireAssisted=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "fire_2"
+    },
+    {
+      "id": "fire_inspect",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Kalan sıcak bölümü incele",
+      "line": "İdil: Son kontrolde küçük bir odak gördüm.",
+      "role": "Idil",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Bölümü kontrol et",
+          "model": "Flashlight",
+          "gesture": "hold",
+          "next": "fire_group_3",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "fire_group_3",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Son odağı söndür",
+      "line": "İdil: Ekibimle son kontrolü tamamlıyorum.",
+      "role": "Idil",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu yönlendir",
+          "model": "HoseNozzle",
+          "gesture": "spray",
+          "next": "fire_safe",
+          "flags": "FireAssisted=0",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Ekiple birlikte",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "fire_assistance",
+          "flags": "FireAssisted=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "fire_3"
+    },
+    {
+      "id": "fire_assistance",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Ekip arkadaşına alanı göster",
+      "line": "İdil: Birlikte tamamlıyoruz. Bu yol kontrol için kapalı.",
+      "role": "Idil",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kalan bölümü göster",
+          "model": "Radio",
+          "gesture": "drag",
+          "next": "fire_safe",
+          "flags": "",
+          "target": "Parcel",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "fire_team"
+    },
+    {
+      "id": "fire_safe",
+      "chapter": 5,
+      "station": "fire",
+      "title": "Müdahale sınırını işaretle",
+      "line": "İdil: Geçiş kararını ekip kontrolünden sonra veriyoruz.",
+      "role": "Idil",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Sınırı yerleştir",
+          "model": "Cone",
+          "gesture": "drag",
+          "next": "ada_return",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ada_return",
+      "chapter": 5,
+      "station": "fire_entry",
+      "title": "Efe’nin yanına dön",
+      "line": "Ada: Ekibin gösterdiği yoldan gidebiliriz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Efe’ye yaklaş",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "assembly_arrive",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "role_ada"
+    },
+    {
+      "id": "assembly_arrive",
+      "chapter": 6,
+      "station": "assembly",
+      "title": "Yardım noktasına ulaş",
+      "line": "Bora: Hoş geldiniz. Birlikte yardımcı olalım.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Bora’ya yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "bora_role",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "bora_role",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "İhtiyaçları birlikte belirle",
+      "line": "Şimdi Bora. Önce insanları dinliyoruz.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "İhtiyaçları dinle",
+          "model": "FamilyCard",
+          "gesture": "hold",
+          "next": "water_route",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "role_bora"
+    },
+    {
+      "id": "water_route",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "",
+      "line": "",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [],
+      "condition": "WaterReady",
+      "yes": "use_packed_water",
+      "no": "supply_water",
+      "effect": ""
+    },
+    {
+      "id": "use_packed_water",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Hazırlanan suyu teslim et",
+      "line": "Bora: Kontrol edilen şişe hazır.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu teslim et",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "blanket_help",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "supply_water",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Eksik suyu yardım noktasından al",
+      "line": "Bora: Buradaki kapalı şişeleri kullanabiliriz.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu raftan al",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "supply_water_deliver",
+          "flags": "",
+          "target": "BackpackOpen",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "supply_water_deliver",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Suyu ihtiyaç noktasına götür",
+      "line": "Bora: İhtiyacını sordum. Şişeyi ulaştırıyorum.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Suyu teslim et",
+          "model": "Water",
+          "gesture": "drag",
+          "next": "blanket_help",
+          "flags": "",
+          "target": "FamilyCard",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "blanket_help",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "İstenen battaniyeyi ulaştır",
+      "line": "Bora: Üşüyen komşumuza battaniye getirelim.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Battaniyeyi ver",
+          "model": "Blanket",
+          "gesture": "drag",
+          "next": "aid_route",
+          "flags": "",
+          "target": "Cushion",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "aid_route",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "",
+      "line": "",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [],
+      "condition": "AidReady",
+      "yes": "packed_aid",
+      "no": "supply_aid",
+      "effect": ""
+    },
+    {
+      "id": "packed_aid",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Hazır seti sağlık görevlisine ver",
+      "line": "Bora: Kapalı set sağlık görevlisinin masasına gidiyor.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Seti teslim et",
+          "model": "FirstAid",
+          "gesture": "drag",
+          "next": "family_lookup",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "supply_aid",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Sağlık masasından destek al",
+      "line": "Bora: Eksik malzemeyi görevliye bildiriyorum.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Görevliye göster",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "family_lookup",
+          "flags": "",
+          "target": "FirstAid",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "family_lookup",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Aile kartını kontrol et",
+      "line": "Bora: Adları ve aile işaretini birlikte doğrulayalım.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Aileyi eşleştir",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "radio_route",
+          "flags": "",
+          "target": "Documents",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "radio_route",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "",
+      "line": "",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [],
+      "condition": "RadioReady",
+      "yes": "packed_radio",
+      "no": "official_radio",
+      "effect": ""
+    },
+    {
+      "id": "packed_radio",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Hazırlanan radyodan bilgiyi dinle",
+      "line": "Radyo: Görevlilerin yönlendirmelerini takip ediniz.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Yayını dinle",
+          "model": "Radio",
+          "gesture": "hold",
+          "next": "verify_info",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "official_radio",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Görevli yayın noktasına git",
+      "line": "Bora: Resmî bilgiyi burada birlikte dinleyebiliriz.",
+      "role": "Bora",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Yayına yaklaş",
+          "model": "Radio",
+          "gesture": "approach",
+          "next": "official_broadcast",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "official_broadcast",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Görevli bilgisini dinle",
+      "line": "Bora: Duyduğumuz bilginin kaynağını kontrol ediyoruz.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Bilgiyi dinle",
+          "model": "Radio",
+          "gesture": "hold",
+          "next": "verify_info",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "verify_info",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Buluşma bilgisini doğrula",
+      "line": "Bora: Emin olmadığımız bilgiyi yeniden sorabiliriz.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kartla doğrula",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "group_route",
+          "flags": "InfoVerified=1",
+          "target": "Radio",
+          "effect": "",
+          "safe": true
+        },
+        {
+          "label": "Görevliye sor",
+          "model": "Radio",
+          "gesture": "tap",
+          "next": "ask_information",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ask_information",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Aile işaretini görevliye göster",
+      "line": "Bora: Şimdi bilgileri birlikte eşleştirdik.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "İşareti göster",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "group_route",
+          "flags": "InfoVerified=1",
+          "target": "Documents",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "group_route",
+      "chapter": 6,
+      "station": "aidpoint",
+      "title": "Aile grubuna yol göster",
+      "line": "Bora: Herkesin gideceği yer belli.",
+      "role": "Bora",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "İşareti yerleştir",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "ada_final",
+          "flags": "",
+          "target": "Plant",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "resolve_route"
+    },
+    {
+      "id": "ada_final",
+      "chapter": 6,
+      "station": "assembly",
+      "title": "Ada ve Efe’ye dön",
+      "line": "Ada: Ailemize birlikte ulaşacağız.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Efe’nin yanına git",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "ending_router",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "role_ada"
+    },
+    {
+      "id": "ending_router",
+      "chapter": 7,
+      "station": "assembly",
+      "title": "",
+      "line": "",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [],
+      "condition": "ENDING",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_detour_1",
+      "chapter": 7,
+      "station": "alternate",
+      "title": "Yeni güzergâh işaretini bul",
+      "line": "Bora: Kontrol edilen yeni alanda buluşuyoruz.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "İşarete yürü",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "ending_detour_2",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "ending_detour"
+    },
+    {
+      "id": "ending_detour_2",
+      "chapter": 7,
+      "station": "alternate",
+      "title": "Efe’yle aile grubuna katıl",
+      "line": "Efe: Annemle babamı gördüm!",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Birlikte yaklaş",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "ending_detour_3",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_detour_3",
+      "chapter": 7,
+      "station": "alternate",
+      "title": "Ailene ulaş",
+      "line": "Ada: Yol değişti, birbirimizi yine bulduk.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Ailene yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "finish",
+          "flags": "Ending=1",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_plan_1",
+      "chapter": 7,
+      "station": "assembly",
+      "title": "Tanıdığın aile işaretini bul",
+      "line": "Efe: Önceden birlikte baktığımız yer!",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "İşareti bul",
+          "model": "Plant",
+          "gesture": "approach",
+          "next": "ending_plan_2",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "ending_plan"
+    },
+    {
+      "id": "ending_plan_2",
+      "chapter": 7,
+      "station": "assembly",
+      "title": "Aile işaretinizi ver",
+      "line": "Ada: Buradayız!",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "İşareti ver",
+          "model": "Whistle",
+          "gesture": "hold",
+          "next": "ending_plan_3",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_plan_3",
+      "chapter": 7,
+      "station": "assembly",
+      "title": "Sözleştiğiniz yerde buluş",
+      "line": "Derya: Birlikte hazırladığımız plan işe yaradı.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Ailene yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "finish",
+          "flags": "Ending=2",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_neighbor_1",
+      "chapter": 7,
+      "station": "neighbor_final",
+      "title": "Yusuf Amca’yı dinle",
+      "line": "Yusuf: Ailenizi gördüm. Şu güvenli taraftalar.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Yusuf’a yaklaş",
+          "model": "WalkingCane",
+          "gesture": "approach",
+          "next": "ending_neighbor_2",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "ending_neighbor"
+    },
+    {
+      "id": "ending_neighbor_2",
+      "chapter": 7,
+      "station": "neighbor_final",
+      "title": "Komşunla birlikte ilerle",
+      "line": "Efe: Birbirimize yardım ederek geldik.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Birlikte yürü",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "ending_neighbor_3",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_neighbor_3",
+      "chapter": 7,
+      "station": "neighbor_final",
+      "title": "Ailene ve komşuna katıl",
+      "line": "Emre: Hepinizi bir arada görmek çok güzel.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Ailene yaklaş",
+          "model": "ComfortFox",
+          "gesture": "approach",
+          "next": "finish",
+          "flags": "Ending=3",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_signal_1",
+      "chapter": 7,
+      "station": "help_final",
+      "title": "Bora’ya aile kartını göster",
+      "line": "Ada: Ailemizi bulmak için yardım istiyoruz.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Kartı göster",
+          "model": "FamilyCard",
+          "gesture": "drag",
+          "next": "ending_signal_2",
+          "flags": "",
+          "target": "Radio",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "ending_signal"
+    },
+    {
+      "id": "ending_signal_2",
+      "chapter": 7,
+      "station": "help_final",
+      "title": "Görevli anonsunu birlikte dinle",
+      "line": "Bora: Aileniz bu buluşma noktasına geliyor.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Birlikte dinle",
+          "model": "Radio",
+          "gesture": "hold",
+          "next": "ending_signal_3",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "ending_signal_3",
+      "chapter": 7,
+      "station": "help_final",
+      "title": "Sesini duyan ailene ulaş",
+      "line": "Derya: Yardım isteyerek birbirimizi bulduk.",
+      "role": "Ada",
+      "camera": "wide",
+      "actions": [
+        {
+          "label": "Ailene yaklaş",
+          "model": "FamilyCard",
+          "gesture": "approach",
+          "next": "finish",
+          "flags": "Ending=4",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": ""
+    },
+    {
+      "id": "finish",
+      "chapter": 7,
+      "station": "assembly",
+      "title": "Senin yolun",
+      "line": "Ada: Hazırladıklarımız ve yardımlarımız yolumuzu değiştirdi.",
+      "role": "Ada",
+      "camera": "close",
+      "actions": [
+        {
+          "label": "Yolunu gör",
+          "model": "FamilyCard",
+          "gesture": "tap",
+          "next": "finish",
+          "flags": "",
+          "target": "Table",
+          "effect": "",
+          "safe": true
+        }
+      ],
+      "condition": "",
+      "yes": "",
+      "no": "",
+      "effect": "complete"
+    }
+  ],
+  "endings": [
+    "Yeni Yolda Birlikte",
+    "Söz Verdiğimiz Yerde",
+    "Komşu Eli",
+    "Sesimizi Duydular"
+  ]
+}

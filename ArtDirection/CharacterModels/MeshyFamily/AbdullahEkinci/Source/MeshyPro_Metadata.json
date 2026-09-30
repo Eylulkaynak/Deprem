@@ -1,0 +1,50 @@
+{
+  "role": "AbdullahEkinci",
+  "source_fbx": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Meshy_AI_Friendly_Businessman__0901112129_texture_fbx\\Meshy_AI_Friendly_Businessman__0901112129_texture.fbx",
+  "height_m": 1.8000837958898046,
+  "bounds_min": [
+    -0.6731143593788147,
+    -0.18574732542037964,
+    -3.4967764804605395e-05
+  ],
+  "bounds_max": [
+    0.6732730865478516,
+    0.18571321666240692,
+    1.800048828125
+  ],
+  "source_triangles": 3042385,
+  "triangles": 54999,
+  "vertices": 27482,
+  "materials": [
+    "Material.001"
+  ],
+  "images": [
+    {
+      "image": "base_color",
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Meshy_AI_Friendly_Businessman__0901112129_texture_fbx\\Meshy_AI_Friendly_Businessman__0901112129_texture.png"
+    },
+    {
+      "image": "normal",
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Meshy_AI_Friendly_Businessman__0901112129_texture_fbx\\Meshy_AI_Friendly_Businessman__0901112129_texture_normal.png"
+    },
+    {
+      "image": "texture_0_metallic.png",
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Meshy_AI_Friendly_Businessman__0901112129_texture_fbx\\Meshy_AI_Friendly_Businessman__0901112129_texture_metallic.png"
+    },
+    {
+      "image": "texture_0_roughness.png",
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Meshy_AI_Friendly_Businessman__0901112129_texture_fbx\\Meshy_AI_Friendly_Businessman__0901112129_texture_roughness.png"
+    }
+  ],
+  "exports": {
+    "blend": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\GameReady\\AbdullahEkinci_MeshyPro.blend",
+    "fbx": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\GameReady\\AbdullahEkinci_MeshyPro_Unrigged.fbx",
+    "obj": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\GameReady\\AbdullahEkinci_MeshyPro.obj"
+  },
+  "previews": [
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\Preview\\AbdullahEkinci_Front_YMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\Preview\\AbdullahEkinci_Back_YPlus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\Preview\\AbdullahEkinci_Left_XMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_download_0901112129\\Prepared55k\\Preview\\AbdullahEkinci_ThreeQuarter.png"
+  ]
+}

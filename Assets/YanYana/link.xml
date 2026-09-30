@@ -1,0 +1,7 @@
+<linker>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="Deprem.Minigames.FirefighterExtinguishManager" preserve="all" />
+    <type fullname="Deprem.Story.StorySiblingFollower" preserve="all" />
+    <type fullname="Deprem.Story.StoryPlayerMovement" preserve="all" />
+  </assembly>
+</linker>

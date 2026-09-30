@@ -1,0 +1,946 @@
+[
+  {
+    "id": "kite_ribbon",
+    "speaker": "Ada",
+    "text": "Buldum! Birlikte uçuralım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "family_photo",
+    "speaker": "Derya",
+    "text": "Önce mahalle planımıza bakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "welcome",
+    "speaker": "Efe",
+    "text": "Uçurtmamızın kuyruğu nerede?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "plan_choice",
+    "speaker": "Emre",
+    "text": "Ayrılırsak bu işaretin yanında buluşalım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "plan_place",
+    "speaker": "Efe",
+    "text": "Büyük turkuaz ağacı gördüm!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "plan_rehearse",
+    "speaker": "Ada",
+    "text": "Sen göster, ben takip edeyim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_open",
+    "speaker": "Derya",
+    "text": "Hazırladığımız şeyleri birlikte deneyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "flashlight_choice",
+    "speaker": "Efe",
+    "text": "Işığı yanıyor mu?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "flashlight_battery",
+    "speaker": "Ada",
+    "text": "Pil yerinde. Şimdi deneyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "flashlight_test",
+    "speaker": "Efe",
+    "text": "Işığı gördüm!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "flashlight_pack",
+    "speaker": "Ada",
+    "text": "Gerektiğinde kolayca ulaşabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "radio_choice",
+    "speaker": "Emre",
+    "text": "Bilgiyi nereden alacağımızı da düşünelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "radio_tune",
+    "speaker": "Radyo",
+    "text": "Mahalle hazırlık günü başladı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "radio_test",
+    "speaker": "Efe",
+    "text": "Sesini şimdi duyabiliyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "radio_pack",
+    "speaker": "Ada",
+    "text": "Radyo da hazır.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "water_find",
+    "speaker": "Derya",
+    "text": "Etiketine ve kapağına bakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "water_seal",
+    "speaker": "Efe",
+    "text": "Bu şişenin kapağı kapalı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "water_check",
+    "speaker": "Ada",
+    "text": "Etiketi şimdi okuyabiliyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "water_pack",
+    "speaker": "Ada",
+    "text": "Yan cebine sığdı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "aid_choice",
+    "speaker": "Ada",
+    "text": "Paketin koruması sağlam mı?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "food_pick",
+    "speaker": "Derya",
+    "text": "Bozulmamış, kapalı paketi alalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "aid_pack",
+    "speaker": "Derya",
+    "text": "Gerektiğinde bir yetişkin kullanacak.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "blanket_pack",
+    "speaker": "Efe",
+    "text": "Böyle daha az yer kaplıyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "whistle_find",
+    "speaker": "Efe",
+    "text": "Aile işaretimizi hatırlıyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "card_pack",
+    "speaker": "Emre",
+    "text": "Gerekirse bu kartı görevliye gösterebilirsiniz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "comfort_choice",
+    "speaker": "Efe",
+    "text": "Tilkim ya da aile fotoğrafımız gelebilir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_balance",
+    "speaker": "Ada",
+    "text": "Ağır parçayı aşağıya alalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_close",
+    "speaker": "Efe",
+    "text": "Dış cebi açıkta kalmasın.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_fit",
+    "speaker": "Derya",
+    "text": "Rahat taşıyabilmen önemli.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_lift",
+    "speaker": "Ada",
+    "text": "Taşıyabiliyorum. Askısını da ayarlayayım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_stage",
+    "speaker": "Ada",
+    "text": "Buradan kolayca alabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "safety_look",
+    "speaker": "Efe",
+    "text": "Çıkışa yürürken neler karşımıza çıkıyor?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "exit_choice",
+    "speaker": "Ada",
+    "text": "Ayakkabılar ve kutu yolu daraltıyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "exit_shoes",
+    "speaker": "Efe",
+    "text": "Şimdi burası daha geniş.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "exit_box",
+    "speaker": "Ada",
+    "text": "Kapının önünü açık bırakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "shelf_choice",
+    "speaker": "Derya",
+    "text": "Sabitlemeyi ben yapabilirim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "exit_test",
+    "speaker": "Efe",
+    "text": "Birlikte rahatça geçebiliyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "shelf_books",
+    "speaker": "Ada",
+    "text": "Ağır işleri anneme bırakıyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "shelf_bracket",
+    "speaker": "Derya",
+    "text": "Teşekkür ederim. Ben sabitliyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "reading_corner",
+    "speaker": "Efe",
+    "text": "Kitabımı burada okuyabilirim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "wardrobe_choice",
+    "speaker": "Emre",
+    "text": "Bu dolaba birlikte müdahale etmeyelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "wardrobe_space",
+    "speaker": "Ada",
+    "text": "Efe’nin oyuncakları başka yerde durabilir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "wardrobe_strap",
+    "speaker": "Emre",
+    "text": "Sabitlemeyi ben tamamlayacağım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_intro",
+    "speaker": "Yusuf",
+    "text": "Merdivende gerektiğinde birbirimize haber verelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_cane",
+    "speaker": "Efe",
+    "text": "Bastonun burada kalmış.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "next_day",
+    "speaker": "Ertesi gün. Efe",
+    "text": "Tilkime bir ev yapalım mı?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "home_ready",
+    "speaker": "Ada",
+    "text": "Hazırladıklarımızı artık nasıl kullanacağımızı biliyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "toy_build",
+    "speaker": "Ada",
+    "text": "Bu parça buraya uyuyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "crouch",
+    "speaker": "Ada",
+    "text": "Efe, ben buradayım. Birlikte korunuyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "cover_head",
+    "speaker": "Efe",
+    "text": "Yanındayım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "sibling_choice",
+    "speaker": "Efe",
+    "text": "Biraz korktum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "hold_table",
+    "speaker": "Ada",
+    "text": "Sarsıntı bitene kadar buradayız.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "hold_after",
+    "speaker": "Efe",
+    "text": "Masa hareket ediyor. Tutunmayı sürdürüyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "use_flashlight",
+    "speaker": "Ada",
+    "text": "Önceden denediğimiz fener işe yarıyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "find_emergency_light",
+    "speaker": "Efe",
+    "text": "Kapının yanında bir ışık görüyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "emergency_light_on",
+    "speaker": "Ada",
+    "text": "Bu ışıkla önümüzü görebiliyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "exit_support",
+    "speaker": "Derya",
+    "text": "Ağır engeli ben kontrol edeceğim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "room_after",
+    "speaker": "Ada",
+    "text": "Eşyaların çevresine dikkat edelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "shoes_after",
+    "speaker": "Ada",
+    "text": "Zemine dikkat ederek hazırlanıyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bag_after",
+    "speaker": "Efe",
+    "text": "Çanta çıkışın yanında.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "home_leave",
+    "speaker": "Ada",
+    "text": "Sarsıntı durdu. Çevremizi kontrol ediyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "corridor",
+    "speaker": "Efe",
+    "text": "Merdiven işareti bu tarafta.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "elevator",
+    "speaker": "Ada",
+    "text": "Merdiven işaretini takip edelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "landing",
+    "speaker": "Efe",
+    "text": "Birlikte gidelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "aftershock",
+    "speaker": "Ada",
+    "text": "Yeniden sallanıyor. Olduğumuz yerde korunuyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_choice",
+    "speaker": "Yusuf",
+    "text": "Önce neye ihtiyacım olduğunu konuşalım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "stairs_check",
+    "speaker": "Ada",
+    "text": "Önümüzdeki boş geçişi görüyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_ask",
+    "speaker": "Yusuf",
+    "text": "Bastonuma ulaşmam ve yolun açılması yeterli.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_light_box",
+    "speaker": "Ada",
+    "text": "Ağır eşyalara dokunmadan yolu açıyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_report",
+    "speaker": "Bora",
+    "text": "Ekibimiz ona destek olacak.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_return_cane",
+    "speaker": "Yusuf",
+    "text": "Teşekkür ederim. Birlikte ilerleyebiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "neighbor_wait_ack",
+    "speaker": "Ada",
+    "text": "Görevli Yusuf Amca’nın yanında.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "building_exit",
+    "speaker": "Efe",
+    "text": "Açık kaldırım bu tarafta.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "street_hazard",
+    "speaker": "Ada",
+    "text": "O cephede gevşek bir parça görüyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "glass_boundary",
+    "speaker": "Efe",
+    "text": "Buradaki boş yolu kullanabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "emergency_lane",
+    "speaker": "Ada",
+    "text": "Araç yolunun dışından ilerliyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "meet_idil",
+    "speaker": "İdil",
+    "text": "Buradan gördüğünüzü anlatabilirsiniz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_report",
+    "speaker": "Ada",
+    "text": "Duman şu ahşap bölümden geliyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "idil_role",
+    "speaker": "Idil",
+    "text": "Şimdi İdil. Çocuklar güvenli alanda bekliyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_hose",
+    "speaker": "İdil",
+    "text": "Ekibim güvenli müdahale alanını hazırladı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_position",
+    "speaker": "İdil",
+    "text": "Önce bize yakın olan odağı kontrol ediyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_group_1",
+    "speaker": "İdil",
+    "text": "Parmağını sürükle, suyu yönlendir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_reposition",
+    "speaker": "İdil",
+    "text": "İlk bölüm söndü. Konumumu değiştiriyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_group_2",
+    "speaker": "İdil",
+    "text": "Yeni açıdan daha iyi görebiliyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_group_3",
+    "speaker": "İdil",
+    "text": "Ekibimle son kontrolü tamamlıyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_inspect",
+    "speaker": "İdil",
+    "text": "Son kontrolde küçük bir odak gördüm.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_safe",
+    "speaker": "İdil",
+    "text": "Geçiş kararını ekip kontrolünden sonra veriyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ada_return",
+    "speaker": "Ada",
+    "text": "Ekibin gösterdiği yoldan gidebiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "fire_assistance",
+    "speaker": "İdil",
+    "text": "Birlikte tamamlıyoruz. Bu yol kontrol için kapalı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "assembly_arrive",
+    "speaker": "Bora",
+    "text": "Hoş geldiniz. Birlikte yardımcı olalım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "bora_role",
+    "speaker": "Bora",
+    "text": "Şimdi Bora. Önce insanları dinliyoruz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "use_packed_water",
+    "speaker": "Bora",
+    "text": "Kontrol edilen şişe hazır.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "supply_water",
+    "speaker": "Bora",
+    "text": "Buradaki kapalı şişeleri kullanabiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "blanket_help",
+    "speaker": "Bora",
+    "text": "Üşüyen komşumuza battaniye getirelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "supply_water_deliver",
+    "speaker": "Bora",
+    "text": "İhtiyacını sordum. Şişeyi ulaştırıyorum.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "packed_aid",
+    "speaker": "Bora",
+    "text": "Kapalı set sağlık görevlisinin masasına gidiyor.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "supply_aid",
+    "speaker": "Bora",
+    "text": "Eksik malzemeyi görevliye bildiriyorum.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "family_lookup",
+    "speaker": "Bora",
+    "text": "Adları ve aile işaretini birlikte doğrulayalım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "packed_radio",
+    "speaker": "Radyo",
+    "text": "Görevlilerin yönlendirmelerini takip ediniz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "official_radio",
+    "speaker": "Bora",
+    "text": "Resmî bilgiyi burada birlikte dinleyebiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "official_broadcast",
+    "speaker": "Bora",
+    "text": "Duyduğumuz bilginin kaynağını kontrol ediyoruz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "verify_info",
+    "speaker": "Bora",
+    "text": "Emin olmadığımız bilgiyi yeniden sorabiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ask_information",
+    "speaker": "Bora",
+    "text": "Şimdi bilgileri birlikte eşleştirdik.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "group_route",
+    "speaker": "Bora",
+    "text": "Herkesin gideceği yer belli.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ada_final",
+    "speaker": "Ada",
+    "text": "Ailemize birlikte ulaşacağız.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_detour_2",
+    "speaker": "Efe",
+    "text": "Annemle babamı gördüm!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_detour_1",
+    "speaker": "Bora",
+    "text": "Kontrol edilen yeni alanda buluşuyoruz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_detour_3",
+    "speaker": "Ada",
+    "text": "Yol değişti, birbirimizi yine bulduk.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_plan_2",
+    "speaker": "Ada",
+    "text": "Buradayız!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_plan_1",
+    "speaker": "Efe",
+    "text": "Önceden birlikte baktığımız yer!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_plan_3",
+    "speaker": "Derya",
+    "text": "Birlikte hazırladığımız plan işe yaradı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_neighbor_2",
+    "speaker": "Efe",
+    "text": "Birbirimize yardım ederek geldik.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_neighbor_1",
+    "speaker": "Yusuf",
+    "text": "Ailenizi gördüm. Şu güvenli taraftalar.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_neighbor_3",
+    "speaker": "Emre",
+    "text": "Hepinizi bir arada görmek çok güzel.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_signal_2",
+    "speaker": "Bora",
+    "text": "Aileniz bu buluşma noktasına geliyor.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_signal_1",
+    "speaker": "Ada",
+    "text": "Ailemizi bulmak için yardım istiyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "finish",
+    "speaker": "Ada",
+    "text": "Hazırladıklarımız ve yardımlarımız yolumuzu değiştirdi.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "id": "ending_signal_3",
+    "speaker": "Derya",
+    "text": "Yardım isteyerek birbirimizi bulduk.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  }
+]

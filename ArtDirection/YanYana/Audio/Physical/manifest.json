@@ -1,0 +1,856 @@
+[
+  {
+    "key": "physical_58ed2cdce19b",
+    "line": "Ada: Acil ışık burada. Çıkış yolunu görebiliyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_89362cf5b0c3",
+    "line": "Ada: Aile kartımız yanımızda. İki bilgiyi karşılaştıralım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_4d4ab0049908",
+    "line": "Ada: Başımı koruyorum. Diğer elimle masanın ayağına tutunacağım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_5e2d456eaca3",
+    "line": "Ada: Başımız korunuyor. Masanın ayağına tutunuyoruz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d9f0494ae99b",
+    "line": "Ada: Başımızı koruyalım. Sarsıntının geçmesini bekleyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_6686caa9e51f",
+    "line": "Ada: Birbirimizi kontrol ettik. Şimdi çıkışa bakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d23309346fdb",
+    "line": "Ada: Bunu birlikte sabitleyelim mi? Derya: Ben hallederim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_13bc11d7bee3",
+    "line": "Ada: Camdan uzak duralım. Yakındaki masada korunalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_96cf91e35933",
+    "line": "Ada: Cepheden parçalar düşmüş. Görevli: Alternatif yolu işaretliyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c4b985d8c1cb",
+    "line": "Ada: Denediğimiz radyo yanımızda. Resmî duyuruyu birlikte dinleyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_39bf31f04f9b",
+    "line": "Ada: Elimi başımın üzerine götürüyorum. Efe de benimle korunuyor.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_186e577eb769",
+    "line": "Ada: Eşyayı seçip çevirelim. Boş bölmelere yerleştirelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_34f2d9b30b47",
+    "line": "Ada: Görevliye yerinizi söyleyeceğim. Yusuf: Burada güvenle beklerim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_aa52c7851e9d",
+    "line": "Ada: Hafifmiş. İki tutamağından kavrayabilirim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_2d3031c53139",
+    "line": "Ada: Kapının yanındaki acil ışığı kontrol edeyim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f049fdbca619",
+    "line": "Ada: Kutu sığmıyor. Çevirebilir veya geniş taraftan geçebilirim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_21f6d709eb98",
+    "line": "Ada: Kutuyu ellerime doğru yaklaştırmalıyım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_5ddf469d7f69",
+    "line": "Ada: Kutuyu tutamaklarından kendime doğru sürüklemeliyim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_fc6f8e70329d",
+    "line": "Ada: Kutuyu yana sürükleyerek çevir. İstersen minderlerin üst tarafından dolaş.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b4b60d0ea358",
+    "line": "Ada: Sarsıntı başladı! Yakınımızda güvenle korunmalıyız.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_105bf19be0f4",
+    "line": "Ada: Sarsıntı durdu. Efe, iyi misin?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_a64be9cc9704",
+    "line": "Ada: Sarsıntı durdu. Merdivenleri kontrol ederek ilerleyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_ae37c3fb9443",
+    "line": "Ada: Sarsıntıda çıkışa koşmayalım. Yakında korunalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_3fc009a2869a",
+    "line": "Ada: Yardım ister misiniz? Yusuf: Önce geçişi açabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_bf236d3a9fa8",
+    "line": "Ada: Yardım noktası ileride. Bora’yla konuşalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_95fc58b47a40",
+    "line": "Ada: Yeniden sallanıyor! Burada durup korunalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_e2cb1c8e7f9f",
+    "line": "Ada: Çanta kapalı. İki askıyla rahat yürüyebiliyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_9e912456a8b2",
+    "line": "Ada: Çantadaki su kapalı. Yiyeceği de kontrol edelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c71d70143375",
+    "line": "Ada: Çevirmek için biraz daha boş yer bulmalıyım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_25c7d6b48ddc",
+    "line": "Ada: Önce Efe’yi kontrol edip ışık bulalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_3a490f93c8f3",
+    "line": "Ada: Önce birbirimizi ve güvenli çıkışı kontrol edelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f45535f08fa2",
+    "line": "Ada: Önce çökelim. Sonra başımızı ve ensemizi koruyalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_1d40d1d0a466",
+    "line": "Ada: İşaretli elimizi Efe’nin uzattığı ele götürelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_a1b073ddb022",
+    "line": "Bora: Aileyi ve buluşma işaretini birlikte doğrulayalım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_8b674ee12321",
+    "line": "Bora: Doğru masa burada. Görevli sizi karşılayacak.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_0e8acd32a74f",
+    "line": "Bora: Doğruladığımız bilgilerle anons yaptık. Aileniz geliyor.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7536c98d018c",
+    "line": "Bora: Duyuru net değil. Frekansı ayarlayıp yeniden dinleyelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_48c89228792e",
+    "line": "Bora: Görevli alıcısını kullanabiliriz. Önce yayını netleştirelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_438f39becec2",
+    "line": "Bora: Görevli kaydını açtım. Bilgileri birlikte doğrulayabiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_31b275b6376c",
+    "line": "Bora: Kapalı su ve uygun yiyeceği masadan alabiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_23054b278ae9",
+    "line": "Bora: Kartı aç. Aileyi ve ağaç işaretini eşleştir.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_95955f061c07",
+    "line": "Bora: Kişinin ihtiyacıyla masa simgesi aynı olmalı.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_38d35dc804e0",
+    "line": "Bora: Resimleri yan yana karşılaştıralım. İkisi de aynı olmalı.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b65eeced6e70",
+    "line": "Bora: Resmî yayını bul. Sonra dinleme düğmesini kullan.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_e08e10c98687",
+    "line": "Bora: Suyu mindere, yiyeceği tabağa ulaştır.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d656e8f79d6f",
+    "line": "Bora: Önce dinleyelim. İhtiyaç işaretini uygun masaya götürelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_af4f6bdc92e5",
+    "line": "Bora: İhtiyacı yeniden dinleyelim. Masanın simgesini karşılaştıralım.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_a7277a7b4cad",
+    "line": "Bora: İki bilgi de eşleşti. Ailenizden haber aldık!",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_afbfdbac9479",
+    "line": "Bora: İşaretleri izledin. Ailen yeni toplanma alanında.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f271e37b8457",
+    "line": "Derya: Aile taşını açık yoldan büyük ağaca götür.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_2b7b31cc68c1",
+    "line": "Derya: Ambalajı çevir",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_ec0d92c638b4",
+    "line": "Derya: Ambalajı çevir. Tarihi ve açık olup olmadığını karşılaştır.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c04fd5aab404",
+    "line": "Derya: Fermuarı kapat. İki askıyı da rahatça ayarla.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7973685cf65c",
+    "line": "Derya: Fermuarın izini",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c4cc64572758",
+    "line": "Derya: Fermuarın izini takip et. Askıları çizgili yere getir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f453c151e5ff",
+    "line": "Derya: Kapağı ve tarihi kontrol et. Kapalı şişeyi seçelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_cdf6f0e339b6",
+    "line": "Derya: Malzemeleri düzenli kontrol edelim. Beraber karşılaştırabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c5e8e9a1f257",
+    "line": "Derya: Paketi ve tarihi kontrol et. Yırtık paketi kullanmayalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f2be31be3f9d",
+    "line": "Derya: Sabitlendi. Sen hafif eşyaları düzenleyebilirsin.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_2b6150861232",
+    "line": "Derya: Yan yanayız. Hazırlıklarımızı ve yardımlarımızı birlikte hatırlayalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_708d36434622",
+    "line": "Derya: Çanta kapandı. Askılar iki omzunda da rahat dursun.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_1260bbf76555",
+    "line": "Derya: Çantayı evde deneyelim. İki askını da kullan.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_9a570d2d61e7",
+    "line": "Derya: Çizgili bölgeyi dene. Askı rahatça oturmalı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_e6b7aed148a4",
+    "line": "Efe: Ada! Oyun yerimi hazırlıyorum. Yanıma gelir misin?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_a00130fe5f0c",
+    "line": "Efe: Açık geçişleri izleyerek birlikte yürüyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_02719b4ec48c",
+    "line": "Efe: Ağacı hatırlıyorum! Birlikte o yolu denemiştik.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_4d8a9f421373",
+    "line": "Efe: Ağaç işaretli yer! Kutuyu oraya bırakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_73f689c1b25f",
+    "line": "Efe: Başının üzerini koruyalım. Eli biraz daha yaklaştır.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f321aa257ca6",
+    "line": "Efe: Birlikteyiz. Çıkış yoluna beraber bakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_120924263a87",
+    "line": "Efe: Burada başka eşya var. Çevirip deneyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_2caf7082b569",
+    "line": "Efe: Büyük ağacın yanında buluşacağız. Yolu öğrendim!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d1cb1166019c",
+    "line": "Efe: Cızırtı var. Düğmeyi yavaşça döndür.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f5975ee0a143",
+    "line": "Efe: Denediğimiz fener çantadaydı. Yolumuz aydınlandı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_712194780ade",
+    "line": "Efe: Düğmeyi döndür. Göstergeyi ve yayını izle.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_2391d1029ec8",
+    "line": "Efe: Düğmeyi yavaş döndür. Cızırtının azaldığı yeri bul.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_13eaf00b654d",
+    "line": "Efe: Elim burada. Biraz daha yaklaştırabilirsin.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_8c6dd20be168",
+    "line": "Efe: Etrafımıza bakalım. Bir nesneye yaklaşarak başlayabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_98747140a43b",
+    "line": "Efe: Eşyaları deneyelim. Sonra çantaya sığdıralım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c8be543413a8",
+    "line": "Efe: Işık yandı! Pillerin yönü önemliymiş.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_159f7cd27a66",
+    "line": "Efe: Işık yanmadı. Pil yönlerine bakalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7b1bcc983dbf",
+    "line": "Efe: Kaldığımız yerden birlikte devam edebiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_4b4396bdd9de",
+    "line": "Efe: Kapağı aç. Pillerin yönünü incele.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_08084042462f",
+    "line": "Efe: Kapının yanındaki acil ışığı görüyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_16ade92df75e",
+    "line": "Efe: Küçük tilki karşıya geçemiyor. Köprü kurabilir miyiz?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_0fe6b55a6007",
+    "line": "Efe: Masadaki şekle uymadı. Kutuyu yana çevir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c6622369764c",
+    "line": "Efe: Masanın ayağına uzanalım. Buradan tutunabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_bd0a366428f6",
+    "line": "Efe: Minderlerin arasından mı, geniş taraftan mı geçelim?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_c273f7c7d4cc",
+    "line": "Efe: Oyun yerimiz hazır! Köprüyü hazırlıklardan sonra kurarız.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_39dbcbb73204",
+    "line": "Efe: Pil, boş yatağın içine oturmalı.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d37d5dbf9f52",
+    "line": "Efe: Pillerin artı uçlarını yuvadaki işaretlerle karşılaştıralım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b9eee19a8abc",
+    "line": "Efe: Suyum geldi. Yiyeceği de kontrol edelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b86488c1c645",
+    "line": "Efe: Tahtaları suyun iki kıyısı arasına yerleştirelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_13db27ce6e1d",
+    "line": "Efe: Teşekkür ederim. Şimdi ailemizi birlikte bulalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7967d5c593e6",
+    "line": "Efe: Tilki geçti! Birlikte başardık.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_817a5e068394",
+    "line": "Efe: Uçurtmamızın kuyruğu nerede?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_4f550593637c",
+    "line": "Efe: Yanımdaki zemine dokun. Birlikte oyun yerini hazırlayalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_e95e48b770ed",
+    "line": "Efe: Yeniden sallanıyor! Merdivene devam etmeyelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_93ff802caf17",
+    "line": "Efe: Çevirerek deneyelim. Üst üste gelmesinler.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_8322b847bc35",
+    "line": "Efe: Çıkıştaki acil ışığı bulabiliriz.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_4d16b7a2edaa",
+    "line": "Efe: Üç tahtayı suyun üzerine yan yana yerleştir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b8da097eb86e",
+    "line": "Efe: İtfaiye ekibi burada. Güvenli taraftan yaklaşalım.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_32d9e468ba1b",
+    "line": "Efe: İyiyim. Biraz korktum. Elimi tutar mısın?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7456649f39f7",
+    "line": "Efe: İşareti yerleştirdim. Sen de ailemizin resimlerini karşılaştır.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_e961390fb791",
+    "line": "Efe: İşte büyük ağaç! Birlikte denediğimiz yeri bulduk.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_3afc5ac3db92",
+    "line": "Efe: Şimdi kapıya kadar yol açık!",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d41784bd0d75",
+    "line": "Emre: Aile taşını yan yana açık karelerden geçir.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_d099451e3c70",
+    "line": "Emre: Binalardan uzak, açık geçişi deneyelim.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7567c739eba9",
+    "line": "Komşu: Ailemden haber alamadım. Kiminle görüşebilirim?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b9e0d97cca79",
+    "line": "Komşu: Sağlık ekibine danışmak istiyorum. Hangi masa?",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_41fc75994003",
+    "line": "Komşu: Susadım. Biraz dinlenebileceğim bir yer arıyorum.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_7cd560d7aff3",
+    "line": "Radyo: Aile bilgileri yardım masasından doğrulanıyor. Görevliye başvurun.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_2ea4754b5a60",
+    "line": "Radyo: Resmî duyuruları dinleyin. Toplanma alanına güvenle ilerleyin.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_a4d85a678bec",
+    "line": "Yusuf: Ailenizi görüyorum. Şu ağacın yanında bekliyorlar.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_f74acd56e1f7",
+    "line": "Yusuf: Teşekkür ederim. Kutuyu yolun dışına koyabiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_77836b8a4592",
+    "line": "Yusuf: Şimdi birlikte, kendi hızımızda ilerleyebiliriz.",
+    "voice": "tr-TR-AhmetNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_3da365919357",
+    "line": "İdil: Bağlantı oturdu. Şimdi vanayı çevirelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b0c40e0656ca",
+    "line": "İdil: Bağlantıyı oturt. Sonra kırmızı vanayı çevir.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_b461a6bdc8fb",
+    "line": "İdil: Kontrol tamam. Yardım noktasına güvenli geçişi izleyin.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_0bcc70f4c6ec",
+    "line": "İdil: Siz güvenli noktada kalın. Müdahaleyi ekibimiz yapacak.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_e89af1fcb227",
+    "line": "İdil: Yeni konumdayız. Her odağı dikkatle kontrol edelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_a9517a44f20a",
+    "line": "İdil: Önce bağlantıyı oturtalım. Sonra vanayı çevirelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  },
+  {
+    "key": "physical_25790882837d",
+    "line": "Efe: Kutum kapının yanındaki sehpada. Masaya birlikte götürelim.",
+    "voice": "tr-TR-EmelNeural",
+    "synthetic": true,
+    "ready": true
+  }
+]
