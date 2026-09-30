@@ -1,0 +1,136 @@
+{
+  "role": "AbdullahEkinci",
+  "source": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\AbdullahEkinci_01a05c85.glb",
+  "height_m": 1.7999999523162842,
+  "bounds_min": [
+    -0.5501739382743835,
+    -0.21578463912010193,
+    0.0
+  ],
+  "bounds_max": [
+    0.5501739382743835,
+    0.21578466892242432,
+    1.7999999523162842
+  ],
+  "vertices": 10855,
+  "triangles": 15118,
+  "materials": [
+    "material",
+    "AbdullahEkinci_ShirtPatch"
+  ],
+  "cleanup": {
+    "components": [
+      78,
+      79,
+      185,
+      281
+    ],
+    "removed_faces": 7,
+    "patch_center": [
+      0.44669613242149353,
+      -0.20259635150432587,
+      0.570286214351654
+    ],
+    "filled_hole_edges": 12,
+    "filled_faces": 10,
+    "details": [
+      {
+        "component": 78,
+        "faces": 2,
+        "min": [
+          0.39504364132881165,
+          -0.19971922039985657,
+          0.5639382004737854
+        ],
+        "max": [
+          0.5029603838920593,
+          -0.151132270693779,
+          0.5898187160491943
+        ]
+      },
+      {
+        "component": 79,
+        "faces": 1,
+        "min": [
+          0.39504364132881165,
+          -0.19581273198127747,
+          0.5639382004737854
+        ],
+        "max": [
+          0.5029603838920593,
+          -0.151132270693779,
+          0.5898187160491943
+        ]
+      },
+      {
+        "component": 185,
+        "faces": 2,
+        "min": [
+          0.3769761323928833,
+          -0.151132270693779,
+          0.5639382004737854
+        ],
+        "max": [
+          0.5029603838920593,
+          -0.13172191381454468,
+          0.7773301601409912
+        ]
+      },
+      {
+        "component": 281,
+        "faces": 2,
+        "min": [
+          0.38625404238700867,
+          -0.151132270693779,
+          0.5639382004737854
+        ],
+        "max": [
+          0.5029603838920593,
+          -0.13172191381454468,
+          0.7753769159317017
+        ]
+      }
+    ]
+  },
+  "textures": [
+    {
+      "name": "base_color",
+      "roles": [
+        "BaseColor"
+      ],
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\GameReady\\Textures\\AbdullahEkinci_BaseColor.png",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "metallic_roughness",
+      "roles": [
+        "Metallic",
+        "Roughness"
+      ],
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\GameReady\\Textures\\AbdullahEkinci_MetallicRoughness.png",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "normal",
+      "roles": [
+        "Normal"
+      ],
+      "path": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\GameReady\\Textures\\AbdullahEkinci_Normal.png",
+      "width": 2048,
+      "height": 2048
+    }
+  ],
+  "exports": {
+    "blend": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\GameReady\\AbdullahEkinci_MeshyPro.blend",
+    "fbx": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\GameReady\\AbdullahEkinci_MeshyPro_Unrigged.fbx",
+    "obj": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\GameReady\\AbdullahEkinci_MeshyPro.obj"
+  },
+  "previews": [
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\Preview\\AbdullahEkinci_Front_YMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\Preview\\AbdullahEkinci_Back_YPlus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\Preview\\AbdullahEkinci_Left_XMinus.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\.codex_tmp\\abdullah_meshy_pro\\prepared_closed\\Preview\\AbdullahEkinci_ThreeQuarter.png"
+  ]
+}

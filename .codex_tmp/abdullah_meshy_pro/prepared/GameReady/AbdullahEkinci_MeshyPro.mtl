@@ -1,0 +1,13 @@
+# Blender 5.2.0 LTS MTL File: 'None'
+# www.blender.org
+
+newmtl material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd -o 2.3e-05 -15.00313 0 -s 15.863134 16.003103 1 AbdullahEkinci_BaseColor.png
+map_Bump -o 2.3e-05 -15.00313 0 -s 15.863134 16.003103 1 -bm 1.000000 AbdullahEkinci_Normal.png
