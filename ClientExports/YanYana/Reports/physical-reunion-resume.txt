@@ -1,0 +1,5 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+PASS arrival autosaved without an extra checkpoint call; children separation=0.8384711
+PASS saved gesture restored with the correct goal.
+PASS paused greeting restarted and reached the same ending without another gesture.
+PASS complete

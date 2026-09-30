@@ -1,0 +1,29 @@
+00:01.421  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Ada.blend"
+Ada neutral 1.2013700229374393e-07 arm deformation {'LeftUpperArm': 0.10208140146566799, 'RightUpperArm': 0.09209626385347866, 'RightLowerArm': 0.06227009273956954}
+00:01.718  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Asli.blend"
+Asli neutral 1.341104507446289e-07 arm deformation {'LeftUpperArm': 0.11434227452743354, 'RightUpperArm': 0.10825091529750044, 'RightLowerArm': 0.056991997938121944}
+00:01.828  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Bora.blend"
+Bora neutral 1.341104507446289e-07 arm deformation {'LeftUpperArm': 0.12035549228982212, 'RightUpperArm': 0.11687325733141729, 'RightLowerArm': 0.050740810056277244}
+00:01.953  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Deniz.blend"
+Deniz neutral 1.4975481660844222e-07 arm deformation {'LeftUpperArm': 0.13691893933150184, 'RightUpperArm': 0.13712499322530644, 'RightLowerArm': 0.06560476941574657}
+00:02.140  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Derya.blend"
+Derya neutral 1.341104507446289e-07 arm deformation {'LeftUpperArm': 0.11434227452743354, 'RightUpperArm': 0.10825091529750044, 'RightLowerArm': 0.056991997938121944}
+00:02.421  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Efe.blend"
+Efe neutral 1.192383898293914e-07 arm deformation {'LeftUpperArm': 0.0979919977107769, 'RightUpperArm': 0.0949860890705529, 'RightLowerArm': 0.050503237006396105}
+00:02.734  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Emre.blend"
+Emre neutral 1.4975481660844222e-07 arm deformation {'LeftUpperArm': 0.13691893933150184, 'RightUpperArm': 0.13712499322530644, 'RightLowerArm': 0.06560476941574657}
+00:02.984  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Gul.blend"
+Gul neutral 1.341104507446289e-07 arm deformation {'LeftUpperArm': 0.11434227452743354, 'RightUpperArm': 0.10825091529750044, 'RightLowerArm': 0.056991997938121944}
+00:03.125  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Idil.blend"
+Idil neutral 1.2310379476739693e-07 arm deformation {'LeftUpperArm': 0.15463476309339597, 'RightUpperArm': 0.14985736918179068, 'RightLowerArm': 0.08869912130924863}
+00:03.312  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Mert.blend"
+Mert neutral 1.4975481660844222e-07 arm deformation {'LeftUpperArm': 0.13691893933150184, 'RightUpperArm': 0.13712499322530644, 'RightLowerArm': 0.06560476941574657}
+00:03.562  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Ozan.blend"
+Ozan neutral 1.4975481660844222e-07 arm deformation {'LeftUpperArm': 0.13691893933150184, 'RightUpperArm': 0.13712499322530644, 'RightLowerArm': 0.06560476941574657}
+00:03.781  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Selma.blend"
+Selma neutral 1.341104507446289e-07 arm deformation {'LeftUpperArm': 0.11434227452743354, 'RightUpperArm': 0.10825091529750044, 'RightLowerArm': 0.056991997938121944}
+00:04.062  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Yusuf.blend"
+Yusuf neutral 1.850685827191803e-07 arm deformation {'LeftUpperArm': 0.13014820352099987, 'RightUpperArm': 0.11671794464042613, 'RightLowerArm': 0.058768904921689076}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

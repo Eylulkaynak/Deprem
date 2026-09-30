@@ -1,0 +1,9 @@
+participant_id,age_years,screen_ratio,first_action_time,reunion_time,excluded_seconds,active_play_seconds,independent_walk,independent_first_object,external_hints_count,ending,explained_cause_1,explained_cause_2,explained_cause_3,confusing_moment,enjoyed_moment,test_status
+P01,,,,,,,,,,,,,,,,not_run
+P02,,,,,,,,,,,,,,,,not_run
+P03,,,,,,,,,,,,,,,,not_run
+P04,,,,,,,,,,,,,,,,not_run
+P05,,,,,,,,,,,,,,,,not_run
+P06,,,,,,,,,,,,,,,,not_run
+P07,,,,,,,,,,,,,,,,not_run
+P08,,,,,,,,,,,,,,,,not_run

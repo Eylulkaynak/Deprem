@@ -1,0 +1,132 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+Isolated decision fixtures. Inputs below begin at validated screen raycasts; screenshots require visual review. Not a child or physical-phone session.
+PASS raycast ending=1 step=0 size=540x960 viewport=(0.08, 0.50, 10.79) hit=Final yol işareti 1
+PASS raycast ending=1 step=0 size=540x1170 viewport=(0.08, 0.50, 10.79) hit=Final yol işareti 1
+PASS raycast ending=1 step=0 size=540x1200 viewport=(0.08, 0.50, 10.79) hit=Final yol işareti 1
+PASS raycast ending=1 step=0 size=540x960 viewport=(0.08, 0.50, 10.79) hit=Final yol işareti 1
+PASS raycast ending=1 step=1 size=540x960 viewport=(0.59, 0.64, 8.37) hit=Aileye kavuşma hedefi 1
+PASS framed Ada ending=1 step=1 height=960 viewport=(0.57, 0.38, 5.75)
+PASS framed Derya ending=1 step=1 height=960 viewport=(0.59, 0.64, 8.37)
+PASS framed Emre ending=1 step=1 height=960 viewport=(0.40, 0.65, 8.33)
+HUD portrait active=True enabled=True sprite=Ada color=RGBA(1.000, 1.000, 1.000, 1.000) alpha=1 culled=False rect=(30.00, 865.00, 0.00)..(86.00, 929.00, 0.00)
+PASS raycast ending=1 step=1 size=540x1170 viewport=(0.59, 0.62, 8.37) hit=Aileye kavuşma hedefi 1
+PASS framed Ada ending=1 step=1 height=1170 viewport=(0.57, 0.40, 5.75)
+PASS framed Derya ending=1 step=1 height=1170 viewport=(0.59, 0.62, 8.37)
+PASS framed Emre ending=1 step=1 height=1170 viewport=(0.40, 0.62, 8.33)
+PASS raycast ending=1 step=1 size=540x1200 viewport=(0.59, 0.61, 8.37) hit=Aileye kavuşma hedefi 1
+PASS framed Ada ending=1 step=1 height=1200 viewport=(0.57, 0.40, 5.75)
+PASS framed Derya ending=1 step=1 height=1200 viewport=(0.59, 0.61, 8.37)
+PASS framed Emre ending=1 step=1 height=1200 viewport=(0.40, 0.62, 8.33)
+PASS raycast ending=1 step=1 size=540x960 viewport=(0.59, 0.64, 8.37) hit=Aileye kavuşma hedefi 1
+PASS raycast ending=1 step=2 size=540x960 viewport=(0.40, 0.55, 3.07) hit=Ada
+PASS framed Ada ending=1 step=2 height=960 viewport=(0.40, 0.55, 3.07)
+PASS framed Derya ending=1 step=2 height=960 viewport=(0.62, 0.68, 4.27)
+PASS framed Emre ending=1 step=2 height=960 viewport=(0.26, 0.70, 4.11)
+PASS raycast ending=1 step=2 size=540x1170 viewport=(0.40, 0.54, 3.07) hit=Ada
+PASS framed Ada ending=1 step=2 height=1170 viewport=(0.40, 0.54, 3.07)
+PASS framed Derya ending=1 step=2 height=1170 viewport=(0.62, 0.65, 4.27)
+PASS framed Emre ending=1 step=2 height=1170 viewport=(0.26, 0.66, 4.11)
+PASS raycast ending=1 step=2 size=540x1200 viewport=(0.40, 0.54, 3.07) hit=Ada
+PASS framed Ada ending=1 step=2 height=1200 viewport=(0.40, 0.54, 3.07)
+PASS framed Derya ending=1 step=2 height=1200 viewport=(0.62, 0.65, 4.27)
+PASS framed Emre ending=1 step=2 height=1200 viewport=(0.26, 0.66, 4.11)
+PASS raycast ending=1 step=2 size=540x960 viewport=(0.40, 0.55, 3.07) hit=Ada
+PASS screen-driven reunion 1 completed.
+PASS raycast ending=2 step=0 size=540x960 viewport=(0.92, 0.53, 13.02) hit=Final yol işareti 2
+PASS raycast ending=2 step=0 size=540x1170 viewport=(0.92, 0.52, 13.02) hit=Final yol işareti 2
+PASS raycast ending=2 step=0 size=540x1200 viewport=(0.92, 0.52, 13.02) hit=Final yol işareti 2
+PASS raycast ending=2 step=0 size=540x960 viewport=(0.92, 0.53, 13.02) hit=Final yol işareti 2
+PASS raycast ending=2 step=1 size=540x960 viewport=(0.63, 0.68, 10.77) hit=Aileye kavuşma hedefi 2
+PASS framed Ada ending=2 step=1 height=960 viewport=(0.45, 0.31, 6.21)
+PASS framed Derya ending=2 step=1 height=960 viewport=(0.63, 0.68, 10.77)
+PASS framed Emre ending=2 step=1 height=960 viewport=(0.53, 0.66, 10.19)
+HUD portrait active=True enabled=True sprite=Ada color=RGBA(1.000, 1.000, 1.000, 1.000) alpha=1 culled=False rect=(30.00, 865.00, 0.00)..(86.00, 929.00, 0.00)
+PASS raycast ending=2 step=1 size=540x1170 viewport=(0.63, 0.65, 10.77) hit=Aileye kavuşma hedefi 2
+PASS framed Ada ending=2 step=1 height=1170 viewport=(0.45, 0.34, 6.21)
+PASS framed Derya ending=2 step=1 height=1170 viewport=(0.63, 0.65, 10.77)
+PASS framed Emre ending=2 step=1 height=1170 viewport=(0.53, 0.63, 10.19)
+PASS raycast ending=2 step=1 size=540x1200 viewport=(0.63, 0.64, 10.77) hit=Aileye kavuşma hedefi 2
+PASS framed Ada ending=2 step=1 height=1200 viewport=(0.45, 0.35, 6.21)
+PASS framed Derya ending=2 step=1 height=1200 viewport=(0.63, 0.64, 10.77)
+PASS framed Emre ending=2 step=1 height=1200 viewport=(0.53, 0.63, 10.19)
+PASS raycast ending=2 step=1 size=540x960 viewport=(0.63, 0.68, 10.77) hit=Aileye kavuşma hedefi 2
+PASS raycast ending=2 step=2 size=540x960 viewport=(0.25, 0.55, 3.12) hit=Ada
+PASS framed Ada ending=2 step=2 height=960 viewport=(0.25, 0.55, 3.12)
+PASS framed Derya ending=2 step=2 height=960 viewport=(0.62, 0.68, 4.27)
+PASS framed Emre ending=2 step=2 height=960 viewport=(0.26, 0.70, 4.11)
+PASS raycast ending=2 step=2 size=540x1170 viewport=(0.25, 0.54, 3.12) hit=Ada
+PASS framed Ada ending=2 step=2 height=1170 viewport=(0.25, 0.54, 3.12)
+PASS framed Derya ending=2 step=2 height=1170 viewport=(0.62, 0.65, 4.27)
+PASS framed Emre ending=2 step=2 height=1170 viewport=(0.26, 0.66, 4.11)
+PASS raycast ending=2 step=2 size=540x1200 viewport=(0.25, 0.54, 3.12) hit=Ada
+PASS framed Ada ending=2 step=2 height=1200 viewport=(0.25, 0.54, 3.12)
+PASS framed Derya ending=2 step=2 height=1200 viewport=(0.62, 0.65, 4.27)
+PASS framed Emre ending=2 step=2 height=1200 viewport=(0.26, 0.66, 4.11)
+PASS raycast ending=2 step=2 size=540x960 viewport=(0.25, 0.55, 3.12) hit=Ada
+PASS screen-driven reunion 2 completed.
+PASS raycast ending=3 step=0 size=540x960 viewport=(0.84, 0.54, 13.32) hit=Final yol işareti 3
+PASS raycast ending=3 step=0 size=540x1170 viewport=(0.84, 0.53, 13.32) hit=Final yol işareti 3
+PASS raycast ending=3 step=0 size=540x1200 viewport=(0.84, 0.53, 13.32) hit=Final yol işareti 3
+PASS raycast ending=3 step=0 size=540x960 viewport=(0.84, 0.54, 13.32) hit=Final yol işareti 3
+PASS raycast ending=3 step=1 size=540x960 viewport=(0.66, 0.67, 10.48) hit=Aileye kavuşma hedefi 3
+PASS framed Ada ending=3 step=1 height=960 viewport=(0.43, 0.34, 6.49)
+PASS framed Derya ending=3 step=1 height=960 viewport=(0.66, 0.67, 10.48)
+PASS framed Emre ending=3 step=1 height=960 viewport=(0.56, 0.65, 9.89)
+HUD portrait active=True enabled=True sprite=Ada color=RGBA(1.000, 1.000, 1.000, 1.000) alpha=1 culled=False rect=(30.00, 865.00, 0.00)..(86.00, 929.00, 0.00)
+PASS raycast ending=3 step=1 size=540x1170 viewport=(0.66, 0.64, 10.48) hit=Aileye kavuşma hedefi 3
+PASS framed Ada ending=3 step=1 height=1170 viewport=(0.43, 0.37, 6.49)
+PASS framed Derya ending=3 step=1 height=1170 viewport=(0.66, 0.64, 10.48)
+PASS framed Emre ending=3 step=1 height=1170 viewport=(0.56, 0.62, 9.89)
+PASS raycast ending=3 step=1 size=540x1200 viewport=(0.66, 0.63, 10.48) hit=Aileye kavuşma hedefi 3
+PASS framed Ada ending=3 step=1 height=1200 viewport=(0.43, 0.37, 6.49)
+PASS framed Derya ending=3 step=1 height=1200 viewport=(0.66, 0.63, 10.48)
+PASS framed Emre ending=3 step=1 height=1200 viewport=(0.56, 0.62, 9.89)
+PASS raycast ending=3 step=1 size=540x960 viewport=(0.66, 0.67, 10.48) hit=Aileye kavuşma hedefi 3
+PASS raycast ending=3 step=2 size=540x960 viewport=(0.36, 0.57, 3.25) hit=Ada
+PASS framed Ada ending=3 step=2 height=960 viewport=(0.36, 0.57, 3.25)
+PASS framed Derya ending=3 step=2 height=960 viewport=(0.85, 0.68, 4.10)
+PASS framed Emre ending=3 step=2 height=960 viewport=(0.49, 0.70, 4.20)
+PASS raycast ending=3 step=2 size=540x1170 viewport=(0.36, 0.55, 3.25) hit=Ada
+PASS framed Ada ending=3 step=2 height=1170 viewport=(0.36, 0.55, 3.25)
+PASS framed Derya ending=3 step=2 height=1170 viewport=(0.85, 0.64, 4.10)
+PASS framed Emre ending=3 step=2 height=1170 viewport=(0.49, 0.66, 4.20)
+PASS raycast ending=3 step=2 size=540x1200 viewport=(0.36, 0.55, 3.25) hit=Ada
+PASS framed Ada ending=3 step=2 height=1200 viewport=(0.36, 0.55, 3.25)
+PASS framed Derya ending=3 step=2 height=1200 viewport=(0.85, 0.64, 4.10)
+PASS framed Emre ending=3 step=2 height=1200 viewport=(0.49, 0.66, 4.20)
+PASS raycast ending=3 step=2 size=540x960 viewport=(0.36, 0.57, 3.25) hit=Ada
+PASS screen-driven reunion 3 completed.
+PASS raycast ending=4 step=0 size=540x960 viewport=(0.80, 0.58, 12.19) hit=Final yol işareti 4
+PASS raycast ending=4 step=0 size=540x1170 viewport=(0.80, 0.56, 12.19) hit=Final yol işareti 4
+PASS raycast ending=4 step=0 size=540x1200 viewport=(0.80, 0.56, 12.19) hit=Final yol işareti 4
+PASS raycast ending=4 step=0 size=540x960 viewport=(0.80, 0.58, 12.19) hit=Final yol işareti 4
+PASS raycast ending=4 step=1 size=540x960 viewport=(0.52, 0.63, 8.22) hit=Aileye kavuşma hedefi 4
+PASS framed Ada ending=4 step=1 height=960 viewport=(0.45, 0.38, 5.77)
+PASS framed Derya ending=4 step=1 height=960 viewport=(0.52, 0.63, 8.22)
+PASS framed Emre ending=4 step=1 height=960 viewport=(0.34, 0.66, 8.47)
+HUD portrait active=True enabled=True sprite=Ada color=RGBA(1.000, 1.000, 1.000, 1.000) alpha=1 culled=False rect=(30.00, 865.00, 0.00)..(86.00, 929.00, 0.00)
+PASS raycast ending=4 step=1 size=540x1170 viewport=(0.52, 0.61, 8.22) hit=Aileye kavuşma hedefi 4
+PASS framed Ada ending=4 step=1 height=1170 viewport=(0.45, 0.40, 5.77)
+PASS framed Derya ending=4 step=1 height=1170 viewport=(0.52, 0.61, 8.22)
+PASS framed Emre ending=4 step=1 height=1170 viewport=(0.34, 0.63, 8.47)
+PASS raycast ending=4 step=1 size=540x1200 viewport=(0.52, 0.60, 8.22) hit=Aileye kavuşma hedefi 4
+PASS framed Ada ending=4 step=1 height=1200 viewport=(0.45, 0.40, 5.77)
+PASS framed Derya ending=4 step=1 height=1200 viewport=(0.52, 0.60, 8.22)
+PASS framed Emre ending=4 step=1 height=1200 viewport=(0.34, 0.63, 8.47)
+PASS raycast ending=4 step=1 size=540x960 viewport=(0.52, 0.63, 8.22) hit=Aileye kavuşma hedefi 4
+PASS raycast ending=4 step=2 size=540x960 viewport=(0.26, 0.56, 3.09) hit=Ada
+PASS framed Ada ending=4 step=2 height=960 viewport=(0.26, 0.56, 3.09)
+PASS framed Derya ending=4 step=2 height=960 viewport=(0.82, 0.68, 3.69)
+PASS framed Emre ending=4 step=2 height=960 viewport=(0.46, 0.73, 4.04)
+PASS raycast ending=4 step=2 size=540x1170 viewport=(0.26, 0.55, 3.09) hit=Ada
+PASS framed Ada ending=4 step=2 height=1170 viewport=(0.26, 0.55, 3.09)
+PASS framed Derya ending=4 step=2 height=1170 viewport=(0.82, 0.65, 3.69)
+PASS framed Emre ending=4 step=2 height=1170 viewport=(0.46, 0.69, 4.04)
+PASS raycast ending=4 step=2 size=540x1200 viewport=(0.26, 0.55, 3.09) hit=Ada
+PASS framed Ada ending=4 step=2 height=1200 viewport=(0.26, 0.55, 3.09)
+PASS framed Derya ending=4 step=2 height=1200 viewport=(0.82, 0.65, 3.69)
+PASS framed Emre ending=4 step=2 height=1200 viewport=(0.46, 0.68, 4.04)
+PASS raycast ending=4 step=2 size=540x960 viewport=(0.26, 0.56, 3.09) hit=Ada
+PASS screen-driven reunion 4 completed.
+Screenshots=ClientExports/YanYana/Screenshots/reunion-screen-20260915-012757
+PASS complete

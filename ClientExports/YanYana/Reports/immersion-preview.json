@@ -1,0 +1,40 @@
+{
+  "source": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Recordings\\physical-playthrough-20260915-012947.mp4",
+  "sourceDurationSeconds": 231.42000000000002,
+  "output": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Recordings\\Deprem-kamera-hortum-20260915.mp4",
+  "clips": [
+    [
+      "carry",
+      7.193200000000024,
+      6
+    ],
+    [
+      "packing",
+      62.97133,
+      5.5
+    ],
+    [
+      "coupling",
+      125.43780000000001,
+      1.5
+    ],
+    [
+      "water and extinguishing",
+      129.84829999999997,
+      14
+    ],
+    [
+      "third position",
+      169.78021999999996,
+      6
+    ],
+    [
+      "reunion",
+      227.61078999999998,
+      3.5
+    ]
+  ],
+  "playbackSpeed": 1,
+  "cuts": "Hard cuts between actual gameplay excerpts; no acceleration or simulated visuals.",
+  "sceneSha256": "b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231"
+}

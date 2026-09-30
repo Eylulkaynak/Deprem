@@ -1,0 +1,14 @@
+DEPREM — WINDOWS INCELEME PAKETI
+
+Oyna.cmd dosyasini acin. Oyun dikey bir pencerede baslar.
+Klasordeki YanYana.exe, YanYana_Data, UnityPlayer.dll ve MonoBleedingEdge birlikte kalmalidir.
+Kurulum ve internet baglantisi gerekmez. Paket yalniz yeni macera sahnesini icerir.
+
+Yeni oyun icin baslangic ekranindaki Yeni bir macera dugmesini kullanin.
+Kayitlar Deprem.YanYana.v1 anahtarlariyla mevcut projenin kayitlarindan ayrilir.
+
+Bu Windows inceleme paketidir; Android cihaz performansini veya cocuklarda
+28-35 dakika ilk oynayis suresini dogrulamaz. Guncel sinamalar ve kalan
+icerik maddeleri proje icindeki ArtDirection/YanYana/PHYSICAL_ADVENTURE_STATUS.md dosyasindadir.
+
+Bir sorun olursa ayni klasordeki YanYana-player.log dosyasini saklayin.

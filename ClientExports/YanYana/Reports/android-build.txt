@@ -1,0 +1,19 @@
+Result=Succeeded
+Scenes=Assets/YanYana/Scenes/YanYana_Adventure.unity
+SceneSha256=b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231
+Unity=6000.0.58f2
+Architecture=ARM64
+Backend=IL2CPP
+Input=Legacy
+Graphics=OpenGLES3
+Package=com.yanyana.adventure.review
+MinSdk=26
+TargetSdk=35
+Signing=Android debug certificate (local review)
+Apk=C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports/YanYana/Android\Deprem-Android-Inceleme-20260915-012748.apk
+Bytes=1017557592
+Errors=0
+Warnings=1
+Duration=00:00:45.5021565
+Warning: Game scripts or other custom code contains OnMouse_ event handlers. Presence of such handlers might impact performance on handheld devices.
+ApkSha256=de678b72b9374b6b48dc4e9e79a619a5a6b84fea68eae9fb55061865c6f663b6

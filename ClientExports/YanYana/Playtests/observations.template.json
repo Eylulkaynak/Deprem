@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "scene_sha256": "7f5489c855add426bdd7af90882431a25acec59816b173ff900035086b972c83",
+  "build_archive_sha256": "738faaf38eb7d3b5db3f65fdef4e22502eefd652dfa38ee3e801712557a866e6",
+  "note": "Empty observation form. No participant has been observed. Fill the actual candidate package hash in your copy.",
+  "sessions": [
+    {
+      "participant_id": "P01",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P02",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P03",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P04",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P05",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P06",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P07",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    },
+    {
+      "participant_id": "P08",
+      "age": null,
+      "first_play": null,
+      "observer_confirmed": false,
+      "completed": null,
+      "ending": null,
+      "device": {
+        "model": null,
+        "input": null,
+        "physical_android": null
+      },
+      "timing": {
+        "wall_seconds": null,
+        "excluded_seconds": null,
+        "excluded_intervals": []
+      },
+      "independent": {
+        "walk": null,
+        "pickup": null,
+        "place": null
+      },
+      "explained_links": [],
+      "external_help": [],
+      "observations": [],
+      "favorite_moment": null,
+      "frustrating_moment": null,
+      "would_replay": null
+    }
+  ]
+}

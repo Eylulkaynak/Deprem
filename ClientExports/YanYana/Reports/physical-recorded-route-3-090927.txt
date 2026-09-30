@@ -1,0 +1,36 @@
+Technical full route, not a child session. Normal-time walking, timed EventSystem drags, no decision/inventory/health assignment or actor warps. Walking-only destinations use the existing player movement component.
+PASS New journey
+PASS Physical opening completed without preparation flags
+PASS Walk to Efe's toy
+PASS Earthquake begins
+PASS Approach Efe and listen
+PASS Sibling communication choice completed
+PASS Emergency light used, safe exit
+PASS Aftershock at landing
+PASS Stop and protect during aftershock
+PASS Ask Yusuf
+PASS Clear light obstacle, Yusuf walks with children
+PASS Walk through courtyard
+PASS Children safe, Idil controls hose
+PASS Idil walks to fire 1
+PASS Fire group 1 extinguished
+PASS Idil walks to fire 2
+PASS Fire group 2 extinguished
+PASS Idil walks to fire 3
+PASS Fire group 3 extinguished
+PASS Control returns to Ada
+PASS Bora takes over
+PASS Neighbors reach help stations
+PASS Water and food delivered separately
+PASS Official receiver provides missing radio alternative
+PASS Official broadcast heard
+PASS Expected ending 3 selected
+PASS Walk to family marker
+PASS Reach family
+PASS reunion participant Ada viewport=(0.42, 0.54, 3.25)
+PASS reunion participant Efe viewport=(0.72, 0.51, 3.18)
+PASS reunion participant Derya viewport=(0.75, 0.62, 4.10)
+PASS reunion participant Emre viewport=(0.49, 0.64, 4.20)
+PASS reunion participant Yusuf viewport=(0.16, 0.55, 2.99)
+PASS Reunion completed
+COMPLETE Ending=3 FamilyPlan=0 FlashlightReady=0 RadioReady=0 BroadcastSource=2 Reunited=1. Duration is not evidence of target-age playtime.

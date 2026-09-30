@@ -1,0 +1,47 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+BEFORE
+Particle Sönünce kalan buhar · Alev odağı 1 1 playing=True paused=False count=16 time=0.499
+Particle Yükselen duman playing=True paused=False count=16 time=3.452
+Particle Yükselen duman playing=True paused=False count=15 time=3.452
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=2.529
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=3.452
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=3.452
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=3.452
+Particle Yükselen duman playing=True paused=False count=16 time=2.529
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.529
+Particle Yükselen duman playing=True paused=False count=17 time=2.529
+Particle Yükselen duman playing=True paused=False count=16 time=2.529
+Particle Yükselen duman playing=True paused=False count=15 time=2.529
+Particle Yükselen duman playing=True paused=False count=16 time=3.452
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.529
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.529
+Particle Yükselen duman playing=True paused=False count=18 time=2.529
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=2.529
+Particle Yükselen duman playing=True paused=False count=18 time=2.529
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=2.529
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+RESUMED
+Particle Sönünce kalan buhar · Alev odağı 1 1 playing=True paused=False count=7 time=0.800
+Particle Yükselen duman playing=True paused=False count=15 time=3.854
+Particle Yükselen duman playing=True paused=False count=14 time=3.854
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=2.931
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=3.854
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=3.854
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=3.854
+Particle Yükselen duman playing=True paused=False count=16 time=2.931
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.931
+Particle Yükselen duman playing=True paused=False count=16 time=2.931
+Particle Yükselen duman playing=True paused=False count=17 time=2.931
+Particle Yükselen duman playing=True paused=False count=16 time=2.931
+Particle Yükselen duman playing=True paused=False count=18 time=3.854
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.931
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=3 time=2.931
+Particle Yükselen duman playing=True paused=False count=19 time=2.931
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.931
+Particle Yükselen duman playing=True paused=False count=17 time=2.931
+Particle Yükselen küçük kıvılcımlar playing=True paused=False count=2 time=2.931
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+PASS explicit component pause, repeated pause, frozen smoke/flame times and resumed playback.
+PASS complete

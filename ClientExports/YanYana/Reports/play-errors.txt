@@ -1,0 +1,12 @@
+Error: All compiler errors have to be fixed before you can enter playmode!
+UnityEditor.SceneView:ShowCompileErrorNotification ()
+
+Error: ExecuteMenuItem failed because there is no menu named 'Tools/Yan Yana/QA/Physical Supply Comparison'
+UnityEditor.EditorApplication:ExecuteMenuItem (string)
+McpUnity.Tools.MenuItemTool:Execute (Newtonsoft.Json.Linq.JObject) (at ./Library/PackageCache/com.gamelovers.mcp-unity@a32e47d4ec87/Editor/Tools/MenuItemTool.cs:42)
+McpUnity.Unity.McpUnitySocketHandler/<ExecuteTool>d__7:MoveNext () (at ./Library/PackageCache/com.gamelovers.mcp-unity@a32e47d4ec87/Editor/UnityBridge/McpUnitySocketHandler.cs:195)
+Unity.EditorCoroutines.Editor.EditorCoroutine/YieldProcessor:MoveNext (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.editorcoroutines@7d48783e7b8c/Editor/EditorCoroutine.cs:80)
+Unity.EditorCoroutines.Editor.EditorCoroutine:ProcessIEnumeratorRecursive (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.editorcoroutines@7d48783e7b8c/Editor/EditorCoroutine.cs:134)
+Unity.EditorCoroutines.Editor.EditorCoroutine:MoveNext () (at ./Library/PackageCache/com.unity.editorcoroutines@7d48783e7b8c/Editor/EditorCoroutine.cs:115)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+

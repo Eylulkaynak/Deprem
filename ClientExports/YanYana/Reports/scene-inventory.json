@@ -1,0 +1,9 @@
+{
+  "scene": "Assets/YanYana/Scenes/YanYana_Adventure.unity",
+  "version": "physical-adventure-immersive-interface",
+  "chapters": 8,
+  "endings": 4,
+  "scriptMachines": 144,
+  "graphUnits": 41479,
+  "newAuthoredRuntimeCSharp": 0
+}

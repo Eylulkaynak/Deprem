@@ -1,0 +1,3 @@
+Editor pose-space probe: upright flashlight / comfort toy; 24 idle and walk samples per character.
+Ada axis=1 target=(0.20, 0.72, 0.18) maximumGripErrorMetres=0.0001975416
+Efe axis=1 target=(0.20, 0.55, 0.14) maximumGripErrorMetres=0.0001996666

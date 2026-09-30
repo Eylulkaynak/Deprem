@@ -1,0 +1,38 @@
+Technical full route, not a child session. Normal-time walking, timed EventSystem drags, no decision/inventory/health assignment or actor warps. Walking-only destinations use the existing player movement component.
+PASS New journey
+PASS Walk to family map
+PASS Family plan learned
+PASS Leave map
+PASS Collect Water
+PASS Collect Food
+PASS Collect FirstAid
+PASS Collect Blanket
+PASS Collect FamilyCard
+PASS Collect Whistle
+PASS Collect ComfortFox
+PASS Approach flashlight
+PASS Flashlight powered
+PASS Leave flashlight
+PASS Approach radio
+PASS Radio tuned
+PASS Leave radio
+PASS Approach backpack
+PASS Pack Radio
+PASS Pack FirstAid
+PASS Pack Blanket
+PASS Pack Water
+PASS Pack Flashlight
+PASS Pack Food
+PASS Pack ComfortFox
+PASS Pack FamilyCard
+PASS Pack Whistle
+PASS Carry packed bag
+PASS Two adult tasks queued safely
+PASS Walk to Efe's toy
+PASS Earthquake begins
+PASS Protected under table
+PASS Own flashlight used, safe exit
+FAIL System.InvalidOperationException: Timeout: Aftershock at landing; phase=3 workspace=
+  at YanYana.Editor.YanYanaPhysicalQA+<AwaitRoute>d__80.MoveNext () [0x0003e] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaRecordedRouteQA.cs:22 
+  at YanYana.Editor.YanYanaPhysicalQA+<PreparedRoute>d__84.MoveNext () [0x01536] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaRecordedRouteQA.cs:83 
+  at YanYana.Editor.YanYanaPhysicalQA.RecordedRouteTick () [0x00029] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaRecordedRouteQA.cs:47 

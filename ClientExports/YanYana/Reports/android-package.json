@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-15T01:29:32.664736+03:00",
+  "apk": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Android\\Deprem-Android-Inceleme-20260915-012748.apk",
+  "sha256": "de678b72b9374b6b48dc4e9e79a619a5a6b84fea68eae9fb55061865c6f663b6",
+  "bytes": 113703306,
+  "scene": "Assets/YanYana/Scenes/YanYana_Adventure.unity",
+  "sceneSha256": "b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231",
+  "checks": {
+    "zipCrc": true,
+    "aaptReadable": true,
+    "packageId": true,
+    "originalGameName": true,
+    "minimumAndroidApi26": true,
+    "targetAndroidApi35": true,
+    "arm64Only": true,
+    "il2cppPresent": true,
+    "signatureVerified": true
+  },
+  "passed": true,
+  "architectures": [
+    "arm64-v8a"
+  ],
+  "buildWarnings": 1,
+  "signing": "Android debug certificate for local review",
+  "realDevicePlaytestCompleted": false
+}

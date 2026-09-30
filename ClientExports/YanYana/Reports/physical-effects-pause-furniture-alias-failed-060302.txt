@@ -1,0 +1,34 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+BEFORE
+Particle Yükselen duman playing=True paused=False count=27 time=2.591
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.591
+Particle Yükselen duman playing=True paused=False count=26 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.591
+Particle Yükselen duman playing=True paused=False count=26 time=2.474
+Particle Yükselen duman playing=True paused=False count=26 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.591
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.474
+Particle Yükselen duman playing=True paused=False count=26 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.474
+Particle Yükselen duman playing=True paused=False count=27 time=2.591
+Particle Yükselen duman playing=True paused=False count=26 time=2.474
+Particle Yükselen duman playing=True paused=False count=27 time=2.591
+Particle Yükselen duman playing=True paused=False count=26 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.474
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.474
+Animation FlameTuft playing=True time=22.574 speed=1
+Animation FlameTuft playing=True time=22.574 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=22.574 speed=1
+Animation FlameTuft playing=True time=41.808 speed=1
+Animation FlameTuft playing=True time=41.808 speed=1
+Animation FlameTuft playing=True time=41.808 speed=1
+Animation FlameTuft playing=True time=41.808 speed=1
+Animation FlameTuft playing=True time=41.808 speed=1
+Animation FlameTuft playing=True time=41.808 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+FAIL System.InvalidOperationException: Flame advances while paused.
+  at YanYana.Editor.YanYanaPhysicalQA+<EffectsPauseSequence>d__133.MoveNext () [0x00361] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPresentationQA.cs:62 
+  at YanYana.Editor.YanYanaPhysicalQA.PhysicalCheckTick () [0x0002f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:28 

@@ -1,0 +1,35 @@
+PLAY=False
+Ada position=(-0.50, 0.00, -1.65) bounds=Center: (-0.50, 0.68, -1.62), Extents: (0.49, 0.77, 0.46) feet=-0.09318131
+Ada contact RightHandError=0
+Ada contact LeftHandError=0
+Ada contact ContactTicks=0
+ nav=False remaining=-1
+Efe position=(0.40, 0.00, -0.40) bounds=Center: (0.40, 0.58, -0.36), Extents: (0.45, 0.65, 0.37) feet=-0.0751124
+Efe contact RightHandError=0
+Efe contact LeftHandError=0
+Efe contact ContactTicks=0
+ nav=False remaining=-1
+Derya position=(1.65, 0.00, 2.55) bounds=Center: (1.66, 0.79, 2.60), Extents: (0.60, 0.89, 0.51) feet=-0.09772056
+Derya contact RightHandError=0
+Derya contact LeftHandError=0
+Derya contact ContactTicks=0
+ nav=False remaining=-1
+Emre position=(-2.10, 0.00, -0.45) bounds=Center: (-2.10, 0.84, -0.38), Extents: (0.63, 0.94, 0.49) feet=-0.1008591
+Emre contact RightHandError=0
+Emre contact LeftHandError=0
+Emre contact ContactTicks=0
+Approach_Bag=(1.15, 0.00, -2.65) reachable=True status=PathComplete
+Approach_Radio=(-1.87, 0.00, 1.56) reachable=True status=PathComplete
+Approach_Collect_FirstAid=(2.55, 0.00, 2.65) reachable=True status=PathComplete
+Approach_BagCarry1=(-2.30, 0.00, -3.05) reachable=True status=PathComplete
+Approach_Shelf=(2.55, 0.00, 2.65) reachable=True status=PathComplete
+Approach_Collect_FamilyCard=(1.15, 0.00, -2.65) reachable=True status=PathComplete
+Approach_Collect_Water=(-1.87, 0.00, 1.56) reachable=True status=PathComplete
+Approach_Collect_Blanket=(1.00, 0.00, -0.10) reachable=True status=PathComplete
+Approach_Collect_Whistle=(1.15, 0.00, -2.65) reachable=True status=PathComplete
+Approach_BagCarry0=(-0.50, 0.00, -1.65) reachable=True status=PathComplete
+Approach_Flashlight=(-0.65, 0.00, 1.56) reachable=True status=PathComplete
+Approach_FamilyMap=(2.74, 0.00, 1.80) reachable=True status=PathComplete
+Approach_Collect_ComfortFox=(0.53, 0.00, -0.21) reachable=True status=PathComplete
+Approach_Collect_Food=(-1.87, 0.00, 1.56) reachable=True status=PathComplete
+Approach_Wardrobe=(-2.80, 0.00, 1.80) reachable=True status=PathComplete

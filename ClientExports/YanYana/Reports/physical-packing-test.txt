@@ -1,0 +1,5 @@
+Isolated packing fixture; inventory discovery is outside this test.
+Water occupies 1x3 cells=True
+Overlap rejected=True
+Rotated 2x3 radio fits beside water=True
+Unpacking releases occupied cells=True

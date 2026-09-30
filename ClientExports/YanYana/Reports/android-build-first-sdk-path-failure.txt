@@ -1,0 +1,25 @@
+Result=Failed
+Scenes=Assets/YanYana/Scenes/YanYana_Adventure.unity
+SceneSha256=7f5489c855add426bdd7af90882431a25acec59816b173ff900035086b972c83
+Unity=6000.0.58f2
+Architecture=ARM64
+Backend=IL2CPP
+Input=Legacy
+Graphics=OpenGLES3
+Package=com.yanyana.adventure.review
+MinSdk=26
+TargetSdk=35
+Signing=Android debug certificate (local review)
+Apk=C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports/YanYana/Android\YanYana-Android-Inceleme-20260914-175247.apk
+Bytes=0
+Errors=1
+Warnings=0
+Duration=00:00:02.9368375
+Exception: UnityException: Missing CMake 3.22.1
+The build requires CMake 3.22.1 to be present.
+(Directory "C:\Users\Gokturk\Depremke\Tools\Android\SDK\cmake\3.22.1" is missing)
+You can install CMake manually:
+* Open terminal (might require administrative privileges depending on where Android SDK is installed)
+* Navigate to "C:\Users\Gokturk\Depremke\Tools\Android\SDK\cmdline-tools\latest\bin"
+* Execute sdkmanager.bat --install "cmake;3.22.1"
+

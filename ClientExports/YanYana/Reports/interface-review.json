@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-09-14T19:01:08.566848+03:00",
+  "sceneSha256": "0134fbf5e79dca01e532e283cbb3c0b1a8832ed73d3478b20c57941d26d27a3d",
+  "interfaceRaycasts": 17,
+  "framedTitleFaces": 6,
+  "reunionRaycasts": 48,
+  "reunionFaces": 72,
+  "originalFilesUnchanged": 10443,
+  "saveRestoration": "Restored and verified 3016 adventure save values.",
+  "preparedRouteRecording": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Recordings\\physical-playthrough-20260914-184540.mp4",
+  "windows": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\YanYana-Windows-Inceleme-20260914-190016.zip",
+  "android": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Android\\YanYana-Android-Inceleme-20260914-184348.apk",
+  "runtimeCSharpAdded": 0,
+  "realDeviceTestCompleted": false,
+  "targetAgePlaytestCompleted": false
+}

@@ -1,0 +1,55 @@
+Technical full route, not a child session. Normal-time walking, timed EventSystem drags, no decision/inventory/health assignment or actor warps. Walking-only destinations use the existing player movement component.
+PASS New journey
+PASS Walk to family map
+PASS Family plan learned
+PASS Leave map
+PASS Collect Water
+PASS Collect Food
+PASS Collect FirstAid
+PASS Collect Blanket
+PASS Collect FamilyCard
+PASS Collect Whistle
+PASS Collect ComfortFox
+PASS Approach flashlight
+PASS Flashlight powered
+PASS Leave flashlight
+PASS Approach radio
+PASS Radio tuned
+PASS Leave radio
+PASS Approach backpack
+PASS Pack Radio
+PASS Pack FirstAid
+PASS Pack Blanket
+PASS Pack Water
+PASS Pack Flashlight
+PASS Pack Food
+PASS Pack ComfortFox
+PASS Pack FamilyCard
+PASS Pack Whistle
+PASS Carry packed bag
+PASS Two adult tasks queued safely
+PASS Walk to Efe's toy
+PASS Earthquake begins
+PASS Protected under table
+PASS Own flashlight used, safe exit
+PASS Aftershock at landing
+PASS Stop and protect during aftershock
+PASS Ask Yusuf
+PASS Walk through courtyard
+PASS Children safe, Idil controls hose
+PASS Idil walks to fire 1
+PASS Fire group 1 extinguished
+PASS Idil walks to fire 2
+PASS Fire group 2 extinguished
+PASS Idil walks to fire 3
+PASS Fire group 3 extinguished
+PASS Control returns to Ada
+PASS Bora takes over
+PASS Neighbors reach help stations
+PASS Prepared radio is available
+PASS Official broadcast heard
+PASS Planned meeting ending selected
+PASS Walk to known family marker
+PASS Reach family
+PASS Reunion completed
+COMPLETE Ending=2 FamilyPlan=1 FlashlightReady=1 RadioReady=1 BroadcastSource=1 Reunited=1. Duration is not evidence of target-age playtime.

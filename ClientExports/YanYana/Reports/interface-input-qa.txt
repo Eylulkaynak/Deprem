@@ -1,0 +1,25 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+PASS screen raycast Continue 540x960
+PASS screen raycast New 540x960
+PASS title face Ada (0.28, 0.46, 7.73)
+PASS title face Efe (0.72, 0.42, 7.62)
+PASS screen raycast Continue 540x1170
+PASS screen raycast New 540x1170
+PASS title face Ada (0.28, 0.47, 7.73)
+PASS title face Efe (0.72, 0.44, 7.62)
+PASS screen raycast Continue 540x1200
+PASS screen raycast New 540x1200
+PASS title face Ada (0.28, 0.47, 7.73)
+PASS title face Efe (0.72, 0.44, 7.62)
+PASS screen raycast New 540x960
+PASS screen raycast Pause 540x960
+PASS screen raycast Pause 540x1170
+PASS screen raycast Pause 540x1200
+PASS screen raycast Pause 540x1200
+PASS screen raycast ReducedMotion 540x1200
+PASS screen raycast Sound 540x1200
+PASS screen raycast Captions 540x1200
+PASS screen raycast Vibration 540x1200
+PASS screen raycast Resume 540x1200
+PASS screen raycast Continue 540x1200
+PASS complete

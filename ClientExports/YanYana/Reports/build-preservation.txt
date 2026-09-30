@@ -1,0 +1,11 @@
+Exact pre-build working copies protected=4837
+Status=Complete
+Restored after build=6
+Assets\Settings\PC_RPAsset.asset
+Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+Assets\TextMesh Pro\Fonts\marketb SDF.asset
+Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton SDF.asset
+ProjectSettings\GraphicsSettings.asset
+ProjectSettings\ProjectSettings.asset
+Pending=
+Full baseline audit is separate.

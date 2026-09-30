@@ -1,0 +1,22 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+source 540x960 kit=(360.59, 467.41) firstRaycast=Efe’nin taşınabilir oyun kutusu
+source 540x1170 kit=(360.59, 572.41) firstRaycast=Efe’nin taşınabilir oyun kutusu
+source 540x1200 kit=(360.59, 587.41) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry 540x960 kit=(190.77, 476.94) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry 540x1170 kit=(190.77, 581.94) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry 540x1200 kit=(190.77, 596.94) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry facing=(0.00, 0.00, 1.00) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry facing=(1.00, 0.00, 0.00) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry facing=(0.00, 0.00, -1.00) firstRaycast=Efe’nin taşınabilir oyun kutusu
+carry facing=(-1.00, 0.00, 0.00) firstRaycast=Efe’nin taşınabilir oyun kutusu
+drop 540x960 kit=(254.06, 386.83) firstRaycast=Efe’nin taşınabilir oyun kutusu
+Ada upper head viewport=(0.253, 0.581, 1.943)
+Efe upper head viewport=(0.552, 0.749, 2.669)
+drop 540x1170 kit=(254.06, 491.83) firstRaycast=Efe’nin taşınabilir oyun kutusu
+Ada upper head viewport=(0.253, 0.566, 1.943)
+Efe upper head viewport=(0.552, 0.704, 2.669)
+drop 540x1200 kit=(254.06, 506.83) firstRaycast=Efe’nin taşınabilir oyun kutusu
+Ada upper head viewport=(0.253, 0.564, 1.943)
+Efe upper head viewport=(0.552, 0.699, 2.669)
+
+PASS complete

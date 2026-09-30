@@ -1,0 +1,119 @@
+[
+  {
+    "character": "Ada",
+    "heightMetres": 1.4054,
+    "intendedHeight": 1.46,
+    "surfaces": 1,
+    "vertices": 30432,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Asli",
+    "heightMetres": 1.6198,
+    "intendedHeight": 1.7,
+    "surfaces": 5,
+    "vertices": 35501,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Bora",
+    "heightMetres": 1.7138,
+    "intendedHeight": 1.8,
+    "surfaces": 1,
+    "vertices": 3801,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Deniz",
+    "heightMetres": 1.7369,
+    "intendedHeight": 1.82,
+    "surfaces": 5,
+    "vertices": 31102,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Derya",
+    "heightMetres": 1.6198,
+    "intendedHeight": 1.7,
+    "surfaces": 1,
+    "vertices": 31053,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Efe",
+    "heightMetres": 1.1888,
+    "intendedHeight": 1.25,
+    "surfaces": 1,
+    "vertices": 30765,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Emre",
+    "heightMetres": 1.7369,
+    "intendedHeight": 1.82,
+    "surfaces": 1,
+    "vertices": 29909,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Gul",
+    "heightMetres": 1.6909,
+    "intendedHeight": 1.78,
+    "surfaces": 4,
+    "vertices": 36134,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Idil",
+    "heightMetres": 1.6581,
+    "intendedHeight": 1.75,
+    "surfaces": 1,
+    "vertices": 4071,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Mert",
+    "heightMetres": 1.7369,
+    "intendedHeight": 1.82,
+    "surfaces": 5,
+    "vertices": 30850,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Ozan",
+    "heightMetres": 1.7369,
+    "intendedHeight": 1.82,
+    "surfaces": 6,
+    "vertices": 37092,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Selma",
+    "heightMetres": 1.6198,
+    "intendedHeight": 1.7,
+    "surfaces": 7,
+    "vertices": 32280,
+    "valid": true,
+    "errors": []
+  },
+  {
+    "character": "Yusuf",
+    "heightMetres": 1.651,
+    "intendedHeight": 1.73,
+    "surfaces": 17,
+    "vertices": 40065,
+    "valid": true,
+    "errors": []
+  }
+]

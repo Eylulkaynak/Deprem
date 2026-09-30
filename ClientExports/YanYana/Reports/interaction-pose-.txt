@@ -1,0 +1,41 @@
+Workspace=
+Phase=7
+Ada root=(2.87, -0.48, -20.72) rotation=(0.00, 154.96, 0.00) Pose=0
+Left shoulder=(3.05, 0.29, -20.65) elbow=(3.08, 0.12, -20.60) wrist=(3.12, 0.01, -20.63) reach=0.3026364
+Left_Loop contact=(3.09, 0.04, -20.71)
+Left_Cylinder contact=(3.08, 0.03, -20.71)
+Left_Soft contact=(3.06, 0.02, -20.71)
+Left_Pinch contact=(3.09, 0.04, -20.71)
+Right shoulder=(2.68, 0.30, -20.70) elbow=(2.62, 0.13, -20.64) wrist=(2.60, 0.03, -20.69) reach=0.3026361
+Right_Loop contact=(2.67, 0.07, -20.75)
+Right_Cylinder contact=(2.68, 0.06, -20.74)
+Right_Soft contact=(2.69, 0.06, -20.74)
+Right_Pinch contact=(2.66, 0.07, -20.75)
+Left rendered hand mean=(2.88, -0.45, -20.72) gripError=0.0001678928
+Right rendered hand mean=(2.87, -0.45, -20.72) gripError=9.795675E-05
+Efe root=(6.84, -0.48, -24.04) rotation=(0.00, 108.68, 0.00) Pose=0
+Left shoulder=(6.92, 0.18, -23.88) elbow=(6.90, 0.03, -23.82) wrist=(6.94, -0.06, -23.81) reach=0.2635282
+Left_Loop contact=(6.91, -0.08, -23.84)
+Left_Cylinder contact=(6.90, -0.08, -23.85)
+Left_Soft contact=(6.89, -0.09, -23.86)
+Left_Pinch contact=(6.91, -0.08, -23.84)
+Right shoulder=(6.71, 0.19, -24.16) elbow=(6.64, 0.05, -24.16) wrist=(6.66, -0.04, -24.20) reach=0.263528
+Right_Loop contact=(6.67, -0.06, -24.16)
+Right_Cylinder contact=(6.67, -0.07, -24.14)
+Right_Soft contact=(6.68, -0.07, -24.13)
+Right_Pinch contact=(6.66, -0.06, -24.16)
+Left rendered hand mean=(6.84, -0.45, -24.03) gripError=9.045978E-05
+Right rendered hand mean=(6.84, -0.45, -24.04) gripError=2.587363E-05
+Idil root=(-3.89, -0.48, -18.60) rotation=(0.00, 162.64, 0.00) Pose=0
+Left shoulder=(-3.65, 0.44, -18.56) elbow=(-3.60, 0.23, -18.50) wrist=(-3.56, 0.10, -18.53) reach=0.3690968
+Left_Loop contact=(-3.64, 0.03, -18.54)
+Left_Cylinder contact=(-3.68, 0.02, -18.54)
+Left_Soft contact=(-3.67, 0.02, -18.54)
+Left_Pinch contact=(-3.64, 0.03, -18.54)
+Right shoulder=(-4.15, 0.45, -18.55) elbow=(-4.21, 0.25, -18.47) wrist=(-4.24, 0.12, -18.52) reach=0.3690971
+Right_Loop contact=(-4.14, 0.07, -18.53)
+Right_Cylinder contact=(-4.11, 0.06, -18.51)
+Right_Soft contact=(-4.12, 0.06, -18.52)
+Right_Pinch contact=(-4.15, 0.07, -18.53)
+Left rendered hand mean=(-3.64, -0.02, -18.56) gripError=0.0006844403
+Right rendered hand mean=(-4.14, 0.01, -18.55) gripError=0.0009488939

@@ -1,0 +1,5 @@
+Four isolated decision-state fixtures. Selection priority, actual walking and pointer completion are exercised; this is not four full human playthroughs.
+PASS expected=1 actual=1 reunited=1 seconds=7.78
+PASS expected=2 actual=2 reunited=1 seconds=11.07
+PASS expected=3 actual=3 reunited=1 seconds=10.33
+PASS expected=4 actual=4 reunited=1 seconds=8.18

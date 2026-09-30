@@ -1,0 +1,10 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+Isolated decision fixtures. Inputs below begin at validated screen raycasts; screenshots require visual review. Not a child or physical-phone session.
+PASS raycast ending=1 step=0 size=540x960 viewport=(0.20, 0.55, 9.14) hit=Final yol işareti 1
+PASS raycast ending=1 step=0 size=540x1170 viewport=(0.20, 0.54, 9.14) hit=Final yol işareti 1
+PASS raycast ending=1 step=0 size=540x1200 viewport=(0.20, 0.54, 9.14) hit=Final yol işareti 1
+PASS raycast ending=1 step=0 size=540x960 viewport=(0.20, 0.55, 9.14) hit=Final yol işareti 1
+FAIL System.NullReferenceException: Object reference not set to an instance of an object
+  at YanYana.Editor.YanYanaPhysicalQA.VisibleReunionTarget (UnityEngine.GameObject target, System.Int32 step) [0x000b4] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaReunionScreenQA.cs:23 
+  at YanYana.Editor.YanYanaPhysicalQA+<ReunionScreenSequence>d__171.MoveNext () [0x003fc] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaReunionScreenQA.cs:52 
+  at YanYana.Editor.YanYanaPhysicalQA.PhysicalCheckTick () [0x0002f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:28 

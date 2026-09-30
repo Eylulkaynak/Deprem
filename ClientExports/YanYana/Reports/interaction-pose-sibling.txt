@@ -1,0 +1,43 @@
+Workspace=sibling
+Phase=2
+Ada root=(0.57, 0.00, -0.24) rotation=(0.00, 86.48, 0.00) Pose=0
+Left shoulder=(0.58, 0.77, -0.06) elbow=(0.54, 0.60, 0.00) wrist=(0.58, 0.49, 0.02) reach=0.3026367
+Left_Loop contact=(0.64, 0.52, -0.04)
+Left_Cylinder contact=(0.64, 0.51, -0.05)
+Left_Soft contact=(0.63, 0.50, -0.06)
+Left_Pinch contact=(0.64, 0.52, -0.03)
+Right shoulder=(0.48, 0.78, -0.42) elbow=(0.66, 0.76, -0.38) wrist=(0.78, 0.76, -0.35) reach=0.3026368
+Right_Loop contact=(0.76, 0.67, -0.37)
+Right_Cylinder contact=(0.76, 0.67, -0.39)
+Right_Soft contact=(0.77, 0.67, -0.40)
+Right_Pinch contact=(0.76, 0.67, -0.37)
+active Right_Soft=100
+Left contactMarkerError=0
+Right contactMarkerError=0.004462675
+Efe root=(1.04, 0.00, -0.21) rotation=(0.00, 266.48, 0.00) Pose=0
+Left shoulder=(1.03, 0.66, -0.38) elbow=(0.88, 0.64, -0.45) wrist=(0.79, 0.67, -0.47) reach=0.263528
+Left_Loop contact=(0.78, 0.67, -0.43)
+Left_Cylinder contact=(0.78, 0.67, -0.41)
+Left_Soft contact=(0.77, 0.67, -0.40)
+Left_Pinch contact=(0.78, 0.67, -0.43)
+Right shoulder=(1.12, 0.67, -0.04) elbow=(1.18, 0.53, -0.02) wrist=(1.15, 0.44, 0.01) reach=0.2635279
+Right_Loop contact=(1.16, 0.42, -0.03)
+Right_Cylinder contact=(1.16, 0.41, -0.04)
+Right_Soft contact=(1.16, 0.41, -0.06)
+Right_Pinch contact=(1.16, 0.42, -0.03)
+active Left_Soft=100
+Left contactMarkerError=0.0001069165
+Right contactMarkerError=0
+Idil root=(-4.00, -0.48, -15.00) rotation=(0.00, 180.00, 0.00) Pose=0
+Left shoulder=(-3.75, 0.44, -15.03) elbow=(-3.69, 0.23, -14.99) wrist=(-3.66, 0.10, -15.03) reach=0.3690973
+Left_Loop contact=(-3.74, 0.03, -15.02)
+Left_Cylinder contact=(-3.78, 0.02, -15.00)
+Left_Soft contact=(-3.77, 0.02, -15.01)
+Left_Pinch contact=(-3.74, 0.03, -15.02)
+Right shoulder=(-4.23, 0.45, -14.88) elbow=(-4.26, 0.25, -14.78) wrist=(-4.31, 0.12, -14.82) reach=0.3690974
+Right_Loop contact=(-4.22, 0.07, -14.85)
+Right_Cylinder contact=(-4.18, 0.06, -14.85)
+Right_Soft contact=(-4.19, 0.06, -14.85)
+Right_Pinch contact=(-4.22, 0.07, -14.85)
+Left contactMarkerError=0
+Right contactMarkerError=0

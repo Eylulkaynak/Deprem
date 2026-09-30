@@ -1,0 +1,63 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+BEFORE
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=0.696
+Particle Yükselen duman playing=True paused=False count=27 time=2.778
+Particle Yükselen duman playing=True paused=False count=27 time=2.778
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=0.696
+Particle Yükselen duman playing=True paused=False count=27 time=2.778
+Particle Yükselen duman playing=True paused=False count=27 time=0.696
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=0.696
+Particle Yükselen duman playing=True paused=False count=27 time=2.778
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.778
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.778
+Particle Yükselen duman playing=True paused=False count=27 time=2.778
+Particle Yükselen duman playing=True paused=False count=27 time=2.778
+Particle Yükselen duman playing=True paused=False count=27 time=0.696
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.778
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.778
+Particle Yükselen duman playing=True paused=False count=27 time=0.696
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.778
+Particle Hareketli sıcak alev playing=True paused=False count=24 time=2.778
+Animation FlameTuft playing=True time=27.111 speed=1
+Animation FlameTuft playing=True time=10.687 speed=1
+Animation FlameTuft playing=True time=27.111 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=27.111 speed=1
+Animation FlameTuft playing=True time=27.111 speed=1
+Animation FlameTuft playing=True time=27.111 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=10.687 speed=1
+Animation FlameTuft playing=True time=10.687 speed=1
+Animation FlameTuft playing=True time=27.111 speed=1
+RESUMED
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=1.096
+Particle Yükselen duman playing=True paused=False count=27 time=3.178
+Particle Yükselen duman playing=True paused=False count=27 time=3.178
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=1.096
+Particle Yükselen duman playing=True paused=False count=27 time=3.178
+Particle Yükselen duman playing=True paused=False count=27 time=1.096
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=1.096
+Particle Yükselen duman playing=True paused=False count=27 time=3.178
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=3.178
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=3.178
+Particle Yükselen duman playing=True paused=False count=27 time=3.178
+Particle Yükselen duman playing=True paused=False count=27 time=3.178
+Particle Yükselen duman playing=True paused=False count=27 time=1.096
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=3.178
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=3.178
+Particle Yükselen duman playing=True paused=False count=27 time=1.096
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=3.178
+Particle Hareketli sıcak alev playing=True paused=False count=23 time=3.178
+Animation FlameTuft playing=True time=27.512 speed=1
+Animation FlameTuft playing=True time=11.088 speed=1
+Animation FlameTuft playing=True time=27.512 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=27.512 speed=1
+Animation FlameTuft playing=True time=27.512 speed=1
+Animation FlameTuft playing=True time=27.512 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=11.088 speed=1
+Animation FlameTuft playing=True time=11.088 speed=1
+Animation FlameTuft playing=True time=27.512 speed=1
+PASS explicit component pause, repeated pause, frozen smoke/flame times and resumed playback.
+PASS complete

@@ -1,0 +1,5 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+FAIL System.InvalidOperationException: One target actually extinguished timeout; phase=5 workspace=fire1 busy=False
+  at YanYana.Editor.YanYanaPhysicalQA+<WaitPhysical>d__78.MoveNext () [0x00041] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:31 
+  at YanYana.Editor.YanYanaPhysicalQA+<FireSaveReloadSequence>d__86.MoveNext () [0x00335] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:98 
+  at YanYana.Editor.YanYanaPhysicalQA.PhysicalCheckTick () [0x00029] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:26 

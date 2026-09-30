@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-09-15T01:38:15.910866+03:00",
+  "sceneSha256": "b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231",
+  "windows": {
+    "archive": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Deprem-Windows-Inceleme-20260915-013738.zip",
+    "files": 175,
+    "bytes": 104851217,
+    "sha256": "7ed1c3f2484112a9ccf3d220ae41925a37b07af0a535b8cb3b325a9308073431",
+    "sceneSha256": "b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231",
+    "originalFilesUnchanged": 10443,
+    "scope": "Windows review package. Startup log and archive integrity checked; full input routes were tested in Unity Editor. Not Android or child playtime evidence."
+  },
+  "android": {
+    "checkedAt": "2026-09-15T01:29:32.664736+03:00",
+    "apk": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Android\\Deprem-Android-Inceleme-20260915-012748.apk",
+    "sha256": "de678b72b9374b6b48dc4e9e79a619a5a6b84fea68eae9fb55061865c6f663b6",
+    "bytes": 113703306,
+    "scene": "Assets/YanYana/Scenes/YanYana_Adventure.unity",
+    "sceneSha256": "b180da44ad7525a1562b08f47aee55a5cc16f64601bdf29034f2f5b24a6d3231",
+    "checks": {
+      "zipCrc": true,
+      "aaptReadable": true,
+      "packageId": true,
+      "originalGameName": true,
+      "minimumAndroidApi26": true,
+      "targetAndroidApi35": true,
+      "arm64Only": true,
+      "il2cppPresent": true,
+      "signatureVerified": true
+    },
+    "passed": true,
+    "architectures": [
+      "arm64-v8a"
+    ],
+    "buildWarnings": 1,
+    "signing": "Android debug certificate for local review",
+    "realDevicePlaytestCompleted": false
+  },
+  "renderedCamera": {
+    "Frames": "7358",
+    "ProjectionChanges": "0",
+    "AbruptRenderedSteps": "0",
+    "MaxStepUnder90ms": "0.6951084",
+    "MaxRotationUnder90ms": "10.36117",
+    "Csv": "ClientExports/YanYana/Reports/camera-motion-20260915-012946.csv",
+    "Scope": "Actual Editor render frames; title/world cut and frames above 90 ms are excluded from abrupt-step count. Device FPS is not measured."
+  },
+  "firePoseMetres": {
+    "samples": "1526",
+    "leftMax": "0.0004978295",
+    "leftP95": "0.0004327636",
+    "rightMax": "0.0004018317",
+    "rightP95": "0.0003538982",
+    "waterStartGap": "0"
+  },
+  "fireScreenChecks": 40,
+  "firesExtinguishedThroughScreen": 9,
+  "mapDrags": 15,
+  "reunionScreenChecks": 48,
+  "reunionFaceChecks": 72,
+  "screenDrivenReunions": 4,
+  "originalFilesUnchanged": 10443,
+  "saveValuesRestored": 3016,
+  "newRuntimeCSharp": 0,
+  "video": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Recordings/Deprem-kamera-hortum-20260915.mp4",
+  "editableArt": [
+    "C:/Users/Gokturk/Documents/GitHub/Deprem/ArtDirection/YanYana/Props/HoseNozzle.blend",
+    "C:/Users/Gokturk/Documents/GitHub/Deprem/ArtDirection/YanYana/Props/FireVolume.blend",
+    "C:/Users/Gokturk/Documents/GitHub/Deprem/ArtDirection/YanYana/Props/CouplingSocket.blend",
+    "C:/Users/Gokturk/Documents/GitHub/Deprem/ArtDirection/YanYana/Props/CouplingPlug.blend",
+    "C:/Users/Gokturk/Documents/GitHub/Deprem/ArtDirection/YanYana/Props/CouplingStation.blend",
+    "C:/Users/Gokturk/Documents/GitHub/Deprem/ArtDirection/YanYana/Props/CouplingWheel.blend"
+  ],
+  "limits": [
+    "Editor production pointer handlers and validated EventSystem raycasts; not physical touch.",
+    "Camera trace excludes the deliberate title/world cut and frames above 90 ms; not a device FPS benchmark.",
+    "No target-age child session or physical Android device was available. 30-minute content budget and device FPS/memory acceptance remain unverified."
+  ]
+}

@@ -1,0 +1,185 @@
+[
+  {
+    "character": "Ada",
+    "neutralDeltaMetres": 1.2013700229374393e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.10208140146566799,
+      "RightUpperArm": 0.09209626385347866,
+      "RightLowerArm": 0.06227009273956954
+    },
+    "handShapeMovementMetres": {
+      "Left_Loop": 0.1253741950359305,
+      "Left_Cylinder": 0.09649216824594602,
+      "Left_Soft": 0.06906001490978204,
+      "Left_Pinch": 0.07691007792981411,
+      "Right_Loop": 0.12833507567590233,
+      "Right_Cylinder": 0.10133321398973387,
+      "Right_Soft": 0.07126068861471307,
+      "Right_Pinch": 0.07759002935384358
+    },
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Asli",
+    "neutralDeltaMetres": 1.341104507446289e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.11434227452743354,
+      "RightUpperArm": 0.10825091529750044,
+      "RightLowerArm": 0.056991997938121944
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Bora",
+    "neutralDeltaMetres": 1.341104507446289e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.12035549228982212,
+      "RightUpperArm": 0.11687325733141729,
+      "RightLowerArm": 0.050740810056277244
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Deniz",
+    "neutralDeltaMetres": 1.4975481660844222e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.13691893933150184,
+      "RightUpperArm": 0.13712499322530644,
+      "RightLowerArm": 0.06560476941574657
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Derya",
+    "neutralDeltaMetres": 1.341104507446289e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.11434227452743354,
+      "RightUpperArm": 0.10825091529750044,
+      "RightLowerArm": 0.056991997938121944
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Efe",
+    "neutralDeltaMetres": 1.192383898293914e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.0979919977107769,
+      "RightUpperArm": 0.0949860890705529,
+      "RightLowerArm": 0.050503237006396105
+    },
+    "handShapeMovementMetres": {
+      "Left_Loop": 0.09323065549999823,
+      "Left_Cylinder": 0.06835065087779713,
+      "Left_Soft": 0.04720317594861117,
+      "Left_Pinch": 0.059755040240256914,
+      "Right_Loop": 0.08998604188778782,
+      "Right_Cylinder": 0.06448836191981955,
+      "Right_Soft": 0.04497502054296122,
+      "Right_Pinch": 0.05814420058198167
+    },
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Emre",
+    "neutralDeltaMetres": 1.4975481660844222e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.13691893933150184,
+      "RightUpperArm": 0.13712499322530644,
+      "RightLowerArm": 0.06560476941574657
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Gul",
+    "neutralDeltaMetres": 1.341104507446289e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.11434227452743354,
+      "RightUpperArm": 0.10825091529750044,
+      "RightLowerArm": 0.056991997938121944
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Idil",
+    "neutralDeltaMetres": 1.2310379476739693e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.15463476309339597,
+      "RightUpperArm": 0.14985736918179068,
+      "RightLowerArm": 0.08869912130924863
+    },
+    "handShapeMovementMetres": {
+      "Left_Loop": 0.19449476959006992,
+      "Left_Cylinder": 0.11148743774949307,
+      "Left_Soft": 0.11635549253944454,
+      "Left_Pinch": 0.11307420621358193,
+      "Right_Loop": 0.1940962664971245,
+      "Right_Cylinder": 0.11078291562246301,
+      "Right_Soft": 0.11612598084652367,
+      "Right_Pinch": 0.11307218725194734
+    },
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Mert",
+    "neutralDeltaMetres": 1.4975481660844222e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.13691893933150184,
+      "RightUpperArm": 0.13712499322530644,
+      "RightLowerArm": 0.06560476941574657
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Ozan",
+    "neutralDeltaMetres": 1.4975481660844222e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.13691893933150184,
+      "RightUpperArm": 0.13712499322530644,
+      "RightLowerArm": 0.06560476941574657
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Selma",
+    "neutralDeltaMetres": 1.341104507446289e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.11434227452743354,
+      "RightUpperArm": 0.10825091529750044,
+      "RightLowerArm": 0.056991997938121944
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  },
+  {
+    "character": "Yusuf",
+    "neutralDeltaMetres": 1.850685827191803e-07,
+    "armPoseMovementMetres": {
+      "LeftUpperArm": 0.13014820352099987,
+      "RightUpperArm": 0.11671794464042613,
+      "RightLowerArm": 0.058768904921689076
+    },
+    "handShapeMovementMetres": {},
+    "armatures": 1,
+    "passed": true
+  }
+]

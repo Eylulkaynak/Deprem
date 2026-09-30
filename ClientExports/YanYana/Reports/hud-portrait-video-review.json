@@ -1,0 +1,18 @@
+{
+  "video": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Recordings\\physical-playthrough-20260914-085511.mp4",
+  "range_seconds": [
+    204,
+    221
+  ],
+  "frames": 510,
+  "portrait_roi": [
+    30,
+    40,
+    76,
+    78
+  ],
+  "minimum_dark_pixels": 1026,
+  "maximum_dark_pixels": 1503,
+  "frames_below_100_dark_pixels": 0,
+  "scope": "All decoded frames in this reunion segment only; image-content observation, not proof of every HUD frame in every route."
+}

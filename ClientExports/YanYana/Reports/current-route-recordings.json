@@ -1,0 +1,34 @@
+[
+  {
+    "ending": 2,
+    "recording": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Recordings/physical-playthrough-20260914-091228.mp4",
+    "seconds": 224.1,
+    "sceneSha256": "7f5489c855add426bdd7af90882431a25acec59816b173ff900035086b972c83",
+    "report": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Reports/physical-recorded-route-2.txt",
+    "scope": "Normal-speed technical automation in Unity Editor; not target-age or device evidence."
+  },
+  {
+    "ending": 3,
+    "recording": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Recordings/physical-playthrough-20260914-090927.mp4",
+    "seconds": 147.1,
+    "sceneSha256": "7f5489c855add426bdd7af90882431a25acec59816b173ff900035086b972c83",
+    "report": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Reports/physical-recorded-route-3.txt",
+    "scope": "Normal-speed technical automation in Unity Editor; not target-age or device evidence."
+  },
+  {
+    "ending": 4,
+    "recording": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Recordings/physical-playthrough-20260914-091634.mp4",
+    "seconds": 144.9,
+    "sceneSha256": "7f5489c855add426bdd7af90882431a25acec59816b173ff900035086b972c83",
+    "report": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Reports/physical-recorded-route-4.txt",
+    "scope": "Normal-speed technical automation in Unity Editor; not target-age or device evidence."
+  },
+  {
+    "ending": 1,
+    "recording": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Recordings/physical-playthrough-20260914-091931.mp4",
+    "seconds": 85.8,
+    "sceneSha256": "7f5489c855add426bdd7af90882431a25acec59816b173ff900035086b972c83",
+    "report": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Reports/physical-recorded-route-1.txt",
+    "scope": "Normal-speed technical automation in Unity Editor; not target-age or device evidence."
+  }
+]

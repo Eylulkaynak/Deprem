@@ -1,0 +1,78 @@
+Ada root=(-0.50, 0.00, -1.65) upper=(-0.32, 0.77, -1.67) lower=(-0.26, 0.60, -1.64) hand=(-0.24, 0.49, -1.67) lengths=0.1868984,0.1157382
+  LeftHand local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  LeftLowerArm local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  LeftUpperArm local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  LeftShoulder local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Chest local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Spine local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Hips local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Komsu_Rig local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Visual local=(0.01, 0.01, 0.01) lossy=(0.01, 0.01, 0.01)
+  Ada local=(1.00, 1.00, 1.00) lossy=(1.00, 1.00, 1.00)
+  03 Karakterler — onaylı görsel dil local=(1.00, 1.00, 1.00) lossy=(1.00, 1.00, 1.00)
+ target=(-0.12, 0.69, -1.67) pass=0 distance=1.692447E-07
+ target=(-0.12, 0.69, -1.67) pass=1 distance=2.154236E-07
+ target=(-0.12, 0.69, -1.67) pass=2 distance=1.744136E-07
+ target=(-0.12, 0.69, -1.67) pass=3 distance=1.744136E-07
+ target=(-0.32, 0.95, -1.67) pass=0 distance=1.228781E-07
+ target=(-0.32, 0.95, -1.67) pass=1 distance=1.192093E-07
+ target=(-0.32, 0.95, -1.67) pass=2 distance=8.42937E-08
+ target=(-0.32, 0.95, -1.67) pass=3 distance=1.074538E-07
+ target=(-0.22, 0.87, -1.37) pass=0 distance=0.02989848
+ target=(-0.22, 0.87, -1.37) pass=1 distance=0.02989851
+ target=(-0.22, 0.87, -1.37) pass=2 distance=0.02989863
+ target=(-0.22, 0.87, -1.37) pass=3 distance=0.02989863
+Efe root=(0.40, 0.00, -0.40) upper=(0.57, 0.66, -0.42) lower=(0.62, 0.51, -0.39) hand=(0.64, 0.42, -0.42) lengths=0.1621327,0.1013953
+  LeftHand local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  LeftLowerArm local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  LeftUpperArm local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  LeftShoulder local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Chest local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Spine local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Hips local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Can_Rig local=(1.00, 1.00, 1.00) lossy=(0.01, 0.01, 0.01)
+  Visual local=(0.01, 0.01, 0.01) lossy=(0.01, 0.01, 0.01)
+  Efe local=(1.00, 1.00, 1.00) lossy=(1.00, 1.00, 1.00)
+  03 Karakterler — onaylı görsel dil local=(1.00, 1.00, 1.00) lossy=(1.00, 1.00, 1.00)
+ target=(0.77, 0.58, -0.42) pass=0 distance=1.788139E-07
+ target=(0.77, 0.58, -0.42) pass=1 distance=2.230202E-07
+ target=(0.77, 0.58, -0.42) pass=2 distance=1.999201E-07
+ target=(0.77, 0.58, -0.42) pass=3 distance=1.712013E-07
+ target=(0.57, 0.84, -0.42) pass=0 distance=1.192093E-07
+ target=(0.57, 0.84, -0.42) pass=1 distance=1.192093E-07
+ target=(0.57, 0.84, -0.42) pass=2 distance=2.086163E-07
+ target=(0.57, 0.84, -0.42) pass=3 distance=1.3328E-07
+ target=(0.67, 0.76, -0.12) pass=0 distance=0.06888462
+ target=(0.67, 0.76, -0.12) pass=1 distance=0.06888466
+ target=(0.67, 0.76, -0.12) pass=2 distance=0.06888469
+ target=(0.67, 0.76, -0.12) pass=3 distance=0.06888463
+near table: TenteDikisi Center: (6.52, 1.62, -22.79), Extents: (0.53, 0.30, 0.38)
+near table: MasaAyagi Center: (6.00, -0.13, -22.93), Extents: (0.60, 0.33, 0.02)
+near table: AyakTabani Center: (3.90, -0.46, -24.02), Extents: (0.08, 0.02, 0.08)
+near table: KatlanirAyak.003 Center: (5.10, 0.44, -23.74), Extents: (0.03, 0.92, 0.03)
+near table: KatlanirAyak.002 Center: (5.10, 0.44, -22.57), Extents: (0.03, 0.92, 0.03)
+near table: MasaAyagi.002 Center: (6.00, -0.13, -22.93), Extents: (0.60, 0.33, 0.02)
+near table: AyakTabani.003 Center: (5.10, -0.46, -23.74), Extents: (0.08, 0.02, 0.08)
+near table: AyakTabani.002 Center: (5.10, -0.46, -22.57), Extents: (0.08, 0.02, 0.08)
+near table: AlanIsareti.002 Center: (5.40, 0.51, -23.40), Extents: (0.04, 0.95, 0.04)
+near table: Simge zemini Center: (6.00, 1.27, -21.95), Extents: (0.54, 0.03, 0.54)
+near table: TenteDikisi Center: (3.52, 1.62, -24.24), Extents: (0.53, 0.30, 0.38)
+near table: KatlanirAyak.001 Center: (6.90, 0.44, -23.74), Extents: (0.03, 0.92, 0.03)
+near table: YumusakTente Center: (6.00, 1.61, -23.15), Extents: (1.04, 0.29, 0.72)
+near table: TenteDikisi.003 Center: (6.52, 1.62, -23.51), Extents: (0.53, 0.30, 0.38)
+near table: AİLE BULUŞMA Center: (6.00, 1.01, -23.65), Extents: (1.17, 0.19, 0.85)
+near table: KatlanirAyak Center: (3.90, 0.44, -24.02), Extents: (0.03, 0.92, 0.03)
+near table: TenteDikisi.002 Center: (5.48, 1.62, -23.51), Extents: (0.53, 0.30, 0.38)
+near table: MasaAyagi.001 Center: (6.00, -0.13, -23.38), Extents: (0.60, 0.33, 0.02)
+near table: MasaOnEtiketi Center: (6.00, 0.02, -22.79), Extents: (0.38, 0.16, 0.02)
+near table: KatlanirAyak.001 Center: (3.90, 0.44, -25.19), Extents: (0.03, 0.92, 0.03)
+near table: TenteDikisi.001 Center: (5.48, 1.62, -22.79), Extents: (0.53, 0.30, 0.38)
+near table: ResimliTabela.002 Center: (5.40, 1.30, -23.40), Extents: (0.35, 0.28, 0.03)
+near table: MasaAyagi.003 Center: (6.00, -0.13, -23.38), Extents: (0.60, 0.33, 0.02)
+near table: KatlanirAyak Center: (6.90, 0.44, -22.57), Extents: (0.03, 0.92, 0.03)
+near table: ToplanmaZemini.001 Center: (8.00, -0.46, -25.00), Extents: (3.00, 0.02, 2.00)
+near table: AyakTabani Center: (6.90, -0.46, -22.57), Extents: (0.08, 0.02, 0.08)
+near table: AyakTabani.001 Center: (6.90, -0.46, -23.74), Extents: (0.08, 0.02, 0.08)
+near table: MasaTablasi Center: (6.00, 0.22, -23.15), Extents: (0.74, 0.03, 0.35)
+near table: Aileyi bul Center: (6.20, 1.36, -21.95), Extents: (0.21, 0.01, 0.21)
+near table: Birlikte aile Center: (5.83, 1.36, -21.95), Extents: (0.24, 0.01, 0.24)

@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-09-14T19:15:59.747328+03:00",
+  "gameTitle": "Deprem",
+  "originalLogo": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\Story\\UI\\Brand\\DepremLogo.png",
+  "originalLogoSha256": "0c45814de031d7ae25e2f9a6d78dd3e184a3525ac6e98092e6210b968a63443f",
+  "sceneSha256": "6950edaa3a2eb06666a0ef394b0a469edba23f87877eb8c78232bff6c5203aec",
+  "previousGameplayEvidenceSceneSha256": "0134fbf5e79dca01e532e283cbb3c0b1a8832ed73d3478b20c57941d26d27a3d",
+  "titlePlayCapture": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Screenshots\\interface\\deprem-title-960.png",
+  "windows": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Deprem-Windows-Inceleme-20260914-191458.zip",
+  "android": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Android\\Deprem-Android-Inceleme-20260914-191054.apk",
+  "runtimeCSharpAdded": 0,
+  "originalFilesUnchanged": 10443,
+  "scope": "Branding-only correction: original logo, campaign title, Android application label, package display names. Play screenshot at 540x960 and new builds verified. Earlier gameplay and multi-aspect checks remain attributed to the predecessor scene; they were not rerun for this title correction."
+}

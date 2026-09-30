@@ -1,0 +1,218 @@
+quake-1 camera=(-0.29, 1.03, -1.61) phase=1 timeScale=1
+Ada head-palm alignment=0.078 right contact=0.0001209878 left contact=0.0002224607
+Efe head-palm alignment=-0.156 right contact=0 left contact=0
+Particle Yükselen duman playing=True paused=False count=21 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=3.641
+Particle Yükselen duman playing=True paused=False count=21 time=3.641
+Particle Yükselen duman playing=True paused=False count=22 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=16 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=3.641
+Particle Yükselen duman playing=True paused=False count=21 time=3.641
+Particle Yükselen duman playing=True paused=False count=21 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=16 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=3.641
+Particle Yükselen duman playing=True paused=False count=23 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=3.641
+Particle Yükselen duman playing=True paused=False count=21 time=3.641
+Particle Sarsıntıda kısa stilize toz playing=True paused=False count=54 time=1.201
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=3.641
+Particle Yükselen duman playing=True paused=False count=20 time=3.641
+Particle Yükselen duman playing=True paused=False count=20 time=3.641
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=3.641
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+Animation FlameTuft playing=True time=97.974 speed=1
+quake-2 camera=(-0.29, 1.03, -1.61) phase=1 timeScale=1
+Ada head-palm alignment=0.974 right contact=9.196448E-05 left contact=0.09363629
+Efe head-palm alignment=0.982 right contact=0.004666158 left contact=4.751264E-05
+Particle Yükselen duman playing=True paused=False count=21 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=4.376
+Particle Yükselen duman playing=True paused=False count=21 time=4.376
+Particle Yükselen duman playing=True paused=False count=24 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=20 time=4.376
+Particle Yükselen duman playing=True paused=False count=24 time=4.376
+Particle Yükselen duman playing=True paused=False count=22 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=4.376
+Particle Yükselen duman playing=True paused=False count=21 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.376
+Particle Yükselen duman playing=True paused=False count=22 time=4.376
+Particle Sarsıntıda kısa stilize toz playing=True paused=False count=37 time=1.936
+Particle Hareketli sıcak alev playing=True paused=False count=20 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=21 time=4.376
+Particle Yükselen duman playing=True paused=False count=22 time=4.376
+Particle Yükselen duman playing=True paused=False count=21 time=4.376
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.376
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+Animation FlameTuft playing=True time=98.709 speed=1
+quake-3 camera=(-0.29, 1.03, -1.61) phase=1 timeScale=1
+Ada head-palm alignment=0.985 right contact=0.0001883587 left contact=0.01386692
+Efe head-palm alignment=0.982 right contact=0.004666158 left contact=4.751264E-05
+Particle Yükselen duman playing=True paused=False count=21 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.236
+Particle Yükselen duman playing=True paused=False count=18 time=0.236
+Particle Yükselen duman playing=True paused=False count=20 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.236
+Particle Yükselen duman playing=True paused=False count=21 time=0.236
+Particle Yükselen duman playing=True paused=False count=22 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=16 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=0.236
+Particle Yükselen duman playing=True paused=False count=22 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=16 time=0.236
+Particle Yükselen duman playing=True paused=False count=21 time=0.236
+Particle Sarsıntıda kısa stilize toz playing=True paused=False count=5 time=2.000
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.236
+Particle Yükselen duman playing=True paused=False count=19 time=0.236
+Particle Yükselen duman playing=True paused=False count=19 time=0.236
+Particle Hareketli sıcak alev playing=True paused=False count=21 time=0.236
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+Animation FlameTuft playing=True time=99.569 speed=1
+quake-4 camera=(-0.29, 1.03, -1.61) phase=1 timeScale=1
+Ada head-palm alignment=0.985 right contact=0.0001862664 left contact=4.270739E-05
+Efe head-palm alignment=0.982 right contact=0.004666158 left contact=4.751264E-05
+Particle Yükselen duman playing=True paused=False count=20 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.932
+Particle Yükselen duman playing=True paused=False count=20 time=0.932
+Particle Yükselen duman playing=True paused=False count=22 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=0.932
+Particle Yükselen duman playing=True paused=False count=21 time=0.932
+Particle Yükselen duman playing=True paused=False count=23 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.932
+Particle Yükselen duman playing=True paused=False count=20 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.932
+Particle Yükselen duman playing=True paused=False count=21 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.932
+Particle Yükselen duman playing=True paused=False count=21 time=0.932
+Particle Yükselen duman playing=True paused=False count=20 time=0.932
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.932
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+Animation FlameTuft playing=True time=100.265 speed=1
+aftershock camera=(-3.92, 3.01, -5.73) phase=31 timeScale=1
+Ada head-palm alignment=0.985 right contact=0.0001864749 left contact=0.0002698032
+Efe head-palm alignment=0.982 right contact=2.877763E-05 left contact=4.157876E-05
+Aftershock children separation=0.942
+Particle Yükselen duman playing=True paused=False count=23 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=4.278
+Particle Yükselen duman playing=True paused=False count=21 time=4.278
+Particle Yükselen duman playing=True paused=False count=21 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.278
+Particle Yükselen duman playing=True paused=False count=21 time=4.278
+Particle Yükselen duman playing=True paused=False count=21 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.278
+Particle Yükselen duman playing=True paused=False count=22 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=4.278
+Particle Yükselen duman playing=True paused=False count=21 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.278
+Particle Yükselen duman playing=True paused=False count=21 time=4.278
+Particle Yükselen duman playing=True paused=False count=22 time=4.278
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=4.278
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+Animation FlameTuft playing=True time=113.612 speed=1
+fire1 camera=(-3.00, 3.22, -13.20) phase=5 timeScale=1
+Particle Yükselen duman playing=True paused=False count=21 time=0.266
+Particle Hareketli sıcak alev playing=True paused=False count=20 time=0.266
+Particle Yükselen duman playing=True paused=False count=21 time=0.266
+Particle Yükselen duman playing=True paused=False count=22 time=0.266
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.266
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.266
+Particle Yükselen duman playing=True paused=False count=22 time=0.266
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.266
+Particle Yükselen duman playing=True paused=False count=23 time=0.266
+Particle Hareketli sıcak alev playing=True paused=False count=18 time=0.266
+Particle Yükselen duman playing=True paused=False count=21 time=0.266
+Particle Hareketli sıcak alev playing=True paused=False count=19 time=0.266
+Animation FlameTuft playing=True time=129.599 speed=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=129.599 speed=1
+Animation FlameTuft playing=True time=129.599 speed=1
+Animation FlameTuft playing=True time=129.599 speed=1
+Animation FlameTuft playing=True time=129.599 speed=1
+Animation FlameTuft playing=True time=129.599 speed=1
+fire2 camera=(-0.60, 3.22, -14.20) phase=5 timeScale=1
+Particle Yükselen duman playing=True paused=False count=21 time=0.445
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.445
+Particle Yükselen duman playing=True paused=False count=22 time=0.445
+Particle Hareketli sıcak alev playing=True paused=False count=17 time=0.445
+Particle Yükselen duman playing=True paused=False count=21 time=0.445
+Particle Hareketli sıcak alev playing=True paused=False count=16 time=0.445
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+Animation FlameTuft playing=True time=149.778 speed=1
+Animation FlameTuft playing=True time=149.778 speed=1
+Animation FlameTuft playing=True time=149.778 speed=1
+fire3 camera=(-1.90, 3.22, -16.20) phase=5 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+ending-0-7-step0 camera=(-1.08, 4.02, -26.46) phase=7 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+ending-2-7-step0 camera=(0.00, 6.82, -17.20) phase=7 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+ending-2-7-step1 camera=(0.00, 7.07, -19.95) phase=7 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+ending-2-7-step2 camera=(-6.45, 1.62, -21.80) phase=7 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+ending-2-7-step3 camera=(-6.45, 1.62, -21.80) phase=7 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1
+ending-2-8-step3 camera=(-6.45, 1.62, -21.80) phase=8 timeScale=1
+Animation Hazırlanabilir dolap playing=False time=0.000 speed=1
+Animation Hazırlanabilir raf playing=False time=0.000 speed=1

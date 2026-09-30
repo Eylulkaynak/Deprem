@@ -1,0 +1,17 @@
+Passive observation of the EventSystem route; separate from child/device validation.
+Samples=3257 walking samples=584
+Max wrist target error metres=0.1177564
+Max sculpted grip center error metres=0.1177564
+Cane ground gap range metres=-2.980232E-08 .. 0.06833667
+Six resident instances=6
+Ending=3 Reunited=1
+PASS=False
+Finger closure and wrist continuity also require the accompanying visual review; distances alone are not a grip test.
+Mahalledeki komşu · Asli at (-8.80, -0.44, -26.70)
+Mahalledeki komşu · Deniz at (-8.90, -0.44, -25.00)
+Yardım bekleyen komşu 0 at (0.01, -0.48, -22.17)
+Yardım bekleyen komşu 2 at (5.99, -0.48, -22.17)
+Yardım bekleyen komşu 1 at (3.01, -0.48, -23.61)
+Mahalledeki komşu · Ozan at (9.40, -0.44, -24.60)
+Grip p95 metres=0.05154802
+Worst phase=7 speed=1.200007 actor=(1.83, -0.48, -20.01) cane=(1.41, -0.47, -20.18) upper=(1.68, 0.42, -19.81) elbow=(1.56, 0.42, -20.00) hand=(1.49, 0.43, -20.12)

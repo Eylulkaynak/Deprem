@@ -1,0 +1,7 @@
+Frames=18232
+ProjectionChanges=0
+AbruptRenderedSteps=0
+MaxStepUnder90ms=0.4960448
+MaxRotationUnder90ms=10.56774
+Csv=ClientExports/YanYana/Reports/camera-motion-20260914-200014.csv
+Scope=Actual Editor render frames; title/world cut and frames above 90 ms are excluded from abrupt-step count. Device FPS is not measured.

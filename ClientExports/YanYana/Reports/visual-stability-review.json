@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-09-14T20:31:54.484192+03:00",
+  "sceneSha256": "4f61ce6c8bdc31e87a66eb419db070e60ac4dad7f60853a286cef21fabc1e564",
+  "windows": {
+    "archive": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Deprem-Windows-Inceleme-20260914-203147.zip",
+    "files": 175,
+    "bytes": 104457904,
+    "sha256": "f934204455a307244012abb66c68f7fbe7b06cc3ee904f0feb0bad6d4aa8372a",
+    "sceneSha256": "4f61ce6c8bdc31e87a66eb419db070e60ac4dad7f60853a286cef21fabc1e564",
+    "originalFilesUnchanged": 10443,
+    "scope": "Windows review package. Startup log and archive integrity checked; full input routes were tested in Unity Editor. Not Android or child playtime evidence."
+  },
+  "android": {
+    "checkedAt": "2026-09-14T20:25:11.556382+03:00",
+    "apk": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\Android\\Deprem-Android-Inceleme-20260914-202352.apk",
+    "sha256": "df9d5d1955108a5cbac311bfc4776bbae24268768078cd0fe2bd7d1e4c128b80",
+    "bytes": 113098546,
+    "scene": "Assets/YanYana/Scenes/YanYana_Adventure.unity",
+    "sceneSha256": "4f61ce6c8bdc31e87a66eb419db070e60ac4dad7f60853a286cef21fabc1e564",
+    "checks": {
+      "zipCrc": true,
+      "aaptReadable": true,
+      "packageId": true,
+      "originalGameName": true,
+      "minimumAndroidApi26": true,
+      "targetAndroidApi35": true,
+      "arm64Only": true,
+      "il2cppPresent": true,
+      "signatureVerified": true
+    },
+    "passed": true,
+    "architectures": [
+      "arm64-v8a"
+    ],
+    "buildWarnings": 1,
+    "signing": "Android debug certificate for local review",
+    "realDevicePlaytestCompleted": false
+  },
+  "fullPreparedRouteCamera": {
+    "Frames": "18232",
+    "ProjectionChanges": "0",
+    "AbruptRenderedSteps": "0",
+    "MaxStepUnder90ms": "0.4960448",
+    "MaxRotationUnder90ms": "10.56774",
+    "Csv": "ClientExports/YanYana/Reports/camera-motion-20260914-200014.csv",
+    "Scope": "Actual Editor render frames; title/world cut and frames above 90 ms are excluded from abrupt-step count. Device FPS is not measured."
+  },
+  "finalSceneOpeningAndMapCamera": {
+    "Frames": "2872",
+    "ProjectionChanges": "0",
+    "AbruptRenderedSteps": "0",
+    "MaxStepUnder90ms": "0.1952498",
+    "MaxRotationUnder90ms": "5.346404",
+    "Csv": "ClientExports/YanYana/Reports/camera-motion-20260914-202457.csv",
+    "Scope": "Actual Editor render frames; title/world cut and frames above 90 ms are excluded from abrupt-step count. Device FPS is not measured."
+  },
+  "mapRaycastsAndDrags": 15,
+  "reunionScreenRaycasts": 48,
+  "reunionFaceChecks": 72,
+  "screenDrivenReunions": 4,
+  "groundOverlapCandidates": [],
+  "effectsPausePassed": true,
+  "originalFilesUnchanged": 10443,
+  "adventureSaveValuesRestored": 3016,
+  "newRuntimeCSharpFiles": 0,
+  "preview": "C:/Users/Gokturk/Documents/GitHub/Deprem/ClientExports/YanYana/Recordings/Deprem-kamera-ve-efektler-20260914.mp4",
+  "mapScreenshots": "ClientExports/YanYana/Screenshots/map-stability-20260914-202522",
+  "limits": [
+    "Full prepared route and effect pause were checked before the final map framing and intro-arrival-only adjustments; they are not presented as full routes of the final scene hash.",
+    "The final scene was checked through the fresh opening, map at three portrait ratios, four isolated screen-driven reunion fixtures and both platform builds.",
+    "Camera jump audit excludes the deliberate title/world cut and frames longer than 90 ms; it is not device FPS evidence.",
+    "No physical Android device or target-age child session was available."
+  ]
+}

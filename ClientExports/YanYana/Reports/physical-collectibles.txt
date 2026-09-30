@@ -1,0 +1,8 @@
+Actual scene item clicks, production approach graphs and NavMesh movement. No inventory flags or positions assigned by test.
+PASS Water seconds=1.95
+PASS Food seconds=0.01
+PASS FirstAid seconds=2.70
+PASS Blanket seconds=5.13
+PASS FamilyCard seconds=1.43
+PASS Whistle seconds=0.01
+PASS ComfortFox seconds=1.72

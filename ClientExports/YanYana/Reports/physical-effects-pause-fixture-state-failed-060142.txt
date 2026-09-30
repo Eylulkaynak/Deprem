@@ -1,0 +1,4 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+FAIL System.InvalidOperationException: Start at an active fire group.
+  at YanYana.Editor.YanYanaPhysicalQA+<EffectsPauseSequence>d__133.MoveNext () [0x00057] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPresentationQA.cs:52 
+  at YanYana.Editor.YanYanaPhysicalQA.PhysicalCheckTick () [0x0002f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:28 

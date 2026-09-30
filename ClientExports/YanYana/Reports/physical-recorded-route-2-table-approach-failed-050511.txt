@@ -1,0 +1,7 @@
+Technical full route, not a child session. Normal-time walking, timed EventSystem drags, no decision/inventory/health assignment or actor warps. Walking-only destinations use the existing player movement component.
+PASS New journey
+FAIL System.InvalidOperationException: Approach actual tabletop timeout; phase=0 workspace= busy=True
+  at YanYana.Editor.YanYanaPhysicalQA+<WaitPhysical>d__104.MoveNext () [0x00041] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:33 
+  at YanYana.Editor.YanYanaPhysicalQA+<IntroCarrySequence>d__45.MoveNext () [0x005f1] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaIntroQA.cs:146 
+  at YanYana.Editor.YanYanaPhysicalQA+<PreparedRoute>d__141.MoveNext () [0x00263] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaRecordedRouteQA.cs:65 
+  at YanYana.Editor.YanYanaPhysicalQA.RecordedRouteTick () [0x0002f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaRecordedRouteQA.cs:59 

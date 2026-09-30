@@ -1,0 +1,6 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+Measured hand contact Ada=0.0045m Efe=0.0001m target=(0.77, 0.67, -0.40)
+Ada root=(0.57, 0.00, -0.24) rotation=(0.00, 86.48, 0.00) upper=(0.48, 0.78, -0.42) lower=(0.66, 0.76, -0.38) hand=(0.78, 0.76, -0.35) targetDistance=0.3119378 reach=0.3026368
+Efe root=(1.04, 0.00, -0.21) rotation=(0.00, 266.48, 0.00) upper=(1.03, 0.66, -0.38) lower=(0.88, 0.64, -0.45) hand=(0.79, 0.67, -0.47) targetDistance=0.2579153 reach=0.263528
+PASS actual toy/quake/three protection gestures; sibling outside-drop rejection, second-pointer rejection, double-pause, partial reload, physical hand contact, completed support reload. No sibling outcome assignments.
+PASS complete
