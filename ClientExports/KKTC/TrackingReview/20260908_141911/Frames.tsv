@@ -1,0 +1,37 @@
+Frame	Scene	Time	Shot	CameraPosition	CameraRotation	Deniz	DenizViewport	CentralHit	Objective
+0	Story_01_RebuildPreview	1.49	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+1	Story_02_RebuildPreview	1.79	CM_HomeOverview_Rebuild	(-0.858, 3.307, -4.802)	(33.6, 10.0, 0.0)	(-0.749, 0.000, -2.263)	(0.324, 0.307, 3.458)	LivingRoom_Floor	ÇIKIŞ YOLUNU BİRLİKTE DENE
+2	Story_03_RebuildPreview	2.22	CM03R_RoomOverview	(1.350, 2.700, -5.150)	(17.4, 347.9, 0.0)	(-0.719, 0.000, -0.833)	(0.126, 0.431, 4.996)	Top	CAN'IN OYUNUNA YARDIM ET
+3	Story_03_RebuildPreview	2.48	CM03R_RoomOverview	(1.350, 2.700, -5.150)	(17.4, 347.9, 0.0)	(-0.719, 0.000, -0.833)	(0.126, 0.431, 4.996)	Top	CAN'IN OYUNUNA YARDIM ET
+4	Story_03_RebuildPreview	3.34	CM03R_RoomOverview	(1.350, 2.700, -5.150)	(17.4, 347.9, 0.0)	(-0.719, 0.000, -0.833)	(0.126, 0.431, 4.996)	Top	CAN'IN OYUNUNA YARDIM ET
+5	Story_01_RebuildPreview	3.84	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+6	Story_01_RebuildPreview	6.20	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+7	Story_01_RebuildPreview	6.70	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+8	Story_01_RebuildPreview	7.20	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+9	Story_01_RebuildPreview	7.69	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+10	Story_01_RebuildPreview	8.04	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+11	Story_01_RebuildPreview	8.54	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+12	Story_03_RebuildPreview	8.83	CM03R_RoomOverview	(1.350, 2.700, -5.150)	(17.4, 347.9, 0.0)	(-0.719, 0.000, -0.833)	(0.126, 0.431, 4.996)	Top	CAN'IN OYUNUNA YARDIM ET
+13	Story_01_RebuildPreview	33.81	CM_PreparationOverview_Rebuild	(-2.547, 2.948, -4.888)	(33.6, 10.0, 0.0)	(-1.899, 0.000, -2.263)	(0.598, 0.423, 3.408)	LivingRoom_Floor	AİLE PLANINI TAMAMLA • 1/3
+14	Story_01_RebuildPreview	147.59	CM_PreparationOverview_Rebuild	(-1.833, 3.091, -1.356)	(33.6, 10.0, 0.0)	(-0.859, 0.000, 1.825)	(0.686, 0.490, 3.990)	EmergencyBag_Worn	ÇANTAYI GÜVENLİ RAFA TAŞI
+15	Story_01_RebuildPreview	149.09	CM_PreparationOverview_Rebuild	(0.429, 3.090, -0.026)	(33.6, 10.0, 0.0)	(1.406, 0.000, 3.154)	(0.687, 0.490, 3.989)	EmergencyBag_Worn	ÇANTAYI GÜVENLİ RAFA TAŞI
+16	Story_01_RebuildPreview	150.59	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.157, 0.000, 4.182)	(0.491, 0.298, 3.459)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK
+17	Story_01_RebuildPreview	152.09	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.157, 0.000, 4.182)	(0.491, 0.298, 3.459)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK
+18	Story_01_RebuildPreview	153.60	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.157, 0.000, 4.182)	(0.491, 0.298, 3.459)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK
+19	Story_01_RebuildPreview	155.11	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.157, 0.000, 4.182)	(0.491, 0.298, 3.459)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK
+20	Story_01_RebuildPreview	185.88	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.157, 0.000, 4.182)	(0.491, 0.298, 3.459)	ExitBagShelf	1. PERDE TAMAMLANDI
+21	Story_02_RebuildPreview	186.45	CM_HomeOverview_Rebuild	(-0.858, 3.307, -4.802)	(33.6, 10.0, 0.0)	(-0.749, 0.000, -2.263)	(0.324, 0.307, 3.458)	LivingRoom_Floor	ÇIKIŞ YOLUNU BİRLİKTE DENE
+22	Story_02_RebuildPreview	204.33	CM_HomeOverview_Rebuild	(1.395, 3.521, 0.621)	(33.6, 10.0, 0.0)	(1.714, 0.030, 3.670)	(0.402, 0.370, 4.008)	DoorwayFloorBridge	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 0/3
+23	Story_02_RebuildPreview	208.84	CM_HomeOverview_Rebuild	(1.395, 3.521, 0.621)	(33.6, 10.0, 0.0)	(1.712, 0.030, 3.670)	(0.401, 0.370, 4.008)	DoorwayFloorBridge	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 1/3
+24	Story_02_RebuildPreview	210.35	CM_HomeOverview_Rebuild	(1.395, 3.521, 0.621)	(33.6, 10.0, 0.0)	(1.712, 0.030, 3.670)	(0.401, 0.370, 4.008)	DoorwayFloorBridge	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 1/3
+25	Story_02_RebuildPreview	211.86	CM_HomeOverview_Rebuild	(1.268, 3.521, 0.644)	(33.6, 10.0, 0.0)	(1.203, 0.015, 3.566)	(0.230, 0.334, 3.857)	DoorwayFloorBridge	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 1/3
+26	Story_02_RebuildPreview	213.37	CM_HomeOverview_Rebuild	(-1.292, 3.466, 0.598)	(33.6, 10.0, 0.0)	(-1.383, 0.000, 3.043)	(0.228, 0.245, 3.440)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 1/3
+27	Story_02_RebuildPreview	214.50	CM_HomeOverview_Rebuild	(-2.931, 3.471, 0.262)	(33.6, 10.0, 0.0)	(-2.987, 0.000, 2.719)	(0.246, 0.248, 3.458)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 1/3
+28	Story_02_RebuildPreview	216.48	CM_HomeOverview_Rebuild	(-2.931, 3.471, 0.261)	(33.6, 10.0, 0.0)	(-2.987, 0.000, 2.719)	(0.246, 0.248, 3.458)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+29	Story_02_RebuildPreview	217.99	CM_HomeOverview_Rebuild	(-2.931, 3.471, 0.261)	(33.6, 10.0, 0.0)	(-2.987, 0.000, 2.719)	(0.246, 0.248, 3.458)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+30	Story_02_RebuildPreview	219.49	CM_HomeOverview_Rebuild	(-2.931, 3.471, 0.261)	(33.6, 10.0, 0.0)	(-2.987, 0.000, 2.719)	(0.246, 0.248, 3.458)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+31	Story_02_RebuildPreview	221.00	CM_HomeOverview_Rebuild	(-2.931, 3.471, 0.261)	(33.6, 10.0, 0.0)	(-2.987, 0.000, 2.719)	(0.246, 0.248, 3.458)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+32	Story_02_RebuildPreview	222.50	CM_HomeOverview_Rebuild	(-2.836, 3.471, 0.238)	(33.6, 10.0, 0.0)	(-2.569, 0.000, 2.637)	(0.419, 0.248, 3.457)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+33	Story_02_RebuildPreview	224.02	CM_HomeOverview_Rebuild	(-0.247, 3.471, -0.268)	(33.6, 10.0, 0.0)	(0.023, 0.000, 2.131)	(0.421, 0.248, 3.457)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+34	Story_02_RebuildPreview	225.52	CM_HomeOverview_Rebuild	(2.298, 3.507, -0.791)	(33.6, 10.0, 0.0)	(2.571, 0.099, 1.634)	(0.419, 0.267, 3.444)	LivingRoom_Floor	RİSKİ GÖR, YAŞAM ALANINI DEĞİŞTİR — 2/3
+35	Story_03_RebuildPreview	265.83	CM03R_RoomOverview	(1.350, 2.700, -5.150)	(17.4, 347.9, 0.0)	(-0.719, 0.000, -0.833)	(0.126, 0.431, 4.996)	Top	CAN'IN OYUNUNA YARDIM ET

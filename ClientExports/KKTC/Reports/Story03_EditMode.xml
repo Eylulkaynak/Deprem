@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="13" result="Failed(Child)" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 09:34:48Z" end-time="2026-09-08 09:34:55Z" duration="7.0299523">
+  <test-suite type="TestSuite" id="1991" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="851" result="Failed" site="Child" start-time="2026-09-08 09:34:48Z" end-time="2026-09-08 09:34:55Z" duration="7.029952" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1218" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="188" result="Failed" site="Child" start-time="2026-09-08 09:34:48Z" end-time="2026-09-08 09:34:55Z" duration="6.924020" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1144" name="StoryQuakeRebuildPreviewTests" fullname="StoryQuakeRebuildPreviewTests" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-08 09:34:49Z" end-time="2026-09-08 09:34:55Z" duration="6.817934" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1149" name="Cameras_ArePortraitComposedAndCoverShotCannotCollapseIntoTableLegsOrWall" fullname="StoryQuakeRebuildPreviewTests.Cameras_ArePortraitComposedAndCoverShotCannotCollapseIntoTableLegsOrWall" methodname="Cameras_ArePortraitComposedAndCoverShotCannotCollapseIntoTableLegsOrWall" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1303894545" result="Passed" start-time="2026-09-08 09:34:49Z" end-time="2026-09-08 09:34:49Z" duration="0.730386" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1152" name="Children_ShowFearAndEmergencyBagIsPhysicallyMountedToDenizBack" fullname="StoryQuakeRebuildPreviewTests.Children_ShowFearAndEmergencyBagIsPhysicallyMountedToDenizBack" methodname="Children_ShowFearAndEmergencyBagIsPhysicallyMountedToDenizBack" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="117944104" result="Passed" start-time="2026-09-08 09:34:49Z" end-time="2026-09-08 09:34:50Z" duration="0.467074" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1150" name="EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds" fullname="StoryQuakeRebuildPreviewTests.EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds" methodname="EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1221226902" result="Failed" start-time="2026-09-08 09:34:50Z" end-time="2026-09-08 09:34:50Z" duration="0.480180" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Toz billboard'u dokusuz kare olarak çizilmemeli.
+  Expected: not null
+  But was:  null
+]]></message>
+            <stack-trace><![CDATA[at StoryQuakeRebuildPreviewTests.EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds () [0x001a2] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryQuakeRebuildPreviewTests.cs:260
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1148" name="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" fullname="StoryQuakeRebuildPreviewTests.EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" methodname="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1906297030" result="Passed" start-time="2026-09-08 09:34:50Z" end-time="2026-09-08 09:34:51Z" duration="0.447952" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1154" name="HomeSafetyPlayCorner_HasPreparedAndUnpreparedStory03Consequences" fullname="StoryQuakeRebuildPreviewTests.HomeSafetyPlayCorner_HasPreparedAndUnpreparedStory03Consequences" methodname="HomeSafetyPlayCorner_HasPreparedAndUnpreparedStory03Consequences" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="317187970" result="Passed" start-time="2026-09-08 09:34:51Z" end-time="2026-09-08 09:34:52Z" duration="0.745433" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1155" name="OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor" fullname="StoryQuakeRebuildPreviewTests.OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor" methodname="OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1159297318" result="Failed" start-time="2026-09-08 09:34:52Z" end-time="2026-09-08 09:34:52Z" duration="0.540324" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Ayakkabı çifti çocuk ölçeğinde olmalı.
+  Expected: less than or equal to 0.360000014f
+  But was:  0.369192123f
+]]></message>
+            <stack-trace><![CDATA[at StoryQuakeRebuildPreviewTests.OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor () [0x00355] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryQuakeRebuildPreviewTests.cs:431
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1156" name="PendantLamp_IsCeilingAnchoredAndLegacyTripodVisualIsDisabled" fullname="StoryQuakeRebuildPreviewTests.PendantLamp_IsCeilingAnchoredAndLegacyTripodVisualIsDisabled" methodname="PendantLamp_IsCeilingAnchoredAndLegacyTripodVisualIsDisabled" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1435791350" result="Passed" start-time="2026-09-08 09:34:52Z" end-time="2026-09-08 09:34:53Z" duration="0.477614" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1153" name="PreparationComfortChoice_HasPhysicalAndNarrativePostQuakePayoff" fullname="StoryQuakeRebuildPreviewTests.PreparationComfortChoice_HasPhysicalAndNarrativePostQuakePayoff" methodname="PreparationComfortChoice_HasPhysicalAndNarrativePostQuakePayoff" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1716465670" result="Passed" start-time="2026-09-08 09:34:53Z" end-time="2026-09-08 09:34:53Z" duration="0.486243" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1157" name="Preview_DisablesRealtimeShadows" fullname="StoryQuakeRebuildPreviewTests.Preview_DisablesRealtimeShadows" methodname="Preview_DisablesRealtimeShadows" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1933986852" result="Failed" start-time="2026-09-08 09:34:53Z" end-time="2026-09-08 09:34:53Z" duration="0.430657" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryQuakeRebuildPreviewTests.Preview_DisablesRealtimeShadows () [0x00035] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryQuakeRebuildPreviewTests.cs:491
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1146" name="Preview_HasOneInputOwnerNoCenterActionButtonAndRevisedPacing" fullname="StoryQuakeRebuildPreviewTests.Preview_HasOneInputOwnerNoCenterActionButtonAndRevisedPacing" methodname="Preview_HasOneInputOwnerNoCenterActionButtonAndRevisedPacing" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="858727091" result="Passed" start-time="2026-09-08 09:34:53Z" end-time="2026-09-08 09:34:54Z" duration="0.487824" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1151" name="Preview_ReusesStory01LivedInHomeAndAddsVisibleRoomScaleDestruction" fullname="StoryQuakeRebuildPreviewTests.Preview_ReusesStory01LivedInHomeAndAddsVisibleRoomScaleDestruction" methodname="Preview_ReusesStory01LivedInHomeAndAddsVisibleRoomScaleDestruction" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="2087934028" result="Passed" start-time="2026-09-08 09:34:54Z" end-time="2026-09-08 09:34:54Z" duration="0.479666" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1147" name="Preview_UsesActualWorldObjectsForAllCoreActions" fullname="StoryQuakeRebuildPreviewTests.Preview_UsesActualWorldObjectsForAllCoreActions" methodname="Preview_UsesActualWorldObjectsForAllCoreActions" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1356933396" result="Passed" start-time="2026-09-08 09:34:54Z" end-time="2026-09-08 09:34:55Z" duration="0.490749" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1145" name="Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings" fullname="StoryQuakeRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings" methodname="Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1403660648" result="Failed" start-time="2026-09-08 09:34:55Z" end-time="2026-09-08 09:34:55Z" duration="0.433938" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: RGBA(0.180, 0.235, 0.267, 1.000)
+  But was:  RGBA(0.710, 0.760, 0.730, 1.000)
+]]></message>
+            <stack-trace><![CDATA[at StoryQuakeRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings () [0x000cc] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryQuakeRebuildPreviewTests.cs:40
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\EditMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

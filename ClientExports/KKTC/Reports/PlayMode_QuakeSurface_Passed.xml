@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 12:37:51Z" end-time="2026-09-08 12:38:16Z" duration="24.7855003">
+  <test-suite type="TestSuite" id="1077" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="58" result="Passed" start-time="2026-09-08 12:37:51Z" end-time="2026-09-08 12:38:16Z" duration="24.785500" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1067" name="Deprem.Story.PlayModeTests.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="57" result="Passed" start-time="2026-09-08 12:37:52Z" end-time="2026-09-08 12:38:16Z" duration="24.764676" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1048" name="StoryQuakeHumanPlayModeTests" fullname="StoryQuakeHumanPlayModeTests" classname="StoryQuakeHumanPlayModeTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 12:37:52Z" end-time="2026-09-08 12:38:16Z" duration="24.761080" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1051" name="QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" fullname="StoryQuakeHumanPlayModeTests.QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" methodname="QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" classname="StoryQuakeHumanPlayModeTests" runstate="Runnable" seed="685099942" result="Passed" start-time="2026-09-08 12:37:52Z" end-time="2026-09-08 12:38:16Z" duration="24.749020" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="65000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

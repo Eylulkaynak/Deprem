@@ -1,0 +1,26 @@
+Story_01_RebuildPreview item visual audit
+Grid: row,col -> object | world rotation | original bounds
+1,1 -> Blackout_FlashlightInOuterPocket | rot=(0,18,22) | bounds=(0.13,0.08,0.20) | source=Assets/Bolum1Prefab/Item_Fener.prefab authoredRot=(-90,0,0) authoredScale=(20.00,20.00,16.00)
+1,2 -> CanComfortToy_Draggable | rot=(0,25,0) | bounds=(0.42,0.19,0.36) | source=Assets/ithappy/Cute_Furniture_Free/Prefabs/Decorations/Toy_02.prefab authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+1,3 -> CanWhistleRoleCard_Drag | rot=(0,0,0) | bounds=(0.70,0.20,0.43) | source=<generated>
+1,4 -> ConsoleConflict_Draggable | rot=(0,8,-18) | bounds=(0.24,0.12,0.16) | source=Assets/Bolum1Prefab/GameConsole_01 Variant.prefab authoredRot=(0,-146,0) authoredScale=(0.60,0.60,0.60)
+1,5 -> EmergencyBag_Open_Packing | rot=(0,35,0) | bounds=(0.56,0.50,0.58) | source=Assets/Sprites/Bolum1/Open Backpack/model.obj authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+2,1 -> EmergencyBag_Worn | rot=(-7,-14,1) | bounds=(0.40,0.39,0.36) | source=<generated>
+2,2 -> FamilyMeetingPointCard_Drag | rot=(0,0,0) | bounds=(0.70,0.20,0.44) | source=<generated>
+2,3 -> MelekContactCard_Drag | rot=(0,0,0) | bounds=(0.70,0.20,0.43) | source=<generated>
+2,4 -> Review_RadioBatteryInserted | rot=(0,-12,0) | bounds=(0.07,0.04,0.15) | source=Assets/Bolum1Prefab/Item_Pil.prefab authoredRot=(-90,0,0) authoredScale=(55.00,55.00,75.00)
+2,5 -> Review_RadioBatteryLoose | rot=(0,-12,0) | bounds=(0.07,0.04,0.15) | source=Assets/Bolum1Prefab/Item_Pil.prefab authoredRot=(-90,0,0) authoredScale=(55.00,55.00,75.00)
+3,1 -> Review_WhistleHandoff | rot=(90,18,0) | bounds=(0.42,0.05,0.23) | source=Assets/Bolum1Prefab/whistle.prefab authoredRot=(-90,131,-138) authoredScale=(0.02,0.02,0.02)
+3,2 -> WorldItem_Batteries | rot=(0,-12,0) | bounds=(0.07,0.04,0.15) | source=Assets/Bolum1Prefab/Item_Pil.prefab authoredRot=(-90,0,0) authoredScale=(55.00,55.00,75.00)
+3,3 -> WorldItem_Blanket | rot=(0,8,0) | bounds=(0.69,0.23,0.32) | source=Assets/Story/Environment/ThirdParty/KenneySurvival/Models/bedroll-packed.fbx authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+3,4 -> WorldItem_Clothes | rot=(0,-8,0) | bounds=(0.46,0.09,0.56) | source=Assets/Bolum1Prefab/T-shirt.prefab authoredRot=(0,19,0) authoredScale=(0.50,0.50,0.50)
+3,5 -> WorldItem_Console | rot=(0,12,0) | bounds=(0.52,0.14,0.38) | source=Assets/Bolum1Prefab/GameConsole_01 Variant.prefab authoredRot=(0,-146,0) authoredScale=(0.60,0.60,0.60)
+4,1 -> WorldItem_Documents | rot=(0,-6,0) | bounds=(0.42,0.05,0.36) | source=Assets/Bolum1Prefab/dockument.prefab authoredRot=(0,126,0) authoredScale=(1.20,1.00,1.20)
+4,2 -> WorldItem_FirstAid | rot=(0,0,0) | bounds=(0.45,0.32,0.38) | source=<generated>
+4,3 -> WorldItem_Flashlight | rot=(0,22,0) | bounds=(0.17,0.08,0.26) | source=Assets/Bolum1Prefab/Item_Fener.prefab authoredRot=(-90,0,0) authoredScale=(20.00,20.00,16.00)
+4,4 -> WorldItem_Food | rot=(-90,8,0) | bounds=(0.12,0.11,0.12) | source=Assets/Bolum1Prefab/konserve.prefab authoredRot=(-90,-173,0) authoredScale=(6.00,6.00,6.00)
+4,5 -> WorldItem_GlassBottle | rot=(-90,-10,0) | bounds=(0.15,0.46,0.15) | source=Assets/Bolum1Prefab/camSise.prefab authoredRot=(-90,-49,0) authoredScale=(20.00,20.00,20.00)
+5,1 -> WorldItem_Pan | rot=(0,15,72) | bounds=(0.22,0.20,0.11) | source=Assets/Bolum1Prefab/Item_Tava.prefab authoredRot=(-90,0,0) authoredScale=(20.00,20.00,20.00)
+5,2 -> WorldItem_Radio | rot=(-90,-161,0) | bounds=(0.20,0.24,0.12) | source=Assets/Bolum1Prefab/Radio.prefab authoredRot=(-90,-153,0) authoredScale=(30.00,30.00,30.00)
+5,3 -> WorldItem_Water | rot=(-90,0,0) | bounds=(0.11,0.48,0.11) | source=Assets/Bolum1Prefab/Item_Su.prefab authoredRot=(-90,0,0) authoredScale=(20.00,20.00,25.00)
+5,4 -> WorldItem_Whistle | rot=(0,12,0) | bounds=(0.30,0.13,0.07) | source=Assets/Bolum1Prefab/whistle.prefab authoredRot=(-90,131,-138) authoredScale=(0.02,0.02,0.02)

@@ -1,0 +1,49 @@
+EmergencyBag -> Backpack closed
+EmergencyBag_Open_Packing -> Backpack open
+EmergencyBag_HeavySlumped -> Backpack open
+Deniz_WornEmergencyBag -> Backpack closed
+EmergencyBag_Worn -> Backpack closed
+EmergencyBag_ExitShelf -> Backpack closed
+Story01_ShelfStack_Lower -> BookStack
+Story01_ShelfToyCar -> ToyCar
+Story01_ShelfStack_Top -> BookStack
+DrawerItem_Flashlight_Visual -> Flashlight
+DrawerItem_Batteries_Visual -> Batteries
+DrawerItem_Whistle_Visual -> Whistle
+DrawerItem_Radio_Visual -> Radio
+CabinetStockWater_A -> WaterBottle
+CabinetStockWater_B -> WaterBottle
+WarmthChest_ContentsPeek -> Blanket
+Packed_Flashlight -> Flashlight
+Packed_Radio -> Radio
+Packed_Batteries -> Batteries
+Packed_Whistle -> Whistle
+Packed_Water -> WaterBottle
+Packed_Food -> FoodCan
+Packed_Documents -> Documents
+Packed_Blanket -> Blanket
+Packed_Clothes -> Clothes
+BagReview_EmergencyRadio -> Radio
+ConsoleConflict_Heavy_Visual -> Console
+Can_WhistleClipped -> Whistle
+El feneri -> Flashlight
+Pilli radyo -> Radio
+Yedek pil -> Batteries
+Düdük -> Whistle
+Su -> WaterBottle
+Konserve -> FoodCan
+Belge kopyaları -> Documents
+İnce battaniye -> Blanket
+Yedek kıyafet -> Clothes
+Oyun konsolu -> Console
+Cam şişe -> GlassBottle
+Ağır tava -> Pan
+Review_WhistleHandoff_Visual -> Whistle
+ConsoleConflict_ReturnedToTable -> Console
+CanComfortToy_Result -> ToyCar
+CanComfortToy_Draggable_Visual -> ToyCar
+Blackout_FlashlightInOuterPocket -> Flashlight
+Blackout_Whistle -> Whistle
+Packed_FirstAid -> FirstAid
+WorldItem_FirstAid -> FirstAid
+BandageSeal_Unchecked -> Bandage

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 13:16:28Z" end-time="2026-09-08 13:17:19Z" duration="51.7236267">
+  <test-suite type="TestSuite" id="1078" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="59" result="Failed" site="Child" start-time="2026-09-08 13:16:28Z" end-time="2026-09-08 13:17:19Z" duration="51.723627" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1068" name="Deprem.Story.PlayModeTests.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="58" result="Failed" site="Child" start-time="2026-09-08 13:16:28Z" end-time="2026-09-08 13:17:19Z" duration="51.699678" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1053" name="StoryRebuildWalkthroughPlayModeTests" fullname="StoryRebuildWalkthroughPlayModeTests" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-08 13:16:28Z" end-time="2026-09-08 13:17:19Z" duration="51.696139" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1056" name="Story03_Quake_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story03_Quake_PlaysToCompletion" methodname="Story03_Quake_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="2012063603" result="Failed" start-time="2026-09-08 13:16:28Z" end-time="2026-09-08 13:17:19Z" duration="51.679808" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Deniz_12 feet clear of subtitles
+  Expected: in range (0.18,0.82)
+  But was:  -1.93613911f
+]]></message>
+            <stack-trace><![CDATA[at StoryRebuildWalkthroughPlayModeTests.AssertActorFraming (System.String folder, System.String[] names) [0x0026a] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\PlayMode\StoryRebuildWalkthroughPlayModeTests.cs:348
+at StoryRebuildWalkthroughPlayModeTests+<Story03_Quake_PlaysToCompletion>d__5.MoveNext () [0x00073] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\PlayMode\StoryRebuildWalkthroughPlayModeTests.cs:55
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@1f954279c37e\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

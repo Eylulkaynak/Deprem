@@ -1,0 +1,13 @@
+EmergencyBag -> Backpack closed
+Deniz_WornEmergencyBag -> Backpack closed
+Story01_ShelfStack_Lower -> BookStack
+Story01_ShelfToyCar -> ToyCar
+Story01_ShelfStack_Top -> BookStack
+PostQuake_ScatteredBook_B -> BookStack
+CanComicBook_Safe -> BookStack
+CanComicBook_Damaged -> BookStack
+CorridorLightRubble_Drag -> Parcel
+ParentVoiceBarrier_Debris -> Parcel
+Can_ComfortToy_PostQuake -> ToyCar
+Quake_LooseShelfBook_B -> BookStack
+DenizShoePair_Drag -> ShoePair

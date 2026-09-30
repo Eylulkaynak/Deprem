@@ -1,0 +1,7 @@
+Story_03_RebuildPreview item visual audit
+Grid: row,col -> object | world rotation | original bounds
+1,1 -> Can_ToyCar | rot=(0,-22,0) | bounds=(0.32,0.14,0.27) | source=Assets/Story/Prefabs/Home/StoryHome_Shared.prefab authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+1,2 -> Can_ToyWheel_Drag | rot=(90,0,0) | bounds=(0.11,0.11,0.04) | source=<generated>
+1,3 -> CorridorLightRubble_Drag | rot=(0,22,4) | bounds=(0.41,0.30,0.40) | source=Assets/Story/Environment/SyntyTown/SM_Prop_CardboardBox_01.fbx authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+2,1 -> DenizShoePair_Drag | rot=(0,-8,0) | bounds=(0.35,0.11,0.34) | source=<generated>
+2,2 -> EmergencyBag | rot=(0,168,0) | bounds=(0.46,0.43,0.40) | source=<generated>

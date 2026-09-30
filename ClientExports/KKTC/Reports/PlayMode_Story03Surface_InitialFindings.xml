@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 12:33:12Z" end-time="2026-09-08 12:33:35Z" duration="23.0158604">
+  <test-suite type="TestSuite" id="1077" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="58" result="Failed" site="Child" start-time="2026-09-08 12:33:12Z" end-time="2026-09-08 12:33:35Z" duration="23.015860" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1067" name="Deprem.Story.PlayModeTests.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="57" result="Failed" site="Child" start-time="2026-09-08 12:33:12Z" end-time="2026-09-08 12:33:35Z" duration="22.995980" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1053" name="StoryRebuildWalkthroughPlayModeTests" fullname="StoryRebuildWalkthroughPlayModeTests" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-09-08 12:33:12Z" end-time="2026-09-08 12:33:35Z" duration="22.992434" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1056" name="Story03_Quake_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story03_Quake_PlaysToCompletion" methodname="Story03_Quake_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="1935394644" result="Failed" start-time="2026-09-08 12:33:12Z" end-time="2026-09-08 12:33:35Z" duration="22.975321" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  quake.cover.crouch — gerçek dünya ışını doğru StoryInteractable'ı seçmedi. screen=(564.77, 1533.57), camera=(0.20, 0.72, -5.25), hits=BodyCollider[-,trigger=False] -> Bookcase_Visual[-,trigger=False] -> MobileTouchHotspot[quake.cover.crouch,trigger=True] -> SafeTable_CrouchSurface[quake.cover.crouch,trigger=True] -> Drop_quake_intro_wheel[-,trigger=True] -> KKTC_CameraBounds[-,trigger=True] -> BackWall_Left[-,trigger=False] -> CorridorLeftWall[-,trigger=False]
+  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryRebuildWalkthroughPlayModeTests+<DriveThroughTouchManager>d__14.MoveNext () [0x00324] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\PlayMode\StoryRebuildWalkthroughPlayModeTests.cs:399
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@1f954279c37e\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

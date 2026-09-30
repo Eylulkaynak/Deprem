@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 12:42:04Z" end-time="2026-09-08 12:57:01Z" duration="897.3963516">
+  <test-suite type="TestSuite" id="1077" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="58" result="Passed" start-time="2026-09-08 12:42:04Z" end-time="2026-09-08 12:57:01Z" duration="897.396352" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1067" name="Deprem.Story.PlayModeTests.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="57" result="Passed" start-time="2026-09-08 12:42:04Z" end-time="2026-09-08 12:57:01Z" duration="897.374120" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1053" name="StoryRebuildWalkthroughPlayModeTests" fullname="StoryRebuildWalkthroughPlayModeTests" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-08 12:42:04Z" end-time="2026-09-08 12:57:01Z" duration="897.370220" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1059" name="RecordAllFourScenesAtNormalSpeedTallPortrait" fullname="StoryRebuildWalkthroughPlayModeTests.RecordAllFourScenesAtNormalSpeedTallPortrait" methodname="RecordAllFourScenesAtNormalSpeedTallPortrait" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="1397336082" result="Passed" start-time="2026-09-08 12:42:04Z" end-time="2026-09-08 12:57:01Z" duration="897.352576" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="7200000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[MovieRecorder: Story Rebuild 01-04 — Portrait MP4] Recording may cause slowdowns or generate an invalid file. The image size exceeds the recommended maximum height for H.264: 2160 px
+[MovieRecorder: Story Rebuild 01-04 — Portrait MP4] Recording may cause slowdowns or generate an invalid file. The image size exceeds the recommended maximum height for H.264: 2160 px
+Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

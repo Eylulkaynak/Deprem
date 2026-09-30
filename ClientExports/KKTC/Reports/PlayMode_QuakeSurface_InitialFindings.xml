@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 12:30:33Z" end-time="2026-09-08 12:31:05Z" duration="32.9072288">
+  <test-suite type="TestSuite" id="1077" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="58" result="Failed" site="Child" start-time="2026-09-08 12:30:33Z" end-time="2026-09-08 12:31:05Z" duration="32.907229" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1067" name="Deprem.Story.PlayModeTests.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="57" result="Failed" site="Child" start-time="2026-09-08 12:30:33Z" end-time="2026-09-08 12:31:05Z" duration="32.885543" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1048" name="StoryQuakeHumanPlayModeTests" fullname="StoryQuakeHumanPlayModeTests" classname="StoryQuakeHumanPlayModeTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-09-08 12:30:33Z" end-time="2026-09-08 12:31:05Z" duration="32.879239" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1051" name="QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" fullname="StoryQuakeHumanPlayModeTests.QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" methodname="QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" classname="StoryQuakeHumanPlayModeTests" runstate="Runnable" seed="1466753708" result="Failed" start-time="2026-09-08 12:30:33Z" end-time="2026-09-08 12:31:05Z" duration="32.865025" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="65000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[quake.cover.grip dokunulduğunda karakter yaklaşmalı ve etkileşim hazırlanmalı.]]></message>
+            <stack-trace><![CDATA[at StoryQuakeHumanPlayModeTests+<WaitForPendingPrepared>d__7.MoveNext () [0x000c3] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\PlayMode\StoryQuakeHumanPlayModeTests.cs:421
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@1f954279c37e\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

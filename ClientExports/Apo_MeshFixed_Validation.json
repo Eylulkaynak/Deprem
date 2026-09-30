@@ -1,0 +1,65 @@
+{
+  "glb": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed.glb",
+  "bytes": 96364304,
+  "sha256": "f9d0abfc3ad24b85bddb50d83b8dc7d5cdf2bad2325056d67981c5f38617bf0c",
+  "mesh_objects": 1,
+  "armatures": 0,
+  "vertices": 1559085,
+  "triangles": 3042385,
+  "materials": [
+    {
+      "name": "Apo_CleanPBR",
+      "principled_links": {
+        "Base Color": true,
+        "Roughness": true,
+        "Metallic": true,
+        "Normal": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "name": "Apo_BaseColor_PantsClean",
+      "size": [
+        4096,
+        4096
+      ],
+      "source": "FILE"
+    },
+    {
+      "name": "Apo_Metallic_Clean-Apo_Roughness_Constant",
+      "size": [
+        2048,
+        2048
+      ],
+      "source": "FILE"
+    },
+    {
+      "name": "Viewer Node",
+      "size": [
+        256,
+        256
+      ],
+      "source": "VIEWER"
+    }
+  ],
+  "bounds_min": [
+    -0.6731740236282349,
+    -0.18571805953979492,
+    0.0
+  ],
+  "bounds_max": [
+    0.6731740236282349,
+    0.18571805953979492,
+    1.7999999523162842
+  ],
+  "dimensions": [
+    1.3463480472564697,
+    0.37143611907958984,
+    1.7999999523162842
+  ],
+  "previews": [
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed_Validation_Previews\\Apo_MeshFixed_Reimport_Front.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed_Validation_Previews\\Apo_MeshFixed_Reimport_ThreeQuarter.png"
+  ]
+}

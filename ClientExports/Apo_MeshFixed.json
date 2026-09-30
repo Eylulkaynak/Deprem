@@ -1,0 +1,16 @@
+{
+  "glb": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed.glb",
+  "bytes": 96364304,
+  "sha256": "f9d0abfc3ad24b85bddb50d83b8dc7d5cdf2bad2325056d67981c5f38617bf0c",
+  "vertices": 1521175,
+  "triangles": 3042385,
+  "materials": [
+    "Apo_CleanPBR"
+  ],
+  "previews": [
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed_Previews\\Apo_MeshFixed_Front.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed_Previews\\Apo_MeshFixed_ThreeQuarter.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed_Previews\\Apo_MeshFixed_Back.png",
+    "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\Apo_MeshFixed_Previews\\Apo_MeshFixed_Left.png"
+  ]
+}

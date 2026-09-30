@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="12" result="Failed(Child)" total="12" passed="9" failed="3" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 09:34:29Z" end-time="2026-09-08 09:34:32Z" duration="3.2222987">
+  <test-suite type="TestSuite" id="1990" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="851" result="Failed" site="Child" start-time="2026-09-08 09:34:29Z" end-time="2026-09-08 09:34:32Z" duration="3.222299" total="12" passed="9" failed="3" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1218" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="188" result="Failed" site="Child" start-time="2026-09-08 09:34:29Z" end-time="2026-09-08 09:34:32Z" duration="3.125871" total="12" passed="9" failed="3" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1064" name="StoryHomeSafetyRebuildPreviewTests" fullname="StoryHomeSafetyRebuildPreviewTests" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" testcasecount="12" result="Failed" site="Child" start-time="2026-09-08 09:34:29Z" end-time="2026-09-08 09:34:32Z" duration="3.026166" total="12" passed="9" failed="3" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1069" name="Director_WiresPreludeCheckpointsAdultWorkAndFinalRouteWithoutSoftlock" fullname="StoryHomeSafetyRebuildPreviewTests.Director_WiresPreludeCheckpointsAdultWorkAndFinalRouteWithoutSoftlock" methodname="Director_WiresPreludeCheckpointsAdultWorkAndFinalRouteWithoutSoftlock" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="2064841192" result="Passed" start-time="2026-09-08 09:34:29Z" end-time="2026-09-08 09:34:29Z" duration="0.420078" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1068" name="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" fullname="StoryHomeSafetyRebuildPreviewTests.EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" methodname="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="22345987" result="Passed" start-time="2026-09-08 09:34:29Z" end-time="2026-09-08 09:34:30Z" duration="0.225294" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1071" name="ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs" fullname="StoryHomeSafetyRebuildPreviewTests.ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs" methodname="ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="864733134" result="Failed" start-time="2026-09-08 09:34:30Z" end-time="2026-09-08 09:34:30Z" duration="0.223690" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: less than or equal to 0.379999995f
+  But was:  0.424361229f
+]]></message>
+            <stack-trace><![CDATA[at StoryHomeSafetyRebuildPreviewTests.ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs () [0x00060] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryHomeSafetyRebuildPreviewTests.cs:229
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1070" name="InitialWorldState_PreservesStory01ConsequencesAndStory03Continuity" fullname="StoryHomeSafetyRebuildPreviewTests.InitialWorldState_PreservesStory01ConsequencesAndStory03Continuity" methodname="InitialWorldState_PreservesStory01ConsequencesAndStory03Continuity" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1745770457" result="Passed" start-time="2026-09-08 09:34:30Z" end-time="2026-09-08 09:34:30Z" duration="0.229150" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1076" name="Preview_DisablesRealtimeShadows" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_DisablesRealtimeShadows" methodname="Preview_DisablesRealtimeShadows" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="2142659067" result="Failed" start-time="2026-09-08 09:34:30Z" end-time="2026-09-08 09:34:30Z" duration="0.226517" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryHomeSafetyRebuildPreviewTests.Preview_DisablesRealtimeShadows () [0x00000] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryHomeSafetyRebuildPreviewTests.cs:430
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1067" name="Preview_HasRouteNeighborSafetyAndFinalBeatsAsWorldInteractions" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_HasRouteNeighborSafetyAndFinalBeatsAsWorldInteractions" methodname="Preview_HasRouteNeighborSafetyAndFinalBeatsAsWorldInteractions" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="23194727" result="Passed" start-time="2026-09-08 09:34:30Z" end-time="2026-09-08 09:34:31Z" duration="0.230358" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1066" name="Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras" methodname="Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1896706644" result="Passed" start-time="2026-09-08 09:34:31Z" end-time="2026-09-08 09:34:31Z" duration="0.230138" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1065" name="Preview_UsesConnectedSharedHomeAndIndependentNavigation" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndIndependentNavigation" methodname="Preview_UsesConnectedSharedHomeAndIndependentNavigation" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1487728723" result="Passed" start-time="2026-09-08 09:34:31Z" end-time="2026-09-08 09:34:31Z" duration="0.229479" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1075" name="SecuringAnimations_OnlySettleLocallyAndDoNotThrowPropsAcrossTheRoom" fullname="StoryHomeSafetyRebuildPreviewTests.SecuringAnimations_OnlySettleLocallyAndDoNotThrowPropsAcrossTheRoom" methodname="SecuringAnimations_OnlySettleLocallyAndDoNotThrowPropsAcrossTheRoom" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1728160585" result="Passed" start-time="2026-09-08 09:34:31Z" end-time="2026-09-08 09:34:31Z" duration="0.223655" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1073" name="SharedShelfVariants_UseOneConsistentModernSkin" fullname="StoryHomeSafetyRebuildPreviewTests.SharedShelfVariants_UseOneConsistentModernSkin" methodname="SharedShelfVariants_UseOneConsistentModernSkin" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1987373870" result="Passed" start-time="2026-09-08 09:34:31Z" end-time="2026-09-08 09:34:31Z" duration="0.226805" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1072" name="ShelfProps_AreOrderedOnRealShelvesInsteadOfFloatingOrScattering" fullname="StoryHomeSafetyRebuildPreviewTests.ShelfProps_AreOrderedOnRealShelvesInsteadOfFloatingOrScattering" methodname="ShelfProps_AreOrderedOnRealShelvesInsteadOfFloatingOrScattering" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1919829522" result="Passed" start-time="2026-09-08 09:34:31Z" end-time="2026-09-08 09:34:32Z" duration="0.225538" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1074" name="TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports" fullname="StoryHomeSafetyRebuildPreviewTests.TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports" methodname="TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1381559041" result="Failed" start-time="2026-09-08 09:34:32Z" end-time="2026-09-08 09:34:32Z" duration="0.229758" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  ExitParcel_Start çocuk ölçeğinde kalmalı
+  Expected: less than or equal to 0.460000008f
+  But was:  0.46444416f
+]]></message>
+            <stack-trace><![CDATA[at StoryHomeSafetyRebuildPreviewTests.TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports () [0x00098] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryHomeSafetyRebuildPreviewTests.cs:323
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\EditMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

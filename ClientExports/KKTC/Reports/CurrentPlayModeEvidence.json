@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "StoryChapterPlayModeTests.EvacuationRebuild_AllMissingEquipmentUsesSafeFallbacksWithoutSoftlock": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:19:53Z"
+    },
+    "StoryChapterPlayModeTests.RebuildStoryRoute_PreservesOneSessionFlagsAndActBoundariesAcrossFourScenes": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:19:58Z"
+    },
+    "StoryPreparationPlayModeTests.FaceRig_BlinksAndActiveSpeakerMouthActuallyMoves": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:20:00Z"
+    },
+    "StoryPreparationPlayModeTests.OpeningDialogue_ShowsRevisedSubtitlesWithoutStaleVoiceAudio": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:20:02Z"
+    },
+    "StoryPreparationPlayModeTests.OpeningDialogue_UsesOnlyTheActiveCommonMouthAndKeepsGazeBounded": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:20:03Z"
+    },
+    "StoryPreparationPlayModeTests.PreparationScene_FinalBagWeightDialogueKeepsBothChildrenGrounded": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:20:04Z"
+    },
+    "StoryQuakeHumanPlayModeTests.QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover": {
+      "result": "Passed",
+      "evidence": "PlayMode_QuakeSurface_Passed.xml",
+      "completed": "2026-09-08 12:38:16Z"
+    },
+    "StoryRebuildWalkthroughPlayModeTests.Story01_Preparation_PlaysToCompletion": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:21:20Z"
+    },
+    "StoryRebuildWalkthroughPlayModeTests.Story02_HomeSafety_PlaysToCompletion": {
+      "result": "Passed",
+      "evidence": "PlayMode_TallPortrait_Passed.xml",
+      "completed": "2026-09-08 12:21:47Z"
+    },
+    "StoryRebuildWalkthroughPlayModeTests.Story03_Quake_PlaysToCompletion": {
+      "result": "Passed",
+      "evidence": "PlayMode_Story03Complete_Passed.xml",
+      "completed": "2026-09-08 13:20:20Z"
+    },
+    "StoryRebuildWalkthroughPlayModeTests.Story04_Evacuation_PlaysToCompletion": {
+      "result": "Passed",
+      "evidence": "PlayMode_Reunion_Passed.xml",
+      "completed": "2026-09-08 13:12:24Z"
+    }
+  },
+  "passed": 11,
+  "failed": 0,
+  "note": "Consolidated evidence index; original XML reports are unchanged."
+}

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="39" result="Failed(Child)" total="39" passed="29" failed="10" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 09:27:05Z" end-time="2026-09-08 09:27:18Z" duration="13.3132179">
+  <test-suite type="TestSuite" id="1000" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="851" result="Failed" site="Child" start-time="2026-09-08 09:27:05Z" end-time="2026-09-08 09:27:18Z" duration="13.313218" total="39" passed="29" failed="10" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1218" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="188" result="Failed" site="Child" start-time="2026-09-08 09:27:05Z" end-time="2026-09-08 09:27:18Z" duration="13.216944" total="39" passed="29" failed="10" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1077" name="StoryPreparationRebuildPreviewTests" fullname="StoryPreparationRebuildPreviewTests" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-08 09:27:05Z" end-time="2026-09-08 09:27:18Z" duration="13.118496" total="39" passed="29" failed="10" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1092" name="CategoryFlow_CannotSoftlockOnOptionalItems" fullname="StoryPreparationRebuildPreviewTests.CategoryFlow_CannotSoftlockOnOptionalItems" methodname="CategoryFlow_CannotSoftlockOnOptionalItems" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1648439395" result="Passed" start-time="2026-09-08 09:27:05Z" end-time="2026-09-08 09:27:06Z" duration="0.416255" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1110" name="ComfortBeat_IsARequiredPhysicalDragAndPersistsItsChoice" fullname="StoryPreparationRebuildPreviewTests.ComfortBeat_IsARequiredPhysicalDragAndPersistsItsChoice" methodname="ComfortBeat_IsARequiredPhysicalDragAndPersistsItsChoice" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1942713478" result="Passed" start-time="2026-09-08 09:27:06Z" end-time="2026-09-08 09:27:06Z" duration="0.245178" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1109" name="ConsoleConflictUsesVisibleBagAndPhysicalConsoleDrag" fullname="StoryPreparationRebuildPreviewTests.ConsoleConflictUsesVisibleBagAndPhysicalConsoleDrag" methodname="ConsoleConflictUsesVisibleBagAndPhysicalConsoleDrag" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1095044229" result="Passed" start-time="2026-09-08 09:27:06Z" end-time="2026-09-08 09:27:06Z" duration="0.243857" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1105" name="Corridor_IsVisuallyClosedAndWarmAtTheRoomThreshold" fullname="StoryPreparationRebuildPreviewTests.Corridor_IsVisuallyClosedAndWarmAtTheRoomThreshold" methodname="Corridor_IsVisuallyClosedAndWarmAtTheRoomThreshold" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="375434304" result="Passed" start-time="2026-09-08 09:27:06Z" end-time="2026-09-08 09:27:06Z" duration="0.241912" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1087" name="DialogueVoiceBank_HasStory01ClipsAndDedicatedSource" fullname="StoryPreparationRebuildPreviewTests.DialogueVoiceBank_HasStory01ClipsAndDedicatedSource" methodname="DialogueVoiceBank_HasStory01ClipsAndDedicatedSource" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1320699293" result="Failed" start-time="2026-09-08 09:27:06Z" end-time="2026-09-08 09:27:07Z" duration="0.237908" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: 26
+  But was:  0
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.DialogueVoiceBank_HasStory01ClipsAndDedicatedSource () [0x00079] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:367
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1101" name="EntryWall_IsOneGroundedMudroomCompositionWithoutFloatingNoveltyProps" fullname="StoryPreparationRebuildPreviewTests.EntryWall_IsOneGroundedMudroomCompositionWithoutFloatingNoveltyProps" methodname="EntryWall_IsOneGroundedMudroomCompositionWithoutFloatingNoveltyProps" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="906989163" result="Passed" start-time="2026-09-08 09:27:07Z" end-time="2026-09-08 09:27:07Z" duration="0.238272" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1091" name="EveryRequiredItem_HasPhysicalDragPackedResultAndUniquePersistentFlag" fullname="StoryPreparationRebuildPreviewTests.EveryRequiredItem_HasPhysicalDragPackedResultAndUniquePersistentFlag" methodname="EveryRequiredItem_HasPhysicalDragPackedResultAndUniquePersistentFlag" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1404967447" result="Passed" start-time="2026-09-08 09:27:07Z" end-time="2026-09-08 09:27:07Z" duration="0.239365" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1104" name="ExitBagConsole_IsShallowAlongTheWallAndSupportsTheFinalBag" fullname="StoryPreparationRebuildPreviewTests.ExitBagConsole_IsShallowAlongTheWallAndSupportsTheFinalBag" methodname="ExitBagConsole_IsShallowAlongTheWallAndSupportsTheFinalBag" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="58082677" result="Passed" start-time="2026-09-08 09:27:07Z" end-time="2026-09-08 09:27:07Z" duration="0.249672" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1082" name="FamilyCharacters_HaveReadableFacesAndDoNotUseBrokenFootStabilization" fullname="StoryPreparationRebuildPreviewTests.FamilyCharacters_HaveReadableFacesAndDoNotUseBrokenFootStabilization" methodname="FamilyCharacters_HaveReadableFacesAndDoNotUseBrokenFootStabilization" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="475035961" result="Passed" start-time="2026-09-08 09:27:07Z" end-time="2026-09-08 09:27:08Z" duration="0.242813" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1095" name="FamilyPlanBoard_UsesAuthoredPanelsInsteadOfVisiblePrimitiveBoxes" fullname="StoryPreparationRebuildPreviewTests.FamilyPlanBoard_UsesAuthoredPanelsInsteadOfVisiblePrimitiveBoxes" methodname="FamilyPlanBoard_UsesAuthoredPanelsInsteadOfVisiblePrimitiveBoxes" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="456198083" result="Passed" start-time="2026-09-08 09:27:08Z" end-time="2026-09-08 09:27:08Z" duration="0.244134" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1111" name="FinalFlow_UsesObjectGesturesAndEndsThroughBlackoutTimelineSignal" fullname="StoryPreparationRebuildPreviewTests.FinalFlow_UsesObjectGesturesAndEndsThroughBlackoutTimelineSignal" methodname="FinalFlow_UsesObjectGesturesAndEndsThroughBlackoutTimelineSignal" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1785043772" result="Passed" start-time="2026-09-08 09:27:08Z" end-time="2026-09-08 09:27:08Z" duration="0.245209" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1089" name="FoodCan_IsPalmSizedUprightAndKeepsACompactTouchMarker" fullname="StoryPreparationRebuildPreviewTests.FoodCan_IsPalmSizedUprightAndKeepsACompactTouchMarker" methodname="FoodCan_IsPalmSizedUprightAndKeepsACompactTouchMarker" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="324480075" result="Passed" start-time="2026-09-08 09:27:08Z" end-time="2026-09-08 09:27:08Z" duration="0.232073" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1107" name="FoodUsesPhysicalInspectionAndHealthUsesAutomaticVisualInspection" fullname="StoryPreparationRebuildPreviewTests.FoodUsesPhysicalInspectionAndHealthUsesAutomaticVisualInspection" methodname="FoodUsesPhysicalInspectionAndHealthUsesAutomaticVisualInspection" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1211929096" result="Passed" start-time="2026-09-08 09:27:08Z" end-time="2026-09-08 09:27:09Z" duration="0.237856" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1080" name="InteractionCameras_FrameTheirActualTargetsAtPortraitAspect" fullname="StoryPreparationRebuildPreviewTests.InteractionCameras_FrameTheirActualTargetsAtPortraitAspect" methodname="InteractionCameras_FrameTheirActualTargetsAtPortraitAspect" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="475437403" result="Failed" start-time="2026-09-08 09:27:09Z" end-time="2026-09-08 09:27:09Z" duration="0.249210" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  CM_PreparationSiblingHandoff_Rebuild hedefi telefonda okunamayacak kadar küçük gösteriyor: 0.043
+  Expected: greater than or equal to 0.0599999987f
+  But was:  0.0432730913f
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.AssertPortraitCameraFrames (System.String cameraName, UnityEngine.Bounds subject, System.Single minimumViewportHeight) [0x00297] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:2149
+at StoryPreparationRebuildPreviewTests.InteractionCameras_FrameTheirActualTargetsAtPortraitAspect () [0x000c5] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:111
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1099" name="InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones" fullname="StoryPreparationRebuildPreviewTests.InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones" methodname="InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="681343698" result="Failed" start-time="2026-09-08 09:27:09Z" end-time="2026-09-08 09:27:09Z" duration="0.241751" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Story01_FamilyPlanFrame_Top
+  Expected: not <empty>
+  But was:  <empty>
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.CombinedBounds (UnityEngine.Transform root) [0x00040] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:2079
+at StoryPreparationRebuildPreviewTests.InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones () [0x000d9] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:987
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1098" name="InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls" fullname="StoryPreparationRebuildPreviewTests.InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls" methodname="InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="497712301" result="Failed" start-time="2026-09-08 09:27:09Z" end-time="2026-09-08 09:27:09Z" duration="0.238849" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  BackWall_Left
+  Expected: not <empty>
+  But was:  <empty>
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.CombinedBounds (UnityEngine.Transform root) [0x00040] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:2079
+at StoryPreparationRebuildPreviewTests.InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls () [0x00086] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:962
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1100" name="KitchenZone_IsAContinuousFunctionalWorkWallInsteadOfOneLonelyCabinet" fullname="StoryPreparationRebuildPreviewTests.KitchenZone_IsAContinuousFunctionalWorkWallInsteadOfOneLonelyCabinet" methodname="KitchenZone_IsAContinuousFunctionalWorkWallInsteadOfOneLonelyCabinet" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="553292299" result="Passed" start-time="2026-09-08 09:27:09Z" end-time="2026-09-08 09:27:10Z" duration="0.249517" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1090" name="NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface" fullname="StoryPreparationRebuildPreviewTests.NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface" methodname="NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="265272155" result="Failed" start-time="2026-09-08 09:27:10Z" end-time="2026-09-08 09:27:10Z" duration="0.240507" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  İlk yardım çantası
+  Expected: not <empty>
+  But was:  <empty>
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.CombinedBoundsIncludingInactive (UnityEngine.Transform root) [0x00040] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:2092
+at StoryPreparationRebuildPreviewTests.NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface () [0x000a7] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:457
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1084" name="OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera" fullname="StoryPreparationRebuildPreviewTests.OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera" methodname="OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="203930887" result="Passed" start-time="2026-09-08 09:27:10Z" end-time="2026-09-08 09:27:10Z" duration="0.236065" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1085" name="OpeningConversation_UsesCommonUIBindingsWithoutLegacySpeakerRuntime" fullname="StoryPreparationRebuildPreviewTests.OpeningConversation_UsesCommonUIBindingsWithoutLegacySpeakerRuntime" methodname="OpeningConversation_UsesCommonUIBindingsWithoutLegacySpeakerRuntime" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1683199358" result="Passed" start-time="2026-09-08 09:27:10Z" end-time="2026-09-08 09:27:10Z" duration="0.235806" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1115" name="OpeningFamily_MeshFacesPointIntoTheConversation" fullname="StoryPreparationRebuildPreviewTests.OpeningFamily_MeshFacesPointIntoTheConversation" methodname="OpeningFamily_MeshFacesPointIntoTheConversation" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1380063643" result="Passed" start-time="2026-09-08 09:27:10Z" end-time="2026-09-08 09:27:10Z" duration="0.240060" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1086" name="PackedItemResults_StayOrganizedBelowTheBagRim" fullname="StoryPreparationRebuildPreviewTests.PackedItemResults_StayOrganizedBelowTheBagRim" methodname="PackedItemResults_StayOrganizedBelowTheBagRim" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1784983637" result="Failed" start-time="2026-09-08 09:27:10Z" end-time="2026-09-08 09:27:11Z" duration="0.234559" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  EmergencyBag_Open_Visual
+  Expected: not <empty>
+  But was:  <empty>
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.CombinedBoundsIncludingInactive (UnityEngine.Transform root) [0x00040] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:2092
+at StoryPreparationRebuildPreviewTests.PackedItemResults_StayOrganizedBelowTheBagRim () [0x00020] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:328
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1094" name="PlanCardTable_ContainsAllCardsAndNotesOnItsPhysicalSurface" fullname="StoryPreparationRebuildPreviewTests.PlanCardTable_ContainsAllCardsAndNotesOnItsPhysicalSurface" methodname="PlanCardTable_ContainsAllCardsAndNotesOnItsPhysicalSurface" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="594700043" result="Passed" start-time="2026-09-08 09:27:11Z" end-time="2026-09-08 09:27:11Z" duration="0.234643" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1106" name="PracticalLighting_CreatesWarmZonesAndParticipatesInBlackout" fullname="StoryPreparationRebuildPreviewTests.PracticalLighting_CreatesWarmZonesAndParticipatesInBlackout" methodname="PracticalLighting_CreatesWarmZonesAndParticipatesInBlackout" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="2043557213" result="Passed" start-time="2026-09-08 09:27:11Z" end-time="2026-09-08 09:27:11Z" duration="0.239386" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1083" name="PreparationBagCamera_KeepsTheDropTargetAboveTheSubtitleSafeBand" fullname="StoryPreparationRebuildPreviewTests.PreparationBagCamera_KeepsTheDropTargetAboveTheSubtitleSafeBand" methodname="PreparationBagCamera_KeepsTheDropTargetAboveTheSubtitleSafeBand" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="378868183" result="Passed" start-time="2026-09-08 09:27:11Z" end-time="2026-09-08 09:27:12Z" duration="0.353548" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1116" name="Preview_DisablesDecorativeRealtimeShadows" fullname="StoryPreparationRebuildPreviewTests.Preview_DisablesDecorativeRealtimeShadows" methodname="Preview_DisablesDecorativeRealtimeShadows" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="495533038" result="Failed" start-time="2026-09-08 09:27:12Z" end-time="2026-09-08 09:27:12Z" duration="0.420202" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.Preview_DisablesDecorativeRealtimeShadows () [0x0001f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:2061
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1079" name="Preview_HasSingleInputOwnerNoCenterActionButtonAndFifteenComposedCameras" fullname="StoryPreparationRebuildPreviewTests.Preview_HasSingleInputOwnerNoCenterActionButtonAndFifteenComposedCameras" methodname="Preview_HasSingleInputOwnerNoCenterActionButtonAndFifteenComposedCameras" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="421207236" result="Passed" start-time="2026-09-08 09:27:12Z" end-time="2026-09-08 09:27:12Z" duration="0.422792" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1113" name="Preview_RemovesCategoryStationsAndKeepsItemsInEnvironmentalContexts" fullname="StoryPreparationRebuildPreviewTests.Preview_RemovesCategoryStationsAndKeepsItemsInEnvironmentalContexts" methodname="Preview_RemovesCategoryStationsAndKeepsItemsInEnvironmentalContexts" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="284137276" result="Passed" start-time="2026-09-08 09:27:12Z" end-time="2026-09-08 09:27:13Z" duration="0.479528" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1078" name="Preview_UsesConnectedSharedHomeAndIndependentSceneNavigation" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndIndependentSceneNavigation" methodname="Preview_UsesConnectedSharedHomeAndIndependentSceneNavigation" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1027880205" result="Passed" start-time="2026-09-08 09:27:13Z" end-time="2026-09-08 09:27:13Z" duration="0.539320" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1114" name="Preview_UsesDistinctMiniBoysAndCleanSupportedSetDressing" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesDistinctMiniBoysAndCleanSupportedSetDressing" methodname="Preview_UsesDistinctMiniBoysAndCleanSupportedSetDressing" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="102545329" result="Passed" start-time="2026-09-08 09:27:13Z" end-time="2026-09-08 09:27:14Z" duration="0.593563" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1081" name="Preview_UsesOneHumanScaleAndKeepsCharactersAboveTheFloor" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesOneHumanScaleAndKeepsCharactersAboveTheFloor" methodname="Preview_UsesOneHumanScaleAndKeepsCharactersAboveTheFloor" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="206759339" result="Passed" start-time="2026-09-08 09:27:14Z" end-time="2026-09-08 09:27:15Z" duration="0.508226" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1093" name="RevisedFlow_UsesPhysicalPlanCardAndFourFurnitureDiscoveries" fullname="StoryPreparationRebuildPreviewTests.RevisedFlow_UsesPhysicalPlanCardAndFourFurnitureDiscoveries" methodname="RevisedFlow_UsesPhysicalPlanCardAndFourFurnitureDiscoveries" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1753668836" result="Passed" start-time="2026-09-08 09:27:15Z" end-time="2026-09-08 09:27:15Z" duration="0.540491" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1103" name="ShelfContents_AreReadablePropsRestingOnTheirActualBoards" fullname="StoryPreparationRebuildPreviewTests.ShelfContents_AreReadablePropsRestingOnTheirActualBoards" methodname="ShelfContents_AreReadablePropsRestingOnTheirActualBoards" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="663363862" result="Failed" start-time="2026-09-08 09:27:15Z" end-time="2026-09-08 09:27:16Z" duration="0.443096" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Story01_ShelfStack_Lower okunamayacak kadar küçük olmamalı.
+  Expected: greater than 0.100000001f
+  But was:  0.094540596f
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.ShelfContents_AreReadablePropsRestingOnTheirActualBoards () [0x00333] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:1311
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1096" name="SignalDrawerCamera_DoesNotFrameThroughDeniz" fullname="StoryPreparationRebuildPreviewTests.SignalDrawerCamera_DoesNotFrameThroughDeniz" methodname="SignalDrawerCamera_DoesNotFrameThroughDeniz" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="520268184" result="Passed" start-time="2026-09-08 09:27:16Z" end-time="2026-09-08 09:27:16Z" duration="0.453499" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1088" name="SignalDrawerChoices_UseCompactNonOverlappingMarkers" fullname="StoryPreparationRebuildPreviewTests.SignalDrawerChoices_UseCompactNonOverlappingMarkers" methodname="SignalDrawerChoices_UseCompactNonOverlappingMarkers" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1355977336" result="Failed" start-time="2026-09-08 09:27:16Z" end-time="2026-09-08 09:27:16Z" duration="0.435806" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: greater than 0.652907133f
+  But was:  0.636458635f
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.SignalDrawerChoices_UseCompactNonOverlappingMarkers () [0x000f2] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:405
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1108" name="SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved" fullname="StoryPreparationRebuildPreviewTests.SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved" methodname="SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="2003737890" result="Failed" start-time="2026-09-08 09:27:16Z" end-time="2026-09-08 09:27:17Z" duration="0.440275" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Güç etkileşimi tahmini bir gövde noktasına değil, modeldeki beyaz düğmenin üstüne oturmalı.
+  Expected: less than 0.00499999989f
+  But was:  0.149622262f
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved () [0x005cc] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:1556
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1097" name="Story01ExtendedRightWall_HasContinuousSkirting" fullname="StoryPreparationRebuildPreviewTests.Story01ExtendedRightWall_HasContinuousSkirting" methodname="Story01ExtendedRightWall_HasContinuousSkirting" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1371235306" result="Passed" start-time="2026-09-08 09:27:17Z" end-time="2026-09-08 09:27:17Z" duration="0.462388" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1102" name="Wardrobe_UsesAnAnchoredBuiltInSkinInsteadOfTheToyClosetVisual" fullname="StoryPreparationRebuildPreviewTests.Wardrobe_UsesAnAnchoredBuiltInSkinInsteadOfTheToyClosetVisual" methodname="Wardrobe_UsesAnAnchoredBuiltInSkinInsteadOfTheToyClosetVisual" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1291107907" result="Passed" start-time="2026-09-08 09:27:17Z" end-time="2026-09-08 09:27:18Z" duration="0.465964" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1112" name="WornBackpacks_AreMountedToDenizTorsoInsteadOfFloatingFromTheCharacterRoot" fullname="StoryPreparationRebuildPreviewTests.WornBackpacks_AreMountedToDenizTorsoInsteadOfFloatingFromTheCharacterRoot" methodname="WornBackpacks_AreMountedToDenizTorsoInsteadOfFloatingFromTheCharacterRoot" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="394733205" result="Passed" start-time="2026-09-08 09:27:18Z" end-time="2026-09-08 09:27:18Z" duration="0.474604" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\EditMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

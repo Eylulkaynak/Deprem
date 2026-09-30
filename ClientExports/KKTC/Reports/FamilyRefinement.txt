@@ -1,0 +1,8 @@
+Deniz mesh=0 vertices=42579 bones=24 bounds=Center: (0.00, 0.85, 0.00), Extents: (0.46, 0.85, 0.27) humanoid=valid; original skeleton retained
+Can mesh=0 vertices=30765 bones=21 bounds=Center: (0.20, 0.18, -0.23), Extents: (51.40, 30.96, 94.90) humanoid=valid; original skeleton retained
+Anne mesh=0 vertices=31053 bones=21 bounds=Center: (0.18, 0.19, -0.28), Extents: (49.61, 31.80, 94.86) humanoid=valid; original skeleton retained
+Baba mesh=0 vertices=29909 bones=21 bounds=Center: (0.21, 0.10, -0.18), Extents: (50.07, 25.39, 94.95) humanoid=valid; original skeleton retained
+Komsu mesh=0 vertices=30432 bones=21 bounds=Center: (0.19, 0.25, -0.20), Extents: (46.55, 32.82, 94.93) humanoid=valid; original skeleton retained
+Police mesh=0 vertices=3799 bones=21 bounds=Center: (0.00, 0.00, 0.90), Extents: (0.55, 0.43, 0.90) humanoid=valid; original skeleton retained
+Firefighter mesh=0 vertices=4071 bones=21 bounds=Center: (0.00, 0.00, 0.90), Extents: (0.50, 0.31, 0.90) humanoid=valid; original skeleton retained
+RescueWorker mesh=0 vertices=3801 bones=21 bounds=Center: (0.00, 0.00, 0.90), Extents: (0.50, 0.24, 0.90) humanoid=valid; original skeleton retained

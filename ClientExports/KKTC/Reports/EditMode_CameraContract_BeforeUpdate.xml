@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="122" result="Failed(Child)" total="122" passed="120" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 11:27:14Z" end-time="2026-09-08 11:27:57Z" duration="42.8270014">
+  <test-suite type="TestSuite" id="1000" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="851" result="Failed" site="Child" start-time="2026-09-08 11:27:14Z" end-time="2026-09-08 11:27:57Z" duration="42.827001" total="122" passed="120" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1218" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="188" result="Failed" site="Child" start-time="2026-09-08 11:27:14Z" end-time="2026-09-08 11:27:57Z" duration="42.727917" total="122" passed="120" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="MeshyFamilyCharacterImporterTests" fullname="MeshyFamilyCharacterImporterTests" classname="MeshyFamilyCharacterImporterTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-08 11:27:14Z" end-time="2026-09-08 11:27:15Z" duration="0.267083" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1002" name="PreparedPrefabsHaveValidHumanoidMeshesAndClosedSkinWeightSeams" fullname="MeshyFamilyCharacterImporterTests.PreparedPrefabsHaveValidHumanoidMeshesAndClosedSkinWeightSeams" methodname="PreparedPrefabsHaveValidHumanoidMeshesAndClosedSkinWeightSeams" classname="MeshyFamilyCharacterImporterTests" runstate="Runnable" seed="692972572" result="Passed" start-time="2026-09-08 11:27:14Z" end-time="2026-09-08 11:27:15Z" duration="0.161184" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Meshy aile doğrulandı: 5 Humanoid prefab ve Humanoid Deniz yürüyüş klibi.
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1035" name="StoryDialogueFaceRebuildTests" fullname="StoryDialogueFaceRebuildTests" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:16Z" duration="1.831510" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1037" name="CommonFaceClip_HoldsBlinkClosedFor140MillisecondsWithoutAnimatingTheMouth" fullname="StoryDialogueFaceRebuildTests.CommonFaceClip_HoldsBlinkClosedFor140MillisecondsWithoutAnimatingTheMouth" methodname="CommonFaceClip_HoldsBlinkClosedFor140MillisecondsWithoutAnimatingTheMouth" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" seed="1371185349" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:15Z" duration="0.014764" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1036" name="NeutralIdleControllers_UseCalmSixSecondCadence" fullname="StoryDialogueFaceRebuildTests.NeutralIdleControllers_UseCalmSixSecondCadence" methodname="NeutralIdleControllers_UseCalmSixSecondCadence" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" seed="708595952" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:15Z" duration="0.030650" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1042" name="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig" fullname="StoryDialogueFaceRebuildTests.RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:16Z" duration="1.783947" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1038" name="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;,3)" fullname="StoryDialogueFaceRebuildTests.RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;,3)" methodname="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" seed="1058953674" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:15Z" duration="0.496798" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1039" name="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;,4)" fullname="StoryDialogueFaceRebuildTests.RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;,4)" methodname="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" seed="1097405501" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:15Z" duration="0.354805" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1040" name="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;,2)" fullname="StoryDialogueFaceRebuildTests.RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;,2)" methodname="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" seed="890021189" result="Passed" start-time="2026-09-08 11:27:15Z" end-time="2026-09-08 11:27:16Z" duration="0.348620" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1041" name="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;,8)" fullname="StoryDialogueFaceRebuildTests.RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;,8)" methodname="RebuildScene_UsesSerializedActorsAndTheSingleCommonFaceRig" classname="StoryDialogueFaceRebuildTests" runstate="Runnable" seed="1190074961" result="Passed" start-time="2026-09-08 11:27:16Z" end-time="2026-09-08 11:27:16Z" duration="0.530104" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+      </test-suite>
+      <test-suite type="TestFixture" id="1043" name="StoryEvacuationRebuildPreviewTests" fullname="StoryEvacuationRebuildPreviewTests" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" testcasecount="20" result="Passed" start-time="2026-09-08 11:27:16Z" end-time="2026-09-08 11:27:22Z" duration="5.770981" total="20" passed="20" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1051" name="ArchitectureShellRoofAndStreetDepth_AreCompleteAndCollisionSafe" fullname="StoryEvacuationRebuildPreviewTests.ArchitectureShellRoofAndStreetDepth_AreCompleteAndCollisionSafe" methodname="ArchitectureShellRoofAndStreetDepth_AreCompleteAndCollisionSafe" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1669483360" result="Passed" start-time="2026-09-08 11:27:16Z" end-time="2026-09-08 11:27:17Z" duration="0.296751" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1060" name="AssemblyCareCamera_FramesChildrenNeighborAndWorker" fullname="StoryEvacuationRebuildPreviewTests.AssemblyCareCamera_FramesChildrenNeighborAndWorker" methodname="AssemblyCareCamera_FramesChildrenNeighborAndWorker" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="248941482" result="Passed" start-time="2026-09-08 11:27:17Z" end-time="2026-09-08 11:27:17Z" duration="0.358144" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1057" name="BuildingThreshold_FloorsMeetAtOneEdgeWithoutStackedSlabs" fullname="StoryEvacuationRebuildPreviewTests.BuildingThreshold_FloorsMeetAtOneEdgeWithoutStackedSlabs" methodname="BuildingThreshold_FloorsMeetAtOneEdgeWithoutStackedSlabs" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1446614339" result="Passed" start-time="2026-09-08 11:27:17Z" end-time="2026-09-08 11:27:18Z" duration="0.429106" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1053" name="Cameras_FrameOpeningPairAndBothParentsAtReunion" fullname="StoryEvacuationRebuildPreviewTests.Cameras_FrameOpeningPairAndBothParentsAtReunion" methodname="Cameras_FrameOpeningPairAndBothParentsAtReunion" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="496025962" result="Passed" start-time="2026-09-08 11:27:18Z" end-time="2026-09-08 11:27:18Z" duration="0.352648" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1055" name="Children_HaveHeadBoundFaceRigsWithoutRuntimeScriptsOrColliders" fullname="StoryEvacuationRebuildPreviewTests.Children_HaveHeadBoundFaceRigsWithoutRuntimeScriptsOrColliders" methodname="Children_HaveHeadBoundFaceRigsWithoutRuntimeScriptsOrColliders" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="112176141" result="Passed" start-time="2026-09-08 11:27:18Z" end-time="2026-09-08 11:27:18Z" duration="0.281085" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1054" name="Corridor_IsClosedReadableAndUsesARealFlashlightGrip" fullname="StoryEvacuationRebuildPreviewTests.Corridor_IsClosedReadableAndUsesARealFlashlightGrip" methodname="Corridor_IsClosedReadableAndUsesARealFlashlightGrip" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="834004437" result="Passed" start-time="2026-09-08 11:27:18Z" end-time="2026-09-08 11:27:18Z" duration="0.274533" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1056" name="DoorOpenings_HugTheImportedFramesWithoutOversizedGaps" fullname="StoryEvacuationRebuildPreviewTests.DoorOpenings_HugTheImportedFramesWithoutOversizedGaps" methodname="DoorOpenings_HugTheImportedFramesWithoutOversizedGaps" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1609184839" result="Passed" start-time="2026-09-08 11:27:18Z" end-time="2026-09-08 11:27:19Z" duration="0.301304" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1048" name="EveryPhysicalTransfer_FollowsFingerToItsOwnWorldTarget" fullname="StoryEvacuationRebuildPreviewTests.EveryPhysicalTransfer_FollowsFingerToItsOwnWorldTarget" methodname="EveryPhysicalTransfer_FollowsFingerToItsOwnWorldTarget" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="555608602" result="Passed" start-time="2026-09-08 11:27:19Z" end-time="2026-09-08 11:27:19Z" duration="0.308805" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1058" name="Exterior_HasBatchedEarthquakeResponse" fullname="StoryEvacuationRebuildPreviewTests.Exterior_HasBatchedEarthquakeResponse" methodname="Exterior_HasBatchedEarthquakeResponse" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="571451226" result="Passed" start-time="2026-09-08 11:27:19Z" end-time="2026-09-08 11:27:19Z" duration="0.262288" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1044" name="Exterior_ReportsMobileRenderBudget" fullname="StoryEvacuationRebuildPreviewTests.Exterior_ReportsMobileRenderBudget" methodname="Exterior_ReportsMobileRenderBudget" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1633029901" result="Passed" start-time="2026-09-08 11:27:19Z" end-time="2026-09-08 11:27:20Z" duration="0.268486" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Story04 exterior budget: 179 renderers, 121901 instanced vertices.
+]]></output>
+        </test-case>
+        <test-case id="1052" name="Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly" fullname="StoryEvacuationRebuildPreviewTests.Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly" methodname="Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1369794793" result="Passed" start-time="2026-09-08 11:27:20Z" end-time="2026-09-08 11:27:20Z" duration="0.306173" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1061" name="NearMissCamera_FramesGasLeakWithoutFacadeTreeBlockingTheCenter" fullname="StoryEvacuationRebuildPreviewTests.NearMissCamera_FramesGasLeakWithoutFacadeTreeBlockingTheCenter" methodname="NearMissCamera_FramesGasLeakWithoutFacadeTreeBlockingTheCenter" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1074799930" result="Passed" start-time="2026-09-08 11:27:20Z" end-time="2026-09-08 11:27:20Z" duration="0.248440" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1049" name="Preview_HasBakedNavigationPortraitCamerasAndNoGroundInstruction" fullname="StoryEvacuationRebuildPreviewTests.Preview_HasBakedNavigationPortraitCamerasAndNoGroundInstruction" methodname="Preview_HasBakedNavigationPortraitCamerasAndNoGroundInstruction" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="767894426" result="Passed" start-time="2026-09-08 11:27:20Z" end-time="2026-09-08 11:27:20Z" duration="0.248180" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1045" name="Preview_StaysIndependentAndUsesSingleInputOwner" fullname="StoryEvacuationRebuildPreviewTests.Preview_StaysIndependentAndUsesSingleInputOwner" methodname="Preview_StaysIndependentAndUsesSingleInputOwner" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1235951074" result="Passed" start-time="2026-09-08 11:27:20Z" end-time="2026-09-08 11:27:21Z" duration="0.251292" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1063" name="Preview_UsesOneSoftShadowSun" fullname="StoryEvacuationRebuildPreviewTests.Preview_UsesOneSoftShadowSun" methodname="Preview_UsesOneSoftShadowSun" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="346688562" result="Passed" start-time="2026-09-08 11:27:21Z" end-time="2026-09-08 11:27:21Z" duration="0.242166" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1046" name="Preview_UsesPhysicalNeighborHelpFacadeClearAndReunion" fullname="StoryEvacuationRebuildPreviewTests.Preview_UsesPhysicalNeighborHelpFacadeClearAndReunion" methodname="Preview_UsesPhysicalNeighborHelpFacadeClearAndReunion" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1599014203" result="Passed" start-time="2026-09-08 11:27:21Z" end-time="2026-09-08 11:27:21Z" duration="0.259104" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1047" name="Preview_UsesPreparedItemsAndSafeFallbackObjects" fullname="StoryEvacuationRebuildPreviewTests.Preview_UsesPreparedItemsAndSafeFallbackObjects" methodname="Preview_UsesPreparedItemsAndSafeFallbackObjects" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1022832046" result="Passed" start-time="2026-09-08 11:27:21Z" end-time="2026-09-08 11:27:21Z" duration="0.248551" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1050" name="StairwellAndLandingProps_AreFinishedArchitectureAtHumanScale" fullname="StoryEvacuationRebuildPreviewTests.StairwellAndLandingProps_AreFinishedArchitectureAtHumanScale" methodname="StairwellAndLandingProps_AreFinishedArchitectureAtHumanScale" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="164632838" result="Passed" start-time="2026-09-08 11:27:21Z" end-time="2026-09-08 11:27:22Z" duration="0.251968" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1062" name="StreetInspectionCamera_FramesThePhysicalGasSourceBeforeItsSoundStarts" fullname="StoryEvacuationRebuildPreviewTests.StreetInspectionCamera_FramesThePhysicalGasSourceBeforeItsSoundStarts" methodname="StreetInspectionCamera_FramesThePhysicalGasSourceBeforeItsSoundStarts" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1170620124" result="Passed" start-time="2026-09-08 11:27:22Z" end-time="2026-09-08 11:27:22Z" duration="0.242931" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1059" name="StreetJourneyCamera_FramesEmergencyResponseAndLivingAssemblyArea" fullname="StoryEvacuationRebuildPreviewTests.StreetJourneyCamera_FramesEmergencyResponseAndLivingAssemblyArea" methodname="StreetJourneyCamera_FramesEmergencyResponseAndLivingAssemblyArea" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="697824015" result="Passed" start-time="2026-09-08 11:27:22Z" end-time="2026-09-08 11:27:22Z" duration="0.249828" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1064" name="StoryHomeSafetyRebuildPreviewTests" fullname="StoryHomeSafetyRebuildPreviewTests" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" testcasecount="12" result="Failed" site="Child" start-time="2026-09-08 11:27:22Z" end-time="2026-09-08 11:27:26Z" duration="3.829687" total="12" passed="11" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1069" name="Director_WiresPreludeCheckpointsAdultWorkAndFinalRouteWithoutSoftlock" fullname="StoryHomeSafetyRebuildPreviewTests.Director_WiresPreludeCheckpointsAdultWorkAndFinalRouteWithoutSoftlock" methodname="Director_WiresPreludeCheckpointsAdultWorkAndFinalRouteWithoutSoftlock" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1143185568" result="Passed" start-time="2026-09-08 11:27:22Z" end-time="2026-09-08 11:27:23Z" duration="0.355546" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1068" name="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" fullname="StoryHomeSafetyRebuildPreviewTests.EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" methodname="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="323789442" result="Passed" start-time="2026-09-08 11:27:23Z" end-time="2026-09-08 11:27:23Z" duration="0.323683" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1071" name="ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs" fullname="StoryHomeSafetyRebuildPreviewTests.ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs" methodname="ExitClutter_UsesReadableChildScalePropsWithoutLegacyBlobs" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1968340157" result="Passed" start-time="2026-09-08 11:27:23Z" end-time="2026-09-08 11:27:23Z" duration="0.310664" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1070" name="InitialWorldState_PreservesStory01ConsequencesAndStory03Continuity" fullname="StoryHomeSafetyRebuildPreviewTests.InitialWorldState_PreservesStory01ConsequencesAndStory03Continuity" methodname="InitialWorldState_PreservesStory01ConsequencesAndStory03Continuity" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1035085052" result="Passed" start-time="2026-09-08 11:27:23Z" end-time="2026-09-08 11:27:23Z" duration="0.315369" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1067" name="Preview_HasRouteNeighborSafetyAndFinalBeatsAsWorldInteractions" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_HasRouteNeighborSafetyAndFinalBeatsAsWorldInteractions" methodname="Preview_HasRouteNeighborSafetyAndFinalBeatsAsWorldInteractions" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1654578980" result="Passed" start-time="2026-09-08 11:27:23Z" end-time="2026-09-08 11:27:24Z" duration="0.306355" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1066" name="Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras" methodname="Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1918511873" result="Failed" start-time="2026-09-08 11:27:24Z" end-time="2026-09-08 11:27:24Z" duration="0.301337" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryHomeSafetyRebuildPreviewTests.Preview_HasSingleInputOwnerNoCenterButtonAndSixComposedCameras () [0x0009b] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryHomeSafetyRebuildPreviewTests.cs:63
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1065" name="Preview_UsesConnectedSharedHomeAndIndependentNavigation" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndIndependentNavigation" methodname="Preview_UsesConnectedSharedHomeAndIndependentNavigation" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="980930694" result="Passed" start-time="2026-09-08 11:27:24Z" end-time="2026-09-08 11:27:24Z" duration="0.298832" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1076" name="Preview_UsesOneSoftShadowSun" fullname="StoryHomeSafetyRebuildPreviewTests.Preview_UsesOneSoftShadowSun" methodname="Preview_UsesOneSoftShadowSun" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1458841469" result="Passed" start-time="2026-09-08 11:27:24Z" end-time="2026-09-08 11:27:25Z" duration="0.309698" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1075" name="SecuringAnimations_OnlySettleLocallyAndDoNotThrowPropsAcrossTheRoom" fullname="StoryHomeSafetyRebuildPreviewTests.SecuringAnimations_OnlySettleLocallyAndDoNotThrowPropsAcrossTheRoom" methodname="SecuringAnimations_OnlySettleLocallyAndDoNotThrowPropsAcrossTheRoom" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="29753845" result="Passed" start-time="2026-09-08 11:27:25Z" end-time="2026-09-08 11:27:25Z" duration="0.322828" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1073" name="SharedShelfVariants_UseOneConsistentModernSkin" fullname="StoryHomeSafetyRebuildPreviewTests.SharedShelfVariants_UseOneConsistentModernSkin" methodname="SharedShelfVariants_UseOneConsistentModernSkin" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="728818963" result="Passed" start-time="2026-09-08 11:27:25Z" end-time="2026-09-08 11:27:25Z" duration="0.319014" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1072" name="ShelfProps_AreOrderedOnRealShelvesInsteadOfFloatingOrScattering" fullname="StoryHomeSafetyRebuildPreviewTests.ShelfProps_AreOrderedOnRealShelvesInsteadOfFloatingOrScattering" methodname="ShelfProps_AreOrderedOnRealShelvesInsteadOfFloatingOrScattering" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="159302787" result="Passed" start-time="2026-09-08 11:27:25Z" end-time="2026-09-08 11:27:26Z" duration="0.316344" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1074" name="TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports" fullname="StoryHomeSafetyRebuildPreviewTests.TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports" methodname="TaskProps_UseConsistentScaleAndSitOnTheirAuthoredSupports" classname="StoryHomeSafetyRebuildPreviewTests" runstate="Runnable" seed="1753700134" result="Passed" start-time="2026-09-08 11:27:26Z" end-time="2026-09-08 11:27:26Z" duration="0.322829" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1077" name="StoryPreparationRebuildPreviewTests" fullname="StoryPreparationRebuildPreviewTests" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-08 11:27:26Z" end-time="2026-09-08 11:27:41Z" duration="14.622036" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1092" name="CategoryFlow_CannotSoftlockOnOptionalItems" fullname="StoryPreparationRebuildPreviewTests.CategoryFlow_CannotSoftlockOnOptionalItems" methodname="CategoryFlow_CannotSoftlockOnOptionalItems" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1294114266" result="Passed" start-time="2026-09-08 11:27:26Z" end-time="2026-09-08 11:27:26Z" duration="0.422946" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1110" name="ComfortBeat_IsARequiredPhysicalDragAndPersistsItsChoice" fullname="StoryPreparationRebuildPreviewTests.ComfortBeat_IsARequiredPhysicalDragAndPersistsItsChoice" methodname="ComfortBeat_IsARequiredPhysicalDragAndPersistsItsChoice" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1282914129" result="Passed" start-time="2026-09-08 11:27:26Z" end-time="2026-09-08 11:27:27Z" duration="0.364091" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1109" name="ConsoleConflictUsesVisibleBagAndPhysicalConsoleDrag" fullname="StoryPreparationRebuildPreviewTests.ConsoleConflictUsesVisibleBagAndPhysicalConsoleDrag" methodname="ConsoleConflictUsesVisibleBagAndPhysicalConsoleDrag" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1950931387" result="Passed" start-time="2026-09-08 11:27:27Z" end-time="2026-09-08 11:27:27Z" duration="0.373933" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1105" name="Corridor_IsVisuallyClosedAndWarmAtTheRoomThreshold" fullname="StoryPreparationRebuildPreviewTests.Corridor_IsVisuallyClosedAndWarmAtTheRoomThreshold" methodname="Corridor_IsVisuallyClosedAndWarmAtTheRoomThreshold" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="18666761" result="Passed" start-time="2026-09-08 11:27:27Z" end-time="2026-09-08 11:27:28Z" duration="0.375558" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1087" name="DialogueVoiceBank_LeavesRevisedSubtitlesReadyForNewVoiceRecording" fullname="StoryPreparationRebuildPreviewTests.DialogueVoiceBank_LeavesRevisedSubtitlesReadyForNewVoiceRecording" methodname="DialogueVoiceBank_LeavesRevisedSubtitlesReadyForNewVoiceRecording" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="2105348610" result="Passed" start-time="2026-09-08 11:27:28Z" end-time="2026-09-08 11:27:28Z" duration="0.342721" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1101" name="EntryWall_IsOneGroundedMudroomCompositionWithoutFloatingNoveltyProps" fullname="StoryPreparationRebuildPreviewTests.EntryWall_IsOneGroundedMudroomCompositionWithoutFloatingNoveltyProps" methodname="EntryWall_IsOneGroundedMudroomCompositionWithoutFloatingNoveltyProps" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1911657689" result="Passed" start-time="2026-09-08 11:27:28Z" end-time="2026-09-08 11:27:28Z" duration="0.378546" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1091" name="EveryRequiredItem_HasPhysicalDragPackedResultAndUniquePersistentFlag" fullname="StoryPreparationRebuildPreviewTests.EveryRequiredItem_HasPhysicalDragPackedResultAndUniquePersistentFlag" methodname="EveryRequiredItem_HasPhysicalDragPackedResultAndUniquePersistentFlag" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="34084385" result="Passed" start-time="2026-09-08 11:27:28Z" end-time="2026-09-08 11:27:29Z" duration="0.353077" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1104" name="ExitBagConsole_IsShallowAlongTheWallAndSupportsTheFinalBag" fullname="StoryPreparationRebuildPreviewTests.ExitBagConsole_IsShallowAlongTheWallAndSupportsTheFinalBag" methodname="ExitBagConsole_IsShallowAlongTheWallAndSupportsTheFinalBag" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="3330769" result="Passed" start-time="2026-09-08 11:27:29Z" end-time="2026-09-08 11:27:29Z" duration="0.392293" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1082" name="FamilyCharacters_HaveReadableFacesAndDoNotUseBrokenFootStabilization" fullname="StoryPreparationRebuildPreviewTests.FamilyCharacters_HaveReadableFacesAndDoNotUseBrokenFootStabilization" methodname="FamilyCharacters_HaveReadableFacesAndDoNotUseBrokenFootStabilization" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1211320087" result="Passed" start-time="2026-09-08 11:27:29Z" end-time="2026-09-08 11:27:29Z" duration="0.395230" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1095" name="FamilyPlanBoard_UsesAuthoredPanelsInsteadOfVisiblePrimitiveBoxes" fullname="StoryPreparationRebuildPreviewTests.FamilyPlanBoard_UsesAuthoredPanelsInsteadOfVisiblePrimitiveBoxes" methodname="FamilyPlanBoard_UsesAuthoredPanelsInsteadOfVisiblePrimitiveBoxes" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="955437939" result="Passed" start-time="2026-09-08 11:27:29Z" end-time="2026-09-08 11:27:30Z" duration="0.381171" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1111" name="FinalFlow_UsesObjectGesturesAndEndsThroughBlackoutTimelineSignal" fullname="StoryPreparationRebuildPreviewTests.FinalFlow_UsesObjectGesturesAndEndsThroughBlackoutTimelineSignal" methodname="FinalFlow_UsesObjectGesturesAndEndsThroughBlackoutTimelineSignal" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1983495175" result="Passed" start-time="2026-09-08 11:27:30Z" end-time="2026-09-08 11:27:30Z" duration="0.364104" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1089" name="FoodCan_IsPalmSizedUprightAndKeepsACompactTouchMarker" fullname="StoryPreparationRebuildPreviewTests.FoodCan_IsPalmSizedUprightAndKeepsACompactTouchMarker" methodname="FoodCan_IsPalmSizedUprightAndKeepsACompactTouchMarker" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1392502018" result="Passed" start-time="2026-09-08 11:27:30Z" end-time="2026-09-08 11:27:31Z" duration="0.352982" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1107" name="FoodUsesPhysicalInspectionAndHealthUsesAutomaticVisualInspection" fullname="StoryPreparationRebuildPreviewTests.FoodUsesPhysicalInspectionAndHealthUsesAutomaticVisualInspection" methodname="FoodUsesPhysicalInspectionAndHealthUsesAutomaticVisualInspection" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1045071054" result="Passed" start-time="2026-09-08 11:27:31Z" end-time="2026-09-08 11:27:31Z" duration="0.356885" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1080" name="InteractionCameras_FrameTheirActualTargetsAtPortraitAspect" fullname="StoryPreparationRebuildPreviewTests.InteractionCameras_FrameTheirActualTargetsAtPortraitAspect" methodname="InteractionCameras_FrameTheirActualTargetsAtPortraitAspect" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="939661737" result="Passed" start-time="2026-09-08 11:27:31Z" end-time="2026-09-08 11:27:31Z" duration="0.367942" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1099" name="InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones" fullname="StoryPreparationRebuildPreviewTests.InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones" methodname="InteriorArtPass_ClosesTheRoomAndBuildsDistinctLivedInZones" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1091816353" result="Passed" start-time="2026-09-08 11:27:31Z" end-time="2026-09-08 11:27:32Z" duration="0.381685" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1098" name="InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls" fullname="StoryPreparationRebuildPreviewTests.InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls" methodname="InteriorCameras_DoNotExposeSkyAboveTheClosedRoomWalls" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1898573298" result="Passed" start-time="2026-09-08 11:27:32Z" end-time="2026-09-08 11:27:32Z" duration="0.352496" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1100" name="KitchenZone_IsAContinuousFunctionalWorkWallInsteadOfOneLonelyCabinet" fullname="StoryPreparationRebuildPreviewTests.KitchenZone_IsAContinuousFunctionalWorkWallInsteadOfOneLonelyCabinet" methodname="KitchenZone_IsAContinuousFunctionalWorkWallInsteadOfOneLonelyCabinet" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1393671394" result="Passed" start-time="2026-09-08 11:27:32Z" end-time="2026-09-08 11:27:32Z" duration="0.443499" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1090" name="NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface" fullname="StoryPreparationRebuildPreviewTests.NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface" methodname="NonSignalPackingProps_RestOnTheVisiblePreparationTableSurface" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1324389110" result="Passed" start-time="2026-09-08 11:27:32Z" end-time="2026-09-08 11:27:33Z" duration="0.359337" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1084" name="OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera" fullname="StoryPreparationRebuildPreviewTests.OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera" methodname="OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="526295459" result="Failed" start-time="2026-09-08 11:27:33Z" end-time="2026-09-08 11:27:33Z" duration="0.356369" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Başlangıç kamerası odayı tepeden gören uzak güvenlik kamerası gibi olmamalı.
+  Expected: in range (5.2,6.2)
+  But was:  3.5999999f
+]]></message>
+            <stack-trace><![CDATA[at StoryPreparationRebuildPreviewTests.OpeningConversation_StagesFamilyOutsideSofaAndUsesChildHeightThreeQuarterCamera () [0x001f6] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryPreparationRebuildPreviewTests.cs:276
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1085" name="OpeningConversation_UsesCommonUIBindingsWithoutLegacySpeakerRuntime" fullname="StoryPreparationRebuildPreviewTests.OpeningConversation_UsesCommonUIBindingsWithoutLegacySpeakerRuntime" methodname="OpeningConversation_UsesCommonUIBindingsWithoutLegacySpeakerRuntime" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="2077867898" result="Passed" start-time="2026-09-08 11:27:33Z" end-time="2026-09-08 11:27:33Z" duration="0.355004" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1115" name="OpeningFamily_MeshFacesPointIntoTheConversation" fullname="StoryPreparationRebuildPreviewTests.OpeningFamily_MeshFacesPointIntoTheConversation" methodname="OpeningFamily_MeshFacesPointIntoTheConversation" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1694782981" result="Passed" start-time="2026-09-08 11:27:33Z" end-time="2026-09-08 11:27:34Z" duration="0.371681" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1086" name="PackedItemResults_StayOrganizedBelowTheBagRim" fullname="StoryPreparationRebuildPreviewTests.PackedItemResults_StayOrganizedBelowTheBagRim" methodname="PackedItemResults_StayOrganizedBelowTheBagRim" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1787072543" result="Passed" start-time="2026-09-08 11:27:34Z" end-time="2026-09-08 11:27:34Z" duration="0.379829" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1094" name="PlanCardTable_ContainsAllCardsAndNotesOnItsPhysicalSurface" fullname="StoryPreparationRebuildPreviewTests.PlanCardTable_ContainsAllCardsAndNotesOnItsPhysicalSurface" methodname="PlanCardTable_ContainsAllCardsAndNotesOnItsPhysicalSurface" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1398431229" result="Passed" start-time="2026-09-08 11:27:34Z" end-time="2026-09-08 11:27:35Z" duration="0.378337" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1106" name="PracticalLighting_CreatesWarmZonesAndParticipatesInBlackout" fullname="StoryPreparationRebuildPreviewTests.PracticalLighting_CreatesWarmZonesAndParticipatesInBlackout" methodname="PracticalLighting_CreatesWarmZonesAndParticipatesInBlackout" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1690602671" result="Passed" start-time="2026-09-08 11:27:35Z" end-time="2026-09-08 11:27:35Z" duration="0.384074" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1083" name="PreparationBagCamera_KeepsTheDropTargetAboveTheSubtitleSafeBand" fullname="StoryPreparationRebuildPreviewTests.PreparationBagCamera_KeepsTheDropTargetAboveTheSubtitleSafeBand" methodname="PreparationBagCamera_KeepsTheDropTargetAboveTheSubtitleSafeBand" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1714187046" result="Passed" start-time="2026-09-08 11:27:35Z" end-time="2026-09-08 11:27:35Z" duration="0.374266" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1079" name="Preview_HasSingleInputOwnerNoCenterActionButtonAndFifteenComposedCameras" fullname="StoryPreparationRebuildPreviewTests.Preview_HasSingleInputOwnerNoCenterActionButtonAndFifteenComposedCameras" methodname="Preview_HasSingleInputOwnerNoCenterActionButtonAndFifteenComposedCameras" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1480445618" result="Passed" start-time="2026-09-08 11:27:35Z" end-time="2026-09-08 11:27:36Z" duration="0.366563" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1113" name="Preview_RemovesCategoryStationsAndKeepsItemsInEnvironmentalContexts" fullname="StoryPreparationRebuildPreviewTests.Preview_RemovesCategoryStationsAndKeepsItemsInEnvironmentalContexts" methodname="Preview_RemovesCategoryStationsAndKeepsItemsInEnvironmentalContexts" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1123648447" result="Passed" start-time="2026-09-08 11:27:36Z" end-time="2026-09-08 11:27:36Z" duration="0.408831" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1078" name="Preview_UsesConnectedSharedHomeAndIndependentSceneNavigation" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndIndependentSceneNavigation" methodname="Preview_UsesConnectedSharedHomeAndIndependentSceneNavigation" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1466229903" result="Passed" start-time="2026-09-08 11:27:36Z" end-time="2026-09-08 11:27:36Z" duration="0.345218" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1114" name="Preview_UsesDistinctMiniBoysAndCleanSupportedSetDressing" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesDistinctMiniBoysAndCleanSupportedSetDressing" methodname="Preview_UsesDistinctMiniBoysAndCleanSupportedSetDressing" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1795816641" result="Passed" start-time="2026-09-08 11:27:36Z" end-time="2026-09-08 11:27:37Z" duration="0.391893" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1081" name="Preview_UsesOneHumanScaleAndKeepsCharactersAboveTheFloor" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesOneHumanScaleAndKeepsCharactersAboveTheFloor" methodname="Preview_UsesOneHumanScaleAndKeepsCharactersAboveTheFloor" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1430819007" result="Passed" start-time="2026-09-08 11:27:37Z" end-time="2026-09-08 11:27:37Z" duration="0.343544" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1116" name="Preview_UsesOneSoftShadowSunForGroundedProps" fullname="StoryPreparationRebuildPreviewTests.Preview_UsesOneSoftShadowSunForGroundedProps" methodname="Preview_UsesOneSoftShadowSunForGroundedProps" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="442792677" result="Passed" start-time="2026-09-08 11:27:37Z" end-time="2026-09-08 11:27:38Z" duration="0.360902" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1093" name="RevisedFlow_UsesPhysicalPlanCardAndFourFurnitureDiscoveries" fullname="StoryPreparationRebuildPreviewTests.RevisedFlow_UsesPhysicalPlanCardAndFourFurnitureDiscoveries" methodname="RevisedFlow_UsesPhysicalPlanCardAndFourFurnitureDiscoveries" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1674049260" result="Passed" start-time="2026-09-08 11:27:38Z" end-time="2026-09-08 11:27:38Z" duration="0.411213" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1103" name="ShelfContents_AreReadablePropsRestingOnTheirActualBoards" fullname="StoryPreparationRebuildPreviewTests.ShelfContents_AreReadablePropsRestingOnTheirActualBoards" methodname="ShelfContents_AreReadablePropsRestingOnTheirActualBoards" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1854108993" result="Passed" start-time="2026-09-08 11:27:38Z" end-time="2026-09-08 11:27:38Z" duration="0.364360" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1096" name="SignalDrawerCamera_DoesNotFrameThroughDeniz" fullname="StoryPreparationRebuildPreviewTests.SignalDrawerCamera_DoesNotFrameThroughDeniz" methodname="SignalDrawerCamera_DoesNotFrameThroughDeniz" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1075744232" result="Passed" start-time="2026-09-08 11:27:38Z" end-time="2026-09-08 11:27:39Z" duration="0.359463" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1088" name="SignalDrawerChoices_UseCompactNonOverlappingMarkers" fullname="StoryPreparationRebuildPreviewTests.SignalDrawerChoices_UseCompactNonOverlappingMarkers" methodname="SignalDrawerChoices_UseCompactNonOverlappingMarkers" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="1778482641" result="Passed" start-time="2026-09-08 11:27:39Z" end-time="2026-09-08 11:27:39Z" duration="0.365239" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1108" name="SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved" fullname="StoryPreparationRebuildPreviewTests.SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved" methodname="SignalToolsUseVisibleObjectsAndFakeBagClosureStepsAreRemoved" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="2109226471" result="Passed" start-time="2026-09-08 11:27:39Z" end-time="2026-09-08 11:27:39Z" duration="0.381105" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1097" name="Story01ExtendedRightWall_HasContinuousSkirting" fullname="StoryPreparationRebuildPreviewTests.Story01ExtendedRightWall_HasContinuousSkirting" methodname="Story01ExtendedRightWall_HasContinuousSkirting" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="163756683" result="Passed" start-time="2026-09-08 11:27:39Z" end-time="2026-09-08 11:27:40Z" duration="0.380432" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1102" name="Wardrobe_UsesAnAnchoredBuiltInSkinInsteadOfTheToyClosetVisual" fullname="StoryPreparationRebuildPreviewTests.Wardrobe_UsesAnAnchoredBuiltInSkinInsteadOfTheToyClosetVisual" methodname="Wardrobe_UsesAnAnchoredBuiltInSkinInsteadOfTheToyClosetVisual" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="197204458" result="Passed" start-time="2026-09-08 11:27:40Z" end-time="2026-09-08 11:27:40Z" duration="0.381803" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1112" name="WornBackpacks_AreMountedToDenizTorsoInsteadOfFloatingFromTheCharacterRoot" fullname="StoryPreparationRebuildPreviewTests.WornBackpacks_AreMountedToDenizTorsoInsteadOfFloatingFromTheCharacterRoot" methodname="WornBackpacks_AreMountedToDenizTorsoInsteadOfFloatingFromTheCharacterRoot" classname="StoryPreparationRebuildPreviewTests" runstate="Runnable" seed="821626080" result="Passed" start-time="2026-09-08 11:27:40Z" end-time="2026-09-08 11:27:41Z" duration="0.356617" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1144" name="StoryQuakeRebuildPreviewTests" fullname="StoryQuakeRebuildPreviewTests" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-09-08 11:27:41Z" end-time="2026-09-08 11:27:45Z" duration="4.466884" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1149" name="Cameras_ArePortraitComposedAndCoverShotCannotCollapseIntoTableLegsOrWall" fullname="StoryQuakeRebuildPreviewTests.Cameras_ArePortraitComposedAndCoverShotCannotCollapseIntoTableLegsOrWall" methodname="Cameras_ArePortraitComposedAndCoverShotCannotCollapseIntoTableLegsOrWall" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1242993475" result="Passed" start-time="2026-09-08 11:27:41Z" end-time="2026-09-08 11:27:41Z" duration="0.353389" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1152" name="Children_ShowFearAndEmergencyBagIsPhysicallyMountedToDenizBack" fullname="StoryQuakeRebuildPreviewTests.Children_ShowFearAndEmergencyBagIsPhysicallyMountedToDenizBack" methodname="Children_ShowFearAndEmergencyBagIsPhysicallyMountedToDenizBack" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1392339425" result="Passed" start-time="2026-09-08 11:27:41Z" end-time="2026-09-08 11:27:41Z" duration="0.339669" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1150" name="EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds" fullname="StoryQuakeRebuildPreviewTests.EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds" methodname="EarthquakeTimeline_IsSceneAuthoredThreePhaseAndFortyEightSeconds" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1871862850" result="Passed" start-time="2026-09-08 11:27:41Z" end-time="2026-09-08 11:27:42Z" duration="0.334868" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1148" name="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" fullname="StoryQuakeRebuildPreviewTests.EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" methodname="EveryPhysicalTransfer_FollowsFingerToItsOwnSceneTarget" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="2024158807" result="Passed" start-time="2026-09-08 11:27:42Z" end-time="2026-09-08 11:27:42Z" duration="0.328574" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1154" name="HomeSafetyPlayCorner_HasPreparedAndUnpreparedStory03Consequences" fullname="StoryQuakeRebuildPreviewTests.HomeSafetyPlayCorner_HasPreparedAndUnpreparedStory03Consequences" methodname="HomeSafetyPlayCorner_HasPreparedAndUnpreparedStory03Consequences" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="682662585" result="Passed" start-time="2026-09-08 11:27:42Z" end-time="2026-09-08 11:27:42Z" duration="0.329452" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1155" name="OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor" fullname="StoryQuakeRebuildPreviewTests.OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor" methodname="OpeningAndPostQuakeProps_AreStagedOnFurnitureInsteadOfScatteredAcrossFloor" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="40954154" result="Passed" start-time="2026-09-08 11:27:42Z" end-time="2026-09-08 11:27:43Z" duration="0.341895" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1156" name="PendantLamp_IsCeilingAnchoredAndLegacyTripodVisualIsDisabled" fullname="StoryQuakeRebuildPreviewTests.PendantLamp_IsCeilingAnchoredAndLegacyTripodVisualIsDisabled" methodname="PendantLamp_IsCeilingAnchoredAndLegacyTripodVisualIsDisabled" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1464562457" result="Passed" start-time="2026-09-08 11:27:43Z" end-time="2026-09-08 11:27:43Z" duration="0.327248" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1153" name="PreparationComfortChoice_HasPhysicalAndNarrativePostQuakePayoff" fullname="StoryQuakeRebuildPreviewTests.PreparationComfortChoice_HasPhysicalAndNarrativePostQuakePayoff" methodname="PreparationComfortChoice_HasPhysicalAndNarrativePostQuakePayoff" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="653487509" result="Passed" start-time="2026-09-08 11:27:43Z" end-time="2026-09-08 11:27:43Z" duration="0.330526" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1146" name="Preview_HasOneInputOwnerNoCenterActionButtonAndRevisedPacing" fullname="StoryQuakeRebuildPreviewTests.Preview_HasOneInputOwnerNoCenterActionButtonAndRevisedPacing" methodname="Preview_HasOneInputOwnerNoCenterActionButtonAndRevisedPacing" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1963184549" result="Passed" start-time="2026-09-08 11:27:43Z" end-time="2026-09-08 11:27:44Z" duration="0.329289" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1151" name="Preview_ReusesStory01LivedInHomeAndAddsVisibleRoomScaleDestruction" fullname="StoryQuakeRebuildPreviewTests.Preview_ReusesStory01LivedInHomeAndAddsVisibleRoomScaleDestruction" methodname="Preview_ReusesStory01LivedInHomeAndAddsVisibleRoomScaleDestruction" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="435778579" result="Passed" start-time="2026-09-08 11:27:44Z" end-time="2026-09-08 11:27:44Z" duration="0.331522" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1147" name="Preview_UsesActualWorldObjectsForAllCoreActions" fullname="StoryQuakeRebuildPreviewTests.Preview_UsesActualWorldObjectsForAllCoreActions" methodname="Preview_UsesActualWorldObjectsForAllCoreActions" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="10084267" result="Passed" start-time="2026-09-08 11:27:44Z" end-time="2026-09-08 11:27:44Z" duration="0.351405" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1145" name="Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings" fullname="StoryQuakeRebuildPreviewTests.Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings" methodname="Preview_UsesConnectedSharedHomeAndStaysOutOfBuildSettings" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1751090791" result="Passed" start-time="2026-09-08 11:27:44Z" end-time="2026-09-08 11:27:45Z" duration="0.386093" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1157" name="Preview_UsesOneSoftShadowSun" fullname="StoryQuakeRebuildPreviewTests.Preview_UsesOneSoftShadowSun" methodname="Preview_UsesOneSoftShadowSun" classname="StoryQuakeRebuildPreviewTests" runstate="Runnable" seed="1486084447" result="Passed" start-time="2026-09-08 11:27:45Z" end-time="2026-09-08 11:27:45Z" duration="0.355813" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1158" name="StoryRebuildFlowTests" fullname="StoryRebuildFlowTests" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="31" result="Passed" start-time="2026-09-08 11:27:45Z" end-time="2026-09-08 11:27:57Z" duration="11.843861" total="31" passed="31" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="ParameterizedMethod" id="1167" name="IndoorChapter_UsesStory01FinishedHomeShell" fullname="StoryRebuildFlowTests.IndoorChapter_UsesStory01FinishedHomeShell" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-08 11:27:45Z" end-time="2026-09-08 11:27:46Z" duration="1.174599" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1164" name="IndoorChapter_UsesStory01FinishedHomeShell(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.IndoorChapter_UsesStory01FinishedHomeShell(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" methodname="IndoorChapter_UsesStory01FinishedHomeShell" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1694942029" result="Passed" start-time="2026-09-08 11:27:45Z" end-time="2026-09-08 11:27:46Z" duration="0.447884" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1165" name="IndoorChapter_UsesStory01FinishedHomeShell(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.IndoorChapter_UsesStory01FinishedHomeShell(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" methodname="IndoorChapter_UsesStory01FinishedHomeShell" classname="StoryRebuildFlowTests" runstate="Runnable" seed="154493516" result="Passed" start-time="2026-09-08 11:27:46Z" end-time="2026-09-08 11:27:46Z" duration="0.368294" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1166" name="IndoorChapter_UsesStory01FinishedHomeShell(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.IndoorChapter_UsesStory01FinishedHomeShell(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" methodname="IndoorChapter_UsesStory01FinishedHomeShell" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1853001285" result="Passed" start-time="2026-09-08 11:27:46Z" end-time="2026-09-08 11:27:46Z" duration="0.352514" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-case id="1168" name="MainMenu_OffersStoryAndEightMinigamesAsPublishedBuildEntries" fullname="StoryRebuildFlowTests.MainMenu_OffersStoryAndEightMinigamesAsPublishedBuildEntries" methodname="MainMenu_OffersStoryAndEightMinigamesAsPublishedBuildEntries" classname="StoryRebuildFlowTests" runstate="Runnable" seed="699465764" result="Passed" start-time="2026-09-08 11:27:46Z" end-time="2026-09-08 11:27:47Z" duration="0.214552" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1196" name="PublishedScene_UsesAuthoredProceduralSkybox" fullname="StoryRebuildFlowTests.PublishedScene_UsesAuthoredProceduralSkybox" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-08 11:27:47Z" end-time="2026-09-08 11:27:48Z" duration="1.882129" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1191" name="PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_Rebuild_MainMenu.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_Rebuild_MainMenu.unity&quot;)" methodname="PublishedScene_UsesAuthoredProceduralSkybox" classname="StoryRebuildFlowTests" runstate="Runnable" seed="263122570" result="Passed" start-time="2026-09-08 11:27:47Z" end-time="2026-09-08 11:27:47Z" duration="0.193568" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1192" name="PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesAuthoredProceduralSkybox" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1400707984" result="Passed" start-time="2026-09-08 11:27:47Z" end-time="2026-09-08 11:27:47Z" duration="0.496717" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1193" name="PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesAuthoredProceduralSkybox" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1742220703" result="Passed" start-time="2026-09-08 11:27:47Z" end-time="2026-09-08 11:27:48Z" duration="0.372472" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1194" name="PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesAuthoredProceduralSkybox" classname="StoryRebuildFlowTests" runstate="Runnable" seed="2136136904" result="Passed" start-time="2026-09-08 11:27:48Z" end-time="2026-09-08 11:27:48Z" duration="0.356571" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1195" name="PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesAuthoredProceduralSkybox(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesAuthoredProceduralSkybox" classname="StoryRebuildFlowTests" runstate="Runnable" seed="11086625" result="Passed" start-time="2026-09-08 11:27:48Z" end-time="2026-09-08 11:27:48Z" duration="0.443738" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1190" name="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" fullname="StoryRebuildFlowTests.PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-08 11:27:48Z" end-time="2026-09-08 11:27:50Z" duration="1.939729" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1185" name="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_Rebuild_MainMenu.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_Rebuild_MainMenu.unity&quot;)" methodname="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" classname="StoryRebuildFlowTests" runstate="Runnable" seed="66701448" result="Passed" start-time="2026-09-08 11:27:48Z" end-time="2026-09-08 11:27:49Z" duration="0.246546" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1186" name="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1781532968" result="Passed" start-time="2026-09-08 11:27:49Z" end-time="2026-09-08 11:27:49Z" duration="0.504319" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1187" name="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1237219446" result="Passed" start-time="2026-09-08 11:27:49Z" end-time="2026-09-08 11:27:50Z" duration="0.362397" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1188" name="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" classname="StoryRebuildFlowTests" runstate="Runnable" seed="115679575" result="Passed" start-time="2026-09-08 11:27:50Z" end-time="2026-09-08 11:27:50Z" duration="0.348802" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1189" name="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" methodname="PublishedScene_UsesOnlyPlayfulFontFamilyForAuthoredText" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1204420850" result="Passed" start-time="2026-09-08 11:27:50Z" end-time="2026-09-08 11:27:50Z" duration="0.432644" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1173" name="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation" fullname="StoryRebuildFlowTests.RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 11:27:50Z" end-time="2026-09-08 11:27:52Z" duration="1.642185" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1169" name="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;,Preparation,&quot;SONRAKİ PERDE&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;,Preparation,&quot;SONRAKİ PERDE&quot;)" methodname="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1002099815" result="Passed" start-time="2026-09-08 11:27:50Z" end-time="2026-09-08 11:27:51Z" duration="0.429752" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1170" name="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;,HomeSafety,&quot;SONRAKİ PERDE&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;,HomeSafety,&quot;SONRAKİ PERDE&quot;)" methodname="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation" classname="StoryRebuildFlowTests" runstate="Runnable" seed="412159188" result="Passed" start-time="2026-09-08 11:27:51Z" end-time="2026-09-08 11:27:51Z" duration="0.374489" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1171" name="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;,Quake,&quot;SONRAKİ PERDE&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;,Quake,&quot;SONRAKİ PERDE&quot;)" methodname="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation" classname="StoryRebuildFlowTests" runstate="Runnable" seed="561750636" result="Passed" start-time="2026-09-08 11:27:51Z" end-time="2026-09-08 11:27:52Z" duration="0.360752" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1172" name="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;,Evacuation,&quot;BÖLÜM SEÇİMİ&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;,Evacuation,&quot;BÖLÜM SEÇİMİ&quot;)" methodname="RebuildScene_HasPersistentRouteAndAuthoredCompletionNavigation" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1023258530" result="Passed" start-time="2026-09-08 11:27:52Z" end-time="2026-09-08 11:27:52Z" duration="0.437997" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1179" name="RebuildScene_UsesAuthoredKenneyGestureMarkers" fullname="StoryRebuildFlowTests.RebuildScene_UsesAuthoredKenneyGestureMarkers" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 11:27:52Z" end-time="2026-09-08 11:27:54Z" duration="1.628976" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1175" name="RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesAuthoredKenneyGestureMarkers" classname="StoryRebuildFlowTests" runstate="Runnable" seed="769723489" result="Passed" start-time="2026-09-08 11:27:52Z" end-time="2026-09-08 11:27:52Z" duration="0.418561" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1176" name="RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesAuthoredKenneyGestureMarkers" classname="StoryRebuildFlowTests" runstate="Runnable" seed="816597899" result="Passed" start-time="2026-09-08 11:27:52Z" end-time="2026-09-08 11:27:53Z" duration="0.366890" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1177" name="RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesAuthoredKenneyGestureMarkers" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1124039413" result="Passed" start-time="2026-09-08 11:27:53Z" end-time="2026-09-08 11:27:53Z" duration="0.351573" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1178" name="RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesAuthoredKenneyGestureMarkers(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesAuthoredKenneyGestureMarkers" classname="StoryRebuildFlowTests" runstate="Runnable" seed="21093239" result="Passed" start-time="2026-09-08 11:27:53Z" end-time="2026-09-08 11:27:54Z" duration="0.459009" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1163" name="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends" fullname="StoryRebuildFlowTests.RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 11:27:54Z" end-time="2026-09-08 11:27:55Z" duration="1.621150" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1159" name="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1121042843" result="Passed" start-time="2026-09-08 11:27:54Z" end-time="2026-09-08 11:27:54Z" duration="0.407905" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1160" name="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1995640798" result="Passed" start-time="2026-09-08 11:27:54Z" end-time="2026-09-08 11:27:54Z" duration="0.371258" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1161" name="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1854914375" result="Passed" start-time="2026-09-08 11:27:54Z" end-time="2026-09-08 11:27:55Z" duration="0.361711" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1162" name="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;)" methodname="RebuildScene_UsesOneMainCameraAndComfortableEaseInOutBlends" classname="StoryRebuildFlowTests" runstate="Runnable" seed="676337989" result="Passed" start-time="2026-09-08 11:27:55Z" end-time="2026-09-08 11:27:55Z" duration="0.448639" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1184" name="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct" fullname="StoryRebuildFlowTests.RebuildScene_UsesPreparationHudLanguageAcrossEveryAct" classname="StoryRebuildFlowTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 11:27:55Z" end-time="2026-09-08 11:27:57Z" duration="1.663982" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1180" name="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;,&quot;1/4&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_01_RebuildPreview.unity&quot;,&quot;1/4&quot;)" methodname="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct" classname="StoryRebuildFlowTests" runstate="Runnable" seed="2147231188" result="Passed" start-time="2026-09-08 11:27:55Z" end-time="2026-09-08 11:27:56Z" duration="0.457447" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1181" name="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;,&quot;2/4&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_02_RebuildPreview.unity&quot;,&quot;2/4&quot;)" methodname="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct" classname="StoryRebuildFlowTests" runstate="Runnable" seed="709019128" result="Passed" start-time="2026-09-08 11:27:56Z" end-time="2026-09-08 11:27:56Z" duration="0.379044" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1182" name="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;,&quot;3/4&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_03_RebuildPreview.unity&quot;,&quot;3/4&quot;)" methodname="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct" classname="StoryRebuildFlowTests" runstate="Runnable" seed="1010724095" result="Passed" start-time="2026-09-08 11:27:56Z" end-time="2026-09-08 11:27:56Z" duration="0.353505" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1183" name="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;,&quot;4/4&quot;)" fullname="StoryRebuildFlowTests.RebuildScene_UsesPreparationHudLanguageAcrossEveryAct(&quot;Assets/Scenes/Story_04_RebuildPreview.unity&quot;,&quot;4/4&quot;)" methodname="RebuildScene_UsesPreparationHudLanguageAcrossEveryAct" classname="StoryRebuildFlowTests" runstate="Runnable" seed="756686865" result="Passed" start-time="2026-09-08 11:27:56Z" end-time="2026-09-08 11:27:57Z" duration="0.434469" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-case id="1174" name="StoryManager_ExposesOneContinuousFourActRouteContract" fullname="StoryRebuildFlowTests.StoryManager_ExposesOneContinuousFourActRouteContract" methodname="StoryManager_ExposesOneContinuousFourActRouteContract" classname="StoryRebuildFlowTests" runstate="Runnable" seed="96677843" result="Passed" start-time="2026-09-08 11:27:57Z" end-time="2026-09-08 11:27:57Z" duration="0.000438" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\EditMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,12 @@
+{
+  "runtime_content_changes": [
+    "Assets\\Scripts\\Story\\StoryEvacuationDirector.cs",
+    "Assets\\Scripts\\Story\\StoryHomeSafetyDirector.cs",
+    "Assets\\Scripts\\Story\\StoryPreparationDirector.cs",
+    "Assets\\Scripts\\Story\\StorySequenceDirector.cs"
+  ],
+  "runtime_non_content_changes": [],
+  "missing_baseline": [],
+  "authored_prop_prefabs": 31,
+  "refined_character_prefabs": 8
+}

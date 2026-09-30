@@ -1,0 +1,18 @@
+EmergencyBag -> Backpack closed
+Deniz_WornEmergencyBag -> Backpack closed
+CanComicBook -> BookStack
+CanComicBook -> BookStack
+ExitParcel_Start -> Parcel
+ExitParcel_Stored -> Parcel
+BookSet -> BookStack
+BookSet -> BookStack
+ShelfVase_High -> OliveVase
+ShelfVase_Low -> OliveVase
+Can_ToyCar_InitialRoute -> ToyCar
+ExitShoes_Start -> ShoePair
+ExitShoes_Stored -> ShoePair
+ShelfBracketInHand -> SafetyBracket
+WardrobeHandStrap -> SafetyStrap
+Can_ToyCar_FinalStart -> ToyCar
+NerminEnvelope_Start -> Documents
+Nermin_EvacuationPlan_InHand -> Documents

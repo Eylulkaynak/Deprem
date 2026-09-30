@@ -1,0 +1,13 @@
+Story_04_RebuildPreview item visual audit
+Grid: row,col -> object | world rotation | original bounds
+1,1 -> BlanketPrepared_Drag | rot=(0,10,0) | bounds=(0.61,0.20,0.30) | source=Assets/Story/Environment/ThirdParty/KenneySurvival/Models/bedroll-packed.fbx authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+1,2 -> CleanCloth_Fallback_Drag | rot=(0,0,0) | bounds=(0.42,0.07,0.32) | source=<generated>
+1,3 -> ContactCardPrepared_Drag | rot=(0,-6,0) | bounds=(0.40,0.05,0.34) | source=Assets/Bolum1Prefab/dockument.prefab authoredRot=(0,126,0) authoredScale=(1.20,1.00,1.20)
+1,4 -> FirstAidPrepared_Drag | rot=(0,-8,0) | bounds=(0.45,0.34,0.38) | source=<generated>
+2,1 -> NeighborCane_Blocked | rot=(90,0,0) | bounds=(0.32,0.07,0.98) | source=<generated>
+2,2 -> NeighborCardboard_Blocking_Drag | rot=(0,-8,0) | bounds=(0.46,0.38,0.46) | source=Assets/Story/Environment/SyntyTown/SM_Prop_CardboardBox_01.fbx authoredRot=(0,0,0) authoredScale=(1.00,1.00,1.00)
+2,3 -> NeighborFoam_Blocking_Drag | rot=(0,-10,0) | bounds=(0.67,0.16,0.45) | source=<generated>
+2,4 -> RadioPrepared_Use | rot=(-90,-141,0) | bounds=(0.29,0.36,0.34) | source=Assets/Bolum1Prefab/Radio.prefab authoredRot=(-90,-153,0) authoredScale=(30.00,30.00,30.00)
+3,1 -> StationWaterCup_Fallback_Drag | rot=(0,0,0) | bounds=(0.30,0.21,0.22) | source=<generated>
+3,2 -> WaterPrepared_Drag | rot=(-90,0,0) | bounds=(0.11,0.46,0.11) | source=Assets/Bolum1Prefab/Item_Su.prefab authoredRot=(-90,0,0) authoredScale=(20.00,20.00,25.00)
+3,3 -> WhistleWorld | rot=(0,0,90) | bounds=(0.19,0.44,0.06) | source=Assets/Bolum1Prefab/whistle.prefab authoredRot=(-90,131,-138) authoredScale=(0.02,0.02,0.02)

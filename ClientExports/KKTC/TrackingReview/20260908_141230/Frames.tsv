@@ -1,0 +1,8 @@
+Frame	Scene	Time	Shot	CameraPosition	CameraRotation	Deniz	DenizViewport	CentralHit	Objective
+0	Story_01_RebuildPreview	0.43	CM_PreparationOverview_Rebuild	(-1.818, 0.287, -2.709)	(304.8, 348.9, 0.0)	(-1.899, 0.000, -2.263)	(0.516, 0.428, 0.721)	Deniz_12	AİLE PLANINI TAMAMLA • 1/3
+1	Story_01_RebuildPreview	113.14	CM_PreparationOverview_Rebuild	(-1.747, 4.368, -0.388)	(67.0, 12.4, 0.0)	(-1.152, 0.000, 1.139)	(0.620, 0.530, 3.871)	EmergencyBag_Worn	ÇANTAYI GÜVENLİ RAFA TAŞI
+2	Story_01_RebuildPreview	114.65	CM_PreparationOverview_Rebuild	(-0.051, 4.365, 1.261)	(67.0, 12.4, 0.0)	(0.694, 0.000, 2.743)	(0.694, 0.528, 3.863)	EmergencyBag_Worn	ÇANTAYI GÜVENLİ RAFA TAŞI
+3	Story_01_RebuildPreview	116.15	CM_PreparationOverview_Rebuild	(2.219, 4.365, 2.587)	(67.0, 12.4, 0.0)	(2.964, 0.000, 4.069)	(0.694, 0.528, 3.863)	EmergencyBag_Worn	ÇANTAYI GÜVENLİ RAFA TAŞI
+4	Story_01_RebuildPreview	117.66	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.159, 0.000, 4.183)	(0.492, 0.298, 3.461)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK
+5	Story_01_RebuildPreview	119.16	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.159, 0.000, 4.183)	(0.492, 0.298, 3.461)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK
+6	Story_01_RebuildPreview	120.67	CM_PreparationExitShelf_Rebuild	(1.150, 2.550, 1.850)	(18.7, 41.0, 0.0)	(3.159, 0.000, 4.183)	(0.492, 0.298, 3.461)	ExitBagShelf	ÇANTAYI GÜVENLİ RAFA BIRAK

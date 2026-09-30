@@ -1,0 +1,32 @@
+{
+  "assembled_utc": "2026-09-08T13:33:38.586848+00:00",
+  "output": "C:/Users/Gokturk/Documents/GitHub/Deprem/Recordings/RebuildFull/Story_Rebuild_KKTC_Reviewed_20260908.mp4",
+  "sha256": "2f65d3267c4cb81f61197c7af048cd08a105f7467f37ab8234a8e30a0e5e07bf",
+  "resolution": "1080x2340",
+  "fps": 30,
+  "speed": 1,
+  "method": "FFmpeg stream-copy concatenation at a reviewed chapter boundary; original image/audio streams retained.",
+  "sources": [
+    {
+      "file": "C:/Users/Gokturk/Documents/GitHub/Deprem/Recordings/RebuildFull/Story_Rebuild_01-04_Tall_20260908_154204.mp4",
+      "sha256": "5f7836f5c8f7d654676b98c6a1f93ba30065ee191154576e1d78e3db7dee4097",
+      "start_seconds": 0,
+      "end_seconds_exclusive": 501.266667,
+      "chapters": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "C:/Users/Gokturk/Documents/GitHub/Deprem/Recordings/RebuildFull/Story_Rebuild_03-04_Tall_20260908_162442.mp4",
+      "sha256": "a4bfd5d832f79680bda2d828ba31dcc942827d329dc39eea9fade20e6393f8f3",
+      "start_seconds": 0,
+      "end_seconds_exclusive": null,
+      "chapters": [
+        3,
+        4
+      ]
+    }
+  ],
+  "note": "Automated touch/navigation driver, authored dialogue pacing, separate fresh scene loads. Save/flag continuity is covered by its separate PlayMode test. Final voiceover is deferred."
+}

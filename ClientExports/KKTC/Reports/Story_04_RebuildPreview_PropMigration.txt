@@ -1,0 +1,16 @@
+Deniz_WornEmergencyBag -> Backpack closed
+WhistleWorld -> Whistle
+NeighborCardboard_Blocking_Drag -> Parcel
+NeighborCardboard_Cleared -> Parcel
+AssemblySupplyCrate_A -> Parcel
+AssemblySupplyCrate_B -> Parcel
+RadioPrepared_Use -> Radio
+WaterPrepared_Drag -> WaterBottle
+BlanketPrepared_Drag -> Blanket
+ContactCardPrepared_Drag -> Documents
+DenizHandFlashlight -> Flashlight
+CanComfortToy_Assembly -> ToyCar
+NeighborCane_Blocked -> WalkingCane
+FirstAidPrepared_Drag -> FirstAid
+CleanCloth_Fallback_Drag -> Clothes
+StationWaterCup_Fallback_Drag -> Cup

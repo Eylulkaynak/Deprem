@@ -1,0 +1,52 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Recordings\RebuildFull\Story_Rebuild_03-04_Tall_20260908_162442.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp41isom
+  Duration: 00:07:16.20, start: 0.000000, bitrate: 3537 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(progressive), 1080x2340 [SAR 1:1 DAR 6:13], 3342 kb/s, 30 fps, 30 tbr, 30k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+[Parsed_volumedetect_0 @ 0000000002894b80] n_samples: 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp41isom
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 pcm_s16le
+[Parsed_volumedetect_0 @ 0000000002f5eb00] n_samples: 41873408
+[Parsed_volumedetect_0 @ 0000000002f5eb00] mean_volume: -38.7 dB
+[Parsed_volumedetect_0 @ 0000000002f5eb00] max_volume: -4.4 dB
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_4db: 26
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_5db: 78
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_6db: 266
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_7db: 555
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_8db: 710
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_9db: 1005
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_10db: 1262
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_11db: 1705
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_12db: 2196
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_13db: 2403
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_14db: 2751
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_15db: 3149
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_16db: 3702
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_17db: 4197
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_18db: 4736
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_19db: 6294
+[Parsed_volumedetect_0 @ 0000000002f5eb00] histogram_20db: 13573
+[out#0/null @ 00000000028909c0] video:0KiB audio:81784KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:07:16.18 bitrate=N/A speed=1.87e+03x    

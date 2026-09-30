@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="20" result="Failed(Child)" total="20" passed="17" failed="3" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 09:35:36Z" end-time="2026-09-08 09:35:47Z" duration="10.7877249">
+  <test-suite type="TestSuite" id="1992" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="851" result="Failed" site="Child" start-time="2026-09-08 09:35:36Z" end-time="2026-09-08 09:35:47Z" duration="10.787725" total="20" passed="17" failed="3" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1218" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="188" result="Failed" site="Child" start-time="2026-09-08 09:35:36Z" end-time="2026-09-08 09:35:47Z" duration="10.685144" total="20" passed="17" failed="3" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1043" name="StoryEvacuationRebuildPreviewTests" fullname="StoryEvacuationRebuildPreviewTests" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" testcasecount="20" result="Failed" site="Child" start-time="2026-09-08 09:35:36Z" end-time="2026-09-08 09:35:47Z" duration="10.578020" total="20" passed="17" failed="3" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1051" name="ArchitectureShellRoofAndStreetDepth_AreCompleteAndCollisionSafe" fullname="StoryEvacuationRebuildPreviewTests.ArchitectureShellRoofAndStreetDepth_AreCompleteAndCollisionSafe" methodname="ArchitectureShellRoofAndStreetDepth_AreCompleteAndCollisionSafe" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="189143971" result="Passed" start-time="2026-09-08 09:35:36Z" end-time="2026-09-08 09:35:37Z" duration="0.931632" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1060" name="AssemblyCareCamera_FramesChildrenNeighborAndWorker" fullname="StoryEvacuationRebuildPreviewTests.AssemblyCareCamera_FramesChildrenNeighborAndWorker" methodname="AssemblyCareCamera_FramesChildrenNeighborAndWorker" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1216270494" result="Passed" start-time="2026-09-08 09:35:37Z" end-time="2026-09-08 09:35:38Z" duration="0.494752" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1057" name="BuildingThreshold_FloorsMeetAtOneEdgeWithoutStackedSlabs" fullname="StoryEvacuationRebuildPreviewTests.BuildingThreshold_FloorsMeetAtOneEdgeWithoutStackedSlabs" methodname="BuildingThreshold_FloorsMeetAtOneEdgeWithoutStackedSlabs" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1202136013" result="Passed" start-time="2026-09-08 09:35:38Z" end-time="2026-09-08 09:35:38Z" duration="0.509587" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1053" name="Cameras_FrameOpeningPairAndBothParentsAtReunion" fullname="StoryEvacuationRebuildPreviewTests.Cameras_FrameOpeningPairAndBothParentsAtReunion" methodname="Cameras_FrameOpeningPairAndBothParentsAtReunion" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="261246395" result="Passed" start-time="2026-09-08 09:35:38Z" end-time="2026-09-08 09:35:39Z" duration="0.430685" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1055" name="Children_HaveHeadBoundFaceRigsWithoutRuntimeScriptsOrColliders" fullname="StoryEvacuationRebuildPreviewTests.Children_HaveHeadBoundFaceRigsWithoutRuntimeScriptsOrColliders" methodname="Children_HaveHeadBoundFaceRigsWithoutRuntimeScriptsOrColliders" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="2161935" result="Passed" start-time="2026-09-08 09:35:39Z" end-time="2026-09-08 09:35:39Z" duration="0.610597" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1054" name="Corridor_IsClosedReadableAndUsesARealFlashlightGrip" fullname="StoryEvacuationRebuildPreviewTests.Corridor_IsClosedReadableAndUsesARealFlashlightGrip" methodname="Corridor_IsClosedReadableAndUsesARealFlashlightGrip" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="974949551" result="Passed" start-time="2026-09-08 09:35:39Z" end-time="2026-09-08 09:35:40Z" duration="0.460447" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1056" name="DoorOpenings_HugTheImportedFramesWithoutOversizedGaps" fullname="StoryEvacuationRebuildPreviewTests.DoorOpenings_HugTheImportedFramesWithoutOversizedGaps" methodname="DoorOpenings_HugTheImportedFramesWithoutOversizedGaps" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="292355133" result="Passed" start-time="2026-09-08 09:35:40Z" end-time="2026-09-08 09:35:40Z" duration="0.489871" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1048" name="EveryPhysicalTransfer_FollowsFingerToItsOwnWorldTarget" fullname="StoryEvacuationRebuildPreviewTests.EveryPhysicalTransfer_FollowsFingerToItsOwnWorldTarget" methodname="EveryPhysicalTransfer_FollowsFingerToItsOwnWorldTarget" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1441361206" result="Passed" start-time="2026-09-08 09:35:40Z" end-time="2026-09-08 09:35:41Z" duration="0.592330" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1058" name="Exterior_HasBatchedEarthquakeResponse" fullname="StoryEvacuationRebuildPreviewTests.Exterior_HasBatchedEarthquakeResponse" methodname="Exterior_HasBatchedEarthquakeResponse" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="614252113" result="Passed" start-time="2026-09-08 09:35:41Z" end-time="2026-09-08 09:35:42Z" duration="0.903302" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1044" name="Exterior_ReportsMobileRenderBudget" fullname="StoryEvacuationRebuildPreviewTests.Exterior_ReportsMobileRenderBudget" methodname="Exterior_ReportsMobileRenderBudget" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1001158628" result="Failed" start-time="2026-09-08 09:35:42Z" end-time="2026-09-08 09:35:42Z" duration="0.452218" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: less than or equal to 180
+  But was:  214
+]]></message>
+            <stack-trace><![CDATA[at StoryEvacuationRebuildPreviewTests.Exterior_ReportsMobileRenderBudget () [0x00185] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryEvacuationRebuildPreviewTests.cs:49
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Story04 exterior budget: 214 renderers, 136842 instanced vertices.
+]]></output>
+        </test-case>
+        <test-case id="1052" name="Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly" fullname="StoryEvacuationRebuildPreviewTests.Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly" methodname="Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1064878909" result="Failed" start-time="2026-09-08 09:35:42Z" end-time="2026-09-08 09:35:43Z" duration="0.447828" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryEvacuationRebuildPreviewTests.Exterior_UsesCuratedTownSetColoredEmergencyVehicleAndAuthoredAssembly () [0x0016f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryEvacuationRebuildPreviewTests.cs:564
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1061" name="NearMissCamera_FramesGasLeakWithoutFacadeTreeBlockingTheCenter" fullname="StoryEvacuationRebuildPreviewTests.NearMissCamera_FramesGasLeakWithoutFacadeTreeBlockingTheCenter" methodname="NearMissCamera_FramesGasLeakWithoutFacadeTreeBlockingTheCenter" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1662873106" result="Passed" start-time="2026-09-08 09:35:43Z" end-time="2026-09-08 09:35:43Z" duration="0.499936" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1063" name="Preview_DisablesRealtimeShadows" fullname="StoryEvacuationRebuildPreviewTests.Preview_DisablesRealtimeShadows" methodname="Preview_DisablesRealtimeShadows" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1225664913" result="Failed" start-time="2026-09-08 09:35:43Z" end-time="2026-09-08 09:35:44Z" duration="0.350383" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+            <stack-trace><![CDATA[at StoryEvacuationRebuildPreviewTests.Preview_DisablesRealtimeShadows () [0x00000] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\Tests\Editor\StoryEvacuationRebuildPreviewTests.cs:1213
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1049" name="Preview_HasBakedNavigationPortraitCamerasAndNoGroundInstruction" fullname="StoryEvacuationRebuildPreviewTests.Preview_HasBakedNavigationPortraitCamerasAndNoGroundInstruction" methodname="Preview_HasBakedNavigationPortraitCamerasAndNoGroundInstruction" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1333754147" result="Passed" start-time="2026-09-08 09:35:44Z" end-time="2026-09-08 09:35:44Z" duration="0.519114" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1045" name="Preview_StaysIndependentAndUsesSingleInputOwner" fullname="StoryEvacuationRebuildPreviewTests.Preview_StaysIndependentAndUsesSingleInputOwner" methodname="Preview_StaysIndependentAndUsesSingleInputOwner" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="806804633" result="Passed" start-time="2026-09-08 09:35:44Z" end-time="2026-09-08 09:35:45Z" duration="0.455696" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1046" name="Preview_UsesPhysicalNeighborHelpFacadeClearAndReunion" fullname="StoryEvacuationRebuildPreviewTests.Preview_UsesPhysicalNeighborHelpFacadeClearAndReunion" methodname="Preview_UsesPhysicalNeighborHelpFacadeClearAndReunion" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="128946136" result="Passed" start-time="2026-09-08 09:35:45Z" end-time="2026-09-08 09:35:45Z" duration="0.474722" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1047" name="Preview_UsesPreparedItemsAndSafeFallbackObjects" fullname="StoryEvacuationRebuildPreviewTests.Preview_UsesPreparedItemsAndSafeFallbackObjects" methodname="Preview_UsesPreparedItemsAndSafeFallbackObjects" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="2130774802" result="Passed" start-time="2026-09-08 09:35:45Z" end-time="2026-09-08 09:35:45Z" duration="0.454776" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1050" name="StairwellAndLandingProps_AreFinishedArchitectureAtHumanScale" fullname="StoryEvacuationRebuildPreviewTests.StairwellAndLandingProps_AreFinishedArchitectureAtHumanScale" methodname="StairwellAndLandingProps_AreFinishedArchitectureAtHumanScale" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="2129507837" result="Passed" start-time="2026-09-08 09:35:45Z" end-time="2026-09-08 09:35:46Z" duration="0.469063" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1062" name="StreetInspectionCamera_FramesThePhysicalGasSourceBeforeItsSoundStarts" fullname="StoryEvacuationRebuildPreviewTests.StreetInspectionCamera_FramesThePhysicalGasSourceBeforeItsSoundStarts" methodname="StreetInspectionCamera_FramesThePhysicalGasSourceBeforeItsSoundStarts" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1715981744" result="Passed" start-time="2026-09-08 09:35:46Z" end-time="2026-09-08 09:35:46Z" duration="0.445017" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1059" name="StreetJourneyCamera_FramesEmergencyResponseAndLivingAssemblyArea" fullname="StoryEvacuationRebuildPreviewTests.StreetJourneyCamera_FramesEmergencyResponseAndLivingAssemblyArea" methodname="StreetJourneyCamera_FramesEmergencyResponseAndLivingAssemblyArea" classname="StoryEvacuationRebuildPreviewTests" runstate="Runnable" seed="1853426853" result="Passed" start-time="2026-09-08 09:35:46Z" end-time="2026-09-08 09:35:47Z" duration="0.445628" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\EditMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

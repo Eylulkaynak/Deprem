@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="11" result="Passed" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-08 11:19:15Z" end-time="2026-09-08 11:22:36Z" duration="200.7887126">
+  <test-suite type="TestSuite" id="1076" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="57" result="Passed" start-time="2026-09-08 11:19:15Z" end-time="2026-09-08 11:22:36Z" duration="200.788713" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1066" name="Deprem.Story.PlayModeTests.dll" fullname="C:/Users/Gokturk/Documents/GitHub/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="56" result="Passed" start-time="2026-09-08 11:19:15Z" end-time="2026-09-08 11:22:36Z" duration="200.773496" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="80404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1010" name="StoryChapterPlayModeTests" fullname="StoryChapterPlayModeTests" classname="StoryChapterPlayModeTests" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-09-08 11:19:15Z" end-time="2026-09-08 11:19:21Z" duration="5.473324" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1019" name="EvacuationRebuild_AllMissingEquipmentUsesSafeFallbacksWithoutSoftlock" fullname="StoryChapterPlayModeTests.EvacuationRebuild_AllMissingEquipmentUsesSafeFallbacksWithoutSoftlock" methodname="EvacuationRebuild_AllMissingEquipmentUsesSafeFallbacksWithoutSoftlock" classname="StoryChapterPlayModeTests" runstate="Runnable" seed="1710347324" result="Passed" start-time="2026-09-08 11:19:15Z" end-time="2026-09-08 11:19:16Z" duration="1.192444" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1014" name="RebuildStoryRoute_PreservesOneSessionFlagsAndActBoundariesAcrossFourScenes" fullname="StoryChapterPlayModeTests.RebuildStoryRoute_PreservesOneSessionFlagsAndActBoundariesAcrossFourScenes" methodname="RebuildStoryRoute_PreservesOneSessionFlagsAndActBoundariesAcrossFourScenes" classname="StoryChapterPlayModeTests" runstate="Runnable" seed="157100460" result="Passed" start-time="2026-09-08 11:19:16Z" end-time="2026-09-08 11:19:21Z" duration="4.267775" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1031" name="StoryPreparationPlayModeTests" fullname="StoryPreparationPlayModeTests" classname="StoryPreparationPlayModeTests" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-09-08 11:19:21Z" end-time="2026-09-08 11:19:27Z" duration="5.936332" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1039" name="FaceRig_BlinksAndActiveSpeakerMouthActuallyMoves" fullname="StoryPreparationPlayModeTests.FaceRig_BlinksAndActiveSpeakerMouthActuallyMoves" methodname="FaceRig_BlinksAndActiveSpeakerMouthActuallyMoves" classname="StoryPreparationPlayModeTests" runstate="Runnable" seed="333506870" result="Passed" start-time="2026-09-08 11:19:21Z" end-time="2026-09-08 11:19:23Z" duration="2.676428" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1037" name="OpeningDialogue_ShowsRevisedSubtitlesWithoutStaleVoiceAudio" fullname="StoryPreparationPlayModeTests.OpeningDialogue_ShowsRevisedSubtitlesWithoutStaleVoiceAudio" methodname="OpeningDialogue_ShowsRevisedSubtitlesWithoutStaleVoiceAudio" classname="StoryPreparationPlayModeTests" runstate="Runnable" seed="789123636" result="Passed" start-time="2026-09-08 11:19:23Z" end-time="2026-09-08 11:19:25Z" duration="1.713939" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1038" name="OpeningDialogue_UsesOnlyTheActiveCommonMouthAndKeepsGazeBounded" fullname="StoryPreparationPlayModeTests.OpeningDialogue_UsesOnlyTheActiveCommonMouthAndKeepsGazeBounded" methodname="OpeningDialogue_UsesOnlyTheActiveCommonMouthAndKeepsGazeBounded" classname="StoryPreparationPlayModeTests" runstate="Runnable" seed="92485819" result="Passed" start-time="2026-09-08 11:19:25Z" end-time="2026-09-08 11:19:26Z" duration="0.784991" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1040" name="PreparationScene_FinalBagWeightDialogueKeepsBothChildrenGrounded" fullname="StoryPreparationPlayModeTests.PreparationScene_FinalBagWeightDialogueKeepsBothChildrenGrounded" methodname="PreparationScene_FinalBagWeightDialogueKeepsBothChildrenGrounded" classname="StoryPreparationPlayModeTests" runstate="Runnable" seed="1592702218" result="Passed" start-time="2026-09-08 11:19:26Z" end-time="2026-09-08 11:19:27Z" duration="0.753133" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1048" name="StoryQuakeHumanPlayModeTests" fullname="StoryQuakeHumanPlayModeTests" classname="StoryQuakeHumanPlayModeTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-08 11:19:27Z" end-time="2026-09-08 11:19:52Z" duration="25.151913" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1051" name="QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" fullname="StoryQuakeHumanPlayModeTests.QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" methodname="QuakeRebuild_QuakeActionsUseRealWorldGesturesAndFeetStayPlantedUnderCover" classname="StoryQuakeHumanPlayModeTests" runstate="Runnable" seed="1923502969" result="Passed" start-time="2026-09-08 11:19:27Z" end-time="2026-09-08 11:19:52Z" duration="25.145013" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="65000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1053" name="StoryRebuildWalkthroughPlayModeTests" fullname="StoryRebuildWalkthroughPlayModeTests" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-08 11:19:52Z" end-time="2026-09-08 11:22:36Z" duration="164.206981" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1054" name="Story01_Preparation_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story01_Preparation_PlaysToCompletion" methodname="Story01_Preparation_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="709063825" result="Passed" start-time="2026-09-08 11:19:52Z" end-time="2026-09-08 11:20:43Z" duration="51.439047" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1055" name="Story02_HomeSafety_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story02_HomeSafety_PlaysToCompletion" methodname="Story02_HomeSafety_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="114884178" result="Passed" start-time="2026-09-08 11:20:43Z" end-time="2026-09-08 11:21:10Z" duration="27.228240" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1056" name="Story03_Quake_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story03_Quake_PlaysToCompletion" methodname="Story03_Quake_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="506061646" result="Passed" start-time="2026-09-08 11:21:10Z" end-time="2026-09-08 11:22:02Z" duration="51.334865" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1057" name="Story04_Evacuation_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story04_Evacuation_PlaysToCompletion" methodname="Story04_Evacuation_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="1012493343" result="Passed" start-time="2026-09-08 11:22:02Z" end-time="2026-09-08 11:22:36Z" duration="34.193455" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:\Users\Gokturk\Documents\GitHub\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
