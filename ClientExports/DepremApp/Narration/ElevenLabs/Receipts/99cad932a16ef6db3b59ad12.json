@@ -1,0 +1,23 @@
+{
+  "index": 346,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yaranın üzerine su dökerim",
+  "sourceFilename": "99cad932a16ef6db3b59ad12.mp3",
+  "sourceSha256": "8916cb97846f1c93d454969afa31185037f09527846e6888ce2fc9c823ce6a4d",
+  "importedAt": "2026-10-01T04:11:30.390649+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.471020"
+    }
+  }
+}

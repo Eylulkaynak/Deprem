@@ -1,0 +1,23 @@
+{
+  "index": 303,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] AFAD ve radyo gibi resmi kaynaklar doğru bilgi verir. Söylentiler yanlış olabilir ve korkuyu artırır.",
+  "sourceFilename": "d71acac739bc1cb4b0d34008.mp3",
+  "sourceSha256": "10ac34b3980de4a9bbc7e3fff4f6988c9ad8737981ae2eed850c994b40320ed1",
+  "importedAt": "2026-10-01T03:57:11.256560+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.199184"
+    }
+  }
+}

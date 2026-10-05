@@ -1,0 +1,23 @@
+{
+  "index": 572,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Planı hiç değiştirmeden bırakmak",
+  "sourceFilename": "005031a43ed0fe4ba75ca6d5.mp3",
+  "sourceSha256": "b65506a33a5c12f9a30bb8f774d4a094b890a1ed361d6b98032d576e0fa7712c",
+  "importedAt": "2026-10-01T04:53:19.132933+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

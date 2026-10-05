@@ -1,0 +1,23 @@
+{
+  "index": 221,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Artçı geldiğinde tıpkı ilk depremdeki gibi davran: çök, kapan, tutun.",
+  "sourceFilename": "a61ec2374f0e33c96eb49d67.mp3",
+  "sourceSha256": "f85aa01b3b059877b5f1025294a752c7ba87af22ed81b8dc354f461ca4844560",
+  "importedAt": "2026-10-01T03:48:27.698037+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.997551"
+    }
+  }
+}

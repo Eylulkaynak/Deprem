@@ -1,0 +1,23 @@
+{
+  "index": 108,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Büyük aynanın altına",
+  "sourceFilename": "c951db93b62bd6e447fa1032.mp3",
+  "sourceSha256": "a867802271a533b324e0f08496759a04201091f71402985f5e7156933c37391d",
+  "importedAt": "2026-10-01T01:07:40.561933+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

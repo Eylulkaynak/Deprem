@@ -1,0 +1,23 @@
+{
+  "index": 403,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikatı ne sıklıkla yapmak iyidir?",
+  "sourceFilename": "989ac3f093d64cd4379dabfd.mp3",
+  "sourceSha256": "675aff4bb0ea912a05133c2cda401684316d6228fb18582116b3eea15bc041e9",
+  "importedAt": "2026-10-01T04:17:27.328944+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

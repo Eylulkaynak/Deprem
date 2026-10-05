@@ -1,0 +1,23 @@
+{
+  "index": 245,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansör elektrik kesilince içinde mahsur bırakabilir.",
+  "sourceFilename": "012de1947c80d097aa015bd0.mp3",
+  "sourceSha256": "0b79e4ccc3f6d4f7bb7cd4cb96ccb946d49a06b189a422b2e1ea79e1d1f84d14",
+  "importedAt": "2026-10-01T03:50:55.177473+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

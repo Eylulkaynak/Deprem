@@ -1,0 +1,23 @@
+{
+  "index": 266,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ocağı yakıp bakarım",
+  "sourceFilename": "a05fb485361af3674d4c44ef.mp3",
+  "sourceSha256": "bedf07aabf674d2bb6ea861d3ecab091eb8fd11354fa17b6ab9a7d30a0805c79",
+  "importedAt": "2026-10-01T03:53:07.921744+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

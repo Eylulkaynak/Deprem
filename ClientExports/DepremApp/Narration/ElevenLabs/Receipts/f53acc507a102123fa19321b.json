@@ -1,0 +1,23 @@
+{
+  "index": 59,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bu, güvenli bir davranış. Biz tehlikeli olanları arıyoruz. Bir daha bakalım.",
+  "sourceFilename": "f53acc507a102123fa19321b.mp3",
+  "sourceSha256": "8cacb6a80167eceaaedf2b1a144edf2440e5e99494230aea6d932056e2804868",
+  "importedAt": "2026-10-01T01:00:35.930087+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

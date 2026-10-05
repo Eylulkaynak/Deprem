@@ -1,0 +1,23 @@
+{
+  "index": 539,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hasar şüphesi varsa tesisatı uzman kontrolü olmadan tekrar açma.",
+  "sourceFilename": "968b10eaa5aa69cf2b169381.mp3",
+  "sourceSha256": "1475e55478396232269d8c4b16008b30a82a764561e271fd8bd937f90828e1e6",
+  "importedAt": "2026-10-01T04:46:42.308772+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

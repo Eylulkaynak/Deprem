@@ -1,0 +1,23 @@
+{
+  "index": 632,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yatak çevresinde düşebilecek tablo, raf ve ağır eşyaları kaldır.",
+  "sourceFilename": "f72d2f7d22cc9a0b06c9cecd.mp3",
+  "sourceSha256": "d69a838126c3c85a6a4d0d94d9a5337788bf46bb75890359c17a2e5f6e7f7b24",
+  "importedAt": "2026-10-01T05:08:25.831302+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.109388"
+    }
+  }
+}

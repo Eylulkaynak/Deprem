@@ -1,0 +1,23 @@
+{
+  "index": 398,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kırık cama basmak ayağını keser. Dikkatli ol.",
+  "sourceFilename": "2df1f0a08e711fbf3aa0af37.mp3",
+  "sourceSha256": "db0e769fe3116731ce3731a65c8a62d85673d711ecc057de843a043b990f704c",
+  "importedAt": "2026-10-01T04:16:58.209439+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

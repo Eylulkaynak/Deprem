@@ -38,7 +38,8 @@ namespace YanYana.Editor
                     foreach (var body in actor.GetComponentsInChildren<Rigidbody>(true)) UnityEngine.Object.DestroyImmediate(body);
                     var animator = actor.GetComponentInChildren<Animator>(true);
                     animator.applyRootMotion = false; animator.stabilizeFeet = false; animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
-                    animator.runtimeAnimatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/YanYana/Animation/AdventureCharacters.controller");
+                    animator.runtimeAnimatorController = YanYanaAdultLocomotion.ForCharacter(Names[i],
+                        AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(YanYanaAdultLocomotion.BaseControllerPath));
                     foreach (var renderer in actor.GetComponentsInChildren<SkinnedMeshRenderer>())
                     {
                         var mesh = UnityEngine.Object.Instantiate(renderer.sharedMesh); mesh.name = Names[i] + "_Surface";

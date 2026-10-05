@@ -1,0 +1,23 @@
+{
+  "index": 74,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Düdük, enkaz altında sesimizi duyurmak için çantaya konur.",
+  "sourceFilename": "3204dc9eb9ebd69a98f01075.mp3",
+  "sourceSha256": "ffaae8faabc8b26fc2a753631db9a3278c1f37a7d4ff20c1f35c548c150ea3e7",
+  "importedAt": "2026-10-01T01:02:16.468978+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 32,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Üç sihirli hareket",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_15_03_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "b0b689824e90e1459a8b5abf6a2500784c78fe5c59d986b24e0072662e228b0c",
+  "importedAt": "2026-10-01T00:16:16.119454+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.235918"
+    }
+  }
+}

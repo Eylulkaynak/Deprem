@@ -1,0 +1,23 @@
+{
+  "index": 280,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çok uzun, her şeyi anlatan",
+  "sourceFilename": "147d2a9595e62c17f06e179b.mp3",
+  "sourceSha256": "0126713eae6a089a28c1576ef38da8a9f3cfb584e27feafa6b4307a16ce24fc0",
+  "importedAt": "2026-10-01T03:54:35.726166+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

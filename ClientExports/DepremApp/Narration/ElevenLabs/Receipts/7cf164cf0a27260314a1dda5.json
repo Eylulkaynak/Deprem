@@ -1,0 +1,23 @@
+{
+  "index": 354,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Sakin kalıp bir yetişkine haber vermek herkese yardım eder.",
+  "sourceFilename": "7cf164cf0a27260314a1dda5.mp3",
+  "sourceSha256": "6b8f5c1344d3cd3824eb9e788cd3307c953488465a67d1ff4b5a0d47fe077515",
+  "importedAt": "2026-10-01T04:12:13.117541+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 577,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Riskleri Önceden Azalt",
+  "sourceFilename": "37d37a694e1370cf637056f0.mp3",
+  "sourceSha256": "f0768b7593e5728ba70bd0f0870fcb628217e6acfd3ebf6b8f44e8102704a8ee",
+  "importedAt": "2026-10-01T04:53:53.023834+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

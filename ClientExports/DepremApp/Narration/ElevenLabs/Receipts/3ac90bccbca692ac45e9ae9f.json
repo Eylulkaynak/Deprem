@@ -1,0 +1,23 @@
+{
+  "index": 293,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binaların dibi güvenli değil. Açık alan daha iyi.",
+  "sourceFilename": "3ac90bccbca692ac45e9ae9f.mp3",
+  "sourceSha256": "efd2c244c46154d6180d358ea45e8978ee91e7c674acb2ada573e60090ca7a2a",
+  "importedAt": "2026-10-01T03:56:11.450444+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.829388"
+    }
+  }
+}

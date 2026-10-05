@@ -60,8 +60,8 @@ PASS Supported Efe walks and places learned family marker
 PASS Expected ending 2 selected
 PASS Walk to family marker
 PASS Reach family
-PASS reunion participant Ada viewport=(0.26, 0.55, 3.13)
-PASS reunion participant Efe viewport=(0.79, 0.53, 3.38)
+PASS reunion participant Ada viewport=(0.27, 0.55, 3.14)
+PASS reunion participant Efe viewport=(0.77, 0.53, 3.35)
 PASS reunion participant Derya viewport=(0.62, 0.68, 4.27)
 PASS reunion participant Emre viewport=(0.26, 0.70, 4.11)
 PASS Reunion completed

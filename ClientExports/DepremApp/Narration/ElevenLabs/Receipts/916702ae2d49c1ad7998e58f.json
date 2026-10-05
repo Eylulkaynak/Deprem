@@ -1,0 +1,23 @@
+{
+  "index": 243,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem sonrası asansör tehlikelidir, takılıp kalabilirsin. Merdiveni kullan.",
+  "sourceFilename": "916702ae2d49c1ad7998e58f.mp3",
+  "sourceSha256": "e7a901cb6dacd92aa8796dc0296bb33559e74404776be3d6f88221af3e0941f9",
+  "importedAt": "2026-10-01T03:50:43.182699+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.527347"
+    }
+  }
+}

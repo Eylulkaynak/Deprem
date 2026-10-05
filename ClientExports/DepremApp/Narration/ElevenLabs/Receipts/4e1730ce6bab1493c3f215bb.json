@@ -1,0 +1,23 @@
+{
+  "index": 240,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Ayakkabı seni cam ve molozdan korur.",
+  "sourceFilename": "4e1730ce6bab1493c3f215bb.mp3",
+  "sourceSha256": "3f990e850b873ad9968791b90e2bd6d6a966ac31a732b5380f37ce36a71c6b30",
+  "importedAt": "2026-10-01T03:50:16.636366+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 455,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Açık alev, hasarlı tesisat ve riskli yapılardan uzak dur.",
+  "sourceFilename": "1e44ca7b6893a79061522d8c.mp3",
+  "sourceSha256": "2733d9616c75a43dce43534585843a1f8193e7c590fc6852ecf9e8f41160e0c4",
+  "importedAt": "2026-10-01T04:28:54.259520+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

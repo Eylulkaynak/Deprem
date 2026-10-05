@@ -1,0 +1,23 @@
+{
+  "index": 161,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru mu, yanlış mı? Sarsıntı sırasında balkona çıkmak güvenlidir.",
+  "sourceFilename": "38811915a132136a12996bc8.mp3",
+  "sourceSha256": "e6713850fd96764ec536af121bd655f814d4bc329c5512fadca23196bd631d09",
+  "importedAt": "2026-10-01T03:31:35.832382+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.684082"
+    }
+  }
+}

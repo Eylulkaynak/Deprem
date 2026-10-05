@@ -1,0 +1,23 @@
+{
+  "index": 254,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Alev veya kıvılcım gazı tutuşturabilir; asla yakma.",
+  "sourceFilename": "5b3f9cf583f108017931368b.mp3",
+  "sourceSha256": "e865d0139029024557d22db8b584723511f543f18c02073ef25606ba8310cfe3",
+  "importedAt": "2026-10-01T03:52:01.621476+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

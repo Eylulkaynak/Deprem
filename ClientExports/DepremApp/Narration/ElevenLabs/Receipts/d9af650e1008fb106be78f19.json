@@ -1,0 +1,23 @@
+{
+  "index": 664,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İlk yardımda amaç güvenli kalmak, kanamayı kontrol etmek ve profesyonel yardım çağırmaktır.",
+  "sourceFilename": "d9af650e1008fb106be78f19.mp3",
+  "sourceSha256": "3cfb321ab70029dd5451cd84d7ac59503d5b8bc92b1e8b9f6f906535a11b8792",
+  "importedAt": "2026-10-01T04:58:47.382123+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.467755"
+    }
+  }
+}

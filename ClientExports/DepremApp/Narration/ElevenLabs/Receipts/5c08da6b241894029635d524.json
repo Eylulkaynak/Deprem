@@ -1,0 +1,23 @@
+{
+  "index": 448,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansöre bin",
+  "sourceFilename": "5c08da6b241894029635d524.mp3",
+  "sourceSha256": "842ba65366bc974e4a9db90ad7cb95ce638ce6654d79a22563ed8eacb6035e74",
+  "importedAt": "2026-10-01T04:26:32.416741+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.426122"
+    }
+  }
+}

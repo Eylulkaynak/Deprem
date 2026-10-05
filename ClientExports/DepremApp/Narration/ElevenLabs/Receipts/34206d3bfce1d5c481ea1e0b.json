@@ -1,0 +1,23 @@
+{
+  "index": 66,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İnsan susuz kalamaz. Çantada mutlaka su olmalı.",
+  "sourceFilename": "34206d3bfce1d5c481ea1e0b.mp3",
+  "sourceSha256": "23d6a5a8cd6f18a1d225ede203b029b8f16aaf7f6414450b7900e43859a2014e",
+  "importedAt": "2026-10-01T01:01:17.332856+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

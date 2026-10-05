@@ -1,0 +1,23 @@
+{
+  "index": 25,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Resimlere birlikte bakalım. Hangileri tehlikeli davranışları gösteriyor? Bulduğun tehlikeli davranışlara dokun.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_12_01_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "8db14d2389ac7ef67ab98a651591438c79ce5f7f1978c90d1d862c4ef53cb9eb",
+  "importedAt": "2026-10-01T00:12:25.949621+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.277551"
+    }
+  }
+}

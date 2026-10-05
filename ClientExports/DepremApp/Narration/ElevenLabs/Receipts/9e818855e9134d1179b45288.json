@@ -1,0 +1,23 @@
+{
+  "index": 604,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tehlikeli Durumlar",
+  "sourceFilename": "9e818855e9134d1179b45288.mp3",
+  "sourceSha256": "19a28581e2941479d2dc14bf6a863bd0a2e24a146e97c8b4ba2add902126e707",
+  "importedAt": "2026-10-01T04:57:02.753797+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

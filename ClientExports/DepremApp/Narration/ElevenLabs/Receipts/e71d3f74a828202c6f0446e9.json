@@ -1,0 +1,23 @@
+{
+  "index": 171,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Direkler ve teller devrilebilir, bu yüzden onlardan uzak dur.",
+  "sourceFilename": "e71d3f74a828202c6f0446e9.mp3",
+  "sourceSha256": "0dd15bcc05556ef64a7e54319c61dd225703369f90e872ea30f86d9d193bd6d1",
+  "importedAt": "2026-10-01T03:33:23.438989+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

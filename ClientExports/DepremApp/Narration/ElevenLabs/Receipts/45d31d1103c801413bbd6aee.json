@@ -1,0 +1,23 @@
+{
+  "index": 545,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hazırlık, deprem anındaki karar yükünü azaltır.",
+  "sourceFilename": "45d31d1103c801413bbd6aee.mp3",
+  "sourceSha256": "354a22e6f104c69fa29ec853688a87aa6a1906cc9afe0ef35f627f674c3f6a35",
+  "importedAt": "2026-10-01T04:47:26.670134+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

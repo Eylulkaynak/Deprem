@@ -1,0 +1,23 @@
+{
+  "index": 229,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Artçılar tamamen bitene kadar tedbirli olmalısın.",
+  "sourceFilename": "349f7d59689671969b488aec.mp3",
+  "sourceSha256": "2e31a251d5f8dd64b9cc62cadfed5fc9b90ceb2840022fba692b093fa445491d",
+  "importedAt": "2026-10-01T03:49:11.046581+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.515918"
+    }
+  }
+}

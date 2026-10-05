@@ -1,0 +1,23 @@
+{
+  "index": 549,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Herkesin aynı malzemeye ihtiyaç duyacağı",
+  "sourceFilename": "2059876d99cb94f731657de9.mp3",
+  "sourceSha256": "0a8be7b047f34a60f56072499fb118574248159aca3db5527a0f1639f142a4bc",
+  "importedAt": "2026-10-01T04:47:51.266909+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.437551"
+    }
+  }
+}

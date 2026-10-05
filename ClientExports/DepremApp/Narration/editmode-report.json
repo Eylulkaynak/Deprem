@@ -1,0 +1,10 @@
+{
+  "testFilter": "Deprem.Learning.Tests.LearningAppTests",
+  "mode": "EditMode",
+  "passed": 12,
+  "failed": 0,
+  "skipped": 0,
+  "source": "Unity Test Runner via MCP",
+  "audioFiles": 668,
+  "sourceBytes": 46939984
+}

@@ -1,0 +1,23 @@
+{
+  "index": 345,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Temiz bezle bastırırım",
+  "sourceFilename": "e6af923d7bb997baea6f4e9d.mp3",
+  "sourceSha256": "d4f208a4acdcc003a0b31b9a4a53584cb9de5789d3e7d63f9b7cc1fc3bc9439e",
+  "importedAt": "2026-10-01T04:11:20.252694+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

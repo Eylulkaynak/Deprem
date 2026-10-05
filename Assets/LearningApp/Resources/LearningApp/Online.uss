@@ -1,0 +1,29 @@
+.online-entry { background-color: #204f46; border-width: 0; padding: 20px; }
+.online-entry .section-title { color: #fffef5; }
+.online-entry .small { color: #c5dfce; }
+.online-entry Button { background-color: #f3c795; color: #203e3b; margin-bottom: 0; }
+.online-tabs { margin-bottom: 16px; flex-wrap: wrap; }
+.online-tabs Button { flex-grow: 1; flex-basis: 0; margin: 0 4px 6px 0; font-size: 14px; padding: 10px 8px; }
+.online-tabs .selected { background-color: #246858; color: white; }
+.online-status { background-color: #e8f0e7; color: #246858; padding: 10px 14px; border-radius: 12px; margin-bottom: 16px; font-size: 14px; }
+.online-status.offline { background-color: #fae5cb; color: #784516; }
+.online-code { font-size: 28px; letter-spacing: 3px; color: #246858; -unity-font-style: bold; margin-bottom: 10px; }
+.online-person { padding: 14px; margin-bottom: 10px; border-radius: 15px; background-color: #fff; border-width: 1px; border-color: #e1e7df; }
+.online-person .path-name { font-size: 18px; }
+.online-person Button { min-height: 44px; font-size: 14px; margin-top: 8px; margin-bottom: 0; }
+.online-actions { flex-wrap: wrap; }
+.online-actions Button { margin-right: 6px; }
+.online-presence { width: 9px; height: 9px; border-radius: 5px; background-color: #a1aaa6; margin-right: 8px; }
+.online-presence.connected { background-color: #4c9874; }
+.online-member { padding: 14px; border-radius: 15px; background-color: #e8f0e7; margin-bottom: 10px; }
+.online-member .path-name { font-size: 20px; }
+.online-countdown { font-size: 56px; -unity-text-align: middle-center; color: #246858; margin-top: 10px; margin-bottom: 16px; }
+.online-hud { background-color: #204f46; color: #fff; border-radius: 16px; padding: 12px 16px; margin-bottom: 14px; }
+.online-hud Label { color: #fff; }
+.online-hud .online-timer { font-size: 14px; color: #c5dfce; margin-top: 6px; }
+.online-hud .online-score { font-size: 18px; -unity-font-style: bold; }
+.online-rank { font-size: 21px; min-width: 38px; color: #246858; -unity-font-style: bold; margin-right: 10px; }
+.online-person.current-player { border-color: #8bb59c; background-color: #eef5e9; }
+.online-filter { margin-bottom: 16px; }
+.online-filter .unity-base-field__label { min-width: 90px; }
+.online-footer { margin-top: 18px; }

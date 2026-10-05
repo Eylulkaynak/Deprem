@@ -1,0 +1,23 @@
+{
+  "index": 76,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Düdük sesimizi uzaklara duyurur, çantaya konur.",
+  "sourceFilename": "f75a485461e64c52c6226dda.mp3",
+  "sourceSha256": "fa130bbf9da77eb153063613bd54fecb111e3593994bea2cc0003f0fc2e6f479",
+  "importedAt": "2026-10-01T01:03:01.717922+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.717551"
+    }
+  }
+}

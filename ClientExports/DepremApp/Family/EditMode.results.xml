@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="14" result="Passed" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10,5059211">
+  <test-suite type="TestSuite" id="1000" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10.505921" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1018" name="Assembly-CSharp-Editor.dll" fullname="D:/DepremIMO/Deprem/.codex_tmp/family-isolated-a78a7e158abf4b5e88cdb01d17694cba/project/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10.458290" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="62872" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1019" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10.455307" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1020" name="Learning" fullname="Deprem.Learning" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10.453145" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1021" name="Tests" fullname="Deprem.Learning.Tests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10.451168" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="LearningFamilyIntegrationTests" fullname="Deprem.Learning.Tests.LearningFamilyIntegrationTests" classname="Deprem.Learning.Tests.LearningFamilyIntegrationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-04 23:09:56Z" end-time="2026-10-04 23:10:06Z" duration="10.414483" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="ChildAndParentPhonesLinkSyncRevokeAndProtectOfflineProgressThroughRealUi" fullname="Deprem.Learning.Tests.LearningFamilyIntegrationTests.ChildAndParentPhonesLinkSyncRevokeAndProtectOfflineProgressThroughRealUi" methodname="ChildAndParentPhonesLinkSyncRevokeAndProtectOfflineProgressThroughRealUi" classname="Deprem.Learning.Tests.LearningFamilyIntegrationTests" runstate="Runnable" seed="283476922" result="Passed" start-time="2026-10-04 23:09:54Z" end-time="2026-10-04 23:10:06Z" duration="12.090242" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Category" value="FamilyServiceIntegration" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+Invalid value for font MissingAssetReference
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1003" name="LearningFamilyTests" fullname="Deprem.Learning.Tests.LearningFamilyTests" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.033696" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1006" name="CorruptConnectionStateNeverRestoresAnEnabledBackup" fullname="Deprem.Learning.Tests.LearningFamilyTests.CorruptConnectionStateNeverRestoresAnEnabledBackup" methodname="CorruptConnectionStateNeverRestoresAnEnabledBackup" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="1272477734" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.010441" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="DeviceCredentialsSurviveRestartAndRemainPerProfileAndService" fullname="Deprem.Learning.Tests.LearningFamilyTests.DeviceCredentialsSurviveRestartAndRemainPerProfileAndService" methodname="DeviceCredentialsSurviveRestartAndRemainPerProfileAndService" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="2139171307" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.002884" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="ExistingLearningSavesDoNotAutomaticallyEnableSharing" fullname="Deprem.Learning.Tests.LearningFamilyTests.ExistingLearningSavesDoNotAutomaticallyEnableSharing" methodname="ExistingLearningSavesDoNotAutomaticallyEnableSharing" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="540053105" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.001404" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1016" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.005988" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1008" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;http://family.example&quot;,False,&quot;&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;http://family.example&quot;,False,&quot;&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="1698359850" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000918" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1009" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;http://127.0.0.1:8787&quot;,False,&quot;&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;http://127.0.0.1:8787&quot;,False,&quot;&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="529608863" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000487" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1010" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;http://127.0.0.1:8787&quot;,True,&quot;http://127.0.0.1:8787&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;http://127.0.0.1:8787&quot;,True,&quot;http://127.0.0.1:8787&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="219176724" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000718" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1011" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://family.example/&quot;,False,&quot;https://family.example&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://family.example/&quot;,False,&quot;https://family.example&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="561086578" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000502" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1012" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://name:secret@family.example&quot;,False,&quot;&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://name:secret@family.example&quot;,False,&quot;&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="1915257783" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000491" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1013" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://family.example/?token=secret&quot;,False,&quot;&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://family.example/?token=secret&quot;,False,&quot;&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="1437306375" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000570" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1014" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://family.example/#secret&quot;,False,&quot;&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;https://family.example/#secret&quot;,False,&quot;&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="978445725" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000508" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1015" name="MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;&quot;,False,&quot;&quot;)" fullname="Deprem.Learning.Tests.LearningFamilyTests.MobileEndpointsRequireHttpsAndNeverEmbedSecrets(&quot;&quot;,False,&quot;&quot;)" methodname="MobileEndpointsRequireHttpsAndNeverEmbedSecrets" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="445645087" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.000465" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1007" name="OfflineRevocationIsPersistedWithoutChangingLearningProgress" fullname="Deprem.Learning.Tests.LearningFamilyTests.OfflineRevocationIsPersistedWithoutChangingLearningProgress" methodname="OfflineRevocationIsPersistedWithoutChangingLearningProgress" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="609717212" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.005058" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="SharedSnapshotProjectsOnlyKnownChildAchievementsAndTopics" fullname="Deprem.Learning.Tests.LearningFamilyTests.SharedSnapshotProjectsOnlyKnownChildAchievementsAndTopics" methodname="SharedSnapshotProjectsOnlyKnownChildAchievementsAndTopics" classname="Deprem.Learning.Tests.LearningFamilyTests" runstate="Runnable" seed="1311551802" result="Passed" start-time="2026-10-04 23:10:06Z" end-time="2026-10-04 23:10:06Z" duration="0.005590" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: D:\DepremIMO\Deprem\.codex_tmp\family-isolated-a78a7e158abf4b5e88cdb01d17694cba\unity-results.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

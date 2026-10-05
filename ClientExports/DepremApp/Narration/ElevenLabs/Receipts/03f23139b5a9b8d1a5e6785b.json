@@ -1,0 +1,23 @@
+{
+  "index": 383,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Sakin kalmak en büyük yardımcın.",
+  "sourceFilename": "03f23139b5a9b8d1a5e6785b.mp3",
+  "sourceSha256": "62183494da4ebb45307a82fa507397b1bb4098ea39f7463fa62320cd707ce49b",
+  "importedAt": "2026-10-01T04:15:22.122675+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.594286"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 126,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sağlam bir masaya tutunursun; masa kayarsa elini bırakmadan onunla birlikte gidersin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T03_08_38_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "923cfa83392371e8cf3e816a3f0be2573a9c6536d71119d4d7635927da9c6a00",
+  "importedAt": "2026-10-01T03:09:20.492581+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.467755"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 260,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Düğmeye dokunmak kıvılcım yapar, çok tehlikelidir.",
+  "sourceFilename": "fb27a65a69b553eeedaf2239.mp3",
+  "sourceSha256": "c66c5013ff100a1e97f0bc0a3296feffb0e9823e05e76dec4cb9315792b6a4b4",
+  "importedAt": "2026-10-01T03:52:32.487513+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

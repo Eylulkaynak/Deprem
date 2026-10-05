@@ -1,0 +1,23 @@
+{
+  "index": 377,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çök, kapan, tutun yaparım",
+  "sourceFilename": "293768ef78526b3ae87098b3.mp3",
+  "sourceSha256": "14eb4ef3cd277f353da57a88a767c581f9c54869ab929580107a22a7320b50fa",
+  "importedAt": "2026-10-01T04:14:46.642482+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.045714"
+    }
+  }
+}

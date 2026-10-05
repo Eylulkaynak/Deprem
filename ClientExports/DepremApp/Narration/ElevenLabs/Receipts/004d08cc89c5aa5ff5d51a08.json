@@ -1,0 +1,23 @@
+{
+  "index": 85,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yakın yerler meşgul olabilir; uzaktaki bir kişiye herkes haber verebilir.",
+  "sourceFilename": "004d08cc89c5aa5ff5d51a08.mp3",
+  "sourceSha256": "4be716b3c0956b27b1faa566160353b86c3056b89bc728cd7b217d7051664493",
+  "importedAt": "2026-10-01T01:04:23.783908+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.448980"
+    }
+  }
+}

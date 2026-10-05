@@ -1,0 +1,23 @@
+{
+  "index": 431,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ailenle belirlenen noktada buluş.",
+  "sourceFilename": "5a9b9d8a30f3c0493370ee09.mp3",
+  "sourceSha256": "eed893d42441fb682b2babad4edec984e9fc96de6818e99e27fd3324e72c4258",
+  "importedAt": "2026-10-01T04:22:12.123913+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

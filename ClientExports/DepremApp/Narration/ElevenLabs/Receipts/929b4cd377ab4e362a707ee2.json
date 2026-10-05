@@ -1,0 +1,23 @@
+{
+  "index": 612,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Temiz bezle doğrudan bası uygulamak",
+  "sourceFilename": "929b4cd377ab4e362a707ee2.mp3",
+  "sourceSha256": "6bb4e9be5594c39fa9ef50f3079819469b1e90808065176aad424a0972efbae9",
+  "importedAt": "2026-10-01T04:58:08.620629+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.045714"
+    }
+  }
+}

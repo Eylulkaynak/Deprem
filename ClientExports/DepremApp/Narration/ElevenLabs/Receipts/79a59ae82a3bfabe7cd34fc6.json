@@ -1,0 +1,23 @@
+{
+  "index": 416,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikat prova etmektir ve gerçekten işe yarar.",
+  "sourceFilename": "79a59ae82a3bfabe7cd34fc6.mp3",
+  "sourceSha256": "ca5306b643e26058f585b8bd4d6db72e8d0f2a2a81f898ab9d4bca86f83a0dc4",
+  "importedAt": "2026-10-01T04:18:57.653681+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

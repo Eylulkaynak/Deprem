@@ -1,0 +1,23 @@
+{
+  "index": 447,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansördeyken deprem olursa ne yaparsın?",
+  "sourceFilename": "0100d2bb2b12b9bb38749c1c.mp3",
+  "sourceSha256": "99b957319283c0a679e92ab67a5dd5e2d14c9a1bb3ea01a70542f8ec47815245",
+  "importedAt": "2026-10-01T04:26:31.070954+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.359184"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 79,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önceden seçtiğimiz güvenli buluşma noktasında buluşuruz.",
+  "sourceFilename": "fc3dd2052463a16011e163ff.mp3",
+  "sourceSha256": "de2e0fee3a84d1258fb5f7c66d3ee96c75953ba2d9af0c9fe1ebfe7b2273a76a",
+  "importedAt": "2026-10-01T01:03:06.354711+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

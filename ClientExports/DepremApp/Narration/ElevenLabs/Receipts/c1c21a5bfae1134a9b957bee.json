@@ -1,0 +1,23 @@
+{
+  "index": 530,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz, Elektrik ve Su",
+  "sourceFilename": "c1c21a5bfae1134a9b957bee.mp3",
+  "sourceSha256": "a952b056644ac93711592cd71235b2e654663cfbe381773faf199dcc8c70cbf3",
+  "importedAt": "2026-10-01T04:45:53.541322+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.706122"
+    }
+  }
+}

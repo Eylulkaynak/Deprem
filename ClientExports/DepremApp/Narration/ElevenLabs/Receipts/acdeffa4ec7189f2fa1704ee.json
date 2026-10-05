@@ -1,0 +1,23 @@
+{
+  "index": 382,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Panik değil, sakinlik seni korur.",
+  "sourceFilename": "acdeffa4ec7189f2fa1704ee.mp3",
+  "sourceSha256": "b4a9714504baec570a4c9181726390a27cedbc1affa45eb0bc52f3562c2a1801",
+  "importedAt": "2026-10-01T04:15:16.245620+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.888980"
+    }
+  }
+}

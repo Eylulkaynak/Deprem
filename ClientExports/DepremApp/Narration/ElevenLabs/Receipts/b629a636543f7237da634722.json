@@ -1,0 +1,23 @@
+{
+  "index": 396,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kırık cam ve moloz keser ve yaralar. Dikkatle bak ve uzaktan dolaş.",
+  "sourceFilename": "b629a636543f7237da634722.mp3",
+  "sourceSha256": "9fcc9b045a85d6ca2cc90b6a66cdb111895c3db29f28970ed5f837a76538121f",
+  "importedAt": "2026-10-01T04:16:50.893601+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.840816"
+    }
+  }
+}

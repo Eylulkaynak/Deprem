@@ -1,0 +1,23 @@
+{
+  "index": 94,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sadece babam",
+  "sourceFilename": "f811489f643346e8748138d0.mp3",
+  "sourceSha256": "ac29c334774953e076d6225e52b315f3c8c24ffbafd6d7fa7c446d45d14ec8d2",
+  "importedAt": "2026-10-01T01:05:30.528276+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

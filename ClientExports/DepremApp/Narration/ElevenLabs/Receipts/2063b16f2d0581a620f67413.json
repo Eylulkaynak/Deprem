@@ -1,0 +1,23 @@
+{
+  "index": 571,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Periyodik kontrol çantanın güncel kalmasını sağlar.",
+  "sourceFilename": "2063b16f2d0581a620f67413.mp3",
+  "sourceSha256": "d4dfa255c979522208b267076b2b3b9b3d129ffb1f77cb98fc239d8e9491e21b",
+  "importedAt": "2026-10-01T04:53:13.312723+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.829388"
+    }
+  }
+}

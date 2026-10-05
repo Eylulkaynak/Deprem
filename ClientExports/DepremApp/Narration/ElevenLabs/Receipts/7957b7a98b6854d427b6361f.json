@@ -1,0 +1,23 @@
+{
+  "index": 629,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yardım gelene kadar temel ihtiyaçları planlı yönetmek gerekir.",
+  "sourceFilename": "7957b7a98b6854d427b6361f.mp3",
+  "sourceSha256": "4b6b29670013b29c9272265411e1c3ef465e64d47d8df7331a027a1f3416ed77",
+  "importedAt": "2026-10-01T05:08:04.113955+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

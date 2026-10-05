@@ -1,0 +1,23 @@
+{
+  "index": 641,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çanta kontrolünü takvime bağlamamak",
+  "sourceFilename": "e5901da7cbbbcf84eed83550.mp3",
+  "sourceSha256": "8e24257cac7c96d5447b54a20e6e19b085b0f09dcfe6a01ecdc75d60d9ca7731",
+  "importedAt": "2026-10-01T05:09:46.184518+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.967347"
+    }
+  }
+}

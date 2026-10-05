@@ -1,0 +1,23 @@
+{
+  "index": 601,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikat sonrası aksayan noktaları not alıp güncelle.",
+  "sourceFilename": "7b019da3a871dc36ebeb184b.mp3",
+  "sourceSha256": "c463f1e72bbf9b99ce39f2270654a728ab0adf55f446a15fe4c12d15b62a8873",
+  "importedAt": "2026-10-01T04:56:39.978951+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

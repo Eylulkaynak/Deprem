@@ -1,0 +1,23 @@
+{
+  "index": 649,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önemli belge kopyaları afet sonrası işlemleri kolaylaştırabilir.",
+  "sourceFilename": "2d0884a5ee505fc853b6f1f0.mp3",
+  "sourceSha256": "d2ce49f5586acc829544f723aab20929b1a39682dbdca3ca04733ba4428e6cf0",
+  "importedAt": "2026-10-01T05:11:03.327704+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 17,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yardım etmek, her işi tek başına yapmak demek değildir. Yardıma ihtiyacı olan birini fark edersen bir yetişkine haber ver. Ağır eşyaları kaldırmaya ya da tehlikeli bir yere girmeye çalışma. Haber vermen de değerli bir yardımdır.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_10_19_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "d612ac4d473aca13854e03e70bea28be3434322a5c5085dfd3d8ae7c75cf1a5b",
+  "importedAt": "2026-10-01T00:10:48.783328+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "15.427755"
+    }
+  }
+}

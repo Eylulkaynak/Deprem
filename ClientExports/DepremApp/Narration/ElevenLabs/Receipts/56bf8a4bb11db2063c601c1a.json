@@ -1,0 +1,23 @@
+{
+  "index": 143,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır raflar ve sarkan eşyalar sarsıntıda üstüne düşebilir. Onlardan uzaklaş.",
+  "sourceFilename": "56bf8a4bb11db2063c601c1a.mp3",
+  "sourceSha256": "ea464e026df9fcbf5e842f9f5cfabf337bb1d9dcdd6d81ff77de84d023a8bed9",
+  "importedAt": "2026-10-01T03:28:17.012625+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.684082"
+    }
+  }
+}

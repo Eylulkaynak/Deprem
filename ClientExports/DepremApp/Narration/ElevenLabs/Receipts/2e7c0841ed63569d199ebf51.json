@@ -1,0 +1,23 @@
+{
+  "index": 132,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Masanın altı en güvenli yer. Cam ve raflardan uzak dur.",
+  "sourceFilename": "2e7c0841ed63569d199ebf51.mp3",
+  "sourceSha256": "0a9182a9b179d64eb031f3522da1459c439539783bd52cb84357596d0c00162c",
+  "importedAt": "2026-10-01T03:24:04.769743+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

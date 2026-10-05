@@ -1,0 +1,23 @@
+{
+  "index": 333,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önce düdük veya vurma sesi denenir. Bağırmak en sona kalır.",
+  "sourceFilename": "6a31d6df2a6be69c5b6c9577.mp3",
+  "sourceSha256": "e689463362f23022503bd20c4775bfc038d1ab5f34bda0438b220b283bd620c4",
+  "importedAt": "2026-10-01T04:10:09.707851+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 404,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bir kere değil, sık sık tekrar etmek gerekir.",
+  "sourceFilename": "75a52d48df903284afa6b456.mp3",
+  "sourceSha256": "f4fb0f2ca32db99fa2bf293a9c86097e6565b4c0ca71bd2ce3e291f0698c8318",
+  "importedAt": "2026-10-01T04:17:33.261251+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.515918"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 578,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sadece depremden sonra görev paylaşmak",
+  "sourceFilename": "976249e7c694f653ac7318b5.mp3",
+  "sourceSha256": "cdb34f2fdeda78368745758f7d149d3d71383ed518876d542e92bcfb09bfddd4",
+  "importedAt": "2026-10-01T04:53:54.514763+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.437551"
+    }
+  }
+}

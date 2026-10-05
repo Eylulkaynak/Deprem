@@ -1,0 +1,23 @@
+{
+  "index": 467,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bilgi ancak düzenli prova ile refleks haline gelir. Evde ve işte yılda en az birkaç kez kısa Çök, kapan, tutun provası yap. Tahliye rotasını, toplanma alanını ve iletişim planını birlikte test et. Tatbikat sonrası aksayan noktaları not al ve planı güncelle. Çanta, belge, ilaç ve pil kontrollerini takvime bağla. Bugün: Telefon takvimine 6 ayda bir çanta kontrolü ekle.",
+  "sourceFilename": "2bc0ffa24178439033b07836.mp3",
+  "sourceSha256": "cab6f5f13f841720aece29137d40d0ec9e509141ffb9ab95d52d8c04aadcd3b3",
+  "importedAt": "2026-10-01T04:38:58.287092+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "27.757551"
+    }
+  }
+}

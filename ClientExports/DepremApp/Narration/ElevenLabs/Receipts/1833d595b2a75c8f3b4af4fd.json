@@ -1,0 +1,23 @@
+{
+  "index": 510,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Çanta, hızlı tahliyede kolay alınabilecek yerde durmalıdır.",
+  "sourceFilename": "1833d595b2a75c8f3b4af4fd.mp3",
+  "sourceSha256": "442adddc3ca67bae87138b5a06d603297040bf89d366736078023d4ba136ca6c",
+  "importedAt": "2026-10-01T04:43:36.469435+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.448980"
+    }
+  }
+}

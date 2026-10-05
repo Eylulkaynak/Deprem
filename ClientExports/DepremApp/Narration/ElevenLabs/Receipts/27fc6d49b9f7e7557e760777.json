@@ -1,0 +1,23 @@
+{
+  "index": 338,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Yaralıyı oynatmadan büyüklere haber vermek en güvenlisi.",
+  "sourceFilename": "27fc6d49b9f7e7557e760777.mp3",
+  "sourceSha256": "dc85dbda2988bb1d9670b5881ea059aff36b22920a6c5b3ac71fd7ff009a05a3",
+  "importedAt": "2026-10-01T04:10:43.818541+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.795918"
+    }
+  }
+}

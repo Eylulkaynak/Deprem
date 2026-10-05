@@ -1,0 +1,23 @@
+{
+  "index": 357,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Komşuları kontrol etmek güzeldir ama ağır işleri büyüklere bırak. Bir yetişkin çağırırsın.",
+  "sourceFilename": "6c979da36afb6d23768d5936.mp3",
+  "sourceSha256": "4630ed0ea3d99da0d4057e9dd3950c55b973abd91870f6aa011480ba0e96c4e7",
+  "importedAt": "2026-10-01T04:12:30.736312+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.650612"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 269,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem oldu, anneni merak ediyorsun. Ne yaparsın?",
+  "sourceFilename": "f19fd3c9c0c2790db9d3145b.mp3",
+  "sourceSha256": "40f4b4f3dd726efc004b3b320f2d72f4a6963ca0e7d3017b66637d1d38eac54b",
+  "importedAt": "2026-10-01T03:53:30.179438+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

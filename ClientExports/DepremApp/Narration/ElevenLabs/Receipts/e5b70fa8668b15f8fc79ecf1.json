@@ -1,0 +1,23 @@
+{
+  "index": 164,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Üstüne bir şey düşmeyecek, açık bir alan en güvenlisidir.",
+  "sourceFilename": "e5b70fa8668b15f8fc79ecf1.mp3",
+  "sourceSha256": "0528243ebbe3feb0dcaf0f396b79e4cda3ccff0f745ff842a316d45de74da617",
+  "importedAt": "2026-10-01T03:31:40.156580+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.247347"
+    }
+  }
+}

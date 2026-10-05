@@ -1,0 +1,23 @@
+{
+  "index": 281,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yanlış. Herkes ararsa hatlar dolar. Aramak yerine kısa mesaj atmak hattı açık tutar.",
+  "sourceFilename": "0cceacb3db422776f9b9e5d9.mp3",
+  "sourceSha256": "620927965d01478213ef4854798668ed497ea225f77b96f83e59bedf6b0d2e81",
+  "importedAt": "2026-10-01T03:54:46.246305+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.355918"
+    }
+  }
+}

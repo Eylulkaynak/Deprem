@@ -1,0 +1,23 @@
+{
+  "index": 367,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Korkmak normaldir. Korunmaya devam ederken yavaşça nefes almaya çalışabilirsin.",
+  "sourceFilename": "3e3278caf0094da90d0340e9.mp3",
+  "sourceSha256": "cdac72a39bec72c5135d72cf21e369e497d03cfd5e150a9c93ec7da761b0cab8",
+  "importedAt": "2026-10-01T04:13:38.896832+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.154286"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 444,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansör ve merdivene koşma.",
+  "sourceFilename": "0813b9d29719dac6f7828ea3.mp3",
+  "sourceSha256": "5adcdb3db72b9628bddd704613e402a99a976a61dd4066471f6fa392732ee980",
+  "importedAt": "2026-10-01T04:25:51.139653+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.627755"
+    }
+  }
+}

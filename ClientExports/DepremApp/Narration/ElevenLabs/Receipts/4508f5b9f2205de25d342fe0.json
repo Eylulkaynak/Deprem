@@ -1,0 +1,23 @@
+{
+  "index": 625,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Trafiği engellemeden resmi yönlendirmeleri takip et.",
+  "sourceFilename": "4508f5b9f2205de25d342fe0.mp3",
+  "sourceSha256": "5bf2f1e9cc17456596aefc5f52425fac722bb572761800df177fa4862fe26c22",
+  "importedAt": "2026-10-01T05:07:24.011045+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

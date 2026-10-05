@@ -41,6 +41,11 @@ namespace Deprem.Story
         private DraggableItem managedDrag;
         private bool cameraTransitionPointerGuard;
 
+        // Read-only presentation state for the non-reader gesture guide.
+        public StoryInteractable VisualInteraction => pendingInteraction;
+        public bool VisualInputAvailable => Time.timeScale > 0f && interactionsEnabled && !cameraTransitionPointerGuard &&
+            (ui == null || !ui.WorldInputBlocked) && (cameraController == null || !cameraController.WorldNavigationBlocked);
+
         private void Awake()
         {
             worldCamera ??= Camera.main;
@@ -69,6 +74,11 @@ namespace Deprem.Story
 
         private void Update()
         {
+            if (Time.timeScale <= 0f)
+            {
+                ClearPendingInteraction();
+                return;
+            }
             if (ui != null && !TryGetPointerHeld(out _))
                 ui.NotifyPrimaryPointerReleased();
 
@@ -152,7 +162,7 @@ namespace Deprem.Story
 
         private void HandleWorldTap(Vector2 screenPosition)
         {
-            if (worldCamera == null || player == null)
+            if (Time.timeScale <= 0f || worldCamera == null || player == null)
                 return;
 
             if (cameraController != null && cameraController.WorldNavigationBlocked)

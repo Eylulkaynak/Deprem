@@ -1,0 +1,23 @@
+{
+  "index": 362,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tek başıma kapıyı tekmelerim",
+  "sourceFilename": "6088dffb4d2cb52906230eba.mp3",
+  "sourceSha256": "86afbe670d0773f4d07e39380c3c0c05b5f8148056318d338a2940a8fd4f21b3",
+  "importedAt": "2026-10-01T04:13:04.209319+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

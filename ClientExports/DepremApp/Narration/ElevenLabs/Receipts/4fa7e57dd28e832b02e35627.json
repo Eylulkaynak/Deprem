@@ -1,0 +1,23 @@
+{
+  "index": 120,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çöktükten sonra başını nasıl korursun?",
+  "sourceFilename": "4fa7e57dd28e832b02e35627.mp3",
+  "sourceSha256": "86e17058cf92b3705a864866c4ce7dafafd80f33b1facc4f887523e798724786",
+  "importedAt": "2026-10-01T01:10:56.759020+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.280816"
+    }
+  }
+}

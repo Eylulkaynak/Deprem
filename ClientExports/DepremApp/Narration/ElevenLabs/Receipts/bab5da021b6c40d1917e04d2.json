@@ -1,0 +1,23 @@
+{
+  "index": 102,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yatağı ağır dolap veya raf altına kurmamalıyız; depremde üstümüze düşebilir.",
+  "sourceFilename": "bab5da021b6c40d1917e04d2.mp3",
+  "sourceSha256": "563a6dc814c4635f7b97f42368b41545ed4226589692a0e27155d4138bcf3048",
+  "importedAt": "2026-10-01T01:06:34.068334+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.527347"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 137,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Cam kırılabilir ve seni kesebilir. Pencereden ve camdan uzak dur.",
+  "sourceFilename": "e09fbbf8d6b6f5e2226a1faa.mp3",
+  "sourceSha256": "7844a6be6d3bb3e3192c15dee99213b323ac7093363504ee57e1b04d5cfb9b44",
+  "importedAt": "2026-10-01T03:27:15.508034+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

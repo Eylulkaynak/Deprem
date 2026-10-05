@@ -1,0 +1,23 @@
+{
+  "index": 2,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Şimdi evimizdeki eşyalara bakalım. Dolap ve rafların sabitlenmesini bir büyüğünden iste. Ağır eşyaları taşımayı ve sabitleme işini yetişkinlere bırak. Sen de geçiş yolundaki oyuncaklarını toplayabilirsin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_04_10_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "851605d362c47f297c2ad7dac322eb6a72c0e232407a23625e89c8e782d887d5",
+  "importedAt": "2026-10-01T00:05:10.980600+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "13.520816"
+    }
+  }
+}

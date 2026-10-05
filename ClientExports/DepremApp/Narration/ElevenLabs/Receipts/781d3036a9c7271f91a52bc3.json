@@ -1,0 +1,23 @@
+{
+  "index": 1,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ailenle küçük bir plan yapmaya ne dersin? Deprem olduğunda farklı yerlerde olabilirsiniz. Nerede buluşacağınızı ve kime haber vereceğinizi önceden konuşun. Bu planı ailedeki herkes bilsin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_03_32_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "485bb3a70946ccf06c9b0d0c6b86295aec71e8b8a643249723afd8d8ee8f18e8",
+  "importedAt": "2026-10-01T00:04:32.632263+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "12.632653"
+    }
+  }
+}

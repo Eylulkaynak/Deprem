@@ -1,0 +1,23 @@
+{
+  "index": 15,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sıkışıp kaldığında kendini zorlayarak hareket etmeye çalışma. Ulaşabiliyorsan ağzını ve burnunu bir bezle kapat. Düdüğün varsa çalabilir, ulaşabildiğin bir boruya ya da duvara vurarak sesini duyurabilirsin. Sürekli bağırmak yerine enerjini korumaya çalış.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_09_49_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "dea95dd1cd53a18b77f0e94c0eef4d3be85fbb61ed550cda913c08913cd16012",
+  "importedAt": "2026-10-01T00:10:47.678663+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "16.890612"
+    }
+  }
+}

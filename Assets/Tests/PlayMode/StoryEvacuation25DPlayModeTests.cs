@@ -78,7 +78,7 @@ public sealed class StoryEvacuation25DPlayModeTests
                 item.name.Contains(token, System.StringComparison.Ordinal))),
             Is.False, "Debug pads, circular markers or blockout backdrops are visible.");
         Assert.That(interactions.All(item =>
-                Property(item, "HighlightRoot").GetValue(item) == null),
+                (Object)Property(item, "HighlightRoot").GetValue(item) == null),
             Is.True, "Generic circular objective markers must be removed.");
         string[] allowedWorldLabels = { "YARDIM NOKTASI", "AİLE" };
         Assert.That(allBehaviours

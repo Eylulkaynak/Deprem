@@ -1,0 +1,23 @@
+{
+  "index": 439,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Apartmanda yaşlı, çocuk, engelli ve yalnız yaşayan kişileri önceden belirle.",
+  "sourceFilename": "2d5ad06043a79ba43a5acc92.mp3",
+  "sourceSha256": "363b90bc459ef839a7d4ef9e82381f5f6aa0bf286251ffad09e6cd357e23922a",
+  "importedAt": "2026-10-01T04:25:12.916805+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.232653"
+    }
+  }
+}

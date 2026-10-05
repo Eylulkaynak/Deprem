@@ -1,0 +1,23 @@
+{
+  "index": 348,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru mu, yanlış mı? Ağır yaralı birini hemen sarsıp uyandırmaya çalışmak gerekir.",
+  "sourceFilename": "19039a17d5188df6ee36fdef.mp3",
+  "sourceSha256": "164cf78b851978d6636f898338e2e928ccf2851d3ed935bd9a1e13796eb7f0f8",
+  "importedAt": "2026-10-01T04:11:37.765470+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.311020"
+    }
+  }
+}

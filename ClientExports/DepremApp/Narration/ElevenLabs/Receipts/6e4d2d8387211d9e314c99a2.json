@@ -1,0 +1,23 @@
+{
+  "index": 327,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tozu havalandırmak nefes almanı zorlaştırır. Ağzını kapatmayı düşün.",
+  "sourceFilename": "6e4d2d8387211d9e314c99a2.mp3",
+  "sourceSha256": "dae6a690913f9acb4bc450b5d32bd54df7e83a43dcdf486ffd5f175dd36a5002",
+  "importedAt": "2026-10-01T04:09:29.527798+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

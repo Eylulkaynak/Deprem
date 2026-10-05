@@ -172,7 +172,7 @@ namespace YanYana.Editor
                 var model = Model(name, root.transform, Vector3.zero); model.name = "Model — " + name;
                 var animator = model.GetComponent<Animator>(); if (!animator) animator = model.AddComponent<Animator>();
                 CorrectModelFacing(model);
-                animator.runtimeAnimatorController = actorController; animator.applyRootMotion = false; animator.cullingMode = AnimatorCullingMode.CullUpdateTransforms;
+                animator.runtimeAnimatorController = YanYanaAdultLocomotion.ForCharacter(name, actorController); animator.applyRootMotion = false; animator.cullingMode = AnimatorCullingMode.CullUpdateTransforms;
                 if (animator.avatar == null || !animator.avatar.isValid || !animator.avatar.isHuman) throw new InvalidOperationException("Humanoid mapping failed: " + name);
                 var capsule = root.AddComponent<CapsuleCollider>(); capsule.radius = .24f; capsule.height = name == "Efe" ? 1.13f : name == "Ada" ? 1.36f : 1.74f; capsule.center = Vector3.up * capsule.height * .5f;
                 root.transform.rotation = Quaternion.Euler(0, 180, 0); cast[name] = root;
@@ -196,7 +196,7 @@ namespace YanYana.Editor
                 string source = new[] { "Derya", "Emre", "Yusuf", "Derya", "Emre", "Bora" }[i];
                 var extra = Model(source, castRoot.transform, new Vector3(-7 + (i % 3) * 5, 0, 95 + (i / 3) * 4), .94f + (i % 3) * .035f, 150 + i * 21);
                 extra.name = "Mahalleli " + (i + 1) + " — özgün gövde varyasyonu";
-                var animator = extra.GetComponent<Animator>(); animator.runtimeAnimatorController = actorController;
+                var animator = extra.GetComponent<Animator>(); animator.runtimeAnimatorController = YanYanaAdultLocomotion.EnsureController(actorController);
                 foreach (var renderer in extra.GetComponentsInChildren<Renderer>())
                 {
                     var materials = renderer.sharedMaterials;

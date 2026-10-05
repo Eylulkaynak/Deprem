@@ -1,0 +1,23 @@
+{
+  "index": 105,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Üstünde ağır eşya olmayan yer en güvenlisidir.",
+  "sourceFilename": "38e9003db403847efae583bd.mp3",
+  "sourceSha256": "e0641ba598cc92ee5f425dd67310be2cfdada46a34c88d935ec52b82f41e8c1d",
+  "importedAt": "2026-10-01T01:07:36.207481+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

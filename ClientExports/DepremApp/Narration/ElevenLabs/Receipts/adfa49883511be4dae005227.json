@@ -1,0 +1,23 @@
+{
+  "index": 638,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çakmak yak",
+  "sourceFilename": "adfa49883511be4dae005227.mp3",
+  "sourceSha256": "ec4b09401f8ccc08855481a8c5bd550b3498c49ae72212fc6d633f42a37fbea2",
+  "importedAt": "2026-10-01T05:09:24.575346+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

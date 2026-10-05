@@ -1,0 +1,23 @@
+{
+  "index": 18,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Korkmak normaldir. Korksan da öğrendiğin hareketleri yapabilirsin. Sarsıntı başladığında hemen çök, kapan, tutun. Korunurken yavaşça nefes almaya çalış. Sonrasında nasıl hissettiğini güvendiğin bir büyüğünle paylaşabilirsin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_10_35_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "bb457f3c8453dea931c101f028a66376876c107523e5ef693c3bf74e224d12b7",
+  "importedAt": "2026-10-01T00:11:21.782917+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "15.924082"
+    }
+  }
+}

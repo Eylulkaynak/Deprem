@@ -1,0 +1,135 @@
+/* Optional palette overrides for LearningStyles.uss.
+ * Load after the base styles and use exactly one theme-* root class.
+ * Add deprem-palette on the same root to enable component overrides.
+ * Kept outside Assets so this review does not import into the live Editor. */
+
+.theme-orman {
+    --ink: #203e3b;
+    --muted: #566963;
+    --paper: #f7f8f4;
+    --surface: #ffffff;
+    --line: #d3ded3;
+    --green: #246858;
+    --green-hover: #1b5347;
+    --mint: #e8f0e7;
+    --apricot: #f3c795;
+    --focus: #a25624;
+    --hero: #204f46;
+    --hero-muted: #d1e1d5;
+    --accent-ink: #573719;
+}
+
+.theme-deniz {
+    --ink: #223d4c;
+    --muted: #586f7b;
+    --paper: #f5f8fa;
+    --surface: #ffffff;
+    --line: #d9e3e9;
+    --green: #255f83;
+    --green-hover: #1b4866;
+    --mint: #e7f0f5;
+    --apricot: #f4c993;
+    --focus: #855114;
+    --hero: #153d56;
+    --hero-muted: #c9ddea;
+    --accent-ink: #573719;
+}
+
+.theme-leylak {
+    --ink: #342f49;
+    --muted: #6a637e;
+    --paper: #f8f6fb;
+    --surface: #ffffff;
+    --line: #e2dcec;
+    --green: #605088;
+    --green-hover: #4c3e70;
+    --mint: #eee9f6;
+    --apricot: #f2d0ad;
+    --focus: #a25724;
+    --hero: #41345e;
+    --hero-muted: #ded4ee;
+    --accent-ink: #573719;
+}
+
+.theme-gunisigi {
+    --ink: #493a2e;
+    --muted: #776759;
+    --paper: #fbf8f0;
+    --surface: #ffffff;
+    --line: #e7dccb;
+    --green: #8e4b26;
+    --green-hover: #743e1f;
+    --mint: #f6edda;
+    --apricot: #f2d589;
+    --focus: #4b6b55;
+    --hero: #664128;
+    --hero-muted: #f1dfc4;
+    --accent-ink: #573719;
+}
+
+.deprem-palette {
+    --success-surface: #e5f0df;
+    --success-ink: #315f38;
+    --success-border: #679361;
+    --warning-surface: #fff2d6;
+    --warning-ink: #744705;
+    --warning-border: #a96d11;
+    --error-surface: #fceade;
+    --error-ink: #91391d;
+    --error-border: #c98054;
+}
+
+/* Existing native UI classes. No layout, scripts or scene changes. */
+.deprem-palette .paragraph { color: var(--ink); }
+.deprem-palette .hero { background-color: var(--hero); }
+.deprem-palette .hero .eyebrow, .deprem-palette .hero .subtitle { color: var(--hero-muted); }
+.deprem-palette .hero .title { color: white; }
+.deprem-palette .hero-orbit { background-color: var(--green); border-color: var(--hero-muted); }
+.deprem-palette .hero-badge { background-color: var(--mint); color: var(--ink); }
+.deprem-palette Button:active { background-color: var(--green-hover); }
+.deprem-palette Button:focus { border-color: var(--focus); border-width: 2px; }
+.deprem-palette .compact { min-height: 48px; }
+.deprem-palette .secondary:active { background-color: var(--mint); }
+.deprem-palette .orange, .deprem-palette .hero-action { background-color: var(--apricot); color: var(--accent-ink); border-color: var(--apricot); }
+.deprem-palette .orange:hover, .deprem-palette .hero-action:hover { background-color: var(--apricot); }
+.deprem-palette .orange:active, .deprem-palette .hero-action:active { background-color: var(--apricot); }
+.deprem-palette .hero-action Label, .deprem-palette .hero-action .action-caption { color: var(--accent-ink); }
+.deprem-palette .count-chip { color: var(--ink); }
+.deprem-palette .progress-track { background-color: var(--line); }
+.deprem-palette .progress-fill { background-color: var(--green); }
+.deprem-palette .chapter-number { background-color: var(--mint); color: var(--green); }
+.deprem-palette .path-row:hover, .deprem-palette .path-row:active { background-color: var(--mint); }
+.deprem-palette .path-current { background-color: var(--mint); border-color: var(--green); }
+.deprem-palette .path-node, .deprem-palette .path-node.current { background-color: var(--mint); }
+.deprem-palette .path-node.completed { background-color: var(--success-surface); }
+.deprem-palette .step-label, .deprem-palette .path-status { color: var(--green); }
+.deprem-palette .path-connector { background-color: var(--line); }
+.deprem-palette .path-locked:disabled { background-color: var(--paper); border-color: var(--line); }
+.deprem-palette .path-locked .step-label, .deprem-palette .path-locked .path-name, .deprem-palette .path-locked .small, .deprem-palette .path-locked .path-status { color: var(--muted); }
+.deprem-palette .nav-button { color: var(--muted); }
+.deprem-palette .nav-button:hover, .deprem-palette .nav-button:active { background-color: var(--mint); }
+.deprem-palette .nav-button.active { color: var(--green); }
+.deprem-palette .active .nav-icon-well { background-color: var(--mint); }
+.deprem-palette .choice:hover, .deprem-palette .item-tile:hover { background-color: var(--mint); }
+.deprem-palette .selected { background-color: var(--mint); border-color: var(--green); }
+.deprem-palette .correct, .deprem-palette .choice.correct:hover, .deprem-palette .choice.correct:disabled, .deprem-palette .feedback {
+    background-color: var(--success-surface);
+    border-color: var(--success-border);
+    color: var(--success-ink);
+}
+.deprem-palette .wrong, .deprem-palette .choice.wrong:hover, .deprem-palette .choice.wrong:disabled, .deprem-palette .feedback.wrong {
+    background-color: var(--error-surface);
+    border-color: var(--error-border);
+    color: var(--error-ink);
+}
+.deprem-palette .correct Label, .deprem-palette .feedback > Label { color: var(--success-ink); }
+.deprem-palette .wrong Label, .deprem-palette .feedback.wrong > Label { color: var(--error-ink); }
+.deprem-palette .modal { border-color: var(--line); }
+.deprem-palette .featured-game, .deprem-palette .profile-card, .deprem-palette .guide-card { background-color: var(--mint); border-color: var(--line); }
+.deprem-palette .game-art-well { background-color: var(--paper); }
+.deprem-palette .featured-game .game-art-well, .deprem-palette .profile-avatar { background-color: var(--mint); color: var(--green); }
+.deprem-palette .play-field { background-color: var(--mint); border-color: var(--line); }
+.deprem-palette .memory-lit, .deprem-palette .reward-emblem { background-color: var(--apricot); border-color: var(--focus); }
+.deprem-palette .reward-value { color: var(--accent-ink); }
+.deprem-palette .unity-text-field__input { border-color: var(--muted); }
+.deprem-palette .unity-text-field__input:focus { border-color: var(--green); }

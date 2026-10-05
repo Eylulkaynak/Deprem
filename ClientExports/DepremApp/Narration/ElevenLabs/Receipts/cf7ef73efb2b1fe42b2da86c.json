@@ -1,0 +1,23 @@
+{
+  "index": 472,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bina dibinde bekle",
+  "sourceFilename": "cf7ef73efb2b1fe42b2da86c.mp3",
+  "sourceSha256": "c3d1f520ce471bbb1cfae7512dffdf527910daba342548b9977df7afa8f076b8",
+  "importedAt": "2026-10-01T04:39:30.567435+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

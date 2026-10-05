@@ -1,0 +1,23 @@
+{
+  "index": 116,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Yere çökmek ilk adımdır.",
+  "sourceFilename": "bcdf6cc0a6058f383418f143.mp3",
+  "sourceSha256": "f1d61a83cd933f0afc86699452f9c06415d8e739446fd9612fddfe210c7e12e4",
+  "importedAt": "2026-10-01T01:09:24.109508+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

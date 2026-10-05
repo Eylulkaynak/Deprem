@@ -1,0 +1,23 @@
+{
+  "index": 584,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı biter bitmez hızlı ama kontrollü değerlendirme yapılmalıdır. Kendini ve çevrendekileri yaralanma açısından kontrol et. Gaz kokusu, yangın, elektrik kaçağı veya yapısal hasar belirtisi varsa uzaklaş. Asansör kullanma; merdiveni hasar ve kalabalık açısından kontrol ederek kullan. Hasarlı binaya eşya almak için geri dönme. Bugün: Apartman veya iş yerindeki tahliye rotasını tekrar gözden geçir.",
+  "sourceFilename": "fe9564e04c1cd6a3d526801e.mp3",
+  "sourceSha256": "138b495f534d9957fdba133cd4d4c82745c95bfe06a30f1fe208da91bdbdfcd8",
+  "importedAt": "2026-10-01T04:54:45.028548+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "28.959184"
+    }
+  }
+}

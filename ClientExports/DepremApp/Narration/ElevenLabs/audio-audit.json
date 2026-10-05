@@ -1,0 +1,5352 @@
+{
+  "completed": 668,
+  "allDecoded": true,
+  "uniqueAudioHashes": 668,
+  "seconds": 3083.3,
+  "checks": [
+    {
+      "resource": "LearningApp/Narration/Clips/004d08cc89c5aa5ff5d51a08",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "af009545994e6c6544b3f7a5dd002360e6189018d1e3aa091a29d96350cc75b1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/005031a43ed0fe4ba75ca6d5",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4a1ed04836196e2d53c9765c3ede7043f83bcf81306f08d9284415fb9d3da8a7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0100d2bb2b12b9bb38749c1c",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8bccfc1fcd7110276a03e2a448a2488777b5848ba858dae9d22530db9974accb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0106efd6fa7132195636c32c",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c704fe53c423b882e9e7ef66e97228eb20f0159c9fb54a20169581a1e8490c49"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/012de1947c80d097aa015bd0",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ea7409c4ffedb596d66d4f68276c4a265d0fa4efef8b54acee4f6b4f77502595"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/014c444002ce8a02a11bae4f",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "787729d9d686fdb03be59bd8f2d786f69917305d512ba6480abcb1c2af445a01"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/018273b8d568a3681855145a",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "915de98a116dac03d92fd888420d03a2231b615a0181511d5899a86075555704"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/01a65ed7b9b5180b69196aa7",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d5c86d83b81475506c6109187c066894515cb82ed8a8de0b25ac3b6af5ecc009"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/02d53683fce0d1fbbf8d1d17",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7d07844d9d93d2d136a3cbe182a1c72df9262ea5d06a43569f80c6f9fb761656"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/033f3f8130ac3e277bd8d162",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c8d988afcdf01ee5b9784f88f92031be0f7727be981c88cb30557ea29555e2f0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/03f23139b5a9b8d1a5e6785b",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "075ebcf80d7780459262e6b4271475a1d47a6f4c4b899c6a60ecd1740a231bca"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/03ffe2cf716654dc6b16d072",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e4ffb36c6d8542a730b75c96eda24a0e131b4ec9010d37611415f0a506628709"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/046434e4eccc289b96a75859",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fc85332ea32b46d39a18da1bf9dbf92690579fb8a551862a234d6140670d28b1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/052b70e704fef6ab990e80af",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "23511b84c5e2553fb6e6fe29795ebdd2e7a9949bea975d644bf2d7e04541b08b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0562b7e5a49bdea0a5a4d723",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3c37736089e5fe9b4677a1413c0538d8e6156afeec373a80aad0841c45daa298"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/05c032e07ef017de8d5eb731",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "178d772bbf982888685b7e90c1d53c7c12d9cd6ad52c14b69eefe67b8373c6a9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/060a81c0617493cb2a4e67f8",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7562a1d71fe62bc66c0dffbece7f5e8e0d6ddaa982b9ec04b87e6e2521210456"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/068790ad23b3aca687ead485",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ca84a0e753e33d3a3be47a1253576f5918c19f13b9756a407afade7ae9e654da"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/06f5ed9a33858d3c55d409f6",
+      "decoded": true,
+      "duration": 2.47102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "329320e0549329a92d7e005412343f7e4ea00a702330e9aacf91b2e1fadc0079"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0731cf7107721fdb252e5c9d",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a7251d3bc9828a44820142b98741856aa9b8efbc2c75a64c610ba06e54a5cc9e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0744fe5b943bafa70fb83a87",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ef2eb33f6243bf5756cbdecf24a14d7cd531923fc4580167e167055aa1347566"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0764fea32e37cd47930c15c4",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "15f1c89cf2fe3791719db672d347c7d2b6ddc1f733ae62055cc5f6a691491c40"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/076d83d36d378ebab7e76e07",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6df7fac34143118e49c165ea8bfb784b4d3919ed989200f89e8d0b2736633594"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0813b9d29719dac6f7828ea3",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a3caa6772f5c6798b21271a31a03ff951fd41acbfb954e4d1ff6f14031a4b143"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/09c8e18044cc675e4a410368",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9696e0a26349b57cbf890e4dafb5630c15ebe24d9524117bef4c8ddaaadd418d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0a1bac2c87f7c7cd556a88e4",
+      "decoded": true,
+      "duration": 7.277551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4df14f7b923bc1714f51eff4d69e866aa398c6273d7742ebdccbcc67617419b8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0a7e174c22dd950aa70bb411",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cbb772756fca5bcade5c3abe9b66eded92619f74516a150b53f5790909fa91e1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0a81bfefa302af096d3678c0",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "22a7194d035d11a767b51a2ebd9d6c6b1999aa79b34ce5f2384ab916ed40c3d7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0aade183aac1685fed439076",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "44fe6998f06f54d3a03a86d526c1943f65d5dcb5cf3f69737e9ca07cdd173686"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0c29a754311be49f7e3105bf",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fdbcc6a5c1dfc01275cdb032be75482ab60777bd53e2375e094126fe032aa2b1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0cceacb3db422776f9b9e5d9",
+      "decoded": true,
+      "duration": 7.355918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f841e6be4261f8366ecb3f6b9b073bc935bdd185aef7f21f64bbe4e8ecd92712"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0cdee1b873589ce50cdb355e",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "23873799c11e1004e4936b7fbaed57d4d3f7248630d15d9c5ec4d25a5ff2bc07"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0ce1f060f2d68f3102e0cad0",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d38e30b058bc787969810e46b5d6a7e0f6cb9d1ac630533f13f3983df0471d60"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0d17e28b1d30abc48803ac9b",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c7da6bd2823a32f37e94fff9f3e5c80c713446db9e661613cdcb04dab5d4e4fc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0d5538faf6bd43ca788b1232",
+      "decoded": true,
+      "duration": 1.530612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "26536a515091be63591757730c6b7417b7fb7e8ba2442ff7f53a8c68aaecf90d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0d6c7cdec39c26c1bb202b33",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a6e284b0ecdfc519a5a42071562d47194ca588e6d4f3dbb07c98e845be9ee0f6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0d7a6e8dae615574acda6132",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "69bfc4eb0e132c53ad954b79b965809f79589111f907256e7395fb13c2764a76"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0d8ad3570715d3e38662b9f7",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "eca4ddf83f5e59f14b744f15f685b0ee13a74004e16e89fe0cc26a6ac43c7c06"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0da7b6864ab7dc6bdec7007c",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "24ecdc09858a29e4050cf0e76a8abf535572a260dd599be36c5bd7e78348593c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0e25260b6ce55945b3cbbc23",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dec185fbff0c1f62622f5f5dbfe9d0d45c637741b7625bf15faed87ac26e2b39"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0efe296b1cedf5478e01d967",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "939e0052f557dc6b5f1d34e7a18612d5430c6fa03fcc3631f21a78c36b74c25b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0f20bdf2e8d7a18a44f39eab",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1768cb088e63b06e29c23120c9563e9e66295faea24d534f6e6014944e7b7ea5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0f62cd0c4b3ee9ed1ae00988",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4f2ec731a350f3a68e8c7e070cbe18bc08fca3d41bb9689700074677ab88f17e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/0f9662e1eabaf8a4e0d6477c",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7fde81084459839eb2d966f4c9f0765b379478ff0fc446f432b940be8bd31330"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/11708f012dcc3e94c87246b6",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f7dc4ae90517558ff0abd22f14a8fda6f427e05532bcb4ed614748e736146e2a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/11afa377fffd326e81c236b2",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ecc83c9a9c564df64823e27037854ec94261bf75d108a8c48a565d12d4735c33"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/11f2e5bb4069bf2b9b5cd25b",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bca60a115707f2f418e57c89f3e6b49a165b03835eca68004361b6b9f66e7c2f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/122a354439db6eb190fba67c",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "23e9418594ebd23a54c3471b1c6006a6cc3ff48dc06abf8bfb1f72b44fe33543"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1301f06d732932947e1d9b55",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6728c8950ea60ff27b20f9a882eb3b0e17278adb889738a17968d9f07aa1a83c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/13313f11267e479d64d06363",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "798f50beacc94b3872fb80b2d9524edbd7737c837e7638b2505b29cb0bffbcb5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/13403aac0857dee7d562f4ff",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a5de78e8d5124e2518645dfac0bbfab744eceb6f878a1787443dcb027ffdc8da"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/138832d724a22fa66175be08",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "aa39e02cd1051ad743fc3fbdf6dee32164f50b44c6d144740551149d6f5c4d06"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/147be999a2290e9722daa567",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e37eaf55c9f123207abd6f679ce9c3a61686ac31cb502edbbcdfd67a86876ee7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/147d2a9595e62c17f06e179b",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "841b0385ca5e9190b9d6024388853b88d3ec7e77b95e6ae0b9bdb93bfa49ca20"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1537e9e3d7a3bbfb5195cfdf",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6cba773a3aa8a098eaee8a43e896cc5b35f6912e17f46971f0d2618d04c1d236"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/153b6340d84437c8128ede5a",
+      "decoded": true,
+      "duration": 6.650612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2fa195bef77e72ca824541fb7f29f28404ae008889911d92c6abd7157e4586f9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/15b6194a4bacb125c1ef5f96",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fcf05194fcbc217b801fc0f4c04175789a16ce79ea236d846d782c15ccefbe1b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/15c3db5924e80687bd83190d",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "64f0eec9acbd17ae0b8fa5ee053ad817cfb316672acb98efded9b0d54308feec"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/15fe45354c5d9d7eddd51fc7",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a184de23798833162dded0f9126f896272a8b5bae91324c4f2f97578ba998584"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/167647bef18728cfc7bb491b",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4567f5887406551f221891d4356a9ab9fb77fc2613b5070a5362148e4a65a38a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/16994afecae1114c1a351815",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3081467ec49d2f21b884e4774f47cbb19ceb2fb9953f21ec1a8e3d7dc7dad4b4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/16edbdf8d664916e26ec2988",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4cda191ef9bc8932bfa782e97c37edd7aa0670f54bc61ebd182062b526b14d26"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1833d595b2a75c8f3b4af4fd",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "aa14bf284838eeea46065f1892629983f2252303c1326b7b939942fca0f90355"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/185700944e21e1bd66ef88a8",
+      "decoded": true,
+      "duration": 4.874286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ce6534dcbe1ca3559af526edc325c7fd93d0169a0d946c86a6d6ae66505f09f0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/188c3789a5e77c4ae04fa1e3",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b7675cb239c49a432e459de1bda8d56f35b0a76a87ec37113a4d17ce3605905d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/19039a17d5188df6ee36fdef",
+      "decoded": true,
+      "duration": 6.31102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1b72c84296cc33d361f8573d503152c3f1ef60cf4db82c2f5be531c1c5a760f9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/19d8bed3c84e609341e6cd47",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "408880cd755af5388efbc3a2225c2506200a52c3535caf997a79de7f7b0183c3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1a1d8c85b2b628a2a35e9073",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "60710a5f64358dea8b6d451209bfca3b9f4d8a2060cbba6a4c9a938203d7f560"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1aa398364f72cd3cd11e6788",
+      "decoded": true,
+      "duration": 16.629388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "884182d5df0683a1c78cdb4230d42c92ab0537bff463970596388a5679125d80"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1b13e4b1b78a6902852fd30c",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fc01bec14086159406ac5d9e69f0fd60ff1765c0b27622ba69b126d920aefd33"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1b1c1667b2b3dd4620406c0e",
+      "decoded": true,
+      "duration": 4.874286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a7539d38f8273130baf6bc96bf187b1520a4ff3607783de736c83c4f340621b9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1c7a6b03ef8eae8df801ccd8",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d0236899e464363a90ced8df1ea77b3274f6ac550306f88edb232c3c3fbb0290"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1c961764218500b8c377c95d",
+      "decoded": true,
+      "duration": 27.444082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "067780092d079bb6fcab37d7ed453353caaa3c214126b46b4865ef2f655217cf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1caf39ef7f07d6193937a1af",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a87e10e350f802510840c07de5d6f0968d3041989d631685efe63f225e1bac76"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1cc386895f27bcace79643f9",
+      "decoded": true,
+      "duration": 6.72898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "93fe70f46402d28efec62e46a9530932ef00139fb81f44893e10de24e2b062cb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1d5199d2b97a606bc146033b",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "10f19035f238f23afbaa6d76f207d56f0867c9b463da8c91c2f15ef3cefd382f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1d87503eb8e2393769e63168",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "27b391aedbb095e5ae34bc5f09377e5970a87f7f7c645e5a662499eb2969bbdc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1dc3b264d0cddcff5f819e02",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "14f3cc8a3c483c001149c63dce2d760f51a49f83c42586d4c3417fa93826cff0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1e44ca7b6893a79061522d8c",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "177c99ed37ed7a47b6f7466ded46f470b047d704284a5597d928bde1a2e9c74f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1e7c229c40b3fbaa4e8412b0",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "40e8ecb9d3b60965cee3c15199b09ac3d1a5fa485cfa17bab03042732ff14798"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1e8d069445e4bf48e8bf0e1f",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "942a33a114241829014d1d97701b1934184af034843abaa93ba6e613ef02e419"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1eaafb377d6ff5f6c6aacd2d",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "54f2788cf2a3895f2d8d1650e4df521d5da5532c8f15839fda367cfb339279af"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1ec3cc91548d0e3edc27a936",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a3977d1ac26a78e164c6668aa4a21a20e38acda1565acd508293752a061c3fcf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1edc5808d8d18111be3789b8",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "07aa6b318dd61f273a67823d4b4277396ef07581eebb9f2f58e4c4c35a99d449"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1ef5af2feaf60139eae8d714",
+      "decoded": true,
+      "duration": 1.347755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a48ff21c910de528860f3b242a92cb7c7eecd1d352105a9cfcb084465adde9ee"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/1fe60b7cf58e189531e0fac6",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "84853b05c19c721bb131f4ad9a592c0ed8e228a8273c986bc9b6bf4d9ae063f6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2000c92cc14ffec2d0d5732d",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1693bdb7fd196cf8583436f4dde0cb6692f931f06d7bf92509d25a189408a63e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/200ed122fe79e659a81af34b",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "54d046af6c31f786bb82a607e4e4193868a9367fe8df7c858961e056cc10f1d7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2059876d99cb94f731657de9",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2ac928a0c88f5b0507ebb1d1db57abce8a71036f3327200e09d8ac638980e9ba"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2063b16f2d0581a620f67413",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4c1b7293f30d3a2797360ad4fe40b14e0721b08200cc6c0f06e205990eabba31"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/20759e98aa1b2e721639f434",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "954e40046078e41e78d9f19413632c8b45acb9dff3356adf06d3d8a3a5315377"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/207bd000a988b1d7357b15ba",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5e4ab65bbf98c1cd5cd02cc31d431c542b10bf9e69bf514eefd81ca635d21252"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/20819b60dae9ba9bf492075e",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ae9f22822bf6bbc993d60be282f0969897bd14d3580dc999ed435190de23cdf5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/20bf3900588ebaf70937a150",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8e4f4ca69516d64c580457e1320edf6afaab78b9064908ffbd0d6b3fbab2bd72"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/20c67da078c1aa75809ec29e",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "950d344c3aee6f6cdf94ffa97dda1aec150d4bdc20ecd025c1031d4c0e8dff0e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/20d3d513359a13e536c5010f",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dad685dca11f1a3a6c9886f1b37f3c66b5e9272867ac7d56bd39da0054b49574"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/20d3d592355da2015d81a785",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0dfdf6645b5f1f8fab894db9799d99f1b4416af24e8a62a95c08cd722576f6c4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2246682a61627fa75f07d067",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "beea5711242129a3d1562590f0111855972f5188c9467bc4bbf7e7469cc8e1a7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/22ca4b4e851320eb1face9ec",
+      "decoded": true,
+      "duration": 11.587755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e80e32df812c142e22447778a6cd426edd62635d069c05b56a9d1605178834d3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/237305419fbda070ba2a9ef7",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d8802552fc86e73e1e270d7b7a4446b9b6a8975f80cda4e1b24e4f374301ef07"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/239266293fb7d8b656b73343",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "aef7d1ac50eed5f02368060c48303074e591b249b77b49286765307105c9981f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/253693a6dc74b23299f0ca55",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "47f66c5da39e7bc986626da9b3239276174adfa8953d45b374101cca8d5b8cd2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/258b620cddabd02acd2434b8",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "35890ea5edff731727dd43e0c18b7fb05c5c8155385a4c0e056fa3a2b0cb3449"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/25adad3f8cc6de11a96cb005",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1378e88b85b4b4d981fbb0834246e85d9acf4fc6b2eb3a3d9915a9eb90a4f39b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/25cf2179c2b4fb1f632b579e",
+      "decoded": true,
+      "duration": 4.874286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fc723e4e3d626e1a26c820e2e55b12cfb87693ae3f327fc4a0a775def8fd37b3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/262c90343b7d18bd876b03b7",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4a28464251249d634000e1ea153cb9ff26059108ff82d974dca1a71ebaa85705"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2798d49efc46ea4a94d01402",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2e69319c35e3b6f6733e8d3e466c0fac8145442de262e7bae7ab48f90d404168"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/27fc6d49b9f7e7557e760777",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e7c350df830f7a408bd618433613934b6fa2d4857f26df24e9655aba40d89ea8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/280af4549a0874ccbae04f9c",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e5ab722bfed310162d870e9b66668086c368c5e9fbeaffc6e79cd589dee1d0e5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/28317a03d38f5fd55c5f70f5",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1d9a54a3e4104c63ac51d45dec334aca492636fdc23dff176e8a3a6e77dd4c97"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/28b033f5b4ecc30c723ff5f3",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2bfb73d062ec1ef4b2ee4df83c1f33dd77ec44d6ddeee5c21317c97b915b303a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/293768ef78526b3ae87098b3",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8701bdd0d95401ee057dd71c292edef6499889ac96b00320bfe7cdc867667233"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/29a6955293cb3a1968bda40a",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0311012aadabdc5819cb931ad0f2baf70d1257eda992fc8dcb7e585487558ce8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/29d4967694d7ea96bfc69867",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "966b389f109ac77e310b1a6cbf582779fceb5674668bd2c197e7cc866dac202a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2a124991b06e0a77e44f9c42",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c4bb8d045d26ac2571c9179c27cef853037536dda20506ba4b8224f32bb83678"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2b858f050067d7dbce714ab8",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f739baaa36bee038f00ba9a1760f0ab09557a5bae2b50945c4497f94e56bf722"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2baacf861bb36352563774f0",
+      "decoded": true,
+      "duration": 5.762449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b9bc13d2f885148f23e1bf20506e65f278d6c13ac7f082ea6885689a4ace5679"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2bc0ffa24178439033b07836",
+      "decoded": true,
+      "duration": 27.757551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0bc46b3813a7002f3dfe82173bd2b86d6d95632f79febd624b3a035cab4d221e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2bd9905b4e16c4da1dcd3ef1",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "46f1f9548490293b78d937b14a2665b56bccf2c279a09fe6b37bc3d1447aba9d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2c1070d7f37b57a71ffcae83",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6b8abd4c0287d951620d27eb912c00bc56febee4eff7ad715509e468cbc7a39a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2c4b25e48b571bff35c75659",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "60b5ba3f82287c7ec6777421925fc7c85d4988d24d1aa8408e9d3462d485875d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2d0884a5ee505fc853b6f1f0",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "11aa17d4091e24b580e1a28b2fb46c04055a470b6dab42b9a2f73928ee3e8ffd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2d14fc331d19d10b22a385a4",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "17392821a06fe823e285ac50f36749bae2b70d19823e6a16fb9bc8ddf66ab3ae"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2d5ad06043a79ba43a5acc92",
+      "decoded": true,
+      "duration": 6.232653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "759154957c736ae7cf961a209bc79f6ae7ca195157fa5595446d90dad8accf0d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2d81fcdcfd0649210500c6b8",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5c957da7ec792e4424c1fb58ba4612f24a15ea18f7b4827ccc933e0242aced25"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2d913d3ea39491e304ae686d",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "90a5aa5491a241b4eea4f440e2ec3626abce00215b638196d08a456fc6a9251c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2dd8635987bf0ad929c9a8d6",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "da5c5358c4d6f2381396be2b694efcb869e0d20c348f71306414341c6b63a85f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2df1f0a08e711fbf3aa0af37",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "35fea833292281bf2e9878f2f55859561b04ac3ec1ae969abd89a9a102bde9ad"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2e1e39b5ad4de6ef8f32e187",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cfa788bb061ed99c44f9dee7450ebeeb432ea5e12abdbde2c11766fc51b99510"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2e7c0841ed63569d199ebf51",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7e0ce748bc1eb925ad04559964c094dc658ca2b574fd66b5bc1c395ff05548dd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2ecd662b8fd39db6a3093092",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "67eac9d138a1895ecfa0f04ccf1f9c66ab8ad1cf563c13a5eb8d78b747438de7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2f25d17bdb35df8381789833",
+      "decoded": true,
+      "duration": 4.717551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "aadd55b6e695582dbf72cff1addc301e6e9d2de9b46c484a74c69d0c721947b9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2f7aa30d931f24e4cac47053",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "47875d5599d8434ea44fdcf5065af3ef201def71c77a59d77960d809f07efa01"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/2fa1944a50f807865c079f82",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a3527e832aa2328b0d6da8127dba23cd257e2cc4aedd012f773ed7ef13b597bd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/30270ad234b8eb8bacaa13b0",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d6d0f42c2c94298fad91db5111c23c4e374d5eef89b13f7ddec22635b1a4f71b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/303052d4ee4bb6b00e1ced87",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f4fb2d366c82a0356365707677d50e6d15e51fe5249168c5ce42db6fffa32582"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/30557334052fb745215667d5",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ab268214a52edb9f28267ca74e12d3d4127ee9c41850dfb1630f3c7b546ee07e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/30d4380e09a0bcb41ec7dbe5",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f49739ce8933c2fcfea67328671555afc8261e4336896d82e4bf114ad9665dd0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/30e0901ea28a04ebb5b0612e",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "da52c99959c8e557ace054ef651c139bc7f29cecb113a1043f85916e2e426a19"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3110e6200b3fa33621d32813",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "324cdce75ea1ba261500d8b8515769fd21886f55d0ac849a4128c4df3c18f962"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/319735ff866e008b9997acc3",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d21a9dcdaac8ce0c0e1dfcf0a081deab570597d03d2e1966cc4c1c96136824b6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3204dc9eb9ebd69a98f01075",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5859a5e7090fe51a7060c5463a70a197196f029d524f9596497b408175915fd4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/323197f4c83819ebad9755eb",
+      "decoded": true,
+      "duration": 3.202449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "90021ee881b0f72ccc5781d7e5b71ca0e533007d79a1f7f66dbe4f0d20bdb7bd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/32e08744fa8827a9ee57e8e3",
+      "decoded": true,
+      "duration": 13.364082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b8172356c23dc808bc4f4e2f2b4a6d22927a3802c0b14fc9d0a34df5c0ac5630"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/33e74148ff38eea43d71c019",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4fca947120ff72ae87e9be322a71a3930364f67b9f37448be3b0f023564be166"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/34206d3bfce1d5c481ea1e0b",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "848cdac6664b1f04e550bfcadd783d2cd488019208525a5e3decba3ba61599df"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/348b86e57cbf0c29d7b1a75d",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c3349b90d06719af6e9e42d899c42f171986bcc2bb609bad742cb7971af3d7f1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/349f7d59689671969b488aec",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "88dd9091b58ff9b1f296a5ce14a33dec5a97aeb7b1443f886c34560ffd39555a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/350ba043e94e3a7c9bcd0fe2",
+      "decoded": true,
+      "duration": 10.882449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e27239c2906eef98be4de234777ff981274c3d2cc8e8e357144041af2d01d3f3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/35ae6408b1e3219ab887f339",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "35a496d4a36c63fff4323f810c4be3d754e526ec35e98f7379d049a9f4ac66a6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/35f388c9a5170a4dd7c21fbe",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "18eb0eacd19bdd9e98c4d99bf5db7c95008e4481eb4ce2fc1d3fc5e6ddbdc466"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/36041003866c86ceabc4a99e",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a24a08229bbc8180534c1c9e72d2acdc534e4df871fe703e114831921a8f029d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/36d25365a2828a3288108d3a",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "aceec1efcd2f16fe34655cd8e890f59a27e2fc41c31788accafa9aadee050806"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/37447536b9547530669eac80",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c196c478096351a5c761bbbe47aa36bfeb9267fe2941d9739887436a9595df88"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/378290bde972eda2f12fb44d",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e8a4b2f81c0f7ffd08670640abfba65a3faeec6df654fc7c41966df376641994"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3783782fdb29ddfd6e5e615a",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7a5ae459ab24253ca18b3a3c3706dfb94f9900a5165a3021385edde67d92e604"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/379df31703f3c7aeb4982861",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "82d32e9aa4768a3206b2378303fb9fcf599e0828b34f4eef968af7dc08285992"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/37b5bb8927f22e40e2aa6158",
+      "decoded": true,
+      "duration": 4.717551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a453cb087900318cef15b0bdbc2935458c4d0fb2f154fb0808b79aafed05874e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/37d37a694e1370cf637056f0",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "717668e211297046476f8de0387ada4e3d82834cf1457150d606098f7a291a2d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/38176ba99a8aa050abb621be",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0bdba16e50dcd476ffdcc0f3963c54b2fe45e2b7ed7903bf392173e305c27bc9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/382218290a579cf8042cd9f4",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a3db0027fdc71d8a3512188faee566d6ee0ccb732d041cad8a23b6373c548ea6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/383e480f42ad508d4e40968a",
+      "decoded": true,
+      "duration": 30.787755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9a5f4799e1ddc32190871d0f93a15d2e51a236fcc4f411916e4d8dc6cf02a5fb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/38811915a132136a12996bc8",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9e3e55007f9f8b1edb70355b81055383b829db5cba08621a9ecf0deaa654fd87"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/38e9003db403847efae583bd",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5af18c60f5324cddd2fbc65a902de313d917b301ac510445176eb10057f56ee3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3916d77c959c1235b822a369",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "32ec7a24be643350588a04d7a1399ebe56e1fe4bb0d0b5d3865de0d97e15cee5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/39689b33c51f7c8c8e5b889d",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "27c2b4314ecd5102a39de5da501277095d476df670db5b2798b589d1fc813942"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3970dc481076c7e29671e3c0",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "713aad2c8af2b7fbea236aa1c4e787b441116465fac75c43dff4cd24163ddcb2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/398359de48e527ad4fb590bb",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b0314a237d537f694f37163e2cd6b65198ff40d23f2e83e3851d8e4fdf7d594c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3ac90bccbca692ac45e9ae9f",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f4d5abb7e1a381428b60c181ddeef0abbb9d991b94fe8830d6691612ee6f1ce8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3ad2cbc55936d533badac0da",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "18e6a8b47ce814868aa8160d8e80f7468d439777459b9427d66be43d6b29068a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3aea33759b4a34ace87af718",
+      "decoded": true,
+      "duration": 20.312653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9cce362f07aa6baaf5ae40d5ba74148864c00c829b2f1dc407413a2510ef63d3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3b0ae07506bdc2303c12d8c5",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a951b937b54ab23d360e6823f5d18898eeff2b35b54e0ad9329b2d7c1c48bec4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3df26e4e7cf4045efc599173",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4d1ad77366cc8c60881b8ee3b9a3360498fd6eedfd353747bbe501c1e1caccb1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3e3278caf0094da90d0340e9",
+      "decoded": true,
+      "duration": 6.154286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "00601714569b2434ea3282ab058288b9710fc63eb4c202e6d5052503c6e4b124"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3e8907f03ca95b2229671533",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5b72a7bf95e43f430d4f311fa028de0e3065b6d4d16f2f4abb35fa55578e630b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3edbc863f191d555c1a7c235",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "446989cf89358f64d0dec719245404bbf99c6480d170c90d2211c7ec87f80d75"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3f1864f9683370ed29641b4a",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b6fe16b282403f1ee2b271fc3c323344a88545574cd0c3dd540a52a65cb7c25f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3f813ccfa507b3e73b1489e1",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0185b71432f1998aab44b7e585cc803a0797fe479784686a9ba634c7529aeec2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/3f93c8701f6a56fea2f0fbbd",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "607caa0bc574e1e9492532c34b6823b3dcec6fa99b0ac0dadb9d7b7af3110175"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4035a8edce381252ce44b59d",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dce8d2114294582bac8a77c509285704aa0a2909ce38125180942c06a3232eb4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4094f573d056dc50a66a0844",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6221134b6e7e6f45de04cf80fcd7416c20a539d6052d16c19c816118ddd9e2c4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/41b33da8038705e14257e209",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "225b0713d62e4f3d852244bbc2e2750dfdf1ee266d4bfc3baee745061823a297"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/41fe12b69782c0750a77983d",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "062b274038bca57e67dba1679e210928ef46edd97102d777694eb94c007f2948"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/42fb5dd157026c15d864b219",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "88f08677521fca17b5957572b4e117c6a99c627783612b102526bacc2f669b3c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4335371b7a810bb05b3e1baf",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8a929474e3c316b490af79e2bc676917fa6211fcb56dcca81d51decf8df075a8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/439ac6a2faffa28c27d486f8",
+      "decoded": true,
+      "duration": 12.162449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dbd8fb5e088183da843dc3515f961be130b0a57c4704d80ab4dfd92b43438a0c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/447eb2276310b3fb46eceb1e",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d288d397ed9c8d0ec92de866fdb91f832c27677af7f5d9b0948e8a59098a9cc8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/44ff77d4bc052a83c8f65d33",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "37797c7d941d1198e070262b1425e5783b3ddbd43cc6463cc510add1fe284baf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4508f5b9f2205de25d342fe0",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2329fa899925a8f8eeb6e0c0307b0c1b951f0efb65333628067794b2ef1a5721"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4519a0e0466070631b9e7486",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "00f16285b14e1713faa713f151c0d3cd013567d8a8b6fb88e21ec9eda00d7d23"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/452ec23d8be85fd8e1eb7f27",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d4bd4eb30d6cbe3289f3285bec82e532686655ddaf5de7179f685fa8a5ddbf47"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4540dcebde8f1b9bb9b09cb2",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0d0241b626466f410888fdd0a041e71d60130cf68ca1a38ded7f512ce196c635"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/45547e81e1098effc1a0e8a1",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d3d4dfd0681b347ef1cbf1ca3e80bf747fc2d6f01d2bac4f538fcfc304a8c0f0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/456abbe33ffc7dfdae9924ea",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "17a58efa2ec91b04812d3552a44aeaf482bbb5d9e8136067df042fd9c2000bf3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/45d31d1103c801413bbd6aee",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "405c7768c05b4c7c422fc1ebdd9dcb28259f18db27b39dba4ccb8e8395bad3e4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/45dad15b4c9b3eae1fbf9f6c",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a3d58b788ddf2e21dd434291b8efce22b1d7841a18e1e0fdf3689f3cadcc1c62"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/45dd416c44f37a7617ec409b",
+      "decoded": true,
+      "duration": 26.712653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "db15c1b89628dd906077ed8768650e04c0a991d4f72884076f7ea17a7e0de9d2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/46bb41f5e8286c4664c01cfa",
+      "decoded": true,
+      "duration": 6.154286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f9cf42004cfb06219dd275cdc6a9f0033ec4eeb47161c1c6581542f53f9b7312"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4703b0259c40d178b1a167dc",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3e14cd25dae4cf7a8e2070d2284f73c4c29415af5d37ed9eb9a8489adc4028cd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4745ba6540069af7eae3a281",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4dd2d15a43da52f1bd7bfab04f86ea4e378b2a3c991341749ff5316afef42fea"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/47942770859a3e2aa22c5b7c",
+      "decoded": true,
+      "duration": 7.277551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e996ebb86894dddcce3104e26994a6dec5a02377f0de31f92ad59b02e788f0ba"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/47a45cf727b83a2f3f216e89",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "812bdb7a74429555088ce3ed698b26fff2dccd88f237a7a6ce4db92642aa7be0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/484cde07b160cff53722b2f6",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1ca92e192ceb8cab657ae8a7dc11bda5753f2d834af2bee666de9e52c06ec119"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/48c954816e635d1009421217",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0dca38224ec268197dc51ebfeb5128a31b89080de5c31bc1f918ad5182daeade"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/490cecf4d9555a05bb76dcb4",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "37a282fd509c7e4f114ee597b385ad6ea7c6c8fabe9afc4e886b52baffcdff1c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/492dc83455e104dfd8538e83",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a726cbed9e0214c8a8287c39c8e731f898ea4fb541570302679a5226d6fd5760"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4936805b879a87d9ab3d27c6",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "937f841dd6a86c474cb764d060fd085b61387eae8d8e115d1b54845a81c1de30"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4ab970e35c5aa06aa0d590f8",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "018d8e43e3b20fdcddcbbeb08c7fe3c8b9d0495e86e0d44b878e4d427c270430"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4ae0859723a9b4c50a2aa2d7",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1942e53271af1c8559f7529b6728af3c33a82c3641f192acf4cac2e08627533d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4b6833c6ee9831eab98bf0fc",
+      "decoded": true,
+      "duration": 14.565714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f309bd327fcc1f46e68579d6149c6f3a2e936d731f24cef71636019736f223c4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4c82a43154dab2763baea124",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c988f66019571842ae391bee01e56be705d40fbc73e1f0cf37f510bb5c20a840"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4caad6cb6d214fc2d4f71ca5",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ce4c118971da0ea96580e5c194291b30d3e96b16dfa57ae984527245375a2dc4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4cbb1de6700c3c65e1e12773",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4b8504e96d9f38679520bf60eca15b5decb9b38492b76d5fae1e36689d89ed5c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4cf3cfff0fb661db3b83ac00",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f99a36fea494b2dfd28aa5fcbb2f575df0276d8e08be3b7072c0dd5ef71d1c21"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4d02cbdeebfe72b2985611bf",
+      "decoded": true,
+      "duration": 5.605714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "231c2f62c559e9a8e4e00ce236594f364ec662a47df922dff6420cd6c4e5440f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4da2f58594885344c406f13c",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "552e6d21dbe6139c7087bdebbfe8c9b7a5c982d302ed3432d6c4b3833d7ac675"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4e1730ce6bab1493c3f215bb",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d6550164000114380e2677e6c87a9f56458aa62fd254cd7a70540c44d5f4cf51"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4e44f386941d1988ce96c613",
+      "decoded": true,
+      "duration": 1.530612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ac9541852de1a8a5ccf769c3de2768ad9e8199ca3b07941361ff1f342c1c2b00"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4e7b29f064fc36106cdaf8fd",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "999dd1d1395103dee9fd59bcf673ce3efcf1e0246d9e71426cf04593b95486de"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4ec8f02f099360b1a52a3d10",
+      "decoded": true,
+      "duration": 5.527347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "87c3fd43d815e2127c0c882caeb8b0efeac44e7f9c60aa4a5338dacc07ad6eaa"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4ece7e565424a4f0f250195f",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7476289454389951f4cbb2554dcc28cf77141fcfb0f2fb2cf778f9bab3cbe3ba"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4eddd49179e52a13a15f829a",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5e41a8dc38a3723f2f2967a25c836770486a3791b0988614ec54bc98ff561990"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4fa7633211caa4ddf20ea875",
+      "decoded": true,
+      "duration": 4.717551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "58be608001a55ecf32e848b18ef0eca4bc92ff47b75613b82baa02d6ea25aac4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4fa7e57dd28e832b02e35627",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b710ebd2fdc042ca53f0f30d0334f7bdf481924b78b056c450fb5380e1ca1a25"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/4ff0e8f68bfce9b7f236aa45",
+      "decoded": true,
+      "duration": 27.444082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8342d73801e5d55fe49daa7b8aa5b074e7c8c2407e2faef9c4d5fcf7ddc8361d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/508385173ce5bef528ee071d",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cfd12b01303208384b0d2c781d3ca146a25499b5ae63e76a7db92255e915266c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/50d98a44757c9247eb030e01",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4f5e6befbe1fd83dd9a14dbe2eecce434b0a715ef9e1f7fbd9087e1278f9805f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/50db553fca78a1aa31b2708c",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "eb94afbba2f6da7b5e5c6ddfe73a573a83e4834250c20b5b5df6b0e2a05b5dfb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5112ee86635daf97a33487ba",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0e7a0070c62dae3abae0e58b3643300acbbc405fcfbc17c6dc430b54cb0a136a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/514bb400a9dee67a011607e1",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7eeacb65b88535492a51dbb245c5b1b6f98a524a91d5d1765abd58dae3a6f304"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/515a8c741e3a92105a59ddb1",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9494f3ca99582035ba7b1aaae7f8696b1bc6c8f64fbe956bef99ae299c4174a1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/51817f4c89cfa2fd1a27a5c0",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2dcc4ba9fab0d6e6e8d946f105afdc65b70d51239dca5a37b3dea9e6eda1ada0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/520b43569e3d9716b1f5322a",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "638ac658bf41f07c34584ccb5d56d866c68dc1f8862a9625210b0a4b5e43888c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/53039999fae375e2b973683b",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4a46218af8898a53f0309f3709419d24e66363e3524182a1cc00119b2bb87066"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/53480887583d852d7a5f3898",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7dbf9e233e566ff5f930c637df373fd57bfb9b326c1650fcb1b2b194bb85a854"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/534ad3eec51b789cde49216d",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c3cf52691059b072a119ef53d93d83adaaa990c4daac5510f103f842276e71fb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/54440bf874d04267e1ca588c",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7840dcc1e9d26df930a4a61ef7e6003af821bd415fdd55e6d565196a94cf69ac"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/54dd7450b896a77a4880860d",
+      "decoded": true,
+      "duration": 1.269388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b11350cb26d40537856285483fb39b2f79ca24c6732c87a912dc93272597cc9b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/54f27ac92796b1af53235a01",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "240d50cc734345a6c7d245feb01e70614b879faf569735bef29122051b784101"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5688253809474ed6fb06da10",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ce5523933e195171534eb81e82e4337eecbb7f08df1ee6bf1312c89d59e2fc46"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/568da3915863ad2a2f29f458",
+      "decoded": true,
+      "duration": 1.530612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9fa4e5965264700988f5508de3c2b72fc10a95e3778dbc44b5e8e2e066f5c932"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/56a6d3212d741806240e0659",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a00d984467de4cbbd91850e5dfc174c3755a5aec2123948594ee7575fa5e038d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/56bf8a4bb11db2063c601c1a",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b360b52f4773cd0c8048fb02901192d403276ad791db82d76cd76a7900e40d12"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/56e70845b490a59d5882ce9f",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "29312439a65933340cea06aeb81915ea44a2c9a2ccedffa47615cf6a4d991b7a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/575a7c9e9c32250a9c14ffa7",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d99c388a1ae8d0caab98cb7f57d286af1ae7dd279dda9e29b73e294fab954f1f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/584e5bf0080b8bb0d84902c0",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0d6d92fe2c7c5a357b9e225adaacbd1d7effb19064cc0ec0a49e863231ec7531"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/595c53572ca974ceb9044219",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f8a504ede647e15ba6eaa40ee74fe81bc2c2c3afd7c55cd91bab1ccd05862981"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5a10ae7098e4ae588ca5a47d",
+      "decoded": true,
+      "duration": 2.706122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bfdf75b66319b7b8cf2cb2200cd4346ead71feb0e8ce0bc5133a7d607c11481d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5a4532834551c48c70b3cb6c",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "13e59340aefea6ecf804de0ac3cfb5a62d08830a302c9d588d3b3265b2843826"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5a8b39bb0de789b81d2a6e70",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "eb45d528501ee4f6ddf8cf12aa143a9d9b33c39afe0d79e03339d4b47bbdc6bc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5a9b9d8a30f3c0493370ee09",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d7f54eebb00ce9d38fa0dfdc36027c90671facca4da21a2cc6256ada8a849aca"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5b238db9e1e6e6e810567fc3",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f130092d7579ffc183d1a3dc21d7e7c86efe1401898df8bb1893798df6374578"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5b35555c3ea0bc6d151898b9",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5d6b77c460dcc7bbe656c2660a0250f2a2a8f95f41b4552b60c35b435cf9df48"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5b3f9cf583f108017931368b",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e4580ceb600b363461f9b26f065db1cbcee4a9648767e5a4ae6d0fe46d442dc5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5b6f64223c7ba65e2c99b701",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6dff268a7d2f8ac4d075b8faba79a56bf55c62500faea9090a065f4a6899033a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5bb27e19d1808557936ae18b",
+      "decoded": true,
+      "duration": 1.347755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2cc91ec855a3efbb5ec6353be583ee10f268e20af839de6540dd4f325ae75a11"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5c08da6b241894029635d524",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d09d4df06143325d9470e7c308674fc29c2da41b84ab68582db90adf39ffc69a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5c1ce65eaa51e0133e173726",
+      "decoded": true,
+      "duration": 6.964082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "de3aad9168628331bc1b01b28b612d6e9aff650a78f8861de88d2db03c4106bf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5c8067e547c8fb6d24b640f6",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4aba05f2983ea2f7485b861ee158e53cba42b0c24565bbbf1360f15ebf9a2025"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5c8ce55c24fcecd02240bb9a",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "579fdead72d5bbe403b33113b348ffdaab512730ba58c5e0f12cd1e6f88d03dd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5d3e3720f7e9543e1bc2d27d",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9b7a833f6f1036ec41fbc732d0928796a9ad4a01252133c003b6d8ebd2855063"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5defec8a51dc2e1110edae3a",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b224dfdbc34f54319e275dc062dba92cc4819c5d313b428aed883d41e5db2942"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5e09586ead6f5b75b7ed2882",
+      "decoded": true,
+      "duration": 3.202449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "87cdf208c8892b62e714942d7c9085534dbf66abf161192295c8b07c7e014155"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5e0e1fe0133d15a071862f61",
+      "decoded": true,
+      "duration": 7.747755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6f7bda585c80cb82c35013b354b39360d721a4e89f7a170c0d7d0ad26a6abbcd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5e1ffbdc5173bf84ab0845c7",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "996aa6eb0905b18c1eccb5c8097e618697967f046600cdb17c532557914a5a7f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5ee126f1b996e7de1b2f68a1",
+      "decoded": true,
+      "duration": 6.075918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ef07fd470ea0d7c70e0a1169ca4605c227419194800c1cd94b398dc84e849b32"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5f22c06ed0460fc879d08240",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f79b22778dd93eeade5cd8dd9132dc11265d8d15f61ced091c6b33690a14a1f3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5f5e95b1c980d5c8a5ac13a7",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7a15fe634015ddc20d798dc23d1c26c66995ef8229a785ddd4c5e4c49d5751a1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/5f97e87be4e1ebd7da025a9e",
+      "decoded": true,
+      "duration": 6.467755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "65b19c7a7069b428c221a6991425dadd69c65f0b5a7f9801c8757a15eb495129"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6028b34beb5fea3555a10bec",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2436006cf6518ce73104bddb715c624841b5940656815d696bfba73d7f7adfcc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/608439f05bd3870b1781266c",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5d7da666153f186c4f3a13ee259531c6e20ce1bdfc5c36e9f77c4aaa8fec3f9a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6088dffb4d2cb52906230eba",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b26d3e78527fb2ed7de7f150671412346db12522ed3514416dd9c3aa6a667fa7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6201e402466e4cdbfa33be11",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8a5ae645151cb49a113e214bd6d83f755d04d3f9d26347e8c53fbdcba11f48c1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6280449cc34c04929ccbb739",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "df6f6f6ba7c2c8ddc96954a956c453625eb555dbb26e1e1deb8b0550d9c4befc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/64156c5ee571189fa6a59100",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c43d4771fe6af2446bcf08c42085293adec973fb0be4f2d44361ddaad461715c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/64bd0529e6852a6491626a3f",
+      "decoded": true,
+      "duration": 6.232653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e650c435e5f681d81030ace2419c31fcd1cf100382c7f5e705695f9a0dac9009"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/64f13722c94c7b677e2238f1",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "68af64c5e61c2d118d4c8a3638cac9a5e652d33a792e4157461db13eba6ff073"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6564931fb496e2c5acf3157f",
+      "decoded": true,
+      "duration": 13.364082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "19c0475bc1ae57235d4ff98c8d30a145a333ab4651ed9b381834e95ebbd374b8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/66609a526db06a5dfd1e2588",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0892e438bc5ed0634f8528ef1e0bd12cb17e3f74d97fda4f08aecc1afbc912fe"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/66a166e5ebfd101069ecd7b6",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "68b408d622aec4f3a3f0a6f5bbdb0345c5c1c624f9b9fa8fef7fdbf6bc593ac2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/66aa6692cd0f7899ba0559f0",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3ff428ae34d9e01d7eeb28333ef1377d362443280d361ed718e2ccf8f4c9e360"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/67be8b1042d18051bc1fe44e",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5ebc023bcba370ece8d53d8defae15d9ddb9abc85cef9d020fbd6eb3a7191126"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/67d8f4c2fecb0bbfb52510b0",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2b52959f0a9a91096b4c06c09a447dd0deaa868c90955079900972b06b5615bf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6806d3e4052ae62d56caa55c",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "16f0567db10446641d771d5c87e2c4d7998495ec3744ddce1d29581464a7e48b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/682af82433893181c1eac3ba",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "45d1789398cccec4e84865d3b46d351124d06a410f8cd7482fb982c3adbc5b5d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6860ba5078080d56f77d4391",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e01205da659419017a55cef2c66eaabae7d01c27642e6eb7669396e19c43f09b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/687bb54d7eb7c1e69a34d62e",
+      "decoded": true,
+      "duration": 13.755918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a0fbb2393140bdf446dd1136547069e09f1965d0f530578ebf8e54b43f5a07b5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/687d8bdb289e785289baa439",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2aea3da3597fde7c6d54055da1e907df2b25345ed96a8601039b6ee52efa26e5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/68c3931714c04c5a87ddaddb",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d77878c805adba87f28861ad6c44d172a51c2aade18dc5cd53350bbcc83c0c9c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/68e88fa780be975886346ab2",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4566c907aa0a23bf8943214818758930fa482ab5baa54bbdfae946958e67e88a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/69c666c9bdfb1c85221ea990",
+      "decoded": true,
+      "duration": 2.706122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b035914d8a3310a81223b9f107b9431f8cc3bbf2ac156ca50aa83793c5002eb3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/69df9ae19bd6029a50877a22",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2452286dcdd634352905733845d6d3e08a1df1bfba2fff81709e5eb3364f1cf7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6a31d6df2a6be69c5b6c9577",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ddb486480dc29008098df3c61465f6a70bc6d94fd763d4a527f6a3fa9a0a3779"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6a92cf61ffe3e2d03c6ad1ff",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b942b8b85377b048958f16f7a36c3488a578ee85ebc87220c777be9ceeb3c8e3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6ac03f946213b417c873549b",
+      "decoded": true,
+      "duration": 6.72898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "581c3f4fa89f365d30e2fe526c57ae8bca1d91d08547cf089c0ef7c61b7e832e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6ac8bee942869d40875c38a7",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7094baa829568e340b8512d249b2aacd127735591f3ec8238e602459d365c3aa"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6afa26b40082321b1c643080",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e713f2f40a3dc76c121d1cecd63135bc3fbb758401ece7638c2775cfe33c0feb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6b16b5573e205ef19b002777",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1a73fd56517466f060f327d55f1047d460fc336bb1c8617f2a6cf0b850635490"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6b51cfe459718f50c9116d00",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "abcf8c13cd007763a56e107cea8739de02c7ac2445d485cc420c952d6277049d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6bae37f87c4e8b3d1c33c04b",
+      "decoded": true,
+      "duration": 1.269388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a0509433968a95f3ccec794e91c6a6160f63ca0d1b1812e7b7684edd1ac07a66"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6c06e4c61733f8af368a2522",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ac3d4086bf032ef7cd229bbcc221bd56fef169d3719d6fbaa6cf7ca2218fb5d7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6c328e11831727ef785a8a73",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f6300a74d52c4d58599af2c754bb29c0e7ebb385a47be42b3ab5ab058f5bdf65"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6c979da36afb6d23768d5936",
+      "decoded": true,
+      "duration": 6.650612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8f70680d344b160ad465eb3a3601d9e4054a5792d9668dff46b559759fa4a96c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6c988d79a308099f97460e76",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "61a6c7e88f97062508356c0cfa9333eec2a7371dd7441012d4c071619e3bb6f2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6d8840b5c4a23884f37ab4c5",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9b986a5dd8bc64b1d00cf32e59b832f689dd9ebe3421f2c8f32554c0a508f5b9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6dcf6018c349a530ce0a89b8",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "09c2f5410d134e9a93729eb3dd63d621b96540840efe1c0e80a4737a25223d1e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6e412d195303a4abbb7dff67",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7689323948ca36ea4cc280855401f5e136bdaff596441a3ae169e59ba5b59b01"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6e4d2d8387211d9e314c99a2",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9660303fdd1c2b2cb5d8f12d819cb0478080c30284ca0105991cd7f07abacb34"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6e68cdd614bf05997eead8de",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f57e070e2ce050ab5e52b6e4d012e57ff8a34b79d3ff2adc24ad67efced67ce8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6f54e066557a77e71db320c2",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3ae7bd48020691973ad6f2087dc62ccc6f1e0749377d4f946eed7e38025aa45e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/6fa3879f220f866c1a82ba84",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3c6743c35d9e7abb821b59e545d38d3a8aa1bcc36e146934940a2e18bf29c23c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7059eb4b7d2351a346c7c3ec",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6a6dd8be87e603394153b0ada65d02a2f9fe02c2dcd475ba9160cbaf9ab58a60"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/705b6aec064860058f993d2f",
+      "decoded": true,
+      "duration": 5.919184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e35476d3a501c0a5fec69cdb4cdc6a29581a83dd81a7b9476f6f047cc4eafa5f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/705c2ff3748f6c53720716e1",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2710012eceb357b953a5b1fa0a7ef99447d2e57ebdbb700d7c5a5f1ab7aefc49"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/70aadd54cbe1784eb688fe7e",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f3fde77ee24d59530696e38c4a0647483c200c4b13723ead9cbb329faee93d7f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7120c4c69cab5f7a5eb305e7",
+      "decoded": true,
+      "duration": 13.520816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8eb92f135be1ed005c65ad949e6eacef2220599de998ac8f1fe71d66a10b8638"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/712a6edae43ccf72dc4eb6a0",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7addcb8b29fbfcaa16aceaae69e245a9b86b53127e3d3e7a56163e9963e402f5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/72b4a6954a38742fa207e9d9",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "19fbcb3b57f9912962acebc7808b1e7337b90590a2032dcc3863b0acc5653f3c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/73d552cc0656fe73470fc7a0",
+      "decoded": true,
+      "duration": 14.487347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "affe03af74596dd8dd039f2d7137682ed5386b68ff329bbca1dd27ae7ac4501a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/73fe69305b3c7431bef5c725",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2b9925cc100f42b1981b5075e416c41744235067d4ebf2e5014538a2892d24f7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/74bd2bcd0e94c36ddf28cf4d",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8e03e385a99a03810442c7a27ffd730099a92c11e99e3f312cab9c25da4d817e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7547530a3d29327c11b8acad",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "decfe3b11d2fa6b3810a1fdf34740c11dfa6be40d040107b355854ff448541ec"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/75649a4e53ad910eb39e64fb",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "114d2b03e9ca74b09b16cd2cf63f4e7c34419c9d3850f33c6d1d543752f9263b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/75a52d48df903284afa6b456",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f2d366860ccce02436d491af3903be816618a8d795d2265bd4b286ddee1876ee"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/760c357fe28193c0f4ec1cc2",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d121b21a2bd29b0cd240159e580a83beb4d4f0aeca477b696f31571140b0992b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/767df6bd6464414f00437775",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bbb9b6d1595e2407a0e188eb44828916946b18adeb1746bba26d13b74639f02f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/76daeec625c0a4b960a0ab1c",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0ac523aba1aec51ba919af091e76e37c41ff8abf3ec7cbf0eff16fb6a889cc16"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/76db20c2ac0b36fb8ddb026e",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f4ed4829913be6661215ba691851b533d6339d776bdcf73d7af91510feeabf29"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/770d1d2590251aaa24e92663",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4533024d1f71dc9b528a84b3f8792b5d3f5be634d4455ee8f14384488bf2cfbf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7712d098930e3b7d8622a900",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7f0dc4a914aef3657f8660323367f622eaec3028d45afd10556d45b223956bad"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/77d143e1272b3edd090f2c22",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "11813e64b7c34196761832f5e2f83d970181e2598f60aaa6a15e9eb6d8a55a5f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/781d3036a9c7271f91a52bc3",
+      "decoded": true,
+      "duration": 12.632653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cd5574b8938f5a0e2dac126c6d1fb0d65e1f3dcf0977b68191d5bf8ca54f9bfe"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/786d6870af9df891dbc5395c",
+      "decoded": true,
+      "duration": 2.47102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7beda65bc643eb60501919ad598359f27dc09ed1d941047828fc1b82c960a087"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/793fd646e90f90d8145d38de",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4bbe62988a3dd18fc8ab205b73edf21faa9fcd69caa4bf2fe3edec90c74e1665"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7957b7a98b6854d427b6361f",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "850bcae27c48a00445fa91498edc8da2b177f7750685696973a3f1bca68c1105"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/79a59ae82a3bfabe7cd34fc6",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bce59b610d52e453691c76f7ecab23af9f7d93cf389c00c97e3d7e214f93e0a5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/79d09e423aff2ea965241c90",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ab013eb761b4fdb8ad70d5fa9d6910b546c5fc5df18ecb3cb89a50fd2e652975"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7aa4c8d54edd2bfd6483ea7e",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8b54cac75295793a24761ef83fcb538d475aeae3bab430564e9b5721d3194ae8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7b019da3a871dc36ebeb184b",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3efb171679c2c507bf610a165f956526867b50c3cd122b2feaaec1914624265b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7b3b863c6e1dd1bfbe653572",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d024936d00d8461fbec5aa308739f08898404424b383767a5277760da724dd5a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7b42c9f6705627380e29c16f",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1ce9df518568b0f6849f0918edac01957ccf62c8b088bd8a69b9f8fb44b03611"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7b9156073aa29fc8f9f85aae",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "06cad0d2dff4b0c41bdb82bb03b2d92f0ef46084eaeffb8296eb9f0c153ff5fb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7bbfc8906dbc36ba17a7fe99",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f0be4ecc2f45f0ca9139a715ddcca981d032c7ae8d9cb6770b27ee7adbbca6b0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7c9cfab342ec9da92a2ae621",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "15a2a6c47bb6f4b76e40379130a2e8be4d85fcd7c5dca9bee2dcca9fdcbabe76"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7cee66259bc527d3d8e8dc22",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9f0e219cde21ee42481e785780efc33390b0ba6ac285256a045b45a37d0eb159"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7cf164cf0a27260314a1dda5",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bc5d98b2821cf683508cab50e7662dcbf8e371dcf3be780b5514012625eb05fb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7d1f79ff356245034ca9c6dc",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0cb3d1200d49e0e03d410e8c9ea77ef4cdb2c4cf3d82b6ede14948add2fd1be2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7d44770956d02e7f2b66864f",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4247afe445553155c8d7e483cf77a81a8cc85f7091a7ee59fa367062b0466245"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7d668f6f9e7d8cc5685c2c6b",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "10715a5485d295ce3b153a6a4f09a37c19f9a2b7ab5e37d09235a7afda994fcb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7db657adb0d81c0616984a7b",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b2610bc45e164ce99e09ddadc7788dab59f0abafac8e64b401a424f2b55974b2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7e5cc3e6479d3ca6c11c67e9",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cf22299d14fa5a602df8c649710b7e99a644937ff5b9b5f7312104cfd32ed3ef"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7e9de7ff5ce5df9efa23c473",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8e6e48acd3f4b64205518c8db0edc675bcdbf7516f13bdbefc0559bbba3d5e5f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7eccaf6c9cf43d75c6fb679b",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "63aaf6867f9f7d58cb18bc054e41552e3ef5660329d89b1ab3884acd544db10a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7f39a301747c6862855dffc4",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "42e66c8607bc8f91fe730856bea927742f2e650fd2b4493b95df46182c17ec8d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/7fcbd8d21051d6cf8461679d",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "17ccd40c46cf63e467d96e9038718e2c8a335e455ff8220908cbf60878c68870"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8072800d584d29f5617533e5",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ffd980dda6696f6ecf2e0208607450c2a154a69d648ce0cf5e73f2c37d31ac46"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8100358d6ea8a1e478bda1c2",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9408f0d73f33d4a041d7724b273b7b93197c23ffd5ad7cfff1d69e5dc79d71f6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/833f910386c7e333ac7aedde",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a5eb771e4071fd9abb09ccfc9fe46ebc0bcb91796495b6219371f02bacf6e66b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/83ce1862e997bfec7223ee19",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ab2ed8491e818e8389a684e3fb4885c13c905415114b277bbb20d9ffa8a36994"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/851099ad5ccce17aad002fee",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bf633c2ca2c115e27cb677a12a69df390c5798057686c8f291cce00a2dd23e2c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/855f9eddd2a4cea61bf4d2f1",
+      "decoded": true,
+      "duration": 15.924082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8cdb53be03e77813298c2a55eae7b8e529ecc55f5f69a347b33bf149e0519d8e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/85d8dd08e3a487281be80237",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c75ffd0ed7e1f218cc06d1e22063811548e445c6a4716145ebb55cd79cd2cd75"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/85eafc9738eb30ee3f81db04",
+      "decoded": true,
+      "duration": 4.717551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "67d1729c1ea4fbacb5fabfcdcb425bb80fb4eb2f98fc7e59dde8d56cfccbd40a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8625ffc2e9d4de21fea904f6",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c33b0ce5362adc6ac7a8d31a7061163ece7aeff84422c734a02d46eb6517f72c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/871357279b3e8cc394c33f63",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4298c93790547918404786cda4884be5585b3bc5703ddbf3de58dbf43974da34"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8771604f11bf38d5111f26cd",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0b2461e576bff60376dc4f5cc220dd231cd5d19a92459c18751c5f5b1075daa2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/877f3dcc140b9bea70bc4f67",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1c6cdc973d9d12a9283c72b2e92d87f90337aeee768824650e233038cea95e4f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/87cfecd83145e40974562a5c",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3d087a38d5e21fe7a8bc3dffbc0f76b398b0b832dd401d526cc57a92a174c8bf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/87d2a1f1e610153aea40a54f",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "79bbc14e8cbeee92c017d1280f737df235cabd2e20947507ee79515ba4d5bb95"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/880c582dc25fb3759cf9edd8",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a0b89f03fffd984ec47407332c98592d8fbf5ced4268444191eaf118d3ab51ae"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/886c4a0114b64761ad1f133f",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e5748e459910905d9df9fbf95be71a4b2d681367f98738f218face2d65a217df"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8883d3e5a1dbba04546f8cef",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "57b5d3cc8c2f0724afa0d6583528f4570c8a78610bad75b28f200834e276a903"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/88c80351b7751d1157566dc1",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cc479e2b0b37414e902c785c60ed07385554235cc7a1dbcdf8beb4cddc504e38"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/88d04b680bea005a5a844a9f",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "02897b01346aa6ae0a597355bc00a91338427ec9b2300d7ae4b493cd1e3e510d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/89daf17e771354622b814bab",
+      "decoded": true,
+      "duration": 7.355918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d9ab9a6de64033a09737f97cbb7f84f132ebeda7bbed2d30ffd3bcb5a2c4d31e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8ad908948a13d5a5c81cb7cf",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d1166a3aea070b41de42395de453d9f6686a3dc9c8977b76cb9bf5561a0bb3c6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8b0b0b12047d19afa3090b08",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d568a9e5021ecbfb6f12654a38d4c046093474243bee44076619aa9456529ab6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8b0bccc2b71bb6d2045583b2",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cf99f2a7f1b4b6e7b7bae802dc9b564a773f164017655658f61fdf3c8cc5299b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8b5e8906268dcb1a1873ef0c",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5243b4359d2b84cf0290267d75899de5170acc6c85dc9279ca1308cdc0477b68"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8bc8866ab872063e1fc40ce9",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a8e03abbe58ab5b9582fd3387fac17cb3ea6eb8e07a86839a74df5c97ed501d5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8c6f15bc75d4a079cb0fcc7c",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "eb1c0469862b0abcd5afe06c28c34d8433cafe3d3d420884e23d0eda040e979d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8dae13200cfe4a09447e0eb1",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "045244b74711d6c9c34c87ebc411adda7b16c36e6a1552b040b408e9688c59ee"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8e38bae1e6d65656dc0b27e5",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d361edef09b0a7718998f29ebb95e761550d27a0a4d50de6bb5296c830a7d51d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/8f865f07a416ee31017d6e4f",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9998ea05c40a198919849a240157c498c14aef707edccb137fdf56222f2f46cd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/90280fe50928b4e5ac980c5b",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c2e0e9bd5fff9e08ba751a854a4cca8fb984426ffb78ac29dec3c3b412d88449"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/904f4a38f81e8b215d955d8b",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fb9e030938ec8d649590c128b14d2d07dad24704db89b67ca6e6c7ea49314fd7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9058d2f48080fd6222f27ef2",
+      "decoded": true,
+      "duration": 1.269388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5574ec5a062b14107e959fe16abc0aa61f369240be05f44b942763c74f2b154d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/90b78eed7283f995565abfea",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d3a882c90f56804876c4a98979f330c7dc2862f485e6c580e05dbcfe9a92b7f7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/910ab2120da5e2d9e6530bb2",
+      "decoded": true,
+      "duration": 28.567347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "92e8aca086fcc18952b95a5f83431a4aa11bd7fd2a825ec86dc833ea7066c37d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/916702ae2d49c1ad7998e58f",
+      "decoded": true,
+      "duration": 5.527347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "52214d9b0fea93db659d51f5bca52d5c6ea64719256c0df2fb05c8f2d198458c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9170279ff7c33809669e4e3b",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4b914d3ae9347fbc9b236801952d073969f8099a4302164eaa11b3b423ca8c79"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/91eb3fa830d0ac33c56e874e",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8c49635a79d8e02566f77377da07ad2e54fc1e4f3134202e7d6786fccbba1da9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9238df350dc87a21039242d6",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e295d97e3c206229e090e138f13e86c5cb0c283c91d7f6440e76823facbafd26"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/929b4cd377ab4e362a707ee2",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "11f3d63dfa6c1975c39306dc3f07ecda920bd7c0e99625fe747a9b8f91104875"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/937ddefafe68e4466b955569",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6a7293f98e00910318fedd30afa028537d3d4122fa8b0d80f38a3da33d0197ca"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/949f7db6b3c66bdb2943b8d1",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "82ed60d06ef92422be4cc4d2d234dc02eda6f9e2afc43cdbd2b15a3197f807e4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/94bbf083f3a5b5158134e402",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b358139306f460495450de2669e515f410d6f17ac4f0f32a6b38a5e3e862b81a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/95bc000c7a70fa47e584c15b",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "23f59a6d62c78f8021e8bc7468a3a81f45d0aeb07d60c38bf80d5771bce37af6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/965d22963eed9ec831651876",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9d1c0cab950a9bb0101b9ec37df3dacf64225fd1967e0de3efb1f1962e58c0de"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9666204afcffb24bcf9c4aab",
+      "decoded": true,
+      "duration": 4.874286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4398252eb15a1b270dc3f944911d63fa337901bc849614f38befd3214d4a984b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9673bad17ae748cabe0a6767",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "496314635be35c45ef8cb8e4f9bc68c04d9a6c5f0d7b5a4ef0d95df26978c074"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/967694998bb31dc15d314801",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "524e930d86a37e2763997fd9a7cd44f577538bc1a613a5b6eeff7269b56fb83f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/968b10eaa5aa69cf2b169381",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "34641bbd749bc2a05856b6f163f8ffe65f17a46937cd1d3475ef5a36afa87152"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/969f0bc7e872bd47dabd4e2a",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "612dff6595b85a7d526fff56dcaca2892f61ee9b8f0b1765a8645003031af3e1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/96d333be2b126c411decb915",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b20b54695e76996242923d620399f1a4e73a27eae462f7708c6cdd56c2dc8470"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/971306f0a60c8515b53c5b54",
+      "decoded": true,
+      "duration": 1.530612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dbe9513cceffd6edf7f4e2edb1a093c59851873a256215744172ae129e445a49"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/971d9effd318fa0712a16641",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f17b92cae453895c1f74e67b253d9d480cba61d768d0fb0d708e3af985db862b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/974e444f27b4939bea26bcb8",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "94386469a1f2f824337c23f89a7f703254ff625c4538a816734e3feea326edb2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/976249e7c694f653ac7318b5",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5ea7858c969590f022de30c3e0e05d88c406969754bf71ab769045f5b08bb087"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/97a1463f525379d7b1361b59",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8d7c0e26d85c7562f6058f1ed25b4b73b4b83e0d493f7e0fd1701d54a5c90a88"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9883984b483afd76f189c3ac",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0d5cb881f852fd4f7d1cac351325f4409e9eb5b4f66e16d23b360ccc00ecc662"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9884890e7357e7d3ae2a4b76",
+      "decoded": true,
+      "duration": 32.955918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f6a09a172c67734b35d5ee7e8d22924aaed601a8e605c26fa26d0b4940df1f71"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9885d82b79aed50de3c9d95a",
+      "decoded": true,
+      "duration": 4.874286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "efbf5edd82c3103a249fd32d62884edcf88bacf80cd85f486f6c0bd2c613e7eb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/989ac3f093d64cd4379dabfd",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2399a674128012c84d45477a2a37fb0e468351e1749134492d4d297ae7541cfb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/989eb2220e413f635720611a",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cf81d442677888978d06047715823a258eb207447195ec029e6abbbf6c20b3f1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/990a63d997c910d019ed4629",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e9104fa0b3851ac9a97a1dc126e7c2982fd8f71dfd305f65ffdc576c6ecb9dcf"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/996d6c191c3da7675316e635",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6208538eac38e73f6b2f7269e3aedbcaefaf1288bfc78c9569e00efc3d802d08"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/99cad932a16ef6db3b59ad12",
+      "decoded": true,
+      "duration": 2.47102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e3350a0d5ee66db4891ff62f9b13ba592c63d310d0ed11e2b3bf0084cf1f9d1f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9c3c910bbd7d96d8635f33c9",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b262951c0b7f0e310947ce1254e9802e91d600e7b6276d046da078fd7a9d2f2a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9ccaa41317a1f187f2d2d4b4",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a95d0da32ba2b085b9d3d34dca508119c85bf7fd66748542f5ba26e0db282c45"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9d3edfa068116bc2c4a4bd4e",
+      "decoded": true,
+      "duration": 6.467755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "73b0e1f756790416a97f3ebd99b8955f82c64f707c5b311d0534fb0694f0b21c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9d4b5f328a2c4d0a629a4524",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "37f099632fc67f64a22a425b0ae7efb015b48aea207e32e66465d205b39a9183"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9dfb0625d86032e2f4464667",
+      "decoded": true,
+      "duration": 4.952653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a7f964d3fc3d5415a3f306285e501675c5e01863d4a961201e8fd16c5ae1ee7b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9e818855e9134d1179b45288",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "edcf6c9d2f513a596f76283a83f13d94766cf2a1bd280b26427afce923d0df45"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/9fa30850b697418f2aaca220",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "43d26fc968cf75eca261ff234f4061bbbcfa6d1a43987b0898aa8a3f92ddb7e6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a00ab06a0e062f1a8c5c4de9",
+      "decoded": true,
+      "duration": 2.706122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "be6958fbb382e3ea7569cb6d96ce0eda2a808e4924a43023e8284b874641dcc9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a031b68722b5557012241ebe",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4b3f6ae0109c18b99803cd3e7924017a7009a5b7675ec8ce43d9c77bb560a27d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a03bd4e2df55ec9791b69404",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "af19c1635e03098c9c11534d89d9239e5664e14184b2089c0047ba35e82e8a48"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a05fb485361af3674d4c44ef",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c70b8364f07faf8b61b5112b41221290dc933a2c4f2ebbd8d680d7435e1c5d98"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a08071819da9b4808308483f",
+      "decoded": true,
+      "duration": 9.602449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e97cfab7d01c188230c8ce9b0ee0a7f8f8c8a1010c47137805efbcc46667573d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a0ca575f059a854f778915bb",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "865c4d2adc4bed93a828277d73413a2af78576e3af46e9fbe7bfadd39b50dab4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a1614bfc46d41bd9eea1dddb",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d094d8df5d4c7889042c47a574efd50e46ac4c49482954fcc201bc8faca4198c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a1b39f27a1eae2ded5d99e8d",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "64a083cc0d9964a84a72df173ee123e0c32ab01b2d90b977e79fa96efb2faa42"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a206d824ec79f28b3ef1b55e",
+      "decoded": true,
+      "duration": 2.627755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8d7e1f79d505398785f9d88ad1b9f5853a0d8a8d991233b7a8f506eaf8c5a240"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a31421446504f51e9816ccb9",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bf5587cc32808c54e524c81b6a3a32d06f02e09a039d50e66df6eb6ddefbc1e0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a352ba459ee56734afb78dc3",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "08a903fb13f483e0320114b79b50828b00f54da4c6a99c5297998dd63b673b3f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a36a80b8ae912cbf3f5687f4",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fed1a4f6885da4b531a3710e6d2d80239c5c5076748836f5fefa073bd3438bf1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a3bae6e9fcbbdf8637633de3",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "43c588d82dee5442260be84d87d0dc358bbc97036bb058cc164114f6e13faabd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a40733a0921dabe3f08f921f",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f0daf8e442efd3932e15b27dd8e73214330336fa22fd2b2f2d2453c60d33b9a0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a4c55f106ad4795ae3730ffb",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f4646d411502b76b3d09179b161ccc58b56308070fb8f708b199e03632a8d48d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a4e02105ed45278b1e7769f6",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "986dca0e2f9377d8412cdfe3b827604b1c4958a107beb1b3bc3928475251d85c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a4e2a7a7271777d3fc09f621",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fc06b8b38b01a58c11a53f67de8307422b0a3c82520175194ac22717d290494b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a5db82213ebeb120aab9cc6d",
+      "decoded": true,
+      "duration": 7.199184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "19509357ea348d4cba54acd46763b95eab984c278aad418ca86a22708f1227fe"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a5f90fae959d56f9ff39288a",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "41a9ec91972bc678f066877f7760166727129d678ef9a6f254c70e1f0002e99d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a61a4f8071d82f1b538f4192",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "acf54e37d02ab6acc21c58b9d866ca6cde3c37851d624277827da67f169c667d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a61ec2374f0e33c96eb49d67",
+      "decoded": true,
+      "duration": 5.997551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dbdf08c1c7b3e6395ccde1eb84338805739e329ae8174cb09793a4bb2e7461b1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a63e3523c375ccb0fc09f891",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "10aa49deaf065e58194a64cbe11ef081771bab203484b405633d250301e01d69"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a6d16fc1797262691d557a78",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "97bee270fc8c3e9ca5de78b375eab7f81751e9eacd854c6856dcf688114cd2d8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a6f34a6aa86dbd45eb8deb4a",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "86cf68411ad0c33624446a1de4c0ef1309216304ef351ea13973ec4a36232674"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a921bbad93586b5e5d85da9e",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fcef1ad0b4d3f9cd3250d598406c4c6c67f43e505de2491ec592cccffa0b4437"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a9a417d1ac79fe2f89ff3661",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "806b20290ecb6fc03edf0d977fa67bdd7556bbd3144f4cca3876291f44633315"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/a9d2c6e0462794c4ade5783c",
+      "decoded": true,
+      "duration": 3.202449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "686abced69653ad93e3436b77bcfe283170a54c36215200050380f29b25146af"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/aa4936e4056da705132cf12f",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "efa2a00d851c874713380fe6e394504806115e16272b05b905db073b972d320b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/aaba74e5fbef67f7d86676f8",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "faee2d46d892fedca797429ef67d06cfb613b786e372d57116acc48f8106d49a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/acaf997f82ddbc9be30b155a",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a184beb28cc50af9846c2d105654bdb2ba7bde98fede09ad20a4a8efb73ef26d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/acdeffa4ec7189f2fa1704ee",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ca9a14596a762b1843aaa14d755ad129d85e8a68a26f238325e3a0abc157de46"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ad1eaf090b37ff9a53d7bb02",
+      "decoded": true,
+      "duration": 3.202449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "df087adf806c83caeba77e7b7db009b65aeead7b0357776139923bbf3dab65b3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/adfa49883511be4dae005227",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "633556b45389d77d34ee10307d9fb98b3270f1e0605c3e56c036c4b395e20ae6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/adfc822ec6d3cdf3c7b70890",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "93846a124eb66f0f323109862fe6246d9d75957e1548387a678ab0ea917606dd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ae10190f12c9b5f3e6f0cfd4",
+      "decoded": true,
+      "duration": 6.807347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "27260fdc5a9556ead4b71f7f2cefdeccece7a3a8efa790baa759a9cadc1acc16"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ae6d09fb0b3992903e0dc824",
+      "decoded": true,
+      "duration": 9.28898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dc7198af258a3767770cc728b50ec20713d2ced3d62e959115e5e8bef23e8e7d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/af018a49ad07979c15648888",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6934246a7279146cd474ac27c722d3aa3492e4a3b42725a1cdafe1f2fffbcc9f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/af1539f842f136031ed83544",
+      "decoded": true,
+      "duration": 32.564082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2b21a93dc6e3cd4a9d5b4ed210df9f570fc7f89847acb3bdbe5b6bc7bd5c226b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/af32059862e4f1a2afe85ca2",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bf2710f3a5bed3c5f6463b9b950cc698f9a302f1c833f391f47c5c284926bc4a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/af76ccc72e29e60417cc7c05",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "22df3fbc1b4a2fe69666776e800f724da36cf768497396e83f4b4a00b0d49fb1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/af894bc2965305e63a34bdff",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ef6c3c72fe025dc55dcbdb50c2a194daa888b45124df72a27f1e3d8695c68f9c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b0386257e57da830fccc06d5",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8bb810ccaea2a6f4d6da803eee13a50e5efec5e431fdeb6ac994f451840c2be9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b06d9a85bb5f9cfe9327f80c",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "62f2bd92843ae64ae600561f50aaa9d511d6003e7b9781518b2f0a250b7d1b90"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b089c8f2875608ce0ae88bc8",
+      "decoded": true,
+      "duration": 5.762449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a4814701d0e30b322f57cdac46e1811766b17eab7e07f3e3fe84d2154545d8b9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b0a0cb79062a8e45186bbeae",
+      "decoded": true,
+      "duration": 13.285714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dd3efc80dd6b3719bc3cc2eab9f0d993c1d23d25d27d15b5389f2005b88cb757"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b0bafcf4900151cdbc0bad37",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "578d969865977d039cd31d4adda68583a5b411854b10645b0f138057b462310b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b140bf92dde895b78f89205b",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "92ca7831296b4781aa19521b8f339eee36fa5740a18a610c85e5c029db50c92c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b14d5948cdae93e3aea48c03",
+      "decoded": true,
+      "duration": 7.669388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2a093b6a143f01dff604e464ea08b5b661238e0353b8ae7e6cfcac3d7fe9ee36"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b1dc72d717c843c3cdbd2308",
+      "decoded": true,
+      "duration": 2.079184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cb6770eaf699b6ad89808b55ebc7d7ab450521ad2559191967074b1b9260aa26"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b1f3d80ebd0382a0344d5586",
+      "decoded": true,
+      "duration": 6.546122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "33734ca8faca3e1d774c539b2922987b77c68995004486ea5c9f4e66edaefc66"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b1ff1f61548a6e1636191f1a",
+      "decoded": true,
+      "duration": 1.530612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0df1bf3a03a990a2142c76c061c85cfdaf70273fca6b1e20a2fc8e1c9c12d88a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b34961ad74bba5c6c6263f50",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ad3adfbb52f79ffb4c95a39590412cb5056e7909bd49e502cda2758b697df93a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b3b7ae9d4fbcaa0282613c2a",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dd97ad5821d4e873020f02b75b163c59a8ee3d94b3ea059132d8891c9431a839"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b3be0ccc60a9bb2216dc542d",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dfcb8af37e52c34ed2a09d94fcd20482ef6bbb9ae00c73f1fd48fe39e47e1f3d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b4883fb7f82f88f679b617f5",
+      "decoded": true,
+      "duration": 29.272653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5c1ae6a8c4f03a8519ae4bb8db7b74ed3393cde4fbfc031bdb76494436ce86a5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b591fa24790ed2fe02ac9cc6",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4d928a54f315dc86184fae985d1ee6f7c510d6a05117c02abe60ba93e151f05f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b629a636543f7237da634722",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6b8133dac2d8861e874720723d9020470a310821a0f2989f9a41f66dfa1bf48b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b64236f968df68d59be3e961",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1a7781c5fe9993712c0bab1fed3fd9f63036802818b9a7ebcda1645d93adf4a2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b6668f4b7d160c4a0d56eee8",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "af7c096da35ef52c5cad1726a7af33ba4c4c6bcca327514e2041d7ee2edb9883"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b6b9bef65742b52bfcba9413",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7d2af5218457cef9f2c77daa3ccbb7149fe5e52844e82b5cd801b8d7c68e785a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b6d41d73087556181aec830a",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "45c82c6a31cfefc60e2411569b07bf1c8b3d25dfe8958572bc0dd21616fb09a5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b6d52a84553d36ed2c3ee292",
+      "decoded": true,
+      "duration": 5.684082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a0fc07967612a0dfaff19082df4b9d2c86849a71bfa5f4f3774de7aa1a7738dc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b78d32bc5764c72e409c85b7",
+      "decoded": true,
+      "duration": 3.202449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6d70e5004749a11dfd74b9e4ac080e963c23b50bb92ebcf4bf2477084891f7ac"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b78dd35e4dba2d9eaa62f0ac",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e0a7441809843bd799d102e3826ccac5a6d3fe530683af46434ee8ad6b75f3c8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b7e120c6600b5c7974c653c9",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c25acd2266ff0466f2e20286e3e79f79ad5a7d5b11291e965b788a8446051fa2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/b7eefb254d9b315ebbcd4a8a",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3e21fd7baa046ab3bb270152cec756afd8ba2ea71b0185ca98937bcfb8a98cf5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ba2186f61b5fa6799f2271d7",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "36e81f22749ce8fc258914d8ba084653db78d6d6a18bc9a5e6b86d30aac32184"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ba51fd84561bc094efb0c9fa",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "968882a9e77642984632aeb0491511be9c8852b95b371ebd3cc32702a7b099ea"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ba8bca49390dc85c2f1f732e",
+      "decoded": true,
+      "duration": 13.285714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8c6171fbfe8827a0b53318739bae0ee1ef0097b29e88d97e392f542338383fa8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bab5da021b6c40d1917e04d2",
+      "decoded": true,
+      "duration": 5.527347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7511bbeeb99804df6d2768876d8aa1892ef89df7dd40a13dd3dda7697a45d223"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bbede999e51f0a47c648aec5",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a6160c9a253c9c6cd2418262d26cc6fbd8c4a9caa523c52af596022ee9017d4d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bc46620b81ae48e7a66d034e",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "30bb5901bb4c9a7b50d055b0fd1beb0f772f73ab9038d4d87e91434b69e5b68d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bcdf6cc0a6058f383418f143",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1f30274f077ec6bc95c455db5d8ccac57357c379bc79a264c8443972fc125220"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bcebd7d9c8eb98b0477fa1e6",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d1a9167eff7f35ee847bf63efb8233cb29e32f74ae1c489b1855963d509de979"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bddde70f0fe0886a04b8c7a7",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "186017e014e28156d0bb85e50646aff9326be1676ab5aa0ddf542fef7990dbb2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/be1ba1e522d23ecac1ff4e88",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4ce47a27024ba5c7fcf578364072663744979cd6e3f7996b2005ce102fa05e18"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/be6ab11e21f8df7a616ecaee",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4293ae5c903d027a9784552de45867ec34624a58863e88d75d7c2b898336ea25"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bef1b35059df7a0a4ec0f70a",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "160b10e7d307f0e5d3c49984b5ba2f0098c2dba4d65d4bfc62d16a413163a8e5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bf23a180e85992acf679c310",
+      "decoded": true,
+      "duration": 11.927347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0cdb212cc5261883bdd605d6806a2bf5b24651d47c34ffef226942e68844b15c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bf463afcda00324707df342f",
+      "decoded": true,
+      "duration": 8.165714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8a5e342406ffce0042cdea16e7e0cc2fac88f3514703c213f5245c14f9344a22"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/bfbaa105073f66aa0222dba5",
+      "decoded": true,
+      "duration": 1.19102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "116eaadb91e488d8365aff0717990ae0cc3ab41737a90474acdf6015d5f00cb7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c0de9823bbda942b993b0dc5",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "15d971efbbf87acc69eb75d2b511c62b36b89715b3df992d74ee871fe6e689a0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c0e0cf41c3a98138cca4c721",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "07a7acd349a222fb5a82c4801e97ad03c9683faeb5d9db82b551bce992bb5bac"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c105ce16cf2a2bf30e783a99",
+      "decoded": true,
+      "duration": 1.530612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b11ec65145e81a3bc11aac7c622484ae2a62a4560724bdc70f9671eee19a0281"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c175f3d8f8ef2a2249c9ed7a",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5052de8d6d783a7a1722bbee6736346882593d3475bb2c0c738782ac38109b2b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c1b1f5bf6b88ed17e634c424",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e4328d669764b704db08be1b97819ef6fd07393a818b06180a0cb59d9dd50618"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c1c21a5bfae1134a9b957bee",
+      "decoded": true,
+      "duration": 2.706122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "fa4fee32ce7388c8cafb4c2f4faa038a71db7698b5558216f651eaa7d7e92544"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c2a6655d223ee86de15f2520",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8abdcbc4b63ef56c8a72a7580717d82f20bdcea329bf70eeedc0d56a45b79274"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c3036407e02a1124b3aa5a96",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0c5540e281dcc9f6bb88a54f1de1ce37e322a4adc7972ebd7d12f67506c274f9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c31da02a7b0bd6ab96356b50",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6f05567bd93f5f8459681c2a366c10a9a38f30b0a673292cdbb7adc564876701"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c33b2469e3de098d0600c2cf",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "64a6459a3d8c890143ba1467682c463de4549ecd43f6281204fdfa0d51652b73"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c38d4bd4ce85b75a93a70e46",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "461f231af0d1aec7afd0d871a65e50ee2cf14f766110cf94456067da5d5650b6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c3d882ff82a8c3108e7871b9",
+      "decoded": true,
+      "duration": 13.520816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5bbddc35a4f8966ce036939c1017247bafbb240aa2fa8cce2f679dcf78df14c3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c3e18f87b7369494265ee122",
+      "decoded": true,
+      "duration": 1.269388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cb8ebec7d199c053a8135bf2c979c1ba25015dfb32200d065c99a272aa191e33"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c536cc96603ff91a0bfd16dd",
+      "decoded": true,
+      "duration": 6.075918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bbe27fd17fcc4bd8c64c0da07ce22cbe465b814ddc8ca94e98dd4319c0da7e5f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c629ebfb0521a398e3a5ace2",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "124e8eac8e1001e79ed0c4db85a9c732898085451ebcec49425e43aa13caa810"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c75407c236b8ba9e1887f192",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e0b3391edff1b007fe7c832fea0c71c413dfe05fbf4c374159f6937cb7dc686e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c763851f6287df955006873f",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "46658ab2e266fe718fdf28beefc722b349796e0611cfb8bcf30c10990231c9d7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c8318ba1301df2150d569188",
+      "decoded": true,
+      "duration": 1.765714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c91d001d61774e293f89960147207153fab7f076d5cf514309d74d8528355c38"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c8595975f4cee09b58128881",
+      "decoded": true,
+      "duration": 15.427755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "eaba4b3d33482a027827b00af2415df2ffa870ad9ad00b9624e35a4d8dd8cc52"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c876ef04ec738f9be0b5e396",
+      "decoded": true,
+      "duration": 2.706122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "167d6be4fd3a2fb8d6c6480bd57c7410d412fcd4ab34e8bfec1a01d80fea3cda"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c8917e10515f2062468a4fed",
+      "decoded": true,
+      "duration": 7.669388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2e0a2c291faf044fde78c253a42f371a66a1cc23fe42892e367ce5646b8cdc6f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c91e2e947ca49f0916b22ed7",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e9a18e239e91d26fdb2185ab4b49b6450a889113012b7137605a95cdafb1a92f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c951db93b62bd6e447fa1032",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b56bfdeb43fa850469ca1230f1b700700ec1f9cb427232209b3e4d2e3ffccb8e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/c98fe0b4048d6f3bf3d3a6f8",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e37f1c6f79a0b7ba7a55663561228479228c865e37274f59716b71d1f91e9a28"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ca17499989ce730d04508884",
+      "decoded": true,
+      "duration": 30.395918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "784da8f8e409939024ec2d7197214f7898e5dae669ed513aafd758b63950bf9c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/cb7b707d729d63f81f0a3153",
+      "decoded": true,
+      "duration": 2.706122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "93f3a61c4daaac06d33dbf55d53564a9d80954ac3a97358ac45ac84e7d3b3635"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/cd0062fbc9f5ff1cb9e4dfe5",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d2d9ed769e6623e8696dab4d1295663873165e9170cf0045ffc78a260665157e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ce018bf7728a30c8e669f7c0",
+      "decoded": true,
+      "duration": 9.445714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1d106bc964ece9999d7a1374de6b8d5e0476ba5a2f206f5c8f6af0c20d9c7df0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ce08fc5b188d4a7a6b955dc5",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ee3fceef7db612cd75ab7baeeb45921c13d606261715bd4c3febd7f5f8d937c3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ce1c3120b5ff980a6c3942ed",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "006b3e47907f2b955fc7666fd02f1257f1da85b9dfb643820093b8d99e728c1e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ce245d8f9af6b258f4d88690",
+      "decoded": true,
+      "duration": 7.747755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0d94d5d8a66f89fbb0035877d1483beb24098ea677d75f1e4c73ba64d53d6ce9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ce7408033213592b7e055b71",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "78bc9abffd88fea8717ceebd745cb43330dd5cfd40a40a259fa346c12156c8ec"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/cf32a5a94483a99b14aa2969",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5e130d8f429eca34f6ff9fecd6387267481f7c7753c5ff63a612c5482671034f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/cf5510b374cd98044a99c215",
+      "decoded": true,
+      "duration": 14.800816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f3f48d4ed5b184236c9c0f0451168f679493fe5d019a290fbf0c85606693d05e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/cf7ef73efb2b1fe42b2da86c",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6afa88eb5a5aa082b200629331fdc01020a026d34547c5c23fe3d235c22897d7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d00724adaaa6bf0bc7d49f4c",
+      "decoded": true,
+      "duration": 1.19102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "af15840953adbb9013df5baad38c8668e360518839821245ff7dd918182d518e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d21f0bb00670849a344f663f",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0534c147443785fcfa4fc1cd8b9e2d6a29e6947f7a5ed9b422234be3729afa45"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d27aa47a19de8fe67d254b45",
+      "decoded": true,
+      "duration": 4.482449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2ec11d01c0efe14dd74285a18413d02fd8190b14af5754a6d050232f80d560c0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d304bbd2fb7fbb171aa79c95",
+      "decoded": true,
+      "duration": 28.07102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "72c41a9b1b8734ec6527ffa9e72f1fb9aab7b8d9375b1791bce0e02ab0b001fc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d31a91375a68c166449ecbc5",
+      "decoded": true,
+      "duration": 6.467755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d40d82c5d597d977d5b03fdedb8e2c7d4c077ce28b1cf4d635b9a3bb34604027"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d3552d1961875dc0cb621650",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9ee42777d6e625c0fdf606ef34f7cc08afe8adee98891dec1e1aa59eee161455"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d3c2c1a13418de4a4cb4f81a",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0d4134af734226c1a558fbac6d4911d52973d6e9e1465bf8a9fee68790e51052"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d41f5f0ba740ec1ce5b9585a",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f793c0071e820e8e726a1df8d93754e9da4b996b1815cbac8e6669f78882e94f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d425e697c6557d6237587d3b",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8bac3f919028e8814ef81b68eb149e54e504b9de1cf3f09e1d1e24c93f3f807b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d4f6cd5022eae2629561bff2",
+      "decoded": true,
+      "duration": 1.426122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c0ae1285e3364d8e0c5813a1185d7aae53eeca00c48fed11fa10cd2d7e39e70e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d52151d0df3c354bce274cb0",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4d90a277d04deb4792cfe5354d654cf0af6e47448b89be2f684772a6a9d60d3f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d527d8bd92679bedad8ba343",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "13f29e8de89babc9801f51844688cee82accc9bdcb262dd548d7a4f160fc46d5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d556818cd2d08c2198d4ee5f",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "46ace5a4e899ad1d5a653ff261e4c2de9440c6411eb26b03bb7810a9fab0afab"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d57a7f0fb1da305f2bc5dcfe",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a2fd7f2408458095c1a7bba56af4590b94c42c9849f13f04be334331283a8439"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d5c1dc954b232e5b4bbcf142",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2089f075a84e7f2dfc6383102639f686422ff288d2384df5a0f365c791fba617"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d60caec72909e161381de40f",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e7bcbf402e5a1ee244d9d3972139fe2c4457313e5bd1bfa7d2aa87016c9c2774"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d71acac739bc1cb4b0d34008",
+      "decoded": true,
+      "duration": 7.199184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9d96500347b9a86ee0838523aab372aab05959cc7cc18cfb494148a4a312bc1b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d72f96341b8873b6135da153",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1abfc8207dc42899653d644f2aa79cec53b75d0e4f7d13a16e7ed5d263e6886a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d82aba63b0eb3f56984c4f45",
+      "decoded": true,
+      "duration": 28.802449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "732bfebfa3e97b26eae37c90fb28f3384d855851cd29907d113db1b2140469e2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d89343671e8e057cb25f1e18",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cf3d287c2f8301885ffc7373d71225fc342cd65877752aabb6c38c8db8bbdb84"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d93cc5624071034b96e02673",
+      "decoded": true,
+      "duration": 5.187755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "de4e90947a2a4ec8aaa0f0ee6c6fa652c9e290bbdf3bb36cfe8dc9b5183be0e9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d956934532b71ad9b7892bfb",
+      "decoded": true,
+      "duration": 3.202449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "242fb6f72ee8187f861526241b55b4f2e3990e70bf5ada1c080c7db82f93ad07"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/d9af650e1008fb106be78f19",
+      "decoded": true,
+      "duration": 6.467755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bc02891276ec9ba2a73c4667cc93e16750d6bf8b264d9657c17575dff6d1e6d8"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/da1efd414a49d934dac09df6",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e958996ac8b3db461ce2164a145fd746844831e51e2da3a79af1074e4e284304"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/dab1d712469f17576f7022be",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cb7b62c604a914e87e0a4ad826c3b28f5bf7742bd5c3669dd959710a8769d3e6"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/db10fa4fe349b932a7594cd5",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e4791287cb9cb078c9fa0a500a046dc86afdfd3d6ec1e540a0822e1476ac19da"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/db2c6a5b130de13ea8f79b44",
+      "decoded": true,
+      "duration": 2.000816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b851c1bf6551d2f506555301dd415e9fe585915249a6c51573500c1f9ddabc3b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/dc57e27386b968c7cd62689a",
+      "decoded": true,
+      "duration": 29.76898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c77958a44b19335ebbac7099a5ad1f56403ca80c10eb614f5f028de222fd9ff0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/dcb11054fc1013f42a43fcfc",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "48c43162b556cf4ba98b81f6844c2c9097eef4fb460a93c0dac97f906af6ee50"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/dcc82c27b682f75eaf40ad97",
+      "decoded": true,
+      "duration": 2.47102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8099a728305d65d1b2c2b268af8f6880bed8dc9162c91795c67d5103b853f981"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/de206b985d79b50d36207280",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "991e512a74a77b9a94ac6d6e77de62bdd446db906a5ff7baf4708182f2ff65d7"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/de5b24f0954c5d107822366c",
+      "decoded": true,
+      "duration": 3.986122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f4b00ca11ce2252414519bf6f5fbcbcc3d535463ddf94cc2d6d55b7a20b38b91"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/de6aec60ac8aa04ddf32cc07",
+      "decoded": true,
+      "duration": 3.907755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7c6d016861d842dee684bbeb219b19aa541f1d8a2b041e031f4664e2808946cd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/de81ae612722b3c70c08d1d4",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "de7b518b2421d8587b8f5a0b0b62e9e02880065bb27637664bb40d0d63cc1044"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/de857819ab4a5c0c42aac0a5",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "97cccd803df79feadb6eb0985c2d8f42064f9d8d5619be37372735ab8591c7ed"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/def14d392cf5f2457174e7e2",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "804b5c9b83a3fb1c2f425de0c9fd7e727596e127afa7f65cbe5e07e865268c68"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/dfb0f299472f3882cc393a57",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "be22fdf7a34a28f854d0a4b8939ce55f7c4cfbb1f78610d549a5f03eeb10c8ea"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e0382a5ee666c6aa53ecee71",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dd44667632e4182c09f2676630abc1c746d3c860bcfc32e867bf6911401752d2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e0525cba59fc5d4fa7bb6a57",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5b5a81450e1c171442e696c97e823c076a7fc5e780cf023261c79d31cf67d9d9"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e05d29d9380b78aa3adb1ed8",
+      "decoded": true,
+      "duration": 3.045714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "eae4ff83ee9f8501a523b3157943bd1c8ec7efcf0f5e2fa566f6e1a97a6969dd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e09fbbf8d6b6f5e2226a1faa",
+      "decoded": true,
+      "duration": 5.03102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "99dd83a60e8f043a041f44123579dda7f8dbd9f9214e72d88a6bc3f94bc12d00"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e0f73d5765fe019ccd4b448c",
+      "decoded": true,
+      "duration": 5.266122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "189ec439c146eeaefbeed18080fe211901cc8e9d931a5107a724003ee9f0b322"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e24abf68fdb8ba550d96a246",
+      "decoded": true,
+      "duration": 3.280816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7617eb3a7085f08987e2592b52c42c854fc25dc0f8562ee7a5b10071883efd8e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e28e1169818b5db66c9b3f96",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ba53ae9ed5495ca53b6274908c09831fd757839bcf77c8a8fa68e8647fdf4b91"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e3a3d87a816b4ab9afca28ef",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "25b459a707814a48f8e664c57e33822a144293df32fbb251770faad728dc8a1a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e4e6768c1fcc92741deb9550",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0e3cfd97e9c31e1c762e3e1d7a06b4aefb75e6ad2185f51844350e7f0f54360f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e53da89534bc6ba530a67cc8",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "be6fbfefef645fd4e25f4f35233acc080ee72318e0d7ff196c6a9896f83cb4bc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e58bdc61234a4e9b9fd36c7b",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "303abb5d5794f60c4b9c7de742ba3a2851542481711b5ef3d289e2bfd2b323a3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e5901da7cbbbcf84eed83550",
+      "decoded": true,
+      "duration": 2.967347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8dab82153919961fa1d072b9b8046eca72aacafcf40534bbcc9f7d90d78928bd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e59f068a993e6571f0e92488",
+      "decoded": true,
+      "duration": 11.587755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "271120cc5773b29cb1dc4940e908f301f67756ffe20406a19a632e4813b68879"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e5b70fa8668b15f8fc79ecf1",
+      "decoded": true,
+      "duration": 4.247347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "700312ef178ca3f4b78778b9add00e82d4035a3e7c0a50f7964af2ff29a48502"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e5e55142acf746e12e1f961d",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "843bee38ef6e481341df42cd7c0f978869ef6dd5b66ed05057713c5592631d30"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e66982f85c7820f903f12993",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f54bce8141011acfe5799f7b5884d69a83f587f1f48c557b0670dbc5a92781ac"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e66d0214bb5c4b27aa4ce285",
+      "decoded": true,
+      "duration": 5.605714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b154046493f51419a21146e7f9ac8123f2976147f9e6f73e187ef695ba07eeae"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e6af923d7bb997baea6f4e9d",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ae48a1f23e6c58aee17b7692fb7a1f60dd28e24e7af5688f1c1d1fcbec9b5461"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e6bbed0099adfe097d2f1323",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "72cf3279912f67b8b69c3dec33879e4ce6d58f465ff440a200ae049af5dd78dc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e71d3f74a828202c6f0446e9",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "e2985f99f9ec383cadd2d941cafd1ea835719ac3223cdfdb3878f46d5078d3ff"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e78e72451d2b42e54e29fe83",
+      "decoded": true,
+      "duration": 5.840816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c30c2c3911a076d56c8334082ccf071aa939b2332fb29fa8cf24ba3da84e0c23"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e8a273c06f119c482e55f0f8",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "77635c115e8d279cca163eed8072b428b6196c88b3fa1ce9da76172a204d0b3b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e944404b4b44eb7b53b3a566",
+      "decoded": true,
+      "duration": 3.359184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5190530f48467f95f4d4929d82d881b6e94323161d904c2955ae66068e3b286f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e95e308fbdabab6535c4156a",
+      "decoded": true,
+      "duration": 3.672653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6ae54093ab2563d5ca8fa4be5dc33926730b89814e9438aec7bb30084670604e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e994585933324f7b25b3a340",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9f2466609477ea0b6dba18724e98a601931bb8297fed118a976fba6f456a9d31"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/e99fc9934c881c81e0af0207",
+      "decoded": true,
+      "duration": 3.437551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f3778ce5d768c08cd88cd8bbc199c134833427185ce67cb42b71ca92545c6998"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/eae84534198432a8de6ad30b",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8e2b23507ae85956a1362fe057b4792e9bdf2348637ba970f3ad3eae5946d132"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/eaf7b4e65bfb32cabfc3cf31",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8305011b646b3a336eee36991b226d0e1136b4b5a945dc28ecf23e1f5b89be48"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/eb4466ec5422512cbb25369a",
+      "decoded": true,
+      "duration": 6.075918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5e236220e7d8f993d49905c1f5fa2d87e8c93b30e83bddb2501a1951cb332bbc"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ec02cf551d18cc848dd6b528",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "923307f3b1e26f2901f4cfda1ec8a3f29ab044faf8d4522ca485b740d6157ec2"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ed2a78f53482a720a6e19084",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "36384ace2aa8c37db07f2829089376211cc16269955a8be5ad9f2bec8440ebf1"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ed82656cb4649a615fb807a4",
+      "decoded": true,
+      "duration": 2.88898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4d072d7e4d1dac87586f88994552ec40087ec6fecd1e10d9b5a1d140cc997118"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/edfbb487240cc65216a42db3",
+      "decoded": true,
+      "duration": 8.244082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "90316276234aefd13e468dab18c85f3f79790292988445b7266feaad4248b25a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ee2b3f5f7ff406aa27ab508b",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f118e24e49495eedbb1fb5de259d3260d589af302211bdb05d31e2b36d6a781a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ee4794f6fe34cddd42061cc3",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1a701f8422db60da7c0588b91eaa4bf0e84fe88771459d062d3c4d7032903e02"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ee7c47716ac6097b530a8489",
+      "decoded": true,
+      "duration": 2.47102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2f6c710ce3672b5ca6c7e2de1ee76b42b8528d72343ec016dc387d709c561a54"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/eeb65f59d783d237965d1d9e",
+      "decoded": true,
+      "duration": 4.560816,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9fb2512cb2bf88e6a15ee1bc7a0006e1eeb229de8e940dcf0987612354b2b334"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ef404db936d0d65e5a4a8e85",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4d6aeb767a0e1323720ea99dbae3a29defa52aceff09b50469e536040545ba87"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f0a0b8f7e8e289dc80e40f37",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "722acacffca6610d1d25d979d34a9c05a5ffd15228acd93b6ad3ade696b0817f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f0df5de50242e5df3eb11974",
+      "decoded": true,
+      "duration": 26.477551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1431a7bda31466e47309238dfd3eda4f7a9d7ada6401b4d192c11a92e7c9843a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f1691e0a98b5c00ee548a8db",
+      "decoded": true,
+      "duration": 7.826122,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "894f19b88961e39e76e06f2a397c41c2d9849f74d97ad61e5ba54d2194bd838c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f19fd3c9c0c2790db9d3145b",
+      "decoded": true,
+      "duration": 4.16898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "941d3a4a2f843882b809462868c1b0658b3e1cf2f0c9c09ab4786349ef1ef52f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f252ad1c24329449c14172eb",
+      "decoded": true,
+      "duration": 2.157551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b7ecb8b60076b75de7c366f00bb58b7e78da6d02464bb3b448c69c1ca00f6b9d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f255f99ac3886a0389aa2381",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b4170cb33e0d995be021ba95b5bd517240a4e3eca4ee4f19082ea17b462c2147"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f2c08f03d53d99829f53482b",
+      "decoded": true,
+      "duration": 2.235918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "b515f556958065a99e48dd58d52e2676ac59310e5cf614ac5fe1be3c96ed04bd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f346a55d23ecfd3f8cf6a5bd",
+      "decoded": true,
+      "duration": 14.069388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c6f348928ae93ce6f4a6c1548b72441e612d12c724e8ee119c6fb1d1e27b98c0"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f3bf9aff25fcd6d4a9b89994",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "71c86f94a27e4df709098ff1a7cb20208d96c2a8307d2f69acd00a531e35d5fd"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f40633ddaa649e6c14ddae3f",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "90e89548680416819c469948a84089b4e231112df17e04a95e8f16ce3c19542d"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f421b1971c0f945b5aa6210e",
+      "decoded": true,
+      "duration": 4.090612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "bf6ab3ba3760bf5b293f023e63cf790290452da69a0a8fc5c5b72e73e6d1e2e3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f42dbd95402a36af3ef0d90a",
+      "decoded": true,
+      "duration": 7.199184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a74d8c8fecf5b77ba1a2a0590c3e662061889d1ca6690362ec3f2d897953f508"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f43d181ac6d01db41bf2b209",
+      "decoded": true,
+      "duration": 7.59102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "52c114a94bd242379f85c6899b69fe359f9e569fb8b2b4d823f91e621bc9764b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f4a5e542c44afe29f0cef3d4",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7953adc573be0a9fae9472b6f71647fe1ac92d9ef872ce196c289cf7f21598db"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f4efc6d8ec67e770e62ad802",
+      "decoded": true,
+      "duration": 3.829388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0ef4b9b525f99f3625d442cefd6643ce818f77c34101493efd79bc9b474db99f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f51b3679bb27046465035508",
+      "decoded": true,
+      "duration": 6.075918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a973801083932a86f71d86e26bf5e5a909179fb10bdd339f658060e7cf4c4507"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f53acc507a102123fa19321b",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "ee84d583c5245578af2f5b26dfaa7f281dd88ed0ea4d41999a92f52186b6d438"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f5420f02829200bcef5024bb",
+      "decoded": true,
+      "duration": 2.47102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3d7081b90a2134cdef4437fd08d08fd617c3ef469f17f524ae84f87bfdb3d7a4"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f5561d2395bcea2ba669dba3",
+      "decoded": true,
+      "duration": 16.890612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "78c34e2f5beda5b2faf120a796e2f4dd298bb8ed9581a17b97725bb8196cbdbb"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f58297becdc74e7c3a5d4d4c",
+      "decoded": true,
+      "duration": 4.325714,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "841503dc43907ec7cd64512e1b451285b4f91b6f8f424875d660616a9ae83e66"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f5dd1a2fc7ac282b06be5aaa",
+      "decoded": true,
+      "duration": 3.124082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "cea66c2da3799b807feda763cdbfe5505f07edfa5dbc5814ee3d2de43cb0466b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f670ca3f6798ffce285765e5",
+      "decoded": true,
+      "duration": 4.717551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8a0a76d92ffefe2a2a64b69ed0be4aa8ed34824c0f901d2b6e025bee87dcf338"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f6856cb61d4ee8fa68bee9ba",
+      "decoded": true,
+      "duration": 2.314286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1b92a550510285835a8d0ac556f7ee545faa590e7c56df450f3431c5cc57e308"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f6ee5cc727621abd7e46041e",
+      "decoded": true,
+      "duration": 1.922449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "3f45effbc4ece872eef14505b4a7f79f615cb1e3cbf360d79ffbaa144afe65de"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f72d2f7d22cc9a0b06c9cecd",
+      "decoded": true,
+      "duration": 5.109388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1b8e5e1db4560b0c4a27c4f4d2316952786fea03a28ba34b0b3afe820b2484a3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f75a485461e64c52c6226dda",
+      "decoded": true,
+      "duration": 4.717551,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "55281bb424fe5421c4230a1063eb3d62bb9eec9b6202003d76c7961b0400ab3a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f75e336b6704e06373e51365",
+      "decoded": true,
+      "duration": 4.404082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "a5de7f5d6bccc16796df3f29a528d7b81edeeaa96ab7f7e2c08c915b3e5821f3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f7a3c4c4e75cc033119ddc4d",
+      "decoded": true,
+      "duration": 4.639184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "f686a2ada7684eb1b5084e98c7a348ed52394bba393cdc24c701fed73dffb3db"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f7e7eaf34846803fa4e86631",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "65dff300c4b6d0be1b66b39cb9f3312298d96fc9bf493ae122bc16fd8b6ef030"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f7eab7654d2e286e62509ad3",
+      "decoded": true,
+      "duration": 3.515918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "c7aebd61122d5dd1e78f87813f01554328bf446693d8d63582ee1ba6d5d20e38"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f7ec8e7c472545c9d522e2c9",
+      "decoded": true,
+      "duration": 2.810612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6a0c3e33095295387d78db771d1dbdf3195f8b0a2022f2c8e9a78a16fa1ce665"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f7f801da299afba66aa9fdea",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d757e2c9e9f28ba9a263bfc8d9be3d69da002216d0a0668e4f2f65607b45e30a"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f811489f643346e8748138d0",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "8d3c1e7fc75f6f86d8cf5616405b839283cd02476dc8ff5c86018310a0270913"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f864109956af579b9e7c4b37",
+      "decoded": true,
+      "duration": 3.594286,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "26d87028d7e9545343ba1759665a5574d3711ad21ec31e84b07cbb29aeb48c44"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f890934e2318499bc962c208",
+      "decoded": true,
+      "duration": 5.919184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "6eca1cf6a819981b6acdee4f8864d3dfc8ddd11797c1b9de136387dbc984420c"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f8c8f18aa63b0303a498984c",
+      "decoded": true,
+      "duration": 1.112653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "9456ef2d35697084dbf949882e4410338df087b8a240782a46cd5a6ec06b9202"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/f9d4cbf676e84c67d51fbea9",
+      "decoded": true,
+      "duration": 4.795918,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "dd00c58e95c13ab04725178c30659722d618d11f6294aef5b9c2ce9ea52d38e5"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fa26217fe2ea80e0bd598013",
+      "decoded": true,
+      "duration": 6.467755,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7a0ee40cde841f7678e7501e8cc98d7ec5312d787c2118c4419cb41047a738b3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fa576fbce3fe568a8365e905",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "87b38f0d98e265ade1a02d33a834138c049b97f33891c14bcebe318dc7b3796e"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fb149a1edc54cbc68e3c97cc",
+      "decoded": true,
+      "duration": 6.807347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4d478e806c72dfc4c12a89c4136101f8508ec0614105df2aeba36ab42d753378"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fb27a65a69b553eeedaf2239",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "def580860840ccf5c7919e97766325d8a86913b1942752385a2b10541264359b"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fc3dd2052463a16011e163ff",
+      "decoded": true,
+      "duration": 3.75102,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "2f758c1d75d8e16a8a3ca881d8e1cb37a63de91a0ec59cbd9ccafd637fb33a50"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fd00ed26b24e6458d240be20",
+      "decoded": true,
+      "duration": 5.762449,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "1901590f0efe745fd35c3946a5059751beaffa13a86a8cad8d75e46e39492ba3"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fd8ec01d49c34ede233aaf9e",
+      "decoded": true,
+      "duration": 5.370612,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "54a60464834d5d7d87d4db7569d516233eefbab164312031ba5420786734d990"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fdb2390625d35f0ad156dd09",
+      "decoded": true,
+      "duration": 2.392653,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "7e0c3310678b16720b039e59d9496710d944e3a258693b259774f3d1bf06cd4f"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fde13d91eca3b30f28f85886",
+      "decoded": true,
+      "duration": 1.844082,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "4b16cd4af704f7350ad05c87498922917415edafcb222699b264b89904b25b17"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fe4e623b0d1fe67fd6e768aa",
+      "decoded": true,
+      "duration": 1.687347,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d99588918f6b6d2ee02dc1b0f701490f20d67607ba102d0a73c1b1754d701f83"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fe9564e04c1cd6a3d526801e",
+      "decoded": true,
+      "duration": 28.959184,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "138536e3f37f21d3dfcdec782b18bd31fac09eab3456bef9917e8c2f333ebb92"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/fece463eafcb3de9a2de7171",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "d0e9c6a6a756e3877395b04ad5bc0e31b641cbcf7fedfc83d1542f28d03f8507"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ff7b30ed721644db42de5a90",
+      "decoded": true,
+      "duration": 5.44898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "5407187be7a02241b7b4f9bbf458f4258684805e03d557717405e935e09d1c46"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ffac430e81a41e3c8c3d3487",
+      "decoded": true,
+      "duration": 1.60898,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "0e148c7a9d08550d6998436f12834feb539129b5cb38a3f5219171a9240bf187"
+    },
+    {
+      "resource": "LearningApp/Narration/Clips/ffc51c1b6a4616b09ca290a8",
+      "decoded": true,
+      "duration": 2.549388,
+      "channels": 1,
+      "sampleRate": "44100",
+      "sha256": "076088a35ba38235b991b7595842ed28f86d01f00c367682965353bdad009154"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "index": 606,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Telefon hatları yoğunken aileye ulaşmak için en uygun ilk yöntem hangisidir?",
+  "sourceFilename": "b6d52a84553d36ed2c3ee292.mp3",
+  "sourceSha256": "4c959bbe51c01fee04a89144ed62488262ead05b574e939b07cf3848f88b3526",
+  "importedAt": "2026-10-01T04:57:14.861280+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.684082"
+    }
+  }
+}

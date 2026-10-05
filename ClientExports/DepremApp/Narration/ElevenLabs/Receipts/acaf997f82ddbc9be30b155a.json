@@ -1,0 +1,23 @@
+{
+  "index": 643,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çantayı hazırlarken hangisini eklersin?",
+  "sourceFilename": "acaf997f82ddbc9be30b155a.mp3",
+  "sourceSha256": "14fcbc56aea5657f9f25da5f45abe2e9ef47cc37b9b48eb1605ef8f49b7691a9",
+  "importedAt": "2026-10-01T05:10:02.150611+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

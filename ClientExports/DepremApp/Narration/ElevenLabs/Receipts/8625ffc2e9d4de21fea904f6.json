@@ -1,0 +1,23 @@
+{
+  "index": 607,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Telefon hatları yoğunsa ne yaparsın?",
+  "sourceFilename": "8625ffc2e9d4de21fea904f6.mp3",
+  "sourceSha256": "77d6a477bed7300c8390ee85612fa3a5b37ed5e1d057c70e3064f2446123e82c",
+  "importedAt": "2026-10-01T04:57:43.128762+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 147,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansör sarsıntıda durabilir ve içinde mahsur kalabilirsin. Asla binme.",
+  "sourceFilename": "dcb11054fc1013f42a43fcfc.mp3",
+  "sourceSha256": "e5797223ac3341888d4549c7399e04c83faed39a16cbd780666c83594a184696",
+  "importedAt": "2026-10-01T03:28:22.747195+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

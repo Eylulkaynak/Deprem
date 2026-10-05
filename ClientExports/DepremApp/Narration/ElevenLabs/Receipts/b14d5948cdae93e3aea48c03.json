@@ -1,0 +1,23 @@
+{
+  "index": 364,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru mu, yanlış mı? Sen küçük olsan bile her ağır yükü tek başına kaldırıp herkesi kurtarmalısın.",
+  "sourceFilename": "b14d5948cdae93e3aea48c03.mp3",
+  "sourceSha256": "190183564c2d61bd2a46d8705c17be9022b9ec2eb9e958ceb1ae54b31df1415a",
+  "importedAt": "2026-10-01T04:13:16.215884+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.669388"
+    }
+  }
+}

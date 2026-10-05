@@ -1,0 +1,23 @@
+{
+  "index": 339,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Büyüğe ve yüz on iki'ye haber veririm",
+  "sourceFilename": "a4c55f106ad4795ae3730ffb.mp3",
+  "sourceSha256": "71aa634a26bce3bbe29d97d54d7d84b57393ee75690b75a2dda039809c9d7d33",
+  "importedAt": "2026-10-01T04:10:45.142146+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

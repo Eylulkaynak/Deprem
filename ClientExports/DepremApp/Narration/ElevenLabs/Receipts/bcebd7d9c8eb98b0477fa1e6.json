@@ -1,0 +1,23 @@
+{
+  "index": 69,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Su olmadan yaşayamayız, en önemlisi sudur.",
+  "sourceFilename": "bcebd7d9c8eb98b0477fa1e6.mp3",
+  "sourceSha256": "637f6ee91e5eb5a12b5946db5414ff29d7ecf8913f18eebc8fd410fc0ab39f37",
+  "importedAt": "2026-10-01T01:02:08.993279+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

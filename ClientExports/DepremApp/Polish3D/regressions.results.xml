@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 22:59:22Z" end-time="2026-10-04 23:00:09Z" duration="47,0737045">
+  <test-suite type="TestSuite" id="1087" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="67" result="Passed" start-time="2026-10-04 22:59:22Z" end-time="2026-10-04 23:00:09Z" duration="47.073705" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1077" name="Deprem.Story.PlayModeTests.dll" fullname="D:/DepremIMO/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="66" result="Passed" start-time="2026-10-04 22:59:22Z" end-time="2026-10-04 23:00:09Z" duration="47.062897" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="69032" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="MinigamePackagePlayModeTests" fullname="MinigamePackagePlayModeTests" classname="MinigamePackagePlayModeTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-04 22:59:22Z" end-time="2026-10-04 22:59:29Z" duration="7.293370" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1003" name="RoomSafety_EndToEndCompletion" fullname="MinigamePackagePlayModeTests.RoomSafety_EndToEndCompletion" methodname="RoomSafety_EndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="1549176255" result="Passed" start-time="2026-10-04 22:59:22Z" end-time="2026-10-04 22:59:29Z" duration="7.275340" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1027" name="StoryEvacuation25DPlayModeTests" fullname="StoryEvacuation25DPlayModeTests" classname="StoryEvacuation25DPlayModeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-04 22:59:29Z" end-time="2026-10-04 22:59:34Z" duration="4.979046" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1028" name="FifteenStageRoute_PlaysToAssemblySuccess" fullname="StoryEvacuation25DPlayModeTests.FifteenStageRoute_PlaysToAssemblySuccess" methodname="FifteenStageRoute_PlaysToAssemblySuccess" classname="StoryEvacuation25DPlayModeTests" runstate="Runnable" seed="1707336605" result="Passed" start-time="2026-10-04 22:59:29Z" end-time="2026-10-04 22:59:34Z" duration="4.972050" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="180000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Stair choice selected: WallSide
+Stair choice selected: WallSide
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1069" name="ThreeDPolishPlayModeTests" fullname="ThreeDPolishPlayModeTests" classname="ThreeDPolishPlayModeTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-04 22:59:34Z" end-time="2026-10-04 23:00:09Z" duration="34.784536" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1073" name="ResetStage_CancelsPendingSnapAndDelayedAdvance" fullname="ThreeDPolishPlayModeTests.ResetStage_CancelsPendingSnapAndDelayedAdvance" methodname="ResetStage_CancelsPendingSnapAndDelayedAdvance" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1537779575" result="Passed" start-time="2026-10-04 22:59:34Z" end-time="2026-10-04 22:59:38Z" duration="4.252374" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1076" name="ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause" fullname="ThreeDPolishPlayModeTests.ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause" methodname="ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1734032157" result="Passed" start-time="2026-10-04 22:59:38Z" end-time="2026-10-04 22:59:44Z" duration="5.031830" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1071" name="ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase" fullname="ThreeDPolishPlayModeTests.ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase" methodname="ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="852508954" result="Passed" start-time="2026-10-04 22:59:44Z" end-time="2026-10-04 23:00:00Z" duration="16.294137" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1072" name="SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty" fullname="ThreeDPolishPlayModeTests.SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty" methodname="SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="742497187" result="Passed" start-time="2026-10-04 23:00:00Z" end-time="2026-10-04 23:00:03Z" duration="3.178901" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[MCP Unity] Retrieved scene info for active scene 'Minigame_AftershockCover'
+]]></output>
+        </test-case>
+        <test-case id="1074" name="StageCamera_PauseKeepsFrameAndResumesTransition" fullname="ThreeDPolishPlayModeTests.StageCamera_PauseKeepsFrameAndResumesTransition" methodname="StageCamera_PauseKeepsFrameAndResumesTransition" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="681756144" result="Passed" start-time="2026-10-04 23:00:03Z" end-time="2026-10-04 23:00:06Z" duration="3.448932" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1070" name="StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble" fullname="ThreeDPolishPlayModeTests.StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble" methodname="StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1521965457" result="Passed" start-time="2026-10-04 23:00:06Z" end-time="2026-10-04 23:00:07Z" duration="0.587188" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1075" name="VehicleAndFire_PauseFreezesGameplayAndResumes" fullname="ThreeDPolishPlayModeTests.VehicleAndFire_PauseFreezesGameplayAndResumes" methodname="VehicleAndFire_PauseFreezesGameplayAndResumes" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="2066191141" result="Passed" start-time="2026-10-04 23:00:07Z" end-time="2026-10-04 23:00:09Z" duration="1.976046" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: D:\DepremIMO\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

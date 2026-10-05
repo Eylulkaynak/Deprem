@@ -1,0 +1,23 @@
+{
+  "index": 193,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Öğretmenin sana güvenli çıkış yolunu sırayla gösterir.",
+  "sourceFilename": "3916d77c959c1235b822a369.mp3",
+  "sourceSha256": "3b5fa710ce50b0977664a476e639540a44a32b3e76889e4425f563590acbbc4c",
+  "importedAt": "2026-10-01T03:35:11.504260+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

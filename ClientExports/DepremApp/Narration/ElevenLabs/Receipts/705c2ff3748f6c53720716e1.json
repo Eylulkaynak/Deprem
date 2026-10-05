@@ -1,0 +1,23 @@
+{
+  "index": 343,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Su dökmek yardımcı olmaz. Kanayan yere bastırmayı düşün.",
+  "sourceFilename": "705c2ff3748f6c53720716e1.mp3",
+  "sourceSha256": "98388ddd769f6a6301734680ef551af38559027842596637c8c3306278a50d1e",
+  "importedAt": "2026-10-01T04:11:08.787115+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

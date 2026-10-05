@@ -1,0 +1,23 @@
+{
+  "index": 238,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dışarı çıkmadan önce ayağına ne giyersin?",
+  "sourceFilename": "6fa3879f220f866c1a82ba84.mp3",
+  "sourceSha256": "5a27b4688e832d100efd410a7c123609a8362bf155f8eb21bd0381870cf4106c",
+  "importedAt": "2026-10-01T03:50:04.914777+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.280816"
+    }
+  }
+}

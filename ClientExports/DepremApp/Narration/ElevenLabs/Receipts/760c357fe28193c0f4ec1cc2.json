@@ -1,0 +1,23 @@
+{
+  "index": 347,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır yaralıyı sarsmak çok tehlikelidir. Onu oynatmadan hemen yardım çağırmak gerekir.",
+  "sourceFilename": "760c357fe28193c0f4ec1cc2.mp3",
+  "sourceSha256": "355d447cc08f8c2a5010617690acaddfc4892d0bb7b9e0b4c7d5a01d325ab513",
+  "importedAt": "2026-10-01T04:11:31.809045+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.997551"
+    }
+  }
+}

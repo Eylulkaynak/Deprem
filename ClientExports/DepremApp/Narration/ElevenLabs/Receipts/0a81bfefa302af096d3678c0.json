@@ -1,0 +1,23 @@
+{
+  "index": 379,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Olduğum yerde dikilirim",
+  "sourceFilename": "0a81bfefa302af096d3678c0.mp3",
+  "sourceSha256": "f09927a937a83eda7356a78aef73621b3702ffd4db0916e3289af2a07016dddf",
+  "importedAt": "2026-10-01T04:14:58.499166+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

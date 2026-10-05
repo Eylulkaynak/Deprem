@@ -1,0 +1,23 @@
+{
+  "index": 491,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem sonrası ikincil tehlikelerin önemli kısmı tesisat kaynaklıdır.",
+  "sourceFilename": "534ad3eec51b789cde49216d.mp3",
+  "sourceSha256": "b70cdb19e0943413f54f84c663b64368c3a23e3ddf67b2ca452e43c591447281",
+  "importedAt": "2026-10-01T04:41:39.948762+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.266122"
+    }
+  }
+}

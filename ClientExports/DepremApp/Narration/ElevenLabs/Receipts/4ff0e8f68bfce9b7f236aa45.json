@@ -1,0 +1,23 @@
+{
+  "index": 552,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kalabalıkta ilk risk panik akışı ve kontrolsüz çıkışlara yönelmektir. Sinema, AVM veya iş yerinde çıkışlara koşmadan bulunduğun noktada korun. Raf, vitrin, cam cephe ve asılı tabelalardan uzaklaş. Güvenlik anonslarını ve yetkili yönlendirmelerini takip et. Sarsıntı bitince sakin ve kontrollü tahliye sırasına uy. Bugün: Sık gittiğin bir binada acil çıkışları gözlemle.",
+  "sourceFilename": "4ff0e8f68bfce9b7f236aa45.mp3",
+  "sourceSha256": "0908bee3d8d6d8984d98223db37423deae7ba56d2d25f89f3f9aafb9fc82d0f2",
+  "importedAt": "2026-10-01T04:48:49.998381+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "27.444082"
+    }
+  }
+}

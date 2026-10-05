@@ -1,0 +1,23 @@
+{
+  "index": 101,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Üstüne ağır eşya koyarız",
+  "sourceFilename": "fdb2390625d35f0ad156dd09.mp3",
+  "sourceSha256": "0b8da3ed87cd3ddb2b3270816c3b5568ea08790ca6dc7e3731147d6754ab1270",
+  "importedAt": "2026-10-01T01:06:32.478785+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.392653"
+    }
+  }
+}

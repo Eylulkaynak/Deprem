@@ -1,0 +1,4 @@
+RUNNING: bag-input.
+START MinigamePackagePlayModeTests.EmergencyBagRush_EndToEndCompletion
+Passed MinigamePackagePlayModeTests.EmergencyBagRush_EndToEndCompletion 
+COMPLETE pass=1 fail=0 skip=0

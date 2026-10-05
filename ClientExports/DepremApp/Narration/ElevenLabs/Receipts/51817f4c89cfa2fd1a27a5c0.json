@@ -1,0 +1,23 @@
+{
+  "index": 249,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çıkarken itişip koşmak gerekir.",
+  "sourceFilename": "51817f4c89cfa2fd1a27a5c0.mp3",
+  "sourceSha256": "b05f82cdd68504c120e9122c6121ce2501702e26fbe35ec9a3db7753cf8f378a",
+  "importedAt": "2026-10-01T03:51:18.839825+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

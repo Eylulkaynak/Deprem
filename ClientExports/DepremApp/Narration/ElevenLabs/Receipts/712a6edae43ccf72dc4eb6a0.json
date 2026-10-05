@@ -1,0 +1,23 @@
+{
+  "index": 527,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz kokusu alırsan ne yaparsın?",
+  "sourceFilename": "712a6edae43ccf72dc4eb6a0.mp3",
+  "sourceSha256": "1ef7178eaa1acdb18fd45b4afd4d0cd10e44108618b8ae9245fde2e2a4dbd6fe",
+  "importedAt": "2026-10-01T04:45:25.054242+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

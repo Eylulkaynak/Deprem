@@ -1,0 +1,23 @@
+{
+  "index": 568,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Pencere yanında beklemek",
+  "sourceFilename": "3df26e4e7cf4045efc599173.mp3",
+  "sourceSha256": "a7bb7b7de19f3a7501c3eb87e7402ba50940011beb76f8cf74cc52b3b7214748",
+  "importedAt": "2026-10-01T04:50:59.323190+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.079184"
+    }
+  }
+}

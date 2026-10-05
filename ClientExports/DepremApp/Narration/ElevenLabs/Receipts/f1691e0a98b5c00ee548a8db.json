@@ -1,0 +1,23 @@
+{
+  "index": 275,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kısa ve net yaz: \"İyiyim\" gibi. Uzun mesajlar yerine kısacık yazmak daha hızlı ve daha az yer tutar.",
+  "sourceFilename": "f1691e0a98b5c00ee548a8db.mp3",
+  "sourceSha256": "52f4f685ca3ba0d72eb0a9e69de5fb36d627aa41d739ae155b2ed197054271a0",
+  "importedAt": "2026-10-01T03:54:05.595415+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.826122"
+    }
+  }
+}

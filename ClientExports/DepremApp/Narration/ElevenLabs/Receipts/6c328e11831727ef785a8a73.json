@@ -1,0 +1,23 @@
+{
+  "index": 402,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikatı tekrar tekrar yapmak adımları alışkanlık hâline getirir.",
+  "sourceFilename": "6c328e11831727ef785a8a73.mp3",
+  "sourceSha256": "77f5bc284a7eced1426cd1f780c10c1d76670099266ff187d84038ade7e80fd5",
+  "importedAt": "2026-10-01T04:17:25.956851+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.109388"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 192,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Panik yok; önce başını korur, sonra öğretmeni dinlersin.",
+  "sourceFilename": "28317a03d38f5fd55c5f70f5.mp3",
+  "sourceSha256": "933006597afacd96e70b1831985dd5e1a3afdd79dcea0db419003eeeceb916bf",
+  "importedAt": "2026-10-01T03:34:56.685573+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

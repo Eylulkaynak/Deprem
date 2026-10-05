@@ -1,0 +1,23 @@
+{
+  "index": 397,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yerde kırık camlar ve moloz var. Nasıl davranırsın?",
+  "sourceFilename": "c91e2e947ca49f0916b22ed7.mp3",
+  "sourceSha256": "64df63456622e03f4554acaa10f4bed17d42fc1ce5b8d21fac320891ec0eda6c",
+  "importedAt": "2026-10-01T04:16:52.294453+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "description": "Bağımsız Deprem UI paletleri; gerçek oyuna otomatik uygulanmaz.",
+  "semantics": {
+    "successSurface": "#e5f0df",
+    "successInk": "#315f38",
+    "successBorder": "#679361",
+    "warningSurface": "#fff2d6",
+    "warningInk": "#744705",
+    "warningBorder": "#a96d11",
+    "errorSurface": "#fceade",
+    "errorInk": "#91391d",
+    "errorBorder": "#c98054"
+  },
+  "palettes": [
+    {
+      "id": "orman",
+      "name": "Orman",
+      "ink": "#203e3b",
+      "muted": "#566963",
+      "paper": "#f7f8f4",
+      "surface": "#ffffff",
+      "line": "#d3ded3",
+      "primary": "#246858",
+      "primaryHover": "#1b5347",
+      "tint": "#e8f0e7",
+      "hero": "#204f46",
+      "heroMuted": "#d1e1d5",
+      "accent": "#f3c795",
+      "accentInk": "#573719",
+      "focus": "#a25624",
+      "contrast": {
+        "body": 10.86,
+        "muted": 5.47,
+        "primaryButton": 6.57,
+        "accentButton": 6.82,
+        "heroSecondary": 6.81,
+        "mutedOnTint": 5.02,
+        "mutedOnSurface": 5.84,
+        "primaryOnTint": 5.65
+      }
+    },
+    {
+      "id": "deniz",
+      "name": "Deniz",
+      "ink": "#223d4c",
+      "muted": "#586f7b",
+      "paper": "#f5f8fa",
+      "surface": "#ffffff",
+      "line": "#d9e3e9",
+      "primary": "#255f83",
+      "primaryHover": "#1b4866",
+      "tint": "#e7f0f5",
+      "hero": "#153d56",
+      "heroMuted": "#c9ddea",
+      "accent": "#f4c993",
+      "accentInk": "#573719",
+      "focus": "#855114",
+      "contrast": {
+        "body": 10.7,
+        "muted": 4.95,
+        "primaryButton": 6.9,
+        "accentButton": 6.93,
+        "heroSecondary": 8.19,
+        "mutedOnTint": 4.57,
+        "mutedOnSurface": 5.28,
+        "primaryOnTint": 5.97
+      }
+    },
+    {
+      "id": "leylak",
+      "name": "Leylak",
+      "ink": "#342f49",
+      "muted": "#6a637e",
+      "paper": "#f8f6fb",
+      "surface": "#ffffff",
+      "line": "#e2dcec",
+      "primary": "#605088",
+      "primaryHover": "#4c3e70",
+      "tint": "#eee9f6",
+      "hero": "#41345e",
+      "heroMuted": "#ded4ee",
+      "accent": "#f2d0ad",
+      "accentInk": "#573719",
+      "focus": "#a25724",
+      "contrast": {
+        "body": 11.87,
+        "muted": 5.29,
+        "primaryButton": 7,
+        "accentButton": 7.33,
+        "heroSecondary": 7.86,
+        "mutedOnTint": 4.76,
+        "mutedOnSurface": 5.68,
+        "primaryOnTint": 5.87
+      }
+    },
+    {
+      "id": "gunisigi",
+      "name": "Gün ışığı",
+      "ink": "#493a2e",
+      "muted": "#776759",
+      "paper": "#fbf8f0",
+      "surface": "#ffffff",
+      "line": "#e7dccb",
+      "primary": "#8e4b26",
+      "primaryHover": "#743e1f",
+      "tint": "#f6edda",
+      "hero": "#664128",
+      "heroMuted": "#f1dfc4",
+      "accent": "#f2d589",
+      "accentInk": "#573719",
+      "focus": "#4b6b55",
+      "contrast": {
+        "body": 10.26,
+        "muted": 5.11,
+        "primaryButton": 6.59,
+        "accentButton": 7.45,
+        "heroSecondary": 6.84,
+        "mutedOnTint": 4.66,
+        "mutedOnSurface": 5.43,
+        "primaryOnTint": 5.67
+      }
+    }
+  ],
+  "semanticContrast": {
+    "success": 6.32,
+    "warning": 7.15,
+    "error": 6.4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 535,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Görev paylaşımı ve toplanma düzeni",
+  "sourceFilename": "9d4b5f328a2c4d0a629a4524.mp3",
+  "sourceSha256": "d7bb5860114c0e65ccf0d73cc464e8f9ae84b0284751bfbab1272a616a543f33",
+  "importedAt": "2026-10-01T04:46:18.692795+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.967347"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 480,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Camdan sark",
+  "sourceFilename": "0da7b6864ab7dc6bdec7007c.mp3",
+  "sourceSha256": "6745c52bd3e2f5e1f43c88d898dbb3cb59bfdc8641264594b4685501c45bc6d5",
+  "importedAt": "2026-10-01T04:40:25.814749+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.687347"
+    }
+  }
+}

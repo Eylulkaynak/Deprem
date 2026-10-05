@@ -1,0 +1,23 @@
+{
+  "index": 511,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dört adımlı üç turun hepsini doğru sırala.",
+  "sourceFilename": "2d81fcdcfd0649210500c6b8.mp3",
+  "sourceSha256": "673ac7d929be7b30149dc212fe413eab5d706d336329c2d5d4e964e8658b765d",
+  "importedAt": "2026-10-01T04:43:42.352028+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.515918"
+    }
+  }
+}

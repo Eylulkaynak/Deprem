@@ -1,0 +1,23 @@
+{
+  "index": 163,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet! Balkona çıkmak güvenli değildir.",
+  "sourceFilename": "608439f05bd3870b1781266c.mp3",
+  "sourceSha256": "e297bd7a9d0099ba74bc0a3d0fe2942088425fca053bb53a7c7c02d165174476",
+  "importedAt": "2026-10-01T03:31:38.672044+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.359184"
+    }
+  }
+}

@@ -4125,6 +4125,8 @@ public static partial class MinigamePolishedSceneBuilder
             TextAlignmentOptions.Center, new Vector2(0f, -72f), new Vector2(820f, 52f));
         total.text = "0 / 400 İMO COIN";
 
+        AddScenarioJourneyButton(safeArea.transform, manager, bold);
+
         Button back = StoryChapterBuilderCommon.CreateButton(
             "BackButton", safeArea.transform, "ANA MENÜ",
             bold, new Vector2(0.5f, 0f), new Vector2(0f, 78f), new Vector2(620f, 100f),
@@ -4134,7 +4136,7 @@ public static partial class MinigamePolishedSceneBuilder
         GameObject viewportObject = StoryChapterBuilderCommon.CreateUIRect(
             "CardsViewport", safeArea.transform,
             new Vector2(0.5f, 0f), new Vector2(0.5f, 1f),
-            new Vector2(0f, 12f), new Vector2(1010f, -445f));
+            new Vector2(0f, -112.5f), new Vector2(1010f, -645f));
         Image viewportImage = viewportObject.AddComponent<Image>();
         viewportImage.color = new Color32(0, 0, 0, 3);
         Mask mask = viewportObject.AddComponent<Mask>();
@@ -4142,7 +4144,7 @@ public static partial class MinigamePolishedSceneBuilder
         RectTransform viewport = viewportObject.GetComponent<RectTransform>();
 
         HubCardSpec[] specs = HubCardSpecs();
-        float contentHeight = 470f + Mathf.Max(0, specs.Length - 1) * 365f;
+        float contentHeight = 386f + Mathf.Max(0, specs.Length - 1) * 365f;
         GameObject contentObject = StoryChapterBuilderCommon.CreateUIRect(
             "CardsContent", viewport, new Vector2(0f, 1f), new Vector2(1f, 1f),
             Vector2.zero, new Vector2(0f, contentHeight));
@@ -4163,7 +4165,7 @@ public static partial class MinigamePolishedSceneBuilder
         for (int index = 0; index < specs.Length; index++)
         {
             HubCardSpec spec = specs[index];
-            float y = -230f - index * 365f;
+            float y = -24f - index * 365f;
             bindings[index] = BuildHubCard(content, manager, spec, new Vector2(0f, y), regular, semibold, bold);
         }
 
@@ -4289,6 +4291,7 @@ public static partial class MinigamePolishedSceneBuilder
             throw new InvalidOperationException("2.5D final toplanma etkileşimi bulunamadı; sahne korunarak entegre edilemedi.");
         AddListenerOnce(assembly.OnInteracted, reporter,
             nameof(MinigameSessionManager.CompleteExternalEvacuation25D), reporter.CompleteExternalEvacuation25D);
+        AddEvacuationResultHud(reporter);
         EditorUtility.SetDirty(assembly);
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);

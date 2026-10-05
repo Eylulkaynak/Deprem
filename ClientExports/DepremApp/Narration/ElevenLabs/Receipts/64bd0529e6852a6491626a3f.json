@@ -1,0 +1,23 @@
+{
+  "index": 321,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sürekli bağırmak enerjini bitirir ve toz yutturur. Vurmayı veya düdüğü dene.",
+  "sourceFilename": "64bd0529e6852a6491626a3f.mp3",
+  "sourceSha256": "6886523e9f6555d020424be2105a450f3a7f202c64019ef63df0a1dc612672a3",
+  "importedAt": "2026-10-01T04:08:28.314644+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.232653"
+    }
+  }
+}

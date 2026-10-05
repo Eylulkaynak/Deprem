@@ -1,0 +1,23 @@
+{
+  "index": 597,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sıranın yanında çök",
+  "sourceFilename": "7d44770956d02e7f2b66864f.mp3",
+  "sourceSha256": "934a8148e78bab1a8a9a9ef8bee9880ccf9e6402c00e036005feab1adb3dcc6e",
+  "importedAt": "2026-10-01T04:56:11.632400+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.079184"
+    }
+  }
+}

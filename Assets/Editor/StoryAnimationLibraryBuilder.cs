@@ -65,6 +65,7 @@ public static class StoryAnimationLibraryBuilder
             ConfigureHumanoidModel(sourceModel);
 
         RuntimeAnimatorController controller = CreateChildController();
+        StoryAdultWalkBuilder.Build();
         CreateAdultController();
         CreateAdultInjuredController();
         AssetDatabase.SaveAssets();

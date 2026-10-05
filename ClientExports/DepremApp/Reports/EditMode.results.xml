@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0,6789679">
+  <test-suite type="TestSuite" id="1000" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="861" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.678968" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1229" name="Assembly-CSharp-Editor.dll" fullname="D:/DepremIMO/Deprem/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="198" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.583635" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="58056" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1230" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.487765" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1231" name="Learning" fullname="Deprem.Learning" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.387966" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1232" name="Tests" fullname="Deprem.Learning.Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.287589" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1218" name="LearningAppTests" fullname="Deprem.Learning.Tests.LearningAppTests" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.186428" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1220" name="AllImportedArtAndGameItemReferencesResolve" fullname="Deprem.Learning.Tests.LearningAppTests.AllImportedArtAndGameItemReferencesResolve" methodname="AllImportedArtAndGameItemReferencesResolve" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1128987293" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.028492" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1219" name="AllOriginalCoursesAndGameModesWereImported" fullname="Deprem.Learning.Tests.LearningAppTests.AllOriginalCoursesAndGameModesWereImported" methodname="AllOriginalCoursesAndGameModesWereImported" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="755193749" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.008525" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1222" name="CourseReplayDoesNotFarmXpOrDuplicateCompletion" fullname="Deprem.Learning.Tests.LearningAppTests.CourseReplayDoesNotFarmXpOrDuplicateCompletion" methodname="CourseReplayDoesNotFarmXpOrDuplicateCompletion" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="929111252" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.003392" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1226" name="DamagedPrimaryRecoversPreviousValidGeneration" fullname="Deprem.Learning.Tests.LearningAppTests.DamagedPrimaryRecoversPreviousValidGeneration" methodname="DamagedPrimaryRecoversPreviousValidGeneration" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1955501536" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.008623" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1227" name="EmptyProfileNameIsRejectedWithoutChangingActiveProfile" fullname="Deprem.Learning.Tests.LearningAppTests.EmptyProfileNameIsRejectedWithoutChangingActiveProfile" methodname="EmptyProfileNameIsRejectedWithoutChangingActiveProfile" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1149667491" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.002333" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1224" name="ModeResultsStaySeparateAndBestScoreNeverRegresses" fullname="Deprem.Learning.Tests.LearningAppTests.ModeResultsStaySeparateAndBestScoreNeverRegresses" methodname="ModeResultsStaySeparateAndBestScoreNeverRegresses" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1205557276" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.001102" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1221" name="NativeAppStartsBeforeEvery3DScene" fullname="Deprem.Learning.Tests.LearningAppTests.NativeAppStartsBeforeEvery3DScene" methodname="NativeAppStartsBeforeEvery3DScene" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="890106635" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.001800" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1228" name="RandomizedRoundsUseOriginalPoolsWithoutMutatingCatalog" fullname="Deprem.Learning.Tests.LearningAppTests.RandomizedRoundsUseOriginalPoolsWithoutMutatingCatalog" methodname="RandomizedRoundsUseOriginalPoolsWithoutMutatingCatalog" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="93800349" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.008468" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1225" name="RestartRestoresProfilePlanLessonCheckpointAndMistakes" fullname="Deprem.Learning.Tests.LearningAppTests.RestartRestoresProfilePlanLessonCheckpointAndMistakes" methodname="RestartRestoresProfilePlanLessonCheckpointAndMistakes" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1778567918" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.004959" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1223" name="StreakHandlesSameDayConsecutiveDayAndMissedDay" fullname="Deprem.Learning.Tests.LearningAppTests.StreakHandlesSameDayConsecutiveDayAndMissedDay" methodname="StreakHandlesSameDayConsecutiveDayAndMissedDay" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="520304209" result="Passed" start-time="2026-09-30 21:20:46Z" end-time="2026-09-30 21:20:46Z" duration="0.004118" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: D:\DepremIMO\Deprem\Temp\StoryTestQA\EditMode.results.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

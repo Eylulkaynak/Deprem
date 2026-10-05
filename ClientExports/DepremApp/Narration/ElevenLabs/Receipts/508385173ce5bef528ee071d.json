@@ -1,0 +1,23 @@
+{
+  "index": 112,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Ağır eşyalar alt raflara konur, üst rafa değil.",
+  "sourceFilename": "508385173ce5bef528ee071d.mp3",
+  "sourceSha256": "aab7a29cf55d89927ff159e9c97fa0ad3e9bbf62030f11d470d8aced0fc5e832",
+  "importedAt": "2026-10-01T01:07:46.570823+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

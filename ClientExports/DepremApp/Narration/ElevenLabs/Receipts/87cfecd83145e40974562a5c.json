@@ -1,0 +1,23 @@
+{
+  "index": 579,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sadece yetişkinlerin ihtiyaçları",
+  "sourceFilename": "87cfecd83145e40974562a5c.mp3",
+  "sourceSha256": "405bdab6f23e8e3ab63dfd9b489471480d33209ea51e714291140af5646ec807",
+  "importedAt": "2026-10-01T04:54:00.427485+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.967347"
+    }
+  }
+}

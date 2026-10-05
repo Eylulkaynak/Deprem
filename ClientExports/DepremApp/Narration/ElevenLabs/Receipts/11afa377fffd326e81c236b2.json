@@ -1,0 +1,23 @@
+{
+  "index": 149,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansör tehlikelidir. Sarsıntı bitene kadar yerinde kal.",
+  "sourceFilename": "11afa377fffd326e81c236b2.mp3",
+  "sourceSha256": "2c47df7943c1a1243c592dffd42e02cd9ab93a7f7f932f9f40a0d0d545e56ddb",
+  "importedAt": "2026-10-01T03:28:25.536305+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

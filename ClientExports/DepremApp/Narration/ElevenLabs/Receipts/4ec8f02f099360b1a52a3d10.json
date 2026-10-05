@@ -1,0 +1,23 @@
+{
+  "index": 566,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Merdivenler sarsıntı sırasında risklidir; koşmak yaralanma riskini artırır.",
+  "sourceFilename": "4ec8f02f099360b1a52a3d10.mp3",
+  "sourceSha256": "908742d24bc083898b083f2c88ddadcd0aed673264b2ebe1092b42cd530c97f1",
+  "importedAt": "2026-10-01T04:50:47.617067+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.527347"
+    }
+  }
+}

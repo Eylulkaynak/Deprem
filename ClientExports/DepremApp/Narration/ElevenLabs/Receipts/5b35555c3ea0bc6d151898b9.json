@@ -1,0 +1,23 @@
+{
+  "index": 61,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Acil çantana hangisini koyarsın?",
+  "sourceFilename": "5b35555c3ea0bc6d151898b9.mp3",
+  "sourceSha256": "2131730b6cc84b740276edd1c2546be3f969b3a3aacbd2b7c115484be7411474",
+  "importedAt": "2026-10-01T01:00:38.848045+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.627755"
+    }
+  }
+}

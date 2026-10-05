@@ -1,0 +1,23 @@
+{
+  "index": 40,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tehlikeyi fark et",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_18_58_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "a09e29a73c1bbc3f0b97d3044b4f5f40f07aeb8c9b71f4a8b2fa43d9afa2abb9",
+  "importedAt": "2026-10-01T00:19:51.919957+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

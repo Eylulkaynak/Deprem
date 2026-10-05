@@ -1,0 +1,23 @@
+{
+  "index": 541,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hasarlı binaya geri dönme; artçı sarsıntı ihtimalini hesaba kat.",
+  "sourceFilename": "9dfb0625d86032e2f4464667.mp3",
+  "sourceSha256": "0a35ec801877f902d85688fffd3164b17d8695da8a42c7c93b40ee9745a626bb",
+  "importedAt": "2026-10-01T04:47:07.521219+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

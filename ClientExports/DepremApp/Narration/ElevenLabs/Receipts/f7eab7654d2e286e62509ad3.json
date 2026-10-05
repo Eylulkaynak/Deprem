@@ -1,0 +1,23 @@
+{
+  "index": 445,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansör, merdiven ve balkonlara yönelme.",
+  "sourceFilename": "f7eab7654d2e286e62509ad3.mp3",
+  "sourceSha256": "e9e1358e94a5c904eedd4029246fed1ecf3dfc7bb29cc41f92be013633159daa",
+  "importedAt": "2026-10-01T04:26:01.754337+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.515918"
+    }
+  }
+}

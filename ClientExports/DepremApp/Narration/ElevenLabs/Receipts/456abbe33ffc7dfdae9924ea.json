@@ -1,0 +1,23 @@
+{
+  "index": 37,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Araç ve Asansör",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_17_12_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "d75f23f21d9ad464bf9baaa3472115be2da5db6ed430dfc477230131f445efe6",
+  "importedAt": "2026-10-01T00:18:48.244584+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

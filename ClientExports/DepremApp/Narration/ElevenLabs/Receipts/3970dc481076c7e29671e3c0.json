@@ -1,0 +1,23 @@
+{
+  "index": 420,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Acil çantanı görünür bir yerde tut.",
+  "sourceFilename": "3970dc481076c7e29671e3c0.mp3",
+  "sourceSha256": "53a75ac2a4dcb5a79fea3d4d2ead029cddf1e00473692a8513616797edad9f95",
+  "importedAt": "2026-10-01T04:19:16.966208+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.888980"
+    }
+  }
+}

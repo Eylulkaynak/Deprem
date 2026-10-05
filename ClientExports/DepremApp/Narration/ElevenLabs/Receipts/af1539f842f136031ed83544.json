@@ -1,0 +1,23 @@
+{
+  "index": 662,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İlk günlerde amaç kaynakları kontrollü kullanmak ve temel ihtiyaçları sürdürebilmektir. Su ve gıdayı kişi sayısına göre planla; özel diyet ve bebek ihtiyaçlarını unutma. Düzenli kullanılan ilaçların listesini, doz bilgisini ve yedeklerini hazır tut. Konserve açacağı, hijyen malzemesi ve çöp poşeti gibi küçük ihtiyaçları ekle. Çantanın herkes tarafından bilinen ve çıkışa yakın bir yerde olmasını sağla. Bugün: Evdeki kişi sayısına göre 72 saatlik ihtiyaçları hesapla.",
+  "sourceFilename": "af1539f842f136031ed83544.mp3",
+  "sourceSha256": "12ac849b32a23dec8562b5a5d83cd14ba15ed3e9e68c2347e042739d81c1c53e",
+  "importedAt": "2026-10-01T05:14:01.307505+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "32.564082"
+    }
+  }
+}

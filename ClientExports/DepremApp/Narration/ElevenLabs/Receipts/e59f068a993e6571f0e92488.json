@@ -1,0 +1,23 @@
+{
+  "index": 7,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Okulda da öğrendiğimiz hareketleri yaparız. Çök, kapan, tutun. Başını ve enseni koru. Merdivenlere ya da çıkışa koşma. Öğretmeninin yönergelerini dinle.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_07_20_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "f79abc25b2a25b7863aaae75e31e07909199a85dc986cb1b03c8f0308c6d7f7e",
+  "importedAt": "2026-10-01T00:08:47.905406+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "11.587755"
+    }
+  }
+}

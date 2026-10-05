@@ -1,0 +1,23 @@
+{
+  "index": 90,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aile planını kimler bilmeli?",
+  "sourceFilename": "ee7c47716ac6097b530a8489.mp3",
+  "sourceSha256": "0899e2db08e4fec602d397f13fa4b370d885b005e330b84ad0fd754092eb0ff8",
+  "importedAt": "2026-10-01T01:04:44.329052+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.471020"
+    }
+  }
+}

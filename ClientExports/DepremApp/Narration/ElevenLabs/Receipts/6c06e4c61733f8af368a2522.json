@@ -1,0 +1,23 @@
+{
+  "index": 292,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Buluşma noktası nasıl bir yer olmalı?",
+  "sourceFilename": "6c06e4c61733f8af368a2522.mp3",
+  "sourceSha256": "7a577bb3cafe22ac806da13b33871533ed42936212b28ce4a03e6ac94d179340",
+  "importedAt": "2026-10-01T03:56:05.539325+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.967347"
+    }
+  }
+}

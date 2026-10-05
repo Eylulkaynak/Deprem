@@ -1,0 +1,23 @@
+{
+  "index": 199,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sıranın altında kalırım",
+  "sourceFilename": "7bbfc8906dbc36ba17a7fe99.mp3",
+  "sourceSha256": "ea2fc06180b162612fa7f652194bd5815ca343361c38b3ecc5a34bd3c1630487",
+  "importedAt": "2026-10-01T03:35:47.148084+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

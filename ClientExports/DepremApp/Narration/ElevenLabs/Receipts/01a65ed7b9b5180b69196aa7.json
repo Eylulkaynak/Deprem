@@ -1,0 +1,23 @@
+{
+  "index": 86,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Telefonlar çalışmazsa şehir dışındaki bir akrabayı aramak iyi bir plandır.",
+  "sourceFilename": "01a65ed7b9b5180b69196aa7.mp3",
+  "sourceSha256": "e091378805f5f454590bfe09fad224829f73be8a5efce904c49c0fc1b5c1121c",
+  "importedAt": "2026-10-01T01:04:26.040665+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.266122"
+    }
+  }
+}

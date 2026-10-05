@@ -1,0 +1,23 @@
+{
+  "index": 418,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Acil durumda asansör kullanmama kuralını ekipçe netleştir.",
+  "sourceFilename": "88d04b680bea005a5a844a9f.mp3",
+  "sourceSha256": "3d9813d040827c27bf40573af8c6a21279ef5b80e0c4173284939a4e1fff7562",
+  "importedAt": "2026-10-01T04:19:05.120666+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

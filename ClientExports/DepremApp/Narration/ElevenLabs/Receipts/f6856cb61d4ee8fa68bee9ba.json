@@ -1,0 +1,23 @@
+{
+  "index": 515,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dış Mekan ve Araçta",
+  "sourceFilename": "f6856cb61d4ee8fa68bee9ba.mp3",
+  "sourceSha256": "666b7716c620bc7cf861d0d1c3ab15711080bc121f9a0bc53304276023eb467a",
+  "importedAt": "2026-10-01T04:44:01.539535+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 624,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Toz kaldır",
+  "sourceFilename": "0d5538faf6bd43ca788b1232.mp3",
+  "sourceSha256": "f41476529351b36f96beb2da2302f94b7416fb740a0db4d7a49d8f7de3d26c69",
+  "importedAt": "2026-10-01T05:07:13.989516+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.530612"
+    }
+  }
+}

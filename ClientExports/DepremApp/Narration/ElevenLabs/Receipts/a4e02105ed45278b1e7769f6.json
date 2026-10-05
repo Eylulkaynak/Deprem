@@ -1,0 +1,23 @@
+{
+  "index": 563,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kısa ve net mesaj göndermek",
+  "sourceFilename": "a4e02105ed45278b1e7769f6.mp3",
+  "sourceSha256": "b365a0a8cb5609a471b9af103442d914a8bb95115676b76c8ca0de78d62a15dd",
+  "importedAt": "2026-10-01T04:50:27.261237+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 426,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Afet çantası için en doğru yaklaşım hangisidir?",
+  "sourceFilename": "f7f801da299afba66aa9fdea.mp3",
+  "sourceSha256": "d13e11eb94d94412e07ed861235a82649e7e562e3fd0e0c8bf1cb960e1ce9a04",
+  "importedAt": "2026-10-01T04:22:04.235577+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.594286"
+    }
+  }
+}

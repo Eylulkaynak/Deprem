@@ -1,0 +1,23 @@
+{
+  "index": 406,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Belli aralıklarla tekrar tekrar",
+  "sourceFilename": "c1b1f5bf6b88ed17e634c424.mp3",
+  "sourceSha256": "05be03623e052270d1f7c1c77cb07daf538347216a82a34781ec69e9d127fc86",
+  "importedAt": "2026-10-01T04:17:49.476647+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

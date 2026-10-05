@@ -1,0 +1,23 @@
+{
+  "index": 313,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kimse depremin ne zaman olacağını kesin bilemez. Böyle söylentilere inanma, sakin ol ve resmi açıklamaları bekle.",
+  "sourceFilename": "ce245d8f9af6b258f4d88690.mp3",
+  "sourceSha256": "83f30bcc0af7890f0a0ee35a33647c217be864c7406c2f3df02fc6d8a8eb6c13",
+  "importedAt": "2026-10-01T04:07:24.024877+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.747755"
+    }
+  }
+}

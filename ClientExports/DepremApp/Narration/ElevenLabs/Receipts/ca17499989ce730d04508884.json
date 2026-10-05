@@ -1,0 +1,23 @@
+{
+  "index": 454,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Açık alanda risk çoğunlukla bina cephesi, cam, tabela ve enerji hatlarıdır. Dışarıdaysan bina, balkon, duvar, direk ve enerji hatlarından uzaklaş. Araçtaysan köprü, üst geçit, tünel ve enerji hattı yakınında durma. Araç içinde emniyetli bir noktada bekle; panikle trafiğe karışma. Kıyıdaysan resmi uyarıları takip et ve gerekiyorsa yüksek alana yönel. Bugün: İş-ev güzergahındaki açık güvenli alanları düşün.",
+  "sourceFilename": "ca17499989ce730d04508884.mp3",
+  "sourceSha256": "0f1ed1a8bc943fa7eac6dd2ab6198318f1a021a2ea345360aaf1bbbcf551443f",
+  "importedAt": "2026-10-01T04:37:44.855830+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "30.395918"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 642,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çanta önceden hazır ve erişilebilir olmalıdır.",
+  "sourceFilename": "1b13e4b1b78a6902852fd30c.mp3",
+  "sourceSha256": "3b29a02c45d44d8bdded7633fdc9d218332eae55d288057bc8ac7e599d0a460f",
+  "importedAt": "2026-10-01T05:09:56.394274+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 531,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz, Elektrik ve Yangın Riski",
+  "sourceFilename": "b78d32bc5764c72e409c85b7.mp3",
+  "sourceSha256": "2875be14c61da993e8cc332b853f6a36b3fb78686665f3b98ea1f062866a009a",
+  "importedAt": "2026-10-01T04:45:59.363283+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.202449"
+    }
+  }
+}

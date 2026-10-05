@@ -1,0 +1,23 @@
+{
+  "index": 413,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önemsemeden oturup beklerim",
+  "sourceFilename": "6dcf6018c349a530ce0a89b8.mp3",
+  "sourceSha256": "6f10ab9cb9c2fb1ea9c9b85efde5441e90df1840af76de3302aec71cc729ac5a",
+  "importedAt": "2026-10-01T04:18:30.829406+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

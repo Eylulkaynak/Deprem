@@ -1,0 +1,23 @@
+{
+  "index": 4,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Güvenli yerleri önceden bir büyüğünle tanıyabilirsin. Sarsıntıda yakınındaki sağlam bir masanın altında başını ve enseni koru, masanın ayağına tutun. Camlardan ve devrilebilecek eşyalardan uzak dur.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_05_22_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "63a65282c2de112713c88ab6d0f58ee5e1ee031a62f8673eaa67a297c2197547",
+  "importedAt": "2026-10-01T00:06:51.301311+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "13.755918"
+    }
+  }
+}

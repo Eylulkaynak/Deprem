@@ -1,0 +1,23 @@
+{
+  "index": 451,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aynı anda herkese ulaşmak zor olabilir; plan kısa ve net olmalıdır. Ev dışından bir irtibat kişisi seç ve herkesin telefonuna kaydet. Ev, iş ve okul için ayrı buluşma noktası belirle. Telefon yoğunluğunda kısa mesajın daha etkili olabileceğini planla. Çocuk, yaşlı veya bakım ihtiyacı olan kişiler için sorumluluk paylaş. Bugün: Aile grubuna toplanma alanı ve irtibat kişisini yaz.",
+  "sourceFilename": "45dd416c44f37a7617ec409b.mp3",
+  "sourceSha256": "2050160a7842e2638061b9f21fb58c65bc2c623f4e272b3c9d473f4833319f2f",
+  "importedAt": "2026-10-01T04:27:08.602342+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "26.712653"
+    }
+  }
+}

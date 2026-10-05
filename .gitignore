@@ -24,6 +24,11 @@ ExportedObj/
 *.userprefs
 *.pidb
 *.booproj
+/.codex_tmp/learning-web-reference/
+/.codex_tmp/learning-app/
+/.codex_tmp/learning-online/
+/.codex_tmp/learning-unity-request.mjs
+/.codex_tmp/family-*/
 *.svd
 *.pdb
 *.mdb

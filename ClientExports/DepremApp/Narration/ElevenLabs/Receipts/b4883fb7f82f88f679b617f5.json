@@ -1,0 +1,23 @@
+{
+  "index": 424,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Afet sonrası yanlış bilgi ve yoğun telefon trafiği müdahaleyi zorlaştırır. Resmi açıklamaları ve yerel yetkililerin duyurularını takip et. Telefonu kısa ve gerekli iletişim için kullan; mümkünse kısa mesaj gönder. Sosyal medyada teyitsiz konum, yardım ve hasar bilgisi paylaşma. Radyo ve powerbank gibi düşük enerji çözümlerini hazır tut. Bugün: Telefonuna resmi uyarı ve belediye/AFAD kanallarını ekle.",
+  "sourceFilename": "b4883fb7f82f88f679b617f5.mp3",
+  "sourceSha256": "c20c5106f50af45ee13fb9899477b18a12be57df0689818a72ac5e4461e341ec",
+  "importedAt": "2026-10-01T04:22:01.380318+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "29.272653"
+    }
+  }
+}

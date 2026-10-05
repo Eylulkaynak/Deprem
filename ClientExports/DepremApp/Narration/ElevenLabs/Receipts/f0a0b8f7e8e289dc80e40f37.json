@@ -1,0 +1,23 @@
+{
+  "index": 538,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Güvenliyse vanayı kapatmak",
+  "sourceFilename": "f0a0b8f7e8e289dc80e40f37.mp3",
+  "sourceSha256": "a4d27040448f7af4b20b959735f9dc7cd6c3ea20f8f39f8a364568a3056506b7",
+  "importedAt": "2026-10-01T04:46:40.795848+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

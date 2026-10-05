@@ -1,0 +1,23 @@
+{
+  "index": 461,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başını koru",
+  "sourceFilename": "c105ce16cf2a2bf30e783a99.mp3",
+  "sourceSha256": "657dd41a75579c6969db2513edc5c89c8db7df3fe29df431eff0e72c4b2530ea",
+  "importedAt": "2026-10-01T04:38:24.608422+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.530612"
+    }
+  }
+}

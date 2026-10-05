@@ -1,0 +1,23 @@
+{
+  "index": 421,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Afet planı, evdeki herkesin gerçek ihtiyaçlarını kapsadığında çalışır. Yaşlı, engelli, hamile, bebek veya kronik hastalığı olan kişiler için ayrı liste hazırla. Gözlük, işitme cihazı pili, medikal cihaz, mama ve hijyen ürünlerini planla. Evcil hayvan için mama, su, taşıma çantası ve kimlik bilgisini hazır tut. Komşu destek ağını önceden kur; yalnız yaşayanları plana dahil et. Bugün: Destek gerektiren bir kişi için özel ihtiyaç listesi çıkar.",
+  "sourceFilename": "9884890e7357e7d3ae2a4b76.mp3",
+  "sourceSha256": "408e70f692637a5062d99d8f6c93684eb57b97dbe729e0a5b08012709cbb268f",
+  "importedAt": "2026-10-01T04:21:56.142763+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "32.955918"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 100,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Duvara sabitleriz",
+  "sourceFilename": "b64236f968df68d59be3e961.mp3",
+  "sourceSha256": "8981dbd171b20a3ff9d1c0932ed639e3f9afb095f75e70b1d2425fb51b22764e",
+  "importedAt": "2026-10-01T01:06:31.026417+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

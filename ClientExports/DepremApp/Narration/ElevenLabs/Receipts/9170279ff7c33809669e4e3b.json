@@ -1,0 +1,23 @@
+{
+  "index": 64,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] El feneri",
+  "sourceFilename": "9170279ff7c33809669e4e3b.mp3",
+  "sourceSha256": "1580ac04f8fa84220d4fb378febeba0c002f9bce5dd21ceb238f5f04d2436212",
+  "importedAt": "2026-10-01T01:00:43.305544+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.426122"
+    }
+  }
+}

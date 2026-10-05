@@ -1,0 +1,23 @@
+{
+  "index": 644,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çantayı sadece deprem olduktan sonra hazırlamak",
+  "sourceFilename": "4936805b879a87d9ab3d27c6.mp3",
+  "sourceSha256": "5792ef40dff01666844ceb7def030f7e84b05247d5ed7e5562999a63458d74db",
+  "importedAt": "2026-10-01T05:10:30.124890+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.829388"
+    }
+  }
+}

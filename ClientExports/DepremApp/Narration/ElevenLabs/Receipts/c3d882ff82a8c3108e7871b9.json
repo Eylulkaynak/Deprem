@@ -1,0 +1,23 @@
+{
+  "index": 10,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı bittiğinde bir büyüğünle birlikte kendini ve çevreni kontrol et. Dışarı çıkarken ayakkabını giy. Güvenli çıkış yolunu izleyin. Asansör kullanmayın; itişmeden, koşmadan ilerleyin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_08_55_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "7bcb3be98cb8a466fae4ae237c3187649b563d16bcd48807fb3ae948687016fd",
+  "importedAt": "2026-10-01T00:09:19.152770+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "13.520816"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 639,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çakmak yakıp kontrol etmek",
+  "sourceFilename": "9883984b483afd76f189c3ac.mp3",
+  "sourceSha256": "c29f74e4433fdb5227ef869bf035d5ae95b98909f60cc5419363cb6592c31d42",
+  "importedAt": "2026-10-01T05:09:30.341369+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

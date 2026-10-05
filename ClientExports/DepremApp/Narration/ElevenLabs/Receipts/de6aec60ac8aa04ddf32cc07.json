@@ -1,0 +1,23 @@
+{
+  "index": 534,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Görev paylaşımı afet öncesinde netleşmiş olmalıdır.",
+  "sourceFilename": "de6aec60ac8aa04ddf32cc07.mp3",
+  "sourceSha256": "e7e8fc71b18c14576b50a7b4ef54453e078a57bf3b0b05b9f88f589d3739d4c8",
+  "importedAt": "2026-10-01T04:46:12.730181+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

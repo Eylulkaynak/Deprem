@@ -1,0 +1,9 @@
+PASS: 1080x1920; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+PASS: 1080x2340; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+PASS: 750x1334; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+PASS: 1536x2048; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+PASS: primary action, preview, lesson, correct answer presentation, completion and 30 XP reward.
+PASS: games; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+PASS: family; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+PASS: profile; logo, icons, touch targets, header, scroll area and safe bottom navigation.
+COMPLETE: real Unity Game View captures; isolated verification progress.

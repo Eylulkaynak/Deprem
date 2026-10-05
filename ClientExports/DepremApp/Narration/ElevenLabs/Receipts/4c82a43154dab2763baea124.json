@@ -1,0 +1,23 @@
+{
+  "index": 433,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aksayan noktalar güncellenmezse aynı sorun tekrar eder.",
+  "sourceFilename": "4c82a43154dab2763baea124.mp3",
+  "sourceSha256": "26b6a0b78edb9ec088c44c6741856c284bdbc423f572f6ee48980c1a594381c3",
+  "importedAt": "2026-10-01T04:22:15.018250+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.404082"
+    }
+  }
+}

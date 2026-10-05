@@ -31,6 +31,7 @@ namespace Deprem.Minigames
 
         private void Start()
         {
+            MinigameScenarioJourney.Cancel();
             progressManager.LoadNow();
             RefreshCards();
         }
@@ -69,14 +70,22 @@ namespace Deprem.Minigames
 
         public void OpenScene(string sceneName)
         {
+            MinigameScenarioJourney.Cancel();
             if (!string.IsNullOrWhiteSpace(sceneName))
                 SceneManager.LoadScene(sceneName);
         }
 
         public void ReturnToMainMenu()
         {
+            MinigameScenarioJourney.Cancel();
             if (!string.IsNullOrWhiteSpace(mainMenuSceneName))
                 SceneManager.LoadScene(mainMenuSceneName);
+        }
+
+        public void StartScenarioJourney()
+        {
+            if (!MinigameScenarioJourney.Start())
+                Debug.LogError("Deprem senaryosunun bir sahnesi derlemeye eklenmemiş.", this);
         }
 
         private static string FormatTime(float seconds)

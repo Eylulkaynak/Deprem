@@ -1,0 +1,23 @@
+{
+  "index": 135,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır dolabın yanına",
+  "sourceFilename": "70aadd54cbe1784eb688fe7e.mp3",
+  "sourceSha256": "414c90ab287c6b2b909dfbd2c69a604135b45e09ec3bead7e2355626a57a3e71",
+  "importedAt": "2026-10-01T03:27:12.696447+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

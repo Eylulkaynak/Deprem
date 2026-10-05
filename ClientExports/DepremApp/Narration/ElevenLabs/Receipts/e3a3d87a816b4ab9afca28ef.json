@@ -1,0 +1,23 @@
+{
+  "index": 385,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yerde kopmuş bir elektrik teli gördün. Ne yaparsın?",
+  "sourceFilename": "e3a3d87a816b4ab9afca28ef.mp3",
+  "sourceSha256": "a9026bb5e96783cac4a7f878cc3299ba9e9cd2631e56f560915595d1a5a9bb09",
+  "importedAt": "2026-10-01T04:15:38.284756+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

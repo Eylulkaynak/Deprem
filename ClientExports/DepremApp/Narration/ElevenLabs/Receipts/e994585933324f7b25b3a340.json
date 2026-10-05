@@ -1,0 +1,23 @@
+{
+  "index": 115,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ayakta kalırsan sarsıntıda düşebilirsin. Önce yere çök.",
+  "sourceFilename": "e994585933324f7b25b3a340.mp3",
+  "sourceSha256": "742dbf3ee197e061e9488c146043ab41d981d36f9e5efd6ac84b7b0471191a94",
+  "importedAt": "2026-10-01T01:09:22.662391+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

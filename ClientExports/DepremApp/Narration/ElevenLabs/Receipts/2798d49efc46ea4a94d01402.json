@@ -1,0 +1,23 @@
+{
+  "index": 287,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aklına gelen rastgele yere gitme. Önceden belirlediğiniz yere git.",
+  "sourceFilename": "2798d49efc46ea4a94d01402.mp3",
+  "sourceSha256": "f1e1e9e6135eb094655a6f220a83d4bde3faeb3227154294c0e1c7c2e7287984",
+  "importedAt": "2026-10-01T03:55:22.324236+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.795918"
+    }
+  }
+}

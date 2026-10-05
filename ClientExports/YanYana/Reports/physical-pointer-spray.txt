@@ -154,3 +154,6 @@ PASS stage=3 -> 4 seconds=18.09. Production graph pointer handlers, water and ar
 PASS stage=1 -> 2 seconds=18.09. Production graph pointer handlers, water and arm manager; no test-side health changes.
 PASS stage=2 -> 3 seconds=18.10. Production graph pointer handlers, water and arm manager; no test-side health changes.
 PASS stage=3 -> 4 seconds=18.11. Production graph pointer handlers, water and arm manager; no test-side health changes.
+PASS stage=1 -> 2 seconds=18,16. Production graph pointer handlers, water and arm manager; no test-side health changes.
+PASS stage=2 -> 3 seconds=18,13. Production graph pointer handlers, water and arm manager; no test-side health changes.
+PASS stage=3 -> 4 seconds=18,73. Production graph pointer handlers, water and arm manager; no test-side health changes.

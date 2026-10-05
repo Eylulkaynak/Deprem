@@ -1,0 +1,23 @@
+{
+  "index": 337,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Onu sen kaldırmaya çalışma. Yardım çağırmayı düşün.",
+  "sourceFilename": "7c9cfab342ec9da92a2ae621.mp3",
+  "sourceSha256": "c78efe4fac82487f62b1b6e53047e9b9bf24942b39dc0b78d161547a120b6eea",
+  "importedAt": "2026-10-01T04:10:38.089444+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

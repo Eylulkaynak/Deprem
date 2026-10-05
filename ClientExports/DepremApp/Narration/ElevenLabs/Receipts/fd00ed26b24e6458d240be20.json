@@ -1,0 +1,23 @@
+{
+  "index": 646,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çök, kapan, tutun; cam, dolap ve ağır eşyalardan uzak dur.",
+  "sourceFilename": "fd00ed26b24e6458d240be20.mp3",
+  "sourceSha256": "ad5e246c9984ffe4a21dee3280b9ae4a5e12c37eccb053144f0674e74c7968d7",
+  "importedAt": "2026-10-01T05:10:46.192996+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.762449"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 310,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru mu yanlış mı? Doğruluğunu bilmediğin korkutucu bir haberi hemen herkese yaymalısın.",
+  "sourceFilename": "5c1ce65eaa51e0133e173726.mp3",
+  "sourceSha256": "7b6aefcc166f9894a27b55ab6cbf7163404c0703973cb2d6cf51e3ed2bef87ae",
+  "importedAt": "2026-10-01T04:07:19.426170+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.964082"
+    }
+  }
+}

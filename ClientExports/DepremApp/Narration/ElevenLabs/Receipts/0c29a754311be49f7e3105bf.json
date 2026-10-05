@@ -1,0 +1,23 @@
+{
+  "index": 576,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Resmi kurum duyurularını takip et, doğrulanmamış bilgiyi yayma.",
+  "sourceFilename": "0c29a754311be49f7e3105bf.mp3",
+  "sourceSha256": "e04a65b1190b2d37767e8c70f28c9754163f62e8ddaf886200c37ba564ec83bb",
+  "importedAt": "2026-10-01T04:53:47.226213+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 294,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Açık ve binalardan uzak yer en güvenlisidir.",
+  "sourceFilename": "7db657adb0d81c0616984a7b.mp3",
+  "sourceSha256": "889e7ea39a7a7159a1b6ab27b9fafbe2af35e5e00a18e6d3fde9dbc6ef7553c1",
+  "importedAt": "2026-10-01T03:56:17.629070+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

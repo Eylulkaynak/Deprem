@@ -1,0 +1,23 @@
+{
+  "index": 501,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Düşen parçalar, camlar ve enerji hatları ciddi risk oluşturur.",
+  "sourceFilename": "64156c5ee571189fa6a59100.mp3",
+  "sourceSha256": "f6be53d4c95ea9fc0dfe619619227300ee11a8593747d818c755a4e9bc1f880f",
+  "importedAt": "2026-10-01T04:42:38.546248+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.840816"
+    }
+  }
+}

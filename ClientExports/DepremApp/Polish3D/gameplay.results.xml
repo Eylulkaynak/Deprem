@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="17" result="Failed(Child)" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 23:17:06Z" end-time="2026-10-04 23:24:35Z" duration="448,6402846">
+  <test-suite type="TestSuite" id="1087" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="67" result="Failed" site="Child" start-time="2026-10-04 23:17:06Z" end-time="2026-10-04 23:24:35Z" duration="448.640285" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1077" name="Deprem.Story.PlayModeTests.dll" fullname="D:/DepremIMO/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="66" result="Failed" site="Child" start-time="2026-10-04 23:17:07Z" end-time="2026-10-04 23:24:35Z" duration="448.056863" total="17" passed="16" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="69032" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="MinigamePackagePlayModeTests" fullname="MinigamePackagePlayModeTests" classname="MinigamePackagePlayModeTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-10-04 23:17:07Z" end-time="2026-10-04 23:21:05Z" duration="238.426295" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1002" name="AftershockCover_ErrorCorrectionThenEndToEndCompletion" fullname="MinigamePackagePlayModeTests.AftershockCover_ErrorCorrectionThenEndToEndCompletion" methodname="AftershockCover_ErrorCorrectionThenEndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="1126892891" result="Passed" start-time="2026-10-04 23:17:08Z" end-time="2026-10-04 23:19:26Z" duration="138.641042" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1004" name="EmergencyBagRush_EndToEndCompletion" fullname="MinigamePackagePlayModeTests.EmergencyBagRush_EndToEndCompletion" methodname="EmergencyBagRush_EndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="1639467987" result="Failed" start-time="2026-10-04 23:19:27Z" end-time="2026-10-04 23:20:10Z" duration="43.224307" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[Unhandled log message: '[Error] [MCP Unity] WebSocket error: An error has occurred in sending data.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+            <stack-trace><![CDATA[McpUnity.Utils.McpLogger:LogError (string) (at ./Library/PackageCache/com.gamelovers.mcp-unity@a32e47d4ec87/Editor/Utils/Logger.cs:40)
+McpUnity.Unity.McpUnitySocketHandler:OnError (WebSocketSharp.ErrorEventArgs) (at ./Library/PackageCache/com.gamelovers.mcp-unity@a32e47d4ec87/Editor/UnityBridge/McpUnitySocketHandler.cs:179)
+WebSocketSharp.Server.WebSocketBehavior:onError (object,WebSocketSharp.ErrorEventArgs)
+WebSocketSharp.Ext:Emit<WebSocketSharp.ErrorEventArgs> (System.EventHandler`1<WebSocketSharp.ErrorEventArgs>,object,WebSocketSharp.ErrorEventArgs)
+WebSocketSharp.WebSocket:error (string,System.Exception)
+WebSocketSharp.WebSocket:Send (string)
+WebSocketSharp.Server.WebSocketBehavior:Send (string)
+McpUnity.Unity.McpUnitySocketHandler/<OnMessage>d__3:MoveNext () (at ./Library/PackageCache/com.gamelovers.mcp-unity@a32e47d4ec87/Editor/UnityBridge/McpUnitySocketHandler.cs:104)
+System.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()
+
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1005" name="EmergencyCorridor_EndToEndCompletion" fullname="MinigamePackagePlayModeTests.EmergencyCorridor_EndToEndCompletion" methodname="EmergencyCorridor_EndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="1530906180" result="Passed" start-time="2026-10-04 23:20:10Z" end-time="2026-10-04 23:20:52Z" duration="42.183488" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[MCP Unity] Retrieved scene info for active scene 'Minigame_EmergencyCorridor'
+]]></output>
+        </test-case>
+        <test-case id="1003" name="RoomSafety_EndToEndCompletion" fullname="MinigamePackagePlayModeTests.RoomSafety_EndToEndCompletion" methodname="RoomSafety_EndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="424929069" result="Passed" start-time="2026-10-04 23:20:52Z" end-time="2026-10-04 23:20:59Z" duration="6.496599" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1006" name="RubbleSignal_EndToEndCompletion" fullname="MinigamePackagePlayModeTests.RubbleSignal_EndToEndCompletion" methodname="RubbleSignal_EndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="1836505391" result="Passed" start-time="2026-10-04 23:20:59Z" end-time="2026-10-04 23:21:05Z" duration="6.764154" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1027" name="StoryEvacuation25DPlayModeTests" fullname="StoryEvacuation25DPlayModeTests" classname="StoryEvacuation25DPlayModeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-04 23:21:05Z" end-time="2026-10-04 23:21:11Z" duration="5.254803" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1028" name="FifteenStageRoute_PlaysToAssemblySuccess" fullname="StoryEvacuation25DPlayModeTests.FifteenStageRoute_PlaysToAssemblySuccess" methodname="FifteenStageRoute_PlaysToAssemblySuccess" classname="StoryEvacuation25DPlayModeTests" runstate="Runnable" seed="1482086015" result="Passed" start-time="2026-10-04 23:21:05Z" end-time="2026-10-04 23:21:11Z" duration="5.247247" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="180000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Stair choice selected: WallSide
+Stair choice selected: WallSide
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1053" name="StoryRebuildWalkthroughPlayModeTests" fullname="StoryRebuildWalkthroughPlayModeTests" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-04 23:21:11Z" end-time="2026-10-04 23:24:02Z" duration="171.346075" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1054" name="Story01_Preparation_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story01_Preparation_PlaysToCompletion" methodname="Story01_Preparation_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="1932383921" result="Passed" start-time="2026-10-04 23:21:11Z" end-time="2026-10-04 23:22:04Z" duration="53.670853" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor test) (at Assets/Editor/StoryPlaytestRunner.cs:134)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass12_0.<TestStarted>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:81)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor result) (at Assets/Editor/StoryPlaytestRunner.cs:146)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass14_0.<TestFinished>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:95)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+]]></output>
+        </test-case>
+        <test-case id="1055" name="Story02_HomeSafety_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story02_HomeSafety_PlaysToCompletion" methodname="Story02_HomeSafety_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="682881117" result="Passed" start-time="2026-10-04 23:22:04Z" end-time="2026-10-04 23:22:32Z" duration="27.914239" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor test) (at Assets/Editor/StoryPlaytestRunner.cs:134)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass12_0.<TestStarted>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:81)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor result) (at Assets/Editor/StoryPlaytestRunner.cs:146)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass14_0.<TestFinished>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:95)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+]]></output>
+        </test-case>
+        <test-case id="1056" name="Story03_Quake_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story03_Quake_PlaysToCompletion" methodname="Story03_Quake_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="239371779" result="Passed" start-time="2026-10-04 23:22:32Z" end-time="2026-10-04 23:23:34Z" duration="61.178309" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor test) (at Assets/Editor/StoryPlaytestRunner.cs:134)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass12_0.<TestStarted>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:81)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+Story_03_Quake completed in 179,0 seconds with 0 mistakes.
+DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor result) (at Assets/Editor/StoryPlaytestRunner.cs:146)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass14_0.<TestFinished>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:95)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+]]></output>
+        </test-case>
+        <test-case id="1057" name="Story04_Evacuation_PlaysToCompletion" fullname="StoryRebuildWalkthroughPlayModeTests.Story04_Evacuation_PlaysToCompletion" methodname="Story04_Evacuation_PlaysToCompletion" classname="StoryRebuildWalkthroughPlayModeTests" runstate="Runnable" seed="1708927331" result="Passed" start-time="2026-10-04 23:23:34Z" end-time="2026-10-04 23:24:02Z" duration="28.541494" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="Timeout" value="1500000" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor test) (at Assets/Editor/StoryPlaytestRunner.cs:134)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass12_0.<TestStarted>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:81)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+DirectoryNotFoundException: Could not find a part of the path "D:\DepremIMO\Deprem\Temp\StoryPlayabilityAudit\playtest_results.txt".
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) (at <152439c387994a8da523328132967f8d>:0)
+System.IO.StreamWriter..ctor (System.String path, System.Boolean append) (at <152439c387994a8da523328132967f8d>:0)
+(wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool)
+System.IO.File.AppendAllText (System.String path, System.String contents) (at <152439c387994a8da523328132967f8d>:0)
+StoryPlaytestRunner+ResultWriter.Append (System.String line) (at Assets/Editor/StoryPlaytestRunner.cs:152)
+StoryPlaytestRunner+ResultWriter.TestFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor result) (at Assets/Editor/StoryPlaytestRunner.cs:146)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator+<>c__DisplayClass14_0.<TestFinished>b__0 (UnityEditor.TestTools.TestRunner.Api.ICallbacks callbacks) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:95)
+UnityEditor.TestTools.TestRunner.Api.CallbacksDelegator.TryInvokeAllCallbacks (System.Action`1[T] callbackAction) (at ./Library/PackageCache/com.unity.test-framework@1f954279c37e/UnityEditor.TestRunner/Api/CallbacksDelegator.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1069" name="ThreeDPolishPlayModeTests" fullname="ThreeDPolishPlayModeTests" classname="ThreeDPolishPlayModeTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-04 23:24:02Z" end-time="2026-10-04 23:24:35Z" duration="33.025203" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1073" name="ResetStage_CancelsPendingSnapAndDelayedAdvance" fullname="ThreeDPolishPlayModeTests.ResetStage_CancelsPendingSnapAndDelayedAdvance" methodname="ResetStage_CancelsPendingSnapAndDelayedAdvance" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1400412724" result="Passed" start-time="2026-10-04 23:24:02Z" end-time="2026-10-04 23:24:06Z" duration="4.205443" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1076" name="ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause" fullname="ThreeDPolishPlayModeTests.ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause" methodname="ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="2140748368" result="Passed" start-time="2026-10-04 23:24:06Z" end-time="2026-10-04 23:24:11Z" duration="4.322800" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1071" name="ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase" fullname="ThreeDPolishPlayModeTests.ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase" methodname="ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1429879500" result="Passed" start-time="2026-10-04 23:24:11Z" end-time="2026-10-04 23:24:26Z" duration="15.310479" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1072" name="SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty" fullname="ThreeDPolishPlayModeTests.SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty" methodname="SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1257479835" result="Passed" start-time="2026-10-04 23:24:26Z" end-time="2026-10-04 23:24:29Z" duration="2.998685" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1074" name="StageCamera_PauseKeepsFrameAndResumesTransition" fullname="ThreeDPolishPlayModeTests.StageCamera_PauseKeepsFrameAndResumesTransition" methodname="StageCamera_PauseKeepsFrameAndResumesTransition" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1456537008" result="Passed" start-time="2026-10-04 23:24:29Z" end-time="2026-10-04 23:24:32Z" duration="3.469707" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1070" name="StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble" fullname="ThreeDPolishPlayModeTests.StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble" methodname="StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="1786168466" result="Passed" start-time="2026-10-04 23:24:32Z" end-time="2026-10-04 23:24:33Z" duration="0.641267" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1075" name="VehicleAndFire_PauseFreezesGameplayAndResumes" fullname="ThreeDPolishPlayModeTests.VehicleAndFire_PauseFreezesGameplayAndResumes" methodname="VehicleAndFire_PauseFreezesGameplayAndResumes" classname="ThreeDPolishPlayModeTests" runstate="Runnable" seed="333685458" result="Passed" start-time="2026-10-04 23:24:33Z" end-time="2026-10-04 23:24:35Z" duration="2.050468" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: D:\DepremIMO\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

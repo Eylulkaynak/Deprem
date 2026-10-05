@@ -1,0 +1,23 @@
+{
+  "index": 200,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tüm düğmelere basıp açılan ilk katta inersin.",
+  "sourceFilename": "0f20bdf2e8d7a18a44f39eab.mp3",
+  "sourceSha256": "0fd7bffc95f7025403d5244dc9150ba86eb4ca34df1113375588026158fc32f0",
+  "importedAt": "2026-10-01T03:35:53.050299+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.359184"
+    }
+  }
+}

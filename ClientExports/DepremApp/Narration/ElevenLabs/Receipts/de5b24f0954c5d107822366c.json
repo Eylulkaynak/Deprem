@@ -1,0 +1,23 @@
+{
+  "index": 139,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Cam tehlikelidir. Pencere kenarı güvenli değildir.",
+  "sourceFilename": "de5b24f0954c5d107822366c.mp3",
+  "sourceSha256": "3a2337cd0f132db689c65a66791a1d2abd1ceb343540d11d961144728728e48d",
+  "importedAt": "2026-10-01T03:27:18.208123+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

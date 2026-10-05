@@ -45,7 +45,7 @@ namespace YanYana.Editor
         {
             var prefab=AssetDatabase.LoadAssetAtPath<GameObject>(YanYanaCharacterVariants.Root+"/"+source+".prefab");
             var actor=(GameObject)PrefabUtility.InstantiatePrefab(prefab,castRoot.transform);actor.name=name;YanYanaCharacterStyle.NormalizeRoot(actor);actor.transform.position=at;actor.transform.rotation=Quaternion.Euler(0,180,0);
-            var anim=actor.GetComponentInChildren<Animator>();anim.runtimeAnimatorController=actorController;anim.Rebind();anim.Update(0);
+            var anim=actor.GetComponentInChildren<Animator>();anim.runtimeAnimatorController=YanYanaAdultLocomotion.EnsureController(actorController);anim.Rebind();anim.Update(0);
             GroundAnimatedVisual(actor);
             if(!moving)return actor;
             var agent=actor.AddComponent<NavMeshAgent>();agent.radius=.21f;agent.height=1.7f;agent.speed=1.15f;agent.acceleration=5;

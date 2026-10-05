@@ -1,0 +1,23 @@
+{
+  "index": 380,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Panik düşünmeyi zorlaştırır. Sakin kalmak doğru adımları atmanı sağlar.",
+  "sourceFilename": "2e1e39b5ad4de6ef8f32e187.mp3",
+  "sourceSha256": "78a1a0f5d44937b65a5c1891adb447594367628606db4906d02753ed8266231c",
+  "importedAt": "2026-10-01T04:15:04.506275+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.684082"
+    }
+  }
+}

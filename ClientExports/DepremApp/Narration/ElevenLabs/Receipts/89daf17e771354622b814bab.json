@@ -1,0 +1,23 @@
+{
+  "index": 363,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sen gücünün yettiğince yardım edersin. Ağır ve tehlikeli işleri büyükler ve kurtarma ekipleri yapar.",
+  "sourceFilename": "89daf17e771354622b814bab.mp3",
+  "sourceSha256": "d6b0360680d336a90f9797c84bf9c0bed23a883f483c893d199977a1b07d7374",
+  "importedAt": "2026-10-01T04:13:10.191612+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.355918"
+    }
+  }
+}

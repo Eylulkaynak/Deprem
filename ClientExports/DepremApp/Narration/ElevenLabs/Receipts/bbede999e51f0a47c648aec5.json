@@ -1,0 +1,23 @@
+{
+  "index": 208,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Araçtayken deprem oldu. Nerede durmak en güvenli?",
+  "sourceFilename": "bbede999e51f0a47c648aec5.mp3",
+  "sourceSha256": "14d78917545494785bc67e4a7708cc0799c93a22bb512d65573ffd2098005ae3",
+  "importedAt": "2026-10-01T03:37:02.515422+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

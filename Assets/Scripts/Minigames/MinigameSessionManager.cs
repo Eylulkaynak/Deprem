@@ -229,6 +229,7 @@ namespace Deprem.Minigames
         [SerializeField] private TMP_Text resultDetailText;
         [SerializeField] private TMP_Text resultStarsText;
         [SerializeField] private TMP_Text resultCoinsText;
+        [SerializeField] private TMP_Text resultNavigationLabel;
 
         [Header("Audio")]
         [SerializeField] private AudioSource voiceSource;
@@ -265,6 +266,7 @@ namespace Deprem.Minigames
         private float holdStartedAt;
         private Coroutine transitionRoutine;
         private Coroutine cameraRoutine;
+        private Coroutine acceptedActionRoutine;
         private Coroutine feedbackRoutine;
         private int lastDisplayedSecond = int.MinValue;
         private Vector2 gestureMotionOrigin;
@@ -277,6 +279,8 @@ namespace Deprem.Minigames
         public int StageCount => stages?.Length ?? 0;
         public bool IsCompleted => completed;
         public bool ExternalResultOnly => externalResultOnly;
+        public MinigameStageDefinition VisualStage => stages != null && activeStageIndex >= 0 && activeStageIndex < stages.Length
+            ? stages[activeStageIndex] : null;
 
         private IEnumerator Start()
         {
@@ -294,10 +298,15 @@ namespace Deprem.Minigames
                 yield break;
             }
 
-            sessionStartedAt = Time.unscaledTime;
+            sessionStartedAt = Time.time;
             score = 1000;
             if (titleText != null)
-                titleText.text = displayName;
+                titleText.text = MinigameScenarioJourney.IsCurrentScene ? MinigameScenarioJourney.Phase : displayName;
+            if (resultNavigationLabel == null && resultPanel != null)
+            {
+                var navigation = resultPanel.transform.Find("ResultCard/HubButton");
+                if (navigation != null) resultNavigationLabel = navigation.GetComponentInChildren<TMP_Text>(true);
+            }
             if (resultPanel != null)
                 resultPanel.SetActive(false);
             if (feedbackGroup != null)
@@ -328,6 +337,11 @@ namespace Deprem.Minigames
 
         private void Update()
         {
+            if (Time.timeScale <= 0f)
+            {
+                CancelPointerAction();
+                return;
+            }
             UpdateVoiceDucking();
             FadeFeedbackWhenIdle();
             AnimateFeedbackToast();
@@ -340,7 +354,7 @@ namespace Deprem.Minigames
                 return;
 
             MinigameStageDefinition stage = stages[activeStageIndex];
-            float stageElapsed = Time.unscaledTime - stageStartedAt;
+            float stageElapsed = Time.time - stageStartedAt;
             UpdateStageTimer(stage, stageElapsed);
             if (!hintCharged && stage.hintDelaySeconds > 0f && stageElapsed >= stage.hintDelaySeconds)
                 RevealHint(stage);
@@ -454,12 +468,19 @@ namespace Deprem.Minigames
             if (externalResultOnly || completed || activeStageIndex < 0)
                 return;
 
+            // A reset owns the stage: an earlier snap or delayed transition must
+            // never award a success or advance it after its objects were restored.
+            if (transitionRoutine != null) StopCoroutine(transitionRoutine);
+            if (acceptedActionRoutine != null) StopCoroutine(acceptedActionRoutine);
+            if (cameraRoutine != null) StopCoroutine(cameraRoutine);
+            transitionRoutine = acceptedActionRoutine = cameraRoutine = null;
+            CancelPointerAction();
             MinigameStageDefinition stage = stages[activeStageIndex];
             pointerAction = null;
             inputLocked = false;
             stageSuccessCount = 0;
             hintCharged = false;
-            stageStartedAt = Time.unscaledTime;
+            stageStartedAt = Time.time;
             lastDisplayedSecond = int.MinValue;
             if (holdProgress != null)
                 holdProgress.fillAmount = 0f;
@@ -471,6 +492,17 @@ namespace Deprem.Minigames
             stage.onReset.Invoke();
             PlayStageVoice(stage);
             UpdateHud(stage);
+            cameraRoutine = StartCoroutine(EnterStageCamera(stage));
+        }
+
+        private void CancelPointerAction()
+        {
+            if (pointerAction != null && pointerAction.TargetTransform != null)
+                pointerAction.TargetTransform.SetPositionAndRotation(pointerObjectStart, pointerAction.startRotation);
+            pointerAction = null;
+            // Dismissing a modal or resetting while pressed requires a new press.
+            pointerPressLatched = true;
+            if (holdProgress != null) holdProgress.fillAmount = 0f;
         }
 
         public void ReportExternalMistake()
@@ -501,6 +533,8 @@ namespace Deprem.Minigames
 
         public void ReturnToHub()
         {
+            if (completed && MinigameScenarioJourney.ContinueAfterCompletion()) return;
+            MinigameScenarioJourney.Cancel();
             if (!string.IsNullOrWhiteSpace(hubSceneName))
                 SceneManager.LoadScene(hubSceneName);
         }
@@ -536,7 +570,7 @@ namespace Deprem.Minigames
 
             activeStageIndex = index;
             stageSuccessCount = 0;
-            stageStartedAt = Time.unscaledTime;
+            stageStartedAt = Time.time;
             hintCharged = false;
             inputLocked = false;
             lastDisplayedSecond = int.MinValue;
@@ -576,7 +610,7 @@ namespace Deprem.Minigames
             float elapsed = 0f;
             while (elapsed < duration)
             {
-                elapsed += Time.unscaledDeltaTime;
+                elapsed += Time.deltaTime;
                 float t = Mathf.Clamp01(elapsed / Mathf.Max(0.01f, duration));
                 float eased = t * t * (3f - 2f * t);
                 worldCamera.transform.SetPositionAndRotation(
@@ -587,7 +621,7 @@ namespace Deprem.Minigames
             }
             worldCamera.transform.SetPositionAndRotation(targetPosition, targetRotation);
             worldCamera.fieldOfView = targetFov;
-            stageStartedAt = Time.unscaledTime;
+            stageStartedAt = Time.time;
             lastDisplayedSecond = int.MinValue;
             SetStageGuides(stage, stage.showGuidesOnEnter);
             inputLocked = false;
@@ -600,7 +634,7 @@ namespace Deprem.Minigames
             if (gestureCoachGroup != null)
                 gestureCoachGroup.alpha = 0.42f;
             pointerStart = screenPosition;
-            holdStartedAt = Time.unscaledTime;
+            holdStartedAt = Time.time;
             Transform target = action.TargetTransform;
             pointerObjectStart = target.position;
             dragPlane = new Plane(worldCamera.transform.forward, target.position);
@@ -642,7 +676,7 @@ namespace Deprem.Minigames
                         holdProgress.fillAmount = 0f;
                     return;
                 }
-                float progress = Mathf.Clamp01((Time.unscaledTime - holdStartedAt) / Mathf.Max(0.25f, stage.holdDurationSeconds));
+                float progress = Mathf.Clamp01((Time.time - holdStartedAt) / Mathf.Max(0.25f, stage.holdDurationSeconds));
                 if (holdProgress != null)
                     holdProgress.fillAmount = progress;
                 if (progress >= 1f)
@@ -663,7 +697,7 @@ namespace Deprem.Minigames
                     pointerAction.TargetTransform.position = Vector3.Lerp(
                         pointerAction.TargetTransform.position,
                         targetPosition,
-                        1f - Mathf.Exp(-18f * Time.unscaledDeltaTime));
+                        1f - Mathf.Exp(-18f * Time.deltaTime));
                 }
             }
 
@@ -719,7 +753,7 @@ namespace Deprem.Minigames
             action.onAccepted.Invoke();
             PlaySfx(action.acceptedSfx);
             if (action.dragTarget != null || action.hideTargetAfterAccept)
-                StartCoroutine(AnimateAcceptedAction(stage, action));
+                acceptedActionRoutine = StartCoroutine(AnimateAcceptedAction(stage, action));
             else
             {
                 if (action.acceptedVisual != null)
@@ -751,7 +785,7 @@ namespace Deprem.Minigames
             float elapsed = 0f;
             while (elapsed < duration)
             {
-                elapsed += Time.unscaledDeltaTime;
+                elapsed += Time.deltaTime;
                 float t = Mathf.Clamp01(elapsed / duration);
                 float eased = t * t * (3f - 2f * t);
                 target.position = Vector3.Lerp(fromPosition, toPosition, eased) + Vector3.up * (Mathf.Sin(t * Mathf.PI) * 0.12f);
@@ -763,6 +797,7 @@ namespace Deprem.Minigames
                 action.acceptedVisual.SetActive(true);
             if (action.hideTargetAfterAccept)
                 target.gameObject.SetActive(false);
+            acceptedActionRoutine = null;
             inputLocked = false;
             RegisterSuccess(stage, action);
         }
@@ -792,8 +827,8 @@ namespace Deprem.Minigames
 
         private IEnumerator AdvanceAfterDelay()
         {
-            float endAt = Time.unscaledTime + Mathf.Max(0f, stageTransitionSeconds);
-            while (Time.unscaledTime < endAt)
+            float endAt = Time.time + Mathf.Max(0f, stageTransitionSeconds);
+            while (Time.time < endAt)
                 yield return null;
             transitionRoutine = null;
             BeginStage(activeStageIndex + 1);
@@ -815,7 +850,7 @@ namespace Deprem.Minigames
             PlayAnimations(stage.playOnReset);
             stage.onReset.Invoke();
             ShowFeedback(string.IsNullOrWhiteSpace(feedback) ? "Aynı adımı güvenle yeniden dene." : feedback, false);
-            stageStartedAt = Time.unscaledTime;
+            stageStartedAt = Time.time;
             hintCharged = false;
             UpdateHud(stage);
         }
@@ -846,11 +881,14 @@ namespace Deprem.Minigames
         {
             completed = true;
             inputLocked = true;
+            pointerAction = null;
+            if (worldGestureGroup != null)
+                worldGestureGroup.alpha = 0f;
             if (gestureCoachGroup != null)
                 gestureCoachGroup.alpha = 0f;
             silenceSnapshotRequested = false;
             score = resultScore;
-            float elapsed = Mathf.Max(0.01f, Time.unscaledTime - sessionStartedAt);
+            float elapsed = Mathf.Max(0.01f, Time.time - sessionStartedAt);
             progressManager.RecordResult(minigameId, stars, resultScore, coins, elapsed);
             if (resultPanel != null)
                 resultPanel.SetActive(true);
@@ -862,6 +900,14 @@ namespace Deprem.Minigames
                 resultStarsText.text = stars + " / 3 YILDIZ";
             if (resultCoinsText != null)
                 resultCoinsText.text = "+" + coins + " İMO COIN";
+            if (MinigameScenarioJourney.IsCurrentScene)
+            {
+                if (resultNavigationLabel != null)
+                    resultNavigationLabel.text = MinigameScenarioJourney.IsLastStep ? "SENARYOYU BİTİR" : "SONRAKİ AŞAMA";
+                if (resultDetailText != null)
+                    resultDetailText.text += "\n" + (MinigameScenarioJourney.StepIndex + 1) + " / " + MinigameScenarioJourney.StepCount +
+                        " · " + MinigameScenarioJourney.NextPhase;
+            }
             if (gameplaySnapshot != null)
                 gameplaySnapshot.TransitionTo(0.2f);
         }
@@ -911,7 +957,7 @@ namespace Deprem.Minigames
                 return;
             float displayed = stage.stageTimeLimitSeconds > 0f
                 ? Mathf.Max(0f, stage.stageTimeLimitSeconds - elapsed)
-                : Mathf.Max(0f, Time.unscaledTime - sessionStartedAt);
+                : Mathf.Max(0f, Time.time - sessionStartedAt);
             int second = Mathf.CeilToInt(displayed);
             if (second == lastDisplayedSecond)
                 return;
@@ -1034,7 +1080,7 @@ namespace Deprem.Minigames
             if (feedbackGroup != null)
             {
                 feedbackGroup.alpha = 1f;
-                feedbackPulseStartedAt = Time.unscaledTime;
+                feedbackPulseStartedAt = Time.time;
                 if (feedbackRect != null)
                     feedbackRect.localScale = Vector3.one * 0.88f;
                 if (feedbackRoutine != null)
@@ -1045,8 +1091,8 @@ namespace Deprem.Minigames
 
         private IEnumerator HideFeedbackAfter(float seconds)
         {
-            float hideAt = Time.unscaledTime + seconds;
-            while (Time.unscaledTime < hideAt)
+            float hideAt = Time.time + seconds;
+            while (Time.time < hideAt)
                 yield return null;
             feedbackRoutine = null;
         }
@@ -1055,14 +1101,14 @@ namespace Deprem.Minigames
         {
             if (feedbackGroup == null || feedbackRoutine != null || feedbackGroup.alpha <= 0f)
                 return;
-            feedbackGroup.alpha = Mathf.MoveTowards(feedbackGroup.alpha, 0f, Time.unscaledDeltaTime * 2.6f);
+            feedbackGroup.alpha = Mathf.MoveTowards(feedbackGroup.alpha, 0f, Time.deltaTime * 2.6f);
         }
 
         private void AnimateFeedbackToast()
         {
             if (feedbackRect == null || feedbackGroup == null || feedbackGroup.alpha <= 0f)
                 return;
-            float elapsed = Time.unscaledTime - feedbackPulseStartedAt;
+            float elapsed = Time.time - feedbackPulseStartedAt;
             float t = Mathf.Clamp01(elapsed / 0.22f);
             float overshoot = 1f + Mathf.Sin(t * Mathf.PI) * 0.055f;
             feedbackRect.localScale = Vector3.one * Mathf.Lerp(0.88f, overshoot, t);
@@ -1162,7 +1208,7 @@ namespace Deprem.Minigames
                 showTrail = true;
             }
 
-            float cycle = Mathf.Repeat(Time.unscaledTime, 1.35f) / 1.35f;
+            float cycle = Mathf.Repeat(Time.time, 1.35f) / 1.35f;
             float eased = cycle * cycle * (3f - 2f * cycle);
             worldGestureRoot.anchoredPosition = sourceLocal + movement * eased;
             worldGestureRoot.localScale = Vector3.one * (stage.gesture == MinigameGesture.Tap ||
@@ -1201,7 +1247,7 @@ namespace Deprem.Minigames
             worldGestureGroup.alpha = Mathf.MoveTowards(
                 worldGestureGroup.alpha,
                 inputLocked || pointerAction != null ? 0.18f : 0.96f,
-                Time.unscaledDeltaTime * 7f);
+                Time.deltaTime * 7f);
         }
 
         private static MinigameActionDefinition NextGuideAction(MinigameStageDefinition stage)
@@ -1247,7 +1293,7 @@ namespace Deprem.Minigames
                         cue.characterRoot.rotation = immediate
                             ? target
                             : Quaternion.Slerp(cue.characterRoot.rotation, target,
-                                1f - Mathf.Exp(-9f * Time.unscaledDeltaTime));
+                                1f - Mathf.Exp(-9f * Time.deltaTime));
                     }
                 }
                 if (immediate && cue.animator != null && !string.IsNullOrWhiteSpace(cue.enterTrigger))
@@ -1296,7 +1342,7 @@ namespace Deprem.Minigames
         {
             if (gestureMotionRoot == null || gestureCoachGroup == null)
                 return;
-            float cycle = Mathf.Repeat(Time.unscaledTime, 1.35f) / 1.35f;
+            float cycle = Mathf.Repeat(Time.time, 1.35f) / 1.35f;
             float eased = cycle * cycle * (3f - 2f * cycle);
             Vector2 offset = Vector2.zero;
             float scale = 1f;
@@ -1324,7 +1370,7 @@ namespace Deprem.Minigames
             gestureCoachGroup.alpha = Mathf.MoveTowards(
                 gestureCoachGroup.alpha,
                 targetAlpha,
-                Time.unscaledDeltaTime * 6f);
+                Time.deltaTime * 6f);
         }
 
         private void UpdateSpeakerBadge(string subtitle)

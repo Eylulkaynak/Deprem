@@ -1,0 +1,23 @@
+{
+  "index": 489,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem güvenliği sarsıntı anında değil, düzenli hazırlıkla başlar. Yaşam ve çalışma alanında devrilebilecek ağır eşyaları belirle. Dolap, raf, kombi, televizyon ve büyük beyaz eşyaları sabitle. Yatak, koltuk ve çalışma masasını cam ve ağır eşya hattından uzaklaştır. Binanın tahliye yolu, toplanma alanı ve kapatma vanalarını öğren. Bugün: Evde veya işte 3 sabitleme ihtiyacını not al.",
+  "sourceFilename": "d82aba63b0eb3f56984c4f45.mp3",
+  "sourceSha256": "5045fba0a96e8eba85b9b0e86864d40914f355a19657635723e51a55143856a8",
+  "importedAt": "2026-10-01T04:41:23.765553+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "28.802449"
+    }
+  }
+}

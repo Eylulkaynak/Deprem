@@ -1,0 +1,23 @@
+{
+  "index": 636,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yola otur",
+  "sourceFilename": "30d4380e09a0bcb41ec7dbe5.mp3",
+  "sourceSha256": "a7272f5bc4b8eea76cd122d80904b463050143fa4008ef17b5fc6d5db6042fa7",
+  "importedAt": "2026-10-01T05:09:08.143103+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.426122"
+    }
+  }
+}

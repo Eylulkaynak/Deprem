@@ -1,0 +1,23 @@
+{
+  "index": 34,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntıda asla yapma",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_16_51__s50_v4.mp3",
+  "sourceSha256": "2d5373338aeb906917c2a216cbb216f5beaa7a8bcc91cc1693a70428cdefc113",
+  "importedAt": "2026-10-01T00:31:52.808725+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.627755"
+    }
+  }
+}

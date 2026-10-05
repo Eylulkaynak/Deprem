@@ -1,0 +1,23 @@
+{
+  "index": 557,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kontrollü ve ortak plana uygun tahliye daha güvenlidir.",
+  "sourceFilename": "5b6f64223c7ba65e2c99b701.mp3",
+  "sourceSha256": "7aab87f9da1598ca1e579bb49e0cabe7339b7ca1063f44c1df49362160845ab0",
+  "importedAt": "2026-10-01T04:49:37.955454+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

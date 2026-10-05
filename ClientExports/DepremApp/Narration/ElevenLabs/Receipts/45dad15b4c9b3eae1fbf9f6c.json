@@ -1,0 +1,23 @@
+{
+  "index": 384,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kopmuş tel hâlâ elektrik taşıyor olabilir. Asla dokunma, uzak dur.",
+  "sourceFilename": "45dad15b4c9b3eae1fbf9f6c.mp3",
+  "sourceSha256": "4f52f147de4d5a6bb120b8c989f01d14298666bc6c8f263984ac7ccb809c9d8b",
+  "importedAt": "2026-10-01T04:15:28.011408+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.109388"
+    }
+  }
+}

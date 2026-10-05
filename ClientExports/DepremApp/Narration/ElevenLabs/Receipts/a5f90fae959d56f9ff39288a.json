@@ -1,0 +1,23 @@
+{
+  "index": 119,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başını ve enseni iki kolunla kapatmak, düşen küçük eşyalardan korur.",
+  "sourceFilename": "a5f90fae959d56f9ff39288a.mp3",
+  "sourceSha256": "8832d0c468d6dfb7c7a914ae47e831a155fdec168738db63609a20886a102363",
+  "importedAt": "2026-10-01T01:10:55.309968+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

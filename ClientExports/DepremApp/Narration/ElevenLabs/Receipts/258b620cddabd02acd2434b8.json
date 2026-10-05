@@ -1,0 +1,23 @@
+{
+  "index": 458,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aşağıdakilerden hangisi deprem öncesi risk azaltmanın en doğru örneğidir?",
+  "sourceFilename": "258b620cddabd02acd2434b8.mp3",
+  "sourceSha256": "a64c378041aa9bb0e9b86567da49ba2bae28b4885da9e1ac91a0c77099f9923f",
+  "importedAt": "2026-10-01T04:38:02.395077+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

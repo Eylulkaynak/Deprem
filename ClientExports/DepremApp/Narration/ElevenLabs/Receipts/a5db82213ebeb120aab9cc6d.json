@@ -1,0 +1,23 @@
+{
+  "index": 24,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sana küçük bir soru soracağım. Resimlere bak ve güvenli davranışı seç. Düşünmek için zamanın var.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_11_46_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "d135ff7f841203f9b8f63fd5e32dafa1cdf69ae06d2c73899e379d3f6ac3214b",
+  "importedAt": "2026-10-01T00:12:25.542275+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.199184"
+    }
+  }
+}

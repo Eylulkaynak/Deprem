@@ -1,0 +1,23 @@
+{
+  "index": 473,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bina ve direkler",
+  "sourceFilename": "b591fa24790ed2fe02ac9cc6.mp3",
+  "sourceSha256": "e25a5245ad714ff221e882c2fa5f047e29dc788a70fb5004e2a903850197a1a8",
+  "importedAt": "2026-10-01T04:39:31.869980+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.000816"
+    }
+  }
+}

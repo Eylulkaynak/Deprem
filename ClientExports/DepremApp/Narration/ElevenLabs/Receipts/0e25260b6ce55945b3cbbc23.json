@@ -1,0 +1,23 @@
+{
+  "index": 73,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Düdük çalmak bağırmaktan daha az yorar ve daha uzağa duyulur.",
+  "sourceFilename": "0e25260b6ce55945b3cbbc23.mp3",
+  "sourceSha256": "e0967ea533e1916b42efe77058835a8eab0dd8b70a0cc246027f238249f91f66",
+  "importedAt": "2026-10-01T01:02:14.957762+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.795918"
+    }
+  }
+}

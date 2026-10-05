@@ -1,0 +1,23 @@
+{
+  "index": 407,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hayatta sadece bir kez",
+  "sourceFilename": "8c6f15bc75d4a079cb0fcc7c.mp3",
+  "sourceSha256": "342f7611fda1767048706c524c0cb9b052b365a59b2cf335769a6909af0483f0",
+  "importedAt": "2026-10-01T04:17:55.405504+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

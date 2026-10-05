@@ -1,0 +1,23 @@
+{
+  "index": 619,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Toplanma alanında ne yaparsın?",
+  "sourceFilename": "ffc51c1b6a4616b09ca290a8.mp3",
+  "sourceSha256": "86f0a599fe8df101fbdca5fa6d359d35c24ca576e581172027de90e8e6f5e29f",
+  "importedAt": "2026-10-01T05:06:45.591740+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

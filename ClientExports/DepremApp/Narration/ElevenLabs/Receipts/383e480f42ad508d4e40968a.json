@@ -1,0 +1,23 @@
+{
+  "index": 633,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yetişkin sorumluluğu sadece bireysel değil; ortak yaşam alanlarını da kapsar. Apartman veya iş yerinde tahliye, toplanma ve görev paylaşımı konuşulmalı. Yangın söndürücü, ilk yardım dolabı ve acil aydınlatma gibi ekipmanlar kontrol edilmeli. Kat sorumlusu, engelli destek kişisi ve dış iletişim sorumlusu belirlenmeli. Hasar şüphesinde binaya dönüş kararını yetkili değerlendirmesine bırak. Bugün: Yönetici veya ekip lideriyle afet planı gündemi aç.",
+  "sourceFilename": "383e480f42ad508d4e40968a.mp3",
+  "sourceSha256": "c70c0dda3ae2bee2e59ff32b6c3eac16b018bae562b39c6e384c3e4b3db2c719",
+  "importedAt": "2026-10-01T05:08:41.767077+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "30.787755"
+    }
+  }
+}

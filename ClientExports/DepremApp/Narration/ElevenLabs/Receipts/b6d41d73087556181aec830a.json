@@ -1,0 +1,23 @@
+{
+  "index": 462,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başını koruyup sağlam bir eşyanın yanında kal.",
+  "sourceFilename": "b6d41d73087556181aec830a.mp3",
+  "sourceSha256": "4d66426a7756b337d40e60a80028edb458b893a74d96ca558b01c89181f698a1",
+  "importedAt": "2026-10-01T04:28:55.675450+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.437551"
+    }
+  }
+}

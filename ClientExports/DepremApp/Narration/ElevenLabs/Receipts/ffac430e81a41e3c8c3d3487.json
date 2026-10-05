@@ -1,0 +1,23 @@
+{
+  "index": 453,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Açık alana git",
+  "sourceFilename": "ffac430e81a41e3c8c3d3487.mp3",
+  "sourceSha256": "55eefb2258338621c862050afeb6ba3344cafc0182db588229db091d1f384769",
+  "importedAt": "2026-10-01T04:27:42.588668+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

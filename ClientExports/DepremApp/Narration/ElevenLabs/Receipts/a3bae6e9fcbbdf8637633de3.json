@@ -1,0 +1,23 @@
+{
+  "index": 217,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Arabada beklemek seni düşen parçalardan korur.",
+  "sourceFilename": "a3bae6e9fcbbdf8637633de3.mp3",
+  "sourceSha256": "ceca1f6e14a2480be4194941a46c6abea8be7d07380004c0387450405579da05",
+  "importedAt": "2026-10-01T03:43:27.488791+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.404082"
+    }
+  }
+}

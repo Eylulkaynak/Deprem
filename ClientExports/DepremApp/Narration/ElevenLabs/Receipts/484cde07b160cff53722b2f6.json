@@ -1,0 +1,23 @@
+{
+  "index": 322,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Boruya vurmak hem duyulur hem de enerjini korur.",
+  "sourceFilename": "484cde07b160cff53722b2f6.mp3",
+  "sourceSha256": "a201e5bed6df5cf4c69cf5cee414d200c3481b39f402b7316fc7e15d7a38b8a9",
+  "importedAt": "2026-10-01T04:08:34.557554+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

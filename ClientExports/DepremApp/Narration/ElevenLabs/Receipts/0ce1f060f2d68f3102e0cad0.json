@@ -1,0 +1,23 @@
+{
+  "index": 325,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Toz ciğerlerine kaçabilir. Ağzını ve burnunu bir bezle kapatmak seni korur.",
+  "sourceFilename": "0ce1f060f2d68f3102e0cad0.mp3",
+  "sourceSha256": "669333b92c0e9c1dda0ec0a8ebe9d87f0981b7f566639a9ba3b254435285cb0c",
+  "importedAt": "2026-10-01T04:09:04.754024+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

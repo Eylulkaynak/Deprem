@@ -1,0 +1,23 @@
+{
+  "index": 224,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Her sarsıntıda çök, kapan, tutun en güvenlisi.",
+  "sourceFilename": "1ec3cc91548d0e3edc27a936.mp3",
+  "sourceSha256": "1a24fa16d82757784e333d50f4533dd30d102fcce6a47d63d52537cd6d378a42",
+  "importedAt": "2026-10-01T03:48:41.375391+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.266122"
+    }
+  }
+}

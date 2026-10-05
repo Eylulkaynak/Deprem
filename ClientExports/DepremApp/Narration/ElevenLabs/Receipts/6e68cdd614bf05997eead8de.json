@@ -1,0 +1,23 @@
+{
+  "index": 409,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikat sireninde doğru hareket hangisi?",
+  "sourceFilename": "6e68cdd614bf05997eead8de.mp3",
+  "sourceSha256": "58be92859825550a63f453cceb7dac3189dd991989d718586669095e0d01014c",
+  "importedAt": "2026-10-01T04:18:07.247726+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.515918"
+    }
+  }
+}

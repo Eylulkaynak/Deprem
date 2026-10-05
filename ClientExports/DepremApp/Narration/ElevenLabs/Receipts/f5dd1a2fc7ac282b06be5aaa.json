@@ -1,0 +1,23 @@
+{
+  "index": 122,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Başını ve enseni kapattın.",
+  "sourceFilename": "f5dd1a2fc7ac282b06be5aaa.mp3",
+  "sourceSha256": "610585c30f6cedcf53126aa2b25e07df6b9d25a96a615f3131171b7831f54de6",
+  "importedAt": "2026-10-01T01:10:59.836797+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 43,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Söylentiye İnanma",
+  "sourceFilename": "f6ee5cc727621abd7e46041e.mp3",
+  "sourceSha256": "4d196050cca3f08385bdb4cfe3cc1d8bcd895e8531df837f9018b409a72ea613",
+  "importedAt": "2026-10-01T00:56:28.904055+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

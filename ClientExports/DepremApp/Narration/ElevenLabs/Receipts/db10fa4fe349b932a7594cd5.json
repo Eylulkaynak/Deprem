@@ -1,0 +1,23 @@
+{
+  "index": 146,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet! Sarkan ve ağır eşyalardan uzaklaşırız.",
+  "sourceFilename": "db10fa4fe349b932a7594cd5.mp3",
+  "sourceSha256": "339886d519f169b30f9dcb247f4e3ac65940b5f66c8f813b345e03ccbefacbec",
+  "importedAt": "2026-10-01T03:28:21.369237+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 183,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sınıfta ders sırasında deprem başladı. Ne yaparsın?",
+  "sourceFilename": "36d25365a2828a3288108d3a.mp3",
+  "sourceSha256": "296ae03fbe666b850cceba642a1ac051a4020721122fbc8729741e43bf42c4bd",
+  "importedAt": "2026-10-01T03:34:07.418619+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

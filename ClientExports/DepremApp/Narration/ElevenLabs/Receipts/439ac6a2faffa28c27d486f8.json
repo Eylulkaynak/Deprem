@@ -1,0 +1,23 @@
+{
+  "index": 19,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dışarıda hasarlı binalardan, kırık camlardan ve molozlardan uzak dur. Yerde bir elektrik teli görürsen yaklaşma ve dokunma. Bir büyüğüne haber ver. Güvenli yolu birlikte seçin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_10_55_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "05a2134a50b72aa13e222ffee6ac6d64887c1e17c697e18507f4af2b6e3dc90b",
+  "importedAt": "2026-10-01T00:11:22.317343+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "12.162449"
+    }
+  }
+}

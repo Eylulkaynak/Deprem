@@ -1,0 +1,23 @@
+{
+  "index": 142,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Odanın iç köşesinden",
+  "sourceFilename": "d52151d0df3c354bce274cb0.mp3",
+  "sourceSha256": "966e05e485c2974df1d7c4f42fb0721b83a138c387841056b3ff62c9b1f9ea92",
+  "importedAt": "2026-10-01T03:28:15.491237+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.000816"
+    }
+  }
+}

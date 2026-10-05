@@ -1,0 +1,23 @@
+{
+  "index": 58,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önce sırayı birlikte izleyelim.",
+  "sourceFilename": "cd0062fbc9f5ff1cb9e4dfe5.mp3",
+  "sourceSha256": "5aab0ffa67e9f7b91ec42a2d25ad6e5ee145e6b9b9499e0be006f349eaaf93f8",
+  "importedAt": "2026-10-01T01:00:34.382502+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

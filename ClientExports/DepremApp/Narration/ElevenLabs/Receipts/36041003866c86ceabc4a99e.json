@@ -1,0 +1,23 @@
+{
+  "index": 359,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tek başına ağır kapıyı zorlama. Bir büyük çağırmak daha güvenli.",
+  "sourceFilename": "36041003866c86ceabc4a99e.mp3",
+  "sourceSha256": "77c662bbd18bd10800ab8390827ea3a8ba520c3e8088d37461685682b10d3068",
+  "importedAt": "2026-10-01T04:12:42.345784+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

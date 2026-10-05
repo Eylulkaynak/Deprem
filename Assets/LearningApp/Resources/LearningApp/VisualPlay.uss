@@ -1,0 +1,55 @@
+/* Child mini-games: written instructions, answers, counters and modals are optional. */
+.play-symbol { width: 42px; height: 42px; flex-shrink: 0; }
+.symbol-button { min-width: 68px; min-height: 64px; padding: 8px 12px; align-items: center; justify-content: center; flex-direction: row; }
+.symbol-button .play-symbol { width: 28px; height: 28px; margin-right: 6px; }
+.play-caption { font-size: 17px; -unity-font-style: bold; color: #203e3b; -unity-text-align: middle-center; white-space: normal; }
+.play-title { align-items: center; justify-content: center; flex-shrink: 1; max-width: 150px; }
+.play-title .play-caption { font-size: 16px; }
+.play-toolbar { margin-bottom: 6px; }
+.play-toolbar Button { margin-bottom: 0; }
+.play-title-art { width: 48px; height: 48px; }
+.play-progress { flex-direction: row; justify-content: center; flex-wrap: wrap; margin: 6px 0; }
+.play-dot { width: 22px; height: 22px; border-radius: 11px; border-width: 2px; border-color: #bdc8d6; background-color: white; margin: 3px; }
+.play-dot.filled { background-color: #d9f0df; border-color: #47865f; }
+.play-dot .play-symbol { width: 18px; height: 18px; }
+.play-feedback { align-self: center; align-items: center; justify-content: center; flex-direction: row; height: 48px; min-width: 96px; padding: 0 12px; border-radius: 24px; background-color: #e5f2e7; margin-bottom: 6px; }
+.play-feedback .play-symbol { width: 28px; height: 28px; margin-right: 6px; }
+.play-feedback.retry { background-color: #fff0cb; }
+.visual-guide { flex-direction: row; align-items: center; justify-content: space-around; height: 98px; padding: 4px 10px 22px; background-color: #edf1f9; border-radius: 20px; margin-bottom: 12px; }
+.guide-art { width: 68px; height: 68px; border-radius: 14px; }
+.guide-lit { background-color: #ffedb2; }
+.guide-hand { position: absolute; bottom: 1px; width: 32px; height: 32px; }
+.visual-play .item-tile { width: 31%; min-height: 106px; padding: 8px; margin-bottom: 10px; }
+.visual-play .item-tile .art { width: 88px; max-width: 100%; height: 88px; }
+.visual-play .bag-target { align-items: center; justify-content: center; padding: 4px; margin-bottom: 12px; }
+.visual-play .bag-target .art { width: 80px; height: 66px; }
+.visual-play .sort-zone { align-items: center; justify-content: center; padding: 4px; height: 90px; }
+.visual-play .sort-zone .play-symbol { width: 72px; height: 72px; }
+.visual-play .purpose-grid { border-top-width: 2px; border-top-color: #d3ddeb; padding-top: 12px; margin-top: 4px; }
+.visual-play .purpose-tile { background-color: #edf1fa; }
+.visual-play .match-grid .item-tile, .visual-play .purpose-grid .item-tile, .visual-play .memory-grid .item-tile { width: 48%; }
+.visual-play .memory-grid .item-tile { min-height: 150px; justify-content: center; }
+.purpose-art { width: 76px; height: 76px; }
+.visual-play .danger-grid .item-tile { width: 48%; min-height: 144px; }
+.visual-play .danger-grid .art { width: 136px; height: 128px; }
+.visual-play .choice { justify-content: center; min-height: 148px; padding: 8px; }
+.visual-play .choice .art { width: 170px; height: 132px; margin: 0; }
+.tile-mark { position: absolute; right: 2px; bottom: 2px; width: 30px; height: 30px; background-color: #fff5ce; border-radius: 15px; }
+.visual-play .done, .visual-play .item-tile:disabled, .visual-play .choice:disabled { opacity: 0.65; }
+.visual-play .memory-lit { border-width: 4px; background-color: #ffe78a; scale: 1.04 1.04; }
+.visual-play .selected { border-width: 4px; border-color: #586da9; background-color: #e2eaff; }
+.sequence-example { flex-direction: row; align-items: center; justify-content: space-around; background-color: white; border-radius: 18px; padding: 8px; margin-bottom: 12px; }
+.sequence-art { width: 90px; height: 82px; flex-shrink: 1; }
+.sequence-example .play-symbol { width: 28px; height: 28px; }
+.visual-play .play-field { height: 390px; }
+.catch-hand { position: absolute; bottom: 0; }
+.reward-stars { align-self: center; }
+.reward-small-star { width: 52px; height: 52px; margin: 8px; }
+.reward-actions { align-self: center; width: 240px; margin-top: 24px; }
+.reward-actions .symbol-button { min-width: 100px; min-height: 88px; }
+.visual-game-card { width: 48%; min-height: 168px; background-color: white; color: #192169; border-width: 1px; border-bottom-width: 4px; border-color: #d7e0eb; align-items: center; padding: 12px 8px; }
+.visual-game-card .game-art { width: 110px; height: 100px; }
+.visual-game-card .small { margin-top: 8px; -unity-text-align: middle-center; color: #192169; }
+.menu-play-symbol { position: absolute; right: 5px; top: 5px; width: 26px; height: 26px; }
+.visual-adventure { background-color: white; border-color: #d7e0eb; border-width: 1px; border-bottom-width: 4px; }
+.visual-adventure .small { color: #192169; margin-left: 16px; }

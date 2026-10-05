@@ -1,0 +1,23 @@
+{
+  "index": 599,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tahliye sırasında herkesin ayrı hareket etmesi",
+  "sourceFilename": "c629ebfb0521a398e3a5ace2.mp3",
+  "sourceSha256": "442f9ef36c6e17b1887f66427e06f62f1bd8a51b4510ad490d093089639f6b13",
+  "importedAt": "2026-10-01T04:56:32.603574+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

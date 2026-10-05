@@ -1,0 +1,23 @@
+{
+  "index": 464,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Belgeler çantada gereksiz yer kaplar",
+  "sourceFilename": "e05d29d9380b78aa3adb1ed8.mp3",
+  "sourceSha256": "772c1d16ad27cef1c6be99816bd9f148481ad604de975d0d662fed80dd6d9a61",
+  "importedAt": "2026-10-01T04:38:30.346338+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.045714"
+    }
+  }
+}

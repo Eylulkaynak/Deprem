@@ -1,0 +1,23 @@
+{
+  "index": 570,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Pencere, dolap ve ağır eşyalardan uzaklaş.",
+  "sourceFilename": "8883d3e5a1dbba04546f8cef.mp3",
+  "sourceSha256": "44b10f9c55c55691bde8fef682968e9248a5e23e665609c0294ccfc4cc64d6cf",
+  "importedAt": "2026-10-01T04:52:31.464882+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

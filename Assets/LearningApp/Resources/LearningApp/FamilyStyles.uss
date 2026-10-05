@@ -1,0 +1,20 @@
+.family-connection-card { background-color: #eaf0e2; }
+.family-connection-card .title { font-size: 26px; }
+.family-connection-card Button { margin-bottom: 8px; }
+.family-empty { background-color: #f1f3e9; }
+.family-child-card { background-color: var(--surface); }
+.family-child-card .title { margin-bottom: 8px; }
+.family-child-card .stats { margin: 12px 0 16px; }
+.family-child-card .progress-track { margin: 10px 0 8px; }
+.family-error { color: #934c32; white-space: normal; font-size: 16px; margin-bottom: 12px; }
+.family-code-card { background-color: #f6ebd7; align-items: stretch; }
+.family-code-card .eyebrow, .family-code-card > .small { -unity-text-align: middle-center; }
+.family-pair-code { font-size: 38px; -unity-font-style: bold; -unity-text-align: middle-center; color: #255641; margin: 10px 0 16px; white-space: nowrap; }
+.family-consent { margin: 14px 0 18px; }
+.family-consent > .unity-base-field__label { flex-shrink: 1; white-space: normal; font-size: 17px; }
+.family-consent .unity-toggle__input { align-self: center; flex-shrink: 0; }
+.family-report-row { padding: 16px 20px; margin-bottom: 10px; }
+.family-report-row .small { margin-bottom: 0; }
+.family-report-row Button { margin-top: 10px; margin-bottom: 0; }
+.family-review-card { background-color: #f6ebd7; }
+.family-review-card .small { margin-bottom: 0; }

@@ -1,0 +1,23 @@
+{
+  "index": 16,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yaralanan birini gördüğünde önce kendi güvenliğini koru. Bir yetişkine haber ver ve yardım iste. Ağır yaralı birini kaldırmaya ya da sarsmaya çalışma. İlk yardım bilen bir yetişkinin yönergelerini dinle.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_10_11_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "de3ecba8b958ca1970752ec64a7fbc09b33aea80ed05297b7d16bfb6051c09e6",
+  "importedAt": "2026-10-01T00:10:48.211528+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "13.364082"
+    }
+  }
+}

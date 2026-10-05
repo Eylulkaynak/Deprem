@@ -1,0 +1,4 @@
+PASS presentation: Story_Rebuild_MainMenu; 13 converted labels; non-blocking guides; artwork resolved.
+PASS: picture-only bridge return/resume dialog.
+PASS: no runtime errors.
+RESTORED: learning store, story/minigame saves, Yan Yana preferences, audio and Game View.

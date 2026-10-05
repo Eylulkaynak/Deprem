@@ -1,0 +1,23 @@
+{
+  "index": 35,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Açık Alanda Güvende Kal",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_16_32_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "92bfca1cf717a53ecc561fae06804ca70c3f8105d5a11dac4b7daf299c5961ba",
+  "importedAt": "2026-10-01T00:17:52.093862+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

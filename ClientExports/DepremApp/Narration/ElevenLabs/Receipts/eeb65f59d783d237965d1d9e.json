@@ -1,0 +1,23 @@
+{
+  "index": 650,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Özel ihtiyaç planı hazırlanırken hangisi mutlaka düşünülmelidir?",
+  "sourceFilename": "eeb65f59d783d237965d1d9e.mp3",
+  "sourceSha256": "9c1cb06bfb81e446c61726265e73733d03743cb0e1bd904a2c86bf78ff8d3d60",
+  "importedAt": "2026-10-01T05:11:26.588391+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

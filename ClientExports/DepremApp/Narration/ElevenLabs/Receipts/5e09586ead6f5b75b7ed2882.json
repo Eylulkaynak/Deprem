@@ -1,0 +1,23 @@
+{
+  "index": 68,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Susuz kalmamak için içecek bir şey lazım.",
+  "sourceFilename": "5e09586ead6f5b75b7ed2882.mp3",
+  "sourceSha256": "6719ab3d6d73acfbf5bad221c16db80b020ff9fb5395236cd42365711d9ce623",
+  "importedAt": "2026-10-01T01:02:07.159936+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.202449"
+    }
+  }
+}

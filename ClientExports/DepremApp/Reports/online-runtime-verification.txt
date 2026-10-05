@@ -1,0 +1,22 @@
+RUNNING
+PASS: Two Unity HTTP clients connect; friend code request and approval synchronize.
+PASS: Live score updates; scene reload restores room, account, accepted items and penalty.
+PASS: Child bag completes through native UI and receives shared server result.
+PASS: Child sort completes through native UI and receives shared server result.
+PASS: Child match completes through native UI and receives shared server result.
+PASS: Child quiz completes through native UI and receives shared server result.
+PASS: Child danger completes through native UI and receives shared server result.
+PASS: Child catch completes through native UI and receives shared server result.
+PASS: Child sequence completes through native UI and receives shared server result.
+PASS: Child memory completes through native UI and receives shared server result.
+PASS: Adult bag completes through native UI and receives shared server result.
+PASS: Adult sort completes through native UI and receives shared server result.
+PASS: Adult match completes through native UI and receives shared server result.
+PASS: Adult quiz completes through native UI and receives shared server result.
+PASS: Adult danger completes through native UI and receives shared server result.
+PASS: Adult catch completes through native UI and receives shared server result.
+PASS: Adult sequence completes through native UI and receives shared server result.
+PASS: Adult memory completes through native UI and receives shared server result.
+PASS: Global/friends leaderboard loads verified results; both age modes remain separate.
+PASS: Friend removal synchronizes; no runtime errors during verification.
+COMPLETE: online runtime verification passed.

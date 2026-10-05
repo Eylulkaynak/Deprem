@@ -1,0 +1,23 @@
+{
+  "index": 75,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Düşün: Sesini duyurmak isteyince bağırmak mı kolay, düdük çalmak mı?",
+  "sourceFilename": "e66982f85c7820f903f12993.mp3",
+  "sourceSha256": "dc699e4e310eddd1202b6802f1be3664faac1277576dd5a6acb73b8c1548191b",
+  "importedAt": "2026-10-01T01:03:00.191807+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.448980"
+    }
+  }
+}

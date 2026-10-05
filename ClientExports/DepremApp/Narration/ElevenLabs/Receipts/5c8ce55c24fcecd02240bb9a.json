@@ -1,0 +1,23 @@
+{
+  "index": 138,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hangi yerden uzak durmalısın?",
+  "sourceFilename": "5c8ce55c24fcecd02240bb9a.mp3",
+  "sourceSha256": "3b0a1584d4ff8ba35331ae3e2f5db8911dd8671ab5a1fbffa7cca13f539de563",
+  "importedAt": "2026-10-01T03:27:16.791058+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.392653"
+    }
+  }
+}

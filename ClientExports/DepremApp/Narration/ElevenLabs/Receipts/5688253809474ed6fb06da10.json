@@ -1,0 +1,23 @@
+{
+  "index": 261,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Gaz varken düğmeye dokunmak tehlikelidir.",
+  "sourceFilename": "5688253809474ed6fb06da10.mp3",
+  "sourceSha256": "3ea8ceddcb9c468abb7c9bdaffa0c57f05467a40c9ebb986a3a7b4cb85f6e99d",
+  "importedAt": "2026-10-01T03:52:42.840745+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

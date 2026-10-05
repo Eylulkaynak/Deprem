@@ -1,0 +1,23 @@
+{
+  "index": 523,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evdeki riskleri önceden azaltmak yaralanmaları belirgin şekilde düşürür.",
+  "sourceFilename": "1a1d8c85b2b628a2a35e9073.mp3",
+  "sourceSha256": "273247b512b5c59149811ddbc814fcd393dd7fadbb5460a59e31acd93890a86b",
+  "importedAt": "2026-10-01T04:44:57.048407+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

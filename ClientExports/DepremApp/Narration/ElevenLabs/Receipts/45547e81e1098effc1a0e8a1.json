@@ -1,0 +1,23 @@
+{
+  "index": 153,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Koşmak düşmene yol açar. Sallanma durana kadar güvenli yerinde kal.",
+  "sourceFilename": "45547e81e1098effc1a0e8a1.mp3",
+  "sourceSha256": "1676f0638af948030c50f9c0edbe673e8c278d2037715a1ed99728baffb662c7",
+  "importedAt": "2026-10-01T03:30:24.694346+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

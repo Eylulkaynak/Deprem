@@ -1,0 +1,23 @@
+{
+  "index": 434,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aksayan noktaları not edip planı güncellemek",
+  "sourceFilename": "16994afecae1114c1a351815.mp3",
+  "sourceSha256": "712498d5e92d48aa4e48666dee547d7b7b21979caf73fcd7ad6e99ab1b237fdf",
+  "importedAt": "2026-10-01T04:22:16.553523+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.280816"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 185,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Çök, kapan, tutun hayat kurtarır.",
+  "sourceFilename": "35ae6408b1e3219ab887f339.mp3",
+  "sourceSha256": "08008e2b08a46a4fdcba9db42d0fb8c3e1402c65641635ff264de84615c17560",
+  "importedAt": "2026-10-01T03:34:28.209652+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

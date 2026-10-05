@@ -1,0 +1,23 @@
+{
+  "index": 499,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Ciddi kanamada doğrudan bası temel ilk yardım yaklaşımıdır.",
+  "sourceFilename": "886c4a0114b64761ad1f133f.mp3",
+  "sourceSha256": "bf47334007229c0d78abfd16e021c443f7fc6d5332be5275609b58fa16bbce1c",
+  "importedAt": "2026-10-01T04:42:22.142883+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.448980"
+    }
+  }
+}

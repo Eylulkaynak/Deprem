@@ -1,0 +1,23 @@
+{
+  "index": 308,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kulaktan duyma söylentilerden",
+  "sourceFilename": "c763851f6287df955006873f.mp3",
+  "sourceSha256": "92348f776435334ea97a2d2b4ea55bcf4615e245be5165695ff0229e8f2c538a",
+  "importedAt": "2026-10-01T03:58:00.407571+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.888980"
+    }
+  }
+}

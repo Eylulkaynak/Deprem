@@ -1,0 +1,23 @@
+{
+  "index": 326,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ortalık çok tozlu. Kendini nasıl korursun?",
+  "sourceFilename": "bddde70f0fe0886a04b8c7a7.mp3",
+  "sourceSha256": "ab3e12f282f907cf378675abc0351d8a5a514750f9eedb22c2a9ed6593350bd0",
+  "importedAt": "2026-10-01T04:09:28.155871+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.594286"
+    }
+  }
+}

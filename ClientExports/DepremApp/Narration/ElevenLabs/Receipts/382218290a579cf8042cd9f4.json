@@ -1,0 +1,23 @@
+{
+  "index": 548,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Herkesi peş peşe aramak",
+  "sourceFilename": "382218290a579cf8042cd9f4.mp3",
+  "sourceSha256": "2085b8d7f91adcddb0449655394039611d4a418c03d7ad0e973864a92a654ebf",
+  "importedAt": "2026-10-01T04:47:49.767325+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.392653"
+    }
+  }
+}

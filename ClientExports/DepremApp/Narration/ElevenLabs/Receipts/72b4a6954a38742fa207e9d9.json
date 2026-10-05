@@ -1,0 +1,23 @@
+{
+  "index": 177,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hemen koşmak yerine başını koruyup beklemelisin.",
+  "sourceFilename": "72b4a6954a38742fa207e9d9.mp3",
+  "sourceSha256": "d6af0c276073d553cc7a15677ae59c4b0dd87df775cfc6f67c7e810c65618d01",
+  "importedAt": "2026-10-01T03:33:41.030598+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.594286"
+    }
+  }
+}

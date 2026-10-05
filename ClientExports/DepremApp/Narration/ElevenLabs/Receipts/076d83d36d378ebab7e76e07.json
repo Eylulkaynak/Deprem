@@ -1,0 +1,23 @@
+{
+  "index": 512,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Düdük veya sert bir zemine vurma sesi kullan.",
+  "sourceFilename": "076d83d36d378ebab7e76e07.mp3",
+  "sourceSha256": "dd30cd1394f5537fb1e3089b82aa76eeb637073e69e3912549f775fe1998521d",
+  "importedAt": "2026-10-01T04:43:48.546358+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.437551"
+    }
+  }
+}

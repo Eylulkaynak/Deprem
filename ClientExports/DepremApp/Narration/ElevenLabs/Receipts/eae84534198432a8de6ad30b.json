@@ -1,0 +1,23 @@
+{
+  "index": 502,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Gaz kokusu varsa ateş ve elektrik kıvılcımı riski büyütür.",
+  "sourceFilename": "eae84534198432a8de6ad30b.mp3",
+  "sourceSha256": "acb25b41343be7cc67d3f665c913c537a37dca37b25ac63c94fda47a53718afe",
+  "importedAt": "2026-10-01T04:42:44.495953+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

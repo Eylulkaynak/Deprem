@@ -1,0 +1,28 @@
+{
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "completedUniqueClips": 668,
+  "totalUniqueClips": 668,
+  "generatedThroughIndex": 667,
+  "pendingHistoryDownloads": [],
+  "nextGenerationIndex": null,
+  "lastObservedCredits": 7015,
+  "status": "Complete: all 668 ElevenLabs Nisa clips installed and verified.",
+  "browserTabId": "984877544",
+  "browser": "3",
+  "sample": "../elevenlabs-nisa-ornek.mp3",
+  "additionalCompletedIndices": [],
+  "accountSequence": 5,
+  "accountStartingCredits": 10000,
+  "uncertainGenerationIndices": [],
+  "lastGeneratedIndex": 667,
+  "quotaExhausted": false,
+  "accountEstimatedRemaining": 7015,
+  "verification": {
+    "decodedClips": 668,
+    "editModePassed": 12,
+    "runtimePassed": 31
+  },
+  "proof": "elevenlabs-tum-sesler-tamamlandi.png"
+}

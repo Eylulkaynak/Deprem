@@ -1,0 +1,23 @@
+{
+  "index": 332,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru mu, yanlış mı? Enkaz altında durmadan bağırmak en iyi yoldur.",
+  "sourceFilename": "b0bafcf4900151cdbc0bad37.mp3",
+  "sourceSha256": "5cfb0a165721ecadd08aff56bfddb8fd70a3fee60bf8503ec193d428bdc5a68e",
+  "importedAt": "2026-10-01T04:10:03.798478+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.840816"
+    }
+  }
+}

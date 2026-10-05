@@ -1,0 +1,23 @@
+{
+  "index": 263,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz kokusunu alınca ilk önce ne yapmalısın?",
+  "sourceFilename": "a6f34a6aa86dbd45eb8deb4a.mp3",
+  "sourceSha256": "62e7123355298d9eb0082a70b9799c7caece4d43f72ed19c6140376aa9fdd022",
+  "importedAt": "2026-10-01T03:52:54.713386+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.437551"
+    }
+  }
+}

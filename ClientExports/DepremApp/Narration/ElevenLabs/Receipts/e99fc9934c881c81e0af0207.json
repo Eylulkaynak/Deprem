@@ -1,0 +1,23 @@
+{
+  "index": 465,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Beş eşyayı doğru kullanım amacıyla eşleştir.",
+  "sourceFilename": "e99fc9934c881c81e0af0207.mp3",
+  "sourceSha256": "373618c8cdd4e6231ca1d0b75df4acbcc6f88e09e1329629cb4e2284327f490b",
+  "importedAt": "2026-10-01T04:38:36.187269+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.437551"
+    }
+  }
+}

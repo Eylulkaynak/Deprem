@@ -1,0 +1,23 @@
+{
+  "index": 213,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Elektrik tellerinin altında",
+  "sourceFilename": "f5420f02829200bcef5024bb.mp3",
+  "sourceSha256": "4e44c16b584b62c20a8f5755839bac32e59f857349cd69b6695a22ff4018363c",
+  "importedAt": "2026-10-01T03:37:41.128864+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.471020"
+    }
+  }
+}

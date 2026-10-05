@@ -123,7 +123,8 @@ namespace Deprem.Story
 
         public bool SubtitleActive => subtitleActive;
         public bool SubtitleRevealComplete => subtitleRevealComplete;
-        public bool WorldInputBlocked => paused || subtitleActive || consumeWorldPointerUntilRelease;
+        private bool GameplayPaused => paused || Time.timeScale <= 0f;
+        public bool WorldInputBlocked => GameplayPaused || subtitleActive || consumeWorldPointerUntilRelease;
         public AudioSource ActiveDialogueVoiceSource => dialogueVoiceSource;
         public string ActiveDialogueSpeakerAlias => activeDialogueSpeakerAlias;
         public Transform ActiveDialogueMouth => activeDialogueActor?.mouth;
@@ -154,7 +155,7 @@ namespace Deprem.Story
 
         private void LateUpdate()
         {
-            if (dialoguePerformanceActive)
+            if (dialoguePerformanceActive && !GameplayPaused)
                 UpdateDialoguePerformanceVisuals();
         }
 
@@ -199,7 +200,7 @@ namespace Deprem.Story
 
         public bool TryHandlePrimaryTap()
         {
-            if (!subtitleActive)
+            if (GameplayPaused || !subtitleActive)
                 return false;
 
             if (!subtitleRevealComplete)
@@ -214,7 +215,7 @@ namespace Deprem.Story
 
         public void NotifyPrimaryPointerReleased()
         {
-            if (!consumeWorldPointerUntilRelease || paused || subtitleActive)
+            if (!consumeWorldPointerUntilRelease || GameplayPaused || subtitleActive)
                 return;
 
             consumeWorldPointerUntilRelease = false;
@@ -351,7 +352,15 @@ namespace Deprem.Story
             if (pausePanel != null)
                 pausePanel.SetActive(paused);
             if (paused)
+            {
                 PlayPresentation(pausePresentation);
+                // Reveal the panel before stopping the legacy animation clock.
+                if (pausePresentation != null && pausePresentation.clip != null)
+                {
+                    pausePresentation.Stop();
+                    pausePresentation.clip.SampleAnimation(pausePresentation.gameObject, pausePresentation.clip.length);
+                }
+            }
             Time.timeScale = paused ? 0f : 1f;
             AudioListener.pause = paused;
             ApplyWorldInputLock();
@@ -426,7 +435,7 @@ namespace Deprem.Story
             float remaining = Mathf.Max(0f, duration);
             while (remaining > 0f)
             {
-                if (!paused)
+                if (!GameplayPaused)
                     remaining -= Time.unscaledDeltaTime;
                 yield return null;
             }
@@ -448,12 +457,16 @@ namespace Deprem.Story
             subtitleRevealComplete = subtitle.textInfo.characterCount == 0;
             subtitleAdvanceRequested = false;
 
+            // Pictures and existing narration replace typewriter reading in child mode.
+            // Keep the same pause, voice duration and tap-to-advance lifecycle.
+            if (Deprem.Accessibility.ReadingFree3D.Enabled) CompleteSubtitleReveal();
+
             int totalCharacters = subtitle.textInfo.characterCount;
             float elapsed = 0f;
             float revealed = 0f;
             while (!subtitleRevealComplete)
             {
-                if (!paused)
+                if (!GameplayPaused)
                 {
                     float delta = Time.unscaledDeltaTime;
                     elapsed += delta;
@@ -468,7 +481,7 @@ namespace Deprem.Story
             float remaining = Mathf.Max(1.25f, Mathf.Max(0f, duration) - elapsed);
             while (!subtitleAdvanceRequested && remaining > 0f)
             {
-                if (!paused)
+                if (!GameplayPaused)
                     remaining -= Time.unscaledDeltaTime;
                 yield return null;
             }
@@ -557,7 +570,7 @@ namespace Deprem.Story
             int activeSegment = -1;
             while (subtitleActive && elapsed < duration)
             {
-                if (!paused)
+                if (!GameplayPaused)
                     elapsed += Time.unscaledDeltaTime;
 
                 float normalized = Mathf.Clamp01(elapsed / duration);

@@ -1,0 +1,23 @@
+{
+  "index": 309,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yanlış. Doğru olmayan haberler paniği büyütür. Önce resmi kaynaktan doğru mu diye bak, emin değilsen yayma.",
+  "sourceFilename": "edfbb487240cc65216a42db3.mp3",
+  "sourceSha256": "54851a8ccdb3010ef1d134bed9536c9d4d3d9a565001edf74752e11d1f9875ca",
+  "importedAt": "2026-10-01T03:58:10.941850+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "8.244082"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 365,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kendi güvenliğin önce gelir. Gücünün yetmediği işi büyüklere bırak.",
+  "sourceFilename": "f7e7eaf34846803fa4e86631.mp3",
+  "sourceSha256": "a4f9b9e54996532faf7f6f19af904141aced4c0d22ba5d91f100b67b152cb079",
+  "importedAt": "2026-10-01T04:13:22.364193+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

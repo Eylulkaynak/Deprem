@@ -1,0 +1,23 @@
+{
+  "index": 355,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sakin olup büyüğe haber veririm",
+  "sourceFilename": "8100358d6ea8a1e478bda1c2.mp3",
+  "sourceSha256": "f8353319494e4de870648fd436878b1410c4267c0bbe0ed9ca4e0be5527bca79",
+  "importedAt": "2026-10-01T04:12:18.874067+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.627755"
+    }
+  }
+}

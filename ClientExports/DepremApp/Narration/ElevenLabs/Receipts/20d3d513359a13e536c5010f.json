@@ -1,0 +1,23 @@
+{
+  "index": 87,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bazen uzaktaki birine ulaşmak daha kolay olur.",
+  "sourceFilename": "20d3d513359a13e536c5010f.mp3",
+  "sourceSha256": "204768604c0b7d8b4f35d6d6759431ed409bdd7135902b709c0afa8b814ce082",
+  "importedAt": "2026-10-01T01:04:27.618849+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

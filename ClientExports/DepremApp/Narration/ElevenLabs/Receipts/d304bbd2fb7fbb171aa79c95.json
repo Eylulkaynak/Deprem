@@ -1,0 +1,23 @@
+{
+  "index": 435,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır. Güvenli bir noktada Çök, kapan, tutun davranışını uygula. Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur. Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun. Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun. Bugün: Evde iki güvenli korunma noktası belirle.",
+  "sourceFilename": "d304bbd2fb7fbb171aa79c95.mp3",
+  "sourceSha256": "ac5eac515ffcd3203b263066d4ac6de9407bf61366881fe3c4460189691ada88",
+  "importedAt": "2026-10-01T04:23:24.438414+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "28.071020"
+    }
+  }
+}

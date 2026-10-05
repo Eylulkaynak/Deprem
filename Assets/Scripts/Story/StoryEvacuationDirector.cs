@@ -277,7 +277,7 @@ namespace Deprem.Story
 
             reachUpperLanding?.SetAvailable(false);
             stage = StoryEvacuationStage.Aftershock;
-            revisedAftershockStartedAt = Time.unscaledTime;
+            revisedAftershockStartedAt = Time.time;
             revisedAftershockCompletionQueued = false;
             canFollower?.SetFollowing(false);
             touchManager?.SetWorldNavigationEnabled(false);
@@ -313,7 +313,7 @@ namespace Deprem.Story
         private IEnumerator FinishRevisedAftershockAfterMinimumDuration()
         {
             float finishAt = revisedAftershockStartedAt + revisedAftershockMinimumDuration;
-            while (stage == StoryEvacuationStage.Aftershock && Time.unscaledTime < finishAt)
+            while (stage == StoryEvacuationStage.Aftershock && Time.time < finishAt)
                 yield return null;
 
             if (stage == StoryEvacuationStage.Aftershock)

@@ -1,0 +1,23 @@
+{
+  "index": 542,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hasarlı binaya geri girmek artçı sarsıntı ve çökme riski nedeniyle tehlikelidir.",
+  "sourceFilename": "1eaafb377d6ff5f6c6aacd2d.mp3",
+  "sourceSha256": "4e0ad46304825b5925d21ee7951a185b2db2b49f085b8e138844edcd2b4c3bdc",
+  "importedAt": "2026-10-01T04:47:13.439524+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.684082"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 495,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dolap ve rafları duvara sabitle.",
+  "sourceFilename": "a00ab06a0e062f1a8c5c4de9.mp3",
+  "sourceSha256": "3acaa9a0b1d7baccd20b126146ce9bb28e887386b31d94ee48c9c2b0ca0049c0",
+  "importedAt": "2026-10-01T04:41:58.359958+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.706122"
+    }
+  }
+}

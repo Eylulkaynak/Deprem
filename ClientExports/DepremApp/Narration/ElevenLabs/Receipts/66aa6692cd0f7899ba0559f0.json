@@ -1,0 +1,23 @@
+{
+  "index": 329,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağzımı bezle kapatırım",
+  "sourceFilename": "66aa6692cd0f7899ba0559f0.mp3",
+  "sourceSha256": "5aaf9d161a4710a977dca11bcbccabe72900d2e794a06b5bab6af2cd58668cfa",
+  "importedAt": "2026-10-01T04:09:41.020749+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.235918"
+    }
+  }
+}

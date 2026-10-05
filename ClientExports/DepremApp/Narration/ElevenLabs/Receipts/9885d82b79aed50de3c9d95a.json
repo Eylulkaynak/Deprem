@@ -1,0 +1,23 @@
+{
+  "index": 88,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Şehir dışı irtibat kişisi herkesi birbirine bağlar.",
+  "sourceFilename": "9885d82b79aed50de3c9d95a.mp3",
+  "sourceSha256": "21f6bbd6a58d4ee9820595f59265fd79bad633227f2582695f551c6065affa6b",
+  "importedAt": "2026-10-01T01:04:41.415488+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.874286"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 23:25:53Z" end-time="2026-10-04 23:26:01Z" duration="8,2306335">
+  <test-suite type="TestSuite" id="1087" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="67" result="Passed" start-time="2026-10-04 23:25:53Z" end-time="2026-10-04 23:26:01Z" duration="8.230634" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1077" name="Deprem.Story.PlayModeTests.dll" fullname="D:/DepremIMO/Deprem/Library/ScriptAssemblies/Deprem.Story.PlayModeTests.dll" runstate="Runnable" testcasecount="66" result="Passed" start-time="2026-10-04 23:25:53Z" end-time="2026-10-04 23:26:01Z" duration="8.218765" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="69032" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="MinigamePackagePlayModeTests" fullname="MinigamePackagePlayModeTests" classname="MinigamePackagePlayModeTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-04 23:25:53Z" end-time="2026-10-04 23:26:01Z" duration="8.215116" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1004" name="EmergencyBagRush_EndToEndCompletion" fullname="MinigamePackagePlayModeTests.EmergencyBagRush_EndToEndCompletion" methodname="EmergencyBagRush_EndToEndCompletion" classname="MinigamePackagePlayModeTests" runstate="Runnable" seed="1865841197" result="Passed" start-time="2026-10-04 23:25:53Z" end-time="2026-10-04 23:26:01Z" duration="8.194939" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: D:\DepremIMO\Deprem\Temp\StoryTestQA\PlayMode.results.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

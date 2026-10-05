@@ -1,0 +1,23 @@
+{
+  "index": 602,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikat sonrası yapılması gereken en faydalı adım hangisidir?",
+  "sourceFilename": "e8a273c06f119c482e55f0f8.mp3",
+  "sourceSha256": "048c78816d2839563726176c66342198d91a2d92417652328391f2333e117068",
+  "importedAt": "2026-10-01T04:56:46.277413+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

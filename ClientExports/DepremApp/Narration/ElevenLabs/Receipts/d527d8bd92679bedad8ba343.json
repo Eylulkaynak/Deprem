@@ -1,0 +1,23 @@
+{
+  "index": 569,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Pencere önünde dur",
+  "sourceFilename": "d527d8bd92679bedad8ba343.mp3",
+  "sourceSha256": "10c754c4c1b42854eea9046f04046def08306411c35df6cbc1e3f49163f685a9",
+  "importedAt": "2026-10-01T04:51:05.358661+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

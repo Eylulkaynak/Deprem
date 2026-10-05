@@ -1,0 +1,23 @@
+{
+  "index": 197,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Öğretmenimi dinlerim",
+  "sourceFilename": "2ecd662b8fd39db6a3093092.mp3",
+  "sourceSha256": "f9530e6419546e2e239847166c4257b0410a3184a66f5b73c8f9f4075814faa0",
+  "importedAt": "2026-10-01T03:35:39.616806+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.765714"
+    }
+  }
+}

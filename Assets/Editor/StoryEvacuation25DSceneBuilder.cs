@@ -586,7 +586,7 @@ public static class StoryEvacuation25DSceneBuilder
             parent, "AftershockDustCloud", new Vector3(-34.25f, 1.2f, 1.35f),
             palette.common.dust, new Color32(177, 153, 126, 170), 11f, 52);
 
-        // 03 — shut a damaged exterior gas line.
+        // 03 — recognize a damaged exterior gas line and report it from safety.
         refs.gasValve = new GameObject("03_StreetGasValveInteractable");
         refs.gasValve.transform.SetParent(parent);
         refs.gasValve.transform.position = new Vector3(-28.35f, 1.02f, -0.02f);
@@ -608,7 +608,7 @@ public static class StoryEvacuation25DSceneBuilder
             parent, "GasLeakVisibleHazard", new Vector3(-28.7f, 2.25f, 0.2f),
             palette.common.dust, new Color32(232, 204, 76, 180), 20f, 70);
 
-        // 04 — inspect and knock down loose rubble before passing.
+        // 04 — keep away from loose rubble and identify the open walking lane.
         refs.rubbleCheck = new GameObject("04_LooseRubbleCheckInteractable");
         refs.rubbleCheck.transform.SetParent(parent);
         refs.rubbleCheck.transform.position = new Vector3(-22.15f, 0.85f, -0.08f);
@@ -1011,8 +1011,8 @@ public static class StoryEvacuation25DSceneBuilder
         {
             "HASARLI CEPHEDEN UZAKLAŞ",
             "ARTÇI SIRASINDA AÇIK NOKTADA BEKLE",
-            "SOKAKTAKİ GAZ VANASINI KAPAT",
-            "GEVŞEK MOLOZU KONTROL ET",
+            "GAZ TEHLİKESİNİ UZAKTAN BİLDİR",
+            "GEVŞEK MOLOZDAN UZAK DUR",
             "BETON PARÇASINI YÜRÜME HATTINDAN ÇEK",
             "BİNALARDAN UZAK GÜVENLİ TARAFI SEÇ",
             "KIRIK CAM ALANINI İŞARETLE",
@@ -1029,8 +1029,8 @@ public static class StoryEvacuation25DSceneBuilder
         {
             "Düşebilecek cam ve sıva hattından açık tarafa çık.",
             "Koşma; binalardan uzakta dengeni koruyarak basılı tut.",
-            "Kokuyu fark ettin. Vanayı yatay hareketle kapat.",
-            "Geçmeden önce gevşek parçaya üç kez kontrollü dokun.",
+            "Vanaya dokunma. Tehlikeden uzak dur ve yetişkine haber ver.",
+            "Moloza dokunma. Binalardan uzak, açık geçişi göster.",
             "Ağır parçayı turuncu güvenli boşluğa sürükle.",
             "Cephe dibi ve taşıt yolu yerine açık şeridi seç.",
             "Kimse basmadan önce tehlike bandını sabitle.",
@@ -1223,17 +1223,19 @@ public static class StoryEvacuation25DSceneBuilder
 
         StoryInteractable gasValve = CreateInteractable(
             world.gasValve, "evac25d.street.03.gas_valve",
-            "GAZ VANASINI YATAY HAREKETLE KAPAT",
-            StoryInteractionKind.Inspect, StoryInteractionGesture.SwipeHorizontal,
+            "VANAYA DOKUNMA • UZAKTAN YETİŞKİNE HABER VER",
+            StoryInteractionKind.Inspect, StoryInteractionGesture.Tap,
             StoryCameraZoneId.EvacuationCorridor, false, 1, 0.8f);
         ConfigureCameraReturn(gasValve, StoryCameraZoneId.EvacuationStairDoor, 0.42f);
+        MinigamePolishedSceneBuilder.ConfigureStreetHazardResponse(gasValve, "item-send-message");
 
         StoryInteractable rubbleCheck = CreateInteractable(
             world.rubbleCheck, "evac25d.street.04.rubble_check",
-            "GEVŞEK MOLOZA ÜÇ KEZ KONTROLLÜ DOKUN",
-            StoryInteractionKind.Inspect, StoryInteractionGesture.RepeatedTap,
-            StoryCameraZoneId.EvacuationStairDoor, false, 3, 0.95f);
+            "MOLOZA DOKUNMA • AÇIK GEÇİŞİ GÖSTER",
+            StoryInteractionKind.Inspect, StoryInteractionGesture.Tap,
+            StoryCameraZoneId.EvacuationStairDoor, false, 1, 0.95f);
         ConfigureCameraReturn(rubbleCheck, StoryCameraZoneId.EvacuationStairsTop, 0.42f);
+        MinigamePolishedSceneBuilder.ConfigureStreetHazardResponse(rubbleCheck, "route");
 
         ConfigureDraggable(
             world.masonry, world.masonryDropZone, world.masonrySnap, world.masonryDragPlane, 0.24f);
@@ -1434,19 +1436,13 @@ public static class StoryEvacuation25DSceneBuilder
         UnityEventTools.AddBoolPersistentListener(
             characters.denizSegments[0].onPathCompleted, puzzle.gasValve.SetAvailable, true);
 
-        UnityEventTools.AddBoolPersistentListener(
-            puzzle.gasValve.OnInteracted, world.gasLeak.gameObject.SetActive, false);
-        UnityEventTools.AddBoolPersistentListener(
-            puzzle.gasValve.OnInteracted, world.gasOpen.SetActive, false);
-        UnityEventTools.AddBoolPersistentListener(
-            puzzle.gasValve.OnInteracted, world.gasClosed.SetActive, true);
+        // Children report and walk past the hazard; reporting cannot turn a
+        // damaged utility safe or operate the valve.
         WireStage(puzzle.gasValve.OnInteracted, ui, 2, 3);
         WireMovement(puzzle.gasValve.OnInteracted, characters, 1);
         UnityEventTools.AddBoolPersistentListener(
             characters.denizSegments[1].onPathCompleted, puzzle.rubbleCheck.SetAvailable, true);
 
-        UnityEventTools.AddBoolPersistentListener(
-            puzzle.rubbleCheck.OnInteracted, world.rubbleBlocked.SetActive, false);
         UnityEventTools.AddBoolPersistentListener(
             puzzle.rubbleCheck.OnInteracted, world.rubbleCleared.SetActive, true);
         WireStage(puzzle.rubbleCheck.OnInteracted, ui, 3, 4);

@@ -1,0 +1,23 @@
+{
+  "index": 121,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başın çok önemli. Onu kollarınla ya da bir yastıkla kapat.",
+  "sourceFilename": "0562b7e5a49bdea0a5a4d723.mp3",
+  "sourceSha256": "12b2763de21af9cbf2323a8c0ac607a0a19e01cc103055cd1313b65bd9f648af",
+  "importedAt": "2026-10-01T01:10:58.250019+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

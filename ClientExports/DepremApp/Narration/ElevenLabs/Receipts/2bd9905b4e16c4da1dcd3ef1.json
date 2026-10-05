@@ -1,0 +1,23 @@
+{
+  "index": 469,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bilgi zamanla unutulur; düzenli tekrar ve prova gerekir.",
+  "sourceFilename": "2bd9905b4e16c4da1dcd3ef1.mp3",
+  "sourceSha256": "c1cbaaa1b012f84dedf4d730da44f0866b3d1b7ade690a36e6d4754b60c47e0e",
+  "importedAt": "2026-10-01T04:39:09.925067+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.795918"
+    }
+  }
+}

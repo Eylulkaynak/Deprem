@@ -1,0 +1,23 @@
+{
+  "index": 554,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kendini ve yakınlarını yaralanma, yangın, gaz kokusu açısından kontrol et.",
+  "sourceFilename": "514bb400a9dee67a011607e1.mp3",
+  "sourceSha256": "fc5805272057b29b1e4df6b787ad163ed04e303acfd06da6b93fab7c5f8e84c4",
+  "importedAt": "2026-10-01T04:49:24.440920+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.840816"
+    }
+  }
+}

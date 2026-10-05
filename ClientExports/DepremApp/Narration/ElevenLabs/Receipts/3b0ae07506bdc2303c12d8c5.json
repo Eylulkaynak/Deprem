@@ -1,0 +1,23 @@
+{
+  "index": 484,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Daha fazla deprem senaryosunda en güvenli davranışı seç.",
+  "sourceFilename": "3b0ae07506bdc2303c12d8c5.mp3",
+  "sourceSha256": "9045530648850048669186b9122b923ca3defcba9547739343b5a7478b8040e8",
+  "importedAt": "2026-10-01T04:40:45.005928+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

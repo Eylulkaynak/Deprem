@@ -1,0 +1,12 @@
+services:
+  online:
+    build:
+      context: ../../..
+      dockerfile: Tools/LearningApp/Online/Dockerfile
+    ports:
+      - "127.0.0.1:8765:8765"
+    volumes:
+      - online-data:/data
+    restart: unless-stopped
+volumes:
+  online-data:

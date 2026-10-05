@@ -1,0 +1,23 @@
+{
+  "index": 3,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Üç hareketi birlikte öğrenelim. Çök. Kapan. Tutun. Sarsıntı başladığında dizlerinin üzerine çök. Başını ve enseni koru. Yakınındaki sağlam bir masanın altındaysan, masanın ayağına tutun. Sarsıntı bitene kadar korunmaya devam et.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_04_42_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "6941f055f1203cde2d94553523c2f77557de74c448d551cb8ae931e626fdd6f9",
+  "importedAt": "2026-10-01T00:06:50.724898+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "16.629388"
+    }
+  }
+}

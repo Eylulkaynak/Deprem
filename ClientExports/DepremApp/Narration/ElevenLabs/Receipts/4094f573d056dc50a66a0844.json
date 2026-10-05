@@ -1,0 +1,23 @@
+{
+  "index": 218,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Arabada beklerim",
+  "sourceFilename": "4094f573d056dc50a66a0844.mp3",
+  "sourceSha256": "cade0534ad036061bd022a7145eb904b61056c1791b52f54e686b3fc66fe9d5b",
+  "importedAt": "2026-10-01T03:43:33.254138+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.687347"
+    }
+  }
+}

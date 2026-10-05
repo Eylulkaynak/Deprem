@@ -1,0 +1,23 @@
+{
+  "index": 630,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yardım isterken ne kullanırsın?",
+  "sourceFilename": "1edc5808d8d18111be3789b8.mp3",
+  "sourceSha256": "71c2aa89c3e72f5bad839807b126c36de3b1284ba328324935d1cd6eec6c9b51",
+  "importedAt": "2026-10-01T05:08:09.836933+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

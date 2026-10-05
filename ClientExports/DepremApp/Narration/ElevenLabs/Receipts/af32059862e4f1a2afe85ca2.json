@@ -1,0 +1,23 @@
+{
+  "index": 277,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Acil anda uzun yazmak için vakit yok. Kısa ve net olsun.",
+  "sourceFilename": "af32059862e4f1a2afe85ca2.mp3",
+  "sourceSha256": "f1fd7a5c0da03fa01c3d1e87af6e9e4f9de530b2183e399466e86668bb7d7f53",
+  "importedAt": "2026-10-01T03:54:22.172503+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

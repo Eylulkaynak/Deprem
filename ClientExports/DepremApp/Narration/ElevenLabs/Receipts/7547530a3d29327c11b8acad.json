@@ -1,0 +1,23 @@
+{
+  "index": 262,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Pencereyi aç, kıvılcım çıkaran hiçbir şeye dokunma ve hemen bir büyüğüne haber ver.",
+  "sourceFilename": "7547530a3d29327c11b8acad.mp3",
+  "sourceSha256": "49ef9cb72ebf97bfd438eab8b7e8b36927f4168912a0296b139337cfcfd40c72",
+  "importedAt": "2026-10-01T03:52:48.872262+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.997551"
+    }
+  }
+}

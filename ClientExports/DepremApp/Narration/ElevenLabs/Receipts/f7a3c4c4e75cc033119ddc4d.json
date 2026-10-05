@@ -1,0 +1,23 @@
+{
+  "index": 207,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Köprü ve üst geçitlerin altından uzak, açık bir yerde durursun.",
+  "sourceFilename": "f7a3c4c4e75cc033119ddc4d.mp3",
+  "sourceSha256": "f81f91de6120e2c6196e0302ed9dae6666066dea32f935f0bed7c702810a779c",
+  "importedAt": "2026-10-01T03:36:54.451463+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

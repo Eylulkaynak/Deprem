@@ -1,0 +1,23 @@
+{
+  "index": 248,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Panikle koşmak düşmene ve başkalarına çarpmana sebep olur. Sakin ve düzenli çık.",
+  "sourceFilename": "f51b3679bb27046465035508.mp3",
+  "sourceSha256": "8c258d341308709c34a72431d5ab7b0c799e82ed72b1a0d1955c0656d79373ae",
+  "importedAt": "2026-10-01T03:51:17.469194+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.075918"
+    }
+  }
+}

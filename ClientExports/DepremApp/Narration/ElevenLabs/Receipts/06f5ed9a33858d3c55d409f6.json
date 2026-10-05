@@ -1,0 +1,23 @@
+{
+  "index": 290,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Eşya almak için içeri girerim",
+  "sourceFilename": "06f5ed9a33858d3c55d409f6.mp3",
+  "sourceSha256": "444eaf00545b9732ad66bfb896e3df615447e5d19c5d5102e87c0579ed005546",
+  "importedAt": "2026-10-01T03:55:35.562555+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.471020"
+    }
+  }
+}

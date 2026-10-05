@@ -1,0 +1,23 @@
+{
+  "index": 547,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Herkes için aynı çanta yeterlidir",
+  "sourceFilename": "0a7e174c22dd950aa70bb411.mp3",
+  "sourceSha256": "ccb1a22f5028376429277654abcddb5ab350661cf2885174f1376f958f991d6e",
+  "importedAt": "2026-10-01T04:47:42.794673+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.967347"
+    }
+  }
+}

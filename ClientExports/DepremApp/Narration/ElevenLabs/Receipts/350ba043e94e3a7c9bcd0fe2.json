@@ -1,0 +1,23 @@
+{
+  "index": 26,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Parmağınla çantayı sağa ve sola hareket ettir. İhtiyacımız olan eşyaları yakala. Gereksiz eşyaların geçmesine izin ver. Hazır olduğunda çantaya dokun.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_12_08_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "271c532a4632c933e8779fb341d4503fc7c49153fe02ff4eb5161d37bcf3f191",
+  "importedAt": "2026-10-01T00:12:26.403057+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "10.882449"
+    }
+  }
+}

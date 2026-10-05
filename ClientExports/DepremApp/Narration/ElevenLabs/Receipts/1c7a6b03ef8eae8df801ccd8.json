@@ -1,0 +1,23 @@
+{
+  "index": 219,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hemen dışarı fırlarım",
+  "sourceFilename": "1c7a6b03ef8eae8df801ccd8.mp3",
+  "sourceSha256": "57049fea029cafd11c3120df1b87628a10cf39d40d5b9722c06a35ba395b8228",
+  "importedAt": "2026-10-01T03:43:38.988714+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

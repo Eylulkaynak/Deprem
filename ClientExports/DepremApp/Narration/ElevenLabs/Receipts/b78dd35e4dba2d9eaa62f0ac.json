@@ -1,0 +1,23 @@
+{
+  "index": 438,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Apartman veya iş yeri afet planında hangisi önceden netleşmelidir?",
+  "sourceFilename": "b78dd35e4dba2d9eaa62f0ac.mp3",
+  "sourceSha256": "caf516bd57bf015d51e8115c705b825f2413fa419406b61f14e63848533a5274",
+  "importedAt": "2026-10-01T04:24:31.452993+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.109388"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 300,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Binaya geri dönmeyip dışarıda beklemek seni korur.",
+  "sourceFilename": "c0e0cf41c3a98138cca4c721.mp3",
+  "sourceSha256": "61b83700938436cd6913a61a323b4c11032237cfea4e7cb9d123c4f0293f960e",
+  "importedAt": "2026-10-01T03:56:53.546526+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

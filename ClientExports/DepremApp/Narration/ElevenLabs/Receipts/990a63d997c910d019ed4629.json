@@ -1,0 +1,23 @@
+{
+  "index": 236,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet, hemen girerim",
+  "sourceFilename": "990a63d997c910d019ed4629.mp3",
+  "sourceSha256": "7b1aca85b0de6038e8a4cbc3dc0e945a4ece7d17726acfd74bbf20cf15e03476",
+  "importedAt": "2026-10-01T03:49:48.519370+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.000816"
+    }
+  }
+}

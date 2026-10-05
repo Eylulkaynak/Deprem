@@ -1,0 +1,23 @@
+{
+  "index": 33,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sağlam masa en iyi dost",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_16_05_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "8c9d6ea64348de9039bb186b7c962cb79cee1307364c934aa45b132d5f2e0360",
+  "importedAt": "2026-10-01T00:17:51.750115+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 559,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kopmuş kabloya dokunma ve su dökme.",
+  "sourceFilename": "d57a7f0fb1da305f2bc5dcfe.mp3",
+  "sourceSha256": "0305cc4507bb8da4a9e57ca94f0278cefa03791c14cf25040840e9de75ed3bcb",
+  "importedAt": "2026-10-01T04:49:54.494222+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.280816"
+    }
+  }
+}

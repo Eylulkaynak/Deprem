@@ -1,0 +1,23 @@
+{
+  "index": 206,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İçeride beklerim",
+  "sourceFilename": "4e44f386941d1988ce96c613.mp3",
+  "sourceSha256": "665109e217721d48b2456c973aba4be6b57330b6392627d9ea3244972bd4fe01",
+  "importedAt": "2026-10-01T03:36:25.657097+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.530612"
+    }
+  }
+}

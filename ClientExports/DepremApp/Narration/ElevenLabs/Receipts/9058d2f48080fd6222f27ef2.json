@@ -1,0 +1,23 @@
+{
+  "index": 493,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dokun",
+  "sourceFilename": "9058d2f48080fd6222f27ef2.mp3",
+  "sourceSha256": "f4ed55734fb6d805f9d43be03cc1f85b297cec7e30846d46825a3f51a7006511",
+  "importedAt": "2026-10-01T04:41:46.882579+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.269388"
+    }
+  }
+}

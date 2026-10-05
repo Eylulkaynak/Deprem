@@ -1,0 +1,23 @@
+{
+  "index": 564,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Merdivene koş",
+  "sourceFilename": "d21f0bb00670849a344f663f.mp3",
+  "sourceSha256": "528b8fefb86bfad94ddd22703bbb1db25140145ad390d41452ebb7a55e5e6b7e",
+  "importedAt": "2026-10-01T04:50:33.075661+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

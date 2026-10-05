@@ -1,0 +1,23 @@
+{
+  "index": 223,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Koşmak yerine sağlam bir yere çökmek seni korur.",
+  "sourceFilename": "94bbf083f3a5b5158134e402.mp3",
+  "sourceSha256": "c8172e2202bc5d16cf0e9031ea90ce481f9cd36bfc28570edb6f526a25a5062e",
+  "importedAt": "2026-10-01T03:48:35.474562+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

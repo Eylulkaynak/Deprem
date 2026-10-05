@@ -1,0 +1,23 @@
+{
+  "index": 611,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Temel İlk Yardım",
+  "sourceFilename": "fa576fbce3fe568a8365e905.mp3",
+  "sourceSha256": "dd364c7c217bf0079a12cbdd03b4b0a781b2c410c10c5f47a762d303d43aa6ba",
+  "importedAt": "2026-10-01T04:58:02.555392+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

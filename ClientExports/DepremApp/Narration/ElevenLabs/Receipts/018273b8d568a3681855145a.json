@@ -1,0 +1,23 @@
+{
+  "index": 613,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Teyitsiz bilgi paniği ve kaynak israfını artırabilir.",
+  "sourceFilename": "018273b8d568a3681855145a.mp3",
+  "sourceSha256": "1e4ef3a5dcfd28c2d74f9acf1127da13f2e5494c8b0a0506554130c590814dbf",
+  "importedAt": "2026-10-01T05:06:11.108252+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.247347"
+    }
+  }
+}

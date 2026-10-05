@@ -1,0 +1,23 @@
+{
+  "index": 422,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Afet sonrası ilk destek çoğu zaman yakın çevreden gelir.",
+  "sourceFilename": "a0ca575f059a854f778915bb.mp3",
+  "sourceSha256": "ce51b027f23308a1646d3bfa17a446c3c14ec89e5a45ea5b0e90a282f5adf57c",
+  "importedAt": "2026-10-01T04:21:57.654636+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.404082"
+    }
+  }
+}

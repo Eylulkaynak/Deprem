@@ -1,0 +1,23 @@
+{
+  "index": 483,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Daha fazla davranış arasından yalnızca tehlikeli olanları bul.",
+  "sourceFilename": "3e8907f03ca95b2229671533.mp3",
+  "sourceSha256": "c456e583aa95a1f75bf7b67e08085c2e88a5b9c83d02ea62d24474ff56e516e0",
+  "importedAt": "2026-10-01T04:40:43.473672+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

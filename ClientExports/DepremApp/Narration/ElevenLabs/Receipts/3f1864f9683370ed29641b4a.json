@@ -1,0 +1,23 @@
+{
+  "index": 155,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Koşma! Sarsıntı bitene kadar olduğun yerde güvende kal.",
+  "sourceFilename": "3f1864f9683370ed29641b4a.mp3",
+  "sourceSha256": "3aae00400390f786823fabea18388af4b77790b4125de612d8d69b034f174c55",
+  "importedAt": "2026-10-01T03:30:27.781782+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.247347"
+    }
+  }
+}

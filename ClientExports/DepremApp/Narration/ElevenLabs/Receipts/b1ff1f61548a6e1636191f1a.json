@@ -1,0 +1,23 @@
+{
+  "index": 159,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Balkona çıkarım",
+  "sourceFilename": "b1ff1f61548a6e1636191f1a.mp3",
+  "sourceSha256": "0528fc6d78b033732da4bda0af4c422364d5f6fe6567499f8d336cf6f02966c4",
+  "importedAt": "2026-10-01T03:30:34.904532+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.530612"
+    }
+  }
+}

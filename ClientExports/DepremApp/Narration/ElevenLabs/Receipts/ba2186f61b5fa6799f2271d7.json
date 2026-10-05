@@ -1,0 +1,23 @@
+{
+  "index": 474,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bina, balkon ve elektrik direklerinden uzak dur.",
+  "sourceFilename": "ba2186f61b5fa6799f2271d7.mp3",
+  "sourceSha256": "53f81f0e3b699a989c61df85923629db46522662b69bcd600105807dd14912a4",
+  "importedAt": "2026-10-01T04:39:42.157543+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.090612"
+    }
+  }
+}

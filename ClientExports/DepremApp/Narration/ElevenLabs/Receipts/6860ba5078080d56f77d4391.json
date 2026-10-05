@@ -1,0 +1,23 @@
+{
+  "index": 131,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntıda nereye sığınırsın?",
+  "sourceFilename": "ElevenLabs_2026-10-01T03_12_46_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "8c05f25bdc59f2db312c900b40c1581c12500f3f9ed8b8ce7370ba21b14280f0",
+  "importedAt": "2026-10-01T03:13:18.453103+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.888980"
+    }
+  }
+}

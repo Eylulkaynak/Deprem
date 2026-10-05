@@ -1,0 +1,23 @@
+{
+  "index": 522,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ev İçi Güvenlik",
+  "sourceFilename": "319735ff866e008b9997acc3.mp3",
+  "sourceSha256": "142668b785a84592024a75ec038adfbab4fcca6a8a5c92fc8363d9016e17490a",
+  "importedAt": "2026-10-01T04:44:51.168517+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.687347"
+    }
+  }
+}

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/LearningApp/Scenes/Deprem_App.unity
+    guid: 3f46e4569b1bf1f4fb32e22ea2153424
+  - enabled: 1
     path: Assets/Scenes/Story_Rebuild_MainMenu.unity
     guid: 4e8fba7e38c62fb41b25821856ed2745
   - enabled: 1
@@ -47,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame_RubbleSignal.unity
     guid: 1b9dca4ec9a525a4db5da44696a8c1fd
+  - enabled: 1
+    path: Assets/YanYana/Scenes/YanYana_Adventure.unity
+    guid: 5ba703c184340e345a2d0166b548c6f0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

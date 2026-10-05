@@ -1,0 +1,23 @@
+{
+  "index": 231,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntılar tamamen bitene kadar hasarlı binalara girmek tehlikelidir.",
+  "sourceFilename": "53480887583d852d7a5f3898.mp3",
+  "sourceSha256": "c4aa0394eab336f8064c0ac2d5d9a3890da359f3cd9f616e3aafa26504f03caf",
+  "importedAt": "2026-10-01T03:49:18.500153+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 372,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çığlık atıp koşarım",
+  "sourceFilename": "d60caec72909e161381de40f.mp3",
+  "sourceSha256": "441d0cd1a8764ca43132ebc39e65e872025c3a8db8ab386fa6c5a5da8f8ec74c",
+  "importedAt": "2026-10-01T04:14:12.727589+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.000816"
+    }
+  }
+}

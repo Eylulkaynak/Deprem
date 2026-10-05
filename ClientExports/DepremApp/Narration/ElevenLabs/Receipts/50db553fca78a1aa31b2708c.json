@@ -1,0 +1,23 @@
+{
+  "index": 96,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır dolapları duvara sabitlersek depremde üstümüze devrilmez.",
+  "sourceFilename": "50db553fca78a1aa31b2708c.mp3",
+  "sourceSha256": "767cfe243e403a060446c3ff5f18035bc25598347a6cfa0dc1429bd02dbb1c40",
+  "importedAt": "2026-10-01T01:05:33.634505+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

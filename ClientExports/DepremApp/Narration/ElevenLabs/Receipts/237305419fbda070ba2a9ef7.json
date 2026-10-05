@@ -1,0 +1,23 @@
+{
+  "index": 388,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dokunmadan uzaklaşırım",
+  "sourceFilename": "237305419fbda070ba2a9ef7.mp3",
+  "sourceSha256": "291cf95e8f3d17a967e198031d8fd28f5fc2198110f1bdebf12078d7ea019ef8",
+  "importedAt": "2026-10-01T04:15:57.345656+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.079184"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 628,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yaralıyı gereksiz yere taşımak",
+  "sourceFilename": "c876ef04ec738f9be0b5e396.mp3",
+  "sourceSha256": "d7506f8352d262c62927d2125a62c45e198fc144b062c641d6c93650fb6c9bc6",
+  "importedAt": "2026-10-01T05:07:40.866529+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.706122"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 526,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz kokusu alındığında hangisi yapılmamalıdır?",
+  "sourceFilename": "239266293fb7d8b656b73343.mp3",
+  "sourceSha256": "6fcf34d5591599e81dae2c0944ced579223c0973a19d98cbf8e4a529b32f429b",
+  "importedAt": "2026-10-01T04:45:19.310808+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

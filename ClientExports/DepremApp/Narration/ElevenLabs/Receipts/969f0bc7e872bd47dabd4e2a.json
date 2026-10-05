@@ -1,0 +1,23 @@
+{
+  "index": 123,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başımı ve ensemi kapatırım",
+  "sourceFilename": "969f0bc7e872bd47dabd4e2a.mp3",
+  "sourceSha256": "25cace34fd5109b66959e2f52135c201f9cb4b170ce5e589eed5dbdc76bb7456",
+  "importedAt": "2026-10-01T01:11:01.370275+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

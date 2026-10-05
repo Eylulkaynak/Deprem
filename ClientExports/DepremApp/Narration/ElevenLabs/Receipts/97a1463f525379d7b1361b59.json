@@ -1,0 +1,23 @@
+{
+  "index": 654,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İlaç, cihaz, bakım ve beslenme ihtiyaçları kişiye göre değişir.",
+  "sourceFilename": "97a1463f525379d7b1361b59.mp3",
+  "sourceSha256": "17c75f4b80b4d1abf7652904122d7522b215f60d170188976c7be536f03ebed3",
+  "importedAt": "2026-10-01T05:12:16.700053+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

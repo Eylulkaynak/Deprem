@@ -1,0 +1,23 @@
+{
+  "index": 190,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem anında herkes çıkışlara koşmalı ve panik yapmalıdır.",
+  "sourceFilename": "a1b39f27a1eae2ded5d99e8d.mp3",
+  "sourceSha256": "cf7633d7bc0bfd032711299b3b701062ac6c29e4b9f65c55d4e800e839d85cd2",
+  "importedAt": "2026-10-01T03:34:49.263833+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

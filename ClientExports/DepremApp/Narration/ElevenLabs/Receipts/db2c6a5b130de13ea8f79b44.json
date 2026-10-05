@@ -1,0 +1,23 @@
+{
+  "index": 48,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tehlikelere Yaklaşma",
+  "sourceFilename": "db2c6a5b130de13ea8f79b44.mp3",
+  "sourceSha256": "6946172846bc7f6c034873fc2601a2a024c829c2ae2dafc671da5dc1d00c2d83",
+  "importedAt": "2026-10-01T00:58:28.738399+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.000816"
+    }
+  }
+}

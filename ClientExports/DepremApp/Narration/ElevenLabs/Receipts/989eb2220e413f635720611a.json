@@ -1,0 +1,23 @@
+{
+  "index": 356,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Panikle koşarak kaçarım",
+  "sourceFilename": "989eb2220e413f635720611a.mp3",
+  "sourceSha256": "2594f2cf924900301d279930d1c7e61f809b132747b77cb0cbc68226ec39671a",
+  "importedAt": "2026-10-01T04:12:24.841830+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 635,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yetkiliye haber ver",
+  "sourceFilename": "937ddefafe68e4466b955569.mp3",
+  "sourceSha256": "031543fccf51156e364ce187c151d178c81c240131bf0aee0e3a3028aaf5142b",
+  "importedAt": "2026-10-01T05:09:06.921679+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

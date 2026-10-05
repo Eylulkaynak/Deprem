@@ -1,0 +1,23 @@
+{
+  "index": 482,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ciddi kanamada temiz bezle doğrudan bası uygula.",
+  "sourceFilename": "6e412d195303a4abbb7dff67.mp3",
+  "sourceSha256": "f1a1754a51848a676ac90a14f5496575245c54853867238602814e85049c0e76",
+  "importedAt": "2026-10-01T04:40:37.615723+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.090612"
+    }
+  }
+}

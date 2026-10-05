@@ -1,0 +1,23 @@
+{
+  "index": 318,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Korkup herkese hemen söylerim",
+  "sourceFilename": "95bc000c7a70fa47e584c15b.mp3",
+  "sourceSha256": "334f234b03666038a5ac04430d2c6f25e4c31a08846ba4e1da63384f35697e87",
+  "importedAt": "2026-10-01T04:08:14.588964+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 184,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] En güvenlisi sıranın yanına çöküp başını korumak.",
+  "sourceFilename": "3783782fdb29ddfd6e5e615a.mp3",
+  "sourceSha256": "c5b10099d4b81a2f59dab0e28be02820fa3db8ee0ba86da7f915f61fa16be036",
+  "importedAt": "2026-10-01T03:34:13.481377+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

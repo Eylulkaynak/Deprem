@@ -1,0 +1,23 @@
+{
+  "index": 656,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İleri müdahale eğitim gerektirir; acil ekip desteği beklenmelidir.",
+  "sourceFilename": "d3552d1961875dc0cb621650.mp3",
+  "sourceSha256": "906819e30f4ebec93c2407eb4f81105113b5f07c46b8a73642a9ccdb7d54dbf9",
+  "importedAt": "2026-10-01T05:12:37.100042+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 555,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Komşu Dayanışması",
+  "sourceFilename": "4335371b7a810bb05b3e1baf.mp3",
+  "sourceSha256": "5326aaafe784e3e7897d305faf68046270b739a420357967192b39bbf5db8851",
+  "importedAt": "2026-10-01T04:49:25.839219+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.765714"
+    }
+  }
+}

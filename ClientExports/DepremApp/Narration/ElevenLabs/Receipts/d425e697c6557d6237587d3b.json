@@ -1,0 +1,23 @@
+{
+  "index": 513,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Düdük çal",
+  "sourceFilename": "d425e697c6557d6237587d3b.mp3",
+  "sourceSha256": "53e4c95119a709c76d28846e4bf052e340e2452fa91b65f8121fd836b60e8a04",
+  "importedAt": "2026-10-01T04:43:49.972946+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.426122"
+    }
+  }
+}

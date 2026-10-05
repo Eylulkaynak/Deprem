@@ -1,0 +1,23 @@
+{
+  "index": 110,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır kitapları en üst rafa koymak deprem için güvenlidir.",
+  "sourceFilename": "7b42c9f6705627380e29c16f.mp3",
+  "sourceSha256": "bdfd06507a7d91640d1ed3899b8751ea35e0921057e277739192e72bd10fb10b",
+  "importedAt": "2026-10-01T01:07:43.676604+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.090612"
+    }
+  }
+}

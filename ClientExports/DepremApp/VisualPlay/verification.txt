@@ -1,0 +1,20 @@
+PASS: child:bag-packing completes through UI with sound disabled.
+PASS: child:category-sorting completes through UI with sound disabled.
+PASS: child:match-pairs completes through UI with sound disabled.
+PASS: child:safe-choice completes through UI with sound disabled.
+PASS: child:danger-hunt completes through UI with sound disabled.
+PASS: child:safe-order completes through UI with sound disabled.
+PASS: child:memory-bag completes through UI with sound disabled.
+PASS: adult:bag-packing completes through UI with sound disabled.
+PASS: adult:category-sorting completes through UI with sound disabled.
+PASS: adult:match-pairs completes through UI with sound disabled.
+PASS: adult:safe-choice completes through UI with sound disabled.
+PASS: adult:danger-hunt completes through UI with sound disabled.
+PASS: adult:safe-order completes through UI with sound disabled.
+PASS: adult:memory-bag completes through UI with sound disabled.
+PASS: all eight child games at (750, 1334): short optional captions, artwork present, 44+ touch targets, no horizontal overflow.
+PASS: all eight child games at (1536, 2048): short optional captions, artwork present, 44+ touch targets, no horizontal overflow.
+PASS: child:catch-bag via pointer input.
+PASS: adult:catch-bag via pointer input.
+COMPLETE: all 16 game modes; all child quiz scenarios; silent play; isolated save restored.
+PASS: no runtime errors.

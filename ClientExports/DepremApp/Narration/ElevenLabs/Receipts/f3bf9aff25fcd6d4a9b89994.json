@@ -1,0 +1,23 @@
+{
+  "index": 470,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bilinç, solunum ve kanama durumunu kısa ve net şekilde yüz on iki’ye bildir.",
+  "sourceFilename": "f3bf9aff25fcd6d4a9b89994.mp3",
+  "sourceSha256": "25867f39a0b2abda1b9b24fd52794b8a64330eba496a902e32f514035f635d7b",
+  "importedAt": "2026-10-01T04:28:58.656536+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.448980"
+    }
+  }
+}

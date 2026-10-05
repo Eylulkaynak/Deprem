@@ -1,0 +1,23 @@
+{
+  "index": 479,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Cam kırıkları ve dış cephe parçaları ciddi risk oluşturur.",
+  "sourceFilename": "7f39a301747c6862855dffc4.mp3",
+  "sourceSha256": "e036909be28347ba030647228ff5ba87d465aa49b77a1e0eddfe7a979fea0ff8",
+  "importedAt": "2026-10-01T04:40:15.454451+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.404082"
+    }
+  }
+}

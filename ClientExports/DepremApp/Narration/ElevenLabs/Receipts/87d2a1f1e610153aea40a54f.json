@@ -1,0 +1,23 @@
+{
+  "index": 488,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem eğitiminin sürdürülebilir olması için en doğru yöntem hangisidir?",
+  "sourceFilename": "87d2a1f1e610153aea40a54f.mp3",
+  "sourceSha256": "8d284b97e1f4bfaf675b3c930e4ae64682fa975633513197f96e9e423e6e88c8",
+  "importedAt": "2026-10-01T04:41:12.912022+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

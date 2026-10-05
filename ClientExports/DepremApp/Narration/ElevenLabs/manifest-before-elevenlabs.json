@@ -1,0 +1,3355 @@
+{
+  "version": 1,
+  "voice": "tr-TR-EmelNeural",
+  "rate": "-8%",
+  "pitch": "+0Hz",
+  "synthetic": true,
+  "direction": "Sıcak, sakin bir yetişkin kadın anlatıcı. Çocukla yan yana konuşur gibi; kısa cümleler, doğal duraklar, yargılamayan geri bildirim. Bebeksi ses, bağırma, acele ettirme ve kesin güvenlik vaatleri yok.",
+  "entries": [
+    {
+      "text": "AFAD ve radyo gibi resmi kaynaklar doğru bilgi verir. Söylentiler yanlış olabilir ve korkuyu artırır.",
+      "spoken": "AFAD ve radyo gibi resmi kaynaklar doğru bilgi verir. Söylentiler yanlış olabilir ve korkuyu artırır.",
+      "resource": "LearningApp/Narration/Clips/35b1b31c5b7b4bf194138c6d"
+    },
+    {
+      "text": "AFAD ve radyodan",
+      "spoken": "AFAD ve radyodan",
+      "resource": "LearningApp/Narration/Clips/adf67d23d5303d3276e7db98"
+    },
+    {
+      "text": "Acil anda uzun yazmak için vakit yok. Kısa ve net olsun.",
+      "spoken": "Acil anda uzun yazmak için vakit yok. Kısa ve net olsun.",
+      "resource": "LearningApp/Narration/Clips/6a64d6223a7ed8c9b5a4ef65"
+    },
+    {
+      "text": "Acil durumda asansör kullanmama kuralını ekipçe netleştir.",
+      "spoken": "Acil durumda asansör kullanmama kuralını ekipçe netleştir.",
+      "resource": "LearningApp/Narration/Clips/cd6f4da0d2460e9aef9365a2"
+    },
+    {
+      "text": "Acil Çanta Nedir?",
+      "spoken": "Acil Çanta Nedir?",
+      "resource": "LearningApp/Narration/Clips/34cfbea0ddfb2c7104b4866f"
+    },
+    {
+      "text": "Acil çanta, evrak kopyaları ve ilaç listesini erişilebilir tut.",
+      "spoken": "Acil çanta, evrak kopyaları ve ilaç listesini erişilebilir tut.",
+      "resource": "LearningApp/Narration/Clips/01da818c1e38609e3056c434"
+    },
+    {
+      "text": "Acil çantana hangisini koyarsın?",
+      "spoken": "Acil çantana hangisini koyarsın?",
+      "resource": "LearningApp/Narration/Clips/769825555fa849478b3dc3da"
+    },
+    {
+      "text": "Acil çantanı görünür bir yerde tut.",
+      "spoken": "Acil çantanı görünür bir yerde tut.",
+      "resource": "LearningApp/Narration/Clips/02991907365b4792c7b41516"
+    },
+    {
+      "text": "Aferin! Arabada beklemek seni düşen parçalardan korur.",
+      "spoken": "Evet. Arabada beklemek seni düşen parçalardan korur.",
+      "resource": "LearningApp/Narration/Clips/72cf2c44bd0657272fe9dbb6"
+    },
+    {
+      "text": "Aferin! Ağzını kapatıp sakin kalmak nefesini korur.",
+      "spoken": "Evet. Ağzını kapatıp sakin kalmak nefesini korur.",
+      "resource": "LearningApp/Narration/Clips/7884ebff155f8c94a409e6e8"
+    },
+    {
+      "text": "Aferin! Başını korumak en önemli şey.",
+      "spoken": "Evet. Başını korumak en önemli şey.",
+      "resource": "LearningApp/Narration/Clips/0282150d6ce3e44783d7db45"
+    },
+    {
+      "text": "Aferin! Binaya geri dönmeyip dışarıda beklemek seni korur.",
+      "spoken": "Evet. Binaya geri dönmeyip dışarıda beklemek seni korur.",
+      "resource": "LearningApp/Narration/Clips/91294b3887826f3b3dd35467"
+    },
+    {
+      "text": "Aferin! Büyüğüne haber verip birlikte güvende olursunuz.",
+      "spoken": "Evet. Büyüğüne haber verip birlikte güvende olursunuz.",
+      "resource": "LearningApp/Narration/Clips/782b5703d2692ec1300d3b57"
+    },
+    {
+      "text": "Aferin! Düdük sesimizi uzaklara duyurur, çantaya konur.",
+      "spoken": "Evet. Düdük sesimizi uzaklara duyurur, çantaya konur.",
+      "resource": "LearningApp/Narration/Clips/b16c169fe95563c6c2c03d6f"
+    },
+    {
+      "text": "Aferin! Hasarlı binadan uzak durmak en doğrusu.",
+      "spoken": "Evet. Hasarlı binadan uzak durmak en doğrusu.",
+      "resource": "LearningApp/Narration/Clips/44137dd62460ff6d3a09503e"
+    },
+    {
+      "text": "Aferin! Hasarlı binaya girmedin.",
+      "spoken": "Evet. Hasarlı binaya girmedin.",
+      "resource": "LearningApp/Narration/Clips/46c6a4741b5020c372a85879"
+    },
+    {
+      "text": "Aferin! Sakin ve düzenli çıkmak en güvenlisi.",
+      "spoken": "Evet. Sakin ve düzenli çıkmak en güvenlisi.",
+      "resource": "LearningApp/Narration/Clips/60aaca246718ddc782efdf46"
+    },
+    {
+      "text": "Aferin! Sarsıntı bitene kadar yerimizde kalırız.",
+      "spoken": "Evet. Sarsıntı bitene kadar yerimizde kalırız.",
+      "resource": "LearningApp/Narration/Clips/554fda690b5dcad5e2856837"
+    },
+    {
+      "text": "Aferin! Söylentiye inanmayıp resmi açıklamayı beklemek doğru.",
+      "spoken": "Evet. Söylentiye inanmayıp resmi açıklamayı beklemek doğru.",
+      "resource": "LearningApp/Narration/Clips/dd24306cbd7834ea5516d651"
+    },
+    {
+      "text": "Aferin! Tatbikatı doğru yaptın.",
+      "spoken": "Evet. Tatbikatı doğru yaptın.",
+      "resource": "LearningApp/Narration/Clips/283dfb77c0a3e1b94ad6e189"
+    },
+    {
+      "text": "Aferin! Temiz bezle bastırmak kanamayı durdurmaya yardım eder.",
+      "spoken": "Evet. Temiz bezle bastırmak kanamayı durdurmaya yardım eder.",
+      "resource": "LearningApp/Narration/Clips/7f412f41f3fc6c0e6c6c351b"
+    },
+    {
+      "text": "Aferin! Öğrendiğin adımları uyguladın.",
+      "spoken": "Evet. Öğrendiğin adımları uyguladın.",
+      "resource": "LearningApp/Narration/Clips/25c273c7690cbf8c4a454f7c"
+    },
+    {
+      "text": "Aferin! Öğretmenini dinleyince sıralı ve güvenli çıkarsın.",
+      "spoken": "Evet. Öğretmenini dinleyince sıralı ve güvenli çıkarsın.",
+      "resource": "LearningApp/Narration/Clips/123e787668ed3f25820697fa"
+    },
+    {
+      "text": "Afet planı, evdeki herkesin gerçek ihtiyaçlarını kapsadığında çalışır.\n\n• Yaşlı, engelli, hamile, bebek veya kronik hastalığı olan kişiler için ayrı liste hazırla.\n\n• Gözlük, işitme cihazı pili, medikal cihaz, mama ve hijyen ürünlerini planla.\n\n• Evcil hayvan için mama, su, taşıma çantası ve kimlik bilgisini hazır tut.\n\n• Komşu destek ağını önceden kur; yalnız yaşayanları plana dahil et.\n\nBugün: Destek gerektiren bir kişi için özel ihtiyaç listesi çıkar.",
+      "spoken": "Afet planı, evdeki herkesin gerçek ihtiyaçlarını kapsadığında çalışır. Yaşlı, engelli, hamile, bebek veya kronik hastalığı olan kişiler için ayrı liste hazırla. Gözlük, işitme cihazı pili, medikal cihaz, mama ve hijyen ürünlerini planla. Evcil hayvan için mama, su, taşıma çantası ve kimlik bilgisini hazır tut. Komşu destek ağını önceden kur; yalnız yaşayanları plana dahil et. Bugün: Destek gerektiren bir kişi için özel ihtiyaç listesi çıkar.",
+      "resource": "LearningApp/Narration/Clips/53b6f67654f2d2308876e614"
+    },
+    {
+      "text": "Afet sonrası ilk destek çoğu zaman yakın çevreden gelir.",
+      "spoken": "Afet sonrası ilk destek çoğu zaman yakın çevreden gelir.",
+      "resource": "LearningApp/Narration/Clips/a4e82d84f7dc6a0c8074ca76"
+    },
+    {
+      "text": "Afet sonrası teyitsiz bir yardım çağrısı gördüğünde ne yapmalısın?",
+      "spoken": "Afet sonrası teyitsiz bir yardım çağrısı gördüğünde ne yapmalısın?",
+      "resource": "LearningApp/Narration/Clips/a43b2a3123d8dbf64a32e493"
+    },
+    {
+      "text": "Afet sonrası yanlış bilgi ve yoğun telefon trafiği müdahaleyi zorlaştırır.\n\n• Resmi açıklamaları ve yerel yetkililerin duyurularını takip et.\n\n• Telefonu kısa ve gerekli iletişim için kullan; mümkünse kısa mesaj gönder.\n\n• Sosyal medyada teyitsiz konum, yardım ve hasar bilgisi paylaşma.\n\n• Radyo ve powerbank gibi düşük enerji çözümlerini hazır tut.\n\nBugün: Telefonuna resmi uyarı ve belediye/AFAD kanallarını ekle.",
+      "spoken": "Afet sonrası yanlış bilgi ve yoğun telefon trafiği müdahaleyi zorlaştırır. Resmi açıklamaları ve yerel yetkililerin duyurularını takip et. Telefonu kısa ve gerekli iletişim için kullan; mümkünse kısa mesaj gönder. Sosyal medyada teyitsiz konum, yardım ve hasar bilgisi paylaşma. Radyo ve powerbank gibi düşük enerji çözümlerini hazır tut. Bugün: Telefonuna resmi uyarı ve belediye/AFAD kanallarını ekle.",
+      "resource": "LearningApp/Narration/Clips/4f35a4e37193cbb744faee78"
+    },
+    {
+      "text": "Afet Çantası ve Belgeler",
+      "spoken": "Afet Çantası ve Belgeler",
+      "resource": "LearningApp/Narration/Clips/56d599107a639e7325419a46"
+    },
+    {
+      "text": "Afet çantası için en doğru yaklaşım hangisidir?",
+      "spoken": "Afet çantası için en doğru yaklaşım hangisidir?",
+      "resource": "LearningApp/Narration/Clips/9f8b24a9e3ff703084102101"
+    },
+    {
+      "text": "Aile Planı Yapalım",
+      "spoken": "Aile Planı Yapalım",
+      "resource": "LearningApp/Narration/Clips/18dadd2ec36dbad1d0764847"
+    },
+    {
+      "text": "Aile buluşma noktasını önceden seç.",
+      "spoken": "Aile buluşma noktasını önceden seç.",
+      "resource": "LearningApp/Narration/Clips/804c362d81f6971059ad46ac"
+    },
+    {
+      "text": "Aile iletişim planını ve toplanma noktasını yazılı hale getir.",
+      "spoken": "Aile iletişim planını ve toplanma noktasını yazılı hale getir.",
+      "resource": "LearningApp/Narration/Clips/a456b809e637539fe515689a"
+    },
+    {
+      "text": "Aile planında belirlenen şehir dışı kişiye durum bildirimi yap.",
+      "spoken": "Aile planında belirlenen şehir dışı kişiye durum bildirimi yap.",
+      "resource": "LearningApp/Narration/Clips/488cad3a555a35fe8b592141"
+    },
+    {
+      "text": "Aile planını kimler bilmeli?",
+      "spoken": "Aile planını kimler bilmeli?",
+      "resource": "LearningApp/Narration/Clips/05a1f34433651dfa37fa4f0c"
+    },
+    {
+      "text": "Aile ve İletişim Planı",
+      "spoken": "Aile ve İletişim Planı",
+      "resource": "LearningApp/Narration/Clips/3a11170bca47a783f2e97bc2"
+    },
+    {
+      "text": "Ailedeki herkes",
+      "spoken": "Ailedeki herkes",
+      "resource": "LearningApp/Narration/Clips/4afc36cdf8bbd4149ccf5107"
+    },
+    {
+      "text": "Ailenle belirlenen noktada buluş.",
+      "spoken": "Ailenle belirlenen noktada buluş.",
+      "resource": "LearningApp/Narration/Clips/802206febb91aeabf4dbed84"
+    },
+    {
+      "text": "Ailenle buluş",
+      "spoken": "Ailenle buluş",
+      "resource": "LearningApp/Narration/Clips/0da5381c387feb85088a7efb"
+    },
+    {
+      "text": "Ailenle buluşacağınız yeri önceden konuşun. Binalardan uzak, güvenli bir açık alan seçin. Sarsıntı bitince bir büyüğünle birlikte planınızdaki yere gidin. Bir eşyanı almak için binaya geri dönme.",
+      "spoken": "Ailenle buluşacağınız yeri önceden konuşun. Binalardan uzak, güvenli bir açık alan seçin. Sarsıntı bitince bir büyüğünle birlikte planınızdaki yere gidin. Bir eşyanı almak için binaya geri dönme.",
+      "resource": "LearningApp/Narration/Clips/cdf45ea2b404a114b1212801"
+    },
+    {
+      "text": "Ailenle küçük bir plan yapmaya ne dersin? Deprem olduğunda farklı yerlerde olabilirsiniz. Nerede buluşacağınızı ve kime haber vereceğinizi önceden konuşun. Bu planı ailedeki herkes bilsin.",
+      "spoken": "Ailenle küçük bir plan yapmaya ne dersin? Deprem olduğunda farklı yerlerde olabilirsiniz. Nerede buluşacağınızı ve kime haber vereceğinizi önceden konuşun. Bu planı ailedeki herkes bilsin.",
+      "resource": "LearningApp/Narration/Clips/b622d0a0b576385a53eb752b"
+    },
+    {
+      "text": "Aklına gelen rastgele yere gitme. Önceden belirlediğiniz yere git.",
+      "spoken": "Aklına gelen rastgele yere gitme. Önceden belirlediğiniz yere git.",
+      "resource": "LearningApp/Narration/Clips/9cbb79d1c43b2607d8a3db9e"
+    },
+    {
+      "text": "Aksayan noktalar güncellenmezse aynı sorun tekrar eder.",
+      "spoken": "Aksayan noktalar güncellenmezse aynı sorun tekrar eder.",
+      "resource": "LearningApp/Narration/Clips/dda52c2c1deaa3dbe3b0b2be"
+    },
+    {
+      "text": "Aksayan noktaları not edip planı güncellemek",
+      "spoken": "Aksayan noktaları not edip planı güncellemek",
+      "resource": "LearningApp/Narration/Clips/35a36894ef6397d595ad0dc2"
+    },
+    {
+      "text": "Alev veya kıvılcım gazı tutuşturabilir; asla yakma.",
+      "spoken": "Alev veya kıvılcım gazı tutuşturabilir; asla yakma.",
+      "resource": "LearningApp/Narration/Clips/68266bba1aec5e74a69d47a1"
+    },
+    {
+      "text": "Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır.\n\n• Güvenli bir noktada Çök-Kapan-Tutun davranışını uygula.\n\n• Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur.\n\n• Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun.\n\n• Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun.\n\nBugün: Evde iki güvenli korunma noktası belirle.",
+      "spoken": "Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır. Güvenli bir noktada Çök, kapan, tutun davranışını uygula. Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur. Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun. Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun. Bugün: Evde iki güvenli korunma noktası belirle.",
+      "resource": "LearningApp/Narration/Clips/1944d3bde592da0351635d2f"
+    },
+    {
+      "text": "Ana vanaların yerini önceden öğren; kapatma görevini aile içinde belirle.",
+      "spoken": "Ana vanaların yerini önceden öğren; kapatma görevini aile içinde belirle.",
+      "resource": "LearningApp/Narration/Clips/a87212c3fd705dc6e94db5b7"
+    },
+    {
+      "text": "Apartman ve İş Yeri Planı",
+      "spoken": "Apartman ve İş Yeri Planı",
+      "resource": "LearningApp/Narration/Clips/4adf474171a9433ec6ccfc10"
+    },
+    {
+      "text": "Apartman veya iş yeri afet planında hangisi önceden netleşmelidir?",
+      "spoken": "Apartman veya iş yeri afet planında hangisi önceden netleşmelidir?",
+      "resource": "LearningApp/Narration/Clips/7e91a825d41dc6fad3959478"
+    },
+    {
+      "text": "Apartmanda yaşlı, çocuk, engelli ve yalnız yaşayan kişileri önceden belirle.",
+      "spoken": "Apartmanda yaşlı, çocuk, engelli ve yalnız yaşayan kişileri önceden belirle.",
+      "resource": "LearningApp/Narration/Clips/bf19f0fab629e128bc4fd5fc"
+    },
+    {
+      "text": "Arabada beklerim",
+      "spoken": "Arabada beklerim",
+      "resource": "LearningApp/Narration/Clips/38f35f693c34b0a07a1c9040"
+    },
+    {
+      "text": "Aramak hattı meşgul eder. Küçük bir mesaj daha kolay ulaşır.",
+      "spoken": "Aramak hattı meşgul eder. Küçük bir mesaj daha kolay ulaşır.",
+      "resource": "LearningApp/Narration/Clips/6abcdf3afca22a98a9ffe652"
+    },
+    {
+      "text": "Araç içindeyken amaç güvenli biçimde durmak ve çevre risklerinden uzaklaşmaktır.",
+      "spoken": "Araç içindeyken amaç güvenli biçimde durmak ve çevre risklerinden uzaklaşmaktır.",
+      "resource": "LearningApp/Narration/Clips/3e78a72c4a90095add2137d5"
+    },
+    {
+      "text": "Araç ve Asansör",
+      "spoken": "Araç ve Asansör",
+      "resource": "LearningApp/Narration/Clips/f41906430f763bf107944467"
+    },
+    {
+      "text": "Araçta güvenli yerde durdun. Sonra ne yaparsın?",
+      "spoken": "Araçta güvenli yerde durdun. Sonra ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/446f5836b47dde17ff963fca"
+    },
+    {
+      "text": "Araçtayken",
+      "spoken": "Araçtayken",
+      "resource": "LearningApp/Narration/Clips/a8c9eb13144c3474738aad60"
+    },
+    {
+      "text": "Araçtayken deprem oldu. Nerede durmak en güvenli?",
+      "spoken": "Araçtayken deprem oldu. Nerede durmak en güvenli?",
+      "resource": "LearningApp/Narration/Clips/2d214e4dd3ee846bc4a48645"
+    },
+    {
+      "text": "Araçtayken sürücünün güvenli bir yerde durmasını bekle. Köprülerden ve elektrik tellerinden uzak bir yerde durulduysa araçta kal, yetişkinin yönergelerini dinle. Deprem sırasında asansörü kullanmayız. Zaten asansördeysen kat düğmelerine basıp kapının açıldığı uygun katta çık; kapıyı zorlamaya çalışma.",
+      "spoken": "Araçtayken sürücünün güvenli bir yerde durmasını bekle. Köprülerden ve elektrik tellerinden uzak bir yerde durulduysa araçta kal, yetişkinin yönergelerini dinle. Deprem sırasında asansörü kullanmayız. Zaten asansördeysen kat düğmelerine basıp kapının açıldığı uygun katta çık; kapıyı zorlamaya çalışma.",
+      "resource": "LearningApp/Narration/Clips/0520d119ce0306a03603f2ca"
+    },
+    {
+      "text": "Araçtaysan güvenli yerde dur, köprü ve enerji hatlarından uzaklaş.",
+      "spoken": "Araçtaysan güvenli yerde dur, köprü ve enerji hatlarından uzaklaş.",
+      "resource": "LearningApp/Narration/Clips/fb52cf88e5b9cf6630428657"
+    },
+    {
+      "text": "Artçı bitti. Hasarlı binaya hemen girmeli misin?",
+      "spoken": "Artçı bitti. Hasarlı binaya hemen girmeli misin?",
+      "resource": "LearningApp/Narration/Clips/e98451de32e93c2f2a190a0d"
+    },
+    {
+      "text": "Artçı geldiğinde tıpkı ilk depremdeki gibi davran: çök, kapan, tutun.",
+      "spoken": "Artçı geldiğinde tıpkı ilk depremdeki gibi davran: çök, kapan, tutun.",
+      "resource": "LearningApp/Narration/Clips/3182b51684fe922772a1fa6b"
+    },
+    {
+      "text": "Artçı sarsıntıda ne yaparsın?",
+      "spoken": "Artçı sarsıntıda ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/b217a256af127fb1094d979f"
+    },
+    {
+      "text": "Artçı sarsıntılar",
+      "spoken": "Artçı sarsıntılar",
+      "resource": "LearningApp/Narration/Clips/6cc2ef7f4b105e1542e537be"
+    },
+    {
+      "text": "Artçı sarsıntılar zamanla azalır.",
+      "spoken": "Artçı sarsıntılar zamanla azalır.",
+      "resource": "LearningApp/Narration/Clips/9eb3eeb1686190330a254c9c"
+    },
+    {
+      "text": "Artçılar genelde küçülür ve seyrekleşir ama yine de dikkatli ol.",
+      "spoken": "Artçılar genelde küçülür ve seyrekleşir ama yine de dikkatli ol.",
+      "resource": "LearningApp/Narration/Clips/3893961b6d3ba01db2841d5a"
+    },
+    {
+      "text": "Artçılar hasarlı yerleri daha çok yıkabilir; uzak dur.",
+      "spoken": "Artçılar hasarlı yerleri daha çok yıkabilir; uzak dur.",
+      "resource": "LearningApp/Narration/Clips/de8d844bbb472fbad339cfe2"
+    },
+    {
+      "text": "Artçılar tamamen bitene kadar tedbirli olmalısın.",
+      "spoken": "Artçılar tamamen bitene kadar tedbirli olmalısın.",
+      "resource": "LearningApp/Narration/Clips/08ab74c489169140ae3d2234"
+    },
+    {
+      "text": "Asansör elektrik kesilince içinde mahsur bırakabilir.",
+      "spoken": "Asansör elektrik kesilince içinde mahsur bırakabilir.",
+      "resource": "LearningApp/Narration/Clips/c10f8b4f038ca2f68c63e650"
+    },
+    {
+      "text": "Asansör sarsıntıda durabilir ve içinde mahsur kalabilirsin. Asla binme.",
+      "spoken": "Asansör sarsıntıda durabilir ve içinde mahsur kalabilirsin. Asla binme.",
+      "resource": "LearningApp/Narration/Clips/ff20c72cb83b985669f013f0"
+    },
+    {
+      "text": "Asansör tehlikelidir. Sarsıntı bitene kadar yerinde kal.",
+      "spoken": "Asansör tehlikelidir. Sarsıntı bitene kadar yerinde kal.",
+      "resource": "LearningApp/Narration/Clips/4be1dbf393d7e63cccd7a962"
+    },
+    {
+      "text": "Asansör ve merdivene koşma.",
+      "spoken": "Asansör ve merdivene koşma.",
+      "resource": "LearningApp/Narration/Clips/154bc418aeb581c15a7badba"
+    },
+    {
+      "text": "Asansör, merdiven ve balkonlara yönelme.",
+      "spoken": "Asansör, merdiven ve balkonlara yönelme.",
+      "resource": "LearningApp/Narration/Clips/284ad4fb5137aa123a317cff"
+    },
+    {
+      "text": "Asansörde kal",
+      "spoken": "Asansörde kal",
+      "resource": "LearningApp/Narration/Clips/a2d350f8195948fb4fd682d7"
+    },
+    {
+      "text": "Asansörde kalma; tüm düğmelere basıp en yakın katta in.",
+      "spoken": "Asansörde kalma; tüm düğmelere basıp en yakın katta in.",
+      "resource": "LearningApp/Narration/Clips/c187175fada010ef4e46d9a7"
+    },
+    {
+      "text": "Asansördeyken deprem oldu. Ne yaparsın?",
+      "spoken": "Asansördeyken deprem oldu. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/59debaba87d8c0a9ed233b14"
+    },
+    {
+      "text": "Asansördeyken deprem olursa ne yaparsın?",
+      "spoken": "Asansördeyken deprem olursa ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/0f88eb078b34b1a8b1d0c575"
+    },
+    {
+      "text": "Asansöre bin",
+      "spoken": "Asansöre bin",
+      "resource": "LearningApp/Narration/Clips/965dc02eacabea389c4d3f25"
+    },
+    {
+      "text": "Asansöre binerim",
+      "spoken": "Asansöre binerim",
+      "resource": "LearningApp/Narration/Clips/a3d5cfe5da4c21e7f8e39b90"
+    },
+    {
+      "text": "Asansörle aşağı inerim",
+      "spoken": "Asansörle aşağı inerim",
+      "resource": "LearningApp/Narration/Clips/c2182f69bcfd773fb96b64da"
+    },
+    {
+      "text": "Asansörle aşağı inmek",
+      "spoken": "Asansörle aşağı inmek",
+      "resource": "LearningApp/Narration/Clips/6dd44b857fc4d1084f99702c"
+    },
+    {
+      "text": "Asansörü dene",
+      "spoken": "Asansörü dene",
+      "resource": "LearningApp/Narration/Clips/02bf10db03568c2ac3e2b982"
+    },
+    {
+      "text": "Ayakkabı (terlik) giyerim",
+      "spoken": "Ayakkabı (terlik) giyerim",
+      "resource": "LearningApp/Narration/Clips/2f644cf0957e0c4eb9bf24b7"
+    },
+    {
+      "text": "Ayakta kalırsan sarsıntıda düşebilirsin. Önce yere çök.",
+      "spoken": "Ayakta kalırsan sarsıntıda düşebilirsin. Önce yere çök.",
+      "resource": "LearningApp/Narration/Clips/ca407a803ce266dbd42722d0"
+    },
+    {
+      "text": "Aynı anda herkese ulaşmak zor olabilir; plan kısa ve net olmalıdır.\n\n• Ev dışından bir irtibat kişisi seç ve herkesin telefonuna kaydet.\n\n• Ev, iş ve okul için ayrı buluşma noktası belirle.\n\n• Telefon yoğunluğunda kısa mesajın daha etkili olabileceğini planla.\n\n• Çocuk, yaşlı veya bakım ihtiyacı olan kişiler için sorumluluk paylaş.\n\nBugün: Aile grubuna toplanma alanı ve irtibat kişisini yaz.",
+      "spoken": "Aynı anda herkese ulaşmak zor olabilir; plan kısa ve net olmalıdır. Ev dışından bir irtibat kişisi seç ve herkesin telefonuna kaydet. Ev, iş ve okul için ayrı buluşma noktası belirle. Telefon yoğunluğunda kısa mesajın daha etkili olabileceğini planla. Çocuk, yaşlı veya bakım ihtiyacı olan kişiler için sorumluluk paylaş. Bugün: Aile grubuna toplanma alanı ve irtibat kişisini yaz.",
+      "resource": "LearningApp/Narration/Clips/17b295ba4abea96f335ce3ef"
+    },
+    {
+      "text": "Açık Alanda Güvende Kal",
+      "spoken": "Açık Alanda Güvende Kal",
+      "resource": "LearningApp/Narration/Clips/5e0cb8bf6e2f541f512a22a4"
+    },
+    {
+      "text": "Açık alan genellikle daha güvenli bir bekleme noktasıdır.",
+      "spoken": "Açık alan genellikle daha güvenli bir bekleme noktasıdır.",
+      "resource": "LearningApp/Narration/Clips/d73136f87c02d7fb8598e151"
+    },
+    {
+      "text": "Açık alana git",
+      "spoken": "Açık alana git",
+      "resource": "LearningApp/Narration/Clips/261bc81728489f106c716658"
+    },
+    {
+      "text": "Açık alana çöktün. Sarsıntı sürerken ne yaparsın?",
+      "spoken": "Açık alana çöktün. Sarsıntı sürerken ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/99cdf50d8cc2d46af6676ae5"
+    },
+    {
+      "text": "Açık alanda risk çoğunlukla bina cephesi, cam, tabela ve enerji hatlarıdır.\n\n• Dışarıdaysan bina, balkon, duvar, direk ve enerji hatlarından uzaklaş.\n\n• Araçtaysan köprü, üst geçit, tünel ve enerji hattı yakınında durma.\n\n• Araç içinde emniyetli bir noktada bekle; panikle trafiğe karışma.\n\n• Kıyıdaysan resmi uyarıları takip et ve gerekiyorsa yüksek alana yönel.\n\nBugün: İş-ev güzergahındaki açık güvenli alanları düşün.",
+      "spoken": "Açık alanda risk çoğunlukla bina cephesi, cam, tabela ve enerji hatlarıdır. Dışarıdaysan bina, balkon, duvar, direk ve enerji hatlarından uzaklaş. Araçtaysan köprü, üst geçit, tünel ve enerji hattı yakınında durma. Araç içinde emniyetli bir noktada bekle; panikle trafiğe karışma. Kıyıdaysan resmi uyarıları takip et ve gerekiyorsa yüksek alana yönel. Bugün: İş-ev güzergahındaki açık güvenli alanları düşün.",
+      "resource": "LearningApp/Narration/Clips/5ee481a094c37014b4cf0cab"
+    },
+    {
+      "text": "Açık alev, hasarlı tesisat ve riskli yapılardan uzak dur.",
+      "spoken": "Açık alev, hasarlı tesisat ve riskli yapılardan uzak dur.",
+      "resource": "LearningApp/Narration/Clips/ff271ed412082cc8ffdd3d8f"
+    },
+    {
+      "text": "Açık bir alana geç",
+      "spoken": "Açık bir alana geç",
+      "resource": "LearningApp/Narration/Clips/7efb3f66f2763f2891e5a96d"
+    },
+    {
+      "text": "Açık ve boş alan",
+      "spoken": "Açık ve boş alan",
+      "resource": "LearningApp/Narration/Clips/acf310d79ecf88094650bd99"
+    },
+    {
+      "text": "Ağzımı bezle kapatırım",
+      "spoken": "Ağzımı bezle kapatırım",
+      "resource": "LearningApp/Narration/Clips/0a50a277346f6009d74a3b6a"
+    },
+    {
+      "text": "Ağır dolabın yanına",
+      "spoken": "Ağır dolabın yanına",
+      "resource": "LearningApp/Narration/Clips/703394273e63a792d8c61352"
+    },
+    {
+      "text": "Ağır dolapları duvara sabitlemek",
+      "spoken": "Ağır dolapları duvara sabitlemek",
+      "resource": "LearningApp/Narration/Clips/41f9734d3d7e740d12e107e6"
+    },
+    {
+      "text": "Ağır dolapları duvara sabitlersek depremde üstümüze devrilmez.",
+      "spoken": "Ağır dolapları duvara sabitlersek depremde üstümüze devrilmez.",
+      "resource": "LearningApp/Narration/Clips/26702f612e7f37964215afa2"
+    },
+    {
+      "text": "Ağır eşyalar alt raflara konur; üstte olursa depremde başımıza düşebilir.",
+      "spoken": "Ağır eşyalar alt raflara konur; üstte olursa depremde başımıza düşebilir.",
+      "resource": "LearningApp/Narration/Clips/c61bd9e8102e611f0655cc93"
+    },
+    {
+      "text": "Ağır kitapları en üst rafa koymak deprem için güvenlidir.",
+      "spoken": "Ağır kitapları en üst rafa koymak deprem için güvenlidir.",
+      "resource": "LearningApp/Narration/Clips/5c52a365ecb1182dd5565a16"
+    },
+    {
+      "text": "Ağır raf altına",
+      "spoken": "Ağır raf altına",
+      "resource": "LearningApp/Narration/Clips/8fdb7f21e649b5aeaddd8d0e"
+    },
+    {
+      "text": "Ağır raflar ve sarkan eşyalar sarsıntıda üstüne düşebilir. Onlardan uzaklaş.",
+      "spoken": "Ağır raflar ve sarkan eşyalar sarsıntıda üstüne düşebilir. Onlardan uzaklaş.",
+      "resource": "LearningApp/Narration/Clips/e75c44f348ae3e8237810033"
+    },
+    {
+      "text": "Ağır yaralıyı oynatmak yaralarını ağırlaştırabilir. En doğrusu bir büyüğe veya 112'ye haber vermektir.",
+      "spoken": "Ağır yaralıyı oynatmak yaralarını ağırlaştırabilir. En doğrusu bir büyüğe veya yüz on iki'ye haber vermektir.",
+      "resource": "LearningApp/Narration/Clips/3dc6e6f13a5b47b177c0aac1"
+    },
+    {
+      "text": "Ağır yaralıyı sarsmak çok tehlikelidir. Onu oynatmadan hemen yardım çağırmak gerekir.",
+      "spoken": "Ağır yaralıyı sarsmak çok tehlikelidir. Onu oynatmadan hemen yardım çağırmak gerekir.",
+      "resource": "LearningApp/Narration/Clips/8574171027d9376e87a465ca"
+    },
+    {
+      "text": "Aşağıdakilerden hangisi deprem öncesi risk azaltmanın en doğru örneğidir?",
+      "spoken": "Aşağıdakilerden hangisi deprem öncesi risk azaltmanın en doğru örneğidir?",
+      "resource": "LearningApp/Narration/Clips/ba07627f9e9c10ada6091ab7"
+    },
+    {
+      "text": "Balkon altı",
+      "spoken": "Balkon altı",
+      "resource": "LearningApp/Narration/Clips/b3cacbc2c125a0128fc405f0"
+    },
+    {
+      "text": "Balkon güvenli değildir. İçeride güvenli yerinde kal.",
+      "spoken": "Balkon güvenli değildir. İçeride güvenli yerinde kal.",
+      "resource": "LearningApp/Narration/Clips/3a6f5ecd64267823379ce72f"
+    },
+    {
+      "text": "Balkona çık",
+      "spoken": "Balkona çık",
+      "resource": "LearningApp/Narration/Clips/32b82ceb103e6fd4b353b4c5"
+    },
+    {
+      "text": "Balkona çıkarım",
+      "spoken": "Balkona çıkarım",
+      "resource": "LearningApp/Narration/Clips/80aecdb30e067c89781a1184"
+    },
+    {
+      "text": "Balkonlar sarsıntıda zarar görebilir. İçeride sağlam bir yerde kalmak daha güvenlidir.",
+      "spoken": "Balkonlar sarsıntıda zarar görebilir. İçeride sağlam bir yerde kalmak daha güvenlidir.",
+      "resource": "LearningApp/Narration/Clips/5f8690a024c4b533e4556969"
+    },
+    {
+      "text": "Bazen uzaktaki birine ulaşmak daha kolay olur.",
+      "spoken": "Bazen uzaktaki birine ulaşmak daha kolay olur.",
+      "resource": "LearningApp/Narration/Clips/8dbc5179d6475fad2695f277"
+    },
+    {
+      "text": "Bağırmak enerjini hızla bitirir ve toz yutturur. Bağırmak son çaredir.",
+      "spoken": "Bağırmak enerjini hızla bitirir ve toz yutturur. Bağırmak son çaredir.",
+      "resource": "LearningApp/Narration/Clips/ff7433b3cfb2cda671d0ae8f"
+    },
+    {
+      "text": "Başımı koruyup beklerim",
+      "spoken": "Başımı koruyup beklerim",
+      "resource": "LearningApp/Narration/Clips/54be284322f39763005c7761"
+    },
+    {
+      "text": "Başımı ve ensemi kapatırım",
+      "spoken": "Başımı ve ensemi kapatırım",
+      "resource": "LearningApp/Narration/Clips/325a689f81f2fea8351a3ee7"
+    },
+    {
+      "text": "Başın çok önemli. Onu kollarınla ya da bir yastıkla kapat.",
+      "spoken": "Başın çok önemli. Onu kollarınla ya da bir yastıkla kapat.",
+      "resource": "LearningApp/Narration/Clips/11f708b7f5f600c0ffcffe4c"
+    },
+    {
+      "text": "Başını koru",
+      "spoken": "Başını koru",
+      "resource": "LearningApp/Narration/Clips/09d24b80a8f855b8ce63e854"
+    },
+    {
+      "text": "Başını koruyup sağlam bir eşyanın yanında kal.",
+      "spoken": "Başını koruyup sağlam bir eşyanın yanında kal.",
+      "resource": "LearningApp/Narration/Clips/9451dc0373b869fe69e44e1b"
+    },
+    {
+      "text": "Başını ve boynunu kollarınla koruyup sarsıntının geçmesini beklersin.",
+      "spoken": "Başını ve boynunu kollarınla koruyup sarsıntının geçmesini beklersin.",
+      "resource": "LearningApp/Narration/Clips/426c1e6a3ce4d79e45b8b523"
+    },
+    {
+      "text": "Başını ve enseni iki kolunla kapatmak, düşen küçük eşyalardan korur.",
+      "spoken": "Başını ve enseni iki kolunla kapatmak, düşen küçük eşyalardan korur.",
+      "resource": "LearningApp/Narration/Clips/d00b2fab9df84ac2689f5be4"
+    },
+    {
+      "text": "Başının üstünde ağır bir şey olmayan yeri seç.",
+      "spoken": "Başının üstünde ağır bir şey olmayan yeri seç.",
+      "resource": "LearningApp/Narration/Clips/8026ae9569495325d2a1c2a2"
+    },
+    {
+      "text": "Bebek, yaşlı, engelli ve evcil hayvan ihtiyaçları da plana dahil edilmelidir.",
+      "spoken": "Bebek, yaşlı, engelli ve evcil hayvan ihtiyaçları da plana dahil edilmelidir.",
+      "resource": "LearningApp/Narration/Clips/0af917798d6488485bf8cdef"
+    },
+    {
+      "text": "Belgeler çantada gereksiz yer kaplar",
+      "spoken": "Belgeler çantada gereksiz yer kaplar",
+      "resource": "LearningApp/Narration/Clips/5dc2bc18e0a30e63d7699d78"
+    },
+    {
+      "text": "Belli aralıklarla tekrar tekrar",
+      "spoken": "Belli aralıklarla tekrar tekrar",
+      "resource": "LearningApp/Narration/Clips/f291a7637bbac4da67a742d8"
+    },
+    {
+      "text": "Beş eşyayı doğru kullanım amacıyla eşleştir.",
+      "spoken": "Beş eşyayı doğru kullanım amacıyla eşleştir.",
+      "resource": "LearningApp/Narration/Clips/18b84aae6399825fad7bbaf3"
+    },
+    {
+      "text": "Bildirim yapmak doğru davranıştır.",
+      "spoken": "Bildirim yapmak doğru davranıştır.",
+      "resource": "LearningApp/Narration/Clips/5ee466ad623e600efa75fbf1"
+    },
+    {
+      "text": "Bilgi ancak düzenli prova ile refleks haline gelir.\n\n• Evde ve işte yılda en az birkaç kez kısa Çök-Kapan-Tutun provası yap.\n\n• Tahliye rotasını, toplanma alanını ve iletişim planını birlikte test et.\n\n• Tatbikat sonrası aksayan noktaları not al ve planı güncelle.\n\n• Çanta, belge, ilaç ve pil kontrollerini takvime bağla.\n\nBugün: Telefon takvimine 6 ayda bir çanta kontrolü ekle.",
+      "spoken": "Bilgi ancak düzenli prova ile refleks haline gelir. Evde ve işte yılda en az birkaç kez kısa Çök, kapan, tutun provası yap. Tahliye rotasını, toplanma alanını ve iletişim planını birlikte test et. Tatbikat sonrası aksayan noktaları not al ve planı güncelle. Çanta, belge, ilaç ve pil kontrollerini takvime bağla. Bugün: Telefon takvimine 6 ayda bir çanta kontrolü ekle.",
+      "resource": "LearningApp/Narration/Clips/57d5f61db3a497c29f777c44"
+    },
+    {
+      "text": "Bilgi ve Haberleşme",
+      "spoken": "Bilgi ve Haberleşme",
+      "resource": "LearningApp/Narration/Clips/f8f21535111e111c62d198ad"
+    },
+    {
+      "text": "Bilgi zamanla unutulur; düzenli tekrar ve prova gerekir.",
+      "spoken": "Bilgi zamanla unutulur; düzenli tekrar ve prova gerekir.",
+      "resource": "LearningApp/Narration/Clips/4cd5d65dc3f0d7a6947a08b3"
+    },
+    {
+      "text": "Bilinç, solunum ve kanama durumunu kısa ve net şekilde 112’ye bildir.",
+      "spoken": "Bilinç, solunum ve kanama durumunu kısa ve net şekilde yüz on iki’ye bildir.",
+      "resource": "LearningApp/Narration/Clips/01c7bc1d7be535dbc7f8c8c4"
+    },
+    {
+      "text": "Bina cepheleri ve enerji hatları",
+      "spoken": "Bina cepheleri ve enerji hatları",
+      "resource": "LearningApp/Narration/Clips/3f7cf9c895eee6ecee37ea33"
+    },
+    {
+      "text": "Bina dibinde bekle",
+      "spoken": "Bina dibinde bekle",
+      "resource": "LearningApp/Narration/Clips/939a692925a8a725075e67c0"
+    },
+    {
+      "text": "Bina sağlam görünse de tekrar sallanabilir. İçeri girme.",
+      "spoken": "Bina sağlam görünse de tekrar sallanabilir. İçeri girme.",
+      "resource": "LearningApp/Narration/Clips/2f04ebbf48f274d36ba26421"
+    },
+    {
+      "text": "Bina ve direkler",
+      "spoken": "Bina ve direkler",
+      "resource": "LearningApp/Narration/Clips/ff256b5a1fc811706dbfaa79"
+    },
+    {
+      "text": "Bina ve direklerin dibi tehlikelidir; üstüne parça düşebilir.",
+      "spoken": "Bina ve direklerin dibi tehlikelidir; üstüne parça düşebilir.",
+      "resource": "LearningApp/Narration/Clips/033a71fecdbcdebf17b72d44"
+    },
+    {
+      "text": "Bina, balkon ve elektrik direklerinden uzak dur.",
+      "spoken": "Bina, balkon ve elektrik direklerinden uzak dur.",
+      "resource": "LearningApp/Narration/Clips/5432dd49019ded4a111938a2"
+    },
+    {
+      "text": "Binadan uzaklaşıp yetkili değerlendirmesini beklemek",
+      "spoken": "Binadan uzaklaşıp yetkili değerlendirmesini beklemek",
+      "resource": "LearningApp/Narration/Clips/a37d77002dd30500f7d6eb91"
+    },
+    {
+      "text": "Binadan çıkarken neyi kullanırsın?",
+      "spoken": "Binadan çıkarken neyi kullanırsın?",
+      "resource": "LearningApp/Narration/Clips/78d19f4315949467cdd28bde"
+    },
+    {
+      "text": "Binalardan uzak açık alan",
+      "spoken": "Binalardan uzak açık alan",
+      "resource": "LearningApp/Narration/Clips/e323bda86403c0a7888e869e"
+    },
+    {
+      "text": "Binalardan uzak, açık ve güvenli bir alan olmalı. Açık alanda üstüne bir şey düşme tehlikesi azdır.",
+      "spoken": "Binalardan uzak, açık ve güvenli bir alan olmalı. Açık alanda üstüne bir şey düşme tehlikesi azdır.",
+      "resource": "LearningApp/Narration/Clips/b2ae5ff153351a596e615736"
+    },
+    {
+      "text": "Binaların dibi güvenli değil. Açık alan daha iyi.",
+      "spoken": "Binaların dibi güvenli değil. Açık alan daha iyi.",
+      "resource": "LearningApp/Narration/Clips/d43b5d98a1e97d7034ad48bc"
+    },
+    {
+      "text": "Binanın dibine sığın",
+      "spoken": "Binanın dibine sığın",
+      "resource": "LearningApp/Narration/Clips/d176f6025541258d66273bb0"
+    },
+    {
+      "text": "Binaya geri dön",
+      "spoken": "Binaya geri dön",
+      "resource": "LearningApp/Narration/Clips/7aa287df68a3ce1d2c633cdc"
+    },
+    {
+      "text": "Binaya geri dönmek tehlikelidir, artçı sarsıntılar olabilir. Buluşma noktasında büyüklerinle bekle.",
+      "spoken": "Binaya geri dönmek tehlikelidir, artçı sarsıntılar olabilir. Buluşma noktasında büyüklerinle bekle.",
+      "resource": "LearningApp/Narration/Clips/14de745aef2b5461fce8ad59"
+    },
+    {
+      "text": "Binaya geri girerim",
+      "spoken": "Binaya geri girerim",
+      "resource": "LearningApp/Narration/Clips/ed94b0ca43a3484d46f0e0c7"
+    },
+    {
+      "text": "Bir arkadaşın \"yeni büyük deprem olacak\" diye korkutucu bir şey söyledi. Ne yaparsın?",
+      "spoken": "Bir arkadaşın \"yeni büyük deprem olacak\" diye korkutucu bir şey söyledi. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/899aaf476c3cedf2706bbfde"
+    },
+    {
+      "text": "Bir büyük çağırırım",
+      "spoken": "Bir büyük çağırırım",
+      "resource": "LearningApp/Narration/Clips/39ef622ff918a069a042d281"
+    },
+    {
+      "text": "Bir kere değil, sık sık tekrar etmek gerekir.",
+      "spoken": "Bir kere değil, sık sık tekrar etmek gerekir.",
+      "resource": "LearningApp/Narration/Clips/c12ab82f4d66c402c27cfa70"
+    },
+    {
+      "text": "Bir kez okuyup bırakmak",
+      "spoken": "Bir kez okuyup bırakmak",
+      "resource": "LearningApp/Narration/Clips/d517083d4bb720a73ec88914"
+    },
+    {
+      "text": "Birazdan bazı eşyalar sırayla parlayacak. Önce dikkatle izle. Sonra aynı sırayla dokun. İstersen sırayı yeniden izleyebilirsin.",
+      "spoken": "Birazdan bazı eşyalar sırayla parlayacak. Önce dikkatle izle. Sonra aynı sırayla dokun. İstersen sırayı yeniden izleyebilirsin.",
+      "resource": "LearningApp/Narration/Clips/955e7e85c323c59697c0e169"
+    },
+    {
+      "text": "Birinin kolu kanıyor. İlk ne yaparsın?",
+      "spoken": "Birinin kolu kanıyor. İlk ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/014aa4c5c461dc1d13e30767"
+    },
+    {
+      "text": "Birlikte bir daha düşünelim.",
+      "spoken": "Birlikte bir daha düşünelim.",
+      "resource": "LearningApp/Narration/Clips/b6c403f2a3b1095e77ed9a03"
+    },
+    {
+      "text": "Boruya veya duvara vur",
+      "spoken": "Boruya veya duvara vur",
+      "resource": "LearningApp/Narration/Clips/d2a5d1c8750d093654e48bd9"
+    },
+    {
+      "text": "Boruya veya duvara vurmak ya da düdük çalmak, az enerjiyle çok ses çıkarır.",
+      "spoken": "Boruya veya duvara vurmak ya da düdük çalmak, az enerjiyle çok ses çıkarır.",
+      "resource": "LearningApp/Narration/Clips/8df76d1c557ede2256730c04"
+    },
+    {
+      "text": "Bu bölümü tamamladın. İstersen biraz dinlenebilir, sonra devam edebilirsin.",
+      "spoken": "Bu bölümü tamamladın. İstersen biraz dinlenebilir, sonra devam edebilirsin.",
+      "resource": "LearningApp/Narration/Clips/b1b142a4c99dcaf95f45f91c"
+    },
+    {
+      "text": "Bu eşya ne işe yarar? Önce bir eşya seç. Sonra onun kullanımını gösteren resme dokun. İstersen eşyayı oraya sürükleyebilirsin.",
+      "spoken": "Bu eşya ne işe yarar? Önce bir eşya seç. Sonra onun kullanımını gösteren resme dokun. İstersen eşyayı oraya sürükleyebilirsin.",
+      "resource": "LearningApp/Narration/Clips/a21f433523d8229d5b0e246a"
+    },
+    {
+      "text": "Bu uygun bir davranıştır; sadece güvenliyse yapılmalıdır.",
+      "spoken": "Bu uygun bir davranıştır; sadece güvenliyse yapılmalıdır.",
+      "resource": "LearningApp/Narration/Clips/1f81d7db74dacb43cf839fb1"
+    },
+    {
+      "text": "Bu, güvenli bir davranış. Biz tehlikeli olanları arıyoruz. Bir daha bakalım.",
+      "spoken": "Bu, güvenli bir davranış. Biz tehlikeli olanları arıyoruz. Bir daha bakalım.",
+      "resource": "LearningApp/Narration/Clips/c8ad9efc35251bf681381a3e"
+    },
+    {
+      "text": "Buluşma noktası nasıl bir yer olmalı?",
+      "spoken": "Buluşma noktası nasıl bir yer olmalı?",
+      "resource": "LearningApp/Narration/Clips/a20e9409558ea64c899e9c0e"
+    },
+    {
+      "text": "Buluşma noktasına giderim",
+      "spoken": "Buluşma noktasına giderim",
+      "resource": "LearningApp/Narration/Clips/6a59121716bd7436e4bf803d"
+    },
+    {
+      "text": "Büyük aynanın altına",
+      "spoken": "Büyük aynanın altına",
+      "resource": "LearningApp/Narration/Clips/b76cc78988a3a7e4c093eb47"
+    },
+    {
+      "text": "Büyüğe ve 112'ye haber veririm",
+      "spoken": "Büyüğe ve yüz on iki'ye haber veririm",
+      "resource": "LearningApp/Narration/Clips/38f1c759db2e5f4c12baba4a"
+    },
+    {
+      "text": "Büyüğüme haber veririm",
+      "spoken": "Büyüğüme haber veririm",
+      "resource": "LearningApp/Narration/Clips/5ed97d1ea60287e6c9b9b80c"
+    },
+    {
+      "text": "Cam kırıkları ve dış cephe parçaları ciddi risk oluşturur.",
+      "spoken": "Cam kırıkları ve dış cephe parçaları ciddi risk oluşturur.",
+      "resource": "LearningApp/Narration/Clips/30faaf01c140ca6dc529b56c"
+    },
+    {
+      "text": "Cam kırılabilir ve seni kesebilir. Pencereden ve camdan uzak dur.",
+      "spoken": "Cam kırılabilir ve seni kesebilir. Pencereden ve camdan uzak dur.",
+      "resource": "LearningApp/Narration/Clips/9f2a2ff6a2331f3c90ac31a3"
+    },
+    {
+      "text": "Cam tehlikelidir. Pencere kenarı güvenli değildir.",
+      "spoken": "Cam tehlikelidir. Pencere kenarı güvenli değildir.",
+      "resource": "LearningApp/Narration/Clips/16fafd43eda15ade28988dff"
+    },
+    {
+      "text": "Camdan sark",
+      "spoken": "Camdan sark",
+      "resource": "LearningApp/Narration/Clips/1de8e5f0813946409501ef29"
+    },
+    {
+      "text": "Camlı pencereden",
+      "spoken": "Camlı pencereden",
+      "resource": "LearningApp/Narration/Clips/fe48cfee7511d754ae38d8b6"
+    },
+    {
+      "text": "Ciddi kanama gördüğünde temel ve güvenli yaklaşım hangisidir?",
+      "spoken": "Ciddi kanama gördüğünde temel ve güvenli yaklaşım hangisidir?",
+      "resource": "LearningApp/Narration/Clips/f8b030103b21be95935f6b92"
+    },
+    {
+      "text": "Ciddi kanamada temiz bezle doğrudan bası uygula.",
+      "spoken": "Ciddi kanamada temiz bezle doğrudan bası uygula.",
+      "resource": "LearningApp/Narration/Clips/bf19614b41ec7ca535815355"
+    },
+    {
+      "text": "Daha fazla davranış arasından yalnızca tehlikeli olanları bul.",
+      "spoken": "Daha fazla davranış arasından yalnızca tehlikeli olanları bul.",
+      "resource": "LearningApp/Narration/Clips/0bff164b789cc0d858dbd45f"
+    },
+    {
+      "text": "Daha fazla deprem senaryosunda en güvenli davranışı seç.",
+      "spoken": "Daha fazla deprem senaryosunda en güvenli davranışı seç.",
+      "resource": "LearningApp/Narration/Clips/a255666ba1f07fe2b471625a"
+    },
+    {
+      "text": "Daha fazla eşya arasından acil durum çantası için doğru olanları seç.",
+      "spoken": "Daha fazla eşya arasından acil durum çantası için doğru olanları seç.",
+      "resource": "LearningApp/Narration/Clips/929da4686c84c738c998bf66"
+    },
+    {
+      "text": "Daha kalabalık listede çantaya girecekleri ve dışarıda kalacakları ayır.",
+      "spoken": "Daha kalabalık listede çantaya girecekleri ve dışarıda kalacakları ayır.",
+      "resource": "LearningApp/Narration/Clips/8da9aeb538d58e4ab0719e40"
+    },
+    {
+      "text": "Daha uzun sırayı izle ve aynı sırayla dokun.",
+      "spoken": "Daha uzun sırayı izle ve aynı sırayla dokun.",
+      "resource": "LearningApp/Narration/Clips/4807b28421ebb373dbb36323"
+    },
+    {
+      "text": "Denemeye devam edebilirsin. Öğrenmek için zamanın var.",
+      "spoken": "Denemeye devam edebilirsin. Öğrenmek için zamanın var.",
+      "resource": "LearningApp/Narration/Clips/5e98c7579c70172a713a12a2"
+    },
+    {
+      "text": "Deprem anında herkes çıkışlara koşmalı ve panik yapmalıdır.",
+      "spoken": "Deprem anında herkes çıkışlara koşmalı ve panik yapmalıdır.",
+      "resource": "LearningApp/Narration/Clips/c47fb3e457ca3de39e3c02f3"
+    },
+    {
+      "text": "Deprem bitti ve etrafta yardıma ihtiyacı olan insanlar var. İlk ne yaparsın?",
+      "spoken": "Deprem bitti ve etrafta yardıma ihtiyacı olan insanlar var. İlk ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/0d23dba33dbd4a754b63f6b5"
+    },
+    {
+      "text": "Deprem bitti, dışarı çıktın. Aileni nasıl bulursun?",
+      "spoken": "Deprem bitti, dışarı çıktın. Aileni nasıl bulursun?",
+      "resource": "LearningApp/Narration/Clips/d883d74938ce5c15c51ba2df"
+    },
+    {
+      "text": "Deprem eğitiminin sürdürülebilir olması için en doğru yöntem hangisidir?",
+      "spoken": "Deprem eğitiminin sürdürülebilir olması için en doğru yöntem hangisidir?",
+      "resource": "LearningApp/Narration/Clips/44bf3ab0d20ddc7b87b085b8"
+    },
+    {
+      "text": "Deprem güvenliği sarsıntı anında değil, düzenli hazırlıkla başlar.\n\n• Yaşam ve çalışma alanında devrilebilecek ağır eşyaları belirle.\n\n• Dolap, raf, kombi, televizyon ve büyük beyaz eşyaları sabitle.\n\n• Yatak, koltuk ve çalışma masasını cam ve ağır eşya hattından uzaklaştır.\n\n• Binanın tahliye yolu, toplanma alanı ve kapatma vanalarını öğren.\n\nBugün: Evde veya işte 3 sabitleme ihtiyacını not al.",
+      "spoken": "Deprem güvenliği sarsıntı anında değil, düzenli hazırlıkla başlar. Yaşam ve çalışma alanında devrilebilecek ağır eşyaları belirle. Dolap, raf, kombi, televizyon ve büyük beyaz eşyaları sabitle. Yatak, koltuk ve çalışma masasını cam ve ağır eşya hattından uzaklaştır. Binanın tahliye yolu, toplanma alanı ve kapatma vanalarını öğren. Bugün: Evde veya işte 3 sabitleme ihtiyacını not al.",
+      "resource": "LearningApp/Narration/Clips/0176b722476bdfaabf033225"
+    },
+    {
+      "text": "Deprem haberlerini nereden öğrenmelisin?",
+      "spoken": "Deprem haberlerini nereden öğrenmelisin?",
+      "resource": "LearningApp/Narration/Clips/c47cd9e52450b2b6ce475562"
+    },
+    {
+      "text": "Deprem oldu, anneni merak ediyorsun. Ne yaparsın?",
+      "spoken": "Deprem oldu, anneni merak ediyorsun. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/28986ad1272408dfae837457"
+    },
+    {
+      "text": "Deprem sonrası ailenle nerede buluşursun?",
+      "spoken": "Deprem sonrası ailenle nerede buluşursun?",
+      "resource": "LearningApp/Narration/Clips/290bb662b3ce33e69251e386"
+    },
+    {
+      "text": "Deprem sonrası asansör kullanmak güvenli değildir.",
+      "spoken": "Deprem sonrası asansör kullanmak güvenli değildir.",
+      "resource": "LearningApp/Narration/Clips/87fc4ee254c44cbb65cdccf6"
+    },
+    {
+      "text": "Deprem sonrası asansör tehlikelidir, takılıp kalabilirsin. Merdiveni kullan.",
+      "spoken": "Deprem sonrası asansör tehlikelidir, takılıp kalabilirsin. Merdiveni kullan.",
+      "resource": "LearningApp/Narration/Clips/d7ea21faf9177a9e4c827041"
+    },
+    {
+      "text": "Deprem sonrası ikincil tehlikelerin önemli kısmı tesisat kaynaklıdır.",
+      "spoken": "Deprem sonrası ikincil tehlikelerin önemli kısmı tesisat kaynaklıdır.",
+      "resource": "LearningApp/Narration/Clips/f9727dc918213bfcc9f881b5"
+    },
+    {
+      "text": "Deprem sırasında elektrik tellerine ve direklere yaklaşmak güvenlidir.",
+      "spoken": "Deprem sırasında elektrik tellerine ve direklere yaklaşmak güvenlidir.",
+      "resource": "LearningApp/Narration/Clips/2151e14634f15e269d205cc3"
+    },
+    {
+      "text": "Depremden sonra telefon hatları yoğun olabilir. Bir büyüğünün yardımıyla kısa bir mesaj gönderebilirsin. Nerede olduğunu ve durumunu kısaca anlat. Mesajın ulaşması zaman alabilir; art arda aramak yerine aile planınızı izleyin.",
+      "spoken": "Depremden sonra telefon hatları yoğun olabilir. Bir büyüğünün yardımıyla kısa bir mesaj gönderebilirsin. Nerede olduğunu ve durumunu kısaca anlat. Mesajın ulaşması zaman alabilir; art arda aramak yerine aile planınızı izleyin.",
+      "resource": "LearningApp/Narration/Clips/a635ea62e085198632519ee8"
+    },
+    {
+      "text": "Depremden sonra yeniden sarsıntı olabilir. Bunlara artçı sarsıntı diyoruz. Yeniden sallanırsa öğrendiğin korunma hareketlerini uygula. Hasarlı binalardan uzak dur ve bir büyüğünle birlikte kal.",
+      "spoken": "Depremden sonra yeniden sarsıntı olabilir. Bunlara artçı sarsıntı diyoruz. Yeniden sallanırsa öğrendiğin korunma hareketlerini uygula. Hasarlı binalardan uzak dur ve bir büyüğünle birlikte kal.",
+      "resource": "LearningApp/Narration/Clips/bb6eec4d946d290ed47ad6c7"
+    },
+    {
+      "text": "Depremden Önce",
+      "spoken": "Depremden Önce",
+      "resource": "LearningApp/Narration/Clips/0e66ebc40acaa239b86354c1"
+    },
+    {
+      "text": "Depremin zamanı önceden bilinemez. Söylentiye kapılma.",
+      "spoken": "Depremin zamanı önceden bilinemez. Söylentiye kapılma.",
+      "resource": "LearningApp/Narration/Clips/9bcb95a2920dae06288e7ed5"
+    },
+    {
+      "text": "Devrilmesin diye dolaba ne yaparız?",
+      "spoken": "Devrilmesin diye dolaba ne yaparız?",
+      "resource": "LearningApp/Narration/Clips/35a04ee3edaec7aae93236ba"
+    },
+    {
+      "text": "Dikkatlice uzaktan dolaşırım",
+      "spoken": "Dikkatlice uzaktan dolaşırım",
+      "resource": "LearningApp/Narration/Clips/0392afc1e25a234e282916a0"
+    },
+    {
+      "text": "Direkler ve teller devrilebilir, bu yüzden onlardan uzak dur.",
+      "spoken": "Direkler ve teller devrilebilir, bu yüzden onlardan uzak dur.",
+      "resource": "LearningApp/Narration/Clips/3c5c1a27e6ce36e48200514b"
+    },
+    {
+      "text": "Dokun",
+      "spoken": "Dokun",
+      "resource": "LearningApp/Narration/Clips/0ab9c254abb488227bb858e0"
+    },
+    {
+      "text": "Dokunmadan uzaklaşırım",
+      "spoken": "Dokunmadan uzaklaşırım",
+      "resource": "LearningApp/Narration/Clips/46bd3709f5fbfb7050b6a4f3"
+    },
+    {
+      "text": "Dolaba yaslan",
+      "spoken": "Dolaba yaslan",
+      "resource": "LearningApp/Narration/Clips/e4056cc13eb8f3e4931bb097"
+    },
+    {
+      "text": "Dolabın sabit durması için bir şeye tutturmak gerek.",
+      "spoken": "Dolabın sabit durması için bir şeye tutturmak gerek.",
+      "resource": "LearningApp/Narration/Clips/5f89aa217f40886900a077ad"
+    },
+    {
+      "text": "Dolap ve rafları duvara sabitle.",
+      "spoken": "Dolap ve rafları duvara sabitle.",
+      "resource": "LearningApp/Narration/Clips/658c2ef8f27803df99b3fc96"
+    },
+    {
+      "text": "Dolap, raf, kombi ve devrilebilecek eşyaları sabitle.",
+      "spoken": "Dolap, raf, kombi ve devrilebilecek eşyaları sabitle.",
+      "resource": "LearningApp/Narration/Clips/a0b17fbb251919be275b3f10"
+    },
+    {
+      "text": "Doğru",
+      "spoken": "Doğru",
+      "resource": "LearningApp/Narration/Clips/f624364c209e3677a0fc9c83"
+    },
+    {
+      "text": "Doğru bildin! Aramak yerine mesaj atmak en doğrusu.",
+      "spoken": "Evet. Aramak yerine mesaj atmak en doğrusu.",
+      "resource": "LearningApp/Narration/Clips/c05e385a44311cde8c88ce62"
+    },
+    {
+      "text": "Doğru bildin! Bağırmak son çaredir, önce ses çıkar veya düdük çal.",
+      "spoken": "Evet. Bağırmak son çaredir, önce ses çıkar veya düdük çal.",
+      "resource": "LearningApp/Narration/Clips/45db257439f6e9d50b023a91"
+    },
+    {
+      "text": "Doğru bildin! Emin olmadığın haberi yaymamak en doğrusu.",
+      "spoken": "Evet. Emin olmadığın haberi yaymamak en doğrusu.",
+      "resource": "LearningApp/Narration/Clips/c99496c9fc3bf6f016ae77fb"
+    },
+    {
+      "text": "Doğru bildin! Gücün yettiğince yardım et, ağır işleri büyüklere bırak.",
+      "spoken": "Evet. Gücün yettiğince yardım et, ağır işleri büyüklere bırak.",
+      "resource": "LearningApp/Narration/Clips/fd0d6e0f1041b5b473e1ff63"
+    },
+    {
+      "text": "Doğru bildin! Yaralıyı sarsmak yerine yardım çağırmak gerekir.",
+      "spoken": "Evet. Yaralıyı sarsmak yerine yardım çağırmak gerekir.",
+      "resource": "LearningApp/Narration/Clips/26a8d531b114ea250ecb7590"
+    },
+    {
+      "text": "Doğru bilgi, panik ve yanlış yönlendirmeyi azaltır.",
+      "spoken": "Doğru bilgi, panik ve yanlış yönlendirmeyi azaltır.",
+      "resource": "LearningApp/Narration/Clips/3dfe089fe73c2345f2a3048c"
+    },
+    {
+      "text": "Doğru cevap! Ağır eşyalar alt raflara konur, üst rafa değil.",
+      "spoken": "Evet. Ağır eşyalar alt raflara konur, üst rafa değil.",
+      "resource": "LearningApp/Narration/Clips/7ec9a5c7f7fdb76caec188ec"
+    },
+    {
+      "text": "Doğru mu Yanlış mı? Panik yapmak depremde sana yardım eder.",
+      "spoken": "Doğru mu Yanlış mı? Panik yapmak depremde sana yardım eder.",
+      "resource": "LearningApp/Narration/Clips/9c87f33c2e708a2394806cfd"
+    },
+    {
+      "text": "Doğru mu Yanlış mı? Tatbikat yapmak deprem anında doğru davranmamıza yardım eder.",
+      "spoken": "Doğru mu Yanlış mı? Tatbikat yapmak deprem anında doğru davranmamıza yardım eder.",
+      "resource": "LearningApp/Narration/Clips/b7c638cfd9961752cd723158"
+    },
+    {
+      "text": "Doğru mu yanlış mı? Deprem sonrası en doğrusu herkesi arka arkaya aramaktır.",
+      "spoken": "Doğru mu yanlış mı? Deprem sonrası en doğrusu herkesi arka arkaya aramaktır.",
+      "resource": "LearningApp/Narration/Clips/a33001e1695e1086349dd039"
+    },
+    {
+      "text": "Doğru mu yanlış mı? Doğruluğunu bilmediğin korkutucu bir haberi hemen herkese yaymalısın.",
+      "spoken": "Doğru mu yanlış mı? Doğruluğunu bilmediğin korkutucu bir haberi hemen herkese yaymalısın.",
+      "resource": "LearningApp/Narration/Clips/1cf1f17ff78fd3694fb7b0ce"
+    },
+    {
+      "text": "Doğru mu, yanlış mı? Ağır yaralı birini hemen sarsıp uyandırmaya çalışmak gerekir.",
+      "spoken": "Doğru mu, yanlış mı? Ağır yaralı birini hemen sarsıp uyandırmaya çalışmak gerekir.",
+      "resource": "LearningApp/Narration/Clips/a2d0a853f1206ca96e2fe713"
+    },
+    {
+      "text": "Doğru mu, yanlış mı? Başının üstündeki ağır raftan uzaklaşman gerekir.",
+      "spoken": "Doğru mu, yanlış mı? Başının üstündeki ağır raftan uzaklaşman gerekir.",
+      "resource": "LearningApp/Narration/Clips/bc93d11da88627466159f7f4"
+    },
+    {
+      "text": "Doğru mu, yanlış mı? Enkaz altında durmadan bağırmak en iyi yoldur.",
+      "spoken": "Doğru mu, yanlış mı? Enkaz altında durmadan bağırmak en iyi yoldur.",
+      "resource": "LearningApp/Narration/Clips/11ca9b8bc1245fda3e6c4397"
+    },
+    {
+      "text": "Doğru mu, yanlış mı? Sarsıntı sırasında balkona çıkmak güvenlidir.",
+      "spoken": "Doğru mu, yanlış mı? Sarsıntı sırasında balkona çıkmak güvenlidir.",
+      "resource": "LearningApp/Narration/Clips/9a08c26e91da466836c46fac"
+    },
+    {
+      "text": "Doğru mu, yanlış mı? Sen küçük olsan bile her ağır yükü tek başına kaldırıp herkesi kurtarmalısın.",
+      "spoken": "Doğru mu, yanlış mı? Sen küçük olsan bile her ağır yükü tek başına kaldırıp herkesi kurtarmalısın.",
+      "resource": "LearningApp/Narration/Clips/5dec3cd054210a286b3e16f1"
+    },
+    {
+      "text": "Doğru mu, yanlış mı? Tutunduğun şey hareket ederse onunla birlikte hareket edersin.",
+      "spoken": "Doğru mu, yanlış mı? Tutunduğun şey hareket ederse onunla birlikte hareket edersin.",
+      "resource": "LearningApp/Narration/Clips/ece8cb3985ebdb8fe5e60c62"
+    },
+    {
+      "text": "Doğru! Artçılar zamanla azalır ama yine dikkat ederiz.",
+      "spoken": "Doğru! Artçılar zamanla azalır ama yine dikkat ederiz.",
+      "resource": "LearningApp/Narration/Clips/f9c05651f954242507cf9407"
+    },
+    {
+      "text": "Doğru! Açık ve binalardan uzak yer en güvenlisidir.",
+      "spoken": "Doğru! Açık ve binalardan uzak yer en güvenlisidir.",
+      "resource": "LearningApp/Narration/Clips/8fc0c16aa4a0a5261d17fd74"
+    },
+    {
+      "text": "Doğru! Açık ve geçit altından uzak yer en güvenlisi.",
+      "spoken": "Doğru! Açık ve geçit altından uzak yer en güvenlisi.",
+      "resource": "LearningApp/Narration/Clips/e49785e52354b42de0bde399"
+    },
+    {
+      "text": "Doğru! Başını ve enseni kapattın.",
+      "spoken": "Doğru! Başını ve enseni kapattın.",
+      "resource": "LearningApp/Narration/Clips/8a232b13fe7296cc9abf97ca"
+    },
+    {
+      "text": "Doğru! Camdan ve pencereden uzak dururuz.",
+      "spoken": "Doğru! Camdan ve pencereden uzak dururuz.",
+      "resource": "LearningApp/Narration/Clips/e6afaf0838e6ac0268919d7a"
+    },
+    {
+      "text": "Doğru! Dikkatli davrandın.",
+      "spoken": "Doğru! Dikkatli davrandın.",
+      "resource": "LearningApp/Narration/Clips/27de0e290e36b7a76850ad56"
+    },
+    {
+      "text": "Doğru! Gaz varken düğmeye dokunmak tehlikelidir.",
+      "spoken": "Doğru! Gaz varken düğmeye dokunmak tehlikelidir.",
+      "resource": "LearningApp/Narration/Clips/a0297fc86291621157b62dba"
+    },
+    {
+      "text": "Doğru! Merdiven asansörden çok daha güvenli.",
+      "spoken": "Doğru! Merdiven asansörden çok daha güvenli.",
+      "resource": "LearningApp/Narration/Clips/f661bb5da1a8d9e2a46a4bbc"
+    },
+    {
+      "text": "Doğru! Panik yok; önce başını korur, sonra öğretmeni dinlersin.",
+      "spoken": "Doğru! Panik yok; önce başını korur, sonra öğretmeni dinlersin.",
+      "resource": "LearningApp/Narration/Clips/66b4226e9d0c78d50220c6df"
+    },
+    {
+      "text": "Doğru! Sakin kalmak en büyük yardımcın.",
+      "spoken": "Doğru! Sakin kalmak en büyük yardımcın.",
+      "resource": "LearningApp/Narration/Clips/3bc9e06e0dcb205d7e8a4d9b"
+    },
+    {
+      "text": "Doğru! Sarsıntıda asansöre binmeyiz.",
+      "spoken": "Doğru! Sarsıntıda asansöre binmeyiz.",
+      "resource": "LearningApp/Narration/Clips/32f45e1eaeaa7bb1e5a8f02a"
+    },
+    {
+      "text": "Doğru! Su olmadan yaşayamayız, en önemlisi sudur.",
+      "spoken": "Doğru! Su olmadan yaşayamayız, en önemlisi sudur.",
+      "resource": "LearningApp/Narration/Clips/e6509f6ed43af02dc273837b"
+    },
+    {
+      "text": "Doğru! Tatbikat seni hazırlıklı yapar.",
+      "spoken": "Doğru! Tatbikat seni hazırlıklı yapar.",
+      "resource": "LearningApp/Narration/Clips/8338f2ccdb3d18278c4f8401"
+    },
+    {
+      "text": "Doğru! Tellerden ve direklerden hep uzak durmalıyız.",
+      "spoken": "Doğru! Tellerden ve direklerden hep uzak durmalıyız.",
+      "resource": "LearningApp/Narration/Clips/cda6654af6d753134cf54ec8"
+    },
+    {
+      "text": "Doğru! Üstünde ağır eşya olmayan yer en güvenlisidir.",
+      "spoken": "Doğru! Üstünde ağır eşya olmayan yer en güvenlisidir.",
+      "resource": "LearningApp/Narration/Clips/d1b08fa74b3963279ca748f9"
+    },
+    {
+      "text": "Doğru! Şehir dışı irtibat kişisi herkesi birbirine bağlar.",
+      "spoken": "Doğru! Şehir dışı irtibat kişisi herkesi birbirine bağlar.",
+      "resource": "LearningApp/Narration/Clips/5763cb5de4131527a0feb3b3"
+    },
+    {
+      "text": "Doğru. Baş-boyun koruması ve sabitlenme ana hedeftir.",
+      "spoken": "Doğru. Baş-boyun koruması ve sabitlenme ana hedeftir.",
+      "resource": "LearningApp/Narration/Clips/68595ba41a77998cf00ec59e"
+    },
+    {
+      "text": "Doğru. Ciddi kanamada doğrudan bası temel ilk yardım yaklaşımıdır.",
+      "spoken": "Doğru. Ciddi kanamada doğrudan bası temel ilk yardım yaklaşımıdır.",
+      "resource": "LearningApp/Narration/Clips/b28694aa06a4f12a21d9fc39"
+    },
+    {
+      "text": "Doğru. Devrilecek eşyaları sabitlemek yaralanma riskini azaltır.",
+      "spoken": "Doğru. Devrilecek eşyaları sabitlemek yaralanma riskini azaltır.",
+      "resource": "LearningApp/Narration/Clips/867816bd0deeb0eb60823615"
+    },
+    {
+      "text": "Doğru. Düşen parçalar, camlar ve enerji hatları ciddi risk oluşturur.",
+      "spoken": "Doğru. Düşen parçalar, camlar ve enerji hatları ciddi risk oluşturur.",
+      "resource": "LearningApp/Narration/Clips/78d3bfa9edf4b098f114f9f6"
+    },
+    {
+      "text": "Doğru. Gaz kokusu varsa ateş ve elektrik kıvılcımı riski büyütür.",
+      "spoken": "Doğru. Gaz kokusu varsa ateş ve elektrik kıvılcımı riski büyütür.",
+      "resource": "LearningApp/Narration/Clips/6692963d38d77b7f057e03f1"
+    },
+    {
+      "text": "Doğru. Hasar şüphesinde güvenli mesafe ve yetkili kontrolü gerekir.",
+      "spoken": "Doğru. Hasar şüphesinde güvenli mesafe ve yetkili kontrolü gerekir.",
+      "resource": "LearningApp/Narration/Clips/fd68e4e199df7cac5912cdd5"
+    },
+    {
+      "text": "Doğru. Kısa mesaj, yoğun hatlarda sesli aramaya göre daha kolay ulaşabilir.",
+      "spoken": "Doğru. Kısa mesaj, yoğun hatlarda sesli aramaya göre daha kolay ulaşabilir.",
+      "resource": "LearningApp/Narration/Clips/5af9b52fc4ffb92c8da85b8f"
+    },
+    {
+      "text": "Doğru. Paylaşmadan önce bilginin kaynağı doğrulanmalıdır.",
+      "spoken": "Doğru. Paylaşmadan önce bilginin kaynağı doğrulanmalıdır.",
+      "resource": "LearningApp/Narration/Clips/73e44ecab135ba5a5909ee10"
+    },
+    {
+      "text": "Doğru. Plan kişisel sağlık ve bakım ihtiyaçlarını kapsamalıdır.",
+      "spoken": "Doğru. Plan kişisel sağlık ve bakım ihtiyaçlarını kapsamalıdır.",
+      "resource": "LearningApp/Narration/Clips/868ce0972d757bbcfbc0717c"
+    },
+    {
+      "text": "Doğru. Plan, tatbikat ve periyodik kontrol birlikte çalışır.",
+      "spoken": "Doğru. Plan, tatbikat ve periyodik kontrol birlikte çalışır.",
+      "resource": "LearningApp/Narration/Clips/71dde599eb589ca680b28d28"
+    },
+    {
+      "text": "Doğru. Rol paylaşımı ve toplanma düzeni afet öncesinde belirlenmelidir.",
+      "spoken": "Doğru. Rol paylaşımı ve toplanma düzeni afet öncesinde belirlenmelidir.",
+      "resource": "LearningApp/Narration/Clips/ada27545997988dd99249b6a"
+    },
+    {
+      "text": "Doğru. Tatbikatın amacı eksikleri görüp planı iyileştirmektir.",
+      "spoken": "Doğru. Tatbikatın amacı eksikleri görüp planı iyileştirmektir.",
+      "resource": "LearningApp/Narration/Clips/3289e36a6c4aa72d057bb2f9"
+    },
+    {
+      "text": "Doğru. Çanta, hızlı tahliyede kolay alınabilecek yerde durmalıdır.",
+      "spoken": "Doğru. Çanta, hızlı tahliyede kolay alınabilecek yerde durmalıdır.",
+      "resource": "LearningApp/Narration/Clips/9e1a1c4354372d49b4bfc26b"
+    },
+    {
+      "text": "Durmadan telefonla ararım",
+      "spoken": "Durmadan telefonla ararım",
+      "resource": "LearningApp/Narration/Clips/ab58947ab05c7c4dc1275c22"
+    },
+    {
+      "text": "Durmadan yüksek sesle bağır",
+      "spoken": "Durmadan yüksek sesle bağır",
+      "resource": "LearningApp/Narration/Clips/0b468c333f73a8c2f2e80d99"
+    },
+    {
+      "text": "Duvara sabitleriz",
+      "spoken": "Duvara sabitleriz",
+      "resource": "LearningApp/Narration/Clips/8e4f1bb9e6cd7c0ce9e957ba"
+    },
+    {
+      "text": "Duvara yaslanırım",
+      "spoken": "Duvara yaslanırım",
+      "resource": "LearningApp/Narration/Clips/6daa88d25c34cabc825e8e9e"
+    },
+    {
+      "text": "Duyduğumuz her haber doğru olmayabilir. Kafanı karıştıran bir şey duyarsan güvendiğin bir büyüğüne sor. Resmî kurumların açıklamalarını birlikte takip edin. Doğru olup olmadığını bilmediğin bir haberi paylaşma.",
+      "spoken": "Duyduğumuz her haber doğru olmayabilir. Kafanı karıştıran bir şey duyarsan güvendiğin bir büyüğüne sor. Resmî kurumların açıklamalarını birlikte takip edin. Doğru olup olmadığını bilmediğin bir haberi paylaşma.",
+      "resource": "LearningApp/Narration/Clips/0e4a223e01804ff3012598d8"
+    },
+    {
+      "text": "Dört adımlı üç turun hepsini doğru sırala.",
+      "spoken": "Dört adımlı üç turun hepsini doğru sırala.",
+      "resource": "LearningApp/Narration/Clips/46471b2da5127df202d2c759"
+    },
+    {
+      "text": "Düdük veya sert bir zemine vurma sesi kullan.",
+      "spoken": "Düdük veya sert bir zemine vurma sesi kullan.",
+      "resource": "LearningApp/Narration/Clips/d3d8b052e0b240138859e8b8"
+    },
+    {
+      "text": "Düdük çal",
+      "spoken": "Düdük çal",
+      "resource": "LearningApp/Narration/Clips/556377a1d3845013dfefd850"
+    },
+    {
+      "text": "Düdük çalmak bağırmaktan daha az yorar ve daha uzağa duyulur.",
+      "spoken": "Düdük çalmak bağırmaktan daha az yorar ve daha uzağa duyulur.",
+      "resource": "LearningApp/Narration/Clips/d1f8d0336a8bd45494498c54"
+    },
+    {
+      "text": "Düdük, enkaz altında sesimizi duyurmak için çantaya konur.",
+      "spoken": "Düdük, enkaz altında sesimizi duyurmak için çantaya konur.",
+      "resource": "LearningApp/Narration/Clips/bdfef2031d01cabeaa6e23fb"
+    },
+    {
+      "text": "Düğmeye bas",
+      "spoken": "Düğmeye bas",
+      "resource": "LearningApp/Narration/Clips/f3607b66595974c7b7c0147a"
+    },
+    {
+      "text": "Düğmeye dokunmak kıvılcım yapar, çok tehlikelidir.",
+      "spoken": "Düğmeye dokunmak kıvılcım yapar, çok tehlikelidir.",
+      "resource": "LearningApp/Narration/Clips/1831c02d77ef95e822722891"
+    },
+    {
+      "text": "Düşün: Sesini duyurmak isteyince bağırmak mı kolay, düdük çalmak mı?",
+      "spoken": "Düşün: Sesini duyurmak isteyince bağırmak mı kolay, düdük çalmak mı?",
+      "resource": "LearningApp/Narration/Clips/b027922f322e0f874987fbe5"
+    },
+    {
+      "text": "Dış Mekan ve Araçta",
+      "spoken": "Dış Mekan ve Araçta",
+      "resource": "LearningApp/Narration/Clips/66014a3b639d000a7ddc2fd3"
+    },
+    {
+      "text": "Dışarı fırlamak yerine arabada beklemek daha güvenli.",
+      "spoken": "Dışarı fırlamak yerine arabada beklemek daha güvenli.",
+      "resource": "LearningApp/Narration/Clips/52d50781b8fe26c89f61bf79"
+    },
+    {
+      "text": "Dışarı koşarım",
+      "spoken": "Dışarı koşarım",
+      "resource": "LearningApp/Narration/Clips/8374b219a48d57f40fc11b34"
+    },
+    {
+      "text": "Dışarı Çıkınca",
+      "spoken": "Dışarı Çıkınca",
+      "resource": "LearningApp/Narration/Clips/7a7beaa2cb5e189d0e91475b"
+    },
+    {
+      "text": "Dışarı çıkmadan önce ayağına ne giyersin?",
+      "spoken": "Dışarı çıkmadan önce ayağına ne giyersin?",
+      "resource": "LearningApp/Narration/Clips/12bf1af5e7838216f27e6c0f"
+    },
+    {
+      "text": "Dışarı çıkınca nereye gidersin?",
+      "spoken": "Dışarı çıkınca nereye gidersin?",
+      "resource": "LearningApp/Narration/Clips/a4768eb16b8553242791fb42"
+    },
+    {
+      "text": "Dışarıda güvenli yer hangisi?",
+      "spoken": "Dışarıda güvenli yer hangisi?",
+      "resource": "LearningApp/Narration/Clips/b6ce3a5630321343cde71eae"
+    },
+    {
+      "text": "Dışarıda hasarlı binalardan, kırık camlardan ve molozlardan uzak dur. Yerde bir elektrik teli görürsen yaklaşma ve dokunma. Bir büyüğüne haber ver. Güvenli yolu birlikte seçin.",
+      "spoken": "Dışarıda hasarlı binalardan, kırık camlardan ve molozlardan uzak dur. Yerde bir elektrik teli görürsen yaklaşma ve dokunma. Bir büyüğüne haber ver. Güvenli yolu birlikte seçin.",
+      "resource": "LearningApp/Narration/Clips/31808fccbc16e352d7f9ed2c"
+    },
+    {
+      "text": "Dışarıdaysan binalardan, duvarlardan, direklerden ve elektrik tellerinden uzak dur. Açık bir alanda yere çök. Başını ve enseni koruyarak sarsıntının bitmesini bekle.",
+      "spoken": "Dışarıdaysan binalardan, duvarlardan, direklerden ve elektrik tellerinden uzak dur. Açık bir alanda yere çök. Başını ve enseni koruyarak sarsıntının bitmesini bekle.",
+      "resource": "LearningApp/Narration/Clips/a9b0553a37e9eb12d3d37dd0"
+    },
+    {
+      "text": "Dışarıdaysan nereden uzak durursun?",
+      "spoken": "Dışarıdaysan nereden uzak durursun?",
+      "resource": "LearningApp/Narration/Clips/862609ebefc86dd0a7a599ab"
+    },
+    {
+      "text": "El feneri",
+      "spoken": "El feneri",
+      "resource": "LearningApp/Narration/Clips/c6ff302cbdc200d8e758d913"
+    },
+    {
+      "text": "Elektrik direğine tutun",
+      "spoken": "Elektrik direğine tutun",
+      "resource": "LearningApp/Narration/Clips/430cff7afd9e8a84ea312105"
+    },
+    {
+      "text": "Elektrik düğmesi küçük bir kıvılcım çıkarır; bu kıvılcım gazı patlatabilir.",
+      "spoken": "Elektrik düğmesi küçük bir kıvılcım çıkarır; bu kıvılcım gazı patlatabilir.",
+      "resource": "LearningApp/Narration/Clips/ce62d0a2e3843edee980cbf0"
+    },
+    {
+      "text": "Elektrik tellerinin altında",
+      "spoken": "Elektrik tellerinin altında",
+      "resource": "LearningApp/Narration/Clips/6b352b0b689ca013ebce3cde"
+    },
+    {
+      "text": "Ellerimi cebime koyarım",
+      "spoken": "Ellerimi cebime koyarım",
+      "resource": "LearningApp/Narration/Clips/df9ff6f4dfaa260e0f6c99ea"
+    },
+    {
+      "text": "En güvenlisi sıranın yanına çöküp başını korumak.",
+      "spoken": "En güvenlisi sıranın yanına çöküp başını korumak.",
+      "resource": "LearningApp/Narration/Clips/6e35d8de0484c79607e2580c"
+    },
+    {
+      "text": "En yakın katta çık",
+      "spoken": "En yakın katta çık",
+      "resource": "LearningApp/Narration/Clips/1a36462d55f7307de6fd4fb4"
+    },
+    {
+      "text": "En önemli adım sakin kalıp bir yetişkine haber vermektir. Büyükler doğru yardımı düzenler.",
+      "spoken": "En önemli adım sakin kalıp bir yetişkine haber vermektir. Büyükler doğru yardımı düzenler.",
+      "resource": "LearningApp/Narration/Clips/3ebeb3e0ea1cb12f5095d8f6"
+    },
+    {
+      "text": "En önemlisi bir büyüğüne haber verip birlikte dışarı çıkmak.",
+      "spoken": "En önemlisi bir büyüğüne haber verip birlikte dışarı çıkmak.",
+      "resource": "LearningApp/Narration/Clips/6fa65afab24ddce18e180ab2"
+    },
+    {
+      "text": "Enerjini Koru",
+      "spoken": "Enerjini Koru",
+      "resource": "LearningApp/Narration/Clips/d958737f9366bdc34bf90f03"
+    },
+    {
+      "text": "Enkaz altında kaldın. Kurtarma ekibine sesini en iyi nasıl duyurursun?",
+      "spoken": "Enkaz altında kaldın. Kurtarma ekibine sesini en iyi nasıl duyurursun?",
+      "resource": "LearningApp/Narration/Clips/9736fc61379969357d8745ac"
+    },
+    {
+      "text": "Enkaz altındaysan nasıl yardım istersin?",
+      "spoken": "Enkaz altındaysan nasıl yardım istersin?",
+      "resource": "LearningApp/Narration/Clips/8ca6b78a5f5af83668701598"
+    },
+    {
+      "text": "Ev İçi Güvenlik",
+      "spoken": "Ev İçi Güvenlik",
+      "resource": "LearningApp/Narration/Clips/88ae9142127ad00f4b6e54bf"
+    },
+    {
+      "text": "Evde gaz kokusu var. Karanlıkta ne yaparsın?",
+      "spoken": "Evde gaz kokusu var. Karanlıkta ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/52161b9a1531a5fb86a931f4"
+    },
+    {
+      "text": "Evdeki riskleri önceden azaltmak yaralanmaları belirgin şekilde düşürür.",
+      "spoken": "Evdeki riskleri önceden azaltmak yaralanmaları belirgin şekilde düşürür.",
+      "resource": "LearningApp/Narration/Clips/35e0f64f74b4b3289ad0c619"
+    },
+    {
+      "text": "Evet! Balkona çıkmak güvenli değildir.",
+      "spoken": "Evet! Balkona çıkmak güvenli değildir.",
+      "resource": "LearningApp/Narration/Clips/f7be302cd3209366967b828d"
+    },
+    {
+      "text": "Evet! Sarkan ve ağır eşyalardan uzaklaşırız.",
+      "spoken": "Evet! Sarkan ve ağır eşyalardan uzaklaşırız.",
+      "resource": "LearningApp/Narration/Clips/18c551f4b99fea3089845db0"
+    },
+    {
+      "text": "Evet! Tutunup masayla birlikte hareket edersin.",
+      "spoken": "Evet! Tutunup masayla birlikte hareket edersin.",
+      "resource": "LearningApp/Narration/Clips/298a9eea7b0f6849c23d2608"
+    },
+    {
+      "text": "Evet, doğru seçimi yaptın.",
+      "spoken": "Evet, doğru seçimi yaptın.",
+      "resource": "LearningApp/Narration/Clips/8ae66bf9098c608354be60ea"
+    },
+    {
+      "text": "Evet, hemen girerim",
+      "spoken": "Evet, hemen girerim",
+      "resource": "LearningApp/Narration/Clips/7a3d50b26dcbbb234f8c0004"
+    },
+    {
+      "text": "Evet. Dolabın bir yetişkin tarafından uygun biçimde sabitlenmesi devrilme riskini azaltır.",
+      "spoken": "Evet. Dolabın bir yetişkin tarafından uygun biçimde sabitlenmesi devrilme riskini azaltır.",
+      "resource": "LearningApp/Narration/Clips/886271c9b223379bfcb321ca"
+    },
+    {
+      "text": "Evet. Korksan da korunmaya devam edebilirsin.",
+      "spoken": "Evet. Korksan da korunmaya devam edebilirsin.",
+      "resource": "LearningApp/Narration/Clips/f70d241e446bdb85cd92b8c0"
+    },
+    {
+      "text": "Evet. Kısa ve açık bir mesajla nerede olduğunu ve durumunu anlatabilirsin.",
+      "spoken": "Evet. Kısa ve açık bir mesajla nerede olduğunu ve durumunu anlatabilirsin.",
+      "resource": "LearningApp/Narration/Clips/6895dd040f94d713db535649"
+    },
+    {
+      "text": "Evimizi Güvenli Yapalım",
+      "spoken": "Evimizi Güvenli Yapalım",
+      "resource": "LearningApp/Narration/Clips/e22383ca1deb807ad6ffd551"
+    },
+    {
+      "text": "Eğilip tele dokunurum",
+      "spoken": "Eğilip tele dokunurum",
+      "resource": "LearningApp/Narration/Clips/34262d87b2a975c209572565"
+    },
+    {
+      "text": "Eğitimin yoksa ileri müdahale yapmak",
+      "spoken": "Eğitimin yoksa ileri müdahale yapmak",
+      "resource": "LearningApp/Narration/Clips/c99e68c9012c62098bf055dd"
+    },
+    {
+      "text": "Eşya almak için hızlıca geri dönmek",
+      "spoken": "Eşya almak için hızlıca geri dönmek",
+      "resource": "LearningApp/Narration/Clips/1b29135d26ab7878d9a9de81"
+    },
+    {
+      "text": "Eşya almak için içeri girerim",
+      "spoken": "Eşya almak için içeri girerim",
+      "resource": "LearningApp/Narration/Clips/4c7ababd37d7a3e112eaad89"
+    },
+    {
+      "text": "Gaz kokusu alındığında hangisi yapılmamalıdır?",
+      "spoken": "Gaz kokusu alındığında hangisi yapılmamalıdır?",
+      "resource": "LearningApp/Narration/Clips/7d1422c6b2186675e82e5585"
+    },
+    {
+      "text": "Gaz kokusu alırsan ne yaparsın?",
+      "spoken": "Gaz kokusu alırsan ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/c283a28124c3a677accb5237"
+    },
+    {
+      "text": "Gaz kokusu fark edersen bir büyüğüne haber ver. Kibrit ya da çakmak yakma. Elektrik düğmelerine dokunma. Tesisatla uğraşmadan, bir büyüğünle birlikte dışarı çık.",
+      "spoken": "Gaz kokusu fark edersen bir büyüğüne haber ver. Kibrit ya da çakmak yakma. Elektrik düğmelerine dokunma. Tesisatla uğraşmadan, bir büyüğünle birlikte dışarı çık.",
+      "resource": "LearningApp/Narration/Clips/1c1fe26af74cb41d5cefce76"
+    },
+    {
+      "text": "Gaz kokusu varken elektrik düğmesine basmak güvenlidir.",
+      "spoken": "Gaz kokusu varken elektrik düğmesine basmak güvenlidir.",
+      "resource": "LearningApp/Narration/Clips/bd2187719ee82fdcd1b629df"
+    },
+    {
+      "text": "Gaz kokusu varsa elektrik düğmesi, çakmak ve açık alev kullanma.",
+      "spoken": "Gaz kokusu varsa elektrik düğmesi, çakmak ve açık alev kullanma.",
+      "resource": "LearningApp/Narration/Clips/dbfb9f2e6bd83402cd196b26"
+    },
+    {
+      "text": "Gaz kokusu varsa çakmak yakma, düğmeye basma.",
+      "spoken": "Gaz kokusu varsa çakmak yakma, düğmeye basma.",
+      "resource": "LearningApp/Narration/Clips/31ef2ad20407270c111d4894"
+    },
+    {
+      "text": "Gaz kokusunu alınca ilk önce ne yapmalısın?",
+      "spoken": "Gaz kokusunu alınca ilk önce ne yapmalısın?",
+      "resource": "LearningApp/Narration/Clips/ab4694acae5f15c884e3609f"
+    },
+    {
+      "text": "Gaz varken kibrit veya çakmak alev çıkarır ve patlamaya yol açabilir.",
+      "spoken": "Gaz varken kibrit veya çakmak alev çıkarır ve patlamaya yol açabilir.",
+      "resource": "LearningApp/Narration/Clips/ed71bbf5fa3f572237c5a129"
+    },
+    {
+      "text": "Gaz, Elektrik ve Su",
+      "spoken": "Gaz, Elektrik ve Su",
+      "resource": "LearningApp/Narration/Clips/4d13f7f5062490fa5b7da96c"
+    },
+    {
+      "text": "Gaz, Elektrik ve Yangın Riski",
+      "spoken": "Gaz, Elektrik ve Yangın Riski",
+      "resource": "LearningApp/Narration/Clips/35cdbfe19bb5f9950df7a92d"
+    },
+    {
+      "text": "Gece kolay bulunacak şekilde ayakkabı, fener ve düdük hazır tut.",
+      "spoken": "Gece kolay bulunacak şekilde ayakkabı, fener ve düdük hazır tut.",
+      "resource": "LearningApp/Narration/Clips/2b958a15e0c3f51e7fb38ef3"
+    },
+    {
+      "text": "Gereksiz taşıma yaralanmayı artırabilir; önce ortam güvenliği değerlendirilmelidir.",
+      "spoken": "Gereksiz taşıma yaralanmayı artırabilir; önce ortam güvenliği değerlendirilmelidir.",
+      "resource": "LearningApp/Narration/Clips/1b70beecebfc8ba557acface"
+    },
+    {
+      "text": "Girmem, dışarıda beklerim",
+      "spoken": "Girmem, dışarıda beklerim",
+      "resource": "LearningApp/Narration/Clips/d2483cc5f21547945c6e4b45"
+    },
+    {
+      "text": "Görev paylaşımı afet öncesinde netleşmiş olmalıdır.",
+      "spoken": "Görev paylaşımı afet öncesinde netleşmiş olmalıdır.",
+      "resource": "LearningApp/Narration/Clips/31f0fb14923f35914d5e07e5"
+    },
+    {
+      "text": "Görev paylaşımı ve toplanma düzeni",
+      "spoken": "Görev paylaşımı ve toplanma düzeni",
+      "resource": "LearningApp/Narration/Clips/20f9372d33ed4a7f99b65003"
+    },
+    {
+      "text": "Görev paylaşımı yap: kontrol, iletişim, ilk yardım ve malzeme takibi.",
+      "spoken": "Görev paylaşımı yap: kontrol, iletişim, ilk yardım ve malzeme takibi.",
+      "resource": "LearningApp/Narration/Clips/e169903d710947d4aece0363"
+    },
+    {
+      "text": "Görüntülü ara",
+      "spoken": "Görüntülü ara",
+      "resource": "LearningApp/Narration/Clips/4d5b304e55fc1d64fceb5d2d"
+    },
+    {
+      "text": "Görüntülü arama yaparım",
+      "spoken": "Görüntülü arama yaparım",
+      "resource": "LearningApp/Narration/Clips/b943fe168fc434e2e35e1631"
+    },
+    {
+      "text": "Güvenli yerimde beklerim",
+      "spoken": "Güvenli yerimde beklerim",
+      "resource": "LearningApp/Narration/Clips/7a90cd74d935272ec284042f"
+    },
+    {
+      "text": "Güvenli yerleri önceden bir büyüğünle tanıyabilirsin. Sarsıntıda yakınındaki sağlam bir masanın altında başını ve enseni koru, masanın ayağına tutun. Camlardan ve devrilebilecek eşyalardan uzak dur.",
+      "spoken": "Güvenli yerleri önceden bir büyüğünle tanıyabilirsin. Sarsıntıda yakınındaki sağlam bir masanın altında başını ve enseni koru, masanın ayağına tutun. Camlardan ve devrilebilecek eşyalardan uzak dur.",
+      "resource": "LearningApp/Narration/Clips/20cecacdb7d6482e69b3805e"
+    },
+    {
+      "text": "Güvenliyse vanayı kapatmak",
+      "spoken": "Güvenliyse vanayı kapatmak",
+      "resource": "LearningApp/Narration/Clips/182ccbef7c096d668df0316d"
+    },
+    {
+      "text": "Hangi yerden uzak durmalısın?",
+      "spoken": "Hangi yerden uzak durmalısın?",
+      "resource": "LearningApp/Narration/Clips/ff5304775b806b5f0a8fb028"
+    },
+    {
+      "text": "Harika! Ailedeki herkes planı bilirse hep birlikte güvende oluruz.",
+      "spoken": "Evet. Ailedeki herkes planı bilirse hep birlikte güvende oluruz.",
+      "resource": "LearningApp/Narration/Clips/686e9c57bdd7369cdefe31ed"
+    },
+    {
+      "text": "Harika! Açık alan seni düşen parçalardan korur.",
+      "spoken": "Evet. Açık alan seni düşen parçalardan korur.",
+      "resource": "LearningApp/Narration/Clips/faf4a45a5fa365b1f41a4f31"
+    },
+    {
+      "text": "Harika! Boruya vurmak hem duyulur hem de enerjini korur.",
+      "spoken": "Evet. Boruya vurmak hem duyulur hem de enerjini korur.",
+      "resource": "LearningApp/Narration/Clips/ce2fba18e578e6fc6383fd0a"
+    },
+    {
+      "text": "Harika! El feneri karanlıkta yolumuzu aydınlatır.",
+      "spoken": "Evet. El feneri karanlıkta yolumuzu aydınlatır.",
+      "resource": "LearningApp/Narration/Clips/a3a9736b8fb2f8befe5d2538"
+    },
+    {
+      "text": "Harika! En yakın katta inmek seni güvende tutar.",
+      "spoken": "Evet. En yakın katta inmek seni güvende tutar.",
+      "resource": "LearningApp/Narration/Clips/4ff9bca533147f7253003f65"
+    },
+    {
+      "text": "Harika! Gaz varken asla kibrit veya çakmak yakılmaz.",
+      "spoken": "Evet. Gaz varken asla kibrit veya çakmak yakılmaz.",
+      "resource": "LearningApp/Narration/Clips/0a84e9e6b7508128c9bf12e6"
+    },
+    {
+      "text": "Harika! Her sarsıntıda çök-kapan-tutun en güvenlisi.",
+      "spoken": "Evet. Her sarsıntıda çök, kapan, tutun en güvenlisi.",
+      "resource": "LearningApp/Narration/Clips/2fae16a3e1edc4942023f136"
+    },
+    {
+      "text": "Harika! Kısa mesaj hattı boş tutar, ekiplere yer kalır.",
+      "spoken": "Evet. Kısa mesaj hattı boş tutar, ekiplere yer kalır.",
+      "resource": "LearningApp/Narration/Clips/9079cf0189db41768a6a869a"
+    },
+    {
+      "text": "Harika! Resmi kaynaklar (AFAD, radyo) en doğru bilgiyi verir.",
+      "spoken": "Evet. Resmi kaynaklar (AFAD, radyo) en doğru bilgiyi verir.",
+      "resource": "LearningApp/Narration/Clips/0881f44748e26cdfa150828a"
+    },
+    {
+      "text": "Harika! Sakin kalıp bir yetişkine haber vermek herkese yardım eder.",
+      "spoken": "Evet. Sakin kalıp bir yetişkine haber vermek herkese yardım eder.",
+      "resource": "LearningApp/Narration/Clips/760de3205e469b6b1e5eb8de"
+    },
+    {
+      "text": "Harika! Tekrar etmek seni hazırlıklı yapar.",
+      "spoken": "Evet. Tekrar etmek seni hazırlıklı yapar.",
+      "resource": "LearningApp/Narration/Clips/306534aacc833989c1b6028e"
+    },
+    {
+      "text": "Harika! Yere çökmek ilk adımdır.",
+      "spoken": "Evet. Yere çökmek ilk adımdır.",
+      "resource": "LearningApp/Narration/Clips/790ddc19dad03f9436a1f131"
+    },
+    {
+      "text": "Hasar şüphesi varsa tesisatı uzman kontrolü olmadan tekrar açma.",
+      "spoken": "Hasar şüphesi varsa tesisatı uzman kontrolü olmadan tekrar açma.",
+      "resource": "LearningApp/Narration/Clips/62d77618e566fe892c2f1d05"
+    },
+    {
+      "text": "Hasarlı binalar tekrar yıkılabilir. İçine girmeden uzak durmak gerekir.",
+      "spoken": "Hasarlı binalar tekrar yıkılabilir. İçine girmeden uzak durmak gerekir.",
+      "resource": "LearningApp/Narration/Clips/7442b70f716a6a26417543a1"
+    },
+    {
+      "text": "Hasarlı binaya dönüş yetkili değerlendirmesi olmadan yapılmamalıdır.",
+      "spoken": "Hasarlı binaya dönüş yetkili değerlendirmesi olmadan yapılmamalıdır.",
+      "resource": "LearningApp/Narration/Clips/b6435e89ffa7500b13d1e618"
+    },
+    {
+      "text": "Hasarlı binaya geri dönme; artçı sarsıntı ihtimalini hesaba kat.",
+      "spoken": "Hasarlı binaya geri dönme; artçı sarsıntı ihtimalini hesaba kat.",
+      "resource": "LearningApp/Narration/Clips/a90a368f2578e7cc5dcf61c3"
+    },
+    {
+      "text": "Hasarlı binaya geri girmek artçı sarsıntı ve çökme riski nedeniyle tehlikelidir.",
+      "spoken": "Hasarlı binaya geri girmek artçı sarsıntı ve çökme riski nedeniyle tehlikelidir.",
+      "resource": "LearningApp/Narration/Clips/5ecd122d433662b9484d954e"
+    },
+    {
+      "text": "Hasarlı binaya girmek çok riskli, uzak dur.",
+      "spoken": "Hasarlı binaya girmek çok riskli, uzak dur.",
+      "resource": "LearningApp/Narration/Clips/cbe02bd172678b6a1abac792"
+    },
+    {
+      "text": "Hasarlı binaya kimin önce gireceği",
+      "spoken": "Hasarlı binaya kimin önce gireceği",
+      "resource": "LearningApp/Narration/Clips/b97eae169ec049f52c2b2916"
+    },
+    {
+      "text": "Hatları gereksiz meşgul etmek acil iletişimi zorlaştırır.",
+      "spoken": "Hatları gereksiz meşgul etmek acil iletişimi zorlaştırır.",
+      "resource": "LearningApp/Narration/Clips/fced00034307966c7a56b902"
+    },
+    {
+      "text": "Hattı Meşgul Etme",
+      "spoken": "Hattı Meşgul Etme",
+      "resource": "LearningApp/Narration/Clips/a8ce759d8124cc6edb17a81d"
+    },
+    {
+      "text": "Hayatta sadece bir kez",
+      "spoken": "Hayatta sadece bir kez",
+      "resource": "LearningApp/Narration/Clips/fc5ad89b862e37d1e8f3c4f5"
+    },
+    {
+      "text": "Haydi, acil durum çantamızı tanıyalım. Bu çantayı bir büyüğümüzle birlikte, deprem olmadan önce hazırlarız. İçine su, el feneri ve ihtiyaç duyabileceğimiz eşyaları koyarız. Çantamızın yerini ailece biliriz.",
+      "spoken": "Haydi, acil durum çantamızı tanıyalım. Bu çantayı bir büyüğümüzle birlikte, deprem olmadan önce hazırlarız. İçine su, el feneri ve ihtiyaç duyabileceğimiz eşyaları koyarız. Çantamızın yerini ailece biliriz.",
+      "resource": "LearningApp/Narration/Clips/aa3472cdc45784a6bf22c007"
+    },
+    {
+      "text": "Haydi, çantamızı birlikte hazırlayalım. İhtiyacımız olan eşyaları bul. Seçtiğin eşyaya dokunabilir ya da onu çantaya sürükleyebilirsin.",
+      "spoken": "Haydi, çantamızı birlikte hazırlayalım. İhtiyacımız olan eşyaları bul. Seçtiğin eşyaya dokunabilir ya da onu çantaya sürükleyebilirsin.",
+      "resource": "LearningApp/Narration/Clips/e0158e7a77dee9ff0da7ecea"
+    },
+    {
+      "text": "Hayır, uzak dururum",
+      "spoken": "Hayır, uzak dururum",
+      "resource": "LearningApp/Narration/Clips/9efa8a5c6c924e2f5594f4dd"
+    },
+    {
+      "text": "Hazırlık, deprem anındaki karar yükünü azaltır.",
+      "spoken": "Hazırlık, deprem anındaki karar yükünü azaltır.",
+      "resource": "LearningApp/Narration/Clips/99a2fae8492506f6c17a9142"
+    },
+    {
+      "text": "Hemen dışarı fırlarım",
+      "spoken": "Hemen dışarı fırlarım",
+      "resource": "LearningApp/Narration/Clips/bd34f9b2d9911e546b0d4ab9"
+    },
+    {
+      "text": "Hemen herkese iletmek",
+      "spoken": "Hemen herkese iletmek",
+      "resource": "LearningApp/Narration/Clips/5120e0f3d179abaf3fce3b3c"
+    },
+    {
+      "text": "Hemen içeri girerim",
+      "spoken": "Hemen içeri girerim",
+      "resource": "LearningApp/Narration/Clips/32879b6e66ef1ff204c61ebc"
+    },
+    {
+      "text": "Hemen koşmak yerine başını koruyup beklemelisin.",
+      "spoken": "Hemen koşmak yerine başını koruyup beklemelisin.",
+      "resource": "LearningApp/Narration/Clips/1fe370a7a8e6debe77951e96"
+    },
+    {
+      "text": "Herkes için aynı çanta yeterlidir",
+      "spoken": "Herkes için aynı çanta yeterlidir",
+      "resource": "LearningApp/Narration/Clips/4499956a0938284b4306351a"
+    },
+    {
+      "text": "Herkesi peş peşe aramak",
+      "spoken": "Herkesi peş peşe aramak",
+      "resource": "LearningApp/Narration/Clips/1a8e541b5883c3cd4ab139d9"
+    },
+    {
+      "text": "Herkesin aynı malzemeye ihtiyaç duyacağı",
+      "spoken": "Herkesin aynı malzemeye ihtiyaç duyacağı",
+      "resource": "LearningApp/Narration/Clips/e758649a478cfb163cb32f8e"
+    },
+    {
+      "text": "Herkesin söylediği doğru olmayabilir. Resmi kaynağa güven.",
+      "spoken": "Herkesin söylediği doğru olmayabilir. Resmi kaynağa güven.",
+      "resource": "LearningApp/Narration/Clips/26b38073f53a85512c8ebd60"
+    },
+    {
+      "text": "Hiç kimse",
+      "spoken": "Hiç kimse",
+      "resource": "LearningApp/Narration/Clips/13d9652fc5fb2dbbc5088599"
+    },
+    {
+      "text": "Hiçbir şey yapmam",
+      "spoken": "Hiçbir şey yapmam",
+      "resource": "LearningApp/Narration/Clips/1d6ceace98f484d731b62bbd"
+    },
+    {
+      "text": "Hızla sürmeye devam ederim",
+      "spoken": "Hızla sürmeye devam ederim",
+      "resource": "LearningApp/Narration/Clips/cf4283e26e49c9871a22f481"
+    },
+    {
+      "text": "Kalabalık Alanlarda",
+      "spoken": "Kalabalık Alanlarda",
+      "resource": "LearningApp/Narration/Clips/c49cfc051544d3121143b3e0"
+    },
+    {
+      "text": "Kalabalık yapılarda güvenlik, herkesin aynı planı bilmesine bağlıdır.",
+      "spoken": "Kalabalık yapılarda güvenlik, herkesin aynı planı bilmesine bağlıdır.",
+      "resource": "LearningApp/Narration/Clips/7285e3de3270aff39e61c823"
+    },
+    {
+      "text": "Kalabalıkta ilk risk panik akışı ve kontrolsüz çıkışlara yönelmektir.\n\n• Sinema, AVM veya iş yerinde çıkışlara koşmadan bulunduğun noktada korun.\n\n• Raf, vitrin, cam cephe ve asılı tabelalardan uzaklaş.\n\n• Güvenlik anonslarını ve yetkili yönlendirmelerini takip et.\n\n• Sarsıntı bitince sakin ve kontrollü tahliye sırasına uy.\n\nBugün: Sık gittiğin bir binada acil çıkışları gözlemle.",
+      "spoken": "Kalabalıkta ilk risk panik akışı ve kontrolsüz çıkışlara yönelmektir. Sinema, AVM veya iş yerinde çıkışlara koşmadan bulunduğun noktada korun. Raf, vitrin, cam cephe ve asılı tabelalardan uzaklaş. Güvenlik anonslarını ve yetkili yönlendirmelerini takip et. Sarsıntı bitince sakin ve kontrollü tahliye sırasına uy. Bugün: Sık gittiğin bir binada acil çıkışları gözlemle.",
+      "resource": "LearningApp/Narration/Clips/e5045e0e13679e4ac2089b99"
+    },
+    {
+      "text": "Kanayan yere temiz bir bezle bastırmak kanamayı yavaşlatır.",
+      "spoken": "Kanayan yere temiz bir bezle bastırmak kanamayı yavaşlatır.",
+      "resource": "LearningApp/Narration/Clips/516a61a6e66175a102c06ca1"
+    },
+    {
+      "text": "Kapı önü, koridor ve çıkış yollarını eşya ile kapatma.",
+      "spoken": "Kapı önü, koridor ve çıkış yollarını eşya ile kapatma.",
+      "resource": "LearningApp/Narration/Clips/833e1c39dc8fad054de6a434"
+    },
+    {
+      "text": "Kapıya doğru koşarım",
+      "spoken": "Kapıya doğru koşarım",
+      "resource": "LearningApp/Narration/Clips/e45594d073944bd5d2a55304"
+    },
+    {
+      "text": "Karanlıkta görmek için el feneri çok işe yarar.",
+      "spoken": "Karanlıkta görmek için el feneri çok işe yarar.",
+      "resource": "LearningApp/Narration/Clips/a593c96bb2539233139fbaaf"
+    },
+    {
+      "text": "Kendi güvenliğin önce gelir. Gücünün yetmediği işi büyüklere bırak.",
+      "spoken": "Kendi güvenliğin önce gelir. Gücünün yetmediği işi büyüklere bırak.",
+      "resource": "LearningApp/Narration/Clips/7d4ad7bd914ed5af52194ff1"
+    },
+    {
+      "text": "Kendini ve yakınlarını yaralanma, yangın, gaz kokusu açısından kontrol et.",
+      "spoken": "Kendini ve yakınlarını yaralanma, yangın, gaz kokusu açısından kontrol et.",
+      "resource": "LearningApp/Narration/Clips/fd3b5416657aec9af44f1497"
+    },
+    {
+      "text": "Kibrit yakarım",
+      "spoken": "Kibrit yakarım",
+      "resource": "LearningApp/Narration/Clips/8eba17fa5e20e4ecc6726365"
+    },
+    {
+      "text": "Kimse depremin ne zaman olacağını kesin bilemez. Böyle söylentilere inanma, sakin ol ve resmi açıklamaları bekle.",
+      "spoken": "Kimse depremin ne zaman olacağını kesin bilemez. Böyle söylentilere inanma, sakin ol ve resmi açıklamaları bekle.",
+      "resource": "LearningApp/Narration/Clips/9486a5e34ef6f95d67044ccc"
+    },
+    {
+      "text": "Kollarımı sallarım",
+      "spoken": "Kollarımı sallarım",
+      "resource": "LearningApp/Narration/Clips/da72249f14db9f96ae465765"
+    },
+    {
+      "text": "Komşu Dayanışması",
+      "spoken": "Komşu Dayanışması",
+      "resource": "LearningApp/Narration/Clips/94c7210425468ebe6ca325c2"
+    },
+    {
+      "text": "Komşu, yaşlı, çocuk ve özel ihtiyaç sahipleri için görev paylaş.",
+      "spoken": "Komşu, yaşlı, çocuk ve özel ihtiyaç sahipleri için görev paylaş.",
+      "resource": "LearningApp/Narration/Clips/59f758f838caf60d5c304185"
+    },
+    {
+      "text": "Komşuları kontrol etmek güzeldir ama ağır işleri büyüklere bırak. Bir yetişkin çağırırsın.",
+      "spoken": "Komşuları kontrol etmek güzeldir ama ağır işleri büyüklere bırak. Bir yetişkin çağırırsın.",
+      "resource": "LearningApp/Narration/Clips/7829baae94f764f0a26115d2"
+    },
+    {
+      "text": "Kontrollü ve ortak plana uygun tahliye daha güvenlidir.",
+      "spoken": "Kontrollü ve ortak plana uygun tahliye daha güvenlidir.",
+      "resource": "LearningApp/Narration/Clips/6fa82b2b8b1a6d8c322d290f"
+    },
+    {
+      "text": "Kopmuş elektrik kablosu görürsen ne yaparsın?",
+      "spoken": "Kopmuş elektrik kablosu görürsen ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/ef994644c2fb6da210d42aa2"
+    },
+    {
+      "text": "Kopmuş kabloya dokunma ve su dökme.",
+      "spoken": "Kopmuş kabloya dokunma ve su dökme.",
+      "resource": "LearningApp/Narration/Clips/a78e6808d3890249ee457b72"
+    },
+    {
+      "text": "Kopmuş tel hâlâ elektrik taşıyor olabilir. Asla dokunma, uzak dur.",
+      "spoken": "Kopmuş tel hâlâ elektrik taşıyor olabilir. Asla dokunma, uzak dur.",
+      "resource": "LearningApp/Narration/Clips/6012f9a079be1cfa55af6ca0"
+    },
+    {
+      "text": "Korkmak normaldir. Korksan da öğrendiğin hareketleri yapabilirsin. Sarsıntı başladığında hemen çök, kapan, tutun. Korunurken yavaşça nefes almaya çalış. Sonrasında nasıl hissettiğini güvendiğin bir büyüğünle paylaşabilirsin.",
+      "spoken": "Korkmak normaldir. Korksan da öğrendiğin hareketleri yapabilirsin. Sarsıntı başladığında hemen çök, kapan, tutun. Korunurken yavaşça nefes almaya çalış. Sonrasında nasıl hissettiğini güvendiğin bir büyüğünle paylaşabilirsin.",
+      "resource": "LearningApp/Narration/Clips/6aac8a8476a0bdd71334d479"
+    },
+    {
+      "text": "Korkmak normaldir. Korunmaya devam ederken yavaşça nefes almaya çalışabilirsin.",
+      "spoken": "Korkmak normaldir. Korunmaya devam ederken yavaşça nefes almaya çalışabilirsin.",
+      "resource": "LearningApp/Narration/Clips/c6e46eafa0305de9956e72f0"
+    },
+    {
+      "text": "Korksan da Yapabilirsin",
+      "spoken": "Korksan da Yapabilirsin",
+      "resource": "LearningApp/Narration/Clips/7ba592956c7e67652d8506b6"
+    },
+    {
+      "text": "Korkup herkese hemen söylerim",
+      "spoken": "Korkup herkese hemen söylerim",
+      "resource": "LearningApp/Narration/Clips/96493347321eb18cbbb5b254"
+    },
+    {
+      "text": "Korunmaya devam edip yavaşça nefes alırım",
+      "spoken": "Korunmaya devam edip yavaşça nefes alırım",
+      "resource": "LearningApp/Narration/Clips/c0e994e8e93af6d4080f6ab1"
+    },
+    {
+      "text": "Korunmaya devam et. Yavaşça nefes almaya çalışabilirsin.",
+      "spoken": "Korunmaya devam et. Yavaşça nefes almaya çalışabilirsin.",
+      "resource": "LearningApp/Narration/Clips/9576957211a2d65df44ecf02"
+    },
+    {
+      "text": "Koşarak uzaklaşırım",
+      "spoken": "Koşarak uzaklaşırım",
+      "resource": "LearningApp/Narration/Clips/0887b7ad9533fa203cd86a3b"
+    },
+    {
+      "text": "Koşma! Sarsıntı bitene kadar olduğun yerde güvende kal.",
+      "spoken": "Koşma! Sarsıntı bitene kadar olduğun yerde güvende kal.",
+      "resource": "LearningApp/Narration/Clips/77a613086923cb500e46d5d3"
+    },
+    {
+      "text": "Koşmak düşmene yol açar. Sallanma durana kadar güvenli yerinde kal.",
+      "spoken": "Koşmak düşmene yol açar. Sallanma durana kadar güvenli yerinde kal.",
+      "resource": "LearningApp/Narration/Clips/944336365ed21993d7fb9983"
+    },
+    {
+      "text": "Koşmak ve panik tehlikelidir; sakin kalıp beklemelisin.",
+      "spoken": "Koşmak ve panik tehlikelidir; sakin kalıp beklemelisin.",
+      "resource": "LearningApp/Narration/Clips/eaa91b3f4bae568778d7b587"
+    },
+    {
+      "text": "Koşmak yerine sağlam bir yere çökmek seni korur.",
+      "spoken": "Koşmak yerine sağlam bir yere çökmek seni korur.",
+      "resource": "LearningApp/Narration/Clips/587829fc7bf8fafc91bdf202"
+    },
+    {
+      "text": "Kulaktan duyma söylentilerden",
+      "spoken": "Kulaktan duyma söylentilerden",
+      "resource": "LearningApp/Narration/Clips/7de3a246875fcbe8c4f40dde"
+    },
+    {
+      "text": "Köprü ve üst geçit altı tehlikeli; açık yerde durmalısın.",
+      "spoken": "Köprü ve üst geçit altı tehlikeli; açık yerde durmalısın.",
+      "resource": "LearningApp/Narration/Clips/8524b78b2dc25f3c456cc9ad"
+    },
+    {
+      "text": "Köprü ve üst geçitlerin altından uzak, açık bir yerde durursun.",
+      "spoken": "Köprü ve üst geçitlerin altından uzak, açık bir yerde durursun.",
+      "resource": "LearningApp/Narration/Clips/0172c3637af551bad4739d2d"
+    },
+    {
+      "text": "Köprü, tünel, üst geçit ve enerji hatlarından uzak güvenli bir yerde dur.",
+      "spoken": "Köprü, tünel, üst geçit ve enerji hatlarından uzak güvenli bir yerde dur.",
+      "resource": "LearningApp/Narration/Clips/d9b0bec0398353a7d9b8afe6"
+    },
+    {
+      "text": "Köprünün altında",
+      "spoken": "Köprünün altında",
+      "resource": "LearningApp/Narration/Clips/3a448f894b58c3acd142d234"
+    },
+    {
+      "text": "Kırık cam ve moloz keser ve yaralar. Dikkatle bak ve uzaktan dolaş.",
+      "spoken": "Kırık cam ve moloz keser ve yaralar. Dikkatle bak ve uzaktan dolaş.",
+      "resource": "LearningApp/Narration/Clips/dd883eab94e881a1b34a6132"
+    },
+    {
+      "text": "Kırık cama basmak ayağını keser. Dikkatli ol.",
+      "spoken": "Kırık cama basmak ayağını keser. Dikkatli ol.",
+      "resource": "LearningApp/Narration/Clips/691707d9dfd5b896b63144e1"
+    },
+    {
+      "text": "Kısa Tekrar",
+      "spoken": "Kısa Tekrar",
+      "resource": "LearningApp/Narration/Clips/7ecf8e51121a5979803bcf98"
+    },
+    {
+      "text": "Kısa mesaj (SMS) atarım",
+      "spoken": "Kısa mesaj (kısa mesaj) atarım",
+      "resource": "LearningApp/Narration/Clips/c2f7552a40f51d8fdc478448"
+    },
+    {
+      "text": "Kısa mesaj at",
+      "spoken": "Kısa mesaj at",
+      "resource": "LearningApp/Narration/Clips/711ee7c4f4777ec6eabe9d96"
+    },
+    {
+      "text": "Kısa ve net mesaj göndermek",
+      "spoken": "Kısa ve net mesaj göndermek",
+      "resource": "LearningApp/Narration/Clips/1f1e03303c14eef407bad03d"
+    },
+    {
+      "text": "Kısa ve net yaz: \"İyiyim\" gibi. Uzun mesajlar yerine kısacık yazmak daha hızlı ve daha az yer tutar.",
+      "spoken": "Kısa ve net yaz: \"İyiyim\" gibi. Uzun mesajlar yerine kısacık yazmak daha hızlı ve daha az yer tutar.",
+      "resource": "LearningApp/Narration/Clips/5a034b99d934cb4c39a0d4e0"
+    },
+    {
+      "text": "Kısa ve net: \"İyiyim\"",
+      "spoken": "Kısa ve net: \"İyiyim\"",
+      "resource": "LearningApp/Narration/Clips/672a91f8ebeafadf76bf9691"
+    },
+    {
+      "text": "Masanın altı en güvenli yer. Cam ve raflardan uzak dur.",
+      "spoken": "Masanın altı en güvenli yer. Cam ve raflardan uzak dur.",
+      "resource": "LearningApp/Narration/Clips/78f33a3039f7d41581929903"
+    },
+    {
+      "text": "Merdivene koş",
+      "spoken": "Merdivene koş",
+      "resource": "LearningApp/Narration/Clips/7353195574c6d0fe534de24d"
+    },
+    {
+      "text": "Merdivene koşmak",
+      "spoken": "Merdivene koşmak",
+      "resource": "LearningApp/Narration/Clips/7e5c2bf770af964471183674"
+    },
+    {
+      "text": "Merdiveni kullanırım",
+      "spoken": "Merdiveni kullanırım",
+      "resource": "LearningApp/Narration/Clips/45c4aa75e785df9df96639f5"
+    },
+    {
+      "text": "Merdivenler sarsıntı sırasında risklidir; koşmak yaralanma riskini artırır.",
+      "spoken": "Merdivenler sarsıntı sırasında risklidir; koşmak yaralanma riskini artırır.",
+      "resource": "LearningApp/Narration/Clips/004ea50fa54cfd5346ea336c"
+    },
+    {
+      "text": "Merhaba. Bugün seninle birlikte öğreneceğiz. Acele etmene gerek yok.",
+      "spoken": "Merhaba. Bugün seninle birlikte öğreneceğiz. Acele etmene gerek yok.",
+      "resource": "LearningApp/Narration/Clips/8f2445d786f4e0695f49e953"
+    },
+    {
+      "text": "Mesajın nasıl olmalı?",
+      "spoken": "Mesajın nasıl olmalı?",
+      "resource": "LearningApp/Narration/Clips/a6283a7dbfbba104c31d499f"
+    },
+    {
+      "text": "Ocağı yakıp bakarım",
+      "spoken": "Ocağı yakıp bakarım",
+      "resource": "LearningApp/Narration/Clips/c06e0fa69a26ade6fe9bc451"
+    },
+    {
+      "text": "Odanın iç köşesinden",
+      "spoken": "Odanın iç köşesinden",
+      "resource": "LearningApp/Narration/Clips/8c3dd11fa4c1a8032a934e9f"
+    },
+    {
+      "text": "Okulda da öğrendiğimiz hareketleri yaparız. Çök, kapan, tutun. Başını ve enseni koru. Merdivenlere ya da çıkışa koşma. Öğretmeninin yönergelerini dinle.",
+      "spoken": "Okulda da öğrendiğimiz hareketleri yaparız. Çök, kapan, tutun. Başını ve enseni koru. Merdivenlere ya da çıkışa koşma. Öğretmeninin yönergelerini dinle.",
+      "resource": "LearningApp/Narration/Clips/1f1a6d059251d673e107f329"
+    },
+    {
+      "text": "Okulda sarsıntı anında ne yaparsın?",
+      "spoken": "Okulda sarsıntı anında ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/23b0e015eee560db1e58ecdf"
+    },
+    {
+      "text": "Olduğum yerde dikilirim",
+      "spoken": "Olduğum yerde dikilirim",
+      "resource": "LearningApp/Narration/Clips/070ec66ad3943ed0913f218b"
+    },
+    {
+      "text": "Olduğum yerde kalırım",
+      "spoken": "Olduğum yerde kalırım",
+      "resource": "LearningApp/Narration/Clips/6391c363f5426be5d41b1f07"
+    },
+    {
+      "text": "Onu kaldırmaya çalışırım",
+      "spoken": "Onu kaldırmaya çalışırım",
+      "resource": "LearningApp/Narration/Clips/4d60cd2c9cc992aa0c8479e4"
+    },
+    {
+      "text": "Onu sen kaldırmaya çalışma. Yardım çağırmayı düşün.",
+      "spoken": "Onu sen kaldırmaya çalışma. Yardım çağırmayı düşün.",
+      "resource": "LearningApp/Narration/Clips/22c363e0299d1e8e45013ab4"
+    },
+    {
+      "text": "Ortalık çok tozlu. Kendini nasıl korursun?",
+      "spoken": "Ortalık çok tozlu. Kendini nasıl korursun?",
+      "resource": "LearningApp/Narration/Clips/a94b4351ba10146e1e558519"
+    },
+    {
+      "text": "Oyuncak",
+      "spoken": "Oyuncak",
+      "resource": "LearningApp/Narration/Clips/bc5b3f80ebeedec9062c92a7"
+    },
+    {
+      "text": "Oyuncak bizi karanlıkta koruyamaz. Işık veren şeyi seç.",
+      "spoken": "Oyuncak bizi karanlıkta koruyamaz. Işık veren şeyi seç.",
+      "resource": "LearningApp/Narration/Clips/78a0b330747d78c37872ca26"
+    },
+    {
+      "text": "Oyunu tamamladın. Denediğin için teşekkür ederim. İstersen yeniden oynayabiliriz.",
+      "spoken": "Oyunu tamamladın. Denediğin için teşekkür ederim. İstersen yeniden oynayabiliriz.",
+      "resource": "LearningApp/Narration/Clips/5121764deb4dc3dead8b9e15"
+    },
+    {
+      "text": "Panik değil, sakinlik seni korur.",
+      "spoken": "Panik değil, sakinlik seni korur.",
+      "resource": "LearningApp/Narration/Clips/7acb9308c1096a0305d8c0b3"
+    },
+    {
+      "text": "Panik düşünmeyi zorlaştırır. Sakin kalmak doğru adımları atmanı sağlar.",
+      "spoken": "Panik düşünmeyi zorlaştırır. Sakin kalmak doğru adımları atmanı sağlar.",
+      "resource": "LearningApp/Narration/Clips/7b2e77273da61fbf52a8106d"
+    },
+    {
+      "text": "Panikle dışarı koşarım",
+      "spoken": "Panikle dışarı koşarım",
+      "resource": "LearningApp/Narration/Clips/56750d7f3b6b03b7caecab07"
+    },
+    {
+      "text": "Panikle koşarak kaçarım",
+      "spoken": "Panikle koşarak kaçarım",
+      "resource": "LearningApp/Narration/Clips/b4391d598ac9e1492fdc4a43"
+    },
+    {
+      "text": "Panikle koşmak düşmene ve başkalarına çarpmana sebep olur. Sakin ve düzenli çık.",
+      "spoken": "Panikle koşmak düşmene ve başkalarına çarpmana sebep olur. Sakin ve düzenli çık.",
+      "resource": "LearningApp/Narration/Clips/616784538167972aedb150a8"
+    },
+    {
+      "text": "Panikle koşmak düşüp yaralanmana neden olabilir.",
+      "spoken": "Panikle koşmak düşüp yaralanmana neden olabilir.",
+      "resource": "LearningApp/Narration/Clips/d77681ad32dc5e250677b67f"
+    },
+    {
+      "text": "Parfüm",
+      "spoken": "Parfüm",
+      "resource": "LearningApp/Narration/Clips/cc4e333991bb7a91cf0a8463"
+    },
+    {
+      "text": "Parmağınla çantayı sağa ve sola hareket ettir. İhtiyacımız olan eşyaları yakala. Gereksiz eşyaların geçmesine izin ver. Hazır olduğunda çantaya dokun.",
+      "spoken": "Parmağınla çantayı sağa ve sola hareket ettir. İhtiyacımız olan eşyaları yakala. Gereksiz eşyaların geçmesine izin ver. Hazır olduğunda çantaya dokun.",
+      "resource": "LearningApp/Narration/Clips/c9de5349b8525d04320ac842"
+    },
+    {
+      "text": "Pencere kenarına",
+      "spoken": "Pencere kenarına",
+      "resource": "LearningApp/Narration/Clips/ece41c2292a7edc22652aed3"
+    },
+    {
+      "text": "Pencere yanında beklemek",
+      "spoken": "Pencere yanında beklemek",
+      "resource": "LearningApp/Narration/Clips/3febba016531db069e250bdc"
+    },
+    {
+      "text": "Pencere önünde dur",
+      "spoken": "Pencere önünde dur",
+      "resource": "LearningApp/Narration/Clips/2eb7f1a9bc8ad9dbf6b5ad54"
+    },
+    {
+      "text": "Pencere, dolap ve ağır eşyalardan uzaklaş.",
+      "spoken": "Pencere, dolap ve ağır eşyalardan uzaklaş.",
+      "resource": "LearningApp/Narration/Clips/c97a5189a360096f6b9f4f0c"
+    },
+    {
+      "text": "Pencereden bakarım",
+      "spoken": "Pencereden bakarım",
+      "resource": "LearningApp/Narration/Clips/917c12c3d1ae8ba172da24ac"
+    },
+    {
+      "text": "Pencereye koş",
+      "spoken": "Pencereye koş",
+      "resource": "LearningApp/Narration/Clips/866bf61f2765532afb508a49"
+    },
+    {
+      "text": "Pencereye koşarım",
+      "spoken": "Pencereye koşarım",
+      "resource": "LearningApp/Narration/Clips/39e2e72b389ce49bded6c2e9"
+    },
+    {
+      "text": "Pencereyi aç, kıvılcım çıkaran hiçbir şeye dokunma ve hemen bir büyüğüne haber ver.",
+      "spoken": "Pencereyi aç, kıvılcım çıkaran hiçbir şeye dokunma ve hemen bir büyüğüne haber ver.",
+      "resource": "LearningApp/Narration/Clips/d74a27f61178ade3220d6e75"
+    },
+    {
+      "text": "Periyodik kontrol çantanın güncel kalmasını sağlar.",
+      "spoken": "Periyodik kontrol çantanın güncel kalmasını sağlar.",
+      "resource": "LearningApp/Narration/Clips/dbfdd57c6825d8203ecfd1e4"
+    },
+    {
+      "text": "Plan ancak herkes bilirse işe yarar. Küçük büyük herkes öğrenmeli.",
+      "spoken": "Plan ancak herkes bilirse işe yarar. Küçük büyük herkes öğrenmeli.",
+      "resource": "LearningApp/Narration/Clips/829414a480c31d4276f514f2"
+    },
+    {
+      "text": "Planı hiç değiştirmeden bırakmak",
+      "spoken": "Planı hiç değiştirmeden bırakmak",
+      "resource": "LearningApp/Narration/Clips/a4c5fe0b8cef22f6ad6b9bc2"
+    },
+    {
+      "text": "Planı ve çantayı düzenli kontrol etmek",
+      "spoken": "Planı ve çantayı düzenli kontrol etmek",
+      "resource": "LearningApp/Narration/Clips/3471c1b8d134690bb90c4b0b"
+    },
+    {
+      "text": "Radyo",
+      "spoken": "Radyo",
+      "resource": "LearningApp/Narration/Clips/2f2006be5a378ef31437b876"
+    },
+    {
+      "text": "Resimlere birlikte bakalım. Hangileri tehlikeli davranışları gösteriyor? Bulduğun tehlikeli davranışlara dokun.",
+      "spoken": "Resimlere birlikte bakalım. Hangileri tehlikeli davranışları gösteriyor? Bulduğun tehlikeli davranışlara dokun.",
+      "resource": "LearningApp/Narration/Clips/fd97c1dd7d7a3ba6f12dd3e5"
+    },
+    {
+      "text": "Resmi açıklamayı beklerim",
+      "spoken": "Resmi açıklamayı beklerim",
+      "resource": "LearningApp/Narration/Clips/6c1c4d11a57ac9c9d007713d"
+    },
+    {
+      "text": "Resmi kaynak veya güvenilir kanal ile doğrulamak",
+      "spoken": "Resmi kaynak veya güvenilir kanal ile doğrulamak",
+      "resource": "LearningApp/Narration/Clips/903b93e4cfa093a8ad62eafa"
+    },
+    {
+      "text": "Resmi kurum duyurularını takip et, doğrulanmamış bilgiyi yayma.",
+      "spoken": "Resmi kurum duyurularını takip et, doğrulanmamış bilgiyi yayma.",
+      "resource": "LearningApp/Narration/Clips/a52f42e8e3a9d7b0cfc2e8ef"
+    },
+    {
+      "text": "Riskleri Önceden Azalt",
+      "spoken": "Riskleri Önceden Azalt",
+      "resource": "LearningApp/Narration/Clips/aa7b741cf0d072c6758b362b"
+    },
+    {
+      "text": "SMS az yer kaplar, telefon hatları doluyken bile gidebilir. Arama ise hattı meşgul eder.",
+      "spoken": "kısa mesaj az yer kaplar, telefon hatları doluyken bile gidebilir. Arama ise hattı meşgul eder.",
+      "resource": "LearningApp/Narration/Clips/3592b3f9724b55d7cda72a8b"
+    },
+    {
+      "text": "Sadece babam",
+      "spoken": "Sadece babam",
+      "resource": "LearningApp/Narration/Clips/31bd6988309b2994c322c889"
+    },
+    {
+      "text": "Sadece bir kişi bilirse, diğerleri ne yapacağını bilemez.",
+      "spoken": "Sadece bir kişi bilirse, diğerleri ne yapacağını bilemez.",
+      "resource": "LearningApp/Narration/Clips/9c16628d4e43ffd23c802b78"
+    },
+    {
+      "text": "Sadece depremden sonra görev paylaşmak",
+      "spoken": "Sadece depremden sonra görev paylaşmak",
+      "resource": "LearningApp/Narration/Clips/74146d88244eb6c4fc9c1595"
+    },
+    {
+      "text": "Sadece yetişkinlerin ihtiyaçları",
+      "spoken": "Sadece yetişkinlerin ihtiyaçları",
+      "resource": "LearningApp/Narration/Clips/99c324f87f24734b4ddaf415"
+    },
+    {
+      "text": "Sakin kalıp Çök-Kapan-Tutun adımlarını uygulamak en doğru seçim.",
+      "spoken": "Sakin kalıp Çök, kapan, tutun adımlarını uygulamak en doğru seçim.",
+      "resource": "LearningApp/Narration/Clips/33bccd7881c88789f93f4914"
+    },
+    {
+      "text": "Sakin olup büyüğe haber veririm",
+      "spoken": "Sakin olup büyüğe haber veririm",
+      "resource": "LearningApp/Narration/Clips/145fbb07d2ecb46ded5357ab"
+    },
+    {
+      "text": "Sakin yürümek herkesin güvenle çıkmasını sağlar.",
+      "spoken": "Sakin yürümek herkesin güvenle çıkmasını sağlar.",
+      "resource": "LearningApp/Narration/Clips/c95f3aca41a2f9669553b636"
+    },
+    {
+      "text": "Sakin çıkış",
+      "spoken": "Sakin çıkış",
+      "resource": "LearningApp/Narration/Clips/b1c14c88c7ef99788e686721"
+    },
+    {
+      "text": "Sallanma durdu. Buluşma noktasında beklerken arkadaşın \"içeri girip oyuncağını alalım\" dedi. Ne yaparsın?",
+      "spoken": "Sallanma durdu. Buluşma noktasında beklerken arkadaşın \"içeri girip oyuncağını alalım\" dedi. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/2cc7066660ec9982543163cb"
+    },
+    {
+      "text": "Sana küçük bir soru soracağım. Resimlere bak ve güvenli davranışı seç. Düşünmek için zamanın var.",
+      "spoken": "Sana küçük bir soru soracağım. Resimlere bak ve güvenli davranışı seç. Düşünmek için zamanın var.",
+      "resource": "LearningApp/Narration/Clips/1e497355b44a67281e852dd3"
+    },
+    {
+      "text": "Sarsmak zarar verir. Onu sabit bırakıp büyüklere haber ver.",
+      "spoken": "Sarsmak zarar verir. Onu sabit bırakıp büyüklere haber ver.",
+      "resource": "LearningApp/Narration/Clips/8494778995bdaee71e2cc415"
+    },
+    {
+      "text": "Sarsıntı Anında",
+      "spoken": "Sarsıntı Anında",
+      "resource": "LearningApp/Narration/Clips/146b602c34e9bc66d20265fd"
+    },
+    {
+      "text": "Sarsıntı başladığında en güvenli davranış hangisidir?",
+      "spoken": "Sarsıntı başladığında en güvenli davranış hangisidir?",
+      "resource": "LearningApp/Narration/Clips/f5f2538065b7e6194300631f"
+    },
+    {
+      "text": "Sarsıntı başlayınca en güvenlisi ne?",
+      "spoken": "Sarsıntı başlayınca en güvenlisi ne?",
+      "resource": "LearningApp/Narration/Clips/b5df78d91bae31a84649dfcf"
+    },
+    {
+      "text": "Sarsıntı başlayınca ne yaparsın?",
+      "spoken": "Sarsıntı başlayınca ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/50119530fe0d77cbae52e5b3"
+    },
+    {
+      "text": "Sarsıntı bitene kadar araç içinde kal ve emniyet kemerini çözme.",
+      "spoken": "Sarsıntı bitene kadar araç içinde kal ve emniyet kemerini çözme.",
+      "resource": "LearningApp/Narration/Clips/2c7128322e7df4ee44bb9c23"
+    },
+    {
+      "text": "Sarsıntı biter bitmez hızlı ama kontrollü değerlendirme yapılmalıdır.\n\n• Kendini ve çevrendekileri yaralanma açısından kontrol et.\n\n• Gaz kokusu, yangın, elektrik kaçağı veya yapısal hasar belirtisi varsa uzaklaş.\n\n• Asansör kullanma; merdiveni hasar ve kalabalık açısından kontrol ederek kullan.\n\n• Hasarlı binaya eşya almak için geri dönme.\n\nBugün: Apartman veya iş yerindeki tahliye rotasını tekrar gözden geçir.",
+      "spoken": "Sarsıntı biter bitmez hızlı ama kontrollü değerlendirme yapılmalıdır. Kendini ve çevrendekileri yaralanma açısından kontrol et. Gaz kokusu, yangın, elektrik kaçağı veya yapısal hasar belirtisi varsa uzaklaş. Asansör kullanma; merdiveni hasar ve kalabalık açısından kontrol ederek kullan. Hasarlı binaya eşya almak için geri dönme. Bugün: Apartman veya iş yerindeki tahliye rotasını tekrar gözden geçir.",
+      "resource": "LearningApp/Narration/Clips/abf6e027dfc634b736bca993"
+    },
+    {
+      "text": "Sarsıntı bitince hızlı değil, kontrollü hareket edilir.",
+      "spoken": "Sarsıntı bitince hızlı değil, kontrollü hareket edilir.",
+      "resource": "LearningApp/Narration/Clips/f92196b3785b1cd78367582a"
+    },
+    {
+      "text": "Sarsıntı bittikten sonra bina hasarlı görünüyorsa en doğru davranış hangisidir?",
+      "spoken": "Sarsıntı bittikten sonra bina hasarlı görünüyorsa en doğru davranış hangisidir?",
+      "resource": "LearningApp/Narration/Clips/98f70b970891218dc623e57b"
+    },
+    {
+      "text": "Sarsıntı bittiğinde bir büyüğünle birlikte kendini ve çevreni kontrol et. Dışarı çıkarken ayakkabını giy. Güvenli çıkış yolunu izleyin. Asansör kullanmayın; itişmeden, koşmadan ilerleyin.",
+      "spoken": "Sarsıntı bittiğinde bir büyüğünle birlikte kendini ve çevreni kontrol et. Dışarı çıkarken ayakkabını giy. Güvenli çıkış yolunu izleyin. Asansör kullanmayın; itişmeden, koşmadan ilerleyin.",
+      "resource": "LearningApp/Narration/Clips/9f568330d273cfb0bff9cdb6"
+    },
+    {
+      "text": "Sarsıntı geçene kadar emniyet kemerli, arabada beklersin.",
+      "spoken": "Sarsıntı geçene kadar emniyet kemerli, arabada beklersin.",
+      "resource": "LearningApp/Narration/Clips/dd8c0a5ba21c31d37f544193"
+    },
+    {
+      "text": "Sarsıntı geçti. Sınıfta şimdi kimi dinlersin?",
+      "spoken": "Sarsıntı geçti. Sınıfta şimdi kimi dinlersin?",
+      "resource": "LearningApp/Narration/Clips/2300f38e5a10c8b3b04fb5e6"
+    },
+    {
+      "text": "Sarsıntı sürerken ne yapmalısın?",
+      "spoken": "Sarsıntı sürerken ne yapmalısın?",
+      "resource": "LearningApp/Narration/Clips/cb76eb5add296af996ea6f4a"
+    },
+    {
+      "text": "Sarsıntı sırasında dışarıdaysan hangi noktadan uzak durmalısın?",
+      "spoken": "Sarsıntı sırasında dışarıdaysan hangi noktadan uzak durmalısın?",
+      "resource": "LearningApp/Narration/Clips/65aef83289ec2cd4d7af7366"
+    },
+    {
+      "text": "Sarsıntı sırasında dışarıya ya da merdivenlere koşma. Asansöre binme. Balkon ve pencerelerden uzak dur. Çök, kapan, tutun hareketlerini yap. Sarsıntı bitince bir büyüğünle birlikte hareket et.",
+      "spoken": "Sarsıntı sırasında dışarıya ya da merdivenlere koşma. Asansöre binme. Balkon ve pencerelerden uzak dur. Çök, kapan, tutun hareketlerini yap. Sarsıntı bitince bir büyüğünle birlikte hareket et.",
+      "resource": "LearningApp/Narration/Clips/986255eb4584003d529a71c3"
+    },
+    {
+      "text": "Sarsıntıda asla yapma",
+      "spoken": "Sarsıntıda asla yapma",
+      "resource": "LearningApp/Narration/Clips/f738ba75319c8cd52b123733"
+    },
+    {
+      "text": "Sarsıntıda aşağı inmek için ne kullanmazsın?",
+      "spoken": "Sarsıntıda aşağı inmek için ne kullanmazsın?",
+      "resource": "LearningApp/Narration/Clips/9a807f572f092968e846f319"
+    },
+    {
+      "text": "Sarsıntıda korunma hareketlerini yaparken korktun. Ne yapabilirsin?",
+      "spoken": "Sarsıntıda korunma hareketlerini yaparken korktun. Ne yapabilirsin?",
+      "resource": "LearningApp/Narration/Clips/78fee880ea255e13ecdf3f25"
+    },
+    {
+      "text": "Sarsıntıda nereye sığınırsın?",
+      "spoken": "Sarsıntıda nereye sığınırsın?",
+      "resource": "LearningApp/Narration/Clips/b3a7a8eca269803cb66c2aef"
+    },
+    {
+      "text": "Sarsıntılar tamamen bitene kadar hasarlı binalara girmek tehlikelidir.",
+      "spoken": "Sarsıntılar tamamen bitene kadar hasarlı binalara girmek tehlikelidir.",
+      "resource": "LearningApp/Narration/Clips/01bf9eef3064886921403a43"
+    },
+    {
+      "text": "Sağlam bir masanın altı seni düşen eşyalardan korur.",
+      "spoken": "Sağlam bir masanın altı seni düşen eşyalardan korur.",
+      "resource": "LearningApp/Narration/Clips/bcaf554b95bbef7d9eda9e91"
+    },
+    {
+      "text": "Sağlam bir masaya tutunursun; masa kayarsa elini bırakmadan onunla birlikte gidersin.",
+      "spoken": "Sağlam bir masaya tutunursun; masa kayarsa elini bırakmadan onunla birlikte gidersin.",
+      "resource": "LearningApp/Narration/Clips/a1fde8c8cc8b04e80f383c9a"
+    },
+    {
+      "text": "Sağlam masa en iyi dost",
+      "spoken": "Sağlam masa en iyi dost",
+      "resource": "LearningApp/Narration/Clips/2428051a2b855866a4cebf45"
+    },
+    {
+      "text": "Sağlam masanın altına",
+      "spoken": "Sağlam masanın altına",
+      "resource": "LearningApp/Narration/Clips/adf700e7d706b021b2d15340"
+    },
+    {
+      "text": "Sağlam sıranın yanına çök-kapan-tutun yaparsın.",
+      "spoken": "Sağlam sıranın yanına çök, kapan, tutun yaparsın.",
+      "resource": "LearningApp/Narration/Clips/4b8db5290d992d41095d116f"
+    },
+    {
+      "text": "Sen gücünün yettiğince yardım edersin. Ağır ve tehlikeli işleri büyükler ve kurtarma ekipleri yapar.",
+      "spoken": "Sen gücünün yettiğince yardım edersin. Ağır ve tehlikeli işleri büyükler ve kurtarma ekipleri yapar.",
+      "resource": "LearningApp/Narration/Clips/beed6915744d1c7151f590ae"
+    },
+    {
+      "text": "Ses çıkarıp bekle",
+      "spoken": "Ses çıkarıp bekle",
+      "resource": "LearningApp/Narration/Clips/a9572043bc0088c90b74dbc0"
+    },
+    {
+      "text": "Seçenekleri dinleyelim.",
+      "spoken": "Seçenekleri dinleyelim.",
+      "resource": "LearningApp/Narration/Clips/fdb7792d4bddec28ff474095"
+    },
+    {
+      "text": "Sokakta yürürken deprem oldu. Nereye gitmelisin?",
+      "spoken": "Sokakta yürürken deprem oldu. Nereye gitmelisin?",
+      "resource": "LearningApp/Narration/Clips/71106d81665cf9ad552d0e1e"
+    },
+    {
+      "text": "Son testten önce ana kararları zihinde netleştir.\n\n• Deprem öncesi risk azaltma, iletişim planı ve afet çantası tamamlanmalı.\n\n• Sarsıntı anında korunma refleksi, koşmadan ve camlardan uzak uygulanmalı.\n\n• Sarsıntı sonrası hasarlı bina, gaz kokusu ve yanlış bilgi riskleri yönetilmeli.\n\n• Tatbikat ve periyodik kontrol, bilgiyi sürdürülebilir davranışa çevirir.\n\nSon adım: Genel anlama testini doğru yanıtlayarak eğitimi tamamla.",
+      "spoken": "Son testten önce ana kararları zihinde netleştir. Deprem öncesi risk azaltma, iletişim planı ve afet çantası tamamlanmalı. Sarsıntı anında korunma refleksi, koşmadan ve camlardan uzak uygulanmalı. Sarsıntı sonrası hasarlı bina, gaz kokusu ve yanlış bilgi riskleri yönetilmeli. Tatbikat ve periyodik kontrol, bilgiyi sürdürülebilir davranışa çevirir. Son adım: Genel anlama testini doğru yanıtlayarak eğitimi tamamla.",
+      "resource": "LearningApp/Narration/Clips/445ca544e6532b73f0abd139"
+    },
+    {
+      "text": "Su",
+      "spoken": "Su",
+      "resource": "LearningApp/Narration/Clips/99701efad0ec2c8c1e2e7eb4"
+    },
+    {
+      "text": "Su dök",
+      "spoken": "Su dök",
+      "resource": "LearningApp/Narration/Clips/4986994a5327356d5a7bfe1a"
+    },
+    {
+      "text": "Su dökmek yardımcı olmaz. Kanayan yere bastırmayı düşün.",
+      "spoken": "Su dökmek yardımcı olmaz. Kanayan yere bastırmayı düşün.",
+      "resource": "LearningApp/Narration/Clips/2404b65c045a9853c45b901b"
+    },
+    {
+      "text": "Su, Gıda ve İlaç Yönetimi",
+      "spoken": "Su, Gıda ve İlaç Yönetimi",
+      "resource": "LearningApp/Narration/Clips/cad5d39f3f61911987c6acd0"
+    },
+    {
+      "text": "Su, gıda, ilaç, hijyen ve güç kaynaklarını önceliklendir.",
+      "spoken": "Su, gıda, ilaç, hijyen ve güç kaynaklarını önceliklendir.",
+      "resource": "LearningApp/Narration/Clips/4f97738e4eca768b1c538b3a"
+    },
+    {
+      "text": "Susuz kalmamak için içecek bir şey lazım.",
+      "spoken": "Susuz kalmamak için içecek bir şey lazım.",
+      "resource": "LearningApp/Narration/Clips/1a33279851e949670246b1d4"
+    },
+    {
+      "text": "Söylentiye İnanma",
+      "spoken": "Söylentiye İnanma",
+      "resource": "LearningApp/Narration/Clips/8c0b1fc9a7d287f4cfe26765"
+    },
+    {
+      "text": "Süper! Ayakkabı seni cam ve molozdan korur.",
+      "spoken": "Evet. Ayakkabı seni cam ve molozdan korur.",
+      "resource": "LearningApp/Narration/Clips/1b4ac3b95bb90af7a40275b7"
+    },
+    {
+      "text": "Süper! Buluşma noktası ailenin bir araya geldiği güvenli yerdir.",
+      "spoken": "Evet. Buluşma noktası ailenin bir araya geldiği güvenli yerdir.",
+      "resource": "LearningApp/Narration/Clips/4eaf4258a16d4cbde41b15af"
+    },
+    {
+      "text": "Süper! Sağlam masanın altı en güvenli yer.",
+      "spoken": "Evet. Sağlam masanın altı en güvenli yer.",
+      "resource": "LearningApp/Narration/Clips/03ae67795f4270be27d1e271"
+    },
+    {
+      "text": "Süper! Çök, kapan, tutun hayat kurtarır.",
+      "spoken": "Evet. Çök, kapan, tutun hayat kurtarır.",
+      "resource": "LearningApp/Narration/Clips/b12e9d6b82caac367e26d837"
+    },
+    {
+      "text": "Sürekli ara",
+      "spoken": "Sürekli ara",
+      "resource": "LearningApp/Narration/Clips/a8672580bd481d1abe1aba48"
+    },
+    {
+      "text": "Sürekli arama hatları meşgul eder ve iletişimi zorlaştırabilir.",
+      "spoken": "Sürekli arama hatları meşgul eder ve iletişimi zorlaştırabilir.",
+      "resource": "LearningApp/Narration/Clips/c62e636c1b95f8f3ca22e9e4"
+    },
+    {
+      "text": "Sürekli bağır",
+      "spoken": "Sürekli bağır",
+      "resource": "LearningApp/Narration/Clips/409a7c8c3b9f6460de9e617d"
+    },
+    {
+      "text": "Sürekli bağırmak enerjini bitirir ve toz yutturur. Vurmayı veya düdüğü dene.",
+      "spoken": "Sürekli bağırmak enerjini bitirir ve toz yutturur. Vurmayı veya düdüğü dene.",
+      "resource": "LearningApp/Narration/Clips/43888ead4bcb3b7a41d1e126"
+    },
+    {
+      "text": "Sürekli bağırmak yerine ses çıkarıp bekle.",
+      "spoken": "Sürekli bağırmak yerine ses çıkarıp bekle.",
+      "resource": "LearningApp/Narration/Clips/2ca848bd75aaf82a0535c51f"
+    },
+    {
+      "text": "Sıkışıp kaldığında kendini zorlayarak hareket etmeye çalışma. Ulaşabiliyorsan ağzını ve burnunu bir bezle kapat. Düdüğün varsa çalabilir, ulaşabildiğin bir boruya ya da duvara vurarak sesini duyurabilirsin. Sürekli bağırmak yerine enerjini korumaya çalış.",
+      "spoken": "Sıkışıp kaldığında kendini zorlayarak hareket etmeye çalışma. Ulaşabiliyorsan ağzını ve burnunu bir bezle kapat. Düdüğün varsa çalabilir, ulaşabildiğin bir boruya ya da duvara vurarak sesini duyurabilirsin. Sürekli bağırmak yerine enerjini korumaya çalış.",
+      "resource": "LearningApp/Narration/Clips/5a61c91b4a2f81f906cd4fac"
+    },
+    {
+      "text": "Sınıfta Doğru Hareket",
+      "spoken": "Sınıfta Doğru Hareket",
+      "resource": "LearningApp/Narration/Clips/adc40c4f3277ae0d14ac06ec"
+    },
+    {
+      "text": "Sınıfta ders sırasında deprem başladı. Ne yaparsın?",
+      "spoken": "Sınıfta ders sırasında deprem başladı. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/ebee71117d4c86e80aef8132"
+    },
+    {
+      "text": "Sıranın altında kalırım",
+      "spoken": "Sıranın altında kalırım",
+      "resource": "LearningApp/Narration/Clips/e0e23c14218a38b9b8947c3c"
+    },
+    {
+      "text": "Sıranın yanına çök-kapan-tutun",
+      "spoken": "Sıranın yanına çök, kapan, tutun",
+      "resource": "LearningApp/Narration/Clips/51a79d83dd497008cfbe3ff6"
+    },
+    {
+      "text": "Sıranın yanında çök",
+      "spoken": "Sıranın yanında çök",
+      "resource": "LearningApp/Narration/Clips/4a765c1d4772109db3ce82d3"
+    },
+    {
+      "text": "Tahliye rotası, toplanma alanı ve sorumluları önceden öğren.",
+      "spoken": "Tahliye rotası, toplanma alanı ve sorumluları önceden öğren.",
+      "resource": "LearningApp/Narration/Clips/282e5bd76eba1825d849395b"
+    },
+    {
+      "text": "Tahliye sırasında herkesin ayrı hareket etmesi",
+      "spoken": "Tahliye sırasında herkesin ayrı hareket etmesi",
+      "resource": "LearningApp/Narration/Clips/5f9c70c35e07ce567ff8060c"
+    },
+    {
+      "text": "Tahliye ve Kontrol",
+      "spoken": "Tahliye ve Kontrol",
+      "resource": "LearningApp/Narration/Clips/20f7e7739edb2bb38c7a084a"
+    },
+    {
+      "text": "Tatbikat prova etmektir ve gerçekten işe yarar.",
+      "spoken": "Tatbikat prova etmektir ve gerçekten işe yarar.",
+      "resource": "LearningApp/Narration/Clips/b1aa545d3c06925634ab9637"
+    },
+    {
+      "text": "Tatbikat sireninde doğru hareket hangisi?",
+      "spoken": "Tatbikat sireninde doğru hareket hangisi?",
+      "resource": "LearningApp/Narration/Clips/f950a35b242f0a7b0fae269b"
+    },
+    {
+      "text": "Tatbikat sonrası aksayan noktaları not alıp güncelle.",
+      "spoken": "Tatbikat sonrası aksayan noktaları not alıp güncelle.",
+      "resource": "LearningApp/Narration/Clips/154940957533f4021ddc0010"
+    },
+    {
+      "text": "Tatbikat sonrası yapılması gereken en faydalı adım hangisidir?",
+      "spoken": "Tatbikat sonrası yapılması gereken en faydalı adım hangisidir?",
+      "resource": "LearningApp/Narration/Clips/d212fd7ea003557d75195d6b"
+    },
+    {
+      "text": "Tatbikat tekrar oldukça doğru adımları düşünmeden yaparız. Bu çok değerlidir.",
+      "spoken": "Tatbikat tekrar oldukça doğru adımları düşünmeden yaparız. Bu çok değerlidir.",
+      "resource": "LearningApp/Narration/Clips/40c21a1e815d71bb0bf2076b"
+    },
+    {
+      "text": "Tatbikat ve Alışkanlık",
+      "spoken": "Tatbikat ve Alışkanlık",
+      "resource": "LearningApp/Narration/Clips/a28caf2af327a6cf7a543052"
+    },
+    {
+      "text": "Tatbikatta gerçekmiş gibi Çök-Kapan-Tutun yapmak en doğrusu.",
+      "spoken": "Tatbikatta gerçekmiş gibi Çök, kapan, tutun yapmak en doğrusu.",
+      "resource": "LearningApp/Narration/Clips/62a5d273994398b27a9db5c1"
+    },
+    {
+      "text": "Tatbikatı ciddiye al ve doğru adımları uygula.",
+      "spoken": "Tatbikatı ciddiye al ve doğru adımları uygula.",
+      "resource": "LearningApp/Narration/Clips/ca1bba4200bdadf26e1d20c3"
+    },
+    {
+      "text": "Tatbikatı ne sıklıkla yapmak iyidir?",
+      "spoken": "Tatbikatı ne sıklıkla yapmak iyidir?",
+      "resource": "LearningApp/Narration/Clips/6a1e9d8b2d3c85bfd167b216"
+    },
+    {
+      "text": "Tatbikatı tekrar tekrar yapmak adımları alışkanlık hâline getirir.",
+      "spoken": "Tatbikatı tekrar tekrar yapmak adımları alışkanlık hâline getirir.",
+      "resource": "LearningApp/Narration/Clips/e8079ad26023ef97f7f15515"
+    },
+    {
+      "text": "Tehlikelere Yaklaşma",
+      "spoken": "Tehlikelere Yaklaşma",
+      "resource": "LearningApp/Narration/Clips/6fd2fce00e4a6a9643ba47f7"
+    },
+    {
+      "text": "Tehlikeli Durumlar",
+      "spoken": "Tehlikeli Durumlar",
+      "resource": "LearningApp/Narration/Clips/f604df370ab6ee1ed057f8f3"
+    },
+    {
+      "text": "Tehlikeyi fark et",
+      "spoken": "Tehlikeyi fark et",
+      "resource": "LearningApp/Narration/Clips/35775da0d9c5eed9e4b3fc8e"
+    },
+    {
+      "text": "Tehlikeyi yetkililere bildirmek",
+      "spoken": "Tehlikeyi yetkililere bildirmek",
+      "resource": "LearningApp/Narration/Clips/7701a222da0f67add55aec87"
+    },
+    {
+      "text": "Tek başıma kapıyı tekmelerim",
+      "spoken": "Tek başıma kapıyı tekmelerim",
+      "resource": "LearningApp/Narration/Clips/2b64cbe42e293667b271118b"
+    },
+    {
+      "text": "Tek başıma koşarım",
+      "spoken": "Tek başıma koşarım",
+      "resource": "LearningApp/Narration/Clips/eaa923762a59995cbb9de92e"
+    },
+    {
+      "text": "Tek başına ağır kapıyı zorlama. Bir büyük çağırmak daha güvenli.",
+      "spoken": "Tek başına ağır kapıyı zorlama. Bir büyük çağırmak daha güvenli.",
+      "resource": "LearningApp/Narration/Clips/59e2f203657636f82ca151ba"
+    },
+    {
+      "text": "Tek başına her şeyi yapamazsın. Önce bir büyüğe haber ver.",
+      "spoken": "Tek başına her şeyi yapamazsın. Önce bir büyüğe haber ver.",
+      "resource": "LearningApp/Narration/Clips/d0098d4eca99acb5afc3af44"
+    },
+    {
+      "text": "Tek başına karar verme; öğretmenini dinlemelisin.",
+      "spoken": "Tek başına karar verme; öğretmenini dinlemelisin.",
+      "resource": "LearningApp/Narration/Clips/5dee790599e0a6e414258749"
+    },
+    {
+      "text": "Tekrar Et, Alışkanlık Olsun",
+      "spoken": "Tekrar Et, Alışkanlık Olsun",
+      "resource": "LearningApp/Narration/Clips/5d240ed6edd090889d2962d2"
+    },
+    {
+      "text": "Tele dokunmak çok tehlikeli. Hemen uzaklaş.",
+      "spoken": "Tele dokunmak çok tehlikeli. Hemen uzaklaş.",
+      "resource": "LearningApp/Narration/Clips/92562131aa4102ac56db8e50"
+    },
+    {
+      "text": "Telefon hatları yoğunken aileye ulaşmak için en uygun ilk yöntem hangisidir?",
+      "spoken": "Telefon hatları yoğunken aileye ulaşmak için en uygun ilk yöntem hangisidir?",
+      "resource": "LearningApp/Narration/Clips/67b1c873c3699461b86b2ee1"
+    },
+    {
+      "text": "Telefon hatları yoğunsa ne yaparsın?",
+      "spoken": "Telefon hatları yoğunsa ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/2a6d61e6bb24c2499a14d3d9"
+    },
+    {
+      "text": "Telefon hatlarını sürekli aramayla meşgul etmek",
+      "spoken": "Telefon hatlarını sürekli aramayla meşgul etmek",
+      "resource": "LearningApp/Narration/Clips/0b82b7858afe9825c9b32cc7"
+    },
+    {
+      "text": "Telefon meşgulse kısa mesaj gönder.",
+      "spoken": "Telefon meşgulse kısa mesaj gönder.",
+      "resource": "LearningApp/Narration/Clips/cf13e1fe7bd3510f860d44ed"
+    },
+    {
+      "text": "Telefonlar çalışmazsa şehir dışındaki bir akrabayı aramak iyi bir plandır.",
+      "spoken": "Telefonlar çalışmazsa şehir dışındaki bir akrabayı aramak iyi bir plandır.",
+      "resource": "LearningApp/Narration/Clips/8f558f28d9ace746a9a565f9"
+    },
+    {
+      "text": "Telefonu kısa mesaj ve acil durum iletişimi için kullan.",
+      "spoken": "Telefonu kısa mesaj ve acil durum iletişimi için kullan.",
+      "resource": "LearningApp/Narration/Clips/167e1b8ef8e55723e0952028"
+    },
+    {
+      "text": "Teller ve direkler tehlikelidir; uzak durmalısın.",
+      "spoken": "Teller ve direkler tehlikelidir; uzak durmalısın.",
+      "resource": "LearningApp/Narration/Clips/cb9ae9291e04650c8608dcc4"
+    },
+    {
+      "text": "Temel İlk Yardım",
+      "spoken": "Temel İlk Yardım",
+      "resource": "LearningApp/Narration/Clips/2b2f74857591034a2bf6b882"
+    },
+    {
+      "text": "Temiz bezle bastırırım",
+      "spoken": "Temiz bezle bastırırım",
+      "resource": "LearningApp/Narration/Clips/b8a9d3e53967402a77f7b014"
+    },
+    {
+      "text": "Temiz bezle doğrudan bası uygulamak",
+      "spoken": "Temiz bezle doğrudan bası uygulamak",
+      "resource": "LearningApp/Narration/Clips/bdda72e51fa84dba3684f5e8"
+    },
+    {
+      "text": "Teyitsiz bilgi paniği ve kaynak israfını artırabilir.",
+      "spoken": "Teyitsiz bilgi paniği ve kaynak israfını artırabilir.",
+      "resource": "LearningApp/Narration/Clips/920c116bbb0975088c495f83"
+    },
+    {
+      "text": "Toplanma alanı",
+      "spoken": "Toplanma alanı",
+      "resource": "LearningApp/Narration/Clips/30068c14b668da179895c70c"
+    },
+    {
+      "text": "Toplanma alanı aile planında önceden belirlenmelidir.",
+      "spoken": "Toplanma alanı aile planında önceden belirlenmelidir.",
+      "resource": "LearningApp/Narration/Clips/0efb84d8d8a8580dfaba2701"
+    },
+    {
+      "text": "Toplanma alanı sarsıntı sonrası güvenli buluşma için kullanılır.",
+      "spoken": "Toplanma alanı sarsıntı sonrası güvenli buluşma için kullanılır.",
+      "resource": "LearningApp/Narration/Clips/b16b0a6e9c2f5df2ec8d779f"
+    },
+    {
+      "text": "Toplanma alanına giderken bina cepheleri ve enerji hatlarından uzak dur.",
+      "spoken": "Toplanma alanına giderken bina cepheleri ve enerji hatlarından uzak dur.",
+      "resource": "LearningApp/Narration/Clips/ba7f5aa6d4a2a327b3aa223c"
+    },
+    {
+      "text": "Toplanma alanına sakin şekilde git.",
+      "spoken": "Toplanma alanına sakin şekilde git.",
+      "resource": "LearningApp/Narration/Clips/0229481756dc82a0b0aa8403"
+    },
+    {
+      "text": "Toplanma alanında ne yaparsın?",
+      "spoken": "Toplanma alanında ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/a549f5cc335472ea29556152"
+    },
+    {
+      "text": "Toplanma alanında sayım ve ihtiyaç bilgisini sakin biçimde paylaş.",
+      "spoken": "Toplanma alanında sayım ve ihtiyaç bilgisini sakin biçimde paylaş.",
+      "resource": "LearningApp/Narration/Clips/7f191c4d73dee8eab49f697d"
+    },
+    {
+      "text": "Toplanma alanını olaydan sonra aramak",
+      "spoken": "Toplanma alanını olaydan sonra aramak",
+      "resource": "LearningApp/Narration/Clips/4e934a42c967f916b9f4e7c0"
+    },
+    {
+      "text": "Toplanma yeri önceden belirlenmiş olmalıdır.",
+      "spoken": "Toplanma yeri önceden belirlenmiş olmalıdır.",
+      "resource": "LearningApp/Narration/Clips/5c778f882b95b995540c20c9"
+    },
+    {
+      "text": "Toplanma yerini olaydan sonra seçmek",
+      "spoken": "Toplanma yerini olaydan sonra seçmek",
+      "resource": "LearningApp/Narration/Clips/67e692f5a05ce8399f9371fa"
+    },
+    {
+      "text": "Toz ciğerlerine kaçabilir. Ağzını ve burnunu bir bezle kapatmak seni korur.",
+      "spoken": "Toz ciğerlerine kaçabilir. Ağzını ve burnunu bir bezle kapatmak seni korur.",
+      "resource": "LearningApp/Narration/Clips/ea4ac65f0dc7bac06e6f7b08"
+    },
+    {
+      "text": "Toz kaldır",
+      "spoken": "Toz kaldır",
+      "resource": "LearningApp/Narration/Clips/4e23b421325acea7b0f60d13"
+    },
+    {
+      "text": "Tozu havalandırmak nefes almanı zorlaştırır. Ağzını kapatmayı düşün.",
+      "spoken": "Tozu havalandırmak nefes almanı zorlaştırır. Ağzını kapatmayı düşün.",
+      "resource": "LearningApp/Narration/Clips/6ac11d06944f9227803fc4b1"
+    },
+    {
+      "text": "Trafiği engellemeden resmi yönlendirmeleri takip et.",
+      "spoken": "Trafiği engellemeden resmi yönlendirmeleri takip et.",
+      "resource": "LearningApp/Narration/Clips/3deb2061df45812d01d69c3c"
+    },
+    {
+      "text": "Tutunmak masanın altında kalmanı sağlar. Masa kaysa bile bırakma.",
+      "spoken": "Tutunmak masanın altında kalmanı sağlar. Masa kaysa bile bırakma.",
+      "resource": "LearningApp/Narration/Clips/76be749a0b9ab435c6ed5988"
+    },
+    {
+      "text": "Tüm düğmelere basıp açılan ilk katta inersin.",
+      "spoken": "Tüm düğmelere basıp açılan ilk katta inersin.",
+      "resource": "LearningApp/Narration/Clips/e249b763c905169a472c13e4"
+    },
+    {
+      "text": "Tüm düğmelere basıp inerim",
+      "spoken": "Tüm düğmelere basıp inerim",
+      "resource": "LearningApp/Narration/Clips/606ddfdf8ab000e7ccd71aa8"
+    },
+    {
+      "text": "Uzak dur",
+      "spoken": "Uzak dur",
+      "resource": "LearningApp/Narration/Clips/b695eab83beabb20290c29c4"
+    },
+    {
+      "text": "Uzak durur, içine girmem",
+      "spoken": "Uzak durur, içine girmem",
+      "resource": "LearningApp/Narration/Clips/b638a1288f2d980baef9066d"
+    },
+    {
+      "text": "Vazo",
+      "spoken": "Vazo",
+      "resource": "LearningApp/Narration/Clips/7ae1f7461b39467615540381"
+    },
+    {
+      "text": "Vitrin kenarı",
+      "spoken": "Vitrin kenarı",
+      "resource": "LearningApp/Narration/Clips/6efa23462706a8625d6deb14"
+    },
+    {
+      "text": "Yakın yerler meşgul olabilir; uzaktaki bir kişiye herkes haber verebilir.",
+      "spoken": "Yakın yerler meşgul olabilir; uzaktaki bir kişiye herkes haber verebilir.",
+      "resource": "LearningApp/Narration/Clips/f1f1218c4ff78a1d77a472b5"
+    },
+    {
+      "text": "Yanlış",
+      "spoken": "Yanlış",
+      "resource": "LearningApp/Narration/Clips/4ed7e8f46403f159911e9804"
+    },
+    {
+      "text": "Yanlış haber korkuyu artırır. Önce doğru mu diye kontrol et.",
+      "spoken": "Yanlış haber korkuyu artırır. Önce doğru mu diye kontrol et.",
+      "resource": "LearningApp/Narration/Clips/6c232c1d44f69b4be66d09d0"
+    },
+    {
+      "text": "Yanlış. Doğru olmayan haberler paniği büyütür. Önce resmi kaynaktan doğru mu diye bak, emin değilsen yayma.",
+      "spoken": "Yanlış. Doğru olmayan haberler paniği büyütür. Önce resmi kaynaktan doğru mu diye bak, emin değilsen yayma.",
+      "resource": "LearningApp/Narration/Clips/707b30f8d15064319378f147"
+    },
+    {
+      "text": "Yanlış. Herkes ararsa hatlar dolar. Aramak yerine kısa mesaj atmak hattı açık tutar.",
+      "spoken": "Yanlış. Herkes ararsa hatlar dolar. Aramak yerine kısa mesaj atmak hattı açık tutar.",
+      "resource": "LearningApp/Narration/Clips/d912ec8b097191313a676653"
+    },
+    {
+      "text": "Yanında ağır yaralı biri var ve kımıldayamıyor. Ne yaparsın?",
+      "spoken": "Yanında ağır yaralı biri var ve kımıldayamıyor. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/55027baa3d3faccb39d0f203"
+    },
+    {
+      "text": "Yaralanan birini gördüğünde önce kendi güvenliğini koru. Bir yetişkine haber ver ve yardım iste. Ağır yaralı birini kaldırmaya ya da sarsmaya çalışma. İlk yardım bilen bir yetişkinin yönergelerini dinle.",
+      "spoken": "Yaralanan birini gördüğünde önce kendi güvenliğini koru. Bir yetişkine haber ver ve yardım iste. Ağır yaralı birini kaldırmaya ya da sarsmaya çalışma. İlk yardım bilen bir yetişkinin yönergelerini dinle.",
+      "resource": "LearningApp/Narration/Clips/88a0d150ae8bd2e89cd5e62b"
+    },
+    {
+      "text": "Yaralıyı gereksiz yere taşımak",
+      "spoken": "Yaralıyı gereksiz yere taşımak",
+      "resource": "LearningApp/Narration/Clips/950854ece16af728d69d251b"
+    },
+    {
+      "text": "Yaranın üzerine su dökerim",
+      "spoken": "Yaranın üzerine su dökerim",
+      "resource": "LearningApp/Narration/Clips/06f4832eb8db91c72be41dc3"
+    },
+    {
+      "text": "Yardım etmek, her işi tek başına yapmak demek değildir. Yardıma ihtiyacı olan birini fark edersen bir yetişkine haber ver. Ağır eşyaları kaldırmaya ya da tehlikeli bir yere girmeye çalışma. Haber vermen de değerli bir yardımdır.",
+      "spoken": "Yardım etmek, her işi tek başına yapmak demek değildir. Yardıma ihtiyacı olan birini fark edersen bir yetişkine haber ver. Ağır eşyaları kaldırmaya ya da tehlikeli bir yere girmeye çalışma. Haber vermen de değerli bir yardımdır.",
+      "resource": "LearningApp/Narration/Clips/70b8b512081f36166bbb4a34"
+    },
+    {
+      "text": "Yardım gelene kadar temel ihtiyaçları planlı yönetmek gerekir.",
+      "spoken": "Yardım gelene kadar temel ihtiyaçları planlı yönetmek gerekir.",
+      "resource": "LearningApp/Narration/Clips/00e7ca1dd98782a9c5bea9be"
+    },
+    {
+      "text": "Yardım gelmeden önce en çok neye ihtiyacımız olur?",
+      "spoken": "Yardım gelmeden önce en çok neye ihtiyacımız olur?",
+      "resource": "LearningApp/Narration/Clips/5c54cee298d9727ba7e73f65"
+    },
+    {
+      "text": "Yardım isterken ne kullanırsın?",
+      "spoken": "Yardım isterken ne kullanırsın?",
+      "resource": "LearningApp/Narration/Clips/101f18416430580e871c4a3f"
+    },
+    {
+      "text": "Yardım İsterken",
+      "spoken": "Yardım İsterken",
+      "resource": "LearningApp/Narration/Clips/3394fc965a83b54efa546a22"
+    },
+    {
+      "text": "Yatak çevresinde düşebilecek tablo, raf ve ağır eşyaları kaldır.",
+      "spoken": "Yatak çevresinde düşebilecek tablo, raf ve ağır eşyaları kaldır.",
+      "resource": "LearningApp/Narration/Clips/50e2efae4488f2bc3f63584d"
+    },
+    {
+      "text": "Yatağı ağır dolap veya raf altına kurmamalıyız; depremde üstümüze düşebilir.",
+      "spoken": "Yatağı ağır dolap veya raf altına kurmamalıyız; depremde üstümüze düşebilir.",
+      "resource": "LearningApp/Narration/Clips/ab908ae39d9a026f917802ba"
+    },
+    {
+      "text": "Yatağını nereye kurmak daha güvenlidir?",
+      "spoken": "Yatağını nereye kurmak daha güvenlidir?",
+      "resource": "LearningApp/Narration/Clips/6bc74489d194b984d4950f4b"
+    },
+    {
+      "text": "Yaşlı komşun kapısını açamıyor. Sen ne yaparsın?",
+      "spoken": "Yaşlı komşun kapısını açamıyor. Sen ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/41e9f198ad0c36d31ebe374e"
+    },
+    {
+      "text": "Yer sallanmaya başladı. İlk ne yaparsın?",
+      "spoken": "Yer sallanmaya başladı. İlk ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/3d8a39377e16c5fbe9bc9c79"
+    },
+    {
+      "text": "Yer yine sallanmaya başladı. Ne yaparsın?",
+      "spoken": "Yer yine sallanmaya başladı. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/fe5a6dd7f5d3d28a7e27a77d"
+    },
+    {
+      "text": "Yerde kopmuş bir elektrik teli gördün. Ne yaparsın?",
+      "spoken": "Yerde kopmuş bir elektrik teli gördün. Ne yaparsın?",
+      "resource": "LearningApp/Narration/Clips/35661d7bb39ea5382f1716d7"
+    },
+    {
+      "text": "Yerde kırık cam ve moloz olabilir; ayakkabı ayağını korur.",
+      "spoken": "Yerde kırık cam ve moloz olabilir; ayakkabı ayağını korur.",
+      "resource": "LearningApp/Narration/Clips/39e216732b1b5038b3a9bdd3"
+    },
+    {
+      "text": "Yerde kırık camlar ve moloz var. Nasıl davranırsın?",
+      "spoken": "Yerde kırık camlar ve moloz var. Nasıl davranırsın?",
+      "resource": "LearningApp/Narration/Clips/5f8f746184978e4a4e74c2ac"
+    },
+    {
+      "text": "Yere çökerim",
+      "spoken": "Yere çökerim",
+      "resource": "LearningApp/Narration/Clips/9b08574659c95b6c0b89a255"
+    },
+    {
+      "text": "Yetişkin sorumluluğu sadece bireysel değil; ortak yaşam alanlarını da kapsar.\n\n• Apartman veya iş yerinde tahliye, toplanma ve görev paylaşımı konuşulmalı.\n\n• Yangın söndürücü, ilk yardım dolabı ve acil aydınlatma gibi ekipmanlar kontrol edilmeli.\n\n• Kat sorumlusu, engelli destek kişisi ve dış iletişim sorumlusu belirlenmeli.\n\n• Hasar şüphesinde binaya dönüş kararını yetkili değerlendirmesine bırak.\n\nBugün: Yönetici veya ekip lideriyle afet planı gündemi aç.",
+      "spoken": "Yetişkin sorumluluğu sadece bireysel değil; ortak yaşam alanlarını da kapsar. Apartman veya iş yerinde tahliye, toplanma ve görev paylaşımı konuşulmalı. Yangın söndürücü, ilk yardım dolabı ve acil aydınlatma gibi ekipmanlar kontrol edilmeli. Kat sorumlusu, engelli destek kişisi ve dış iletişim sorumlusu belirlenmeli. Hasar şüphesinde binaya dönüş kararını yetkili değerlendirmesine bırak. Bugün: Yönetici veya ekip lideriyle afet planı gündemi aç.",
+      "resource": "LearningApp/Narration/Clips/4f5073980ed563fb18b03511"
+    },
+    {
+      "text": "Yetkililere haber ver ve bölgeden uzaklaş.",
+      "spoken": "Yetkililere haber ver ve bölgeden uzaklaş.",
+      "resource": "LearningApp/Narration/Clips/05534ed356f3834c0f786fdd"
+    },
+    {
+      "text": "Yetkiliye haber ver",
+      "spoken": "Yetkiliye haber ver",
+      "resource": "LearningApp/Narration/Clips/22af1bfb89d90cc2b97f69ee"
+    },
+    {
+      "text": "Yola otur",
+      "spoken": "Yola otur",
+      "resource": "LearningApp/Narration/Clips/550f63e7a054469abd3d92a0"
+    },
+    {
+      "text": "Yüksek bir binanın önü",
+      "spoken": "Yüksek bir binanın önü",
+      "resource": "LearningApp/Narration/Clips/776569c118a336b78106c6b5"
+    },
+    {
+      "text": "Yüksekten düşen ağır bir şey canımızı yakar. Nereye koymalı?",
+      "spoken": "Yüksekten düşen ağır bir şey canımızı yakar. Nereye koymalı?",
+      "resource": "LearningApp/Narration/Clips/48203111d9941fb53465657d"
+    },
+    {
+      "text": "Zıpla",
+      "spoken": "Zıpla",
+      "resource": "LearningApp/Narration/Clips/bab783f25927b53164800d94"
+    },
+    {
+      "text": "Zıplarım",
+      "spoken": "Zıplarım",
+      "resource": "LearningApp/Narration/Clips/285db2e9d3084eb0185d6839"
+    },
+    {
+      "text": "Çakmak yak",
+      "spoken": "Çakmak yak",
+      "resource": "LearningApp/Narration/Clips/c71de05e51fcf6543b89adec"
+    },
+    {
+      "text": "Çakmak yakıp kontrol etmek",
+      "spoken": "Çakmak yakıp kontrol etmek",
+      "resource": "LearningApp/Narration/Clips/02546dde240c05e4d27c5fe2"
+    },
+    {
+      "text": "Çanta görünür ve erişilebilir yerde olmalıdır",
+      "spoken": "Çanta görünür ve erişilebilir yerde olmalıdır",
+      "resource": "LearningApp/Narration/Clips/19b2f150bebf411c7cf72b76"
+    },
+    {
+      "text": "Çanta kontrolünü takvime bağlamamak",
+      "spoken": "Çanta kontrolünü takvime bağlamamak",
+      "resource": "LearningApp/Narration/Clips/84d27d1ca76bef33943af175"
+    },
+    {
+      "text": "Çanta önceden hazır ve erişilebilir olmalıdır.",
+      "spoken": "Çanta önceden hazır ve erişilebilir olmalıdır.",
+      "resource": "LearningApp/Narration/Clips/7d9a1a104528cc6ec977933f"
+    },
+    {
+      "text": "Çantayı hazırlarken hangisini eklersin?",
+      "spoken": "Çantayı hazırlarken hangisini eklersin?",
+      "resource": "LearningApp/Narration/Clips/705082ab0aec22e055483d4c"
+    },
+    {
+      "text": "Çantayı sadece deprem olduktan sonra hazırlamak",
+      "spoken": "Çantayı sadece deprem olduktan sonra hazırlamak",
+      "resource": "LearningApp/Narration/Clips/852229ecb3be679799f0ed63"
+    },
+    {
+      "text": "Çantayı sürükle, daha hızlı düşen acil eşyaları yakala ve gereksizleri kaçır.",
+      "spoken": "Çantayı sürükle, daha hızlı düşen acil eşyaları yakala ve gereksizleri kaçır.",
+      "resource": "LearningApp/Narration/Clips/44642adcbd562c62f7e09dfa"
+    },
+    {
+      "text": "Çatlamış, hasarlı bir bina gördün. Ne yapmalısın?",
+      "spoken": "Çatlamış, hasarlı bir bina gördün. Ne yapmalısın?",
+      "resource": "LearningApp/Narration/Clips/f032d07a9b72360c3a6b2f58"
+    },
+    {
+      "text": "Çok arama yapmak hattı tıkar. Mesaj daha akıllıca.",
+      "spoken": "Çok arama yapmak hattı tıkar. Mesaj daha akıllıca.",
+      "resource": "LearningApp/Narration/Clips/b951c46d73f0c657cfd6a8a5"
+    },
+    {
+      "text": "Çok iyi! Komşunu unutmadın ve doğru kişiyi, bir büyüğü çağırdın.",
+      "spoken": "Evet. Komşunu unutmadın ve doğru kişiyi, bir büyüğü çağırdın.",
+      "resource": "LearningApp/Narration/Clips/5d787cc798866aa4f1b7ddeb"
+    },
+    {
+      "text": "Çok iyi! Telden uzak durdun.",
+      "spoken": "Evet. Telden uzak durdun.",
+      "resource": "LearningApp/Narration/Clips/b786b2e987697a021519a53f"
+    },
+    {
+      "text": "Çok iyi! Yaralıyı oynatmadan büyüklere haber vermek en güvenlisi.",
+      "spoken": "Evet. Yaralıyı oynatmadan büyüklere haber vermek en güvenlisi.",
+      "resource": "LearningApp/Narration/Clips/02fd9bc6b58402a51df85fa5"
+    },
+    {
+      "text": "Çok iyi! Önceden seçtiğiniz buluşma noktasında buluşursunuz.",
+      "spoken": "Evet. Önceden seçtiğiniz buluşma noktasında buluşursunuz.",
+      "resource": "LearningApp/Narration/Clips/939d8ed5d069496ad9865934"
+    },
+    {
+      "text": "Çok uzun, her şeyi anlatan",
+      "spoken": "Çok uzun, her şeyi anlatan",
+      "resource": "LearningApp/Narration/Clips/3147722949e34ce042485da9"
+    },
+    {
+      "text": "Çök, kapan, tutun",
+      "spoken": "Çök, kapan, tutun",
+      "resource": "LearningApp/Narration/Clips/3b2447b18e07ee8136b5ef03"
+    },
+    {
+      "text": "Çök, kapan, tutun; cam, dolap ve ağır eşyalardan uzak dur.",
+      "spoken": "Çök, kapan, tutun; cam, dolap ve ağır eşyalardan uzak dur.",
+      "resource": "LearningApp/Narration/Clips/00cbf148d0cdf2a45503d5cd"
+    },
+    {
+      "text": "Çök-Kapan-Tutun",
+      "spoken": "Çök, kapan, tutun",
+      "resource": "LearningApp/Narration/Clips/3b2447b18e07ee8136b5ef03"
+    },
+    {
+      "text": "Çök-Kapan-Tutun uygulamak",
+      "spoken": "Çök, kapan, tutun uygulamak",
+      "resource": "LearningApp/Narration/Clips/7e99e9373a89f5bdcb0c5559"
+    },
+    {
+      "text": "Çök-Kapan-Tutun yaparım",
+      "spoken": "Çök, kapan, tutun yaparım",
+      "resource": "LearningApp/Narration/Clips/c3723767b80a6a0bbbf58dcd"
+    },
+    {
+      "text": "Çöker, kapanır, tutunurum",
+      "spoken": "Çöker, kapanır, tutunurum",
+      "resource": "LearningApp/Narration/Clips/3549cb3d136524cde26e6283"
+    },
+    {
+      "text": "Çöktükten sonra başını nasıl korursun?",
+      "spoken": "Çöktükten sonra başını nasıl korursun?",
+      "resource": "LearningApp/Narration/Clips/72fb2269b0676532dbb8b32a"
+    },
+    {
+      "text": "Çıkarken itişip koşmak gerekir.",
+      "spoken": "Çıkarken itişip koşmak gerekir.",
+      "resource": "LearningApp/Narration/Clips/b5bdaac5e4de91e697f1d9a5"
+    },
+    {
+      "text": "Çıkışlara hücum tehlikelidir; önce çök-kapan-tutun yap ve öğretmeni dinle.",
+      "spoken": "Çıkışlara hücum tehlikelidir; önce çök, kapan, tutun yap ve öğretmeni dinle.",
+      "resource": "LearningApp/Narration/Clips/51e7b2deaec124a9d6905b88"
+    },
+    {
+      "text": "Çıplak ayak yürümek camla yaralanmana yol açabilir.",
+      "spoken": "Çıplak ayak yürümek camla yaralanmana yol açabilir.",
+      "resource": "LearningApp/Narration/Clips/58f44d188fa5c798681be629"
+    },
+    {
+      "text": "Çıplak ayak çıkarım",
+      "spoken": "Çıplak ayak çıkarım",
+      "resource": "LearningApp/Narration/Clips/3cf4060bdf7941dffe187487"
+    },
+    {
+      "text": "Çığlık atıp koşarım",
+      "spoken": "Çığlık atıp koşarım",
+      "resource": "LearningApp/Narration/Clips/fc857cbbedcffd296b178d61"
+    },
+    {
+      "text": "Önce Haber Ver",
+      "spoken": "Önce Haber Ver",
+      "resource": "LearningApp/Narration/Clips/821b9b782a03c89ecf5457ac"
+    },
+    {
+      "text": "Önce Sakin Ol",
+      "spoken": "Önce Sakin Ol",
+      "resource": "LearningApp/Narration/Clips/d18b4aa075bd76d26be4fe00"
+    },
+    {
+      "text": "Önce düdük veya vurma sesi denenir. Bağırmak en sona kalır.",
+      "spoken": "Önce düdük veya vurma sesi denenir. Bağırmak en sona kalır.",
+      "resource": "LearningApp/Narration/Clips/45319707f5737d409259f66b"
+    },
+    {
+      "text": "Önce ne yaparız, sonra ne yaparız? Resimlere doğru sırayla dokun. Üstteki örnek sana yardımcı olabilir.",
+      "spoken": "Önce ne yaparız, sonra ne yaparız? Resimlere doğru sırayla dokun. Üstteki örnek sana yardımcı olabilir.",
+      "resource": "LearningApp/Narration/Clips/bec0e72e328b60b7ab5dd617"
+    },
+    {
+      "text": "Önce sırayı birlikte izleyelim.",
+      "spoken": "Önce sırayı birlikte izleyelim.",
+      "resource": "LearningApp/Narration/Clips/e81ee238f816ba7d84330573"
+    },
+    {
+      "text": "Önce yere çökmek seni düşmekten korur ve hemen saklanmana yardım eder.",
+      "spoken": "Önce yere çökmek seni düşmekten korur ve hemen saklanmana yardım eder.",
+      "resource": "LearningApp/Narration/Clips/b7b0e95d1706967ae26373e8"
+    },
+    {
+      "text": "Önce çevre güvenliğini kontrol et; kendini riske atma.",
+      "spoken": "Önce çevre güvenliğini kontrol et; kendini riske atma.",
+      "resource": "LearningApp/Narration/Clips/f724a05c8c09e62b94b31c9a"
+    },
+    {
+      "text": "Önceden Belirle",
+      "spoken": "Önceden Belirle",
+      "resource": "LearningApp/Narration/Clips/7e7b8023ec781cc26dc1b926"
+    },
+    {
+      "text": "Önceden konuştuğunuz buluşma noktasına gidersin. Herkes orayı bildiği için kolayca bir araya gelirsiniz.",
+      "spoken": "Önceden konuştuğunuz buluşma noktasına gidersin. Herkes orayı bildiği için kolayca bir araya gelirsiniz.",
+      "resource": "LearningApp/Narration/Clips/612f5f8f8f81f6dd3a1f2168"
+    },
+    {
+      "text": "Önceden konuştuğunuz güvenli yeri hatırla.",
+      "spoken": "Önceden konuştuğunuz güvenli yeri hatırla.",
+      "resource": "LearningApp/Narration/Clips/44f626c332e2554d82803a6d"
+    },
+    {
+      "text": "Önceden seçilen buluşma noktası",
+      "spoken": "Önceden seçilen buluşma noktası",
+      "resource": "LearningApp/Narration/Clips/473dcac5124044af978e72ab"
+    },
+    {
+      "text": "Önceden seçtiğimiz güvenli buluşma noktasında buluşuruz.",
+      "spoken": "Önceden seçtiğimiz güvenli buluşma noktasında buluşuruz.",
+      "resource": "LearningApp/Narration/Clips/169e7ea5e8b6195efe5102f7"
+    },
+    {
+      "text": "Önemli belge kopyaları afet sonrası işlemleri kolaylaştırabilir.",
+      "spoken": "Önemli belge kopyaları afet sonrası işlemleri kolaylaştırabilir.",
+      "resource": "LearningApp/Narration/Clips/b0ac6bf3b0d3575de7065ecc"
+    },
+    {
+      "text": "Önemsemeden oturup beklerim",
+      "spoken": "Önemsemeden oturup beklerim",
+      "resource": "LearningApp/Narration/Clips/2269ae5728817e15031713bc"
+    },
+    {
+      "text": "Özel ihtiyaç planı hazırlanırken hangisi mutlaka düşünülmelidir?",
+      "spoken": "Özel ihtiyaç planı hazırlanırken hangisi mutlaka düşünülmelidir?",
+      "resource": "LearningApp/Narration/Clips/f6bafff92333826aa6d354b8"
+    },
+    {
+      "text": "Özel ilaç, bebek, yaşlı, engelli ve evcil hayvan ihtiyaçları ayrı düşünülmelidir.",
+      "spoken": "Özel ilaç, bebek, yaşlı, engelli ve evcil hayvan ihtiyaçları ayrı düşünülmelidir.",
+      "resource": "LearningApp/Narration/Clips/e8f638af73c208549a340582"
+    },
+    {
+      "text": "Özel İhtiyaçlar",
+      "spoken": "Özel İhtiyaçlar",
+      "resource": "LearningApp/Narration/Clips/340168550d170e1ac1669e03"
+    },
+    {
+      "text": "Öğrendiklerimizi küçük provalarla hatırlayabiliriz. Ailenle çök, kapan, tutun hareketlerini çalış. Buluşma yerinizi ve aile planınızı konuşun. Her provada biraz daha alışırsın. Öğrenmek için zamanın var.",
+      "spoken": "Öğrendiklerimizi küçük provalarla hatırlayabiliriz. Ailenle çök, kapan, tutun hareketlerini çalış. Buluşma yerinizi ve aile planınızı konuşun. Her provada biraz daha alışırsın. Öğrenmek için zamanın var.",
+      "resource": "LearningApp/Narration/Clips/860b7d6311e63961bf218c86"
+    },
+    {
+      "text": "Öğretmenimi dinlerim",
+      "spoken": "Öğretmenimi dinlerim",
+      "resource": "LearningApp/Narration/Clips/9ade820e872167399984f08d"
+    },
+    {
+      "text": "Öğretmenin sana güvenli çıkış yolunu sırayla gösterir.",
+      "spoken": "Öğretmenin sana güvenli çıkış yolunu sırayla gösterir.",
+      "resource": "LearningApp/Narration/Clips/4044547502c239ada9372810"
+    },
+    {
+      "text": "Üst geçitten uzak açık yerde",
+      "spoken": "Üst geçitten uzak açık yerde",
+      "resource": "LearningApp/Narration/Clips/eb2a7a064db40e78f231d4fd"
+    },
+    {
+      "text": "Üstünde ağır eşya olmayan yere",
+      "spoken": "Üstünde ağır eşya olmayan yere",
+      "resource": "LearningApp/Narration/Clips/14414d2e74fac8108e957b31"
+    },
+    {
+      "text": "Üstüne ağır eşya koyarız",
+      "spoken": "Üstüne ağır eşya koyarız",
+      "resource": "LearningApp/Narration/Clips/a8214826235bb08f26923dc3"
+    },
+    {
+      "text": "Üstüne basarak geçerim",
+      "spoken": "Üstüne basarak geçerim",
+      "resource": "LearningApp/Narration/Clips/fe1276de8ba74665d52c1653"
+    },
+    {
+      "text": "Üstüne bir şey düşmeyecek, açık bir alan en güvenlisidir.",
+      "spoken": "Üstüne bir şey düşmeyecek, açık bir alan en güvenlisidir.",
+      "resource": "LearningApp/Narration/Clips/6728da30c33032fe80f1388d"
+    },
+    {
+      "text": "Üstüne düşebilecek her şeyden uzak dur, özellikle ağır raflardan.",
+      "spoken": "Üstüne düşebilecek her şeyden uzak dur, özellikle ağır raflardan.",
+      "resource": "LearningApp/Narration/Clips/916edefbcad5e21bf5a54f2f"
+    },
+    {
+      "text": "Üç hareketi birlikte öğrenelim. Çök. Kapan. Tutun. Sarsıntı başladığında dizlerinin üzerine çök. Başını ve enseni koru. Yakınındaki sağlam bir masanın altındaysan, masanın ayağına tutun. Sarsıntı bitene kadar korunmaya devam et.",
+      "spoken": "Üç hareketi birlikte öğrenelim. Çök. Kapan. Tutun. Sarsıntı başladığında dizlerinin üzerine çök. Başını ve enseni koru. Yakınındaki sağlam bir masanın altındaysan, masanın ayağına tutun. Sarsıntı bitene kadar korunmaya devam et.",
+      "resource": "LearningApp/Narration/Clips/cd921c7aaea0a48403fc818f"
+    },
+    {
+      "text": "Üç sihirli hareket",
+      "spoken": "Üç sihirli hareket",
+      "resource": "LearningApp/Narration/Clips/89f0fe5924e970d6b2e83680"
+    },
+    {
+      "text": "İkincil tehlikeler depremden sonra can kaybı riskini artırabilir.\n\n• Gaz kokusu varsa kibrit, çakmak ve elektrik düğmesi kullanma.\n\n• Güvenliyse gaz, su ve elektrik vanalarını kapat; değilse uzaklaş.\n\n• Küçük yangına müdahale eğitimliysen ve kaçış yolun açıksa yaklaş.\n\n• Tehlikeyi yetkililere bildir ve resmi yönlendirme bekle.\n\nBugün: Gaz ve elektrik kapatma noktalarının yerini öğren.",
+      "spoken": "İkincil tehlikeler depremden sonra can kaybı riskini artırabilir. Gaz kokusu varsa kibrit, çakmak ve elektrik düğmesi kullanma. Güvenliyse gaz, su ve elektrik vanalarını kapat; değilse uzaklaş. Küçük yangına müdahale eğitimliysen ve kaçış yolun açıksa yaklaş. Tehlikeyi yetkililere bildir ve resmi yönlendirme bekle. Bugün: Gaz ve elektrik kapatma noktalarının yerini öğren.",
+      "resource": "LearningApp/Narration/Clips/e2038f5d049026b6bffdfaf9"
+    },
+    {
+      "text": "İlaç, cihaz, bakım ve beslenme ihtiyaçları kişiye göre değişir.",
+      "spoken": "İlaç, cihaz, bakım ve beslenme ihtiyaçları kişiye göre değişir.",
+      "resource": "LearningApp/Narration/Clips/e4a28aed1ad71c72159d2f0d"
+    },
+    {
+      "text": "İlaç, medikal cihaz ve bakım ihtiyaçları",
+      "spoken": "İlaç, medikal cihaz ve bakım ihtiyaçları",
+      "resource": "LearningApp/Narration/Clips/a4a3128bf9d3a8649c5f78be"
+    },
+    {
+      "text": "İleri müdahale eğitim gerektirir; acil ekip desteği beklenmelidir.",
+      "spoken": "İleri müdahale eğitim gerektirir; acil ekip desteği beklenmelidir.",
+      "resource": "LearningApp/Narration/Clips/2898f75265ce36b521c8c59b"
+    },
+    {
+      "text": "İletişim ve Bilgi",
+      "spoken": "İletişim ve Bilgi",
+      "resource": "LearningApp/Narration/Clips/09d413d536dcfbe0e62c1965"
+    },
+    {
+      "text": "İlk 72 Saat",
+      "spoken": "İlk 72 Saat",
+      "resource": "LearningApp/Narration/Clips/56b4b573f03ebad4acd48f03"
+    },
+    {
+      "text": "İlk 72 saat için çanta sade, erişilebilir ve güncel olmalıdır.\n\n• Su, bozulmayan gıda, el feneri, radyo, düdük, pil ve powerbank hazırla.\n\n• Düzenli kullanılan ilaçları ve temel ilk yardım malzemesini ekle.\n\n• Kimlik, sigorta, tapu ve önemli belgelerin kopyasını su geçirmez dosyada tut.\n\n• Son kullanma tarihlerini ve pilleri belirli aralıklarla kontrol et.\n\nBugün: Çantadaki eksikleri 5 dakikalık bir listeye dök.",
+      "spoken": "İlk 72 saat için çanta sade, erişilebilir ve güncel olmalıdır. Su, bozulmayan gıda, el feneri, radyo, düdük, pil ve powerbank hazırla. Düzenli kullanılan ilaçları ve temel ilk yardım malzemesini ekle. Kimlik, sigorta, tapu ve önemli belgelerin kopyasını su geçirmez dosyada tut. Son kullanma tarihlerini ve pilleri belirli aralıklarla kontrol et. Bugün: Çantadaki eksikleri 5 dakikalık bir listeye dök.",
+      "resource": "LearningApp/Narration/Clips/c2126af50671d7758a32b637"
+    },
+    {
+      "text": "İlk Kontrol ve Tahliye",
+      "spoken": "İlk Kontrol ve Tahliye",
+      "resource": "LearningApp/Narration/Clips/f67ee237da1c79f91b29fbf7"
+    },
+    {
+      "text": "İlk Yardım ve Destek",
+      "spoken": "İlk Yardım ve Destek",
+      "resource": "LearningApp/Narration/Clips/61850ac4405657b2a7813af7"
+    },
+    {
+      "text": "İlk günlerde amaç kaynakları kontrollü kullanmak ve temel ihtiyaçları sürdürebilmektir.\n\n• Su ve gıdayı kişi sayısına göre planla; özel diyet ve bebek ihtiyaçlarını unutma.\n\n• Düzenli kullanılan ilaçların listesini, doz bilgisini ve yedeklerini hazır tut.\n\n• Konserve açacağı, hijyen malzemesi ve çöp poşeti gibi küçük ihtiyaçları ekle.\n\n• Çantanın herkes tarafından bilinen ve çıkışa yakın bir yerde olmasını sağla.\n\nBugün: Evdeki kişi sayısına göre 72 saatlik ihtiyaçları hesapla.",
+      "spoken": "İlk günlerde amaç kaynakları kontrollü kullanmak ve temel ihtiyaçları sürdürebilmektir. Su ve gıdayı kişi sayısına göre planla; özel diyet ve bebek ihtiyaçlarını unutma. Düzenli kullanılan ilaçların listesini, doz bilgisini ve yedeklerini hazır tut. Konserve açacağı, hijyen malzemesi ve çöp poşeti gibi küçük ihtiyaçları ekle. Çantanın herkes tarafından bilinen ve çıkışa yakın bir yerde olmasını sağla. Bugün: Evdeki kişi sayısına göre 72 saatlik ihtiyaçları hesapla.",
+      "resource": "LearningApp/Narration/Clips/cd871a2e8acdba445c4d908f"
+    },
+    {
+      "text": "İlk hedef yaralanma riskini azaltmak ve sakin kalmaktır.",
+      "spoken": "İlk hedef yaralanma riskini azaltmak ve sakin kalmaktır.",
+      "resource": "LearningApp/Narration/Clips/80b74cbe282cb0f14b9b9c82"
+    },
+    {
+      "text": "İlk yardımda amaç güvenli kalmak, kanamayı kontrol etmek ve profesyonel yardım çağırmaktır.",
+      "spoken": "İlk yardımda amaç güvenli kalmak, kanamayı kontrol etmek ve profesyonel yardım çağırmaktır.",
+      "resource": "LearningApp/Narration/Clips/d036d79a8e26c78d1577d61c"
+    },
+    {
+      "text": "İlk yardımda temel yaklaşım güvenliği sağlamak, kanamayı kontrol etmek ve yardım istemektir.\n\n• Önce ortam güvenliğini değerlendir; kendini riske atma.\n\n• Ciddi kanamada temiz bezle doğrudan bası uygula ve yardım çağır.\n\n• Bilinç, solunum ve ciddi yaralanma belirtilerini takip et.\n\n• Eğitimin yoksa ileri müdahaleye kalkışma; acil ekipleri bekle.\n\nBugün: Temel ilk yardım eğitimi alabileceğin yerleri araştır.",
+      "spoken": "İlk yardımda temel yaklaşım güvenliği sağlamak, kanamayı kontrol etmek ve yardım istemektir. Önce ortam güvenliğini değerlendir; kendini riske atma. Ciddi kanamada temiz bezle doğrudan bası uygula ve yardım çağır. Bilinç, solunum ve ciddi yaralanma belirtilerini takip et. Eğitimin yoksa ileri müdahaleye kalkışma; acil ekipleri bekle. Bugün: Temel ilk yardım eğitimi alabileceğin yerleri araştır.",
+      "resource": "LearningApp/Narration/Clips/65c612820cc8579b27b4bbbd"
+    },
+    {
+      "text": "İnsan susuz kalamaz. Çantada mutlaka su olmalı.",
+      "spoken": "İnsan susuz kalamaz. Çantada mutlaka su olmalı.",
+      "resource": "LearningApp/Narration/Clips/2e36d6b9e1251cf04ee8f4e3"
+    },
+    {
+      "text": "İç Mekanda Doğru Refleks",
+      "spoken": "İç Mekanda Doğru Refleks",
+      "resource": "LearningApp/Narration/Clips/43ec6fd1ad9eeffc3403c4b4"
+    },
+    {
+      "text": "İçeride beklerim",
+      "spoken": "İçeride beklerim",
+      "resource": "LearningApp/Narration/Clips/075fae3f9e224a4da91630e4"
+    },
+    {
+      "text": "İçine girip eşyalarıma bakarım",
+      "spoken": "İçine girip eşyalarıma bakarım",
+      "resource": "LearningApp/Narration/Clips/94af1eb7a96d81497b95f3b4"
+    },
+    {
+      "text": "İş Yeri ve Okul",
+      "spoken": "İş Yeri ve Okul",
+      "resource": "LearningApp/Narration/Clips/ebf4bbcf90f82a45fca10215"
+    },
+    {
+      "text": "Şimdi aynı sırayla dokunabilirsin.",
+      "spoken": "Şimdi aynı sırayla dokunabilirsin.",
+      "resource": "LearningApp/Narration/Clips/92b0b39336c4fc92030a191e"
+    },
+    {
+      "text": "Şimdi evimizdeki eşyalara bakalım. Dolap ve rafların sabitlenmesini bir büyüğünden iste. Ağır eşyaları taşımayı ve sabitleme işini yetişkinlere bırak. Sen de geçiş yolundaki oyuncaklarını toplayabilirsin.",
+      "spoken": "Şimdi evimizdeki eşyalara bakalım. Dolap ve rafların sabitlenmesini bir büyüğünden iste. Ağır eşyaları taşımayı ve sabitleme işini yetişkinlere bırak. Sen de geçiş yolundaki oyuncaklarını toplayabilirsin.",
+      "resource": "LearningApp/Narration/Clips/b73fb0002442e3232f58fa89"
+    },
+    {
+      "text": "Şimdi eşyaları ayıralım. Çantaya koyacağın eşyaları çantaya taşı. Diğerlerini dışarıda bırak. Birlikte düşünebiliriz.",
+      "spoken": "Şimdi eşyaları ayıralım. Çantaya koyacağın eşyaları çantaya taşı. Diğerlerini dışarıda bırak. Birlikte düşünebiliriz.",
+      "resource": "LearningApp/Narration/Clips/4f1c5a02587851b447d1cf3f"
+    }
+  ]
+}

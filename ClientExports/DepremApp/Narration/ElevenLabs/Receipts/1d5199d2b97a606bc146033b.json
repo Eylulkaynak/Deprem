@@ -1,0 +1,23 @@
+{
+  "index": 430,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aile ve İletişim Planı",
+  "sourceFilename": "1d5199d2b97a606bc146033b.mp3",
+  "sourceSha256": "51161e7fb0a21418cfcd5110cf6762435857997e591cf11fe8b5b41f9bff69f8",
+  "importedAt": "2026-10-01T04:22:10.630547+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.235918"
+    }
+  }
+}

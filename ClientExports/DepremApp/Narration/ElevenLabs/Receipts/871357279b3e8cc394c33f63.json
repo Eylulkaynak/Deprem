@@ -1,0 +1,23 @@
+{
+  "index": 361,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bir büyük çağırırım",
+  "sourceFilename": "871357279b3e8cc394c33f63.mp3",
+  "sourceSha256": "c9be95f6ad664dfc7a44ee4914596594fa67754195c7eb5991a319f8b077fa62",
+  "importedAt": "2026-10-01T04:12:53.955259+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.922449"
+    }
+  }
+}

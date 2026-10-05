@@ -1,0 +1,5245 @@
+{
+  "version": 1,
+  "courses": [
+    {
+      "id": "child-0",
+      "title": "Acil Çanta",
+      "subtitle": "Deprem öncesi hazırlık",
+      "icon": "item-emergency-bag",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Acil Çanta Nedir?",
+          "prompt": "",
+          "text": "Haydi, acil durum çantamızı tanıyalım. Bu çantayı bir büyüğümüzle birlikte, deprem olmadan önce hazırlarız. İçine su, el feneri ve ihtiyaç duyabileceğimiz eşyaları koyarız. Çantamızın yerini ailece biliriz.",
+          "tip": "",
+          "success": "",
+          "icon": "item-emergency-bag",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Acil çantana hangisini koyarsın?",
+          "text": "Karanlıkta görmek için el feneri çok işe yarar.",
+          "tip": "Oyuncak bizi karanlıkta koruyamaz. Işık veren şeyi seç.",
+          "success": "Harika! El feneri karanlıkta yolumuzu aydınlatır.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "El feneri",
+              "correct": true,
+              "icon": "item-flashlight",
+              "feedback": ""
+            },
+            {
+              "label": "Oyuncak",
+              "correct": false,
+              "icon": "item-toy",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yardım gelmeden önce en çok neye ihtiyacımız olur?",
+          "text": "İnsan susuz kalamaz. Çantada mutlaka su olmalı.",
+          "tip": "Susuz kalmamak için içecek bir şey lazım.",
+          "success": "Doğru! Su olmadan yaşayamayız, en önemlisi sudur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Su",
+              "correct": true,
+              "icon": "item-water",
+              "feedback": ""
+            },
+            {
+              "label": "Parfüm",
+              "correct": false,
+              "icon": "item-perfume",
+              "feedback": ""
+            },
+            {
+              "label": "Vazo",
+              "correct": false,
+              "icon": "item-vase",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Düdük, enkaz altında sesimizi duyurmak için çantaya konur.",
+          "text": "Düdük çalmak bağırmaktan daha az yorar ve daha uzağa duyulur.",
+          "tip": "Düşün: Sesini duyurmak isteyince bağırmak mı kolay, düdük çalmak mı?",
+          "success": "Aferin! Düdük sesimizi uzaklara duyurur, çantaya konur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-1",
+      "title": "Aile Planı",
+      "subtitle": "Birlikte hazır olalım",
+      "icon": "item-meet-family",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Aile Planı Yapalım",
+          "prompt": "",
+          "text": "Ailenle küçük bir plan yapmaya ne dersin? Deprem olduğunda farklı yerlerde olabilirsiniz. Nerede buluşacağınızı ve kime haber vereceğinizi önceden konuşun. Bu planı ailedeki herkes bilsin.",
+          "tip": "",
+          "success": "",
+          "icon": "item-meet-family",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem sonrası ailenle nerede buluşursun?",
+          "text": "Önceden seçtiğimiz güvenli buluşma noktasında buluşuruz.",
+          "tip": "Önceden konuştuğunuz güvenli yeri hatırla.",
+          "success": "Çok iyi! Önceden seçtiğiniz buluşma noktasında buluşursunuz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Önceden seçilen buluşma noktası",
+              "correct": true,
+              "icon": "item-meet-family",
+              "feedback": ""
+            },
+            {
+              "label": "Binaya geri girerim",
+              "correct": false,
+              "icon": "item-reenter-building",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Telefonlar çalışmazsa şehir dışındaki bir akrabayı aramak iyi bir plandır.",
+          "text": "Yakın yerler meşgul olabilir; uzaktaki bir kişiye herkes haber verebilir.",
+          "tip": "Bazen uzaktaki birine ulaşmak daha kolay olur.",
+          "success": "Doğru! Şehir dışı irtibat kişisi herkesi birbirine bağlar.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Aile planını kimler bilmeli?",
+          "text": "Plan ancak herkes bilirse işe yarar. Küçük büyük herkes öğrenmeli.",
+          "tip": "Sadece bir kişi bilirse, diğerleri ne yapacağını bilemez.",
+          "success": "Harika! Ailedeki herkes planı bilirse hep birlikte güvende oluruz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ailedeki herkes",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Sadece babam",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Hiç kimse",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-2",
+      "title": "Evi Hazırla",
+      "subtitle": "Eşyaları sabitleyelim",
+      "icon": "item-hold-cabinet",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Evimizi Güvenli Yapalım",
+          "prompt": "",
+          "text": "Şimdi evimizdeki eşyalara bakalım. Dolap ve rafların sabitlenmesini bir büyüğünden iste. Ağır eşyaları taşımayı ve sabitleme işini yetişkinlere bırak. Sen de geçiş yolundaki oyuncaklarını toplayabilirsin.",
+          "tip": "",
+          "success": "",
+          "icon": "item-hold-cabinet",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Devrilmesin diye dolaba ne yaparız?",
+          "text": "Ağır dolapları duvara sabitlersek depremde üstümüze devrilmez.",
+          "tip": "Dolabın sabit durması için bir şeye tutturmak gerek.",
+          "success": "Evet. Dolabın bir yetişkin tarafından uygun biçimde sabitlenmesi devrilme riskini azaltır.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Duvara sabitleriz",
+              "correct": true,
+              "icon": "item-hold-cabinet",
+              "feedback": ""
+            },
+            {
+              "label": "Üstüne ağır eşya koyarız",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yatağını nereye kurmak daha güvenlidir?",
+          "text": "Yatağı ağır dolap veya raf altına kurmamalıyız; depremde üstümüze düşebilir.",
+          "tip": "Başının üstünde ağır bir şey olmayan yeri seç.",
+          "success": "Doğru! Üstünde ağır eşya olmayan yer en güvenlisidir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Üstünde ağır eşya olmayan yere",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Ağır raf altına",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Büyük aynanın altına",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Ağır kitapları en üst rafa koymak deprem için güvenlidir.",
+          "text": "Ağır eşyalar alt raflara konur; üstte olursa depremde başımıza düşebilir.",
+          "tip": "Yüksekten düşen ağır bir şey canımızı yakar. Nereye koymalı?",
+          "success": "Doğru cevap! Ağır eşyalar alt raflara konur, üst rafa değil.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-3",
+      "title": "Çök-Kapan-Tutun",
+      "subtitle": "Sarsıntı başlayınca üç hareket",
+      "icon": "item-drop-cover-hold",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Üç sihirli hareket",
+          "prompt": "",
+          "text": "Üç hareketi birlikte öğrenelim. Çök. Kapan. Tutun. Sarsıntı başladığında dizlerinin üzerine çök. Başını ve enseni koru. Yakınındaki sağlam bir masanın altındaysan, masanın ayağına tutun. Sarsıntı bitene kadar korunmaya devam et.",
+          "tip": "",
+          "success": "",
+          "icon": "item-drop-cover-hold",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yer sallanmaya başladı. İlk ne yaparsın?",
+          "text": "Önce yere çökmek seni düşmekten korur ve hemen saklanmana yardım eder.",
+          "tip": "Ayakta kalırsan sarsıntıda düşebilirsin. Önce yere çök.",
+          "success": "Harika! Yere çökmek ilk adımdır.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Yere çökerim",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereye koşarım",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Çöktükten sonra başını nasıl korursun?",
+          "text": "Başını ve enseni iki kolunla kapatmak, düşen küçük eşyalardan korur.",
+          "tip": "Başın çok önemli. Onu kollarınla ya da bir yastıkla kapat.",
+          "success": "Doğru! Başını ve enseni kapattın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Başımı ve ensemi kapatırım",
+              "correct": true,
+              "icon": "item-protect-head",
+              "feedback": ""
+            },
+            {
+              "label": "Ellerimi cebime koyarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Zıplarım",
+              "correct": false,
+              "icon": "item-waste-energy",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu, yanlış mı? Tutunduğun şey hareket ederse onunla birlikte hareket edersin.",
+          "text": "Sağlam bir masaya tutunursun; masa kayarsa elini bırakmadan onunla birlikte gidersin.",
+          "tip": "Tutunmak masanın altında kalmanı sağlar. Masa kaysa bile bırakma.",
+          "success": "Evet! Tutunup masayla birlikte hareket edersin.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-4",
+      "title": "Nereye Sığın",
+      "subtitle": "Güvenli yeri seç",
+      "icon": "item-crouch-near-desk",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Sağlam masa en iyi dost",
+          "prompt": "",
+          "text": "Güvenli yerleri önceden bir büyüğünle tanıyabilirsin. Sarsıntıda yakınındaki sağlam bir masanın altında başını ve enseni koru, masanın ayağına tutun. Camlardan ve devrilebilecek eşyalardan uzak dur.",
+          "tip": "",
+          "success": "",
+          "icon": "item-crouch-near-desk",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntıda nereye sığınırsın?",
+          "text": "Sağlam bir masanın altı seni düşen eşyalardan korur.",
+          "tip": "Masanın altı en güvenli yer. Cam ve raflardan uzak dur.",
+          "success": "Süper! Sağlam masanın altı en güvenli yer.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Sağlam masanın altına",
+              "correct": true,
+              "icon": "item-crouch-near-desk",
+              "feedback": ""
+            },
+            {
+              "label": "Ağır dolabın yanına",
+              "correct": false,
+              "icon": "item-hold-cabinet",
+              "feedback": ""
+            },
+            {
+              "label": "Pencere kenarına",
+              "correct": false,
+              "icon": "item-stand-window",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Hangi yerden uzak durmalısın?",
+          "text": "Cam kırılabilir ve seni kesebilir. Pencereden ve camdan uzak dur.",
+          "tip": "Cam tehlikelidir. Pencere kenarı güvenli değildir.",
+          "success": "Doğru! Camdan ve pencereden uzak dururuz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Camlı pencereden",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Odanın iç köşesinden",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu, yanlış mı? Başının üstündeki ağır raftan uzaklaşman gerekir.",
+          "text": "Ağır raflar ve sarkan eşyalar sarsıntıda üstüne düşebilir. Onlardan uzaklaş.",
+          "tip": "Üstüne düşebilecek her şeyden uzak dur, özellikle ağır raflardan.",
+          "success": "Evet! Sarkan ve ağır eşyalardan uzaklaşırız.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-5",
+      "title": "Sarsıntıda Yapma",
+      "subtitle": "Bunları yapmamalısın",
+      "icon": "item-run-window",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Sarsıntıda asla yapma",
+          "prompt": "",
+          "text": "Sarsıntı sırasında dışarıya ya da merdivenlere koşma. Asansöre binme. Balkon ve pencerelerden uzak dur. Çök, kapan, tutun hareketlerini yap. Sarsıntı bitince bir büyüğünle birlikte hareket et.",
+          "tip": "",
+          "success": "",
+          "icon": "item-run-window",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntıda aşağı inmek için ne kullanmazsın?",
+          "text": "Asansör sarsıntıda durabilir ve içinde mahsur kalabilirsin. Asla binme.",
+          "tip": "Asansör tehlikelidir. Sarsıntı bitene kadar yerinde kal.",
+          "success": "Doğru! Sarsıntıda asansöre binmeyiz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Asansöre binerim",
+              "correct": false,
+              "icon": "item-use-elevator",
+              "feedback": ""
+            },
+            {
+              "label": "Güvenli yerimde beklerim",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntı sürerken ne yapmalısın?",
+          "text": "Koşmak düşmene yol açar. Sallanma durana kadar güvenli yerinde kal.",
+          "tip": "Koşma! Sarsıntı bitene kadar olduğun yerde güvende kal.",
+          "success": "Aferin! Sarsıntı bitene kadar yerimizde kalırız.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Olduğum yerde kalırım",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Dışarı koşarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Balkona çıkarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu, yanlış mı? Sarsıntı sırasında balkona çıkmak güvenlidir.",
+          "text": "Balkonlar sarsıntıda zarar görebilir. İçeride sağlam bir yerde kalmak daha güvenlidir.",
+          "tip": "Balkon güvenli değildir. İçeride güvenli yerinde kal.",
+          "success": "Evet! Balkona çıkmak güvenli değildir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-6",
+      "title": "Dışarıdaysan",
+      "subtitle": "Açık alana geç, uzak dur",
+      "icon": "item-stay-away",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Açık Alanda Güvende Kal",
+          "prompt": "",
+          "text": "Dışarıdaysan binalardan, duvarlardan, direklerden ve elektrik tellerinden uzak dur. Açık bir alanda yere çök. Başını ve enseni koruyarak sarsıntının bitmesini bekle.",
+          "tip": "",
+          "success": "",
+          "icon": "item-stay-away",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sokakta yürürken deprem oldu. Nereye gitmelisin?",
+          "text": "Üstüne bir şey düşmeyecek, açık bir alan en güvenlisidir.",
+          "tip": "Bina ve direklerin dibi tehlikelidir; üstüne parça düşebilir.",
+          "success": "Harika! Açık alan seni düşen parçalardan korur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Açık bir alana geç",
+              "correct": true,
+              "icon": "item-stay-away",
+              "feedback": ""
+            },
+            {
+              "label": "Binanın dibine sığın",
+              "correct": false,
+              "icon": "item-hold-cabinet",
+              "feedback": ""
+            },
+            {
+              "label": "Elektrik direğine tutun",
+              "correct": false,
+              "icon": "item-touch-wire",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem sırasında elektrik tellerine ve direklere yaklaşmak güvenlidir.",
+          "text": "Direkler ve teller devrilebilir, bu yüzden onlardan uzak dur.",
+          "tip": "Teller ve direkler tehlikelidir; uzak durmalısın.",
+          "success": "Doğru! Tellerden ve direklerden hep uzak durmalıyız.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Açık alana çöktün. Sarsıntı sürerken ne yaparsın?",
+          "text": "Başını ve boynunu kollarınla koruyup sarsıntının geçmesini beklersin.",
+          "tip": "Hemen koşmak yerine başını koruyup beklemelisin.",
+          "success": "Aferin! Başını korumak en önemli şey.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Başımı koruyup beklerim",
+              "correct": true,
+              "icon": "item-protect-head",
+              "feedback": ""
+            },
+            {
+              "label": "Koşarak uzaklaşırım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Duvara yaslanırım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-7",
+      "title": "Okulda ve Kalabalıkta",
+      "subtitle": "Çök, kapan, tutun",
+      "icon": "item-crouch-near-desk",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Sınıfta Doğru Hareket",
+          "prompt": "",
+          "text": "Okulda da öğrendiğimiz hareketleri yaparız. Çök, kapan, tutun. Başını ve enseni koru. Merdivenlere ya da çıkışa koşma. Öğretmeninin yönergelerini dinle.",
+          "tip": "",
+          "success": "",
+          "icon": "item-crouch-near-desk",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sınıfta ders sırasında deprem başladı. Ne yaparsın?",
+          "text": "Sağlam sıranın yanına çök-kapan-tutun yaparsın.",
+          "tip": "En güvenlisi sıranın yanına çöküp başını korumak.",
+          "success": "Süper! Çök, kapan, tutun hayat kurtarır.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Sıranın yanına çök-kapan-tutun",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Kapıya doğru koşarım",
+              "correct": false,
+              "icon": "item-stop-and-exit",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereden bakarım",
+              "correct": false,
+              "icon": "item-stand-window",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem anında herkes çıkışlara koşmalı ve panik yapmalıdır.",
+          "text": "Çıkışlara hücum tehlikelidir; önce çök-kapan-tutun yap ve öğretmeni dinle.",
+          "tip": "Koşmak ve panik tehlikelidir; sakin kalıp beklemelisin.",
+          "success": "Doğru! Panik yok; önce başını korur, sonra öğretmeni dinlersin.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntı geçti. Sınıfta şimdi kimi dinlersin?",
+          "text": "Öğretmenin sana güvenli çıkış yolunu sırayla gösterir.",
+          "tip": "Tek başına karar verme; öğretmenini dinlemelisin.",
+          "success": "Aferin! Öğretmenini dinleyince sıralı ve güvenli çıkarsın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Öğretmenimi dinlerim",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Tek başıma koşarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Sıranın altında kalırım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-8",
+      "title": "Araçta ve Asansörde",
+      "subtitle": "Güvenli yerde dur, en yakın katta in",
+      "icon": "item-stop-and-exit",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Araç ve Asansör",
+          "prompt": "",
+          "text": "Araçtayken sürücünün güvenli bir yerde durmasını bekle. Köprülerden ve elektrik tellerinden uzak bir yerde durulduysa araçta kal, yetişkinin yönergelerini dinle. Deprem sırasında asansörü kullanmayız. Zaten asansördeysen kat düğmelerine basıp kapının açıldığı uygun katta çık; kapıyı zorlamaya çalışma.",
+          "tip": "",
+          "success": "",
+          "icon": "item-stop-and-exit",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Asansördeyken deprem oldu. Ne yaparsın?",
+          "text": "Tüm düğmelere basıp açılan ilk katta inersin.",
+          "tip": "Asansörde kalma; tüm düğmelere basıp en yakın katta in.",
+          "success": "Harika! En yakın katta inmek seni güvende tutar.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Tüm düğmelere basıp inerim",
+              "correct": true,
+              "icon": "item-stop-and-exit",
+              "feedback": ""
+            },
+            {
+              "label": "Asansörle aşağı inerim",
+              "correct": false,
+              "icon": "item-use-elevator",
+              "feedback": ""
+            },
+            {
+              "label": "İçeride beklerim",
+              "correct": false,
+              "icon": "item-keep-riding",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Araçtayken deprem oldu. Nerede durmak en güvenli?",
+          "text": "Köprü ve üst geçitlerin altından uzak, açık bir yerde durursun.",
+          "tip": "Köprü ve üst geçit altı tehlikeli; açık yerde durmalısın.",
+          "success": "Doğru! Açık ve geçit altından uzak yer en güvenlisi.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Üst geçitten uzak açık yerde",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Köprünün altında",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Elektrik tellerinin altında",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Araçta güvenli yerde durdun. Sonra ne yaparsın?",
+          "text": "Sarsıntı geçene kadar emniyet kemerli, arabada beklersin.",
+          "tip": "Dışarı fırlamak yerine arabada beklemek daha güvenli.",
+          "success": "Aferin! Arabada beklemek seni düşen parçalardan korur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Arabada beklerim",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Hemen dışarı fırlarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Hızla sürmeye devam ederim",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-9",
+      "title": "Artçılar",
+      "subtitle": "Sarsıntı tekrar gelebilir",
+      "icon": "item-drop-cover-hold",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Artçı sarsıntılar",
+          "prompt": "",
+          "text": "Depremden sonra yeniden sarsıntı olabilir. Bunlara artçı sarsıntı diyoruz. Yeniden sallanırsa öğrendiğin korunma hareketlerini uygula. Hasarlı binalardan uzak dur ve bir büyüğünle birlikte kal.",
+          "tip": "",
+          "success": "",
+          "icon": "item-drop-cover-hold",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yer yine sallanmaya başladı. Ne yaparsın?",
+          "text": "Artçı geldiğinde tıpkı ilk depremdeki gibi davran: çök, kapan, tutun.",
+          "tip": "Koşmak yerine sağlam bir yere çökmek seni korur.",
+          "success": "Harika! Her sarsıntıda çök-kapan-tutun en güvenlisi.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Çök, kapan, tutun",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereye koş",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Artçı sarsıntılar zamanla azalır.",
+          "text": "Artçılar genelde küçülür ve seyrekleşir ama yine de dikkatli ol.",
+          "tip": "Artçılar tamamen bitene kadar tedbirli olmalısın.",
+          "success": "Doğru! Artçılar zamanla azalır ama yine dikkat ederiz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Artçı bitti. Hasarlı binaya hemen girmeli misin?",
+          "text": "Sarsıntılar tamamen bitene kadar hasarlı binalara girmek tehlikelidir.",
+          "tip": "Artçılar hasarlı yerleri daha çok yıkabilir; uzak dur.",
+          "success": "Aferin! Hasarlı binadan uzak durmak en doğrusu.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Hayır, uzak dururum",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Evet, hemen girerim",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-10",
+      "title": "Güvenle Çık",
+      "subtitle": "Sakin ve dikkatli dışarı",
+      "icon": "item-stop-and-exit",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Sakin çıkış",
+          "prompt": "",
+          "text": "Sarsıntı bittiğinde bir büyüğünle birlikte kendini ve çevreni kontrol et. Dışarı çıkarken ayakkabını giy. Güvenli çıkış yolunu izleyin. Asansör kullanmayın; itişmeden, koşmadan ilerleyin.",
+          "tip": "",
+          "success": "",
+          "icon": "item-stop-and-exit",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Dışarı çıkmadan önce ayağına ne giyersin?",
+          "text": "Yerde kırık cam ve moloz olabilir; ayakkabı ayağını korur.",
+          "tip": "Çıplak ayak yürümek camla yaralanmana yol açabilir.",
+          "success": "Süper! Ayakkabı seni cam ve molozdan korur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ayakkabı (terlik) giyerim",
+              "correct": true,
+              "icon": "item-slippers",
+              "feedback": ""
+            },
+            {
+              "label": "Çıplak ayak çıkarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Binadan çıkarken neyi kullanırsın?",
+          "text": "Deprem sonrası asansör tehlikelidir, takılıp kalabilirsin. Merdiveni kullan.",
+          "tip": "Asansör elektrik kesilince içinde mahsur bırakabilir.",
+          "success": "Doğru! Merdiven asansörden çok daha güvenli.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Merdiveni kullanırım",
+              "correct": true,
+              "icon": "item-run-stairs",
+              "feedback": ""
+            },
+            {
+              "label": "Asansöre binerim",
+              "correct": false,
+              "icon": "item-use-elevator",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Çıkarken itişip koşmak gerekir.",
+          "text": "Panikle koşmak düşmene ve başkalarına çarpmana sebep olur. Sakin ve düzenli çık.",
+          "tip": "Sakin yürümek herkesin güvenle çıkmasını sağlar.",
+          "success": "Aferin! Sakin ve düzenli çıkmak en güvenlisi.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-11",
+      "title": "Tehlike Kontrolü",
+      "subtitle": "Gaz, elektrik ve haber ver",
+      "icon": "item-report-gas",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Tehlikeyi fark et",
+          "prompt": "",
+          "text": "Gaz kokusu fark edersen bir büyüğüne haber ver. Kibrit ya da çakmak yakma. Elektrik düğmelerine dokunma. Tesisatla uğraşmadan, bir büyüğünle birlikte dışarı çık.",
+          "tip": "",
+          "success": "",
+          "icon": "item-report-gas",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Evde gaz kokusu var. Karanlıkta ne yaparsın?",
+          "text": "Gaz varken kibrit veya çakmak alev çıkarır ve patlamaya yol açabilir.",
+          "tip": "Alev veya kıvılcım gazı tutuşturabilir; asla yakma.",
+          "success": "Harika! Gaz varken asla kibrit veya çakmak yakılmaz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Kibrit yakarım",
+              "correct": false,
+              "icon": "item-light-match",
+              "feedback": ""
+            },
+            {
+              "label": "Büyüğüme haber veririm",
+              "correct": true,
+              "icon": "item-report-gas",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Gaz kokusu varken elektrik düğmesine basmak güvenlidir.",
+          "text": "Elektrik düğmesi küçük bir kıvılcım çıkarır; bu kıvılcım gazı patlatabilir.",
+          "tip": "Düğmeye dokunmak kıvılcım yapar, çok tehlikelidir.",
+          "success": "Doğru! Gaz varken düğmeye dokunmak tehlikelidir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Gaz kokusunu alınca ilk önce ne yapmalısın?",
+          "text": "Pencereyi aç, kıvılcım çıkaran hiçbir şeye dokunma ve hemen bir büyüğüne haber ver.",
+          "tip": "En önemlisi bir büyüğüne haber verip birlikte dışarı çıkmak.",
+          "success": "Aferin! Büyüğüne haber verip birlikte güvende olursunuz.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Büyüğüme haber veririm",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Ocağı yakıp bakarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Hiçbir şey yapmam",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-12",
+      "title": "Kısa Mesaj",
+      "subtitle": "Aramak yerine SMS at",
+      "icon": "item-send-message",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Hattı Meşgul Etme",
+          "prompt": "",
+          "text": "Depremden sonra telefon hatları yoğun olabilir. Bir büyüğünün yardımıyla kısa bir mesaj gönderebilirsin. Nerede olduğunu ve durumunu kısaca anlat. Mesajın ulaşması zaman alabilir; art arda aramak yerine aile planınızı izleyin.",
+          "tip": "",
+          "success": "",
+          "icon": "item-send-message",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem oldu, anneni merak ediyorsun. Ne yaparsın?",
+          "text": "SMS az yer kaplar, telefon hatları doluyken bile gidebilir. Arama ise hattı meşgul eder.",
+          "tip": "Aramak hattı meşgul eder. Küçük bir mesaj daha kolay ulaşır.",
+          "success": "Harika! Kısa mesaj hattı boş tutar, ekiplere yer kalır.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Kısa mesaj (SMS) atarım",
+              "correct": true,
+              "icon": "item-send-message",
+              "feedback": ""
+            },
+            {
+              "label": "Durmadan telefonla ararım",
+              "correct": false,
+              "icon": "item-spam-call",
+              "feedback": ""
+            },
+            {
+              "label": "Görüntülü arama yaparım",
+              "correct": false,
+              "icon": "item-video-call",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Mesajın nasıl olmalı?",
+          "text": "Kısa ve net yaz: \"İyiyim\" gibi. Uzun mesajlar yerine kısacık yazmak daha hızlı ve daha az yer tutar.",
+          "tip": "Acil anda uzun yazmak için vakit yok. Kısa ve net olsun.",
+          "success": "Evet. Kısa ve açık bir mesajla nerede olduğunu ve durumunu anlatabilirsin.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Kısa ve net: \"İyiyim\"",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Çok uzun, her şeyi anlatan",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu yanlış mı? Deprem sonrası en doğrusu herkesi arka arkaya aramaktır.",
+          "text": "Yanlış. Herkes ararsa hatlar dolar. Aramak yerine kısa mesaj atmak hattı açık tutar.",
+          "tip": "Çok arama yapmak hattı tıkar. Mesaj daha akıllıca.",
+          "success": "Doğru bildin! Aramak yerine mesaj atmak en doğrusu.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-13",
+      "title": "Buluşma Noktası",
+      "subtitle": "Ailece güvenli yerde buluş",
+      "icon": "item-meet-family",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Önceden Belirle",
+          "prompt": "",
+          "text": "Ailenle buluşacağınız yeri önceden konuşun. Binalardan uzak, güvenli bir açık alan seçin. Sarsıntı bitince bir büyüğünle birlikte planınızdaki yere gidin. Bir eşyanı almak için binaya geri dönme.",
+          "tip": "",
+          "success": "",
+          "icon": "item-meet-family",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem bitti, dışarı çıktın. Aileni nasıl bulursun?",
+          "text": "Önceden konuştuğunuz buluşma noktasına gidersin. Herkes orayı bildiği için kolayca bir araya gelirsiniz.",
+          "tip": "Aklına gelen rastgele yere gitme. Önceden belirlediğiniz yere git.",
+          "success": "Süper! Buluşma noktası ailenin bir araya geldiği güvenli yerdir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Buluşma noktasına giderim",
+              "correct": true,
+              "icon": "item-meet-family",
+              "feedback": ""
+            },
+            {
+              "label": "Eşya almak için içeri girerim",
+              "correct": false,
+              "icon": "item-reenter-building",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Buluşma noktası nasıl bir yer olmalı?",
+          "text": "Binalardan uzak, açık ve güvenli bir alan olmalı. Açık alanda üstüne bir şey düşme tehlikesi azdır.",
+          "tip": "Binaların dibi güvenli değil. Açık alan daha iyi.",
+          "success": "Doğru! Açık ve binalardan uzak yer en güvenlisidir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Binalardan uzak açık alan",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yüksek bir binanın önü",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sallanma durdu. Buluşma noktasında beklerken arkadaşın \"içeri girip oyuncağını alalım\" dedi. Ne yaparsın?",
+          "text": "Binaya geri dönmek tehlikelidir, artçı sarsıntılar olabilir. Buluşma noktasında büyüklerinle bekle.",
+          "tip": "Bina sağlam görünse de tekrar sallanabilir. İçeri girme.",
+          "success": "Aferin! Binaya geri dönmeyip dışarıda beklemek seni korur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Girmem, dışarıda beklerim",
+              "correct": true,
+              "icon": "item-stay-away",
+              "feedback": ""
+            },
+            {
+              "label": "Hemen içeri girerim",
+              "correct": false,
+              "icon": "item-reenter-building",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-14",
+      "title": "Doğru Bilgi",
+      "subtitle": "Resmi kaynağı dinle",
+      "icon": "item-radio",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Söylentiye İnanma",
+          "prompt": "",
+          "text": "Duyduğumuz her haber doğru olmayabilir. Kafanı karıştıran bir şey duyarsan güvendiğin bir büyüğüne sor. Resmî kurumların açıklamalarını birlikte takip edin. Doğru olup olmadığını bilmediğin bir haberi paylaşma.",
+          "tip": "",
+          "success": "",
+          "icon": "item-radio",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem haberlerini nereden öğrenmelisin?",
+          "text": "AFAD ve radyo gibi resmi kaynaklar doğru bilgi verir. Söylentiler yanlış olabilir ve korkuyu artırır.",
+          "tip": "Herkesin söylediği doğru olmayabilir. Resmi kaynağa güven.",
+          "success": "Harika! Resmi kaynaklar (AFAD, radyo) en doğru bilgiyi verir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "AFAD ve radyodan",
+              "correct": true,
+              "icon": "item-radio",
+              "feedback": ""
+            },
+            {
+              "label": "Kulaktan duyma söylentilerden",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu yanlış mı? Doğruluğunu bilmediğin korkutucu bir haberi hemen herkese yaymalısın.",
+          "text": "Yanlış. Doğru olmayan haberler paniği büyütür. Önce resmi kaynaktan doğru mu diye bak, emin değilsen yayma.",
+          "tip": "Yanlış haber korkuyu artırır. Önce doğru mu diye kontrol et.",
+          "success": "Doğru bildin! Emin olmadığın haberi yaymamak en doğrusu.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Bir arkadaşın \"yeni büyük deprem olacak\" diye korkutucu bir şey söyledi. Ne yaparsın?",
+          "text": "Kimse depremin ne zaman olacağını kesin bilemez. Böyle söylentilere inanma, sakin ol ve resmi açıklamaları bekle.",
+          "tip": "Depremin zamanı önceden bilinemez. Söylentiye kapılma.",
+          "success": "Aferin! Söylentiye inanmayıp resmi açıklamayı beklemek doğru.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Resmi açıklamayı beklerim",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Korkup herkese hemen söylerim",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-15",
+      "title": "Enkaz Altında",
+      "subtitle": "Sesini güvenle duyur",
+      "icon": "item-tap-pipe",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Enerjini Koru",
+          "prompt": "",
+          "text": "Sıkışıp kaldığında kendini zorlayarak hareket etmeye çalışma. Ulaşabiliyorsan ağzını ve burnunu bir bezle kapat. Düdüğün varsa çalabilir, ulaşabildiğin bir boruya ya da duvara vurarak sesini duyurabilirsin. Sürekli bağırmak yerine enerjini korumaya çalış.",
+          "tip": "",
+          "success": "",
+          "icon": "item-tap-pipe",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Enkaz altında kaldın. Kurtarma ekibine sesini en iyi nasıl duyurursun?",
+          "text": "Boruya veya duvara vurmak ya da düdük çalmak, az enerjiyle çok ses çıkarır.",
+          "tip": "Sürekli bağırmak enerjini bitirir ve toz yutturur. Vurmayı veya düdüğü dene.",
+          "success": "Harika! Boruya vurmak hem duyulur hem de enerjini korur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Boruya veya duvara vur",
+              "correct": true,
+              "icon": "item-tap-pipe",
+              "feedback": ""
+            },
+            {
+              "label": "Durmadan yüksek sesle bağır",
+              "correct": false,
+              "icon": "item-waste-energy",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Ortalık çok tozlu. Kendini nasıl korursun?",
+          "text": "Toz ciğerlerine kaçabilir. Ağzını ve burnunu bir bezle kapatmak seni korur.",
+          "tip": "Tozu havalandırmak nefes almanı zorlaştırır. Ağzını kapatmayı düşün.",
+          "success": "Aferin! Ağzını kapatıp sakin kalmak nefesini korur.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ağzımı bezle kapatırım",
+              "correct": true,
+              "icon": "item-mask",
+              "feedback": ""
+            },
+            {
+              "label": "Kollarımı sallarım",
+              "correct": false,
+              "icon": "item-raise-dust",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu, yanlış mı? Enkaz altında durmadan bağırmak en iyi yoldur.",
+          "text": "Bağırmak enerjini hızla bitirir ve toz yutturur. Bağırmak son çaredir.",
+          "tip": "Önce düdük veya vurma sesi denenir. Bağırmak en sona kalır.",
+          "success": "Doğru bildin! Bağırmak son çaredir, önce ses çıkar veya düdük çal.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-16",
+      "title": "Temel İlk Yardım",
+      "subtitle": "Yaralıya doğru yardım",
+      "icon": "item-first-aid",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Önce Haber Ver",
+          "prompt": "",
+          "text": "Yaralanan birini gördüğünde önce kendi güvenliğini koru. Bir yetişkine haber ver ve yardım iste. Ağır yaralı birini kaldırmaya ya da sarsmaya çalışma. İlk yardım bilen bir yetişkinin yönergelerini dinle.",
+          "tip": "",
+          "success": "",
+          "icon": "item-first-aid",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yanında ağır yaralı biri var ve kımıldayamıyor. Ne yaparsın?",
+          "text": "Ağır yaralıyı oynatmak yaralarını ağırlaştırabilir. En doğrusu bir büyüğe veya 112'ye haber vermektir.",
+          "tip": "Onu sen kaldırmaya çalışma. Yardım çağırmayı düşün.",
+          "success": "Çok iyi! Yaralıyı oynatmadan büyüklere haber vermek en güvenlisi.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Büyüğe ve 112'ye haber veririm",
+              "correct": true,
+              "icon": "item-report-gas",
+              "feedback": ""
+            },
+            {
+              "label": "Onu kaldırmaya çalışırım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Birinin kolu kanıyor. İlk ne yaparsın?",
+          "text": "Kanayan yere temiz bir bezle bastırmak kanamayı yavaşlatır.",
+          "tip": "Su dökmek yardımcı olmaz. Kanayan yere bastırmayı düşün.",
+          "success": "Aferin! Temiz bezle bastırmak kanamayı durdurmaya yardım eder.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Temiz bezle bastırırım",
+              "correct": true,
+              "icon": "item-first-aid",
+              "feedback": ""
+            },
+            {
+              "label": "Yaranın üzerine su dökerim",
+              "correct": false,
+              "icon": "item-pour-water",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu, yanlış mı? Ağır yaralı birini hemen sarsıp uyandırmaya çalışmak gerekir.",
+          "text": "Ağır yaralıyı sarsmak çok tehlikelidir. Onu oynatmadan hemen yardım çağırmak gerekir.",
+          "tip": "Sarsmak zarar verir. Onu sabit bırakıp büyüklere haber ver.",
+          "success": "Doğru bildin! Yaralıyı sarsmak yerine yardım çağırmak gerekir.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-17",
+      "title": "Başkalarına Yardım",
+      "subtitle": "Sakin ol, yardım et",
+      "icon": "item-meet-family",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Önce Sakin Ol",
+          "prompt": "",
+          "text": "Yardım etmek, her işi tek başına yapmak demek değildir. Yardıma ihtiyacı olan birini fark edersen bir yetişkine haber ver. Ağır eşyaları kaldırmaya ya da tehlikeli bir yere girmeye çalışma. Haber vermen de değerli bir yardımdır.",
+          "tip": "",
+          "success": "",
+          "icon": "item-meet-family",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Deprem bitti ve etrafta yardıma ihtiyacı olan insanlar var. İlk ne yaparsın?",
+          "text": "En önemli adım sakin kalıp bir yetişkine haber vermektir. Büyükler doğru yardımı düzenler.",
+          "tip": "Tek başına her şeyi yapamazsın. Önce bir büyüğe haber ver.",
+          "success": "Harika! Sakin kalıp bir yetişkine haber vermek herkese yardım eder.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Sakin olup büyüğe haber veririm",
+              "correct": true,
+              "icon": "item-meet-family",
+              "feedback": ""
+            },
+            {
+              "label": "Panikle koşarak kaçarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yaşlı komşun kapısını açamıyor. Sen ne yaparsın?",
+          "text": "Komşuları kontrol etmek güzeldir ama ağır işleri büyüklere bırak. Bir yetişkin çağırırsın.",
+          "tip": "Tek başına ağır kapıyı zorlama. Bir büyük çağırmak daha güvenli.",
+          "success": "Çok iyi! Komşunu unutmadın ve doğru kişiyi, bir büyüğü çağırdın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Bir büyük çağırırım",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Tek başıma kapıyı tekmelerim",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu, yanlış mı? Sen küçük olsan bile her ağır yükü tek başına kaldırıp herkesi kurtarmalısın.",
+          "text": "Sen gücünün yettiğince yardım edersin. Ağır ve tehlikeli işleri büyükler ve kurtarma ekipleri yapar.",
+          "tip": "Kendi güvenliğin önce gelir. Gücünün yetmediği işi büyüklere bırak.",
+          "success": "Doğru bildin! Gücün yettiğince yardım et, ağır işleri büyüklere bırak.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-18",
+      "title": "Sakin Kal",
+      "subtitle": "Panik yok, derin nefes",
+      "icon": "item-protect-head",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Korksan da Yapabilirsin",
+          "prompt": "",
+          "text": "Korkmak normaldir. Korksan da öğrendiğin hareketleri yapabilirsin. Sarsıntı başladığında hemen çök, kapan, tutun. Korunurken yavaşça nefes almaya çalış. Sonrasında nasıl hissettiğini güvendiğin bir büyüğünle paylaşabilirsin.",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntıda korunma hareketlerini yaparken korktun. Ne yapabilirsin?",
+          "text": "Korkmak normaldir. Korunmaya devam ederken yavaşça nefes almaya çalışabilirsin.",
+          "tip": "Korunmaya devam et. Yavaşça nefes almaya çalışabilirsin.",
+          "success": "Evet. Korksan da korunmaya devam edebilirsin.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Korunmaya devam edip yavaşça nefes alırım",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Çığlık atıp koşarım",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntı başlayınca en güvenlisi ne?",
+          "text": "Sakin kalıp Çök-Kapan-Tutun adımlarını uygulamak en doğru seçim.",
+          "tip": "Panikle koşmak düşüp yaralanmana neden olabilir.",
+          "success": "Aferin! Öğrendiğin adımları uyguladın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Çök-Kapan-Tutun yaparım",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Panikle dışarı koşarım",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            },
+            {
+              "label": "Olduğum yerde dikilirim",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu Yanlış mı? Panik yapmak depremde sana yardım eder.",
+          "text": "Panik düşünmeyi zorlaştırır. Sakin kalmak doğru adımları atmanı sağlar.",
+          "tip": "Panik değil, sakinlik seni korur.",
+          "success": "Doğru! Sakin kalmak en büyük yardımcın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-19",
+      "title": "Tehlikelerden Uzak",
+      "subtitle": "Cam, moloz, tele dikkat",
+      "icon": "item-touch-wire",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Tehlikelere Yaklaşma",
+          "prompt": "",
+          "text": "Dışarıda hasarlı binalardan, kırık camlardan ve molozlardan uzak dur. Yerde bir elektrik teli görürsen yaklaşma ve dokunma. Bir büyüğüne haber ver. Güvenli yolu birlikte seçin.",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yerde kopmuş bir elektrik teli gördün. Ne yaparsın?",
+          "text": "Kopmuş tel hâlâ elektrik taşıyor olabilir. Asla dokunma, uzak dur.",
+          "tip": "Tele dokunmak çok tehlikeli. Hemen uzaklaş.",
+          "success": "Çok iyi! Telden uzak durdun.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Dokunmadan uzaklaşırım",
+              "correct": true,
+              "icon": "item-stay-away",
+              "feedback": ""
+            },
+            {
+              "label": "Eğilip tele dokunurum",
+              "correct": false,
+              "icon": "item-touch-wire",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Çatlamış, hasarlı bir bina gördün. Ne yapmalısın?",
+          "text": "Hasarlı binalar tekrar yıkılabilir. İçine girmeden uzak durmak gerekir.",
+          "tip": "Hasarlı binaya girmek çok riskli, uzak dur.",
+          "success": "Aferin! Hasarlı binaya girmedin.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "İçine girip eşyalarıma bakarım",
+              "correct": false,
+              "icon": "item-reenter-building",
+              "feedback": ""
+            },
+            {
+              "label": "Uzak durur, içine girmem",
+              "correct": true,
+              "icon": "item-stay-away",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yerde kırık camlar ve moloz var. Nasıl davranırsın?",
+          "text": "Kırık cam ve moloz keser ve yaralar. Dikkatle bak ve uzaktan dolaş.",
+          "tip": "Kırık cama basmak ayağını keser. Dikkatli ol.",
+          "success": "Doğru! Dikkatli davrandın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Dikkatlice uzaktan dolaşırım",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Üstüne basarak geçerim",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-20",
+      "title": "Tatbikat & Alışkanlık",
+      "subtitle": "Tekrar et, hazır ol",
+      "icon": "item-drop-cover-hold",
+      "adult": false,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Tekrar Et, Alışkanlık Olsun",
+          "prompt": "",
+          "text": "Öğrendiklerimizi küçük provalarla hatırlayabiliriz. Ailenle çök, kapan, tutun hareketlerini çalış. Buluşma yerinizi ve aile planınızı konuşun. Her provada biraz daha alışırsın. Öğrenmek için zamanın var.",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": []
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Tatbikatı ne sıklıkla yapmak iyidir?",
+          "text": "Tatbikatı tekrar tekrar yapmak adımları alışkanlık hâline getirir.",
+          "tip": "Bir kere değil, sık sık tekrar etmek gerekir.",
+          "success": "Harika! Tekrar etmek seni hazırlıklı yapar.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Belli aralıklarla tekrar tekrar",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Hayatta sadece bir kez",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Tatbikat sireninde doğru hareket hangisi?",
+          "text": "Tatbikatta gerçekmiş gibi Çök-Kapan-Tutun yapmak en doğrusu.",
+          "tip": "Tatbikatı ciddiye al ve doğru adımları uygula.",
+          "success": "Aferin! Tatbikatı doğru yaptın.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Çöker, kapanır, tutunurum",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Önemsemeden oturup beklerim",
+              "correct": false,
+              "icon": "item-sit-road",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Doğru mu Yanlış mı? Tatbikat yapmak deprem anında doğru davranmamıza yardım eder.",
+          "text": "Tatbikat tekrar oldukça doğru adımları düşünmeden yaparız. Bu çok değerlidir.",
+          "tip": "Tatbikat prova etmektir ve gerçekten işe yarar.",
+          "success": "Doğru! Tatbikat seni hazırlıklı yapar.",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Doğru",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Yanlış",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-0",
+      "title": "Riskleri Önceden Azalt",
+      "subtitle": "Hazırlık",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Riskleri Önceden Azalt",
+          "text": "Deprem güvenliği sarsıntı anında değil, düzenli hazırlıkla başlar.\n\n• Yaşam ve çalışma alanında devrilebilecek ağır eşyaları belirle.\n\n• Dolap, raf, kombi, televizyon ve büyük beyaz eşyaları sabitle.\n\n• Yatak, koltuk ve çalışma masasını cam ve ağır eşya hattından uzaklaştır.\n\n• Binanın tahliye yolu, toplanma alanı ve kapatma vanalarını öğren.\n\nBugün: Evde veya işte 3 sabitleme ihtiyacını not al.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-1",
+      "title": "Hazırlık Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Aşağıdakilerden hangisi deprem öncesi risk azaltmanın en doğru örneğidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Ağır dolapları duvara sabitlemek",
+              "correct": true,
+              "feedback": "Doğru. Devrilecek eşyaları sabitlemek yaralanma riskini azaltır."
+            },
+            {
+              "label": "Çantayı sadece deprem olduktan sonra hazırlamak",
+              "correct": false,
+              "feedback": "Çanta önceden hazır ve erişilebilir olmalıdır."
+            },
+            {
+              "label": "Toplanma alanını olaydan sonra aramak",
+              "correct": false,
+              "feedback": "Toplanma alanı aile planında önceden belirlenmelidir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-2",
+      "title": "Aile ve İletişim Planı",
+      "subtitle": "Hazırlık",
+      "icon": "item-send-message",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Aile ve İletişim Planı",
+          "text": "Aynı anda herkese ulaşmak zor olabilir; plan kısa ve net olmalıdır.\n\n• Ev dışından bir irtibat kişisi seç ve herkesin telefonuna kaydet.\n\n• Ev, iş ve okul için ayrı buluşma noktası belirle.\n\n• Telefon yoğunluğunda kısa mesajın daha etkili olabileceğini planla.\n\n• Çocuk, yaşlı veya bakım ihtiyacı olan kişiler için sorumluluk paylaş.\n\nBugün: Aile grubuna toplanma alanı ve irtibat kişisini yaz.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-3",
+      "title": "İletişim Planı Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Telefon hatları yoğunken aileye ulaşmak için en uygun ilk yöntem hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Kısa ve net mesaj göndermek",
+              "correct": true,
+              "feedback": "Doğru. Kısa mesaj, yoğun hatlarda sesli aramaya göre daha kolay ulaşabilir."
+            },
+            {
+              "label": "Herkesi peş peşe aramak",
+              "correct": false,
+              "feedback": "Sürekli arama hatları meşgul eder ve iletişimi zorlaştırabilir."
+            },
+            {
+              "label": "Toplanma yerini olaydan sonra seçmek",
+              "correct": false,
+              "feedback": "Toplanma yeri önceden belirlenmiş olmalıdır."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-4",
+      "title": "Afet Çantası ve Belgeler",
+      "subtitle": "Hazırlık",
+      "icon": "item-first-aid",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Afet Çantası ve Belgeler",
+          "text": "İlk 72 saat için çanta sade, erişilebilir ve güncel olmalıdır.\n\n• Su, bozulmayan gıda, el feneri, radyo, düdük, pil ve powerbank hazırla.\n\n• Düzenli kullanılan ilaçları ve temel ilk yardım malzemesini ekle.\n\n• Kimlik, sigorta, tapu ve önemli belgelerin kopyasını su geçirmez dosyada tut.\n\n• Son kullanma tarihlerini ve pilleri belirli aralıklarla kontrol et.\n\nBugün: Çantadaki eksikleri 5 dakikalık bir listeye dök.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-5",
+      "title": "İlk 72 Saat Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Afet çantası için en doğru yaklaşım hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Herkes için aynı çanta yeterlidir",
+              "correct": false,
+              "feedback": "Özel ilaç, bebek, yaşlı, engelli ve evcil hayvan ihtiyaçları ayrı düşünülmelidir."
+            },
+            {
+              "label": "Çanta görünür ve erişilebilir yerde olmalıdır",
+              "correct": true,
+              "feedback": "Doğru. Çanta, hızlı tahliyede kolay alınabilecek yerde durmalıdır."
+            },
+            {
+              "label": "Belgeler çantada gereksiz yer kaplar",
+              "correct": false,
+              "feedback": "Önemli belge kopyaları afet sonrası işlemleri kolaylaştırabilir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-6",
+      "title": "İç Mekanda Doğru Refleks",
+      "subtitle": "Sarsıntı Anı",
+      "icon": "item-drop-cover-hold",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "İç Mekanda Doğru Refleks",
+          "text": "Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır.\n\n• Güvenli bir noktada Çök-Kapan-Tutun davranışını uygula.\n\n• Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur.\n\n• Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun.\n\n• Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun.\n\nBugün: Evde iki güvenli korunma noktası belirle.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-7",
+      "title": "Dış Mekan ve Araçta",
+      "subtitle": "Sarsıntı Anı",
+      "icon": "item-stay-away",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Dış Mekan ve Araçta",
+          "text": "Açık alanda risk çoğunlukla bina cephesi, cam, tabela ve enerji hatlarıdır.\n\n• Dışarıdaysan bina, balkon, duvar, direk ve enerji hatlarından uzaklaş.\n\n• Araçtaysan köprü, üst geçit, tünel ve enerji hattı yakınında durma.\n\n• Araç içinde emniyetli bir noktada bekle; panikle trafiğe karışma.\n\n• Kıyıdaysan resmi uyarıları takip et ve gerekiyorsa yüksek alana yönel.\n\nBugün: İş-ev güzergahındaki açık güvenli alanları düşün.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-8",
+      "title": "Dış Mekan Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Sarsıntı sırasında dışarıdaysan hangi noktadan uzak durmalısın?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Bina cepheleri ve enerji hatları",
+              "correct": true,
+              "feedback": "Doğru. Düşen parçalar, camlar ve enerji hatları ciddi risk oluşturur."
+            },
+            {
+              "label": "Açık ve boş alan",
+              "correct": false,
+              "feedback": "Açık alan genellikle daha güvenli bir bekleme noktasıdır."
+            },
+            {
+              "label": "Toplanma alanı",
+              "correct": false,
+              "feedback": "Toplanma alanı sarsıntı sonrası güvenli buluşma için kullanılır."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-9",
+      "title": "Kalabalık Alanlarda",
+      "subtitle": "Sarsıntı Anı",
+      "icon": "item-run-stairs",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Kalabalık Alanlarda",
+          "text": "Kalabalıkta ilk risk panik akışı ve kontrolsüz çıkışlara yönelmektir.\n\n• Sinema, AVM veya iş yerinde çıkışlara koşmadan bulunduğun noktada korun.\n\n• Raf, vitrin, cam cephe ve asılı tabelalardan uzaklaş.\n\n• Güvenlik anonslarını ve yetkili yönlendirmelerini takip et.\n\n• Sarsıntı bitince sakin ve kontrollü tahliye sırasına uy.\n\nBugün: Sık gittiğin bir binada acil çıkışları gözlemle.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-10",
+      "title": "Sarsıntı Anı Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Sarsıntı başladığında en güvenli davranış hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Merdivene koşmak",
+              "correct": false,
+              "feedback": "Merdivenler sarsıntı sırasında risklidir; koşmak yaralanma riskini artırır."
+            },
+            {
+              "label": "Çök-Kapan-Tutun uygulamak",
+              "correct": true,
+              "feedback": "Doğru. Baş-boyun koruması ve sabitlenme ana hedeftir."
+            },
+            {
+              "label": "Pencere yanında beklemek",
+              "correct": false,
+              "feedback": "Cam kırıkları ve dış cephe parçaları ciddi risk oluşturur."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-11",
+      "title": "İlk Kontrol ve Tahliye",
+      "subtitle": "Sonrası",
+      "icon": "item-protect-head",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "İlk Kontrol ve Tahliye",
+          "text": "Sarsıntı biter bitmez hızlı ama kontrollü değerlendirme yapılmalıdır.\n\n• Kendini ve çevrendekileri yaralanma açısından kontrol et.\n\n• Gaz kokusu, yangın, elektrik kaçağı veya yapısal hasar belirtisi varsa uzaklaş.\n\n• Asansör kullanma; merdiveni hasar ve kalabalık açısından kontrol ederek kullan.\n\n• Hasarlı binaya eşya almak için geri dönme.\n\nBugün: Apartman veya iş yerindeki tahliye rotasını tekrar gözden geçir.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-12",
+      "title": "Tahliye Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Sarsıntı bittikten sonra bina hasarlı görünüyorsa en doğru davranış hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Eşya almak için hızlıca geri dönmek",
+              "correct": false,
+              "feedback": "Hasarlı binaya geri girmek artçı sarsıntı ve çökme riski nedeniyle tehlikelidir."
+            },
+            {
+              "label": "Binadan uzaklaşıp yetkili değerlendirmesini beklemek",
+              "correct": true,
+              "feedback": "Doğru. Hasar şüphesinde güvenli mesafe ve yetkili kontrolü gerekir."
+            },
+            {
+              "label": "Asansörle aşağı inmek",
+              "correct": false,
+              "feedback": "Deprem sonrası asansör kullanmak güvenli değildir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-13",
+      "title": "Gaz, Elektrik ve Yangın Riski",
+      "subtitle": "Sonrası",
+      "icon": "item-report-gas",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Gaz, Elektrik ve Yangın Riski",
+          "text": "İkincil tehlikeler depremden sonra can kaybı riskini artırabilir.\n\n• Gaz kokusu varsa kibrit, çakmak ve elektrik düğmesi kullanma.\n\n• Güvenliyse gaz, su ve elektrik vanalarını kapat; değilse uzaklaş.\n\n• Küçük yangına müdahale eğitimliysen ve kaçış yolun açıksa yaklaş.\n\n• Tehlikeyi yetkililere bildir ve resmi yönlendirme bekle.\n\nBugün: Gaz ve elektrik kapatma noktalarının yerini öğren.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-14",
+      "title": "Deprem Sonrası Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Gaz kokusu alındığında hangisi yapılmamalıdır?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Çakmak yakıp kontrol etmek",
+              "correct": true,
+              "feedback": "Doğru. Gaz kokusu varsa ateş ve elektrik kıvılcımı riski büyütür."
+            },
+            {
+              "label": "Güvenliyse vanayı kapatmak",
+              "correct": false,
+              "feedback": "Bu uygun bir davranıştır; sadece güvenliyse yapılmalıdır."
+            },
+            {
+              "label": "Tehlikeyi yetkililere bildirmek",
+              "correct": false,
+              "feedback": "Bildirim yapmak doğru davranıştır."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-15",
+      "title": "Bilgi ve Haberleşme",
+      "subtitle": "Sonrası",
+      "icon": "item-radio",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Bilgi ve Haberleşme",
+          "text": "Afet sonrası yanlış bilgi ve yoğun telefon trafiği müdahaleyi zorlaştırır.\n\n• Resmi açıklamaları ve yerel yetkililerin duyurularını takip et.\n\n• Telefonu kısa ve gerekli iletişim için kullan; mümkünse kısa mesaj gönder.\n\n• Sosyal medyada teyitsiz konum, yardım ve hasar bilgisi paylaşma.\n\n• Radyo ve powerbank gibi düşük enerji çözümlerini hazır tut.\n\nBugün: Telefonuna resmi uyarı ve belediye/AFAD kanallarını ekle.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-16",
+      "title": "Bilgi Güvenliği Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Afet sonrası teyitsiz bir yardım çağrısı gördüğünde ne yapmalısın?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Hemen herkese iletmek",
+              "correct": false,
+              "feedback": "Teyitsiz bilgi paniği ve kaynak israfını artırabilir."
+            },
+            {
+              "label": "Resmi kaynak veya güvenilir kanal ile doğrulamak",
+              "correct": true,
+              "feedback": "Doğru. Paylaşmadan önce bilginin kaynağı doğrulanmalıdır."
+            },
+            {
+              "label": "Telefon hatlarını sürekli aramayla meşgul etmek",
+              "correct": false,
+              "feedback": "Hatları gereksiz meşgul etmek acil iletişimi zorlaştırır."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-17",
+      "title": "Su, Gıda ve İlaç Yönetimi",
+      "subtitle": "İlk 72 Saat",
+      "icon": "item-water",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Su, Gıda ve İlaç Yönetimi",
+          "text": "İlk günlerde amaç kaynakları kontrollü kullanmak ve temel ihtiyaçları sürdürebilmektir.\n\n• Su ve gıdayı kişi sayısına göre planla; özel diyet ve bebek ihtiyaçlarını unutma.\n\n• Düzenli kullanılan ilaçların listesini, doz bilgisini ve yedeklerini hazır tut.\n\n• Konserve açacağı, hijyen malzemesi ve çöp poşeti gibi küçük ihtiyaçları ekle.\n\n• Çantanın herkes tarafından bilinen ve çıkışa yakın bir yerde olmasını sağla.\n\nBugün: Evdeki kişi sayısına göre 72 saatlik ihtiyaçları hesapla.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-18",
+      "title": "İlk Yardım ve Destek",
+      "subtitle": "İlk 72 Saat",
+      "icon": "item-first-aid",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "İlk Yardım ve Destek",
+          "text": "İlk yardımda temel yaklaşım güvenliği sağlamak, kanamayı kontrol etmek ve yardım istemektir.\n\n• Önce ortam güvenliğini değerlendir; kendini riske atma.\n\n• Ciddi kanamada temiz bezle doğrudan bası uygula ve yardım çağır.\n\n• Bilinç, solunum ve ciddi yaralanma belirtilerini takip et.\n\n• Eğitimin yoksa ileri müdahaleye kalkışma; acil ekipleri bekle.\n\nBugün: Temel ilk yardım eğitimi alabileceğin yerleri araştır.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-19",
+      "title": "İlk Yardım Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Ciddi kanama gördüğünde temel ve güvenli yaklaşım hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Temiz bezle doğrudan bası uygulamak",
+              "correct": true,
+              "feedback": "Doğru. Ciddi kanamada doğrudan bası temel ilk yardım yaklaşımıdır."
+            },
+            {
+              "label": "Yaralıyı gereksiz yere taşımak",
+              "correct": false,
+              "feedback": "Gereksiz taşıma yaralanmayı artırabilir; önce ortam güvenliği değerlendirilmelidir."
+            },
+            {
+              "label": "Eğitimin yoksa ileri müdahale yapmak",
+              "correct": false,
+              "feedback": "İleri müdahale eğitim gerektirir; acil ekip desteği beklenmelidir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-20",
+      "title": "Özel İhtiyaçlar",
+      "subtitle": "İlk 72 Saat",
+      "icon": "item-blanket",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Özel İhtiyaçlar",
+          "text": "Afet planı, evdeki herkesin gerçek ihtiyaçlarını kapsadığında çalışır.\n\n• Yaşlı, engelli, hamile, bebek veya kronik hastalığı olan kişiler için ayrı liste hazırla.\n\n• Gözlük, işitme cihazı pili, medikal cihaz, mama ve hijyen ürünlerini planla.\n\n• Evcil hayvan için mama, su, taşıma çantası ve kimlik bilgisini hazır tut.\n\n• Komşu destek ağını önceden kur; yalnız yaşayanları plana dahil et.\n\nBugün: Destek gerektiren bir kişi için özel ihtiyaç listesi çıkar.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-21",
+      "title": "Özel İhtiyaç Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Özel ihtiyaç planı hazırlanırken hangisi mutlaka düşünülmelidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Herkesin aynı malzemeye ihtiyaç duyacağı",
+              "correct": false,
+              "feedback": "İlaç, cihaz, bakım ve beslenme ihtiyaçları kişiye göre değişir."
+            },
+            {
+              "label": "İlaç, medikal cihaz ve bakım ihtiyaçları",
+              "correct": true,
+              "feedback": "Doğru. Plan kişisel sağlık ve bakım ihtiyaçlarını kapsamalıdır."
+            },
+            {
+              "label": "Sadece yetişkinlerin ihtiyaçları",
+              "correct": false,
+              "feedback": "Bebek, yaşlı, engelli ve evcil hayvan ihtiyaçları da plana dahil edilmelidir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-22",
+      "title": "Apartman ve İş Yeri Planı",
+      "subtitle": "Planlama",
+      "icon": "item-map",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Apartman ve İş Yeri Planı",
+          "text": "Yetişkin sorumluluğu sadece bireysel değil; ortak yaşam alanlarını da kapsar.\n\n• Apartman veya iş yerinde tahliye, toplanma ve görev paylaşımı konuşulmalı.\n\n• Yangın söndürücü, ilk yardım dolabı ve acil aydınlatma gibi ekipmanlar kontrol edilmeli.\n\n• Kat sorumlusu, engelli destek kişisi ve dış iletişim sorumlusu belirlenmeli.\n\n• Hasar şüphesinde binaya dönüş kararını yetkili değerlendirmesine bırak.\n\nBugün: Yönetici veya ekip lideriyle afet planı gündemi aç.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-23",
+      "title": "Ortak Alan Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Apartman veya iş yeri afet planında hangisi önceden netleşmelidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Görev paylaşımı ve toplanma düzeni",
+              "correct": true,
+              "feedback": "Doğru. Rol paylaşımı ve toplanma düzeni afet öncesinde belirlenmelidir."
+            },
+            {
+              "label": "Hasarlı binaya kimin önce gireceği",
+              "correct": false,
+              "feedback": "Hasarlı binaya dönüş yetkili değerlendirmesi olmadan yapılmamalıdır."
+            },
+            {
+              "label": "Tahliye sırasında herkesin ayrı hareket etmesi",
+              "correct": false,
+              "feedback": "Kontrollü ve ortak plana uygun tahliye daha güvenlidir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-24",
+      "title": "Tatbikat ve Alışkanlık",
+      "subtitle": "Planlama",
+      "icon": "item-whistle",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Tatbikat ve Alışkanlık",
+          "text": "Bilgi ancak düzenli prova ile refleks haline gelir.\n\n• Evde ve işte yılda en az birkaç kez kısa Çök-Kapan-Tutun provası yap.\n\n• Tahliye rotasını, toplanma alanını ve iletişim planını birlikte test et.\n\n• Tatbikat sonrası aksayan noktaları not al ve planı güncelle.\n\n• Çanta, belge, ilaç ve pil kontrollerini takvime bağla.\n\nBugün: Telefon takvimine 6 ayda bir çanta kontrolü ekle.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-25",
+      "title": "Tatbikat Kontrolü",
+      "subtitle": "Mini Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Tatbikat sonrası yapılması gereken en faydalı adım hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Aksayan noktaları not edip planı güncellemek",
+              "correct": true,
+              "feedback": "Doğru. Tatbikatın amacı eksikleri görüp planı iyileştirmektir."
+            },
+            {
+              "label": "Planı hiç değiştirmeden bırakmak",
+              "correct": false,
+              "feedback": "Aksayan noktalar güncellenmezse aynı sorun tekrar eder."
+            },
+            {
+              "label": "Çanta kontrolünü takvime bağlamamak",
+              "correct": false,
+              "feedback": "Periyodik kontrol çantanın güncel kalmasını sağlar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-26",
+      "title": "Kısa Tekrar",
+      "subtitle": "Özet",
+      "icon": "item-radio",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "info",
+          "title": "Kısa Tekrar",
+          "text": "Son testten önce ana kararları zihinde netleştir.\n\n• Deprem öncesi risk azaltma, iletişim planı ve afet çantası tamamlanmalı.\n\n• Sarsıntı anında korunma refleksi, koşmadan ve camlardan uzak uygulanmalı.\n\n• Sarsıntı sonrası hasarlı bina, gaz kokusu ve yanlış bilgi riskleri yönetilmeli.\n\n• Tatbikat ve periyodik kontrol, bilgiyi sürdürülebilir davranışa çevirir.\n\nSon adım: Genel anlama testini doğru yanıtlayarak eğitimi tamamla.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "adult-27",
+      "title": "Anlama Kontrolü",
+      "subtitle": "Son Test",
+      "icon": "item-emergency-bag",
+      "adult": true,
+      "exercises": [
+        {
+          "kind": "question",
+          "prompt": "Deprem eğitiminin sürdürülebilir olması için en doğru yöntem hangisidir?",
+          "text": "",
+          "choices": [
+            {
+              "label": "Bir kez okuyup bırakmak",
+              "correct": false,
+              "feedback": "Bilgi zamanla unutulur; düzenli tekrar ve prova gerekir."
+            },
+            {
+              "label": "Planı ve çantayı düzenli kontrol etmek",
+              "correct": true,
+              "feedback": "Doğru. Plan, tatbikat ve periyodik kontrol birlikte çalışır."
+            },
+            {
+              "label": "Sadece depremden sonra görev paylaşmak",
+              "correct": false,
+              "feedback": "Görev paylaşımı afet öncesinde netleşmiş olmalıdır."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "art": [
+    {
+      "key": "ui-button-blue",
+      "resource": "LearningApp/Art/ui-button-blue"
+    },
+    {
+      "key": "ui-button-green",
+      "resource": "LearningApp/Art/ui-button-green"
+    },
+    {
+      "key": "ui-button-orange",
+      "resource": "LearningApp/Art/ui-button-orange"
+    },
+    {
+      "key": "ui-button-red",
+      "resource": "LearningApp/Art/ui-button-red"
+    },
+    {
+      "key": "ui-menu-logo",
+      "resource": "LearningApp/Art/ui-menu-logo"
+    },
+    {
+      "key": "ui-menu-bubble",
+      "resource": "LearningApp/Art/ui-menu-bubble"
+    },
+    {
+      "key": "ui-card-blue",
+      "resource": "LearningApp/Art/ui-card-blue"
+    },
+    {
+      "key": "ui-card-green",
+      "resource": "LearningApp/Art/ui-card-green"
+    },
+    {
+      "key": "ui-card-orange",
+      "resource": "LearningApp/Art/ui-card-orange"
+    },
+    {
+      "key": "ui-card-red",
+      "resource": "LearningApp/Art/ui-card-red"
+    },
+    {
+      "key": "ui-card-gray",
+      "resource": "LearningApp/Art/ui-card-gray"
+    },
+    {
+      "key": "icon-settings",
+      "resource": "LearningApp/Art/icon-settings"
+    },
+    {
+      "key": "icon-star",
+      "resource": "LearningApp/Art/icon-star"
+    },
+    {
+      "key": "icon-friends",
+      "resource": "LearningApp/Art/icon-friends"
+    },
+    {
+      "key": "icon-menu-play",
+      "resource": "LearningApp/Art/icon-menu-play"
+    },
+    {
+      "key": "icon-menu-education",
+      "resource": "LearningApp/Art/icon-menu-education"
+    },
+    {
+      "key": "icon-menu-guide",
+      "resource": "LearningApp/Art/icon-menu-guide"
+    },
+    {
+      "key": "icon-menu-ranking",
+      "resource": "LearningApp/Art/icon-menu-ranking"
+    },
+    {
+      "key": "icon-menu-contents",
+      "resource": "LearningApp/Art/icon-menu-contents"
+    },
+    {
+      "key": "icon-menu-settings",
+      "resource": "LearningApp/Art/icon-menu-settings"
+    },
+    {
+      "key": "item-emergency-bag",
+      "resource": "LearningApp/Art/item-emergency-bag"
+    },
+    {
+      "key": "item-emergency-bag-open",
+      "resource": "LearningApp/Art/item-emergency-bag-open"
+    },
+    {
+      "key": "item-drop-cover-hold",
+      "resource": "LearningApp/Art/item-drop-cover-hold"
+    },
+    {
+      "key": "item-run-window",
+      "resource": "LearningApp/Art/item-run-window"
+    },
+    {
+      "key": "item-use-elevator",
+      "resource": "LearningApp/Art/item-use-elevator"
+    },
+    {
+      "key": "item-protect-head",
+      "resource": "LearningApp/Art/item-protect-head"
+    },
+    {
+      "key": "item-hold-cabinet",
+      "resource": "LearningApp/Art/item-hold-cabinet"
+    },
+    {
+      "key": "item-tap-pipe",
+      "resource": "LearningApp/Art/item-tap-pipe"
+    },
+    {
+      "key": "item-waste-energy",
+      "resource": "LearningApp/Art/item-waste-energy"
+    },
+    {
+      "key": "item-raise-dust",
+      "resource": "LearningApp/Art/item-raise-dust"
+    },
+    {
+      "key": "item-stay-away",
+      "resource": "LearningApp/Art/item-stay-away"
+    },
+    {
+      "key": "item-touch-wire",
+      "resource": "LearningApp/Art/item-touch-wire"
+    },
+    {
+      "key": "item-pour-water",
+      "resource": "LearningApp/Art/item-pour-water"
+    },
+    {
+      "key": "item-send-message",
+      "resource": "LearningApp/Art/item-send-message"
+    },
+    {
+      "key": "item-video-call",
+      "resource": "LearningApp/Art/item-video-call"
+    },
+    {
+      "key": "item-spam-call",
+      "resource": "LearningApp/Art/item-spam-call"
+    },
+    {
+      "key": "item-stop-and-exit",
+      "resource": "LearningApp/Art/item-stop-and-exit"
+    },
+    {
+      "key": "item-keep-riding",
+      "resource": "LearningApp/Art/item-keep-riding"
+    },
+    {
+      "key": "item-jump-inside",
+      "resource": "LearningApp/Art/item-jump-inside"
+    },
+    {
+      "key": "item-report-gas",
+      "resource": "LearningApp/Art/item-report-gas"
+    },
+    {
+      "key": "item-light-match",
+      "resource": "LearningApp/Art/item-light-match"
+    },
+    {
+      "key": "item-press-switch",
+      "resource": "LearningApp/Art/item-press-switch"
+    },
+    {
+      "key": "item-meet-family",
+      "resource": "LearningApp/Art/item-meet-family"
+    },
+    {
+      "key": "item-reenter-building",
+      "resource": "LearningApp/Art/item-reenter-building"
+    },
+    {
+      "key": "item-sit-road",
+      "resource": "LearningApp/Art/item-sit-road"
+    },
+    {
+      "key": "item-crouch-near-desk",
+      "resource": "LearningApp/Art/item-crouch-near-desk"
+    },
+    {
+      "key": "item-run-stairs",
+      "resource": "LearningApp/Art/item-run-stairs"
+    },
+    {
+      "key": "item-stand-window",
+      "resource": "LearningApp/Art/item-stand-window"
+    },
+    {
+      "key": "item-water",
+      "resource": "LearningApp/Art/item-water"
+    },
+    {
+      "key": "item-battery",
+      "resource": "LearningApp/Art/item-battery"
+    },
+    {
+      "key": "item-map",
+      "resource": "LearningApp/Art/item-map"
+    },
+    {
+      "key": "item-canfood",
+      "resource": "LearningApp/Art/item-canfood"
+    },
+    {
+      "key": "item-first-aid",
+      "resource": "LearningApp/Art/item-first-aid"
+    },
+    {
+      "key": "item-flashlight",
+      "resource": "LearningApp/Art/item-flashlight"
+    },
+    {
+      "key": "item-radio",
+      "resource": "LearningApp/Art/item-radio"
+    },
+    {
+      "key": "item-blanket",
+      "resource": "LearningApp/Art/item-blanket"
+    },
+    {
+      "key": "item-mask",
+      "resource": "LearningApp/Art/item-mask"
+    },
+    {
+      "key": "item-gloves",
+      "resource": "LearningApp/Art/item-gloves"
+    },
+    {
+      "key": "item-snack",
+      "resource": "LearningApp/Art/item-snack"
+    },
+    {
+      "key": "item-book",
+      "resource": "LearningApp/Art/item-book"
+    },
+    {
+      "key": "item-cup",
+      "resource": "LearningApp/Art/item-cup"
+    },
+    {
+      "key": "item-whistle",
+      "resource": "LearningApp/Art/item-whistle"
+    },
+    {
+      "key": "item-uniform",
+      "resource": "LearningApp/Art/item-uniform"
+    },
+    {
+      "key": "item-bottlecap",
+      "resource": "LearningApp/Art/item-bottlecap"
+    },
+    {
+      "key": "item-toy",
+      "resource": "LearningApp/Art/item-toy"
+    },
+    {
+      "key": "item-slippers",
+      "resource": "LearningApp/Art/item-slippers"
+    },
+    {
+      "key": "item-perfume",
+      "resource": "LearningApp/Art/item-perfume"
+    },
+    {
+      "key": "item-tablet",
+      "resource": "LearningApp/Art/item-tablet"
+    },
+    {
+      "key": "item-vase",
+      "resource": "LearningApp/Art/item-vase"
+    },
+    {
+      "key": "item-tie",
+      "resource": "LearningApp/Art/item-tie"
+    },
+    {
+      "key": "item-mirror",
+      "resource": "LearningApp/Art/item-mirror"
+    },
+    {
+      "key": "item-pillow",
+      "resource": "LearningApp/Art/item-pillow"
+    },
+    {
+      "key": "item-makeup",
+      "resource": "LearningApp/Art/item-makeup"
+    }
+  ],
+  "badges": [
+    {
+      "id": "first-step",
+      "title": "İlk Adım",
+      "description": "İlk bölümü tamamla."
+    },
+    {
+      "id": "bag-ready",
+      "title": "Çanta Hazır",
+      "description": "Çantayı Hazırla bölümünü bitir."
+    },
+    {
+      "id": "quiz-whiz",
+      "title": "Bilgili Kahraman",
+      "description": "Doğru Davranışı Seç bölümünü bitir."
+    },
+    {
+      "id": "first-perfect",
+      "title": "Kusursuz",
+      "description": "Bir bölümden 3 yıldız al."
+    },
+    {
+      "id": "star-collector",
+      "title": "Yıldız Koleksiyoncusu",
+      "description": "Toplam 10 yıldız topla."
+    },
+    {
+      "id": "all-levels",
+      "title": "Maceracı",
+      "description": "Tüm bölümleri tamamla."
+    },
+    {
+      "id": "three-star-master",
+      "title": "Yıldız Ustası",
+      "description": "Tüm bölümlerden 3 yıldız al."
+    },
+    {
+      "id": "mech-sort",
+      "title": "Düzen Ustası",
+      "description": "Eşyaları Ayır bölümünü bitir."
+    },
+    {
+      "id": "mech-match",
+      "title": "Eş Avcısı",
+      "description": "Eşleri Bul bölümünü bitir."
+    },
+    {
+      "id": "mech-danger",
+      "title": "Tehlike Dedektifi",
+      "description": "Tehlikeleri Bul bölümünü bitir."
+    },
+    {
+      "id": "mech-catch",
+      "title": "Hızlı Eller",
+      "description": "Çanta Yakala bölümünü bitir."
+    },
+    {
+      "id": "mech-sequence",
+      "title": "Sıralama Şampiyonu",
+      "description": "Doğru Sırala bölümünü bitir."
+    },
+    {
+      "id": "mech-memory",
+      "title": "Keskin Hafıza",
+      "description": "Sırayı Hatırla bölümünü bitir."
+    },
+    {
+      "id": "all-mechanics",
+      "title": "Çok Yönlü",
+      "description": "Her oyun türünden en az birini bitir."
+    },
+    {
+      "id": "perfect-3",
+      "title": "Üç Mükemmel",
+      "description": "3 bölümden 3 yıldız al."
+    },
+    {
+      "id": "perfect-5",
+      "title": "Beş Mükemmel",
+      "description": "5 bölümden 3 yıldız al."
+    },
+    {
+      "id": "star-20",
+      "title": "Yıldız Yağmuru",
+      "description": "Toplam 20 yıldız topla."
+    },
+    {
+      "id": "score-2000",
+      "title": "Puan Avcısı",
+      "description": "Toplam 2000 puana ulaş."
+    },
+    {
+      "id": "score-5000",
+      "title": "Puan Kralı",
+      "description": "Toplam 5000 puana ulaş."
+    },
+    {
+      "id": "streak-3",
+      "title": "Ateş Serisi",
+      "description": "3 gün üst üste oyna."
+    },
+    {
+      "id": "streak-7",
+      "title": "Haftalık Kahraman",
+      "description": "7 gün üst üste oyna."
+    },
+    {
+      "id": "graduate",
+      "title": "Afet Eğitmeni",
+      "description": "Çocuk modundaki tüm bölümleri tamamla."
+    },
+    {
+      "id": "edu-first",
+      "title": "İlk Ders",
+      "description": "İlk eğitim bölümünü tamamla."
+    },
+    {
+      "id": "edu-5",
+      "title": "Meraklı",
+      "description": "5 eğitim bölümü tamamla."
+    },
+    {
+      "id": "edu-10",
+      "title": "Çalışkan",
+      "description": "10 eğitim bölümü tamamla."
+    },
+    {
+      "id": "edu-all",
+      "title": "Eğitim Ustası",
+      "description": "Tüm eğitim bölümlerini tamamla."
+    }
+  ],
+  "guides": [
+    {
+      "title": "Depremden Önce",
+      "tag": "Hazırlık",
+      "iconKey": "item-emergency-bag",
+      "accentColor": 4901631,
+      "points": [
+        "Acil çantanı görünür bir yerde tut.",
+        "Aile buluşma noktasını önceden seç.",
+        "Dolap ve rafları duvara sabitle."
+      ],
+      "adult": false
+    },
+    {
+      "title": "Sarsıntı Anında",
+      "tag": "Çök-Kapan-Tutun",
+      "iconKey": "item-drop-cover-hold",
+      "accentColor": 16741492,
+      "points": [
+        "Pencere, dolap ve ağır eşyalardan uzaklaş.",
+        "Başını koruyup sağlam bir eşyanın yanında kal.",
+        "Asansör ve merdivene koşma."
+      ],
+      "adult": false
+    },
+    {
+      "title": "Dışarı Çıkınca",
+      "tag": "Güvenli Alan",
+      "iconKey": "item-meet-family",
+      "accentColor": 7134086,
+      "points": [
+        "Bina, balkon ve elektrik direklerinden uzak dur.",
+        "Toplanma alanına sakin şekilde git.",
+        "Ailenle belirlenen noktada buluş."
+      ],
+      "adult": false
+    },
+    {
+      "title": "Yardım İsterken",
+      "tag": "Enerjini Koru",
+      "iconKey": "item-whistle",
+      "accentColor": 16756829,
+      "points": [
+        "Sürekli bağırmak yerine ses çıkarıp bekle.",
+        "Düdük veya sert bir zemine vurma sesi kullan.",
+        "Telefon meşgulse kısa mesaj gönder."
+      ],
+      "adult": false
+    },
+    {
+      "title": "Tehlikeli Durumlar",
+      "tag": "Uzak Dur",
+      "iconKey": "item-stay-away",
+      "accentColor": 16741492,
+      "points": [
+        "Kopmuş kabloya dokunma ve su dökme.",
+        "Gaz kokusu varsa çakmak yakma, düğmeye basma.",
+        "Yetkililere haber ver ve bölgeden uzaklaş."
+      ],
+      "adult": false
+    },
+    {
+      "title": "Depremden Önce",
+      "tag": "Risk Azaltma",
+      "iconType": "preparedness",
+      "accentColor": 13006877,
+      "summary": "Hazırlık, deprem anındaki karar yükünü azaltır.",
+      "points": [
+        "Aile iletişim planını ve toplanma noktasını yazılı hale getir.",
+        "Dolap, raf, kombi ve devrilebilecek eşyaları sabitle.",
+        "Acil çanta, evrak kopyaları ve ilaç listesini erişilebilir tut."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Sarsıntı Anında",
+      "tag": "Doğru Davranış",
+      "iconType": "quake",
+      "accentColor": 2846585,
+      "summary": "İlk hedef yaralanma riskini azaltmak ve sakin kalmaktır.",
+      "points": [
+        "Çök, kapan, tutun; cam, dolap ve ağır eşyalardan uzak dur.",
+        "Asansör, merdiven ve balkonlara yönelme.",
+        "Araçtaysan güvenli yerde dur, köprü ve enerji hatlarından uzaklaş."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Tahliye ve Kontrol",
+      "tag": "İlk Dakikalar",
+      "iconType": "evacuation",
+      "accentColor": 4480363,
+      "summary": "Sarsıntı bitince hızlı değil, kontrollü hareket edilir.",
+      "points": [
+        "Kendini ve yakınlarını yaralanma, yangın, gaz kokusu açısından kontrol et.",
+        "Hasarlı binaya geri dönme; artçı sarsıntı ihtimalini hesaba kat.",
+        "Toplanma alanına giderken bina cepheleri ve enerji hatlarından uzak dur."
+      ],
+      "adult": true
+    },
+    {
+      "title": "İletişim ve Bilgi",
+      "tag": "Koordinasyon",
+      "iconType": "communication",
+      "accentColor": 3104646,
+      "summary": "Doğru bilgi, panik ve yanlış yönlendirmeyi azaltır.",
+      "points": [
+        "Telefonu kısa mesaj ve acil durum iletişimi için kullan.",
+        "Resmi kurum duyurularını takip et, doğrulanmamış bilgiyi yayma.",
+        "Aile planında belirlenen şehir dışı kişiye durum bildirimi yap."
+      ],
+      "adult": true
+    },
+    {
+      "title": "İlk 72 Saat",
+      "tag": "Dayanıklılık",
+      "iconType": "supplies",
+      "accentColor": 7162656,
+      "summary": "Yardım gelene kadar temel ihtiyaçları planlı yönetmek gerekir.",
+      "points": [
+        "Su, gıda, ilaç, hijyen ve güç kaynaklarını önceliklendir.",
+        "Komşu, yaşlı, çocuk ve özel ihtiyaç sahipleri için görev paylaş.",
+        "Açık alev, hasarlı tesisat ve riskli yapılardan uzak dur."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Ev İçi Güvenlik",
+      "tag": "Yaşam Alanı",
+      "iconType": "home",
+      "accentColor": 2781051,
+      "summary": "Evdeki riskleri önceden azaltmak yaralanmaları belirgin şekilde düşürür.",
+      "points": [
+        "Yatak çevresinde düşebilecek tablo, raf ve ağır eşyaları kaldır.",
+        "Gece kolay bulunacak şekilde ayakkabı, fener ve düdük hazır tut.",
+        "Kapı önü, koridor ve çıkış yollarını eşya ile kapatma."
+      ],
+      "adult": true
+    },
+    {
+      "title": "İş Yeri ve Okul",
+      "tag": "Ortak Plan",
+      "iconType": "workplace",
+      "accentColor": 4480363,
+      "summary": "Kalabalık yapılarda güvenlik, herkesin aynı planı bilmesine bağlıdır.",
+      "points": [
+        "Tahliye rotası, toplanma alanı ve sorumluları önceden öğren.",
+        "Acil durumda asansör kullanmama kuralını ekipçe netleştir.",
+        "Tatbikat sonrası aksayan noktaları not alıp güncelle."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Araçtayken",
+      "tag": "Trafik Güvenliği",
+      "iconType": "vehicle",
+      "accentColor": 3104646,
+      "summary": "Araç içindeyken amaç güvenli biçimde durmak ve çevre risklerinden uzaklaşmaktır.",
+      "points": [
+        "Köprü, tünel, üst geçit ve enerji hatlarından uzak güvenli bir yerde dur.",
+        "Sarsıntı bitene kadar araç içinde kal ve emniyet kemerini çözme.",
+        "Trafiği engellemeden resmi yönlendirmeleri takip et."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Gaz, Elektrik ve Su",
+      "tag": "Tesisat Riski",
+      "iconType": "utility",
+      "accentColor": 7162656,
+      "summary": "Deprem sonrası ikincil tehlikelerin önemli kısmı tesisat kaynaklıdır.",
+      "points": [
+        "Gaz kokusu varsa elektrik düğmesi, çakmak ve açık alev kullanma.",
+        "Ana vanaların yerini önceden öğren; kapatma görevini aile içinde belirle.",
+        "Hasar şüphesi varsa tesisatı uzman kontrolü olmadan tekrar açma."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Temel İlk Yardım",
+      "tag": "İlk Müdahale",
+      "iconType": "firstAid",
+      "accentColor": 10112837,
+      "summary": "İlk yardımda amaç güvenli kalmak, kanamayı kontrol etmek ve profesyonel yardım çağırmaktır.",
+      "points": [
+        "Önce çevre güvenliğini kontrol et; kendini riske atma.",
+        "Ciddi kanamada temiz bezle doğrudan bası uygula.",
+        "Bilinç, solunum ve kanama durumunu kısa ve net şekilde 112’ye bildir."
+      ],
+      "adult": true
+    },
+    {
+      "title": "Komşu Dayanışması",
+      "tag": "Topluluk",
+      "iconType": "community",
+      "accentColor": 5205842,
+      "summary": "Afet sonrası ilk destek çoğu zaman yakın çevreden gelir.",
+      "points": [
+        "Apartmanda yaşlı, çocuk, engelli ve yalnız yaşayan kişileri önceden belirle.",
+        "Görev paylaşımı yap: kontrol, iletişim, ilk yardım ve malzeme takibi.",
+        "Toplanma alanında sayım ve ihtiyaç bilgisini sakin biçimde paylaş."
+      ],
+      "adult": true
+    }
+  ],
+  "planFields": [
+    {
+      "key": "meetingPoint",
+      "label": "Toplanma Alanı",
+      "placeholder": "Mahalle parkı, okul bahçesi, açık alan..."
+    },
+    {
+      "key": "outOfCityContact",
+      "label": "Şehir Dışı İrtibat",
+      "placeholder": "Ad soyad ve telefon numarası"
+    },
+    {
+      "key": "familyContact",
+      "label": "Aile İletişim Yöntemi",
+      "placeholder": "SMS grubu, mesaj uygulaması, yedek kişi..."
+    },
+    {
+      "key": "medicalNotes",
+      "label": "İlaç ve Sağlık Notu",
+      "placeholder": "Düzenli ilaçlar, alerji, özel durumlar"
+    },
+    {
+      "key": "utilityInfo",
+      "label": "Gaz / Elektrik / Su",
+      "placeholder": "Vana yerleri ve sorumlu kişi"
+    },
+    {
+      "key": "specialNeeds",
+      "label": "Özel İhtiyaçlar",
+      "placeholder": "Çocuk, yaşlı, engelli, evcil hayvan planı"
+    }
+  ],
+  "checklist": [
+    {
+      "key": "bag",
+      "label": "Afet çantası hazır ve erişilebilir yerde."
+    },
+    {
+      "key": "waterFood",
+      "label": "Su ve dayanıklı gıda en az 72 saat için planlandı."
+    },
+    {
+      "key": "firstAid",
+      "label": "İlk yardım seti ve düzenli ilaçlar kontrol edildi."
+    },
+    {
+      "key": "lighting",
+      "label": "Fener, pil, powerbank ve radyo hazır."
+    },
+    {
+      "key": "documents",
+      "label": "Kimlik, tapu, sigorta ve önemli evrak kopyaları hazır."
+    },
+    {
+      "key": "cash",
+      "label": "Küçük nakit para ve yedek anahtar ayrıldı."
+    },
+    {
+      "key": "securedFurniture",
+      "label": "Dolap, raf, kombi ve ağır eşyalar sabitlendi."
+    },
+    {
+      "key": "meetingPoint",
+      "label": "Toplanma alanı tüm aile bireylerine anlatıldı."
+    },
+    {
+      "key": "contacts",
+      "label": "Acil iletişim listesi telefonlara kaydedildi."
+    },
+    {
+      "key": "utilities",
+      "label": "Gaz, elektrik ve su vanalarının yeri biliniyor."
+    },
+    {
+      "key": "workSchool",
+      "label": "İş yeri / okul tahliye planı öğrenildi."
+    },
+    {
+      "key": "neighborSupport",
+      "label": "Komşu, yaşlı ve özel ihtiyaç desteği planlandı."
+    }
+  ],
+  "items": [
+    {
+      "id": "water",
+      "label": "Su",
+      "textureKey": "item-water",
+      "sortZone": "pack",
+      "purpose": "Ic",
+      "accentColor": 4901631
+    },
+    {
+      "id": "battery",
+      "label": "Pil",
+      "textureKey": "item-battery",
+      "sortZone": "pack",
+      "purpose": "Guc",
+      "accentColor": 16756829
+    },
+    {
+      "id": "map",
+      "label": "Harita",
+      "textureKey": "item-map",
+      "sortZone": "pack",
+      "purpose": "Yon",
+      "accentColor": 7134086
+    },
+    {
+      "id": "canfood",
+      "label": "Konserve",
+      "textureKey": "item-canfood",
+      "sortZone": "pack",
+      "purpose": "Ye",
+      "accentColor": 16756829
+    },
+    {
+      "id": "firstAid",
+      "label": "İlk Yardım Çantası",
+      "textureKey": "item-first-aid",
+      "sortZone": "pack",
+      "purpose": "Sar",
+      "accentColor": 16741492
+    },
+    {
+      "id": "flashlight",
+      "label": "El Feneri",
+      "textureKey": "item-flashlight",
+      "sortZone": "pack",
+      "purpose": "Aydinlat",
+      "accentColor": 16756829
+    },
+    {
+      "id": "whistle",
+      "label": "Düdük",
+      "textureKey": "item-whistle",
+      "sortZone": "pack",
+      "purpose": "Cal",
+      "accentColor": 16741492
+    },
+    {
+      "id": "uniform",
+      "label": "Kıyafet",
+      "textureKey": "item-uniform",
+      "sortZone": "leave",
+      "purpose": "Giy",
+      "accentColor": 12109531
+    },
+    {
+      "id": "book",
+      "label": "Kitap",
+      "textureKey": "item-book",
+      "sortZone": "leave",
+      "purpose": "Oku",
+      "accentColor": 12109531
+    },
+    {
+      "id": "cup",
+      "label": "Bardak",
+      "textureKey": "item-cup",
+      "sortZone": "leave",
+      "purpose": "Yudumla",
+      "accentColor": 12109531
+    },
+    {
+      "id": "bottlecap",
+      "label": "Kapak",
+      "textureKey": "item-bottlecap",
+      "sortZone": "leave",
+      "purpose": "Cop",
+      "accentColor": 12109531
+    },
+    {
+      "id": "radio",
+      "label": "Radyo",
+      "textureKey": "item-radio",
+      "sortZone": "pack",
+      "purpose": "Dinle",
+      "accentColor": 4901631
+    },
+    {
+      "id": "blanket",
+      "label": "Battaniye",
+      "textureKey": "item-blanket",
+      "sortZone": "pack",
+      "purpose": "Sıcak Tut",
+      "accentColor": 7134086
+    },
+    {
+      "id": "mask",
+      "label": "Maske",
+      "textureKey": "item-mask",
+      "sortZone": "pack",
+      "purpose": "Tak",
+      "accentColor": 4901631
+    },
+    {
+      "id": "gloves",
+      "label": "Eldiven",
+      "textureKey": "item-gloves",
+      "sortZone": "pack",
+      "purpose": "Koru",
+      "accentColor": 16756829
+    },
+    {
+      "id": "snack",
+      "label": "Kraker",
+      "textureKey": "item-snack",
+      "sortZone": "pack",
+      "purpose": "Ye",
+      "accentColor": 16756829
+    },
+    {
+      "id": "toy",
+      "label": "Oyuncak",
+      "textureKey": "item-toy",
+      "sortZone": "leave",
+      "purpose": "Oyna",
+      "accentColor": 12109531
+    },
+    {
+      "id": "slippers",
+      "label": "Terlik",
+      "textureKey": "item-slippers",
+      "sortZone": "leave",
+      "purpose": "Giy",
+      "accentColor": 12109531
+    },
+    {
+      "id": "perfume",
+      "label": "Parfüm",
+      "textureKey": "item-perfume",
+      "sortZone": "leave",
+      "purpose": "Sık",
+      "accentColor": 12109531
+    },
+    {
+      "id": "tablet",
+      "label": "Tablet",
+      "textureKey": "item-tablet",
+      "sortZone": "leave",
+      "purpose": "İzle",
+      "accentColor": 12109531
+    },
+    {
+      "id": "vase",
+      "label": "Vazo",
+      "textureKey": "item-vase",
+      "sortZone": "leave",
+      "purpose": "Süsle",
+      "accentColor": 12109531
+    },
+    {
+      "id": "tie",
+      "label": "Kravat",
+      "textureKey": "item-tie",
+      "sortZone": "leave",
+      "purpose": "Tak",
+      "accentColor": 12109531
+    },
+    {
+      "id": "mirror",
+      "label": "Ayna",
+      "textureKey": "item-mirror",
+      "sortZone": "leave",
+      "purpose": "Bak",
+      "accentColor": 12109531
+    },
+    {
+      "id": "pillow",
+      "label": "Yastık",
+      "textureKey": "item-pillow",
+      "sortZone": "leave",
+      "purpose": "Uyu",
+      "accentColor": 12109531
+    },
+    {
+      "id": "makeup",
+      "label": "Makyaj",
+      "textureKey": "item-makeup",
+      "sortZone": "leave",
+      "purpose": "Sür",
+      "accentColor": 12109531
+    }
+  ],
+  "levels": [
+    {
+      "id": "bag-packing",
+      "type": "bag",
+      "title": "Çantayı Hazırla",
+      "shortTitle": "Doğru eşyaları seç",
+      "instruction": "Haydi, çantamızı birlikte hazırlayalım. İhtiyacımız olan eşyaları bul. Seçtiğin eşyaya dokunabilir ya da onu çantaya sürükleyebilirsin.",
+      "previewTextureKey": "item-emergency-bag",
+      "cardTextureKey": "ui-card-blue",
+      "accentColor": 4901631,
+      "correctPool": [
+        "water",
+        "map",
+        "battery",
+        "canfood",
+        "firstAid",
+        "flashlight",
+        "whistle",
+        "radio",
+        "blanket",
+        "snack"
+      ],
+      "correctCount": 6,
+      "negativePool": [
+        "book",
+        "cup",
+        "bottlecap",
+        "uniform",
+        "toy",
+        "slippers",
+        "perfume",
+        "tablet",
+        "vase",
+        "tie",
+        "mirror",
+        "pillow",
+        "makeup"
+      ],
+      "negativeCount": 4,
+      "adult": false,
+      "bagSlots": [
+        {
+          "x": -108,
+          "y": -54
+        },
+        {
+          "x": -36,
+          "y": -54
+        },
+        {
+          "x": 36,
+          "y": -54
+        },
+        {
+          "x": 108,
+          "y": -54
+        },
+        {
+          "x": -72,
+          "y": 40
+        },
+        {
+          "x": 0,
+          "y": 40
+        },
+        {
+          "x": 72,
+          "y": 40
+        }
+      ],
+      "successMessage": "Çanta hazır",
+      "items": [
+        "makeup",
+        "vase",
+        "radio",
+        "pillow",
+        "whistle",
+        "water",
+        "slippers",
+        "canfood",
+        "flashlight",
+        "battery"
+      ],
+      "correctItems": [
+        "flashlight",
+        "whistle",
+        "battery",
+        "radio",
+        "water",
+        "canfood"
+      ],
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "category-sorting",
+      "type": "sort",
+      "title": "Eşyaları Ayır",
+      "shortTitle": "Çantaya koy ya da bırak",
+      "instruction": "Şimdi eşyaları ayıralım. Çantaya koyacağın eşyaları çantaya taşı. Diğerlerini dışarıda bırak. Birlikte düşünebiliriz.",
+      "previewTextureKey": "item-canfood",
+      "cardTextureKey": "ui-card-green",
+      "accentColor": 7134086,
+      "packPool": [
+        "water",
+        "battery",
+        "map",
+        "canfood",
+        "whistle",
+        "firstAid",
+        "flashlight",
+        "radio",
+        "blanket",
+        "snack"
+      ],
+      "packCount": 6,
+      "negativePool": [
+        "book",
+        "cup",
+        "bottlecap",
+        "uniform",
+        "toy",
+        "slippers",
+        "perfume",
+        "tablet",
+        "vase",
+        "tie",
+        "mirror",
+        "pillow",
+        "makeup"
+      ],
+      "negativeCount": 6,
+      "adult": false,
+      "zones": [
+        {
+          "id": "pack",
+          "label": "Çantaya Koy",
+          "accentColor": 7134086
+        },
+        {
+          "id": "leave",
+          "label": "Dışarıda Bırak",
+          "accentColor": 16756829
+        }
+      ],
+      "successMessage": "Ayırma tamam",
+      "items": [
+        "perfume",
+        "firstAid",
+        "snack",
+        "battery",
+        "whistle",
+        "flashlight",
+        "canfood",
+        "cup",
+        "slippers",
+        "toy",
+        "makeup",
+        "bottlecap"
+      ],
+      "packItems": [
+        "whistle",
+        "canfood",
+        "snack",
+        "battery",
+        "firstAid",
+        "flashlight"
+      ],
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "match-pairs",
+      "type": "match",
+      "title": "Eşleri Bul",
+      "shortTitle": "Doğru kullanımla eşleştir",
+      "instruction": "Bu eşya ne işe yarar? Önce bir eşya seç. Sonra onun kullanımını gösteren resme dokun. İstersen eşyayı oraya sürükleyebilirsin.",
+      "previewTextureKey": "item-whistle",
+      "cardTextureKey": "ui-card-orange",
+      "accentColor": 16756829,
+      "pairPool": [
+        {
+          "itemId": "water",
+          "targetLabel": "İçilir",
+          "accentColor": 4901631
+        },
+        {
+          "itemId": "map",
+          "targetLabel": "Yol Gösterir",
+          "accentColor": 7134086
+        },
+        {
+          "itemId": "battery",
+          "targetLabel": "Enerji Verir",
+          "accentColor": 16756829
+        },
+        {
+          "itemId": "whistle",
+          "targetLabel": "Yardım Çağırır",
+          "accentColor": 16741492
+        },
+        {
+          "itemId": "flashlight",
+          "targetLabel": "Işık Verir",
+          "accentColor": 16756829
+        },
+        {
+          "itemId": "firstAid",
+          "targetLabel": "Yarayı Sarar",
+          "accentColor": 16741492
+        },
+        {
+          "itemId": "radio",
+          "targetLabel": "Haber Verir",
+          "accentColor": 4901631
+        },
+        {
+          "itemId": "blanket",
+          "targetLabel": "Sıcak Tutar",
+          "accentColor": 7134086
+        },
+        {
+          "itemId": "mask",
+          "targetLabel": "Tozdan Korur",
+          "accentColor": 4901631
+        }
+      ],
+      "matchCount": 4,
+      "adult": false,
+      "successMessage": "Eşleştirme tamam",
+      "items": [
+        "map",
+        "firstAid",
+        "battery",
+        "whistle"
+      ],
+      "targets": [
+        {
+          "id": "pair-target-0",
+          "label": "Yol Gösterir",
+          "accepts": "map",
+          "accentColor": 7134086
+        },
+        {
+          "id": "pair-target-1",
+          "label": "Yarayı Sarar",
+          "accepts": "firstAid",
+          "accentColor": 16741492
+        },
+        {
+          "id": "pair-target-2",
+          "label": "Enerji Verir",
+          "accepts": "battery",
+          "accentColor": 16756829
+        },
+        {
+          "id": "pair-target-3",
+          "label": "Yardım Çağırır",
+          "accepts": "whistle",
+          "accentColor": 16741492
+        }
+      ],
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "safe-choice",
+      "type": "quiz",
+      "title": "Doğru Davranışı Seç",
+      "shortTitle": "Depremde en güvenli seçeneğe dokun",
+      "instruction": "Sana küçük bir soru soracağım. Resimlere bak ve güvenli davranışı seç. Düşünmek için zamanın var.",
+      "previewTextureKey": "item-first-aid",
+      "cardTextureKey": "ui-card-red",
+      "accentColor": 16741492,
+      "questions": [
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntı başlayınca ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Çök-Kapan-Tutun",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereye koş",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            },
+            {
+              "label": "Asansöre bin",
+              "correct": false,
+              "icon": "item-use-elevator",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Dışarı çıkınca nereye gidersin?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Açık alana git",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Bina dibinde bekle",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Balkona çık",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yardım isterken ne kullanırsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Düdük çal",
+              "correct": true,
+              "icon": "item-whistle",
+              "feedback": ""
+            },
+            {
+              "label": "Camdan sark",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Asansörü dene",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Artçı sarsıntıda ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Başını koru",
+              "correct": true,
+              "icon": "item-protect-head",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereye koş",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            },
+            {
+              "label": "Dolaba yaslan",
+              "correct": false,
+              "icon": "item-hold-cabinet",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Gaz kokusu alırsan ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Yetkiliye haber ver",
+              "correct": true,
+              "icon": "item-report-gas",
+              "feedback": ""
+            },
+            {
+              "label": "Çakmak yak",
+              "correct": false,
+              "icon": "item-light-match",
+              "feedback": ""
+            },
+            {
+              "label": "Düğmeye bas",
+              "correct": false,
+              "icon": "item-press-switch",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Telefon hatları yoğunsa ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Kısa mesaj at",
+              "correct": true,
+              "icon": "item-send-message",
+              "feedback": ""
+            },
+            {
+              "label": "Görüntülü ara",
+              "correct": false,
+              "icon": "item-video-call",
+              "feedback": ""
+            },
+            {
+              "label": "Sürekli ara",
+              "correct": false,
+              "icon": "item-spam-call",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Toplanma alanında ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ailenle buluş",
+              "correct": true,
+              "icon": "item-meet-family",
+              "feedback": ""
+            },
+            {
+              "label": "Binaya geri dön",
+              "correct": false,
+              "icon": "item-reenter-building",
+              "feedback": ""
+            },
+            {
+              "label": "Yola otur",
+              "correct": false,
+              "icon": "item-sit-road",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Enkaz altındaysan nasıl yardım istersin?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ses çıkarıp bekle",
+              "correct": true,
+              "icon": "item-tap-pipe",
+              "feedback": ""
+            },
+            {
+              "label": "Sürekli bağır",
+              "correct": false,
+              "icon": "item-waste-energy",
+              "feedback": ""
+            },
+            {
+              "label": "Toz kaldır",
+              "correct": false,
+              "icon": "item-raise-dust",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Okulda sarsıntı anında ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Sıranın yanında çök",
+              "correct": true,
+              "icon": "item-crouch-near-desk",
+              "feedback": ""
+            },
+            {
+              "label": "Merdivene koş",
+              "correct": false,
+              "icon": "item-run-stairs",
+              "feedback": ""
+            },
+            {
+              "label": "Pencere önünde dur",
+              "correct": false,
+              "icon": "item-stand-window",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Dışarıdaysan nereden uzak durursun?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Bina ve direkler",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Vitrin kenarı",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Balkon altı",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Kopmuş elektrik kablosu görürsen ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Uzak dur",
+              "correct": true,
+              "icon": "item-stay-away",
+              "feedback": ""
+            },
+            {
+              "label": "Dokun",
+              "correct": false,
+              "icon": "item-touch-wire",
+              "feedback": ""
+            },
+            {
+              "label": "Su dök",
+              "correct": false,
+              "icon": "item-pour-water",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Asansördeyken deprem olursa ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "En yakın katta çık",
+              "correct": true,
+              "icon": "item-stop-and-exit",
+              "feedback": ""
+            },
+            {
+              "label": "Asansörde kal",
+              "correct": false,
+              "icon": "item-keep-riding",
+              "feedback": ""
+            },
+            {
+              "label": "Zıpla",
+              "correct": false,
+              "icon": "item-jump-inside",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Çantayı hazırlarken hangisini eklersin?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Radyo",
+              "correct": true,
+              "icon": "item-radio",
+              "feedback": ""
+            },
+            {
+              "label": "Vazo",
+              "correct": false,
+              "icon": "item-vase",
+              "feedback": ""
+            },
+            {
+              "label": "Parfüm",
+              "correct": false,
+              "icon": "item-perfume",
+              "feedback": ""
+            }
+          ]
+        }
+      ],
+      "questionCount": 4,
+      "adult": false,
+      "successMessage": "Doğru seçimler tamam",
+      "rounds": []
+    },
+    {
+      "id": "danger-hunt",
+      "type": "danger",
+      "title": "Tehlikeleri Bul",
+      "shortTitle": "Tehlikeli olanları seç",
+      "instruction": "Resimlere birlikte bakalım. Hangileri tehlikeli davranışları gösteriyor? Bulduğun tehlikeli davranışlara dokun.",
+      "previewTextureKey": "item-stay-away",
+      "cardTextureKey": "ui-card-red",
+      "accentColor": 16741492,
+      "actions": [
+        {
+          "id": "use-elevator",
+          "label": "Asansöre Bin",
+          "textureKey": "item-use-elevator",
+          "dangerous": true
+        },
+        {
+          "id": "run-window",
+          "label": "Pencereye Koş",
+          "textureKey": "item-run-window",
+          "dangerous": true
+        },
+        {
+          "id": "light-match",
+          "label": "Çakmak Yak",
+          "textureKey": "item-light-match",
+          "dangerous": true
+        },
+        {
+          "id": "touch-wire",
+          "label": "Kabloya Dokun",
+          "textureKey": "item-touch-wire",
+          "dangerous": true
+        },
+        {
+          "id": "drop-cover-hold",
+          "label": "Çök-Kapan",
+          "textureKey": "item-drop-cover-hold",
+          "dangerous": false
+        },
+        {
+          "id": "meet-family",
+          "label": "Ailenle Buluş",
+          "textureKey": "item-meet-family",
+          "dangerous": false
+        }
+      ],
+      "adult": false,
+      "successMessage": "Tehlikeler bulundu",
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "catch-bag",
+      "type": "catch",
+      "title": "Çanta Yakala",
+      "shortTitle": "Gerekli eşyaları yakala",
+      "instruction": "Parmağınla çantayı sağa ve sola hareket ettir. İhtiyacımız olan eşyaları yakala. Gereksiz eşyaların geçmesine izin ver. Hazır olduğunda çantaya dokun.",
+      "previewTextureKey": "item-emergency-bag-open",
+      "cardTextureKey": "ui-card-green",
+      "accentColor": 7134086,
+      "goodItems": [
+        "water",
+        "flashlight",
+        "firstAid",
+        "whistle",
+        "radio",
+        "blanket",
+        "snack"
+      ],
+      "badItems": [
+        "vase",
+        "perfume",
+        "toy",
+        "tablet",
+        "tie",
+        "mirror"
+      ],
+      "catchTarget": 7,
+      "catchGoodChance": 0.72,
+      "catchBaseSpeed": 120,
+      "catchRandomSpeed": 46,
+      "catchProgressSpeed": 5,
+      "catchSpawnDelay": 820,
+      "catchMinSpawnDelay": 600,
+      "catchSpawnStep": 8,
+      "catchMaxOnScreen": 2,
+      "catchMinHorizontalGap": 168,
+      "catchSpawnY": 300,
+      "catchBadSpeedFactor": 0.9,
+      "adult": false,
+      "successMessage": "Çanta doldu",
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "safe-order",
+      "type": "sequence",
+      "title": "Doğru Sırala",
+      "shortTitle": "3 turda doğru sırayı kur",
+      "instruction": "Önce ne yaparız, sonra ne yaparız? Resimlere doğru sırayla dokun. Üstteki örnek sana yardımcı olabilir.",
+      "previewTextureKey": "item-drop-cover-hold",
+      "cardTextureKey": "ui-card-orange",
+      "accentColor": 16756829,
+      "rounds": [
+        {
+          "steps": [
+            {
+              "id": "drop-cover-hold",
+              "label": "Çök-Kapan-Tutun",
+              "textureKey": "item-drop-cover-hold"
+            },
+            {
+              "id": "safe-exit",
+              "label": "Güvenle Çık",
+              "textureKey": "item-stop-and-exit"
+            },
+            {
+              "id": "meet-family",
+              "label": "Ailenle Buluş",
+              "textureKey": "item-meet-family"
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "id": "protect-head",
+              "label": "Başını Koru",
+              "textureKey": "item-protect-head"
+            },
+            {
+              "id": "stay-away",
+              "label": "Tehlikeden Uzak Dur",
+              "textureKey": "item-stay-away"
+            },
+            {
+              "id": "report-gas",
+              "label": "Yetkiliye Haber Ver",
+              "textureKey": "item-report-gas"
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "id": "take-bag",
+              "label": "Acil Çantanı Al",
+              "textureKey": "item-emergency-bag"
+            },
+            {
+              "id": "safe-exit",
+              "label": "Güvenle Çık",
+              "textureKey": "item-stop-and-exit"
+            },
+            {
+              "id": "send-message",
+              "label": "Kısa Mesaj At",
+              "textureKey": "item-send-message"
+            }
+          ]
+        }
+      ],
+      "adult": false,
+      "successMessage": "Üç tur tamam",
+      "questions": []
+    },
+    {
+      "id": "memory-bag",
+      "type": "memory",
+      "title": "Sırayı Hatırla",
+      "shortTitle": "Yanan sırayı tekrarla",
+      "instruction": "Birazdan bazı eşyalar sırayla parlayacak. Önce dikkatle izle. Sonra aynı sırayla dokun. İstersen sırayı yeniden izleyebilirsin.",
+      "previewTextureKey": "item-flashlight",
+      "cardTextureKey": "ui-card-blue",
+      "accentColor": 4901631,
+      "memoryPads": [
+        "water",
+        "flashlight",
+        "whistle",
+        "firstAid"
+      ],
+      "sequenceLength": 3,
+      "sequence": [
+        "water",
+        "whistle",
+        "firstAid"
+      ],
+      "adult": false,
+      "successMessage": "Sıra tamam",
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "bag-packing",
+      "type": "bag",
+      "title": "Çantayı Hazırla",
+      "shortTitle": "Doğru eşyaları seç",
+      "instruction": "Daha fazla eşya arasından acil durum çantası için doğru olanları seç.",
+      "previewTextureKey": "item-emergency-bag",
+      "cardTextureKey": "ui-card-blue",
+      "accentColor": 4901631,
+      "correctPool": [
+        "water",
+        "map",
+        "battery",
+        "canfood",
+        "firstAid",
+        "flashlight",
+        "whistle",
+        "radio",
+        "blanket",
+        "mask",
+        "gloves",
+        "snack"
+      ],
+      "correctCount": 7,
+      "negativePool": [
+        "book",
+        "cup",
+        "bottlecap",
+        "uniform",
+        "toy",
+        "slippers",
+        "perfume",
+        "tablet",
+        "vase",
+        "tie",
+        "mirror",
+        "pillow",
+        "makeup"
+      ],
+      "negativeCount": 5,
+      "adult": true,
+      "bagSlots": [
+        {
+          "x": -120,
+          "y": -60
+        },
+        {
+          "x": -60,
+          "y": -60
+        },
+        {
+          "x": 0,
+          "y": -60
+        },
+        {
+          "x": 60,
+          "y": -60
+        },
+        {
+          "x": 120,
+          "y": -60
+        },
+        {
+          "x": -54,
+          "y": 38
+        },
+        {
+          "x": 54,
+          "y": 38
+        }
+      ],
+      "successMessage": "Çanta hazır",
+      "items": [
+        "makeup",
+        "firstAid",
+        "bottlecap",
+        "slippers",
+        "blanket",
+        "map",
+        "flashlight",
+        "water",
+        "battery",
+        "cup",
+        "book",
+        "gloves"
+      ],
+      "correctItems": [
+        "firstAid",
+        "gloves",
+        "map",
+        "blanket",
+        "battery",
+        "water",
+        "flashlight"
+      ],
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "category-sorting",
+      "type": "sort",
+      "title": "Eşyaları Ayır",
+      "shortTitle": "Çantaya koy ya da bırak",
+      "instruction": "Daha kalabalık listede çantaya girecekleri ve dışarıda kalacakları ayır.",
+      "previewTextureKey": "item-canfood",
+      "cardTextureKey": "ui-card-green",
+      "accentColor": 7134086,
+      "packPool": [
+        "water",
+        "battery",
+        "map",
+        "canfood",
+        "whistle",
+        "firstAid",
+        "flashlight",
+        "radio",
+        "blanket",
+        "mask",
+        "gloves",
+        "snack"
+      ],
+      "packCount": 7,
+      "negativePool": [
+        "book",
+        "cup",
+        "bottlecap",
+        "uniform",
+        "toy",
+        "slippers",
+        "perfume",
+        "tablet",
+        "vase",
+        "tie",
+        "mirror",
+        "pillow",
+        "makeup"
+      ],
+      "negativeCount": 7,
+      "adult": true,
+      "zones": [
+        {
+          "id": "pack",
+          "label": "Çantaya Koy",
+          "accentColor": 7134086
+        },
+        {
+          "id": "leave",
+          "label": "Dışarıda Bırak",
+          "accentColor": 16756829
+        }
+      ],
+      "successMessage": "Ayırma tamam",
+      "items": [
+        "canfood",
+        "radio",
+        "water",
+        "book",
+        "flashlight",
+        "toy",
+        "perfume",
+        "mirror",
+        "cup",
+        "bottlecap",
+        "battery",
+        "mask",
+        "uniform",
+        "snack"
+      ],
+      "packItems": [
+        "battery",
+        "snack",
+        "canfood",
+        "water",
+        "mask",
+        "flashlight",
+        "radio"
+      ],
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "match-pairs",
+      "type": "match",
+      "title": "Eşleri Bul",
+      "shortTitle": "Doğru kullanımla eşleştir",
+      "instruction": "Beş eşyayı doğru kullanım amacıyla eşleştir.",
+      "previewTextureKey": "item-whistle",
+      "cardTextureKey": "ui-card-orange",
+      "accentColor": 16756829,
+      "pairPool": [
+        {
+          "itemId": "water",
+          "targetLabel": "İçilir",
+          "accentColor": 4901631
+        },
+        {
+          "itemId": "map",
+          "targetLabel": "Yol Gösterir",
+          "accentColor": 7134086
+        },
+        {
+          "itemId": "battery",
+          "targetLabel": "Enerji Verir",
+          "accentColor": 16756829
+        },
+        {
+          "itemId": "whistle",
+          "targetLabel": "Yardım Çağırır",
+          "accentColor": 16741492
+        },
+        {
+          "itemId": "flashlight",
+          "targetLabel": "Işık Verir",
+          "accentColor": 16756829
+        },
+        {
+          "itemId": "firstAid",
+          "targetLabel": "Yarayı Sarar",
+          "accentColor": 16741492
+        },
+        {
+          "itemId": "radio",
+          "targetLabel": "Haber Verir",
+          "accentColor": 4901631
+        },
+        {
+          "itemId": "blanket",
+          "targetLabel": "Sıcak Tutar",
+          "accentColor": 7134086
+        },
+        {
+          "itemId": "mask",
+          "targetLabel": "Tozdan Korur",
+          "accentColor": 4901631
+        }
+      ],
+      "matchCount": 5,
+      "adult": true,
+      "successMessage": "Eşleştirme tamam",
+      "items": [
+        "flashlight",
+        "firstAid",
+        "water",
+        "battery",
+        "radio"
+      ],
+      "targets": [
+        {
+          "id": "pair-target-0",
+          "label": "Işık Verir",
+          "accepts": "flashlight",
+          "accentColor": 16756829
+        },
+        {
+          "id": "pair-target-1",
+          "label": "Yarayı Sarar",
+          "accepts": "firstAid",
+          "accentColor": 16741492
+        },
+        {
+          "id": "pair-target-2",
+          "label": "İçilir",
+          "accepts": "water",
+          "accentColor": 4901631
+        },
+        {
+          "id": "pair-target-3",
+          "label": "Enerji Verir",
+          "accepts": "battery",
+          "accentColor": 16756829
+        },
+        {
+          "id": "pair-target-4",
+          "label": "Haber Verir",
+          "accepts": "radio",
+          "accentColor": 4901631
+        }
+      ],
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "safe-choice",
+      "type": "quiz",
+      "title": "Doğru Davranışı Seç",
+      "shortTitle": "Depremde en güvenli seçeneğe dokun",
+      "instruction": "Daha fazla deprem senaryosunda en güvenli davranışı seç.",
+      "previewTextureKey": "item-first-aid",
+      "cardTextureKey": "ui-card-red",
+      "accentColor": 16741492,
+      "questions": [
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Sarsıntı başlayınca ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Çök-Kapan-Tutun",
+              "correct": true,
+              "icon": "item-drop-cover-hold",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereye koş",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            },
+            {
+              "label": "Asansöre bin",
+              "correct": false,
+              "icon": "item-use-elevator",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Dışarı çıkınca nereye gidersin?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Açık alana git",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Bina dibinde bekle",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Balkona çık",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Yardım isterken ne kullanırsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Düdük çal",
+              "correct": true,
+              "icon": "item-whistle",
+              "feedback": ""
+            },
+            {
+              "label": "Camdan sark",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Asansörü dene",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Artçı sarsıntıda ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Başını koru",
+              "correct": true,
+              "icon": "item-protect-head",
+              "feedback": ""
+            },
+            {
+              "label": "Pencereye koş",
+              "correct": false,
+              "icon": "item-run-window",
+              "feedback": ""
+            },
+            {
+              "label": "Dolaba yaslan",
+              "correct": false,
+              "icon": "item-hold-cabinet",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Gaz kokusu alırsan ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Yetkiliye haber ver",
+              "correct": true,
+              "icon": "item-report-gas",
+              "feedback": ""
+            },
+            {
+              "label": "Çakmak yak",
+              "correct": false,
+              "icon": "item-light-match",
+              "feedback": ""
+            },
+            {
+              "label": "Düğmeye bas",
+              "correct": false,
+              "icon": "item-press-switch",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Telefon hatları yoğunsa ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Kısa mesaj at",
+              "correct": true,
+              "icon": "item-send-message",
+              "feedback": ""
+            },
+            {
+              "label": "Görüntülü ara",
+              "correct": false,
+              "icon": "item-video-call",
+              "feedback": ""
+            },
+            {
+              "label": "Sürekli ara",
+              "correct": false,
+              "icon": "item-spam-call",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Toplanma alanında ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ailenle buluş",
+              "correct": true,
+              "icon": "item-meet-family",
+              "feedback": ""
+            },
+            {
+              "label": "Binaya geri dön",
+              "correct": false,
+              "icon": "item-reenter-building",
+              "feedback": ""
+            },
+            {
+              "label": "Yola otur",
+              "correct": false,
+              "icon": "item-sit-road",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Enkaz altındaysan nasıl yardım istersin?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Ses çıkarıp bekle",
+              "correct": true,
+              "icon": "item-tap-pipe",
+              "feedback": ""
+            },
+            {
+              "label": "Sürekli bağır",
+              "correct": false,
+              "icon": "item-waste-energy",
+              "feedback": ""
+            },
+            {
+              "label": "Toz kaldır",
+              "correct": false,
+              "icon": "item-raise-dust",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Okulda sarsıntı anında ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Sıranın yanında çök",
+              "correct": true,
+              "icon": "item-crouch-near-desk",
+              "feedback": ""
+            },
+            {
+              "label": "Merdivene koş",
+              "correct": false,
+              "icon": "item-run-stairs",
+              "feedback": ""
+            },
+            {
+              "label": "Pencere önünde dur",
+              "correct": false,
+              "icon": "item-stand-window",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Dışarıdaysan nereden uzak durursun?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Bina ve direkler",
+              "correct": true,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Vitrin kenarı",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            },
+            {
+              "label": "Balkon altı",
+              "correct": false,
+              "icon": "",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Kopmuş elektrik kablosu görürsen ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Uzak dur",
+              "correct": true,
+              "icon": "item-stay-away",
+              "feedback": ""
+            },
+            {
+              "label": "Dokun",
+              "correct": false,
+              "icon": "item-touch-wire",
+              "feedback": ""
+            },
+            {
+              "label": "Su dök",
+              "correct": false,
+              "icon": "item-pour-water",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Asansördeyken deprem olursa ne yaparsın?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "En yakın katta çık",
+              "correct": true,
+              "icon": "item-stop-and-exit",
+              "feedback": ""
+            },
+            {
+              "label": "Asansörde kal",
+              "correct": false,
+              "icon": "item-keep-riding",
+              "feedback": ""
+            },
+            {
+              "label": "Zıpla",
+              "correct": false,
+              "icon": "item-jump-inside",
+              "feedback": ""
+            }
+          ]
+        },
+        {
+          "kind": "question",
+          "title": "",
+          "prompt": "Çantayı hazırlarken hangisini eklersin?",
+          "text": "",
+          "tip": "",
+          "success": "",
+          "icon": "",
+          "choices": [
+            {
+              "label": "Radyo",
+              "correct": true,
+              "icon": "item-radio",
+              "feedback": ""
+            },
+            {
+              "label": "Vazo",
+              "correct": false,
+              "icon": "item-vase",
+              "feedback": ""
+            },
+            {
+              "label": "Parfüm",
+              "correct": false,
+              "icon": "item-perfume",
+              "feedback": ""
+            }
+          ]
+        }
+      ],
+      "questionCount": 6,
+      "adult": true,
+      "successMessage": "Doğru seçimler tamam",
+      "rounds": []
+    },
+    {
+      "id": "danger-hunt",
+      "type": "danger",
+      "title": "Tehlikeleri Bul",
+      "shortTitle": "Tehlikeli olanları seç",
+      "instruction": "Daha fazla davranış arasından yalnızca tehlikeli olanları bul.",
+      "previewTextureKey": "item-stay-away",
+      "cardTextureKey": "ui-card-red",
+      "accentColor": 16741492,
+      "actions": [
+        {
+          "id": "use-elevator",
+          "label": "Asansöre Bin",
+          "textureKey": "item-use-elevator",
+          "dangerous": true
+        },
+        {
+          "id": "run-window",
+          "label": "Pencereye Koş",
+          "textureKey": "item-run-window",
+          "dangerous": true
+        },
+        {
+          "id": "light-match",
+          "label": "Çakmak Yak",
+          "textureKey": "item-light-match",
+          "dangerous": true
+        },
+        {
+          "id": "touch-wire",
+          "label": "Kabloya Dokun",
+          "textureKey": "item-touch-wire",
+          "dangerous": true
+        },
+        {
+          "id": "run-stairs",
+          "label": "Merdivene Koş",
+          "textureKey": "item-run-stairs",
+          "dangerous": true
+        },
+        {
+          "id": "drop-cover-hold",
+          "label": "Çök-Kapan",
+          "textureKey": "item-drop-cover-hold",
+          "dangerous": false
+        },
+        {
+          "id": "meet-family",
+          "label": "Ailenle Buluş",
+          "textureKey": "item-meet-family",
+          "dangerous": false
+        },
+        {
+          "id": "stay-away",
+          "label": "Uzak Dur",
+          "textureKey": "item-stay-away",
+          "dangerous": false
+        }
+      ],
+      "adult": true,
+      "successMessage": "Tehlikeler bulundu",
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "catch-bag",
+      "type": "catch",
+      "title": "Çanta Yakala",
+      "shortTitle": "Gerekli eşyaları yakala",
+      "instruction": "Çantayı sürükle, daha hızlı düşen acil eşyaları yakala ve gereksizleri kaçır.",
+      "previewTextureKey": "item-emergency-bag-open",
+      "cardTextureKey": "ui-card-green",
+      "accentColor": 7134086,
+      "goodItems": [
+        "water",
+        "flashlight",
+        "firstAid",
+        "whistle",
+        "radio",
+        "blanket",
+        "snack",
+        "mask",
+        "gloves",
+        "battery"
+      ],
+      "badItems": [
+        "vase",
+        "perfume",
+        "toy",
+        "tablet",
+        "tie",
+        "mirror",
+        "book",
+        "pillow",
+        "cup"
+      ],
+      "catchTarget": 9,
+      "catchGoodChance": 0.66,
+      "catchBaseSpeed": 148,
+      "catchRandomSpeed": 58,
+      "catchProgressSpeed": 7,
+      "catchSpawnDelay": 720,
+      "catchMinSpawnDelay": 520,
+      "catchSpawnStep": 9,
+      "catchMaxOnScreen": 2,
+      "catchMinHorizontalGap": 168,
+      "catchSpawnY": 300,
+      "catchBadSpeedFactor": 0.9,
+      "adult": true,
+      "successMessage": "Çanta doldu",
+      "rounds": [],
+      "questions": []
+    },
+    {
+      "id": "safe-order",
+      "type": "sequence",
+      "title": "Doğru Sırala",
+      "shortTitle": "3 turda 4 adımı sırala",
+      "instruction": "Dört adımlı üç turun hepsini doğru sırala.",
+      "previewTextureKey": "item-drop-cover-hold",
+      "cardTextureKey": "ui-card-orange",
+      "accentColor": 16756829,
+      "rounds": [
+        {
+          "steps": [
+            {
+              "id": "drop-cover-hold",
+              "label": "Çök-Kapan-Tutun",
+              "textureKey": "item-drop-cover-hold"
+            },
+            {
+              "id": "take-bag",
+              "label": "Acil Çantanı Al",
+              "textureKey": "item-emergency-bag"
+            },
+            {
+              "id": "safe-exit",
+              "label": "Güvenle Çık",
+              "textureKey": "item-stop-and-exit"
+            },
+            {
+              "id": "meet-family",
+              "label": "Ailenle Buluş",
+              "textureKey": "item-meet-family"
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "id": "protect-head",
+              "label": "Başını Koru",
+              "textureKey": "item-protect-head"
+            },
+            {
+              "id": "stay-away",
+              "label": "Tehlikeden Uzak Dur",
+              "textureKey": "item-stay-away"
+            },
+            {
+              "id": "report-gas",
+              "label": "Yetkiliye Haber Ver",
+              "textureKey": "item-report-gas"
+            },
+            {
+              "id": "meet-family",
+              "label": "Ailenle Buluş",
+              "textureKey": "item-meet-family"
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "id": "take-bag",
+              "label": "Acil Çantanı Al",
+              "textureKey": "item-emergency-bag"
+            },
+            {
+              "id": "safe-exit",
+              "label": "Güvenle Çık",
+              "textureKey": "item-stop-and-exit"
+            },
+            {
+              "id": "send-message",
+              "label": "Kısa Mesaj At",
+              "textureKey": "item-send-message"
+            },
+            {
+              "id": "meet-family",
+              "label": "Ailenle Buluş",
+              "textureKey": "item-meet-family"
+            }
+          ]
+        }
+      ],
+      "adult": true,
+      "successMessage": "Üç tur tamam",
+      "questions": []
+    },
+    {
+      "id": "memory-bag",
+      "type": "memory",
+      "title": "Sırayı Hatırla",
+      "shortTitle": "Yanan sırayı tekrarla",
+      "instruction": "Daha uzun sırayı izle ve aynı sırayla dokun.",
+      "previewTextureKey": "item-flashlight",
+      "cardTextureKey": "ui-card-blue",
+      "accentColor": 4901631,
+      "memoryPads": [
+        "water",
+        "flashlight",
+        "whistle",
+        "firstAid"
+      ],
+      "sequenceLength": 4,
+      "sequence": [
+        "firstAid",
+        "water",
+        "whistle",
+        "flashlight"
+      ],
+      "adult": true,
+      "successMessage": "Sıra tamam",
+      "rounds": [],
+      "questions": []
+    }
+  ]
+}

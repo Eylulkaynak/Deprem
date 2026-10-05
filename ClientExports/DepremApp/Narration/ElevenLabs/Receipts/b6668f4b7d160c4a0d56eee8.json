@@ -1,0 +1,23 @@
+{
+  "index": 215,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Araçta güvenli yerde durdun. Sonra ne yaparsın?",
+  "sourceFilename": "b6668f4b7d160c4a0d56eee8.mp3",
+  "sourceSha256": "fb0f8cb8c74f65c0f3a1383bb6a65d5b0f5b82d108ac0ddfdf688b1ab9b8ff90",
+  "importedAt": "2026-10-01T03:43:19.977956+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

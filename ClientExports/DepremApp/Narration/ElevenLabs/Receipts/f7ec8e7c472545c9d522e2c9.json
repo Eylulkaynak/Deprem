@@ -1,0 +1,23 @@
+{
+  "index": 244,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binadan çıkarken neyi kullanırsın?",
+  "sourceFilename": "f7ec8e7c472545c9d522e2c9.mp3",
+  "sourceSha256": "0e617e493f065a2ebc7622e04571e06d9b5781861e621ead82ba1b220fe28a76",
+  "importedAt": "2026-10-01T03:50:49.055554+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.810612"
+    }
+  }
+}

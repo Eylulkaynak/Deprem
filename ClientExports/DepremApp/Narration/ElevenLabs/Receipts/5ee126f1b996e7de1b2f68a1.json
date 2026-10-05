@@ -1,0 +1,23 @@
+{
+  "index": 533,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gereksiz taşıma yaralanmayı artırabilir; önce ortam güvenliği değerlendirilmelidir.",
+  "sourceFilename": "5ee126f1b996e7de1b2f68a1.mp3",
+  "sourceSha256": "681004e4811f1165447a22917033b9728aa9f5414fd611296e7e3bbd27af89bb",
+  "importedAt": "2026-10-01T04:46:06.843717+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.075918"
+    }
+  }
+}

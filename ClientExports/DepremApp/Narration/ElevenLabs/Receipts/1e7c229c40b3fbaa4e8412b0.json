@@ -1,0 +1,23 @@
+{
+  "index": 133,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Sağlam masanın altı en güvenli yer.",
+  "sourceFilename": "1e7c229c40b3fbaa4e8412b0.mp3",
+  "sourceSha256": "694d84f07cf7aed1da8ca5208c9d7dfde668b0fe6f8d369c137ba6d91c804986",
+  "importedAt": "2026-10-01T03:25:44.301292+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

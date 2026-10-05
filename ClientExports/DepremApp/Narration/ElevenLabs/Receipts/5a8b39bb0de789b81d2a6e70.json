@@ -1,0 +1,23 @@
+{
+  "index": 498,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Baş-boyun koruması ve sabitlenme ana hedeftir.",
+  "sourceFilename": "5a8b39bb0de789b81d2a6e70.mp3",
+  "sourceSha256": "b0595e0a3126c8c5b68b95136fbf881ed03fbedffba1cd4d99442c501f615f80",
+  "importedAt": "2026-10-01T04:42:20.354312+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

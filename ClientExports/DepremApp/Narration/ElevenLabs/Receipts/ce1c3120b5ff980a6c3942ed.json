@@ -1,0 +1,23 @@
+{
+  "index": 315,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Depremin zamanı önceden bilinemez. Söylentiye kapılma.",
+  "sourceFilename": "ce1c3120b5ff980a6c3942ed.mp3",
+  "sourceSha256": "8a8a29fd9029c80aaac00091a495839068c1c4a05b1355298b9b35fa67ff9e9b",
+  "importedAt": "2026-10-01T04:07:48.786071+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

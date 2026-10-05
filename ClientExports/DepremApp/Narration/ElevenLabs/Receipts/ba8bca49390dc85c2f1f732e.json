@@ -1,0 +1,23 @@
+{
+  "index": 9,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Depremden sonra yeniden sarsıntı olabilir. Bunlara artçı sarsıntı diyoruz. Yeniden sallanırsa öğrendiğin korunma hareketlerini uygula. Hasarlı binalardan uzak dur ve bir büyüğünle birlikte kal.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_08_37_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "99df0613971a3acd46ea07b4c48f359d3b62da051863e83f1b675d4963ca4a71",
+  "importedAt": "2026-10-01T00:09:18.104512+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "13.285714"
+    }
+  }
+}

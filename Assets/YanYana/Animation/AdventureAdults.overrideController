@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AdventureAdults
+  m_Controller: {fileID: 9100000, guid: f7ccd4f2905d0a84dbaeee5af5fedce9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 998de228467030341b9653e5941fa150, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ed4daa1d4d139b2468f6bae0e6001058, type: 2}

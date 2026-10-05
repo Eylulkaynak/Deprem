@@ -1,0 +1,23 @@
+{
+  "index": 351,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] En önemli adım sakin kalıp bir yetişkine haber vermektir. Büyükler doğru yardımı düzenler.",
+  "sourceFilename": "153b6340d84437c8128ede5a.mp3",
+  "sourceSha256": "0f13ecaebdb52403958e5fd59419407c8f3ccd6811028f38a9025e3a73d5fe97",
+  "importedAt": "2026-10-01T04:11:55.202826+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.650612"
+    }
+  }
+}

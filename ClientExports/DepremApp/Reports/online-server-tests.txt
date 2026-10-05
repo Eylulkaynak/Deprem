@@ -1,0 +1,17 @@
+test_all_eight_games_in_both_age_modes_finish_and_rank (test_online.OnlineTests.test_all_eight_games_in_both_age_modes_finish_and_rank) ... ok
+test_best_scores_filters_and_weekly_window (test_online.OnlineTests.test_best_scores_filters_and_weekly_window) ... ok
+test_catch_events_cannot_precede_spawn_or_repeat_for_credit (test_online.OnlineTests.test_catch_events_cannot_precede_spawn_or_repeat_for_credit) ... ok
+test_duplicate_item_and_malformed_batch_do_not_inflate_or_partially_commit (test_online.OnlineTests.test_duplicate_item_and_malformed_batch_do_not_inflate_or_partially_commit) ... ok
+test_friend_request_consent_reverse_request_remove_and_reject (test_online.OnlineTests.test_friend_request_consent_reverse_request_remove_and_reject) ... ok
+test_leave_timeout_ack_and_lobby_expiry (test_online.OnlineTests.test_leave_timeout_ack_and_lobby_expiry) ... ok
+test_memory_error_and_replay_reset_progress_without_extra_points (test_online.OnlineTests.test_memory_error_and_replay_reset_progress_without_extra_points) ... ok
+test_private_invite_access_and_decline (test_online.OnlineTests.test_private_invite_access_and_decline) ... ok
+test_room_retry_capacity_and_common_round (test_online.OnlineTests.test_room_retry_capacity_and_common_round) ... ok
+test_server_scores_actions_and_retries_exactly_once (test_online.OnlineTests.test_server_scores_actions_and_retries_exactly_once) ... ok
+test_session_is_idempotent_private_and_persistent (test_online.OnlineTests.test_session_is_idempotent_private_and_persistent) ... ok
+test_wsgi_validation_and_real_two_client_http_flow (test_online.OnlineTests.test_wsgi_validation_and_real_two_client_http_flow) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 17.345s
+
+OK

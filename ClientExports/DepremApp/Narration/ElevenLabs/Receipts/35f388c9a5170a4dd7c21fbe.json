@@ -1,0 +1,23 @@
+{
+  "index": 342,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Birinin kolu kanıyor. İlk ne yaparsın?",
+  "sourceFilename": "35f388c9a5170a4dd7c21fbe.mp3",
+  "sourceSha256": "316d420a3dce6cc8bd8185219dbcb060011a712d46841eb53333245ad2ea2d8d",
+  "importedAt": "2026-10-01T04:11:02.624170+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.124082"
+    }
+  }
+}

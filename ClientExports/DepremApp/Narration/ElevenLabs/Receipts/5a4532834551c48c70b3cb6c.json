@@ -1,0 +1,23 @@
+{
+  "index": 165,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sokakta yürürken deprem oldu. Nereye gitmelisin?",
+  "sourceFilename": "5a4532834551c48c70b3cb6c.mp3",
+  "sourceSha256": "63bd6e9c2574373b0e3bb58b8fea8e9fa64e22ced4a66b2d0bcb94a06b11cd6c",
+  "importedAt": "2026-10-01T03:31:41.598331+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.829388"
+    }
+  }
+}

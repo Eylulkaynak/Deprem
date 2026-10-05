@@ -1,0 +1,23 @@
+{
+  "index": 71,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Parfüm",
+  "sourceFilename": "c3e18f87b7369494265ee122.mp3",
+  "sourceSha256": "81585f268980be369eb6c656a83e0a3dbeb4b5875b50c07abf28487ddce59922",
+  "importedAt": "2026-10-01T01:02:11.867224+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.269388"
+    }
+  }
+}

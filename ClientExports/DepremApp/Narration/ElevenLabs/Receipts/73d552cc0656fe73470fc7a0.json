@@ -1,0 +1,23 @@
+{
+  "index": 0,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Haydi, acil durum çantamızı tanıyalım. Bu çantayı bir büyüğümüzle birlikte, deprem olmadan önce hazırlarız. İçine su, el feneri ve ihtiyaç duyabileceğimiz eşyaları koyarız. Çantamızın yerini ailece biliriz.",
+  "sourceFilename": "elevenlabs-nisa-ornek.mp3",
+  "sourceSha256": "83df3a8f8d9e61a5bad70f366cf9462c7e9c923ed720af1d06642414fadb7b06",
+  "importedAt": "2026-10-01T00:03:07.291486+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "14.487347"
+    }
+  }
+}

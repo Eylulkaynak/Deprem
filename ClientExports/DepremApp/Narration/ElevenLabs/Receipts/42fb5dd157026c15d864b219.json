@@ -1,0 +1,23 @@
+{
+  "index": 172,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem sırasında elektrik tellerine ve direklere yaklaşmak güvenlidir.",
+  "sourceFilename": "42fb5dd157026c15d864b219.mp3",
+  "sourceSha256": "e522229189db508153d7cb116d0dbda956797e4ce5901b47cebbd8f3fba82a0a",
+  "importedAt": "2026-10-01T03:33:24.827065+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

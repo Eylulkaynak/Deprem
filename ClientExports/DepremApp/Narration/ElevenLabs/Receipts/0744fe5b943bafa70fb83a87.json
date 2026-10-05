@@ -1,0 +1,23 @@
+{
+  "index": 134,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sağlam masanın altına",
+  "sourceFilename": "0744fe5b943bafa70fb83a87.mp3",
+  "sourceSha256": "1bdd5d84ad879d2d29a39faf4ad1cbdce8b19a5fb09715211fc98bc80c448d56",
+  "importedAt": "2026-10-01T03:27:11.351716+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.235918"
+    }
+  }
+}

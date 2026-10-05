@@ -1,0 +1,23 @@
+{
+  "index": 301,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Girmem, dışarıda beklerim",
+  "sourceFilename": "c31da02a7b0bd6ab96356b50.mp3",
+  "sourceSha256": "717a3acbb27b0c3530a62d7cb72a7ba29e39824e0cc0ddad7568f5334cb97a17",
+  "importedAt": "2026-10-01T03:56:59.393714+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

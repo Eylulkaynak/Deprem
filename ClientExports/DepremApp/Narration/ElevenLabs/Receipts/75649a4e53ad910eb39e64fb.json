@@ -1,0 +1,23 @@
+{
+  "index": 166,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bina ve direklerin dibi tehlikelidir; üstüne parça düşebilir.",
+  "sourceFilename": "75649a4e53ad910eb39e64fb.mp3",
+  "sourceSha256": "228dd99a7fbe425caae8d4d438e6cba7e5c8ac0fc3f70e7e53adf33510a6087f",
+  "importedAt": "2026-10-01T03:31:42.985243+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.404082"
+    }
+  }
+}

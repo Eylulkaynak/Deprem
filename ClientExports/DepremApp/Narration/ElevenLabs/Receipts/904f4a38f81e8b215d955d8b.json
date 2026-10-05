@@ -1,0 +1,23 @@
+{
+  "index": 449,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansörle aşağı inmek",
+  "sourceFilename": "904f4a38f81e8b215d955d8b.mp3",
+  "sourceSha256": "92c742518364e4882fbb5ba343232991e779824094632a8beb4d3d2ea6c6a8fd",
+  "importedAt": "2026-10-01T04:26:38.179373+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

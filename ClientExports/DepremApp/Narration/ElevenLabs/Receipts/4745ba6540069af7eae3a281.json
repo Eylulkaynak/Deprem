@@ -1,0 +1,23 @@
+{
+  "index": 553,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kapı önü, koridor ve çıkış yollarını eşya ile kapatma.",
+  "sourceFilename": "4745ba6540069af7eae3a281.mp3",
+  "sourceSha256": "e8f9398b5a5a8e67997862670ee50815cb86a70d440f62539c1fb953cfb8aab9",
+  "importedAt": "2026-10-01T04:49:18.309092+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.560816"
+    }
+  }
+}

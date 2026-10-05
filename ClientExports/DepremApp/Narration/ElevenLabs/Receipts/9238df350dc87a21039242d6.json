@@ -1,0 +1,23 @@
+{
+  "index": 520,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] En yakın katta çık",
+  "sourceFilename": "9238df350dc87a21039242d6.mp3",
+  "sourceSha256": "d61a8310b78ca9d5af75a651aa6115797827e9d6a8b14de28bb15318700e345f",
+  "importedAt": "2026-10-01T04:44:39.563204+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

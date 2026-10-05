@@ -1,0 +1,23 @@
+{
+  "index": 459,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Balkon altı",
+  "sourceFilename": "54f27ac92796b1af53235a01.mp3",
+  "sourceSha256": "5b69efeaa10d5e1a260dfa3cf81c54fa8d9b2f71116e07433a7f14ac94c03f2c",
+  "importedAt": "2026-10-01T04:38:12.758496+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

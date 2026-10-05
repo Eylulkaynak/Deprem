@@ -1,0 +1,23 @@
+{
+  "index": 412,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çöker, kapanır, tutunurum",
+  "sourceFilename": "85d8dd08e3a487281be80237.mp3",
+  "sourceSha256": "43b34268bbecb8a35c790f44722ced094b7a33aa3195b78c57e03b369520e334",
+  "importedAt": "2026-10-01T04:18:24.904906+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.280816"
+    }
+  }
+}

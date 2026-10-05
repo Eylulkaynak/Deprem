@@ -1,0 +1,23 @@
+{
+  "index": 589,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Son testten önce ana kararları zihinde netleştir. Deprem öncesi risk azaltma, iletişim planı ve afet çantası tamamlanmalı. Sarsıntı anında korunma refleksi, koşmadan ve camlardan uzak uygulanmalı. Sarsıntı sonrası hasarlı bina, gaz kokusu ve yanlış bilgi riskleri yönetilmeli. Tatbikat ve periyodik kontrol, bilgiyi sürdürülebilir davranışa çevirir. Son adım: Genel anlama testini doğru yanıtlayarak eğitimi tamamla.",
+  "sourceFilename": "910ab2120da5e2d9e6530bb2.mp3",
+  "sourceSha256": "cd69b78bd0bceeec042ce9af7f6d36df4c1e6023b4bdece2395121f5dbe8ac02",
+  "importedAt": "2026-10-01T04:55:28.960160+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "28.567347"
+    }
+  }
+}

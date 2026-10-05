@@ -131,7 +131,7 @@ namespace YanYana.Editor
                 var start = name == "Ada" ? "Anchor_Start" : "Anchor_" + name;
                 person.transform.position = anchors.ContainsKey(start) ? anchors[start].position : street.ContainsKey(name)?street[name].position:street["Aid"].position;
                 person.transform.rotation = Quaternion.Euler(0, 180, 0);
-                var animator = person.GetComponentInChildren<Animator>(); animator.runtimeAnimatorController = actorController; animator.Rebind(); animator.Update(0);
+                var animator = person.GetComponentInChildren<Animator>(); animator.runtimeAnimatorController = YanYanaAdultLocomotion.ForCharacter(name, actorController); animator.Rebind(); animator.Update(0);
                 GroundAnimatedVisual(person);
                 cast[name] = person;
                 float height = YanYanaCharacterStyle.Heights[Array.IndexOf(Names, name)];

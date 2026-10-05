@@ -1,0 +1,23 @@
+{
+  "index": 324,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Durmadan yüksek sesle bağır",
+  "sourceFilename": "56a6d3212d741806240e0659.mp3",
+  "sourceSha256": "d8fe1a7b78f5e17e57f8f2484d2fe104702a1b602d734bff7460ab20d7493009",
+  "importedAt": "2026-10-01T04:08:50.561698+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.392653"
+    }
+  }
+}

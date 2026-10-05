@@ -1,0 +1,18 @@
+PASS presentation: Story_Rebuild_MainMenu; 13 converted labels; non-blocking guides; artwork resolved.
+PASS: short captions and icons in bridge return/resume dialog.
+PASS presentation: Story_01_RebuildPreview; 35 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_01_RebuildPreview visible pause/resume via raycast.
+PASS: muted picture dialogue reveals immediately and advances through its existing tap callback.
+PASS presentation: Story_02_RebuildPreview; 23 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_02_RebuildPreview visible pause/resume via raycast.
+PASS presentation: Story_03_RebuildPreview; 23 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_03_RebuildPreview visible pause/resume via raycast.
+PASS presentation: Story_04_RebuildPreview; 31 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_04_RebuildPreview visible pause/resume via raycast.
+PASS presentation: YanYana_Adventure; 60 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: YanYana_Adventure intro; 60 converted labels; non-blocking guides; artwork resolved.
+PASS input: Yan Yana new/pause/resume via raycast.
+PASS presentation: tablet Story 01; 35 converted labels; non-blocking guides; artwork resolved.
+PASS: adult text preserved.
+PASS: no runtime errors.
+RESTORED: learning store, story/minigame saves, Yan Yana preferences, audio and Game View.

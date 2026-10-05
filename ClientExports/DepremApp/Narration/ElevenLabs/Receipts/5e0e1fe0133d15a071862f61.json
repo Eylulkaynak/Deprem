@@ -1,0 +1,23 @@
+{
+  "index": 298,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sallanma durdu. Buluşma noktasında beklerken arkadaşın \"içeri girip oyuncağını alalım\" dedi. Ne yaparsın?",
+  "sourceFilename": "5e0e1fe0133d15a071862f61.mp3",
+  "sourceSha256": "428eb5feeaa3089d686abcbc0f527470c666b90504619918e7fef0ac44facfe3",
+  "importedAt": "2026-10-01T03:56:41.548442+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.747755"
+    }
+  }
+}

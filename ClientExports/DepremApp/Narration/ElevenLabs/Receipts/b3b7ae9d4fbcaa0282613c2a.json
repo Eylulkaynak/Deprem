@@ -1,0 +1,23 @@
+{
+  "index": 257,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Büyüğüme haber veririm",
+  "sourceFilename": "b3b7ae9d4fbcaa0282613c2a.mp3",
+  "sourceSha256": "c0981b84e2797e6c3b3aca7fbb0e63b18501736580e4542be3623ea356fd23f4",
+  "importedAt": "2026-10-01T03:52:14.791491+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.000816"
+    }
+  }
+}

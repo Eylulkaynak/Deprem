@@ -1,0 +1,23 @@
+{
+  "index": 615,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Toplanma alanı aile planında önceden belirlenmelidir.",
+  "sourceFilename": "052b70e704fef6ab990e80af.mp3",
+  "sourceSha256": "5feb4015de62e9500ad3c077e4dbe0bc4fa4d91c94dc8e1ec7aa19acae8e9c68",
+  "importedAt": "2026-10-01T05:06:18.051030+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

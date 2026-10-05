@@ -1,0 +1,23 @@
+{
+  "index": 239,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çıplak ayak yürümek camla yaralanmana yol açabilir.",
+  "sourceFilename": "15fe45354c5d9d7eddd51fc7.mp3",
+  "sourceSha256": "6cc0ec136d7a65166a0f25bb9dae1fe200f67627f15ed1ad10a4bbc424032fd3",
+  "importedAt": "2026-10-01T03:50:10.742216+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

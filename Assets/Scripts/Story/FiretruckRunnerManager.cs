@@ -64,7 +64,7 @@ namespace Deprem.Story
         private Vector2 pointerStart;
 
         public float RemainingSeconds => running
-            ? Mathf.Max(0f, runDuration - (Time.unscaledTime - runStartedAt))
+            ? Mathf.Max(0f, runDuration - (Time.time - runStartedAt))
             : runDuration;
         public int CollisionCount => collisionCount;
         public int CollectedCoinCount => coinCount;
@@ -93,6 +93,12 @@ namespace Deprem.Story
 
         private void Update()
         {
+            if (Time.timeScale <= 0f)
+            {
+                pointerTracking = false;
+                steeringInput = smoothedSteering = scriptedSteering = 0f;
+                return;
+            }
             AnimateBeacons();
             AnimateCoins();
             FadeHitFlash();
@@ -102,7 +108,7 @@ namespace Deprem.Story
 
             if (!running)
             {
-                countdownRemaining -= Time.unscaledDeltaTime;
+                countdownRemaining -= Time.deltaTime;
                 if (countdownText != null)
                 {
                     countdownText.gameObject.SetActive(true);
@@ -121,7 +127,7 @@ namespace Deprem.Story
             DetectObstacleHits();
             DetectCoinPickups();
 
-            float elapsed = Time.unscaledTime - runStartedAt;
+            float elapsed = Time.time - runStartedAt;
             UpdateHud(Mathf.Max(0f, runDuration - elapsed));
             if (elapsed >= runDuration)
                 FinishRun();
@@ -129,28 +135,28 @@ namespace Deprem.Story
 
         private void LateUpdate()
         {
-            if (runnerCamera == null || truck == null)
+            if (Time.timeScale <= 0f || runnerCamera == null || truck == null)
                 return;
 
             Vector3 cameraTarget = truck.position + new Vector3(0f, 5.8f, -11.8f);
-            if (Time.unscaledTime < cameraShakeUntil)
+            if (Time.time < cameraShakeUntil)
             {
-                float strength = (cameraShakeUntil - Time.unscaledTime) * 0.24f;
+                float strength = (cameraShakeUntil - Time.time) * 0.24f;
                 cameraTarget += new Vector3(
-                    Mathf.Sin(Time.unscaledTime * 48f),
-                    Mathf.Cos(Time.unscaledTime * 39f),
+                    Mathf.Sin(Time.time * 48f),
+                    Mathf.Cos(Time.time * 39f),
                     0f) * strength;
             }
 
             runnerCamera.transform.position = Vector3.Lerp(
                 runnerCamera.transform.position,
                 cameraTarget,
-                1f - Mathf.Exp(-8f * Time.unscaledDeltaTime));
+                1f - Mathf.Exp(-8f * Time.deltaTime));
             Vector3 lookTarget = truck.position + new Vector3(0f, 1.15f, 8.5f);
             runnerCamera.transform.rotation = Quaternion.Slerp(
                 runnerCamera.transform.rotation,
                 Quaternion.LookRotation(lookTarget - runnerCamera.transform.position, Vector3.up),
-                1f - Mathf.Exp(-10f * Time.unscaledDeltaTime));
+                1f - Mathf.Exp(-10f * Time.deltaTime));
         }
 
         public void Restart()
@@ -163,7 +169,7 @@ namespace Deprem.Story
         private void BeginRun()
         {
             running = true;
-            runStartedAt = Time.unscaledTime;
+            runStartedAt = Time.time;
             if (countdownText != null)
                 countdownText.gameObject.SetActive(false);
             if (missionText != null)
@@ -193,14 +199,14 @@ namespace Deprem.Story
                 pointerTracking = false;
 
             if (!pointerTracking && Mathf.Abs(desired) < 0.01f &&
-                Time.unscaledTime < scriptedSteerUntil)
+                Time.time < scriptedSteerUntil)
                 desired = scriptedSteering;
 
             steeringInput = desired;
             smoothedSteering = Mathf.MoveTowards(
                 smoothedSteering,
                 steeringInput,
-                steeringResponse * Time.unscaledDeltaTime);
+                steeringResponse * Time.deltaTime);
         }
 
         // Compatibility hook for authored captures/tests. This now feeds steering
@@ -208,19 +214,19 @@ namespace Deprem.Story
         private void ChangeLane(int direction)
         {
             scriptedSteering = Mathf.Clamp(direction, -1, 1);
-            scriptedSteerUntil = Time.unscaledTime + 0.65f;
+            scriptedSteerUntil = Time.time + 0.65f;
         }
 
         private void MoveTruck()
         {
             Vector3 position = truck.position;
             position.x = Mathf.Clamp(
-                position.x + smoothedSteering * laneChangeSpeed * Time.unscaledDeltaTime,
+                position.x + smoothedSteering * laneChangeSpeed * Time.deltaTime,
                 -laneWidth,
                 laneWidth);
 
-            float speedFactor = Time.unscaledTime < slowUntil ? 0.48f : 1f;
-            position.z += forwardSpeed * speedFactor * Time.unscaledDeltaTime;
+            float speedFactor = Time.time < slowUntil ? 0.48f : 1f;
+            position.z += forwardSpeed * speedFactor * Time.deltaTime;
             truck.position = position;
 
             float lean = -smoothedSteering * 5f;
@@ -228,7 +234,7 @@ namespace Deprem.Story
             truck.rotation = Quaternion.Slerp(
                 truck.rotation,
                 Quaternion.Euler(0f, yaw, lean),
-                1f - Mathf.Exp(-9f * Time.unscaledDeltaTime));
+                1f - Mathf.Exp(-9f * Time.deltaTime));
             if (engineAudio != null)
                 engineAudio.pitch = Mathf.Lerp(engineAudio.pitch, speedFactor < 1f ? 0.72f : 1.05f, 0.1f);
         }
@@ -259,8 +265,8 @@ namespace Deprem.Story
         {
             obstacleHit[obstacleIndex] = true;
             collisionCount++;
-            slowUntil = Time.unscaledTime + 0.82f;
-            cameraShakeUntil = Time.unscaledTime + 0.48f;
+            slowUntil = Time.time + 0.82f;
+            cameraShakeUntil = Time.time + 0.48f;
             if (hitFlash != null)
                 hitFlash.alpha = 0.72f;
             if (hitAudio != null)
@@ -346,7 +352,7 @@ namespace Deprem.Story
 
         private void AnimateBeacons()
         {
-            float pulse = Mathf.PingPong(Time.unscaledTime * 5.5f, 1f);
+            float pulse = Mathf.PingPong(Time.time * 5.5f, 1f);
             if (redBeacon != null)
                 redBeacon.intensity = pulse > 0.52f ? 4.2f : 0.35f;
             if (blueBeacon != null)
@@ -358,7 +364,7 @@ namespace Deprem.Story
             if (coins == null)
                 return;
 
-            float rotation = 110f * Time.unscaledDeltaTime;
+            float rotation = 110f * Time.deltaTime;
             for (int i = 0; i < coins.Length; i++)
             {
                 if (!coinCollected[i] && coins[i] != null)
@@ -370,7 +376,7 @@ namespace Deprem.Story
         {
             if (hitFlash == null || hitFlash.alpha <= 0f)
                 return;
-            hitFlash.alpha = Mathf.MoveTowards(hitFlash.alpha, 0f, Time.unscaledDeltaTime * 1.7f);
+            hitFlash.alpha = Mathf.MoveTowards(hitFlash.alpha, 0f, Time.deltaTime * 1.7f);
             if (hitFlash.alpha <= 0.05f && running && missionText != null)
                 missionText.text = "30 SANİYE DAYAN • BASILI TUT VE YÖNLENDİR";
         }

@@ -1,0 +1,23 @@
+{
+  "index": 305,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Herkesin söylediği doğru olmayabilir. Resmi kaynağa güven.",
+  "sourceFilename": "f75e336b6704e06373e51365.mp3",
+  "sourceSha256": "085611efa11c66b1c88182f0165b34cc7695d277499d7408980fe76b5b9513c6",
+  "importedAt": "2026-10-01T03:57:19.194036+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.404082"
+    }
+  }
+}

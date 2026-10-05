@@ -1,0 +1,23 @@
+{
+  "index": 189,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çıkışlara hücum tehlikelidir; önce çök, kapan, tutun yap ve öğretmeni dinle.",
+  "sourceFilename": "5f97e87be4e1ebd7da025a9e.mp3",
+  "sourceSha256": "e03d5af229b27abdbee6f302e7c7fe132f5f02c2f6df1a3ff703e2058350f4f1",
+  "importedAt": "2026-10-01T03:34:43.072037+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.467755"
+    }
+  }
+}

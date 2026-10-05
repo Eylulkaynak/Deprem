@@ -1,0 +1,23 @@
+{
+  "index": 84,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binaya geri girerim",
+  "sourceFilename": "a031b68722b5557012241ebe.mp3",
+  "sourceSha256": "f31cb397df0c7d3c2a6a436eb594da4fd449b38d739c6e19887471848340bf75",
+  "importedAt": "2026-10-01T01:04:22.081158+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

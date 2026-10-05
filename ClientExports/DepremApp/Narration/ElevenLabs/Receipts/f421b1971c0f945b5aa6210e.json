@@ -1,0 +1,23 @@
+{
+  "index": 233,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Artçılar hasarlı yerleri daha çok yıkabilir; uzak dur.",
+  "sourceFilename": "f421b1971c0f945b5aa6210e.mp3",
+  "sourceSha256": "420202328831f600e36b74afce3af476e0dec3780174f4341337261133d4a6bc",
+  "importedAt": "2026-10-01T03:49:34.753490+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.090612"
+    }
+  }
+}

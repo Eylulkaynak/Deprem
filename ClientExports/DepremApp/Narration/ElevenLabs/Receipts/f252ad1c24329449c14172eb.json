@@ -1,0 +1,23 @@
+{
+  "index": 378,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Panikle dışarı koşarım",
+  "sourceFilename": "f252ad1c24329449c14172eb.mp3",
+  "sourceSha256": "ccc90aafa4ec4a34ac0ddc650409b97cced6dda8e2c87488a05591b164b95d23",
+  "importedAt": "2026-10-01T04:14:52.499603+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

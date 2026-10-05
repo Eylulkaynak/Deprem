@@ -126,7 +126,7 @@ namespace Deprem.Minigames
 
         private void Update()
         {
-            if (finished)
+            if (finished || Time.timeScale <= 0f)
             {
                 SetSpraying(false);
                 return;
@@ -134,7 +134,7 @@ namespace Deprem.Minigames
 
             // Editor/ci Play Mode girişinde ilk kare onlarca saniye raporlanabilir.
             // Tek bir takılan kare bütün turu bitirmesin ve yangını aniden söndürmesin.
-            float frameDelta = Mathf.Clamp(Time.unscaledDeltaTime, 0f, 0.1f);
+            float frameDelta = Mathf.Clamp(Time.deltaTime, 0f, 0.1f);
             elapsedSeconds += frameDelta;
             if (RemainingSeconds <= 0f)
             {
@@ -161,7 +161,8 @@ namespace Deprem.Minigames
 
         private void LateUpdate()
         {
-            UpdateFirefighterAimRig(Mathf.Clamp(Time.unscaledDeltaTime, 0f, 0.1f));
+            if (Time.timeScale <= 0f) return;
+            UpdateFirefighterAimRig(Mathf.Clamp(Time.deltaTime, 0f, 0.1f));
         }
 
         public void PoseForEditorPreview(Vector3 aimPoint)
@@ -341,7 +342,7 @@ namespace Deprem.Minigames
                 float t = index / (segmentCount - 1f);
                 Vector3 position = start + delta * t;
                 position += Vector3.up * (Mathf.Sin(t * Mathf.PI) * 0.18f);
-                float ripple = Mathf.Sin(Time.unscaledTime * 44f + index * 1.7f) * 0.018f * t;
+                float ripple = Mathf.Sin(Time.time * 44f + index * 1.7f) * 0.018f * t;
                 position += worldCamera.transform.right * ripple;
                 waterStream.SetPosition(index, position);
             }

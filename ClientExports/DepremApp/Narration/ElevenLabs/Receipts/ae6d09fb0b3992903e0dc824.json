@@ -1,0 +1,23 @@
+{
+  "index": 21,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Haydi, çantamızı birlikte hazırlayalım. İhtiyacımız olan eşyaları bul. Seçtiğin eşyaya dokunabilir ya da onu çantaya sürükleyebilirsin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_11_15_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "918afa767a9f751130e1e1e5e2de9c8becc63fe0907ce2c52acd05c15c67d0dd",
+  "importedAt": "2026-10-01T00:11:54.992596+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.288980"
+    }
+  }
+}

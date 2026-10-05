@@ -1,0 +1,23 @@
+{
+  "index": 389,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Eğilip tele dokunurum",
+  "sourceFilename": "b7e120c6600b5c7974c653c9.mp3",
+  "sourceSha256": "1b61bf48d7c2e6f52d01e574f50525327f3a3648c11793de958e42cd295ea556",
+  "importedAt": "2026-10-01T04:16:03.124737+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 62,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Oyuncak bizi karanlıkta koruyamaz. Işık veren şeyi seç.",
+  "sourceFilename": "0d6c7cdec39c26c1bb202b33.mp3",
+  "sourceSha256": "9abe50be7fefae219de57d82de89e6596676b6a11808a2d8584796e99677d1fe",
+  "importedAt": "2026-10-01T01:00:40.414877+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.247347"
+    }
+  }
+}

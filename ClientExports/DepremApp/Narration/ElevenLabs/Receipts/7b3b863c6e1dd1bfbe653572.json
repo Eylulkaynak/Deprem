@@ -1,0 +1,23 @@
+{
+  "index": 173,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Teller ve direkler tehlikelidir; uzak durmalısın.",
+  "sourceFilename": "7b3b863c6e1dd1bfbe653572.mp3",
+  "sourceSha256": "1fd563806ca4f9ebf41ac3d63161a69665c6ee10142587bab5bcbe7317a73697",
+  "importedAt": "2026-10-01T03:33:26.311506+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

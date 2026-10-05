@@ -1,0 +1,124 @@
+{
+  "scope": "Latest successful result for each of 17 distinct Unity PlayMode checks.",
+  "passed": 17,
+  "failed": 0,
+  "shared_minigame_tasks": 38,
+  "street_evacuation_stages": 15,
+  "story_chapters": 4,
+  "prepared_adventure_completed": true,
+  "adventure_source": "ClientExports\\YanYana\\Reports\\physical-recorded-route-2.txt",
+  "visual_sources": [
+    "ClientExports\\DepremApp\\Visual3D\\verification.txt",
+    "ClientExports\\DepremApp\\Visual3D\\scenario.txt",
+    "ClientExports\\DepremApp\\Visual3D\\adventure.txt"
+  ],
+  "sources": [
+    "gameplay.results.xml",
+    "bag-input.results.xml"
+  ],
+  "note": "The full run recorded 16 passes and one failure caused by a disconnected editor MCP client logging a transport error. The bag input test was rerun and passed. Raw reports remain intact. Gameplay errors are not ignored.",
+  "tests": [
+    {
+      "name": "MinigamePackagePlayModeTests.AftershockCover_ErrorCorrectionThenEndToEndCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "138.641042"
+    },
+    {
+      "name": "MinigamePackagePlayModeTests.EmergencyBagRush_EndToEndCompletion",
+      "result": "Passed",
+      "source": "bag-input.results.xml",
+      "duration_seconds": "8.194939"
+    },
+    {
+      "name": "MinigamePackagePlayModeTests.EmergencyCorridor_EndToEndCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "42.183488"
+    },
+    {
+      "name": "MinigamePackagePlayModeTests.RoomSafety_EndToEndCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "6.496599"
+    },
+    {
+      "name": "MinigamePackagePlayModeTests.RubbleSignal_EndToEndCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "6.764154"
+    },
+    {
+      "name": "StoryEvacuation25DPlayModeTests.FifteenStageRoute_PlaysToAssemblySuccess",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "5.247247"
+    },
+    {
+      "name": "StoryRebuildWalkthroughPlayModeTests.Story01_Preparation_PlaysToCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "53.670853"
+    },
+    {
+      "name": "StoryRebuildWalkthroughPlayModeTests.Story02_HomeSafety_PlaysToCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "27.914239"
+    },
+    {
+      "name": "StoryRebuildWalkthroughPlayModeTests.Story03_Quake_PlaysToCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "61.178309"
+    },
+    {
+      "name": "StoryRebuildWalkthroughPlayModeTests.Story04_Evacuation_PlaysToCompletion",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "28.541494"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.ResetStage_CancelsPendingSnapAndDelayedAdvance",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "4.205443"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.ReturnDialog_FreezesStoryDialogueAndRestoresExistingPause",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "4.322800"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.ScenarioJourney_RequiresCompletionPreservesRetryAndVisitsEveryPhase",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "15.310479"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.SharedStage_PauseFreezesTimerAndCancelsHoldWithoutPenalty",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "2.998685"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.StageCamera_PauseKeepsFrameAndResumesTransition",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "3.469707"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.StreetHazards_ReportAndDetourPreserveDamagedUtilitiesAndLooseRubble",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "0.641267"
+    },
+    {
+      "name": "ThreeDPolishPlayModeTests.VehicleAndFire_PauseFreezesGameplayAndResumes",
+      "result": "Passed",
+      "source": "gameplay.results.xml",
+      "duration_seconds": "2.050468"
+    }
+  ]
+}

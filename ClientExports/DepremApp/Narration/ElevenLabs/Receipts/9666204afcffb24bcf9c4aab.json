@@ -1,0 +1,23 @@
+{
+  "index": 368,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntıda korunma hareketlerini yaparken korktun. Ne yapabilirsin?",
+  "sourceFilename": "9666204afcffb24bcf9c4aab.mp3",
+  "sourceSha256": "87fdd429f2f95e3bd3e5fd40989e8835f4175ceda9ee4e3bd482218224e493ca",
+  "importedAt": "2026-10-01T04:13:44.854660+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.874286"
+    }
+  }
+}

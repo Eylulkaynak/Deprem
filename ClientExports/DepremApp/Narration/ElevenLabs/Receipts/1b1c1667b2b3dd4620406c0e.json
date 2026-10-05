@@ -1,0 +1,23 @@
+{
+  "index": 311,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yanlış haber korkuyu artırır. Önce doğru mu diye kontrol et.",
+  "sourceFilename": "1b1c1667b2b3dd4620406c0e.mp3",
+  "sourceSha256": "732ba2407737c419e087d0d867aefa5cfc3e0c1f14682c7ce1d4005ee7831561",
+  "importedAt": "2026-10-01T04:07:20.863015+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.874286"
+    }
+  }
+}

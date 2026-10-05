@@ -1,0 +1,23 @@
+{
+  "index": 590,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Su dök",
+  "sourceFilename": "1ef5af2feaf60139eae8d714.mp3",
+  "sourceSha256": "6d442b530d5ae42e570d66e89191507b3e8b09302c1c687e14f0d88e6cce3053",
+  "importedAt": "2026-10-01T04:00:22.107617+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.347755"
+    }
+  }
+}

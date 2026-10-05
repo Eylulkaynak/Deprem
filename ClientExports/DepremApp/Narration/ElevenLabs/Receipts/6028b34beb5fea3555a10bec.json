@@ -1,0 +1,23 @@
+{
+  "index": 179,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başımı koruyup beklerim",
+  "sourceFilename": "6028b34beb5fea3555a10bec.mp3",
+  "sourceSha256": "7f6c78f304e4ce60c2d43fe2fd9b2227f18f9cda8d30fd978462c93dd58a0d31",
+  "importedAt": "2026-10-01T03:33:48.179034+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.235918"
+    }
+  }
+}

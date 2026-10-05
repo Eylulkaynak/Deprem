@@ -1,0 +1,23 @@
+{
+  "index": 297,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binaya geri dönmek tehlikelidir, artçı sarsıntılar olabilir. Buluşma noktasında büyüklerinle bekle.",
+  "sourceFilename": "fa26217fe2ea80e0bd598013.mp3",
+  "sourceSha256": "212d323f837f816d98fe9b5d7c6e88dbe6a365394c30067dba59a3193cbe7f4f",
+  "importedAt": "2026-10-01T03:56:35.526719+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.467755"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 595,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sürekli bağır",
+  "sourceFilename": "595c53572ca974ceb9044219.mp3",
+  "sourceSha256": "0e46ab2ca6fe15bdae6376124129c6db469a1af47281069c8256d287b9356cbb",
+  "importedAt": "2026-10-01T04:55:54.844558+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.765714"
+    }
+  }
+}

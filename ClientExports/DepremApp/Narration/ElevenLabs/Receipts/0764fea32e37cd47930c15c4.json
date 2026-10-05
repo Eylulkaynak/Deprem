@@ -1,0 +1,23 @@
+{
+  "index": 196,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Öğretmenini dinleyince sıralı ve güvenli çıkarsın.",
+  "sourceFilename": "0764fea32e37cd47930c15c4.mp3",
+  "sourceSha256": "6a07b5a7a3d4a01af4fe13b1f88622a3b619ef3fbdf9f760a7e6b0f594eafa50",
+  "importedAt": "2026-10-01T03:35:33.903416+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

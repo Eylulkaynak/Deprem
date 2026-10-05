@@ -1,0 +1,23 @@
+{
+  "index": 460,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Balkona çık",
+  "sourceFilename": "060a81c0617493cb2a4e67f8.mp3",
+  "sourceSha256": "77ad0307da34eed5e263e9faf676556732b0aaf4d77452f6b27d5001fc58ee3e",
+  "importedAt": "2026-10-01T04:38:18.954585+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+PASS Derya: min sole up=0,741; bank=10,68; yaw=46,57; frame turn=10,39; seam=0,00; worst=speed=1,8 frame=81 side=1
+PASS Emre: min sole up=0,741; bank=10,69; yaw=46,60; frame turn=10,38; seam=0,00; worst=speed=1,8 frame=81 side=1
+PASS Yusuf: min sole up=0,741; bank=10,69; yaw=46,60; frame turn=10,38; seam=0,00; worst=speed=1,8 frame=81 side=1
+PASS Idil: min sole up=0,741; bank=11,03; yaw=46,81; frame turn=10,36; seam=0,00; worst=speed=1,8 frame=81 side=1
+PASS Bora: min sole up=0,741; bank=10,96; yaw=46,77; frame turn=10,37; seam=0,00; worst=speed=1,8 frame=81 side=1
+PASS adult/neighbor assignments, child controllers and story poses

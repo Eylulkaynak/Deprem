@@ -1,0 +1,23 @@
+{
+  "index": 471,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bina cepheleri ve enerji hatları",
+  "sourceFilename": "967694998bb31dc15d314801.mp3",
+  "sourceSha256": "10f2843ad8318fdd3e039178acf4141619e9995701ae17389bab891554123765",
+  "importedAt": "2026-10-01T04:39:24.444822+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.045714"
+    }
+  }
+}

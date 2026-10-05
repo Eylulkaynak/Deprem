@@ -1,0 +1,23 @@
+{
+  "index": 492,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Depremden Önce",
+  "sourceFilename": "5c8067e547c8fb6d24b640f6.mp3",
+  "sourceSha256": "edacdc3bcc76fc6e08399396094ef4dd08ecd7ebdb41590a9666a93537c155ab",
+  "importedAt": "2026-10-01T04:41:45.571602+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

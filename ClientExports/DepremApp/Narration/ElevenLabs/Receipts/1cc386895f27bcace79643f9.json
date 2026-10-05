@@ -1,0 +1,23 @@
+{
+  "index": 99,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Dolabın bir yetişkin tarafından uygun biçimde sabitlenmesi devrilme riskini azaltır.",
+  "sourceFilename": "1cc386895f27bcace79643f9.mp3",
+  "sourceSha256": "20d044580aa2fbf43239572a23e0644f11091dc0bf917a012eae19143b4e1a3e",
+  "importedAt": "2026-10-01T01:06:29.644943+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.728980"
+    }
+  }
+}

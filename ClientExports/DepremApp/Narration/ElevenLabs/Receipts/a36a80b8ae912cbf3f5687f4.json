@@ -1,0 +1,23 @@
+{
+  "index": 627,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Vitrin kenarı",
+  "sourceFilename": "a36a80b8ae912cbf3f5687f4.mp3",
+  "sourceSha256": "19dfe6c698a3f6632c762e5f29f595077fc8bfbb8b3507ec33da3e463c6334cd",
+  "importedAt": "2026-10-01T05:07:35.211745+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

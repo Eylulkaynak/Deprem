@@ -1,0 +1,23 @@
+{
+  "index": 457,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır dolapları duvara sabitlemek",
+  "sourceFilename": "cb7b707d729d63f81f0a3153.mp3",
+  "sourceSha256": "d73d6a7904228d055222adb7ff6bfbe0089aab3e4b68bd4c64a24d0a9645a393",
+  "importedAt": "2026-10-01T04:37:56.503274+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.706122"
+    }
+  }
+}

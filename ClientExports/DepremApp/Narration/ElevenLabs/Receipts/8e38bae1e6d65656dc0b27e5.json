@@ -1,0 +1,23 @@
+{
+  "index": 151,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Asansöre binerim",
+  "sourceFilename": "8e38bae1e6d65656dc0b27e5.mp3",
+  "sourceSha256": "f1d9f9450dac515926e40676829ebb224ba0d08e3bf8710b79be8bee4355ae42",
+  "importedAt": "2026-10-01T03:29:04.201562+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.765714"
+    }
+  }
+}

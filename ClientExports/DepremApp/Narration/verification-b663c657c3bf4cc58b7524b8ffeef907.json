@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "activeProfile": 0,
+    "volume": 0.6000000238418579,
+    "music": true,
+    "effects": true,
+    "profiles": [
+        {
+            "id": "7de6203d289540d9a995fc13561c3d1a",
+            "name": "Kahraman",
+            "adult": false,
+            "voiceEnabled": true,
+            "voiceAutoplay": true,
+            "voiceVolume": 0.4000000059604645,
+            "xp": 0,
+            "streak": 0,
+            "longestStreak": 0,
+            "todayActivities": 0,
+            "lastActivity": "",
+            "resumeCourse": "adult-0",
+            "resumeExercise": 0,
+            "resumeMistakes": 0,
+            "completed": [],
+            "results": [],
+            "plan": [],
+            "mistakes": [
+                {
+                    "question": "Acil çantana hangisini koyarsın?",
+                    "answer": "Oyuncak",
+                    "correct": "El feneri",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}

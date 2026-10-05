@@ -1,0 +1,23 @@
+{
+  "index": 167,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Açık alan seni düşen parçalardan korur.",
+  "sourceFilename": "2a124991b06e0a77e44f9c42.mp3",
+  "sourceSha256": "ddd567b29b54a1ad94a466b87986f43703d6e51fd43b977515d483a3113c15c0",
+  "importedAt": "2026-10-01T03:31:44.404428+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

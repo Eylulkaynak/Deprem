@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="23" result="Passed" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0,5268786">
+  <test-suite type="TestSuite" id="1000" name="UnityVerification" fullname="UnityVerification" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.526879" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1027" name="Assembly-CSharp-Editor.dll" fullname="D:/DepremIMO/Deprem/.codex_tmp/learning-online/UnityVerification/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.519073" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="91152" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1028" name="Deprem" fullname="Deprem" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.518520" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1029" name="Learning" fullname="Deprem.Learning" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.518348" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1030" name="Tests" fullname="Deprem.Learning.Tests" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.518007" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="LearningAppTests" fullname="Deprem.Learning.Tests.LearningAppTests" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.481426" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1003" name="AllImportedArtAndGameItemReferencesResolve" fullname="Deprem.Learning.Tests.LearningAppTests.AllImportedArtAndGameItemReferencesResolve" methodname="AllImportedArtAndGameItemReferencesResolve" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="145753280" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:39Z" duration="0.102021" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="AllOriginalCoursesAndGameModesWereImported" fullname="Deprem.Learning.Tests.LearningAppTests.AllOriginalCoursesAndGameModesWereImported" methodname="AllOriginalCoursesAndGameModesWereImported" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="860592934" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:39Z" duration="0.012255" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="CourseReplayDoesNotFarmXpOrDuplicateCompletion" fullname="Deprem.Learning.Tests.LearningAppTests.CourseReplayDoesNotFarmXpOrDuplicateCompletion" methodname="CourseReplayDoesNotFarmXpOrDuplicateCompletion" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="653263165" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:39Z" duration="0.004816" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="DamagedPrimaryRecoversPreviousValidGeneration" fullname="Deprem.Learning.Tests.LearningAppTests.DamagedPrimaryRecoversPreviousValidGeneration" methodname="DamagedPrimaryRecoversPreviousValidGeneration" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1785389236" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:39Z" duration="0.017462" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="EmptyProfileNameIsRejectedWithoutChangingActiveProfile" fullname="Deprem.Learning.Tests.LearningAppTests.EmptyProfileNameIsRejectedWithoutChangingActiveProfile" methodname="EmptyProfileNameIsRejectedWithoutChangingActiveProfile" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1435992245" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:39Z" duration="0.002779" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="ModeResultsStaySeparateAndBestScoreNeverRegresses" fullname="Deprem.Learning.Tests.LearningAppTests.ModeResultsStaySeparateAndBestScoreNeverRegresses" methodname="ModeResultsStaySeparateAndBestScoreNeverRegresses" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="2070409670" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:39Z" duration="0.001290" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="NarrationCoversEveryLessonChoiceFeedbackAndGuideWithPlayableAudio" fullname="Deprem.Learning.Tests.LearningAppTests.NarrationCoversEveryLessonChoiceFeedbackAndGuideWithPlayableAudio" methodname="NarrationCoversEveryLessonChoiceFeedbackAndGuideWithPlayableAudio" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1396744373" result="Passed" start-time="2026-10-04 23:07:39Z" end-time="2026-10-04 23:07:40Z" duration="0.287645" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="NarrationPreferencesMigrateOldSavesAndRemainPerProfile" fullname="Deprem.Learning.Tests.LearningAppTests.NarrationPreferencesMigrateOldSavesAndRemainPerProfile" methodname="NarrationPreferencesMigrateOldSavesAndRemainPerProfile" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="63806616" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.009630" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="NativeAppStartsBeforeEvery3DScene" fullname="Deprem.Learning.Tests.LearningAppTests.NativeAppStartsBeforeEvery3DScene" methodname="NativeAppStartsBeforeEvery3DScene" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="219824025" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.004188" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="RandomizedRoundsUseOriginalPoolsWithoutMutatingCatalog" fullname="Deprem.Learning.Tests.LearningAppTests.RandomizedRoundsUseOriginalPoolsWithoutMutatingCatalog" methodname="RandomizedRoundsUseOriginalPoolsWithoutMutatingCatalog" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1123487693" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.015662" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="RestartRestoresProfilePlanLessonCheckpointAndMistakes" fullname="Deprem.Learning.Tests.LearningAppTests.RestartRestoresProfilePlanLessonCheckpointAndMistakes" methodname="RestartRestoresProfilePlanLessonCheckpointAndMistakes" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="1635422392" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.005976" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="StreakHandlesSameDayConsecutiveDayAndMissedDay" fullname="Deprem.Learning.Tests.LearningAppTests.StreakHandlesSameDayConsecutiveDayAndMissedDay" methodname="StreakHandlesSameDayConsecutiveDayAndMissedDay" classname="Deprem.Learning.Tests.LearningAppTests" runstate="Runnable" seed="500063410" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.004935" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1014" name="LearningOnlineTests" fullname="Deprem.Learning.Tests.LearningOnlineTests" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.035572" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1015" name="CredentialsSurviveRestartAndStaySeparateForEachProfileAndServer" fullname="Deprem.Learning.Tests.LearningOnlineTests.CredentialsSurviveRestartAndStaySeparateForEachProfileAndServer" methodname="CredentialsSurviveRestartAndStaySeparateForEachProfileAndServer" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="699451743" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.006769" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="DamagedOnlineSettingsRecoverIdentityFromBackup" fullname="Deprem.Learning.Tests.LearningOnlineTests.DamagedOnlineSettingsRecoverIdentityFromBackup" methodname="DamagedOnlineSettingsRecoverIdentityFromBackup" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="2013158512" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.006197" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1025" name="EmptyServerRoomAndLeaderboardResultDoNotCreatePhantomObjects" fullname="Deprem.Learning.Tests.LearningOnlineTests.EmptyServerRoomAndLeaderboardResultDoNotCreatePhantomObjects" methodname="EmptyServerRoomAndLeaderboardResultDoNotCreatePhantomObjects" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="359115045" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.001611" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1024" name="EndpointValidationEnforcesBuildAndCredentialBoundaries" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.013783" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1017" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://games.example.com/&quot;,False,True)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://games.example.com/&quot;,False,True)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="1040584605" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.007711" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1018" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;http://127.0.0.1:8765&quot;,True,True)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;http://127.0.0.1:8765&quot;,True,True)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="1683863059" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.001650" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1019" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;http://games.example.com&quot;,False,False)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;http://games.example.com&quot;,False,False)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="734273461" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.000773" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1020" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://user:secret@games.example.com&quot;,True,False)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://user:secret@games.example.com&quot;,True,False)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="261145234" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.000631" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1021" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;file:///tmp/data&quot;,True,False)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;file:///tmp/data&quot;,True,False)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="29683829" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.000583" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1022" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://games.example.com?token=secret&quot;,True,False)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://games.example.com?token=secret&quot;,True,False)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="1257927694" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.000495" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1023" name="EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://games.example.com/arbitrary-path&quot;,True,False)" fullname="Deprem.Learning.Tests.LearningOnlineTests.EndpointValidationEnforcesBuildAndCredentialBoundaries(&quot;https://games.example.com/arbitrary-path&quot;,True,False)" methodname="EndpointValidationEnforcesBuildAndCredentialBoundaries" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="272123850" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.000738" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1026" name="ServerSnapshotDeserializesPlayersRoundAndReconnectState" fullname="Deprem.Learning.Tests.LearningOnlineTests.ServerSnapshotDeserializesPlayersRoundAndReconnectState" methodname="ServerSnapshotDeserializesPlayersRoundAndReconnectState" classname="Deprem.Learning.Tests.LearningOnlineTests" runstate="Runnable" seed="21272354" result="Passed" start-time="2026-10-04 23:07:40Z" end-time="2026-10-04 23:07:40Z" duration="0.001705" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: .codex_tmp/learning-online/EditMode.results.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

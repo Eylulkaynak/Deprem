@@ -1,0 +1,23 @@
+{
+  "index": 27,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önce ne yaparız, sonra ne yaparız? Resimlere doğru sırayla dokun. Üstteki örnek sana yardımcı olabilir.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_12_16_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "820ee055f92b0be13994d43602ecd9fc1faeb7e8a4d8de197d2ea3fd8bd135f6",
+  "importedAt": "2026-10-01T00:12:51.840929+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "7.591020"
+    }
+  }
+}

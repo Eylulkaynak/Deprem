@@ -1,0 +1,23 @@
+{
+  "index": 252,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz varken kibrit veya çakmak alev çıkarır ve patlamaya yol açabilir.",
+  "sourceFilename": "c38d4bd4ce85b75a93a70e46.mp3",
+  "sourceSha256": "c43ca30e2b703f9de234d200b296a6310932ea4a0b336935e9a531b8492edfb3",
+  "importedAt": "2026-10-01T03:51:40.956967+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.266122"
+    }
+  }
+}

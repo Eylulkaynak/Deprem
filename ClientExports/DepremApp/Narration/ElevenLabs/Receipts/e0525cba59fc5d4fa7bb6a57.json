@@ -1,0 +1,23 @@
+{
+  "index": 506,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Plan kişisel sağlık ve bakım ihtiyaçlarını kapsamalıdır.",
+  "sourceFilename": "e0525cba59fc5d4fa7bb6a57.mp3",
+  "sourceSha256": "828716357ab8bb4510676d2560ed1ef4e5961e7eaea6f264768acc75e11a6327",
+  "importedAt": "2026-10-01T04:43:08.050721+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

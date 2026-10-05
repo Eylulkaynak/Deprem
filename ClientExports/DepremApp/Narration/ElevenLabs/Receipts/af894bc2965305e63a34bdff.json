@@ -1,0 +1,23 @@
+{
+  "index": 44,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Enerjini Koru",
+  "sourceFilename": "af894bc2965305e63a34bdff.mp3",
+  "sourceSha256": "b70886d95f09b6bbafa518eb3b57d1377d9e44fbc1dc42e2ddc92cfa8dc48e85",
+  "importedAt": "2026-10-01T00:58:22.131165+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.608980"
+    }
+  }
+}

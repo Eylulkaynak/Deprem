@@ -1,0 +1,23 @@
+{
+  "index": 107,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ağır raf altına",
+  "sourceFilename": "6280449cc34c04929ccbb739.mp3",
+  "sourceSha256": "72e01ba82ce7890232da230f3c118620a46dc5767d5f382d666f3fe2da971950",
+  "importedAt": "2026-10-01T01:07:39.098468+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

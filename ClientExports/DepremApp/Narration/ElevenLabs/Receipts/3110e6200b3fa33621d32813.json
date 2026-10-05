@@ -1,0 +1,23 @@
+{
+  "index": 286,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem bitti, dışarı çıktın. Aileni nasıl bulursun?",
+  "sourceFilename": "3110e6200b3fa33621d32813.mp3",
+  "sourceSha256": "b9c394d28988fa44c3bba662589ececff01471010f223d029e19854db12816bb",
+  "importedAt": "2026-10-01T03:55:11.926188+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

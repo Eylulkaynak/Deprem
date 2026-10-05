@@ -1,0 +1,23 @@
+{
+  "index": 214,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı geçene kadar emniyet kemerli, arabada beklersin.",
+  "sourceFilename": "a4e2a7a7271777d3fc09f621.mp3",
+  "sourceSha256": "11612f255ff1afacb048024d1ac72d9f71517edb962d82c66d86bbba85bfed5b",
+  "importedAt": "2026-10-01T03:43:18.649662+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

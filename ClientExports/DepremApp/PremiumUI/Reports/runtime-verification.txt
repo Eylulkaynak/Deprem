@@ -1,0 +1,17 @@
+PASS: four native tabs render with visible bottom navigation.
+PASS: plan inputs, checklist, guide, achievements, audio settings and mistake review.
+PASS: lesson wrong answer, feedback, restart checkpoint, completion and next-unit unlock.
+PASS: adult mode and original adult lesson content.
+PASS: native mini-game bag completes via its UI.
+PASS: native mini-game sort completes via its UI.
+PASS: native mini-game match completes via its UI.
+PASS: native mini-game quiz completes via its UI.
+PASS: native mini-game danger completes via its UI.
+PASS: native mini-game sequence completes via its UI.
+PASS: native mini-game memory completes via its UI.
+PASS: native catch game completes using pointer-controlled basket.
+PASS: minigames scene launches and returns with learning progress preserved.
+PASS: story scene launches and returns with learning progress preserved.
+PASS: adventure scene launches and returns with learning progress preserved.
+COMPLETE
+PASS: no runtime errors or exceptions during verification.

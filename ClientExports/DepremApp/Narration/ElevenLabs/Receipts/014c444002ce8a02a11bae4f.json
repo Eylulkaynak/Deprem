@@ -1,0 +1,23 @@
+{
+  "index": 56,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Oyunu tamamladın. Denediğin için teşekkür ederim. İstersen yeniden oynayabiliriz.",
+  "sourceFilename": "014c444002ce8a02a11bae4f.mp3",
+  "sourceSha256": "4f4eb6a4facfb26b4ad3b56e75312fbe05af4d0089f8484e12a01dad77fc6fe2",
+  "importedAt": "2026-10-01T00:59:37.908419+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

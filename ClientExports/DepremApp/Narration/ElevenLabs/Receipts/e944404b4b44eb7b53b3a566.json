@@ -1,0 +1,23 @@
+{
+  "index": 114,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yer sallanmaya başladı. İlk ne yaparsın?",
+  "sourceFilename": "e944404b4b44eb7b53b3a566.mp3",
+  "sourceSha256": "4bd4c86fa76a0ff5dc65d1f10c76eae02d5428edb2553803af05efde026784ed",
+  "importedAt": "2026-10-01T01:08:36.189052+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.359184"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 92,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Ailedeki herkes planı bilirse hep birlikte güvende oluruz.",
+  "sourceFilename": "0aade183aac1685fed439076.mp3",
+  "sourceSha256": "82d41240f9016f94c2797d4948c2a0ac1ec419a28cc3792ab0a6e4e2a4e386a7",
+  "importedAt": "2026-10-01T01:05:27.785344+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

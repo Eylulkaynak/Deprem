@@ -1,0 +1,23 @@
+{
+  "index": 586,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı bittikten sonra bina hasarlı görünüyorsa en doğru davranış hangisidir?",
+  "sourceFilename": "eb4466ec5422512cbb25369a.mp3",
+  "sourceSha256": "37887cf18c9ec1ffbc3395548a629934330c48346cbddc5104d70e3779052f6d",
+  "importedAt": "2026-10-01T04:54:57.195092+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.075918"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 203,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. En yakın katta inmek seni güvende tutar.",
+  "sourceFilename": "66a166e5ebfd101069ecd7b6.mp3",
+  "sourceSha256": "bf06f2352be3ec6c60e7434bb4ec2507394b1f7c761996b00a594b7a6311ea48",
+  "importedAt": "2026-10-01T03:36:07.282238+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.751020"
+    }
+  }
+}

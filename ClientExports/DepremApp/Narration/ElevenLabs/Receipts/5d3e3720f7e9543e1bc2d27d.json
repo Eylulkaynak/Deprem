@@ -1,0 +1,23 @@
+{
+  "index": 241,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ayakkabı (terlik) giyerim",
+  "sourceFilename": "5d3e3720f7e9543e1bc2d27d.mp3",
+  "sourceSha256": "e6b972f9c0ba17adf50a283e27482d557f03826bafb8f35430228bb7afc75aaa",
+  "importedAt": "2026-10-01T03:50:18.026409+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.888980"
+    }
+  }
+}

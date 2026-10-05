@@ -1,0 +1,23 @@
+{
+  "index": 264,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] En önemlisi bir büyüğüne haber verip birlikte dışarı çıkmak.",
+  "sourceFilename": "a63e3523c375ccb0fc09f891.mp3",
+  "sourceSha256": "7bbe60fd52422a97aae052f8a79669f99a4ca2089c61926622c9cae8c292463f",
+  "importedAt": "2026-10-01T03:53:00.729911+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

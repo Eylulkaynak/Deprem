@@ -1,0 +1,23 @@
+{
+  "index": 271,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Kısa mesaj hattı boş tutar, ekiplere yer kalır.",
+  "sourceFilename": "b7eefb254d9b315ebbcd4a8a.mp3",
+  "sourceSha256": "3f12281e37eeda627bd3321886a7bde65d79d959ed85f06d8cd34e96cab130d8",
+  "importedAt": "2026-10-01T03:53:46.534175+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

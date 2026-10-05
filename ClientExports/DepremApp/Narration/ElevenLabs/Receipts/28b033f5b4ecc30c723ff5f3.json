@@ -1,0 +1,23 @@
+{
+  "index": 169,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binanın dibine sığın",
+  "sourceFilename": "28b033f5b4ecc30c723ff5f3.mp3",
+  "sourceSha256": "0de02b53d213dbffff89fc112a590f4d47a18cd7a5eefabe44cec0e69da2ee59",
+  "importedAt": "2026-10-01T03:33:20.652676+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.079184"
+    }
+  }
+}

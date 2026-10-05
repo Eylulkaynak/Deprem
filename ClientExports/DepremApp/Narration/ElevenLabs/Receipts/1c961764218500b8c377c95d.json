@@ -1,0 +1,23 @@
+{
+  "index": 665,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İlk yardımda temel yaklaşım güvenliği sağlamak, kanamayı kontrol etmek ve yardım istemektir. Önce ortam güvenliğini değerlendir; kendini riske atma. Ciddi kanamada temiz bezle doğrudan bası uygula ve yardım çağır. Bilinç, solunum ve ciddi yaralanma belirtilerini takip et. Eğitimin yoksa ileri müdahaleye kalkışma; acil ekipleri bekle. Bugün: Temel ilk yardım eğitimi alabileceğin yerleri araştır.",
+  "sourceFilename": "1c961764218500b8c377c95d.mp3",
+  "sourceSha256": "b6e3d88454ebff3880bb19eecb88be146e86d6ed4004f2a08dc00e43542e5dbb",
+  "importedAt": "2026-10-01T05:14:20.886718+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "27.444082"
+    }
+  }
+}

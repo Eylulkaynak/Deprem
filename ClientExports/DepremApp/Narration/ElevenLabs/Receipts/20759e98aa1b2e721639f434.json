@@ -1,0 +1,23 @@
+{
+  "index": 276,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Mesajın nasıl olmalı?",
+  "sourceFilename": "20759e98aa1b2e721639f434.mp3",
+  "sourceSha256": "125c74116b4a023c1056880bb7211d60e6b98dfd83b715c35b5e71b9e8f5d677",
+  "importedAt": "2026-10-01T03:54:11.389929+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.314286"
+    }
+  }
+}

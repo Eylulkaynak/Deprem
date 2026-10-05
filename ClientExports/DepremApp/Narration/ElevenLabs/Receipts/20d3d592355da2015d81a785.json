@@ -1,0 +1,23 @@
+{
+  "index": 658,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İlk 72 Saat",
+  "sourceFilename": "20d3d592355da2015d81a785.mp3",
+  "sourceSha256": "d8663bc6af9798ed7599346657fa41cba562951947a27d96167f9f0c151f8749",
+  "importedAt": "2026-10-01T05:12:48.434482+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.079184"
+    }
+  }
+}

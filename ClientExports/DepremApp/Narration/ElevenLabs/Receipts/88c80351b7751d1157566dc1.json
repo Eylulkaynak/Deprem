@@ -1,0 +1,23 @@
+{
+  "index": 429,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aile planında belirlenen şehir dışı kişiye durum bildirimi yap.",
+  "sourceFilename": "88c80351b7751d1157566dc1.mp3",
+  "sourceSha256": "c6702b467b7fa8f7d435adc5f9492c2c39f4348e9c6a2f41db8c473e1bccd8c6",
+  "importedAt": "2026-10-01T04:22:09.291759+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.247347"
+    }
+  }
+}

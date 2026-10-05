@@ -1,0 +1,23 @@
+{
+  "index": 65,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Oyuncak",
+  "sourceFilename": "d3c2c1a13418de4a4cb4f81a.mp3",
+  "sourceSha256": "bd3ed67de52c3b3900d84b56c3122a8ba209c91e0f2d5f0e24006b1ee2ae4318",
+  "importedAt": "2026-10-01T01:01:15.816474+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.426122"
+    }
+  }
+}

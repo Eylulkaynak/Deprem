@@ -1,0 +1,23 @@
+{
+  "index": 127,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru mu, yanlış mı? Tutunduğun şey hareket ederse onunla birlikte hareket edersin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T03_10_06_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "19f2d584750b691d8c7bdade8ddd1b62c921558c9fe7591cfd6dc36cc4f87dce",
+  "importedAt": "2026-10-01T03:11:12.816588+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.467755"
+    }
+  }
+}

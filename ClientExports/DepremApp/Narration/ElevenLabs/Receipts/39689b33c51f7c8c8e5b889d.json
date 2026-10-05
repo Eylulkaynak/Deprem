@@ -1,0 +1,23 @@
+{
+  "index": 528,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Gaz kokusu varsa elektrik düğmesi, çakmak ve açık alev kullanma.",
+  "sourceFilename": "39689b33c51f7c8c8e5b889d.mp3",
+  "sourceSha256": "095eb76ee354eb8a1581cef4821ba54fd272496241435cf1b0afc39e65ce90b3",
+  "importedAt": "2026-10-01T04:45:31.000821+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.266122"
+    }
+  }
+}

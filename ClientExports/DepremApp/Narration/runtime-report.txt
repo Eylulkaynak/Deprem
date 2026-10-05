@@ -1,0 +1,31 @@
+PASS: Child lesson automatically plays real offline audio.
+PASS: Music ducks under voice.
+PASS: Narration control has a touch-sized target.
+PASS: Application pause suspends narration.
+PASS: Application resume continues narration.
+PASS: Stop silences voice and restores music.
+PASS: Replay restarts the current lesson.
+PASS: Wrong answer records progress and plays supportive feedback.
+PASS: Correct answer plays its explanation.
+PASS: Page navigation cancels old speech.
+PASS: Immediate navigation also cancels a queued voice start.
+PASS: A multi-clip narration finishes naturally and releases its audio.
+PASS: Natural completion restores the music level.
+PASS: Muted audio does not delay the memory game with silent speech.
+PASS: Autoplay can be disabled independently.
+PASS: Manual listen works with autoplay off.
+PASS: Voice-off prevents automatic and manual speech.
+PASS: Adult lessons wait for an explicit listen action.
+PASS: Adult manual playback respects voice volume.
+PASS: Mini-game speaks: bag-packing
+PASS: Mini-game speaks: category-sorting
+PASS: Mini-game speaks: match-pairs
+PASS: Mini-game speaks: safe-choice
+PASS: Shuffled quiz choices are read in displayed order.
+PASS: Mini-game speaks: danger-hunt
+PASS: Mini-game speaks: catch-bag
+PASS: Mini-game speaks: safe-order
+PASS: Mini-game speaks: memory-bag
+PASS: Memory game waits while its instruction is spoken.
+PASS: Guide card has manual narration.
+PASS: No missing narration was requested.

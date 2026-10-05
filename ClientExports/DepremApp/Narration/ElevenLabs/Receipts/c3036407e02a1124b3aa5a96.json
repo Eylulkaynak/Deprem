@@ -1,0 +1,23 @@
+{
+  "index": 104,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başının üstünde ağır bir şey olmayan yeri seç.",
+  "sourceFilename": "c3036407e02a1124b3aa5a96.mp3",
+  "sourceSha256": "1fc45a08972b86d617d5e2d09566ca297b14666003df38eae84069155a619d26",
+  "importedAt": "2026-10-01T01:06:36.907879+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

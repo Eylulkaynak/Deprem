@@ -1,0 +1,23 @@
+{
+  "index": 295,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binalardan uzak açık alan",
+  "sourceFilename": "1301f06d732932947e1d9b55.mp3",
+  "sourceSha256": "c2dde68379871c67c4bb3e45a0ca598fdf503535d76f1f204c6bdd849d770630",
+  "importedAt": "2026-10-01T03:56:19.066467+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

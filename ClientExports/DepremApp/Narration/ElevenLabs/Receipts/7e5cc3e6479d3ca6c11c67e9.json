@@ -1,0 +1,23 @@
+{
+  "index": 600,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tahliye ve Kontrol",
+  "sourceFilename": "7e5cc3e6479d3ca6c11c67e9.mp3",
+  "sourceSha256": "1776b6a310c436781b62e78de93c5b426a59213fcf627cce2bcd32de87efa048",
+  "importedAt": "2026-10-01T04:56:34.020633+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

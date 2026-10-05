@@ -1,0 +1,23 @@
+{
+  "index": 617,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Toplanma alanına giderken bina cepheleri ve enerji hatlarından uzak dur.",
+  "sourceFilename": "d556818cd2d08c2198d4ee5f.mp3",
+  "sourceSha256": "457ab12c04f24a6dc3ad3797d46dc312e93b4b6afb7101fea52eedab060d8f38",
+  "importedAt": "2026-10-01T05:06:29.747959+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

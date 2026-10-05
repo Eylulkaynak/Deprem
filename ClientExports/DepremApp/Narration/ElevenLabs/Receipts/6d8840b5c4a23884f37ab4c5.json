@@ -1,0 +1,23 @@
+{
+  "index": 425,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Afet Çantası ve Belgeler",
+  "sourceFilename": "6d8840b5c4a23884f37ab4c5.mp3",
+  "sourceSha256": "e114d631308182879c214e7d85450ac12259da17fb943a3d5fec9d0e0263fc52",
+  "importedAt": "2026-10-01T04:22:02.781906+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.549388"
+    }
+  }
+}

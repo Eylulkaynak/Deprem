@@ -1,0 +1,23 @@
+{
+  "index": 616,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Toplanma alanı sarsıntı sonrası güvenli buluşma için kullanılır.",
+  "sourceFilename": "66609a526db06a5dfd1e2588.mp3",
+  "sourceSha256": "161215e52170a5d660517e922233e0065b4c8d581cf62dfa0f460650729e58fa",
+  "importedAt": "2026-10-01T05:06:23.873219+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.639184"
+    }
+  }
+}

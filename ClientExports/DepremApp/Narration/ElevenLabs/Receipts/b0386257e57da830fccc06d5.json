@@ -1,0 +1,23 @@
+{
+  "index": 648,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önce çevre güvenliğini kontrol et; kendini riske atma.",
+  "sourceFilename": "b0386257e57da830fccc06d5.mp3",
+  "sourceSha256": "522fbdcfc305686743e010d2f84680613c46ab08e0f0b4da6fb7155bd8f5268e",
+  "importedAt": "2026-10-01T05:10:57.627850+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.247347"
+    }
+  }
+}

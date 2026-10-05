@@ -1,0 +1,23 @@
+{
+  "index": 323,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Boruya veya duvara vur",
+  "sourceFilename": "767df6bd6464414f00437775.mp3",
+  "sourceSha256": "841bbbc344f558ad21599f99d7692da06d8eaa656589a5b6d89657402853ad89",
+  "importedAt": "2026-10-01T04:08:40.244373+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.392653"
+    }
+  }
+}

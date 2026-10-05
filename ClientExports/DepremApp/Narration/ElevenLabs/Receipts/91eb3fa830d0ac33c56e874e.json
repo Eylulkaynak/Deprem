@@ -1,0 +1,23 @@
+{
+  "index": 113,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Önce yere çökmek seni düşmekten korur ve hemen saklanmana yardım eder.",
+  "sourceFilename": "91eb3fa830d0ac33c56e874e.mp3",
+  "sourceSha256": "3bc8850b96fbb7e0a618e3edc028794126680c8f3d44d1739cdddda3d3f63322",
+  "importedAt": "2026-10-01T01:08:34.759415+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 442,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Araçtaysan güvenli yerde dur, köprü ve enerji hatlarından uzaklaş.",
+  "sourceFilename": "83ce1862e997bfec7223ee19.mp3",
+  "sourceSha256": "4859fffee7db708e4a271a40d7ddbf35f51fa0f490d1217186d84efbf4b9b30f",
+  "importedAt": "2026-10-01T04:25:30.625949+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

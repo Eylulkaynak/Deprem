@@ -1,0 +1,23 @@
+{
+  "index": 410,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Tatbikatı ciddiye al ve doğru adımları uygula.",
+  "sourceFilename": "f4efc6d8ec67e770e62ad802.mp3",
+  "sourceSha256": "62f1d87e7f9d47056ab38f951e0d5e788a09cc32d02e6c833cee872ae436196e",
+  "importedAt": "2026-10-01T04:18:13.172432+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.829388"
+    }
+  }
+}

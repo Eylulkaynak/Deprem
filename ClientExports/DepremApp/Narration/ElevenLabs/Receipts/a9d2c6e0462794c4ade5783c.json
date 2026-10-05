@@ -1,0 +1,23 @@
+{
+  "index": 521,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Enkaz altındaysan nasıl yardım istersin?",
+  "sourceFilename": "a9d2c6e0462794c4ade5783c.mp3",
+  "sourceSha256": "076c9bf64aaeb019fa226765316a2fd066cd6a31d788d4bcec8724062474a535",
+  "importedAt": "2026-10-01T04:44:45.422670+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.202449"
+    }
+  }
+}

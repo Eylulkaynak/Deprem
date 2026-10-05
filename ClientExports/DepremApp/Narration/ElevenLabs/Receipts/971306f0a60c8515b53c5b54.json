@@ -1,0 +1,23 @@
+{
+  "index": 494,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dolaba yaslan",
+  "sourceFilename": "971306f0a60c8515b53c5b54.mp3",
+  "sourceSha256": "74a8a5a04bfc12680f888ba6037f8e563b5eade966e0b668bb139013da9f2d53",
+  "importedAt": "2026-10-01T04:41:52.574744+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.530612"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": 331,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bağırmak enerjini hızla bitirir ve toz yutturur. Bağırmak son çaredir.",
+  "sourceFilename": "46bb41f5e8286c4664c01cfa.mp3",
+  "sourceSha256": "ee50a703ab362268990db8fd7bdfdee4fe6316b060faf95f8a00b649489e6e7a",
+  "importedAt": "2026-10-01T04:09:53.383579+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "6.154286"
+    }
+  }
+}

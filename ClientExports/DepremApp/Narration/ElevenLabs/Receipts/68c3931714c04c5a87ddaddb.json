@@ -1,0 +1,23 @@
+{
+  "index": 194,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı geçti. Sınıfta şimdi kimi dinlersin?",
+  "sourceFilename": "68c3931714c04c5a87ddaddb.mp3",
+  "sourceSha256": "ed32326a3b4751ab3344a680d2252cde9cd2611d572067e1c74335181725cfc5",
+  "importedAt": "2026-10-01T03:35:17.576558+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

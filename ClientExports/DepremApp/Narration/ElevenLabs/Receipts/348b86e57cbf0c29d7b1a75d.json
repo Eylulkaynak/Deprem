@@ -1,0 +1,23 @@
+{
+  "index": 175,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Başını ve boynunu kollarınla koruyup sarsıntının geçmesini beklersin.",
+  "sourceFilename": "348b86e57cbf0c29d7b1a75d.mp3",
+  "sourceSha256": "bbb19f89b2eb62ed03e32adb4711481856acc5097f9f2a115b585a876114402e",
+  "importedAt": "2026-10-01T03:33:29.267992+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.031020"
+    }
+  }
+}

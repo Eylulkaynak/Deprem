@@ -1,0 +1,23 @@
+{
+  "index": 284,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Aramak yerine mesaj atmak en doğrusu.",
+  "sourceFilename": "25adad3f8cc6de11a96cb005.mp3",
+  "sourceSha256": "417e19bf184f25a00938339c8b3621735429f4fe053ae2d5381fc853f7b8ab33",
+  "importedAt": "2026-10-01T03:54:59.681627+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

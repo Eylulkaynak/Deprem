@@ -1,0 +1,23 @@
+{
+  "index": 585,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı bitince hızlı değil, kontrollü hareket edilir.",
+  "sourceFilename": "20bf3900588ebaf70937a150.mp3",
+  "sourceSha256": "7dfcbc0d0869883eb8fb70faa1d14b8a8d7b563471d491609a142b0cf370c52d",
+  "importedAt": "2026-10-01T04:54:46.500036+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

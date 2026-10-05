@@ -1,0 +1,23 @@
+{
+  "index": 41,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hattı Meşgul Etme",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_19_12_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "6cfe642b8324bca328daf6d5c0666fb569decd9c417de18eff34ab9ede5eaa26",
+  "importedAt": "2026-10-01T00:19:54.985218+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.157551"
+    }
+  }
+}

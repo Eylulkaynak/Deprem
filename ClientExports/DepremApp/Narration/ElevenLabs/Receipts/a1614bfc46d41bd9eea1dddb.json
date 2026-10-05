@@ -1,0 +1,23 @@
+{
+  "index": 497,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru bilgi, panik ve yanlış yönlendirmeyi azaltır.",
+  "sourceFilename": "a1614bfc46d41bd9eea1dddb.mp3",
+  "sourceSha256": "f3a886f4adc12f89b4210922b860ae1bea11b323fae8e9012835a6e9996dcbe6",
+  "importedAt": "2026-10-01T04:42:14.550311+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

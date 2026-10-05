@@ -1,0 +1,23 @@
+{
+  "index": 38,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Artçı sarsıntılar",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_18_05_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "7048a21509dcb41f65ab4fedba156e6423713c6d433d5cd80a04efd1de8cc5cf",
+  "importedAt": "2026-10-01T00:18:48.606066+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.079184"
+    }
+  }
+}

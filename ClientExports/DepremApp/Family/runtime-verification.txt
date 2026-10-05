@@ -1,0 +1,2 @@
+PASS: real Unity UI consent, expiring one-use code, two independent phone clients, parent login/dashboard/report, private-data projection, background progress sync after page changes, parent locking, unreachable-network learning persistence, queued offline revocation, live access revocation and preserved local achievements.
+PASS: 1080x1920, 750x1334 and 1080x2340 portrait UI layout.

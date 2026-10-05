@@ -1,0 +1,23 @@
+{
+  "index": 452,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Açık alan genellikle daha güvenli bir bekleme noktasıdır.",
+  "sourceFilename": "4cf3cfff0fb661db3b83ac00.mp3",
+  "sourceSha256": "7eef03cff41c314d746b39ca564d8e5d9bb34399d7e124ab6332eabc210905a9",
+  "importedAt": "2026-10-01T04:27:36.803267+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

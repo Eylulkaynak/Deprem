@@ -1,0 +1,23 @@
+{
+  "index": 226,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Pencereye koş",
+  "sourceFilename": "515a8c741e3a92105a59ddb1.mp3",
+  "sourceSha256": "fd608056a2021812f616012261c73af6995f53d74c41674ed87ef53a412336d6",
+  "importedAt": "2026-10-01T03:48:48.647389+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.687347"
+    }
+  }
+}

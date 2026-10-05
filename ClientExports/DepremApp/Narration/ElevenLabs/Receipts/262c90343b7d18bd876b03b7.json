@@ -1,0 +1,23 @@
+{
+  "index": 543,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Hasarlı binaya kimin önce gireceği",
+  "sourceFilename": "262c90343b7d18bd876b03b7.mp3",
+  "sourceSha256": "b2280795e62d169415f0c5809ed4ff221f39616f7026b80b06cd1d34b8ac4eb9",
+  "importedAt": "2026-10-01T04:47:19.304420+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.888980"
+    }
+  }
+}

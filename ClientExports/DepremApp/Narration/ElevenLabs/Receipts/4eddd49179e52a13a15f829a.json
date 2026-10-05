@@ -1,0 +1,23 @@
+{
+  "index": 432,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Ailenle buluş",
+  "sourceFilename": "4eddd49179e52a13a15f829a.mp3",
+  "sourceSha256": "63726fde333cb6200d784776e15cf6bc52da140d13220314bbda7512081822a1",
+  "importedAt": "2026-10-01T04:22:13.463397+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

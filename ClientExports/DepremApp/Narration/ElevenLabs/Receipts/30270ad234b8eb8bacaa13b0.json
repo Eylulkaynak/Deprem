@@ -1,0 +1,23 @@
+{
+  "index": 476,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binaya geri dön",
+  "sourceFilename": "30270ad234b8eb8bacaa13b0.mp3",
+  "sourceSha256": "122ce9aa36e0c82e15696f19a3d85280b0d04c43770beaa4ad1e6c092a18703f",
+  "importedAt": "2026-10-01T04:39:53.716563+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.765714"
+    }
+  }
+}

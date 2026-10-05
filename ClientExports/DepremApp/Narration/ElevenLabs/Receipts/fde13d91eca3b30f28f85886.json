@@ -1,0 +1,23 @@
+{
+  "index": 39,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sakin çıkış",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_18_34_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "51dcd911d4ea969601f6f248377d6d1c3819990a540f4d7b0deffe9a398eb2f1",
+  "importedAt": "2026-10-01T00:19:48.714885+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

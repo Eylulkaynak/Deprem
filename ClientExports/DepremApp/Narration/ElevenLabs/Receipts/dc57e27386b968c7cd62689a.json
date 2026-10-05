@@ -1,0 +1,23 @@
+{
+  "index": 659,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İlk 72 saat için çanta sade, erişilebilir ve güncel olmalıdır. Su, bozulmayan gıda, el feneri, radyo, düdük, pil ve powerbank hazırla. Düzenli kullanılan ilaçları ve temel ilk yardım malzemesini ekle. Kimlik, sigorta, tapu ve önemli belgelerin kopyasını su geçirmez dosyada tut. Son kullanma tarihlerini ve pilleri belirli aralıklarla kontrol et. Bugün: Çantadaki eksikleri 5 dakikalık bir listeye dök.",
+  "sourceFilename": "dc57e27386b968c7cd62689a.mp3",
+  "sourceSha256": "5675f2709469b2a24e0b1077d1ffb1e9e9c1a40264223e47e10e67bbc2be64d2",
+  "importedAt": "2026-10-01T05:13:03.609542+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "29.768980"
+    }
+  }
+}

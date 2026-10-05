@@ -1,0 +1,19 @@
+{
+  "generated": 0,
+  "recovered": 14,
+  "remainingBudget": 0,
+  "progress": {
+    "total": 668,
+    "completed": 436,
+    "remainingCharacters": 16343,
+    "next": {
+      "index": 435,
+      "spoken": "Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır. Güvenli bir noktada Çök, kapan, tutun davranışını uygula. Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur. Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun. Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun. Bugün: Evde iki güvenli korunma noktası belirle.",
+      "prompt": "[gently] Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır. Güvenli bir noktada Çök, kapan, tutun davranışını uygula. Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur. Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun. Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun. Bugün: Evde iki güvenli korunma noktası belirle.",
+      "texts": [
+        "Amaç düşmemek, baş-boyun bölgesini korumak ve camlardan uzak kalmaktır.\n\n• Güvenli bir noktada Çök-Kapan-Tutun davranışını uygula.\n\n• Pencere, vitrin, dolap, raf ve asılı eşyalardan uzak dur.\n\n• Merdivene veya asansöre yönelme; sarsıntı bitene kadar korun.\n\n• Kapı eşikleri her zaman güvenli değildir; sağlam bir eşyanın yanında korun.\n\nBugün: Evde iki güvenli korunma noktası belirle."
+      ],
+      "resource": "LearningApp/Narration/Clips/d304bbd2fb7fbb171aa79c95"
+    }
+  }
+}

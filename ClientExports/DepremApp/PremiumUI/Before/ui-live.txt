@@ -1,0 +1,99 @@
+Scene=Deprem_App
+Playing=True
+Tab=education
+Styles=1 | Resource=LearningStyles (UnityEngine.UIElements.StyleSheet)
+ VisualElement SafeArea | (x:0.00, y:0.00, width:540.00, height:960.00) | 
+  VisualElement App | (x:0.00, y:0.00, width:540.00, height:960.00) | 
+     Label  | (x:26.00, y:18.00, width:411.50, height:38.50) | Deprem Kahramanları
+     Label  | (x:26.00, y:60.50, width:411.50, height:23.00) | Her gün küçük bir adım, daha güvenli bir yarın.
+    Button ModeSwitch | (x:441.50, y:29.00, width:74.50, height:42.00) | Çocuk
+   ScrollView Body | (x:0.00, y:97.50, width:540.00, height:760.00) | 
+      Label  | (x:48.00, y:145.50, width:332.00, height:23.00) | MERHABA, KAHRAMAN
+      Label  | (x:48.00, y:180.50, width:332.00, height:81.00) | Hazır ol,
+kahraman ol!
+      Label  | (x:48.00, y:277.50, width:332.00, height:49.50) | Bugünkü görevini tamamla.
+Öğren, dene, güvenle ilerle.
+      Label  | (x:84.50, y:399.00, width:35.00, height:37.50) | 30
+      Label  | (x:32.00, y:442.50, width:140.00, height:23.00) | TOPLAM XP
+      Label  | (x:231.00, y:399.00, width:70.50, height:37.50) | 1 gün
+      Label  | (x:196.00, y:442.50, width:140.00, height:23.00) | GÜNLÜK SERİ
+      Label  | (x:421.00, y:399.00, width:18.50, height:37.50) | 0
+      Label  | (x:360.00, y:442.50, width:140.00, height:23.00) | YILDIZ
+     Label  | (x:26.00, y:512.50, width:211.50, height:31.00) | Öğrenme yolculuğun
+     Label  | (x:474.50, y:514.50, width:37.50, height:25.00) | 1 / 21
+     Button Course_child-0 | (x:106.00, y:599.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:610.50, width:216.00, height:31.00) | 1. Acil Çanta
+      Label  | (x:214.00, y:651.50, width:216.00, height:25.00) | Tamamlandı · Tekrar çalış
+     Button Course_child-1 | (x:125.00, y:739.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:750.50, width:216.00, height:31.00) | 2. Aile Planı
+      Label  | (x:233.00, y:791.50, width:216.00, height:25.00) | Birlikte hazır olalım · Başla
+     Button Course_child-2 | (x:99.00, y:879.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:890.50, width:216.00, height:31.00) | 3. Evi Hazırla
+      Label  | (x:207.00, y:931.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-3 | (x:106.00, y:1019.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:1030.50, width:216.00, height:31.00) | 4. Çök-Kapan-Tutun
+      Label  | (x:214.00, y:1071.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-4 | (x:125.00, y:1159.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:1170.50, width:216.00, height:31.00) | 5. Nereye Sığın
+      Label  | (x:233.00, y:1211.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-5 | (x:99.00, y:1299.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:1310.50, width:216.00, height:31.00) | 6. Sarsıntıda Yapma
+      Label  | (x:207.00, y:1351.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-6 | (x:106.00, y:1439.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:1450.50, width:216.00, height:31.00) | 7. Dışarıdaysan
+      Label  | (x:214.00, y:1491.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-7 | (x:125.00, y:1579.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:1579.00, width:216.00, height:54.00) | 8. Okulda ve Kalabalıkta
+      Label  | (x:233.00, y:1643.00, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-8 | (x:99.00, y:1719.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:1719.00, width:216.00, height:54.00) | 9. Araçta ve Asansörde
+      Label  | (x:207.00, y:1783.00, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-9 | (x:106.00, y:1859.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:1870.50, width:216.00, height:31.00) | 10. Artçılar
+      Label  | (x:214.00, y:1911.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-10 | (x:125.00, y:1999.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:2010.50, width:216.00, height:31.00) | 11. Güvenle Çık
+      Label  | (x:233.00, y:2051.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-11 | (x:99.00, y:2139.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:2150.50, width:216.00, height:31.00) | 12. Tehlike Kontrolü
+      Label  | (x:207.00, y:2191.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-12 | (x:106.00, y:2279.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:2290.50, width:216.00, height:31.00) | 13. Kısa Mesaj
+      Label  | (x:214.00, y:2331.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-13 | (x:125.00, y:2419.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:2430.50, width:216.00, height:31.00) | 14. Buluşma Noktası
+      Label  | (x:233.00, y:2471.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-14 | (x:99.00, y:2559.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:2570.50, width:216.00, height:31.00) | 15. Doğru Bilgi
+      Label  | (x:207.00, y:2611.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-15 | (x:106.00, y:2699.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:2710.50, width:216.00, height:31.00) | 16. Enkaz Altında
+      Label  | (x:214.00, y:2751.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-16 | (x:125.00, y:2839.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:2850.50, width:216.00, height:31.00) | 17. Temel İlk Yardım
+      Label  | (x:233.00, y:2891.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-17 | (x:99.00, y:2979.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:2979.00, width:216.00, height:54.00) | 18. Başkalarına Yardım
+      Label  | (x:207.00, y:3043.00, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-18 | (x:106.00, y:3119.50, width:92.00, height:92.00) | 
+      Label  | (x:214.00, y:3130.50, width:216.00, height:31.00) | 19. Sakin Kal
+      Label  | (x:214.00, y:3171.50, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-19 | (x:125.00, y:3259.50, width:92.00, height:92.00) | 
+      Label  | (x:233.00, y:3259.00, width:216.00, height:54.00) | 20. Tehlikelerden Uzak
+      Label  | (x:233.00, y:3323.00, width:216.00, height:25.00) | Önceki adımı tamamla
+     Button Course_child-20 | (x:99.00, y:3399.50, width:92.00, height:92.00) | 
+      Label  | (x:207.00, y:3399.00, width:216.00, height:54.00) | 21. Tatbikat & Alışkanlık
+      Label  | (x:207.00, y:3463.00, width:216.00, height:25.00) | Önceki adımı tamamla
+    Button Deprem rehberini aç | (x:24.00, y:3504.50, width:492.00, height:56.00) | Deprem rehberini aç
+    Button Nav_education | (x:9.00, y:867.50, width:126.00, height:86.50) | 
+     Label  | (x:8.00, y:880.00, width:126.00, height:33.00) | ≡
+     Label  | (x:8.00, y:921.00, width:126.00, height:23.00) | Eğitim
+    Button Nav_games | (x:141.00, y:867.50, width:126.00, height:86.50) | 
+     Label  | (x:140.00, y:877.50, width:126.00, height:37.50) | ▶
+     Label  | (x:140.00, y:923.00, width:126.00, height:23.00) | Oyunlar
+    Button Nav_family | (x:273.00, y:867.50, width:126.00, height:86.50) | 
+     Label  | (x:272.00, y:879.00, width:126.00, height:35.00) | ●●
+     Label  | (x:272.00, y:922.00, width:126.00, height:23.00) | Ailem
+    Button Nav_profile | (x:405.00, y:867.50, width:126.00, height:86.50) | 
+     Label  | (x:404.00, y:879.00, width:126.00, height:35.00) | ●
+     Label  | (x:404.00, y:922.00, width:126.00, height:23.00) | Profil

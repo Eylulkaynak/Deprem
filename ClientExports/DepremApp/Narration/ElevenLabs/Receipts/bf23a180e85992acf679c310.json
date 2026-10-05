@@ -1,0 +1,23 @@
+{
+  "index": 6,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Dışarıdaysan binalardan, duvarlardan, direklerden ve elektrik tellerinden uzak dur. Açık bir alanda yere çök. Başını ve enseni koruyarak sarsıntının bitmesini bekle.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_07_04_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "d4450425172d174bd8419f785d8b4e0243a889761df220b39b426772ca0b10ae",
+  "importedAt": "2026-10-01T00:07:37.538356+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "11.927347"
+    }
+  }
+}

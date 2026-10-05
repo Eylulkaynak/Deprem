@@ -1,0 +1,10 @@
+PASS presentation: Minigame_Hub; 53 converted labels; non-blocking guides; artwork resolved.
+PASS input: scenario button remains reachable while scrolling the game cards.
+PASS presentation: Minigame_Evacuation_25D; 62 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: street-report-gas; 62 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: street-avoid-rubble; 62 converted labels; non-blocking guides; artwork resolved.
+PASS input: reporting and open-route targets are framed and physically selectable away from the hazards. Presentation previews only.
+PASS presentation: tablet Story 01; 35 converted labels; non-blocking guides; artwork resolved.
+PASS: adult text preserved.
+PASS: no runtime errors.
+RESTORED: learning store, story/minigame saves, Yan Yana preferences, audio and Game View.

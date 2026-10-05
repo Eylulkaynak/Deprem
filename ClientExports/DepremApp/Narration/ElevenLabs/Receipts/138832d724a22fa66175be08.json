@@ -1,0 +1,23 @@
+{
+  "index": 296,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yüksek bir binanın önü",
+  "sourceFilename": "138832d724a22fa66175be08.mp3",
+  "sourceSha256": "e5c7ba03abb83a9fe3f3df154a27070c3add829e02f9faa9288299d594cfe182",
+  "importedAt": "2026-10-01T03:56:24.855296+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "2.235918"
+    }
+  }
+}

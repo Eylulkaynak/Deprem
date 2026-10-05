@@ -1,0 +1,23 @@
+{
+  "index": 634,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yetkililere haber ver ve bölgeden uzaklaş.",
+  "sourceFilename": "13313f11267e479d64d06363.mp3",
+  "sourceSha256": "10afc69e68972de33cbded5421d8f11c58c54206f847b863b687e80c731d8a4d",
+  "importedAt": "2026-10-01T05:08:51.943377+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.515918"
+    }
+  }
+}

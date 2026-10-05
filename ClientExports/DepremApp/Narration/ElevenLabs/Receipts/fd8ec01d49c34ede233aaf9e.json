@@ -1,0 +1,23 @@
+{
+  "index": 485,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Daha fazla eşya arasından acil durum çantası için doğru olanları seç.",
+  "sourceFilename": "fd8ec01d49c34ede233aaf9e.mp3",
+  "sourceSha256": "ee0730cab5f5a5705eb1226bc9eaca2660a1fa97cf42d5b75f02cd702c810789",
+  "importedAt": "2026-10-01T04:40:50.946925+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

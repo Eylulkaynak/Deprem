@@ -1,0 +1,23 @@
+{
+  "index": 222,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yer yine sallanmaya başladı. Ne yaparsın?",
+  "sourceFilename": "9c3c910bbd7d96d8635f33c9.mp3",
+  "sourceSha256": "04ca6de1f252da402bff808d6d79117ae34ed1dd254c54d99cafe07987bf6f03",
+  "importedAt": "2026-10-01T03:48:29.586335+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.594286"
+    }
+  }
+}

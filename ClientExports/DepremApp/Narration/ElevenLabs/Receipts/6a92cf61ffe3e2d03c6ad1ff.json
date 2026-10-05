@@ -1,0 +1,23 @@
+{
+  "index": 283,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çok arama yapmak hattı tıkar. Mesaj daha akıllıca.",
+  "sourceFilename": "6a92cf61ffe3e2d03c6ad1ff.mp3",
+  "sourceSha256": "38c4c0fb845c494d864d3843df57248478557f19fb16bb0419af28ac8136f40a",
+  "importedAt": "2026-10-01T03:54:53.668129+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.325714"
+    }
+  }
+}

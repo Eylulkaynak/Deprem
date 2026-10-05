@@ -1,0 +1,23 @@
+{
+  "index": 63,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. El feneri karanlıkta yolumuzu aydınlatır.",
+  "sourceFilename": "6806d3e4052ae62d56caa55c.mp3",
+  "sourceSha256": "fcca61b34742061e05741feba186963cf5fa8c2b1e70f2e56c2879a17e8d302f",
+  "importedAt": "2026-10-01T01:00:41.952472+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.986122"
+    }
+  }
+}

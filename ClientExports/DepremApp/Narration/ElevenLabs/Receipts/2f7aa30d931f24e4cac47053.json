@@ -1,0 +1,23 @@
+{
+  "index": 581,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı başladığında en güvenli davranış hangisidir?",
+  "sourceFilename": "2f7aa30d931f24e4cac47053.mp3",
+  "sourceSha256": "edb7970ed61af7a80dec1bf52f780f19c4a2950e8c13b7d7169d185df56577d2",
+  "importedAt": "2026-10-01T04:54:21.687023+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

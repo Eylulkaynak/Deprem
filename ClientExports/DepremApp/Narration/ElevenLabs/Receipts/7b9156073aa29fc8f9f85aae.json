@@ -1,0 +1,23 @@
+{
+  "index": 350,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Evet. Yaralıyı sarsmak yerine yardım çağırmak gerekir.",
+  "sourceFilename": "7b9156073aa29fc8f9f85aae.mp3",
+  "sourceSha256": "7f00f55a5dc092aa7d4130dcc8a63877d01ad8b3e25b47f3c8493785bb8af66b",
+  "importedAt": "2026-10-01T04:11:49.368790+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.482449"
+    }
+  }
+}

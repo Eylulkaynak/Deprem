@@ -1,0 +1,23 @@
+{
+  "index": 12,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Depremden sonra telefon hatları yoğun olabilir. Bir büyüğünün yardımıyla kısa bir mesaj gönderebilirsin. Nerede olduğunu ve durumunu kısaca anlat. Mesajın ulaşması zaman alabilir; art arda aramak yerine aile planınızı izleyin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_09_12_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "d5a6dfb61905134f2b15bca27a862e5577ecf12bd3e26cf0bfb8a8441d5e58ec",
+  "importedAt": "2026-10-01T00:09:55.359939+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "14.800816"
+    }
+  }
+}

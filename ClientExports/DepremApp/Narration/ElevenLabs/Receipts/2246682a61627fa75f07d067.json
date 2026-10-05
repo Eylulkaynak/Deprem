@@ -1,0 +1,23 @@
+{
+  "index": 30,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Aile Planı Yapalım",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_13_28__s50_v4 (1).mp3",
+  "sourceSha256": "25ce15c95b2dd88644dbaba174d41bf25c51e11b4ca319ffd3ec48716cd036f8",
+  "importedAt": "2026-10-01T00:31:51.708900+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

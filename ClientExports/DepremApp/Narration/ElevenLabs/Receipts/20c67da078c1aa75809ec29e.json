@@ -1,0 +1,23 @@
+{
+  "index": 89,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Plan ancak herkes bilirse işe yarar. Küçük büyük herkes öğrenmeli.",
+  "sourceFilename": "20c67da078c1aa75809ec29e.mp3",
+  "sourceSha256": "da88948cd5e4d929b9081b65715f6b3b4c3352920e8a5ffc516dcddad7057d86",
+  "importedAt": "2026-10-01T01:04:42.958616+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.448980"
+    }
+  }
+}

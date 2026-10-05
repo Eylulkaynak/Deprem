@@ -1,0 +1,66 @@
+PASS presentation: Story_Rebuild_MainMenu; 13 converted labels; non-blocking guides; artwork resolved.
+PASS: short captions and icons in bridge return/resume dialog.
+PASS presentation: Story_01_RebuildPreview; 35 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_01_RebuildPreview visible pause/resume via raycast.
+PASS: muted picture dialogue reveals immediately and advances through its existing tap callback.
+PASS presentation: Story_02_RebuildPreview; 23 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_02_RebuildPreview visible pause/resume via raycast.
+PASS presentation: Story_03_RebuildPreview; 23 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_03_RebuildPreview visible pause/resume via raycast.
+PASS presentation: Story_04_RebuildPreview; 31 converted labels; non-blocking guides; artwork resolved.
+PASS input: Story_04_RebuildPreview visible pause/resume via raycast.
+PASS presentation: Minigame_Hub; 53 converted labels; non-blocking guides; artwork resolved.
+PASS input: scenario button remains reachable while scrolling the game cards.
+PASS presentation: Story_04_FiretruckRunner; 16 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_FirefighterExtinguish; 10 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_Evacuation_25D; 62 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 0; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 1; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 2; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 3; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 4; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 5; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 6; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 7; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 8; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_AftershockCover stage 9; 20 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety stage 0; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety stage 1; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety stage 2; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety stage 3; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety stage 4; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RoomSafety stage 5; 25 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 0; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 1; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 2; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 3; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 4; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 5; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 6; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyBagRush stage 7; 27 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 0; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 1; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 2; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 3; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 4; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 5; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_EmergencyCorridor stage 6; 32 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 0; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 1; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 2; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 3; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 4; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 5; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: Minigame_RubbleSignal stage 6; 30 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: YanYana_Adventure; 60 converted labels; non-blocking guides; artwork resolved.
+PASS presentation: YanYana_Adventure intro; 60 converted labels; non-blocking guides; artwork resolved.
+PASS input: Yan Yana new/pause/resume via raycast.
+PASS presentation: tablet Story 01; 35 converted labels; non-blocking guides; artwork resolved.
+PASS: adult text preserved.
+PASS: no runtime errors.
+RESTORED: learning store, story/minigame saves, Yan Yana preferences, audio and Game View.

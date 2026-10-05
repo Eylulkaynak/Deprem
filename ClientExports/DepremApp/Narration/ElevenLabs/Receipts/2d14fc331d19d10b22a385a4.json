@@ -1,0 +1,23 @@
+{
+  "index": 475,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Binadan uzaklaşıp yetkili değerlendirmesini beklemek",
+  "sourceFilename": "2d14fc331d19d10b22a385a4.mp3",
+  "sourceSha256": "647bd4fe1abcecb93cfc05c57735839fc321986bb9183a9be5faf72aac96d935",
+  "importedAt": "2026-10-01T04:39:43.636898+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.907755"
+    }
+  }
+}

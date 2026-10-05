@@ -1,0 +1,23 @@
+{
+  "index": 667,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] İş Yeri ve Okul",
+  "sourceFilename": "5112ee86635daf97a33487ba.mp3",
+  "sourceSha256": "8b8132ff4dd3006d928fa41862ec36935064b81d185d69f1e52f2ec8ecb6a85e",
+  "importedAt": "2026-10-01T05:14:32.243384+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.844082"
+    }
+  }
+}

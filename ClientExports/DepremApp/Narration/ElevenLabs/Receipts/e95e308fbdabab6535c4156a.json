@@ -1,0 +1,23 @@
+{
+  "index": 232,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Artçı bitti. Hasarlı binaya hemen girmeli misin?",
+  "sourceFilename": "e95e308fbdabab6535c4156a.mp3",
+  "sourceSha256": "f100b5ab7850dbcb2cc9480529d9aa89e3d3d02917aea1d823d7e808626d5e96",
+  "importedAt": "2026-10-01T03:49:28.824286+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.672653"
+    }
+  }
+}

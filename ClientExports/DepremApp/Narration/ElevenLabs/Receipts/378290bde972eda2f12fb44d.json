@@ -1,0 +1,23 @@
+{
+  "index": 610,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Telefonu kısa mesaj ve acil durum iletişimi için kullan.",
+  "sourceFilename": "378290bde972eda2f12fb44d.mp3",
+  "sourceSha256": "f7b95e33835c682dce3ed5520e87086ca9f8da23bb5431b1614970e5675e3be2",
+  "importedAt": "2026-10-01T04:57:56.586198+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.168980"
+    }
+  }
+}

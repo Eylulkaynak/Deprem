@@ -1,0 +1,23 @@
+{
+  "index": 304,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Deprem haberlerini nereden öğrenmelisin?",
+  "sourceFilename": "8ad908948a13d5a5c81cb7cf.mp3",
+  "sourceSha256": "78b434eb891e33e40069d860e3ba838f062a5bc6f9bc38dd3eae66d754fb4a27",
+  "importedAt": "2026-10-01T03:57:13.255601+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.045714"
+    }
+  }
+}

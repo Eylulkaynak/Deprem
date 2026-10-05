@@ -1,0 +1,23 @@
+{
+  "index": 626,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Uzak dur",
+  "sourceFilename": "67be8b1042d18051bc1fe44e.mp3",
+  "sourceSha256": "923630677d8bbc18ffedbff7208d43b3120f7781d9325901127c9c0df80a8ba0",
+  "importedAt": "2026-10-01T05:07:29.626504+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "1.426122"
+    }
+  }
+}

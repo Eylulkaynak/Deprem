@@ -1,0 +1,23 @@
+{
+  "index": 509,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Tatbikatın amacı eksikleri görüp planı iyileştirmektir.",
+  "sourceFilename": "0d17e28b1d30abc48803ac9b.mp3",
+  "sourceSha256": "cf28299fc6a6859396dded070e8a70040f5723bf6032cb808cf7f47772caafa0",
+  "importedAt": "2026-10-01T04:43:21.612582+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

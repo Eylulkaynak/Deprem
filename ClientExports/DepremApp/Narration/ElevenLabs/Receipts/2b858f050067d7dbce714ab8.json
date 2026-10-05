@@ -1,0 +1,23 @@
+{
+  "index": 391,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Çatlamış, hasarlı bir bina gördün. Ne yapmalısın?",
+  "sourceFilename": "2b858f050067d7dbce714ab8.mp3",
+  "sourceSha256": "003f2cdfec641e2eddbabb0e26c7d224989d6a6d84b0f69666347ef84a24460b",
+  "importedAt": "2026-10-01T04:16:21.445150+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.090612"
+    }
+  }
+}

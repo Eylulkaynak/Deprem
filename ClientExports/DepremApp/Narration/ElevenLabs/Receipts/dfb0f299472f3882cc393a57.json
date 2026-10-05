@@ -1,0 +1,23 @@
+{
+  "index": 503,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru. Hasar şüphesinde güvenli mesafe ve yetkili kontrolü gerekir.",
+  "sourceFilename": "dfb0f299472f3882cc393a57.mp3",
+  "sourceSha256": "81d00eecd0b3e270e6994299751d2d16f0bd2126e23aebd4715da7e100b899b9",
+  "importedAt": "2026-10-01T04:42:50.448692+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.370612"
+    }
+  }
+}

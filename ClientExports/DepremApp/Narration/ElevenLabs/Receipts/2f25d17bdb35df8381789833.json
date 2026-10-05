@@ -1,0 +1,23 @@
+{
+  "index": 237,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Yerde kırık cam ve moloz olabilir; ayakkabı ayağını korur.",
+  "sourceFilename": "2f25d17bdb35df8381789833.mp3",
+  "sourceSha256": "734229501ef156ae3e3d4649e5c2baba926e6b28d768d7e2a147e9bd775b6233",
+  "importedAt": "2026-10-01T03:49:54.628374+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.717551"
+    }
+  }
+}

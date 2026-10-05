@@ -1,0 +1,23 @@
+{
+  "index": 5,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Sarsıntı sırasında dışarıya ya da merdivenlere koşma. Asansöre binme. Balkon ve pencerelerden uzak dur. Çök, kapan, tutun hareketlerini yap. Sarsıntı bitince bir büyüğünle birlikte hareket et.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_06_39_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "edb560a866ab89cf915af904b73d4ecb9dec543179116f59ec554c51b7b562f3",
+  "importedAt": "2026-10-01T00:07:36.260820+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "14.069388"
+    }
+  }
+}

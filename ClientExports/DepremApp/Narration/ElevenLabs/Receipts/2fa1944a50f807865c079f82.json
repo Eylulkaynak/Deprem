@@ -1,0 +1,23 @@
+{
+  "index": 419,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Acil çanta, evrak kopyaları ve ilaç listesini erişilebilir tut.",
+  "sourceFilename": "2fa1944a50f807865c079f82.mp3",
+  "sourceSha256": "9419f6a8ee06d41d02be696f2b51aeb2c1a6a147d7adf8dee3fd6aff4ef33fef",
+  "importedAt": "2026-10-01T04:19:11.066556+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.187755"
+    }
+  }
+}

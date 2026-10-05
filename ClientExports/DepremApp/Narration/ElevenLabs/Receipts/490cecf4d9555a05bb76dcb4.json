@@ -1,0 +1,23 @@
+{
+  "index": 551,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Kalabalık yapılarda güvenlik, herkesin aynı planı bilmesine bağlıdır.",
+  "sourceFilename": "490cecf4d9555a05bb76dcb4.mp3",
+  "sourceSha256": "9645751c9c0eb336615f78150cb2d7762f858ef6530388f418b850046e03c1d1",
+  "importedAt": "2026-10-01T04:48:28.970323+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "4.952653"
+    }
+  }
+}

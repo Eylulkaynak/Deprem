@@ -1,0 +1,23 @@
+{
+  "index": 246,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Doğru! Merdiven asansörden çok daha güvenli.",
+  "sourceFilename": "5f22c06ed0460fc879d08240.mp3",
+  "sourceSha256": "24cc1a84a5c42ff388a25cd1e03d116e4dfed3d4f552ecae09d6e80bb0d51112",
+  "importedAt": "2026-10-01T03:51:01.072169+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "3.829388"
+    }
+  }
+}

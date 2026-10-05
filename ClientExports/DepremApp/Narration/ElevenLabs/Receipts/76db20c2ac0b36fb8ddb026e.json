@@ -1,0 +1,23 @@
+{
+  "index": 440,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Araç içindeyken amaç güvenli biçimde durmak ve çevre risklerinden uzaklaşmaktır.",
+  "sourceFilename": "76db20c2ac0b36fb8ddb026e.mp3",
+  "sourceSha256": "25c76df536804a6cb6731691b758f6c42de9f71ef521ee5955a4924f441f2166",
+  "importedAt": "2026-10-01T04:25:18.870641+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "5.840816"
+    }
+  }
+}

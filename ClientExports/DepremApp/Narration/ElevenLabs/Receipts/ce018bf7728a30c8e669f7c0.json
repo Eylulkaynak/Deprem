@@ -1,0 +1,23 @@
+{
+  "index": 23,
+  "provider": "ElevenLabs",
+  "voice": "Nisa - Encouraging, Friendly and Soft",
+  "model": "eleven_v4",
+  "prompt": "[gently] Bu eşya ne işe yarar? Önce bir eşya seç. Sonra onun kullanımını gösteren resme dokun. İstersen eşyayı oraya sürükleyebilirsin.",
+  "sourceFilename": "ElevenLabs_2026-10-01T00_11_38_Nisa - Encouraging, Friendly and Soft_pvc_sp100_s95_sb88_v4.mp3",
+  "sourceSha256": "343713605597cb738dfefe700a9127f9d36622b5d316098b13d996da9a11d80e",
+  "importedAt": "2026-10-01T00:11:55.994427+00:00",
+  "audio": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 1
+      }
+    ],
+    "format": {
+      "duration": "9.445714"
+    }
+  }
+}
