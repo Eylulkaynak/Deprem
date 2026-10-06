@@ -1,6 +1,7 @@
 # Unity'nin oluşturduğu geçici ve cihaza özel klasörler
 /[Ll]ibrary/
 /[Tt]emp/
+/.utmp/
 /[Oo]bj/
 /[Bb]uilds/
 /[Ll]ogs/
