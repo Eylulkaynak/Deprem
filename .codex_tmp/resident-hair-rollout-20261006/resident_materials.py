@@ -1,0 +1,53 @@
+"""Use the project's existing UV region masks, then bake portable albedo in Blender."""
+import bpy,pathlib,json,sys
+ROOT=pathlib.Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'Tools/YanYana'))
+from build_original_residents import color
+
+def bake_material(obj,name,out):
+    bpy.ops.object.select_all(action='DESELECT');obj.select_set(True);bpy.context.view_layer.objects.active=obj
+    sc=bpy.context.scene;sc.render.engine='CYCLES';sc.cycles.samples=1
+    image=bpy.data.images.new(name+' baked character albedo',2048,2048,alpha=True)
+    for mat in obj.data.materials:
+        node=mat.node_tree.nodes.new('ShaderNodeTexImage');node.image=image;mat.node_tree.nodes.active=node
+    bpy.ops.object.bake(type='DIFFUSE',pass_filter={'COLOR'},use_clear=True,margin=8)
+    image.filepath_raw=str(out/(name+'_Albedo.png'));image.file_format='PNG';image.save();image.pack()
+    mat=bpy.data.materials.new(name+' portable approved palette');mat.use_nodes=True;node=mat.node_tree.nodes.new('ShaderNodeTexImage');node.image=image
+    shader=mat.node_tree.nodes['Principled BSDF'];shader.inputs['Roughness'].default_value=.72;mat.node_tree.links.new(node.outputs['Color'],shader.inputs['Base Color']);obj.data.materials.clear();obj.data.materials.append(mat)
+    for poly in obj.data.polygons:poly.material_index=0
+
+def approved_palette(obj,name,source,hex,out,grey=False):
+    # The reviewed project's spatial masks isolate cloth and hair from skin and
+    # eyes. Keep their feathered boundaries instead of painting whole triangles.
+    template='Deniz' if source=='Emre' else 'Selma';folder=ROOT/'ArtDirection/YanYana/Characters/ApprovedStyle'
+    group=json.loads((folder/(template+'.mesh.json')).read_text(encoding='utf-8-sig'))['surfaces'][0]['groups'][0]
+    mat=bpy.data.materials.new(name+' approved regional palette');mat.use_nodes=True;nodes=mat.node_tree.nodes;links=mat.node_tree.links
+    def bind(socket,v):
+        if hasattr(v,'is_output'):links.new(v,socket)
+        else:socket.default_value=v[:3] if socket.type=='VECTOR' and isinstance(v,tuple) else v
+    def mathnode(op,a,b=None):
+        n=nodes.new('ShaderNodeMath');n.operation=op;bind(n.inputs[0],a)
+        if b is not None:bind(n.inputs[1],b)
+        return n.outputs[0]
+    def smooth(x,lo,hi):
+        t=mathnode('MINIMUM',mathnode('MAXIMUM',mathnode('DIVIDE',mathnode('SUBTRACT',x,lo),hi-lo),0),1)
+        return mathnode('MULTIPLY',mathnode('MULTIPLY',t,t),mathnode('SUBTRACT',3,mathnode('MULTIPLY',2,t)))
+    def split(value):
+        n=nodes.new('ShaderNodeSeparateColor');n.mode='RGB';bind(n.inputs[0],value);return n.outputs[0],n.outputs[1],n.outputs[2]
+    def tex(path,data=False):
+        n=nodes.new('ShaderNodeTexImage');n.image=bpy.data.images.load(str(folder/path),check_existing=True)
+        if data:n.image.colorspace_settings.name='Non-Color'
+        return n.outputs['Color']
+    def multiply(a,b):
+        n=nodes.new('ShaderNodeVectorMath');n.operation='MULTIPLY';bind(n.inputs[0],a);bind(n.inputs[1],b);return n.outputs[0]
+    def mix(f,a,b):
+        n=nodes.new('ShaderNodeMixRGB');bind(n.inputs[0],f);bind(n.inputs[1],a);bind(n.inputs[2],b);return n.outputs[0]
+    base=tex(group['texture']);regions=split(tex(group['regionTexture'],True));gamma=nodes.new('ShaderNodeGamma');bind(gamma.inputs[0],base);gamma.inputs[1].default_value=1/2.2;r,g,b=split(gamma.outputs[0])
+    if source=='Derya':factor=mathnode('MULTIPLY',smooth(mathnode('DIVIDE',b,mathnode('MAXIMUM',g,.01)),.86,.905),smooth(mathnode('DIVIDE',r,mathnode('MAXIMUM',g,.01)),1.08,1.18))
+    else:factor=mathnode('MULTIPLY',smooth(mathnode('SUBTRACT',b,r),.005,.025),smooth(mathnode('SUBTRACT',b,g),.005,.025))
+    lr,lg,lb=split(base);lum=mathnode('ADD',mathnode('ADD',mathnode('MULTIPLY',lr,.2126),mathnode('MULTIPLY',lg,.7152)),mathnode('MULTIPLY',lb,.0722));shade=mathnode('MINIMUM',mathnode('MAXIMUM',mathnode('SQRT',mathnode('DIVIDE',lum,.24 if source=='Derya' else .016)),.35),1.45)
+    result=mix(mathnode('MULTIPLY',factor,regions[0]),base,multiply(color(hex),shade))
+    if grey:
+        factor=mathnode('MULTIPLY',regions[1],mathnode('SUBTRACT',1,smooth(r,.44,.58)));shade=mathnode('MINIMUM',mathnode('MAXIMUM',mathnode('SQRT',mathnode('DIVIDE',lum,.055)),.24),1.25);result=mix(factor,result,multiply(color('#A3A29A'),shade))
+    shader=nodes['Principled BSDF'];bind(shader.inputs['Base Color'],result);shader.inputs['Roughness'].default_value=.72;obj.data.materials.clear();obj.data.materials.append(mat)
+    for poly in obj.data.polygons:poly.material_index=0
+    bake_material(obj,name,out)

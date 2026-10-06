@@ -21,7 +21,7 @@ namespace YanYana.Editor
         public static void Apply()
         {
             if(EditorApplication.isPlaying)throw new InvalidOperationException("Leave Play before authoring presentation.");
-            Cameras();FireVolumes();Nozzle();Coupling();StreetDepth();Clock();YanYanaAdventureBuilder.RefreshImmersiveFireInput();
+            Cameras();FireVolumes();Nozzle();Coupling();StreetDepth();Clock();YanYanaFirePresentation.Apply();
         }
         static void Cameras()
         {
@@ -161,10 +161,12 @@ namespace YanYana.Editor
         {
             var world=All<Transform>().First(t=>t.name.StartsWith("02 Dünya"));var old=world.Find("Sokağın güney cephesi");if(old)UnityEngine.Object.DestroyImmediate(old.gameObject);
             var root=new GameObject("Sokağın güney cephesi").transform;root.SetParent(world,false);
+            // The complete native neighborhood owns the visible architecture now.
+            root.gameObject.SetActive(!world.Find("KKTC · hacimli mahalle ve açık meydan"));
             var materials=AssetDatabase.FindAssets("t:Material",new[]{"Assets/YanYana/Art/Materials"}).Select(g=>AssetDatabase.LoadAssetAtPath<Material>(AssetDatabase.GUIDToAssetPath(g))).GroupBy(m=>m.name).ToDictionary(g=>g.Key,g=>g.First());
             for(int i=0;i<4;i++)
             {
-                var model=UnityEngine.Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/YanYana/Art/Models/Facade_"+(i+1)+".fbx"),root,false);model.name="Sokağın sonundaki ev "+(i+1);model.transform.position=new Vector3(-12.2f+i*3.84f,-.48f,-28.6f);model.transform.localScale=Vector3.one*.83f;model.transform.rotation=Quaternion.identity;
+                var model=UnityEngine.Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/YanYana/Art/Models/Facade_"+(i+1)+".fbx"),root,false);model.name="Sokağın sonundaki ev "+(i+1);model.transform.position=new Vector3(-12.2f+i*6.5f,-.48f,-38.5f);model.transform.localScale=Vector3.one*.83f;model.transform.rotation=Quaternion.identity;
                 foreach(var r in model.GetComponentsInChildren<Renderer>())r.sharedMaterials=r.sharedMaterials.Select(m=>m&&materials.TryGetValue(m.name,out var shared)?shared:m).ToArray();
             }
             var help=(RectTransform)Find("FireHelp");help.anchorMin=help.anchorMax=help.pivot=Vector2.one;help.anchoredPosition=new Vector2(-20,-134);help.sizeDelta=new Vector2(164,56);

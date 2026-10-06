@@ -1,0 +1,111 @@
+00:01.203  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Eren_Expressions.blend"
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Applied modifier was not first, result may not be as expected
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Applied modifier was not first, result may not be as expected
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Eren.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Eren\\Eren_Rigged.fbx'
+export finished in 0.2779 sec.
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Eren", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 64664, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 11, "unity_play_tested": false}
+00:03.672  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Ece_Expressions.blend"
+Info: Removed: 27208 vertices, 0 edges, 0 faces
+Info: Removed: 9 vertices, 10 edges, 0 faces
+Info: Applied modifier was not first, result may not be as expected
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Ece.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Ece\\Ece_Rigged.fbx'
+export finished in 0.2856 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Ece", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 69901, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 10, "unity_play_tested": false}
+00:06.266  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Aylin_Expressions.blend"
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Aylin.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Aylin\\Aylin_Rigged.fbx'
+export finished in 0.3588 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Aylin", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 1, "vertices": 45198, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 5, "unity_play_tested": false}
+00:07.750  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Zeynep_Expressions.blend"
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Zeynep.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Zeynep\\Zeynep_Rigged.fbx'
+export finished in 0.2730 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Zeynep", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 1, "vertices": 44352, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 5, "unity_play_tested": false}
+00:09.328  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Deniz\Deniz_Expressions.blend"
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Deniz.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Deniz\\Deniz_Rigged.fbx'
+export finished in 0.2637 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Deniz", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 43053, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 7, "unity_play_tested": false}
+00:10.860  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Gul\Gul_Expressions.blend"
+Info: Removed: 14248 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Gul.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Gul\\Gul_Rigged.fbx'
+export finished in 0.2735 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Gul", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 68658, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 9, "unity_play_tested": false}
+00:12.532  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Kemal\Kemal_Expressions.blend"
+Info: Removed: 6864 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Kemal.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Kemal\\Kemal_Rigged.fbx'
+export finished in 0.3337 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Kemal", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 58222, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 9, "unity_play_tested": false}
+00:14.344  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Arda\Arda_Expressions.blend"
+Info: Removed: 18948 vertices, 0 edges, 0 faces
+Info: Removed: 3 vertices, 3 edges, 0 faces
+Info: Saved as "Arda.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Arda\\Arda_Rigged.fbx'
+export finished in 0.2620 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Arda", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 44462, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 6, "unity_play_tested": false}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

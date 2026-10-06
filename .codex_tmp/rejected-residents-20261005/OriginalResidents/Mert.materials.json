@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Mert_Skin",
+    "color": "#9C6548",
+    "roughness": 0.56
+  },
+  {
+    "name": "Mert_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Mert_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Mert_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Mert_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Mert_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Mert_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Mert_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Mert_Hair",
+    "color": "#201B19",
+    "roughness": 0.68
+  },
+  {
+    "name": "Mert_HairLight",
+    "color": "#312C2A",
+    "roughness": 0.64
+  },
+  {
+    "name": "Mert_Top",
+    "color": "#76659B",
+    "roughness": 0.83
+  },
+  {
+    "name": "Mert_Bottom",
+    "color": "#84745B",
+    "roughness": 0.82
+  },
+  {
+    "name": "Mert_Shoe",
+    "color": "#48453E",
+    "roughness": 0.6
+  },
+  {
+    "name": "Mert_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Mert_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Mert_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Mert_Seam",
+    "color": "#3E2D63",
+    "roughness": 0.8
+  }
+]

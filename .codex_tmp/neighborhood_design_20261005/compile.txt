@@ -1,0 +1,3 @@
+Assets\YanYana\Editor\YanYanaUIAuthor.cs(33,13): warning CS0618: 'TMP_Text.enableWordWrapping' is obsolete: 'The enabledWordWrapping property is now obsolete. Please use the textWrappingMode property instead.'
+Assets\YanYana\Editor\YanYanaUIAuthor.cs(63,149): warning CS0618: 'TMP_Text.enableWordWrapping' is obsolete: 'The enabledWordWrapping property is now obsolete. Please use the textWrappingMode property instead.'
+Assets\YanYana\Editor\YanYanaWorldAuthor.cs(161,60): warning CS0618: 'TMP_Text.enableWordWrapping' is obsolete: 'The enabledWordWrapping property is now obsolete. Please use the textWrappingMode property instead.'

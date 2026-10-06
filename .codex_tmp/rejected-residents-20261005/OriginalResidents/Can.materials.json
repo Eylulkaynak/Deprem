@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Can_Skin",
+    "color": "#B5784F",
+    "roughness": 0.56
+  },
+  {
+    "name": "Can_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Can_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Can_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Can_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Can_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Can_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Can_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Can_Hair",
+    "color": "#1F1918",
+    "roughness": 0.68
+  },
+  {
+    "name": "Can_HairLight",
+    "color": "#302A29",
+    "roughness": 0.64
+  },
+  {
+    "name": "Can_Top",
+    "color": "#D7A94E",
+    "roughness": 0.83
+  },
+  {
+    "name": "Can_Bottom",
+    "color": "#526A74",
+    "roughness": 0.82
+  },
+  {
+    "name": "Can_Shoe",
+    "color": "#E5DDD0",
+    "roughness": 0.6
+  },
+  {
+    "name": "Can_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Can_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Can_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Can_Seam",
+    "color": "#9F7116",
+    "roughness": 0.8
+  }
+]

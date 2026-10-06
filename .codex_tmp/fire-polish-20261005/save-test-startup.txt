@@ -1,0 +1,5 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+FAIL System.InvalidOperationException: First fire workspace timeout; phase=6 workspace= busy=False
+  at YanYana.Editor.YanYanaPhysicalQA+<WaitPhysical>d__122.MoveNext () [0x00041] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:33 
+  at YanYana.Editor.YanYanaPhysicalQA+<FireSaveReloadSequence>d__130.MoveNext () [0x000b8] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:92 
+  at YanYana.Editor.YanYanaPhysicalQA.PhysicalCheckTick () [0x0002f] in C:\Users\Gokturk\Documents\GitHub\Deprem\Assets\YanYana\Editor\YanYanaPhysicalResilienceQA.cs:28 

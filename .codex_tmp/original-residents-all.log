@@ -1,0 +1,274 @@
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_residents.py:84: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(self.s['name']+'_'+n); m.use_nodes=True
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+Info: Saved as "Ece.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Ece.fbx'
+export finished in 0.0648 sec.
+ORIGINAL_RESIDENT_READY Ece 19675 39578
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_residents.py:513: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True;scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.72,.78,.85,1);scene.world.node_tree.nodes['Background'].inputs[1].default_value=.50
+00:04.969  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\FullBody.png'
+00:06.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Neutral.png'
+00:08.313  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Speaking.png'
+00:09.969  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Fear.png'
+00:11.578  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Surprise.png'
+00:13.156  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Blink.png'
+00:14.703  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Smile.png'
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_residents.py:84: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(self.s['name']+'_'+n); m.use_nodes=True
+Info: Saved as "Aylin.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Aylin.fbx'
+export finished in 0.0782 sec.
+ORIGINAL_RESIDENT_READY Aylin 20549 42372
+00:17.641  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\FullBody.png'
+00:18.985  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\Neutral.png'
+00:20.344  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\Speaking.png'
+00:21.735  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\Fear.png'
+00:23.110  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\Surprise.png'
+00:24.360  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\Blink.png'
+00:25.735  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Aylin\Smile.png'
+Info: Saved as "Zeynep.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Zeynep.fbx'
+export finished in 0.0840 sec.
+ORIGINAL_RESIDENT_READY Zeynep 22439 46516
+00:28.672  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\FullBody.png'
+00:30.063  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\Neutral.png'
+00:31.406  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\Speaking.png'
+00:32.781  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\Fear.png'
+00:34.156  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\Surprise.png'
+00:35.500  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\Blink.png'
+00:36.813  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Zeynep\Smile.png'
+Info: Saved as "Eren.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Eren.fbx'
+export finished in 0.0619 sec.
+ORIGINAL_RESIDENT_READY Eren 18023 36336
+00:39.453  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\FullBody.png'
+00:40.844  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\Neutral.png'
+00:42.203  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\Speaking.png'
+00:43.547  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\Fear.png'
+00:44.969  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\Surprise.png'
+00:46.344  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\Blink.png'
+00:47.766  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Eren\Smile.png'
+Info: Saved as "Mina.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Mina.fbx'
+export finished in 0.0858 sec.
+ORIGINAL_RESIDENT_READY Mina 23654 48858
+00:50.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\FullBody.png'
+00:52.203  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\Neutral.png'
+00:53.781  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\Speaking.png'
+00:55.297  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\Fear.png'
+00:56.860  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\Surprise.png'
+00:58.375  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\Blink.png'
+00:59.922  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mina\Smile.png'
+Info: Saved as "Can.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Can.fbx'
+export finished in 0.0740 sec.
+ORIGINAL_RESIDENT_READY Can 18919 38920
+01:02.719  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\FullBody.png'
+01:04.156  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\Neutral.png'
+01:05.547  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\Speaking.png'
+01:06.938  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\Fear.png'
+01:08.297  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\Surprise.png'
+01:09.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\Blink.png'
+01:10.969  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Can\Smile.png'
+Info: Saved as "Elif.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Elif.fbx'
+export finished in 0.0574 sec.
+ORIGINAL_RESIDENT_READY Elif 18492 37450
+01:13.797  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\FullBody.png'
+01:15.250  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\Neutral.png'
+01:16.656  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\Speaking.png'
+01:18.078  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\Fear.png'
+01:19.469  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\Surprise.png'
+01:20.844  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\Blink.png'
+01:22.219  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Elif\Smile.png'
+Info: Saved as "Arda.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Arda.fbx'
+export finished in 0.0677 sec.
+ORIGINAL_RESIDENT_READY Arda 16714 33774
+01:24.985  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\FullBody.png'
+01:26.547  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\Neutral.png'
+01:28.110  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\Speaking.png'
+01:29.656  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\Fear.png'
+01:31.266  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\Surprise.png'
+01:32.891  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\Blink.png'
+01:34.438  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Arda\Smile.png'
+Info: Saved as "Lale.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Lale.fbx'
+export finished in 0.0784 sec.
+ORIGINAL_RESIDENT_READY Lale 19857 40180
+01:37.203  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\FullBody.png'
+01:38.610  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\Neutral.png'
+01:40.047  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\Speaking.png'
+01:41.563  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\Fear.png'
+01:43.000  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\Surprise.png'
+01:44.422  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\Blink.png'
+01:45.828  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Lale\Smile.png'
+Info: Saved as "Umut.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Umut.fbx'
+export finished in 0.0709 sec.
+ORIGINAL_RESIDENT_READY Umut 16858 34142
+01:48.688  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\FullBody.png'
+01:50.031  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\Neutral.png'
+01:51.375  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\Speaking.png'
+01:52.781  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\Fear.png'
+01:54.141  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\Surprise.png'
+01:55.500  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\Blink.png'
+01:56.906  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Umut\Smile.png'
+Info: Saved as "Deniz.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Deniz.fbx'
+export finished in 0.0716 sec.
+ORIGINAL_RESIDENT_READY Deniz 16554 33522
+01:59.750  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\FullBody.png'
+02:01.172  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\Neutral.png'
+02:02.563  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\Speaking.png'
+02:03.953  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\Fear.png'
+02:05.313  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\Surprise.png'
+02:06.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\Blink.png'
+02:07.969  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Deniz\Smile.png'
+Info: Saved as "Asli.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Asli.fbx'
+export finished in 0.0754 sec.
+ORIGINAL_RESIDENT_READY Asli 18662 37550
+02:10.875  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\FullBody.png'
+02:12.406  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\Neutral.png'
+02:13.922  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\Speaking.png'
+02:15.453  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\Fear.png'
+02:17.031  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\Surprise.png'
+02:18.547  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\Blink.png'
+02:20.063  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Asli\Smile.png'
+Info: Saved as "Ozan.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Ozan.fbx'
+export finished in 0.0712 sec.
+ORIGINAL_RESIDENT_READY Ozan 16554 33530
+02:22.797  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\FullBody.png'
+02:24.125  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\Neutral.png'
+02:25.578  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\Speaking.png'
+02:26.891  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\Fear.png'
+02:28.219  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\Surprise.png'
+02:29.516  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\Blink.png'
+02:30.813  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ozan\Smile.png'
+Info: Saved as "Selma.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Selma.fbx'
+export finished in 0.0660 sec.
+ORIGINAL_RESIDENT_READY Selma 16466 33266
+02:33.594  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\FullBody.png'
+02:34.906  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\Neutral.png'
+02:36.235  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\Speaking.png'
+02:37.547  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\Fear.png'
+02:38.875  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\Surprise.png'
+02:40.156  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\Blink.png'
+02:41.438  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Selma\Smile.png'
+Info: Saved as "Mert.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Mert.fbx'
+export finished in 0.0792 sec.
+ORIGINAL_RESIDENT_READY Mert 19063 39292
+02:44.328  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\FullBody.png'
+02:45.719  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\Neutral.png'
+02:47.094  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\Speaking.png'
+02:48.453  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\Fear.png'
+02:49.828  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\Surprise.png'
+02:51.219  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\Blink.png'
+02:52.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Mert\Smile.png'
+Info: Saved as "Gul.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Gul.fbx'
+export finished in 0.0768 sec.
+ORIGINAL_RESIDENT_READY Gul 17341 35080
+02:55.594  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\FullBody.png'
+02:57.016  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\Neutral.png'
+02:58.375  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\Speaking.png'
+02:59.766  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\Fear.png'
+03:01.235  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\Surprise.png'
+03:02.656  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\Blink.png'
+03:04.110  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Gul\Smile.png'
+Info: Saved as "Cem.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Cem.fbx'
+export finished in 0.0813 sec.
+ORIGINAL_RESIDENT_READY Cem 17358 35070
+03:07.063  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\FullBody.png'
+03:08.500  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\Neutral.png'
+03:09.860  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\Speaking.png'
+03:11.235  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\Fear.png'
+03:12.610  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\Surprise.png'
+03:13.953  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\Blink.png'
+03:15.313  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Cem\Smile.png'
+Info: Saved as "Nermin.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Nermin.fbx'
+export finished in 0.0793 sec.
+ORIGINAL_RESIDENT_READY Nermin 20609 42120
+03:18.250  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\FullBody.png'
+03:19.641  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\Neutral.png'
+03:21.047  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\Speaking.png'
+03:22.438  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\Fear.png'
+03:23.828  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\Surprise.png'
+03:25.203  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\Blink.png'
+03:26.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Nermin\Smile.png'
+Info: Saved as "Orhan.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Orhan.fbx'
+export finished in 0.0760 sec.
+ORIGINAL_RESIDENT_READY Orhan 16299 33100
+03:29.563  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\FullBody.png'
+03:31.031  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\Neutral.png'
+03:32.500  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\Speaking.png'
+03:33.985  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\Fear.png'
+03:35.453  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\Surprise.png'
+03:36.906  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\Blink.png'
+03:38.375  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Orhan\Smile.png'
+Info: Saved as "Suna.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Suna.fbx'
+export finished in 0.0827 sec.
+ORIGINAL_RESIDENT_READY Suna 18759 38672
+03:41.360  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\FullBody.png'
+03:42.781  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\Neutral.png'
+03:44.188  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\Speaking.png'
+03:45.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\Fear.png'
+03:47.078  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\Surprise.png'
+03:48.516  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\Blink.png'
+03:49.922  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Suna\Smile.png'
+Info: Saved as "Kemal.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Kemal.fbx'
+export finished in 0.0792 sec.
+ORIGINAL_RESIDENT_READY Kemal 17559 35380
+03:52.922  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\FullBody.png'
+03:54.344  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\Neutral.png'
+03:55.781  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\Speaking.png'
+03:57.219  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\Fear.png'
+03:58.641  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\Surprise.png'
+04:00.078  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\Blink.png'
+04:01.500  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Kemal\Smile.png'
+Info: Saved as "Ali.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Ali.fbx'
+export finished in 0.0793 sec.
+ORIGINAL_RESIDENT_READY Ali 16339 33192
+04:04.453  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\FullBody.png'
+04:05.906  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\Neutral.png'
+04:07.360  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\Speaking.png'
+04:08.828  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\Fear.png'
+04:10.297  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\Surprise.png'
+04:11.766  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\Blink.png'
+04:13.250  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ali\Smile.png'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

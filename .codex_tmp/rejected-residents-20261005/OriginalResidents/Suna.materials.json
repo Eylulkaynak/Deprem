@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Suna_Skin",
+    "color": "#AC724E",
+    "roughness": 0.56
+  },
+  {
+    "name": "Suna_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Suna_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Suna_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Suna_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Suna_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Suna_Iris",
+    "color": "#6D7941",
+    "roughness": 0.23
+  },
+  {
+    "name": "Suna_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Suna_Hair",
+    "color": "#34231B",
+    "roughness": 0.68
+  },
+  {
+    "name": "Suna_HairLight",
+    "color": "#45342C",
+    "roughness": 0.64
+  },
+  {
+    "name": "Suna_Top",
+    "color": "#CC9670",
+    "roughness": 0.83
+  },
+  {
+    "name": "Suna_Bottom",
+    "color": "#675978",
+    "roughness": 0.82
+  },
+  {
+    "name": "Suna_Shoe",
+    "color": "#513B30",
+    "roughness": 0.6
+  },
+  {
+    "name": "Suna_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Suna_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Suna_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Suna_Seam",
+    "color": "#945E38",
+    "roughness": 0.8
+  }
+]

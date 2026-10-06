@@ -94,7 +94,9 @@ namespace YanYana.Editor
             var begin=main.Event("BeginSiblingCheck",true);var allowed=main.Branch(begin.trigger,And(main,Is(main,main.Var("SiblingChecked"),0),Is(main,main.Var("Phase"),2)));
             var p=main.SetVar(allowed.ifTrue,"Busy",true);p=main.Do(p,typeof(StorySiblingFollower),"SetFollowing",follower,OneBool,false);
             var adaAgent=ada.GetComponent<NavMeshAgent>();float approachPadding=new SerializedObject(movers["Ada"]).FindProperty("arrivalPadding").floatValue;p=main.Set(p,typeof(NavMeshAgent),"stoppingDistance",adaAgent,.025f);p=main.Set(p,typeof(StoryPlayerMovement),"arrivalPadding",movers["Ada"],.005f);
-            p=WalkAndWait(main,p,movers["Ada"],Add(main,main.Get(typeof(Transform),"position",efe.transform),new Vector3(-.43f,0,-.04f)),.047f);
+            // Navigation avoidance can settle about 10 cm from its requested point.
+            // The following palm contact uses actual actor positions, so accept that arrival.
+            p=WalkAndWait(main,p,movers["Ada"],Add(main,main.Get(typeof(Transform),"position",efe.transform),new Vector3(-.43f,0,-.04f)),.16f);
             p=main.Set(p,typeof(NavMeshAgent),"stoppingDistance",adaAgent,.10f);p=main.Set(p,typeof(StoryPlayerMovement),"arrivalPadding",movers["Ada"],approachPadding);
             p=main.Do(p,typeof(StoryPlayerMovement),"FaceTowards",movers["Ada"],new[]{typeof(Vector3)},main.Get(typeof(Transform),"position",efe.transform));
             p=main.Do(p,typeof(StorySiblingFollower),"FaceTowards",follower,new[]{typeof(Vector3)},main.Get(typeof(Transform),"position",ada.transform));
@@ -108,7 +110,7 @@ namespace YanYana.Editor
             var late=hands.Add(new Unity.VisualScripting.LateUpdate());var workspace=Is(hands,hands.Var("Workspace",flow),"sibling");var visible=And(hands,workspace,Is(hands,hands.Var("SiblingChecked",flow),0));
             p=hands.Set(late.trigger,typeof(Transform),"position",cue.transform,HandContactPoint(hands,"Ada",true,"Soft"));p=hands.Set(p,typeof(Transform),"position",targetCue.transform,hands.Var("SiblingTarget",flow));
             p=hands.Set(p,typeof(Collider),"enabled",hit,visible);foreach(var r in cue.GetComponentsInChildren<Renderer>())p=hands.Set(p,typeof(Renderer),"enabled",r,visible);
-            p=hands.Set(p,typeof(Renderer),"enabled",targetCue.GetComponent<Renderer>(),visible);p=hands.Active(p,skip,And(hands,visible,Available(hands)));
+            p=hands.Set(p,typeof(Renderer),"enabled",targetCue.GetComponent<Renderer>(),visible);p=hands.Active(p,skip,false);
             foreach(var adult in new[]{"Derya","Emre"})foreach(var r in cast[adult].GetComponentsInChildren<Renderer>())p=hands.Set(p,typeof(Renderer),"enabled",r,Is(hands,workspace,false));
             var contact=hands.Branch(p,And(hands,workspace,Is(hands,hands.Var("Paused",flow),false)));p=SolveArmContact(hands,contact.ifTrue,ea,hands.Var("SiblingTarget",flow));p=SolveArmContact(hands,p,aa,hands.Var("SiblingAim",flow),true);
             p=hands.SetVar(p,"AdaContactError",hands.Call(typeof(Vector3),"Distance",null,new[]{typeof(Vector3),typeof(Vector3)},HandContactPoint(hands,"Ada",true,"Soft"),hands.Var("SiblingAim",flow)).result);

@@ -1,0 +1,56 @@
+Native Visual Scripting + imported Blender blend shapes, checked during Play Mode.
+PASS 22 resident roots retained; eight workshop characters installed
+PASS eight distinct facial meshes
+PASS Deniz humanoid valid in Play Mode
+PASS Deniz one serialized facial graph
+PASS Gul humanoid valid in Play Mode
+PASS Gul one serialized facial graph
+PASS Kemal humanoid valid in Play Mode
+PASS Kemal one serialized facial graph
+PASS Arda humanoid valid in Play Mode
+PASS Arda one serialized facial graph
+PASS Ece humanoid valid in Play Mode
+PASS Ece one serialized facial graph
+PASS Aylin humanoid valid in Play Mode
+PASS Aylin one serialized facial graph
+PASS Zeynep humanoid valid in Play Mode
+PASS Zeynep one serialized facial graph
+PASS Eren humanoid valid in Play Mode
+PASS Eren one serialized facial graph
+PASS audio asset physical_07d78fec063e
+PASS Ece mouth follows physical_07d78fec063e peak=102.0 frames=86 playing=True clip=physical_07d78fec063e time=1.493333
+PASS speech stop resets every mouth
+PASS audio asset physical_11e73fce7382
+PASS Gul mouth follows physical_11e73fce7382 peak=98.8 frames=90 playing=True clip=physical_11e73fce7382 time=1.514667
+PASS speech stop resets every mouth
+PASS audio asset physical_21431daa88da
+PASS Eren mouth follows physical_21431daa88da peak=106.0 frames=90 playing=True clip=physical_21431daa88da time=1.493333
+PASS speech stop resets every mouth
+PASS audio asset physical_38c574652f4b
+PASS Deniz mouth follows physical_38c574652f4b peak=106.0 frames=91 playing=True clip=physical_38c574652f4b time=1.514667
+PASS paused speech closes mouth
+PASS speech stop resets every mouth
+PASS audio asset physical_86f3b4f46ff6
+PASS Ece mouth follows physical_86f3b4f46ff6 peak=99.6 frames=90 playing=True clip=physical_86f3b4f46ff6 time=1.493333
+PASS speech stop resets every mouth
+PASS audio asset physical_86f3b4f46ff6
+PASS Aylin mouth follows physical_86f3b4f46ff6 peak=102.0 frames=87 playing=True clip=physical_86f3b4f46ff6 time=3.193333
+PASS speech stop resets every mouth
+PASS audio asset physical_c9379fedd49b
+PASS Zeynep mouth follows physical_c9379fedd49b peak=106.0 frames=90 playing=True clip=physical_c9379fedd49b time=1.514667
+PASS speech stop resets every mouth
+PASS audio asset physical_e8ba9c88e36b
+PASS Eren mouth follows physical_e8ba9c88e36b peak=105.2 frames=90 playing=True clip=physical_e8ba9c88e36b time=1.472
+PASS speech stop resets every mouth
+PASS quake phase drives fear on all eight faces
+PASS lost child, mother and gas report drive distinct reactions
+PASS family reunion replaces worry with relief
+PASS Eren automatic blink observed
+PASS Ece automatic blink observed
+PASS Aylin automatic blink observed
+PASS Zeynep automatic blink observed
+PASS Deniz automatic blink observed
+PASS Gul automatic blink observed
+PASS Kemal automatic blink observed
+PASS Arda automatic blink observed
+PASS completed

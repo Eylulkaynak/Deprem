@@ -1,0 +1,21 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+PASS real screen raycast Ada at (249.44, 567.67)
+PASS A tap cannot crouch or advance
+PASS real screen raycast Ada at (243.90, 568.56)
+PASS Half gesture produces a half crouch rather than the complete pose
+PASS A second pointer cannot steal the crouch
+PASS An unfinished gesture returns smoothly without advancing
+PASS Reload keeps the children on the floor and cancels the previous gesture
+PASS real screen raycast Ada at (245.77, 567.06)
+PASS real screen raycast Başını koruyan el at (249.27, 409.54)
+PASS real screen raycast Masaya tutunan el at (368.45, 367.67)
+PASS Waiting without a held grip cannot complete the earthquake
+PASS real screen raycast Masaya tutunan el at (461.79, 463.48)
+PASS Releasing the grip resets its sustained hold
+PASS real screen raycast Masaya tutunan el at (459.19, 461.02)
+PASS Pause freezes the quake and cancels the held pointer
+PASS Resume requires a fresh grip
+PASS real screen raycast Masaya tutunan el at (461.87, 468.12)
+PASS Both children leave the table on the floor rather than its NavMesh top
+COMPLETE: actual bridge onset, analog crouch, head/hand drags, held grip, cancellation, pointer ownership, reload, pause/resume and sibling continuity.
+PASS complete

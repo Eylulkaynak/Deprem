@@ -81,6 +81,7 @@ namespace YanYana.Editor
                 if(t.name.StartsWith("Street_"))street[t.name.Substring(7)]=t;
                 if(t.name.StartsWith("COLLIDER_")){var c=t.gameObject.AddComponent<BoxCollider>();c.size=Vector3.one*.01f;}
             }
+            CreateNeighborhoodPark();
             for(int i=0;i<5;i++)
             {
                 Vector3 p=i<3?new Vector3(-12,-.48f,-12-i*4.1f):new Vector3(12,-.48f,-11-(i-3)*6);

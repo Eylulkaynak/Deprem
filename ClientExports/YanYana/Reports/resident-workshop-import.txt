@@ -1,0 +1,9 @@
+Blender workshop: eight resculpted characters based on the approved family anatomy.
+PASS Eren | humanoid avatar valid | 7 facial shapes | source anatomy: Emre
+PASS Ece | humanoid avatar valid | 7 facial shapes | source anatomy: Ada + Efe child body
+PASS Aylin | humanoid avatar valid | 7 facial shapes | source anatomy: Ada
+PASS Zeynep | humanoid avatar valid | 7 facial shapes | source anatomy: Derya
+PASS Deniz | humanoid avatar valid | 7 facial shapes | source anatomy: Emre
+PASS Gul | humanoid avatar valid | 7 facial shapes | source anatomy: Derya
+PASS Kemal | humanoid avatar valid | 7 facial shapes | source anatomy: Emre, independently designed face silhouette and hair
+PASS Arda | humanoid avatar valid | 7 facial shapes | source anatomy: Efe + Emre child body

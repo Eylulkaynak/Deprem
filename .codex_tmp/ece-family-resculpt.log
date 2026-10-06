@@ -1,0 +1,12 @@
+00:01.422  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Efe.blend"
+HAIR_SOURCE_BOUNDS [(-0.2857617139816284, 0.29610857367515564), (-0.3501604497432709, 0.2384200543165207), (1.0301861763000488, 1.619789719581604)]
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\sculpt_ece_from_family.py:47: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;p=m.node_tree.nodes['Principled BSDF'];p.inputs['Base Color'].default_value=color(hex);p.inputs['Roughness'].default_value=.77;m.diffuse_color=color(hex)
+00:05.390  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:08.890  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\FamilyResculpt\Ece\FullBody.png'
+00:11.937  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\FamilyResculpt\Ece\Face.png'
+Info: Saved as "Ece_Resculpt.blend"
+FAMILY_RESculpt_READY C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\FamilyResculpt\Ece
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

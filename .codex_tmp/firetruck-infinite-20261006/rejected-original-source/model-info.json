@@ -1,0 +1,12 @@
+{
+  "source": "Original offline sculpture from AbdullahEkinci_Reference_v1.png",
+  "vertices": 68928,
+  "faces": 85009,
+  "bones": 17,
+  "blendshapes": [
+    "Blink",
+    "Talk"
+  ],
+  "height_m": 1.91,
+  "meshy_used": false
+}

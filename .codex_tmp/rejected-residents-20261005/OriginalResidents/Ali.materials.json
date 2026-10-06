@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Ali_Skin",
+    "color": "#C49373",
+    "roughness": 0.56
+  },
+  {
+    "name": "Ali_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Ali_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Ali_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Ali_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Ali_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Ali_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Ali_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Ali_Hair",
+    "color": "#D1CCC1",
+    "roughness": 0.68
+  },
+  {
+    "name": "Ali_HairLight",
+    "color": "#E2DDD2",
+    "roughness": 0.64
+  },
+  {
+    "name": "Ali_Top",
+    "color": "#678582",
+    "roughness": 0.83
+  },
+  {
+    "name": "Ali_Bottom",
+    "color": "#8B7D66",
+    "roughness": 0.82
+  },
+  {
+    "name": "Ali_Shoe",
+    "color": "#51463B",
+    "roughness": 0.6
+  },
+  {
+    "name": "Ali_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Ali_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Ali_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Ali_Seam",
+    "color": "#2F4D4A",
+    "roughness": 0.8
+  }
+]

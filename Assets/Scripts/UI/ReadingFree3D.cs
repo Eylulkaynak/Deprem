@@ -20,7 +20,9 @@ namespace Deprem.Accessibility
     {
         public static bool Enabled => !LearningProgress.Current.Data.Active.adult && Supports(SceneManager.GetActiveScene().name);
         public static bool Supports(string scene) => scene == "YanYana_Adventure" || scene == "Story_Rebuild_MainMenu" ||
-            scene == "Story_04_FiretruckRunner" || Regex.IsMatch(scene, @"^Story_0[1-4]_RebuildPreview$") ||
+            // The runner authors pictorial controls and numeric prices in its own HUD.
+            // Replacing those labels would hide upgrade costs and Apo's guidance.
+            Regex.IsMatch(scene, @"^Story_0[1-4]_RebuildPreview$") ||
             new[] { "Minigame_Hub", "Minigame_FirefighterExtinguish", "Minigame_Evacuation_25D", "Minigame_AftershockCover",
                 "Minigame_RoomSafety", "Minigame_EmergencyBagRush", "Minigame_EmergencyCorridor", "Minigame_RubbleSignal" }.Contains(scene);
         private sealed class Binding

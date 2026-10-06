@@ -1,0 +1,664 @@
+[
+  {
+    "name": "Ece",
+    "h": 1.18,
+    "age": "child",
+    "sex": "f",
+    "head": [
+      1.06,
+      0.94,
+      1.02
+    ],
+    "jaw": 0.78,
+    "cheek": 1.13,
+    "eyes": [
+      1.1,
+      1.1,
+      1.02
+    ],
+    "nose": [
+      0.83,
+      0.85
+    ],
+    "hair": "bob",
+    "haircolor": "#241A1E",
+    "skin": "#E8AD7B",
+    "top": "#B491CA",
+    "bottom": "#61416F",
+    "shoe": "#CD655B",
+    "outfit": "dungarees",
+    "build": 0.89,
+    "freckles": true
+  },
+  {
+    "name": "Aylin",
+    "h": 1.77,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      0.9,
+      1.07,
+      1.09
+    ],
+    "jaw": 0.7,
+    "cheek": 1.0,
+    "eyes": [
+      0.92,
+      0.92,
+      0.95
+    ],
+    "nose": [
+      0.88,
+      1.15
+    ],
+    "hair": "curly_pony",
+    "haircolor": "#70331C",
+    "skin": "#D89A69",
+    "top": "#77815A",
+    "bottom": "#494A46",
+    "shoe": "#70442E",
+    "outfit": "jacket",
+    "build": 0.94
+  },
+  {
+    "name": "Zeynep",
+    "h": 1.64,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      1.0,
+      0.96,
+      0.95
+    ],
+    "jaw": 0.98,
+    "cheek": 1.04,
+    "eyes": [
+      1.0,
+      0.92,
+      1.03
+    ],
+    "nose": [
+      1.14,
+      0.88
+    ],
+    "hair": "braids",
+    "haircolor": "#231914",
+    "skin": "#BA7D50",
+    "top": "#BDD050",
+    "bottom": "#30425B",
+    "shoe": "#38352F",
+    "outfit": "vest",
+    "build": 1.02
+  },
+  {
+    "name": "Eren",
+    "h": 1.76,
+    "age": "adult",
+    "sex": "m",
+    "head": [
+      1.08,
+      1.12,
+      1.01
+    ],
+    "jaw": 1.09,
+    "cheek": 1.16,
+    "eyes": [
+      0.91,
+      0.96,
+      0.96
+    ],
+    "nose": [
+      1.19,
+      1.11
+    ],
+    "hair": "receding",
+    "haircolor": "#271E18",
+    "skin": "#BD8257",
+    "top": "#E98639",
+    "bottom": "#A0926C",
+    "shoe": "#3D3B35",
+    "outfit": "vest",
+    "build": 1.3
+  },
+  {
+    "name": "Mina",
+    "h": 1.12,
+    "age": "child",
+    "sex": "f",
+    "head": [
+      0.95,
+      1.02,
+      1.03
+    ],
+    "jaw": 0.71,
+    "cheek": 1.08,
+    "eyes": [
+      1.05,
+      1.12,
+      1.02
+    ],
+    "nose": [
+      0.88,
+      0.78
+    ],
+    "hair": "pigtails",
+    "haircolor": "#5D311F",
+    "skin": "#D99A6C",
+    "top": "#E48C7A",
+    "bottom": "#487C89",
+    "shoe": "#E2B65C",
+    "outfit": "dress",
+    "build": 0.85
+  },
+  {
+    "name": "Can",
+    "h": 1.26,
+    "age": "child",
+    "sex": "m",
+    "head": [
+      1.02,
+      0.91,
+      1.01
+    ],
+    "jaw": 0.86,
+    "cheek": 1.05,
+    "eyes": [
+      1.03,
+      0.96,
+      1.08
+    ],
+    "nose": [
+      0.98,
+      0.88
+    ],
+    "hair": "curls",
+    "haircolor": "#1F1918",
+    "skin": "#B5784F",
+    "top": "#D7A94E",
+    "bottom": "#526A74",
+    "shoe": "#E5DDD0",
+    "outfit": "shorts",
+    "build": 0.96
+  },
+  {
+    "name": "Elif",
+    "h": 1.35,
+    "age": "child",
+    "sex": "f",
+    "head": [
+      0.9,
+      1.01,
+      1.13
+    ],
+    "jaw": 0.7,
+    "cheek": 0.99,
+    "eyes": [
+      0.94,
+      1.06,
+      0.95
+    ],
+    "nose": [
+      0.82,
+      1.0
+    ],
+    "hair": "side_pony",
+    "haircolor": "#8D4327",
+    "skin": "#E9B080",
+    "top": "#6E9E98",
+    "bottom": "#D1B07F",
+    "shoe": "#8B5845",
+    "outfit": "tunic",
+    "build": 0.88,
+    "freckles": true
+  },
+  {
+    "name": "Arda",
+    "h": 1.17,
+    "age": "child",
+    "sex": "m",
+    "head": [
+      1.13,
+      0.97,
+      0.95
+    ],
+    "jaw": 0.9,
+    "cheek": 1.15,
+    "eyes": [
+      0.97,
+      1.02,
+      1.07
+    ],
+    "nose": [
+      1.12,
+      0.76
+    ],
+    "hair": "spikes",
+    "haircolor": "#493026",
+    "skin": "#D7A074",
+    "top": "#7E94C1",
+    "bottom": "#805F4B",
+    "shoe": "#D79A4C",
+    "outfit": "shorts",
+    "build": 1.07
+  },
+  {
+    "name": "Lale",
+    "h": 1.08,
+    "age": "child",
+    "sex": "f",
+    "head": [
+      1.03,
+      1.04,
+      0.97
+    ],
+    "jaw": 0.85,
+    "cheek": 1.11,
+    "eyes": [
+      1.13,
+      1.04,
+      0.95
+    ],
+    "nose": [
+      0.89,
+      0.81
+    ],
+    "hair": "buns",
+    "haircolor": "#231B19",
+    "skin": "#A56748",
+    "top": "#D6A9AA",
+    "bottom": "#6F8296",
+    "shoe": "#D5C277",
+    "outfit": "dungarees",
+    "build": 0.94
+  },
+  {
+    "name": "Umut",
+    "h": 1.42,
+    "age": "child",
+    "sex": "m",
+    "head": [
+      0.91,
+      0.99,
+      1.08
+    ],
+    "jaw": 0.82,
+    "cheek": 0.97,
+    "eyes": [
+      0.94,
+      0.91,
+      1.0
+    ],
+    "nose": [
+      0.89,
+      1.16
+    ],
+    "hair": "sidepart",
+    "haircolor": "#3C2D23",
+    "skin": "#D5A27B",
+    "top": "#B9654A",
+    "bottom": "#465967",
+    "shoe": "#D4C8AA",
+    "outfit": "hoodie",
+    "build": 0.88
+  },
+  {
+    "name": "Deniz",
+    "h": 1.83,
+    "age": "adult",
+    "sex": "m",
+    "head": [
+      0.92,
+      1.0,
+      1.08
+    ],
+    "jaw": 0.98,
+    "cheek": 0.99,
+    "eyes": [
+      0.94,
+      0.94,
+      1.02
+    ],
+    "nose": [
+      0.92,
+      1.13
+    ],
+    "hair": "quiff",
+    "haircolor": "#281F1B",
+    "skin": "#BF8E69",
+    "top": "#577C95",
+    "bottom": "#C5AF88",
+    "shoe": "#685348",
+    "outfit": "shirt",
+    "build": 1.02
+  },
+  {
+    "name": "Asli",
+    "h": 1.61,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      1.07,
+      0.96,
+      0.96
+    ],
+    "jaw": 0.78,
+    "cheek": 1.16,
+    "eyes": [
+      1.06,
+      0.98,
+      1.0
+    ],
+    "nose": [
+      0.97,
+      0.84
+    ],
+    "hair": "wavy",
+    "haircolor": "#4B2520",
+    "skin": "#DEA276",
+    "top": "#A15764",
+    "bottom": "#737A58",
+    "shoe": "#675043",
+    "outfit": "cardigan",
+    "build": 1.12
+  },
+  {
+    "name": "Ozan",
+    "h": 1.91,
+    "age": "adult",
+    "sex": "m",
+    "head": [
+      0.88,
+      1.05,
+      1.11
+    ],
+    "jaw": 0.86,
+    "cheek": 0.96,
+    "eyes": [
+      0.89,
+      0.98,
+      0.97
+    ],
+    "nose": [
+      0.84,
+      1.28
+    ],
+    "hair": "crop",
+    "haircolor": "#47362D",
+    "skin": "#D6A583",
+    "top": "#687D65",
+    "bottom": "#454D5C",
+    "shoe": "#D0C1A9",
+    "outfit": "polo",
+    "build": 0.88
+  },
+  {
+    "name": "Selma",
+    "h": 1.69,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      0.94,
+      1.02,
+      1.02
+    ],
+    "jaw": 0.89,
+    "cheek": 1.02,
+    "eyes": [
+      0.95,
+      1.01,
+      1.07
+    ],
+    "nose": [
+      1.03,
+      1.03
+    ],
+    "hair": "pixie",
+    "haircolor": "#55392C",
+    "skin": "#C58C63",
+    "top": "#AE8757",
+    "bottom": "#5A6580",
+    "shoe": "#5A3829",
+    "outfit": "tunic",
+    "build": 0.96
+  },
+  {
+    "name": "Mert",
+    "h": 1.74,
+    "age": "adult",
+    "sex": "m",
+    "head": [
+      1.08,
+      1.0,
+      0.98
+    ],
+    "jaw": 1.09,
+    "cheek": 1.05,
+    "eyes": [
+      1.04,
+      0.92,
+      1.01
+    ],
+    "nose": [
+      1.08,
+      0.98
+    ],
+    "hair": "curls",
+    "haircolor": "#201B19",
+    "skin": "#9C6548",
+    "top": "#76659B",
+    "bottom": "#84745B",
+    "shoe": "#48453E",
+    "outfit": "hoodie",
+    "build": 1.14
+  },
+  {
+    "name": "Gul",
+    "h": 1.57,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      1.1,
+      1.07,
+      0.96
+    ],
+    "jaw": 0.91,
+    "cheek": 1.13,
+    "eyes": [
+      1.01,
+      0.95,
+      0.99
+    ],
+    "nose": [
+      1.1,
+      0.91
+    ],
+    "hair": "low_bun",
+    "haircolor": "#5D3825",
+    "skin": "#D7A07C",
+    "top": "#6A947F",
+    "bottom": "#927652",
+    "shoe": "#654234",
+    "outfit": "dress",
+    "build": 1.17
+  },
+  {
+    "name": "Cem",
+    "h": 1.8,
+    "age": "adult",
+    "sex": "m",
+    "head": [
+      0.99,
+      1.08,
+      1.01
+    ],
+    "jaw": 0.88,
+    "cheek": 1.09,
+    "eyes": [
+      0.96,
+      1.04,
+      1.03
+    ],
+    "nose": [
+      1.03,
+      1.08
+    ],
+    "hair": "waves",
+    "haircolor": "#422923",
+    "skin": "#CD956A",
+    "top": "#B77351",
+    "bottom": "#365A69",
+    "shoe": "#DBCEAD",
+    "outfit": "jacket",
+    "build": 1.05
+  },
+  {
+    "name": "Nermin",
+    "h": 1.65,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      0.88,
+      0.95,
+      1.13
+    ],
+    "jaw": 0.66,
+    "cheek": 1.01,
+    "eyes": [
+      0.94,
+      1.06,
+      1.05
+    ],
+    "nose": [
+      0.81,
+      1.16
+    ],
+    "hair": "long_braid",
+    "haircolor": "#342923",
+    "skin": "#D4A282",
+    "top": "#688FA9",
+    "bottom": "#BAA787",
+    "shoe": "#865746",
+    "outfit": "cardigan",
+    "build": 0.87
+  },
+  {
+    "name": "Orhan",
+    "h": 1.68,
+    "age": "adult",
+    "sex": "m",
+    "head": [
+      1.09,
+      0.93,
+      1.0
+    ],
+    "jaw": 1.02,
+    "cheek": 1.07,
+    "eyes": [
+      0.91,
+      0.99,
+      1.07
+    ],
+    "nose": [
+      1.19,
+      0.94
+    ],
+    "hair": "bald",
+    "haircolor": "#48392E",
+    "skin": "#CB9369",
+    "top": "#B3A178",
+    "bottom": "#5D6F77",
+    "shoe": "#624C36",
+    "outfit": "polo",
+    "build": 1.16
+  },
+  {
+    "name": "Suna",
+    "h": 1.75,
+    "age": "adult",
+    "sex": "f",
+    "head": [
+      0.97,
+      1.0,
+      1.05
+    ],
+    "jaw": 0.76,
+    "cheek": 1.04,
+    "eyes": [
+      1.02,
+      1.01,
+      0.95
+    ],
+    "nose": [
+      0.95,
+      1.05
+    ],
+    "hair": "coils",
+    "haircolor": "#34231B",
+    "skin": "#AC724E",
+    "top": "#CC9670",
+    "bottom": "#675978",
+    "shoe": "#513B30",
+    "outfit": "shirt",
+    "build": 1.0
+  },
+  {
+    "name": "Kemal",
+    "h": 1.73,
+    "age": "elder",
+    "sex": "m",
+    "head": [
+      0.95,
+      1.09,
+      1.1
+    ],
+    "jaw": 0.89,
+    "cheek": 0.97,
+    "eyes": [
+      0.89,
+      0.9,
+      1.02
+    ],
+    "nose": [
+      1.07,
+      1.28
+    ],
+    "hair": "receding",
+    "haircolor": "#A5A19A",
+    "skin": "#D2A080",
+    "top": "#8C8267",
+    "bottom": "#64615A",
+    "shoe": "#5C4635",
+    "outfit": "cardigan",
+    "build": 0.95
+  },
+  {
+    "name": "Ali",
+    "h": 1.62,
+    "age": "elder",
+    "sex": "m",
+    "head": [
+      1.1,
+      1.04,
+      0.94
+    ],
+    "jaw": 1.07,
+    "cheek": 1.13,
+    "eyes": [
+      0.97,
+      0.88,
+      1.01
+    ],
+    "nose": [
+      1.25,
+      1.03
+    ],
+    "hair": "bald",
+    "haircolor": "#D1CCC1",
+    "skin": "#C49373",
+    "top": "#678582",
+    "bottom": "#8B7D66",
+    "shoe": "#51463B",
+    "outfit": "shirt",
+    "build": 1.17
+  }
+]

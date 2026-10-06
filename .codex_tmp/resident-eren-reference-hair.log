@@ -1,0 +1,7 @@
+00:01.391  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Emre.blend"
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\sculpt_eren_resident.py:41: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;p=m.node_tree.nodes['Principled BSDF']
+Info: Saved as "Eren.blend"
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

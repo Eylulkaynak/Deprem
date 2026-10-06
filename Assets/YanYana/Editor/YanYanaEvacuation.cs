@@ -96,12 +96,13 @@ namespace YanYana.Editor
         {
             var point=street["FacadeReport"].position;
             var debris=Group("Cephedeki tehlikeyi güvenli taraftan gör",world.transform,point+Vector3.left*1.5f);
-            for(int i=0;i<5;i++)Shape("Cephe parçası "+i,PrimitiveType.Cube,debris.transform,new Vector3((i%2)*.32f,.08f,i*.16f),new Vector3(.30f,.10f,.24f),mats["YY_terracotta"]).transform.localRotation=Quaternion.Euler(i*5,i*27,0);
+            DressDamagedWall(debris.transform);
             var collider=debris.AddComponent<BoxCollider>();collider.center=new Vector3(.1f,.7f,.3f);collider.size=new Vector3(1.2f,1.6f,1.4f);
             facadeBarrier=Group("Görevlinin kapattığı cephe şeridi",world.transform,point+new Vector3(-.7f,0,.1f));
             for(int i=0;i<3;i++)Model("Cone",facadeBarrier.transform,new Vector3(-.8f+i*.8f,0,0),1,0);facadeBarrier.SetActive(false);
             ApproachEvent(debris,point,"ReportFacade",4);
             var report=main.Event("ReportFacade");var p=main.SetVar(report.trigger,"FacadeReported",1);p=main.Active(p,facadeBarrier,true);p=Text(main,p,lineText,"Ada: Cepheden parçalar düşmüş. Görevli: Alternatif yolu işaretliyorum.");main.Send(p,flow,"CommitCheckpoint");
+            CreateWallRouteChoice(point);
             var restore=main.Event("RestorePhysicalObjects");main.Active(restore.trigger,facadeBarrier,Is(main,main.Var("FacadeReported"),1));
         }
     }

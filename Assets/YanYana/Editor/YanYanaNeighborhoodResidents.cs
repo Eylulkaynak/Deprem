@@ -11,8 +11,7 @@ namespace YanYana.Editor
     {
         static void CreateNeighborhoodResidents()
         {
-            var points=new[]{new Vector3(-8.9f,-.44f,-25.0f),new Vector3(-8.8f,-.44f,-26.7f),new Vector3(9.4f,-.44f,-24.6f)};
-            for(int i=0;i<3;i++)BackgroundPerson("Mahalledeki komşu · "+YanYanaCharacterVariants.Names[i+3],YanYanaCharacterVariants.Names[i+3],points[i],Paper,false);
+            CreateParkResidents();
         }
         static void CreateYusufCanePose(GameObject actor,GameObject cane,NavMeshAgent agent)
         {

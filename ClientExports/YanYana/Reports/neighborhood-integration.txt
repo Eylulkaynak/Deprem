@@ -1,0 +1,54 @@
+Scene checks; rendered review is separate from a child play session.
+PASS 22 park/street residents, including 7 children and 2 elders
+PASS approved humanoid: Park sakini · Deniz
+PASS approved humanoid: Park sakini · Aslı
+PASS approved humanoid: Park sakini · Ozan
+PASS approved humanoid: Park sakini · Selma
+PASS approved humanoid: Park sakini · Mert
+PASS approved humanoid: Park sakini · Gül
+PASS approved humanoid: Park sakini · Cem
+PASS approved humanoid: Park sakini · Nermin
+PASS approved humanoid: Park sakini · Orhan
+PASS approved humanoid: Park sakini · Suna
+PASS approved humanoid: Park sakini · Kemal dede
+PASS approved humanoid: Park sakini · Ali dede
+PASS approved humanoid: Park sakini · Mina
+PASS approved humanoid: Park sakini · Can
+PASS approved humanoid: Park sakini · Elif
+PASS approved humanoid: Park sakini · Arda
+PASS approved humanoid: Park sakini · Lale
+PASS approved humanoid: Park sakini · Umut
+PASS approved humanoid: Park sakini · Ece · ailesini bekleyen çocuk
+PASS approved humanoid: Park sakini · Aylin · Ece’nin annesi
+PASS approved humanoid: Park sakini · Zeynep · aile danışma görevlisi
+PASS approved humanoid: Park sakini · Eren · sokak güvenlik görevlisi
+PASS walkable park/story destination (-7.00, -0.48, -24.90)
+PASS walkable park/story destination (8.00, -0.48, -23.90)
+PASS walkable park/story destination (-8.20, -0.48, -23.40)
+PASS walkable park/story destination (-9.40, -0.48, -21.50)
+PASS walkable park/story destination (-9.62, -0.48, -24.30)
+PASS walkable park/story destination (-3.40, -0.48, -13.00)
+PASS walkable park/story destination (-4.90, -0.48, -12.40)
+PASS walkable park/story destination (0.00, -0.48, -29.00)
+PASS serialized story state GasNoticed
+PASS serialized story state GasRetreated
+PASS serialized story state GasReported
+PASS serialized story state WallRouteChosen
+PASS serialized story state ParkChildNoticed
+PASS serialized story state ParkChildAsked
+PASS serialized story state ParkChildHelped
+PASS no editor-only component shipped in the scene
+PASS report cannot skip moving away from smell
+PASS smell noticed on the normal street route
+PASS Ada physically walks to the open waiting point
+PASS staff receives report and closes the boundary
+PASS open route around the broken wall is played
+PASS wall route feeds the existing alternate reunion consequence
+PASS Ada approaches and listens to Ece
+PASS mother walks to the staffed family meeting point
+PASS Ece waits safely while her mother reaches her
+PASS checkpoint stores GasReported
+PASS checkpoint stores WallRouteChosen
+PASS checkpoint stores ParkChildHelped
+PASS restore keeps the reunited park family together
+PASS pointer sequence complete

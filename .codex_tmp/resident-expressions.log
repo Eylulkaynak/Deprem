@@ -1,0 +1,44 @@
+00:01.406  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Eren.blend"
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\author_surface_expressions.py:261: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;p=m.node_tree.nodes['Principled BSDF'];p.inputs['Base Color'].default_value=color(hex);p.inputs['Roughness'].default_value=.65;mats.append(m)
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\author_surface_expressions.py:289: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[0].default_value=(.65,.70,.78,1);sc.world.node_tree.nodes['Background'].inputs[1].default_value=.30
+00:04.000  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:06.203  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Neutral.png'
+00:08.312  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Speaking.png'
+00:10.437  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\ClosedEyes.png'
+00:12.562  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Surprised.png'
+00:14.672  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Worried.png'
+00:16.750  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Smile.png'
+Info: Saved as "Eren_Expressions.blend"
+SURFACE_EXPRESSIONS Eren {"source_vertices": 29909, "vertices": 42129, "cut_segments": 53, "mouth_center_x": 0.027067983327782118, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:16.750  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Ece.blend"
+00:21.344  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Neutral.png'
+00:23.515  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Speaking.png'
+00:25.687  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\ClosedEyes.png'
+00:27.844  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Surprised.png'
+00:30.031  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Worried.png'
+00:32.187  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Smile.png'
+Info: Saved as "Ece_Expressions.blend"
+SURFACE_EXPRESSIONS Ece {"source_vertices": 30432, "vertices": 45050, "cut_segments": 114, "mouth_center_x": 0.01704318870712484, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:32.187  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Aylin.blend"
+00:37.422  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Neutral.png'
+00:39.359  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Speaking.png'
+00:41.297  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\ClosedEyes.png'
+00:43.234  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Surprised.png'
+00:45.156  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Worried.png'
+00:47.094  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Smile.png'
+Info: Saved as "Aylin_Expressions.blend"
+SURFACE_EXPRESSIONS Aylin {"source_vertices": 30432, "vertices": 45198, "cut_segments": 114, "mouth_center_x": 0.01704318870712484, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis", "Left_Loop", "Left_Cylinder", "Left_Soft", "Left_Pinch", "Right_Loop", "Right_Cylinder", "Right_Soft", "Right_Pinch"]}
+00:47.094  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Zeynep.blend"
+00:52.031  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Neutral.png'
+00:54.344  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Speaking.png'
+00:56.656  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\ClosedEyes.png'
+00:58.969  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Surprised.png'
+01:01.265  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Worried.png'
+01:03.594  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Smile.png'
+Info: Saved as "Zeynep_Expressions.blend"
+SURFACE_EXPRESSIONS Zeynep {"source_vertices": 31053, "vertices": 44352, "cut_segments": 94, "mouth_center_x": 0.019383772607884115, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

@@ -1,0 +1,7 @@
+{
+  "status": "rejected_by_user",
+  "production_ready": false,
+  "integrated_into_scene": false,
+  "do_not_import": true,
+  "reason": "The simplified procedural faces, eyes and hair do not match the approved character style. Stop this construction method."
+}

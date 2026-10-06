@@ -1,0 +1,85 @@
+Original shoulder/upper-arm surface preserved; native skinned forearms replace 61 incorrectly bound cloth vertices.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.907581E-06 radiusError=1.117587E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.969661E-06 radiusError=1.378357E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=3.016372E-06 radiusError=2.346933E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.971689E-06 radiusError=1.601875E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=2.133314E-06 radiusError=1.192093E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.966953E-06 radiusError=1.750886E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.966953E-06 radiusError=1.639128E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.974165E-06 radiusError=1.266599E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.977087E-06 radiusError=1.117587E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=2.900487E-06 radiusError=1.341105E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.90828E-06 radiusError=1.080334E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.969661E-06 radiusError=1.788139E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=3.844846E-06 radiusError=1.788139E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.967461E-06 radiusError=1.41561E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.927959E-06 radiusError=1.788139E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=3.823999E-06 radiusError=1.564622E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=3.882203E-06 radiusError=1.788139E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=3.814814E-06 radiusError=2.458692E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.966953E-06 radiusError=1.303852E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=3.815745E-06 radiusError=1.676381E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=3.886776E-06 radiusError=2.086163E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=3.932552E-06 radiusError=9.685755E-08
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Firefighter mesh=FirefighterConnectedUniform bones=21 bind=21 vertices=4071 slots=2 submeshes=2 quality=Bone4 projectSkinWeights=FourBones
+Sol kesintisiz kol kumaşı mesh=FirefighterConnectedLeftForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Sağ kesintisiz kol kumaşı mesh=FirefighterConnectedRightForearm bones=2 bind=2 vertices=222 slots=3 submeshes=3 quality=Bone4 projectSkinWeights=FourBones
+Rendered skin difference=1.966953E-06 radiusError=2.384186E-07
+PASS Sol kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.
+Rendered skin difference=1.968082E-06 radiusError=1.601875E-07
+PASS Sağ kesintisiz kol kumaşı closed native surface bound to elbow and glove; no detached primitive.

@@ -1,0 +1,43 @@
+00:01.203  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Gul\Gul_Expressions.blend"
+Info: Removed: 14353 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Gul.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Gul\\Gul_Rigged.fbx'
+export finished in 0.1889 sec.
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Gul", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 70801, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 9, "unity_play_tested": false}
+00:04.000  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Kemal\Kemal_Expressions.blend"
+Info: Removed: 6594 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Kemal.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Kemal\\Kemal_Rigged.fbx'
+export finished in 0.2417 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Kemal", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 58968, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 9, "unity_play_tested": false}
+00:06.453  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Ece_Expressions.blend"
+Info: Removed: 26160 vertices, 0 edges, 0 faces
+Info: Removed: 9 vertices, 10 edges, 0 faces
+Info: Applied modifier was not first, result may not be as expected
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Removed: 0 vertices, 0 edges, 0 faces
+Info: Saved as "Ece.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\YanYana\\Characters\\ResidentWorkshop\\ReviewPack\\Ece\\Ece_Rigged.fbx'
+export finished in 0.2890 sec.
+FBX version: 7400
+PACKAGED_RESIDENT {"name": "Ece", "fbx_read_back_passed": true, "armatures": 1, "bones": 21, "renderers": 2, "vertices": 72804, "facial_keys_verified": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "unweighted_vertices": 0, "material_count": 10, "unity_play_tested": false}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

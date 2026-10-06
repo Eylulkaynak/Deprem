@@ -8,23 +8,23 @@ IntroOrientation=0
 IntroRoute=1
 IntroCourseCleared=0
 IntroEfeWaiting=1
-IntroYaw=92
+IntroYaw=93
 IntroPointer=-999
 IntroDragging=False
 IntroTurn=0
-IntroDragStart=(225.89, 481.55)
-IntroDropStart=(1.72, 0.77, -3.20)
-IntroPlaceProgress=0,8642344
+IntroDragStart=(224.50, 482.38)
+IntroDropStart=(1.71, 0.77, -3.20)
+IntroPlaceProgress=0.8508308
 IntroBlocked=True
 IntroCuePosition=(1.75, 0.75, -3.20)
-IntroLeftContactError=0,0001807092
-IntroRightContactError=5,931114E-05
-Ada pos=(1.34, 0.00, -3.18) yaw=92,42231
- collider=Center: (1.34, 0.70, -3.18), Extents: (0.27, 0.70, 0.27)
- nav: path=False pending=False remaining=0 velocity=(0.00, 0.00, 0.00) destination=(1.34, 0.04, -3.18)
-Efe pos=(1.19, 0.00, -2.31) yaw=166,8835
- collider=Center: (1.19, 0.60, -2.31), Extents: (0.24, 0.60, 0.24)
- nav: path=False pending=False remaining=0 velocity=(0.00, 0.00, 0.00) destination=(1.19, 0.04, -2.31)
+IntroLeftContactError=0.0001809972
+IntroRightContactError=5.946719E-05
+Ada pos=(1.33, 0.00, -3.18) yaw=92.74926
+ collider=Center: (1.33, 0.70, -3.18), Extents: (0.27, 0.70, 0.27)
+ nav: path=False pending=False remaining=0 velocity=(0.00, 0.00, 0.00) destination=(1.33, 0.04, -3.18)
+Efe pos=(1.19, 0.00, -2.30) yaw=166.7224
+ collider=Center: (1.19, 0.60, -2.30), Extents: (0.24, 0.60, 0.24)
+ nav: path=False pending=False remaining=0 velocity=(0.00, 0.00, 0.00) destination=(1.19, 0.04, -2.30)
 Efe’nin taşınabilir oyun kutusu pos=(1.75, 0.75, -3.20) yaw=90
  collider=Center: (1.75, 0.75, -3.20), Extents: (0.18, 0.11, 0.42)
 Oyun kutusunun alçak sehpası pos=(-2.50, 0.00, -2.90) yaw=270

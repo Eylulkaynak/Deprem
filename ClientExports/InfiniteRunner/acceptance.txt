@@ -1,0 +1,60 @@
+PASS: Scene contains existing runner manager
+PASS: Garage has no unsolicited guide speech
+PASS: Mission progress has an imported sprite
+PASS: Guide has no name or nickname label
+PASS: 3D guide portrait is clipped to its frame
+PASS: Shield and turbo use authored transparent ribbons
+PASS: Six authored track sections
+PASS: 90 reusable coins
+PASS: Apo is a rigged 3D mesh
+PASS: Apo blink shape imported
+PASS: Apo reference atlas is assigned
+PASS: Apo normal detail map is active
+PASS: Apo cloth, eye and metal response map is active
+PASS: Apo_Idle binds to the current Apo rig
+PASS: Apo_Explain binds to the current Apo rig
+PASS: Pause has a persistent callback
+PASS: Left has a persistent callback
+PASS: Right has a persistent callback
+PASS: Turbo has a persistent callback
+PASS: BuyUpgrade has a persistent callback
+PASS: BuyUpgrade has a persistent callback
+PASS: BuyUpgrade has a persistent callback
+PASS: Start has a persistent callback
+PASS: Hub has a persistent callback
+PASS: Retry has a persistent callback
+PASS: Garage has a persistent callback
+PASS: BackToGames has a persistent callback
+PASS: Resume has a persistent callback
+PASS: Exit has a persistent callback
+PASS: Isolated test garage loaded
+PASS: Shield upgrade charges 45 once
+PASS: Three upgrade purchases saved
+PASS: Upgrade levels persisted to storage
+PASS: Right control reaches right lane
+PASS: Left control reaches left lane
+PASS: Pause freezes distance and power clock
+PASS: Resume returns to driving
+PASS: Turbo button grants turbo
+PASS: Manual turbo usable only once per run
+PASS: Shield level increases duration to 10s
+PASS: Shield absorbs a real hazard overlap
+PASS: Unprotected overlap removes one life
+PASS: Grace period prevents stacked damage
+PASS: Coin collected once
+PASS: Magnet attracts off-lane coins
+PASS: Distance challenge awards garage currency
+PASS: 20 km pool recycle simulation completed
+PASS: Object count stays constant after 20 km
+PASS: No gaps between recycled sections
+PASS: Floating coordinates remain bounded
+PASS: Powers expire on the gameplay clock
+PASS: Last life opens result panel
+PASS: Results cannot double-bank rewards
+PASS: Retry resets gameplay state
+PASS: Retry resets mission progress display
+PASS: Retry restores every collectible
+PASS: Contextual guide closes after its short duration
+QA completed; screenshots exported in ClientExports/InfiniteRunner
+
+Player garage save restored after Play mode.

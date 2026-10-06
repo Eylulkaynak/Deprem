@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Nermin_Skin",
+    "color": "#D4A282",
+    "roughness": 0.56
+  },
+  {
+    "name": "Nermin_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Nermin_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Nermin_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Nermin_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Nermin_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Nermin_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Nermin_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Nermin_Hair",
+    "color": "#342923",
+    "roughness": 0.68
+  },
+  {
+    "name": "Nermin_HairLight",
+    "color": "#453A34",
+    "roughness": 0.64
+  },
+  {
+    "name": "Nermin_Top",
+    "color": "#688FA9",
+    "roughness": 0.83
+  },
+  {
+    "name": "Nermin_Bottom",
+    "color": "#BAA787",
+    "roughness": 0.82
+  },
+  {
+    "name": "Nermin_Shoe",
+    "color": "#865746",
+    "roughness": 0.6
+  },
+  {
+    "name": "Nermin_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Nermin_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Nermin_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Nermin_Seam",
+    "color": "#305771",
+    "roughness": 0.8
+  }
+]

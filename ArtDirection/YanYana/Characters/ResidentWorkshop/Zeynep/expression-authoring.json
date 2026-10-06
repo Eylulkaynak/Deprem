@@ -1,0 +1,18 @@
+{
+  "source_vertices": 31053,
+  "vertices": 44352,
+  "cut_segments": 94,
+  "mouth_center_x": 0.019383772607884115,
+  "facial_keys": [
+    "Mouth_A",
+    "Mouth_E",
+    "Mouth_O",
+    "Blink",
+    "Fear",
+    "Surprise",
+    "Smile"
+  ],
+  "preserved_keys": [
+    "Basis"
+  ]
+}

@@ -1,0 +1,12 @@
+00:01.203  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\.codex_tmp\resident-hair-rollout-20261006\identity-review.blend"
+SHADOW 270 235 Kemal tailored hair silhouette blocker none distance 0
+SHADOW 270 235 Kemal tailored hair silhouette blocker Kemal tailored hair silhouette distance 0.04363371178208081
+SHADOW 780 215 Ece tailored hair silhouette blocker none distance 0
+SHADOW 780 215 Ece tailored hair silhouette blocker Ece tailored hair silhouette distance 0.0009146646023956923
+SHADOW 1390 225 Gul tailored hair silhouette blocker Gul tailored hair silhouette distance 0.0002809251388009608
+SHADOW 1390 225 Gul tailored hair silhouette blocker Gul tailored hair silhouette distance 0.004809609929948201
+00:01.344  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:03.875  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\.codex_tmp\resident-hair-rollout-20261006\hair-emission.png'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

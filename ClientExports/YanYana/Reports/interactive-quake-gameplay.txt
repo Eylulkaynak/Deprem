@@ -1,0 +1,9 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+PASS real screen raycast Ada at (245.98, 563.72)
+PASS real screen raycast Başını koruyan el at (246.60, 410.65)
+PASS real screen raycast Masaya tutunan el at (370.32, 364.42)
+PASS The original hand drag continues straight into the held grip without a second press
+PASS Both children leave the table on the floor rather than its NavMesh top
+PASS Sibling support offers no Next button to skip the hand gesture
+COMPLETE: actual bridge onset, analog crouch, head/hand drags, grip sustained without re-pressing, floor exit and sibling support.
+PASS complete

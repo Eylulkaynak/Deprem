@@ -132,7 +132,7 @@ namespace YanYana.Editor
             Panel("Başparmak",hand,new Vector2(.28f,.15f),new Vector2(.48f,.42f),Vector2.zero,Vector2.zero,Paper);
             cue.gameObject.SetActive(false);
             var g=new YanYanaGraphAuthor(flow,"İlerleme yoksa nesneyi göster; ardından kısa jest göster");var frame=g.Add(new Unity.VisualScripting.Update());
-            var active=And(g,Available(g),And(g,g.Binary<Greater>(g.Var("IdleSeconds",flow),10f),g.Binary<Less>(g.Var("Phase",flow),8)));
+            var active=And(g,Available(g),And(g,Or(g,g.Binary<Greater>(g.Var("IdleSeconds",flow),10f),NeighborhoodNeedsCue(g)),g.Binary<Less>(g.Var("Phase",flow),8)));
             var p=g.Active(frame.trigger,cue.gameObject,active);p=g.Active(p,hand.gameObject,g.Binary<Greater>(g.Var("IdleSeconds",flow),25f));
             var cycle=g.Call(typeof(Mathf),"Sin",null,OneFloat,g.Binary<ScalarMultiply>(g.Get(typeof(Time),"time"),2.5f)).result;
             p=g.Set(p,typeof(Transform),"localScale",halo.transform,Mul(g,Vector3.one,Sum(g,1f,g.Binary<ScalarMultiply>(cycle,.10f))));
@@ -173,6 +173,7 @@ namespace YanYana.Editor
                     var animator=cast["Ada"].GetComponentInChildren<Animator>();point=g.Get(typeof(Transform),"position",cast["Ada"].transform);
                     foreach(var step in new[]{(2,HumanBodyBones.RightHand),(3,HumanBodyBones.LeftHand)})point=g.Call(typeof(Vector3),"Lerp",null,new[]{typeof(Vector3),typeof(Vector3),typeof(float)},point,g.Get(typeof(Transform),"position",animator.GetBoneTransform(step.Item2)),g.Call(typeof(Convert),"ToSingle",null,OneBool,Is(g,g.Var("CoverStage",flow),step.Item1)).result).result;
                 }
+                point=NeighborhoodCuePoint(g,branch.Key,point);
                 var screenPoint=g.Call(typeof(Camera),"WorldToScreenPoint",camera,new[]{typeof(Vector3)},point).result;
                 if(branch.Key==0)
                 {

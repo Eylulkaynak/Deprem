@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Gul_Skin",
+    "color": "#D7A07C",
+    "roughness": 0.56
+  },
+  {
+    "name": "Gul_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Gul_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Gul_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Gul_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Gul_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Gul_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Gul_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Gul_Hair",
+    "color": "#5D3825",
+    "roughness": 0.68
+  },
+  {
+    "name": "Gul_HairLight",
+    "color": "#6E4936",
+    "roughness": 0.64
+  },
+  {
+    "name": "Gul_Top",
+    "color": "#6A947F",
+    "roughness": 0.83
+  },
+  {
+    "name": "Gul_Bottom",
+    "color": "#927652",
+    "roughness": 0.82
+  },
+  {
+    "name": "Gul_Shoe",
+    "color": "#654234",
+    "roughness": 0.6
+  },
+  {
+    "name": "Gul_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Gul_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Gul_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Gul_Seam",
+    "color": "#325C47",
+    "roughness": 0.8
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Cem_Skin",
+    "color": "#CD956A",
+    "roughness": 0.56
+  },
+  {
+    "name": "Cem_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Cem_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Cem_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Cem_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Cem_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Cem_Iris",
+    "color": "#6D7941",
+    "roughness": 0.23
+  },
+  {
+    "name": "Cem_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Cem_Hair",
+    "color": "#422923",
+    "roughness": 0.68
+  },
+  {
+    "name": "Cem_HairLight",
+    "color": "#533A34",
+    "roughness": 0.64
+  },
+  {
+    "name": "Cem_Top",
+    "color": "#B77351",
+    "roughness": 0.83
+  },
+  {
+    "name": "Cem_Bottom",
+    "color": "#365A69",
+    "roughness": 0.82
+  },
+  {
+    "name": "Cem_Shoe",
+    "color": "#DBCEAD",
+    "roughness": 0.6
+  },
+  {
+    "name": "Cem_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Cem_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Cem_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Cem_Seam",
+    "color": "#7F3B19",
+    "roughness": 0.8
+  }
+]

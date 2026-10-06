@@ -3,52 +3,71 @@ PASS screen 540x960 Hortumun kavrama ucu at (103.34, 441.79, 1.36)
 PASS screen 540x1170 Hortumun kavrama ucu at (103.34, 546.79, 1.36)
 PASS screen 540x1200 Hortumun kavrama ucu at (103.34, 561.79, 1.36)
 PASS screen 540x960 Su vanası at (412.04, 638.01, 1.51)
-PASS screen 540x960 Hortumu yönlendir 1 at (386.59, 416.27, 6.61)
-PASS screen 540x960 Hortumu yönlendir 1 at (272.52, 410.17, 6.47)
-PASS screen 540x960 Hortumu yönlendir 1 at (229.31, 440.24, 7.19)
-PASS screen 540x1170 Hortumu yönlendir 1 at (386.59, 521.27, 6.61)
-PASS screen 540x1170 Hortumu yönlendir 1 at (272.52, 515.17, 6.47)
-PASS screen 540x1170 Hortumu yönlendir 1 at (229.31, 545.24, 7.19)
-PASS screen 540x1200 Hortumu yönlendir 1 at (386.59, 536.27, 6.61)
-PASS screen 540x1200 Hortumu yönlendir 1 at (272.52, 530.17, 6.47)
-PASS screen 540x1200 Hortumu yönlendir 1 at (229.31, 560.24, 7.19)
+PASS screen 540x960 Hortumu yönlendir 1 at (386.13, 401.35, 6.63)
+PASS screen 540x960 Hortumu yönlendir 1 at (272.51, 394.96, 6.50)
+PASS screen 540x960 Hortumu yönlendir 1 at (229.45, 426.44, 7.22)
+PASS screen 540x1170 Hortumu yönlendir 1 at (386.13, 506.35, 6.63)
+PASS screen 540x1170 Hortumu yönlendir 1 at (272.51, 499.96, 6.50)
+PASS screen 540x1170 Hortumu yönlendir 1 at (229.45, 531.44, 7.22)
+PASS screen 540x1200 Hortumu yönlendir 1 at (386.13, 521.35, 6.63)
+PASS screen 540x1200 Hortumu yönlendir 1 at (272.51, 514.96, 6.50)
+PASS screen 540x1200 Hortumu yönlendir 1 at (229.45, 546.44, 7.22)
 PASS fire shader freezes and resumes
-PASS screen 540x960 Hortumu yönlendir 1 at (386.59, 416.27, 6.61)
-PASS extinguished 1/0 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 1 at (272.52, 410.17, 6.47)
-PASS extinguished 1/1 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 1 at (229.31, 440.24, 7.19)
-PASS extinguished 1/2 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 2 at (386.59, 416.27, 6.61)
-PASS screen 540x960 Hortumu yönlendir 2 at (272.52, 410.17, 6.47)
-PASS screen 540x960 Hortumu yönlendir 2 at (229.31, 440.24, 7.19)
-PASS screen 540x1170 Hortumu yönlendir 2 at (386.59, 521.27, 6.61)
-PASS screen 540x1170 Hortumu yönlendir 2 at (272.52, 515.17, 6.47)
-PASS screen 540x1170 Hortumu yönlendir 2 at (229.31, 545.24, 7.19)
-PASS screen 540x1200 Hortumu yönlendir 2 at (386.59, 536.27, 6.61)
-PASS screen 540x1200 Hortumu yönlendir 2 at (272.52, 530.17, 6.47)
-PASS screen 540x1200 Hortumu yönlendir 2 at (229.31, 560.24, 7.19)
-PASS screen 540x960 Hortumu yönlendir 2 at (386.59, 416.27, 6.61)
-PASS extinguished 2/0 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 2 at (272.52, 410.17, 6.47)
-PASS extinguished 2/1 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 2 at (229.31, 440.24, 7.19)
-PASS extinguished 2/2 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 3 at (386.59, 416.28, 6.61)
-PASS screen 540x960 Hortumu yönlendir 3 at (272.52, 410.17, 6.47)
-PASS screen 540x960 Hortumu yönlendir 3 at (229.31, 440.24, 7.19)
-PASS screen 540x1170 Hortumu yönlendir 3 at (386.59, 521.28, 6.61)
-PASS screen 540x1170 Hortumu yönlendir 3 at (272.52, 515.17, 6.47)
-PASS screen 540x1170 Hortumu yönlendir 3 at (229.31, 545.24, 7.19)
-PASS screen 540x1200 Hortumu yönlendir 3 at (386.59, 536.27, 6.61)
-PASS screen 540x1200 Hortumu yönlendir 3 at (272.52, 530.17, 6.47)
-PASS screen 540x1200 Hortumu yönlendir 3 at (229.31, 560.24, 7.19)
-PASS screen 540x960 Hortumu yönlendir 3 at (386.59, 416.28, 6.61)
-PASS extinguished 3/0 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 3 at (272.52, 410.17, 6.47)
-PASS extinguished 3/1 through validated screen input
-PASS screen 540x960 Hortumu yönlendir 3 at (229.31, 440.24, 7.19)
-PASS extinguished 3/2 through validated screen input
-samples=1526 leftMax=0.0004978295 leftP95=0.0004327636 rightMax=0.0004018317 rightP95=0.0003538982 waterStartGap=0
-Screenshots=ClientExports/YanYana/Screenshots/immersion-fire-20260915-012251
+PASS screen 540x960 Hortumu yönlendir 1 at (386.13, 401.35, 6.63)
+TURN BODY AND ARM CLEARANCE 1/0 nozzle=0.01981441 hose=0.05136954 armNozzle=0.01216272 armHose=0.04413343
+BODY AND ARM CLEARANCE 1/0 nozzle=0.02051049 hose=0.05214709 armNozzle=0.01231326 armHose=0.04541714
+PASS extinguished 1/0 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 1 at (272.51, 394.96, 6.50)
+TURN BODY AND ARM CLEARANCE 1/1 nozzle=0.02546433 hose=0.05765283 armNozzle=0.01230531 armHose=0.05584005
+BODY AND ARM CLEARANCE 1/1 nozzle=0.0229539 hose=0.05486891 armNozzle=0.01184566 armHose=0.05251712
+PASS extinguished 1/1 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 1 at (229.45, 426.44, 7.22)
+TURN BODY AND ARM CLEARANCE 1/2 nozzle=0.02481599 hose=0.05691494 armNozzle=0.01274916 armHose=0.05241139
+BODY AND ARM CLEARANCE 1/2 nozzle=0.02101764 hose=0.05271348 armNozzle=0.01224815 armHose=0.04736058
+PASS extinguished 1/2 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 2 at (386.13, 401.35, 6.63)
+PASS screen 540x960 Hortumu yönlendir 2 at (272.51, 394.96, 6.50)
+PASS screen 540x960 Hortumu yönlendir 2 at (229.45, 426.44, 7.22)
+PASS screen 540x1170 Hortumu yönlendir 2 at (386.13, 506.35, 6.63)
+PASS screen 540x1170 Hortumu yönlendir 2 at (272.51, 499.96, 6.50)
+PASS screen 540x1170 Hortumu yönlendir 2 at (229.45, 531.44, 7.22)
+PASS screen 540x1200 Hortumu yönlendir 2 at (386.13, 521.35, 6.63)
+PASS screen 540x1200 Hortumu yönlendir 2 at (272.51, 514.96, 6.50)
+PASS screen 540x1200 Hortumu yönlendir 2 at (229.45, 546.44, 7.22)
+PASS screen 540x960 Hortumu yönlendir 2 at (386.13, 401.35, 6.63)
+TURN BODY AND ARM CLEARANCE 2/0 nozzle=0.02022619 hose=0.05183097 armNozzle=0.01204276 armHose=0.04565174
+BODY AND ARM CLEARANCE 2/0 nozzle=0.02088962 hose=0.05257148 armNozzle=0.01220226 armHose=0.04696398
+PASS extinguished 2/0 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 2 at (272.51, 394.96, 6.50)
+TURN BODY AND ARM CLEARANCE 2/1 nozzle=0.02683618 hose=0.05916748 armNozzle=0.01230241 armHose=0.05722796
+BODY AND ARM CLEARANCE 2/1 nozzle=0.02338272 hose=0.05534584 armNozzle=0.01169497 armHose=0.05327522
+PASS extinguished 2/1 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 2 at (229.45, 426.44, 7.22)
+TURN BODY AND ARM CLEARANCE 2/2 nozzle=0.02399378 hose=0.05600929 armNozzle=0.01261087 armHose=0.05081514
+BODY AND ARM CLEARANCE 2/2 nozzle=0.02080565 hose=0.05247636 armNozzle=0.01213756 armHose=0.04675689
+PASS extinguished 2/2 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 3 at (386.13, 401.35, 6.63)
+PASS screen 540x960 Hortumu yönlendir 3 at (272.51, 394.96, 6.50)
+PASS screen 540x960 Hortumu yönlendir 3 at (229.45, 426.44, 7.22)
+PASS screen 540x1170 Hortumu yönlendir 3 at (386.13, 506.35, 6.63)
+PASS screen 540x1170 Hortumu yönlendir 3 at (272.51, 499.96, 6.50)
+PASS screen 540x1170 Hortumu yönlendir 3 at (229.45, 531.44, 7.22)
+PASS screen 540x1200 Hortumu yönlendir 3 at (386.13, 521.35, 6.63)
+PASS screen 540x1200 Hortumu yönlendir 3 at (272.51, 514.96, 6.50)
+PASS screen 540x1200 Hortumu yönlendir 3 at (229.45, 546.44, 7.22)
+PASS screen 540x960 Hortumu yönlendir 3 at (386.13, 401.35, 6.63)
+TURN BODY AND ARM CLEARANCE 3/0 nozzle=0.01964228 hose=0.05117645 armNozzle=0.01211393 armHose=0.04337442
+BODY AND ARM CLEARANCE 3/0 nozzle=0.02035789 hose=0.05197675 armNozzle=0.01226093 armHose=0.04465225
+PASS extinguished 3/0 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 3 at (272.51, 394.96, 6.50)
+TURN BODY AND ARM CLEARANCE 3/1 nozzle=0.0249437 hose=0.0570759 armNozzle=0.01240205 armHose=0.05475003
+BODY AND ARM CLEARANCE 3/1 nozzle=0.02243209 hose=0.05428924 armNozzle=0.01198805 armHose=0.05148564
+PASS extinguished 3/1 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 3 at (229.45, 426.44, 7.22)
+TURN BODY AND ARM CLEARANCE 3/2 nozzle=0.024303 hose=0.05633919 armNozzle=0.01278209 armHose=0.05115471
+BODY AND ARM CLEARANCE 3/2 nozzle=0.02067876 hose=0.05233401 armNozzle=0.01233874 armHose=0.04595007
+PASS extinguished 3/2 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+samples=1968 leftMax=2.145767E-06 leftP95=1.922192E-06 rightMax=2.162261E-06 rightP95=1.969661E-06 waterStartGap=0
+Screenshots=ClientExports/YanYana/Screenshots/immersion-fire-20261005-220943
+FOOT IK plantedSamples=2074 ankleError=2.422619E-06 plantedDrift=2.594172E-06 plantedRotation=0 steps=7
 PASS complete

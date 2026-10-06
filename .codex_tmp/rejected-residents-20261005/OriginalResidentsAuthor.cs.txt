@@ -1,0 +1,147 @@
+// Editor-only Blender asset import and native scene graph authoring.
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using Deprem.Story;
+
+namespace YanYana.Editor
+{
+    public static class YanYanaOriginalResidents
+    {
+        public const string Root="Assets/YanYana/Characters/OriginalResidents";
+        public const string Source="ArtDirection/YanYana/Characters/NewResidents";
+        public static readonly string[] Names={"Ece","Aylin","Zeynep","Eren","Mina","Can","Elif","Arda","Lale","Umut","Deniz","Asli","Ozan","Selma","Mert","Gul","Cem","Nermin","Orhan","Suna","Kemal","Ali"};
+        public static readonly string[] ShapeNames={"Mouth_A","Mouth_E","Mouth_O","Blink","Fear","Surprise","Smile"};
+        [Serializable] class Materials { public Entry[] values; }
+        [Serializable] class Entry { public string name,color; public float roughness; }
+        [Serializable] public class SpeechData { public SpeechLine[] lines; }
+        [Serializable] public class SpeechLine { public string actor,audio,line; public Frame[] frames; }
+        [Serializable] public class Frame { public float time,a,e,o; }
+        public static SpeechData ReadSpeech()=>JsonUtility.FromJson<SpeechData>(File.ReadAllText(Source+"/speech-curves.json"));
+        public static string Identity(string sceneName)
+        {
+            string n=sceneName.Replace("Park sakini · ","").Split('·')[0].Trim().Split(' ')[0];
+            return n=="Aslı"?"Asli":n=="Gül"?"Gul":n;
+        }
+
+        [MenuItem("Tools/Yan Yana/Art/Import Original Blender Residents")]
+        public static void Import()
+        {
+            if(EditorApplication.isPlaying)throw new InvalidOperationException("Leave Play Mode before importing residents.");
+            Directory.CreateDirectory(Root+"/Materials");Directory.CreateDirectory(Root+"/Speech");AssetDatabase.Refresh();
+            foreach(string name in Names)
+            {
+                string path=Root+"/"+name+".fbx";var importer=(ModelImporter)AssetImporter.GetAtPath(path);
+                if(!importer)throw new FileNotFoundException(path);
+                importer.animationType=ModelImporterAnimationType.Human;importer.avatarSetup=ModelImporterAvatarSetup.CreateFromThisModel;importer.importAnimation=false;importer.importBlendShapes=true;importer.importCameras=false;importer.importLights=false;importer.importVisibility=false;importer.isReadable=false;importer.optimizeGameObjects=false;importer.meshCompression=ModelImporterMeshCompression.Off;importer.importNormals=ModelImporterNormals.Import;importer.importBlendShapeNormals=ModelImporterNormals.Calculate;
+                var hd=importer.humanDescription;hd.human=HumanTrait.BoneName.Where(x=>x=="Hips"||x=="Spine"||x=="Chest"||x=="Neck"||x=="Head"||x.EndsWith("Shoulder")||x.EndsWith("UpperArm")||x.EndsWith("LowerArm")||x.EndsWith("Hand")||x.EndsWith("UpperLeg")||x.EndsWith("LowerLeg")||x.EndsWith("Foot")||x.EndsWith("Toes")).Select(x=>new HumanBone{boneName=x,humanName=x,limit=new HumanLimit{useDefaultValues=true}}).ToArray();hd.armStretch=.02f;hd.legStretch=.02f;hd.upperArmTwist=.5f;hd.lowerArmTwist=.5f;hd.upperLegTwist=.5f;hd.lowerLegTwist=.5f;importer.humanDescription=hd;
+                var materials=JsonUtility.FromJson<Materials>("{\"values\":"+File.ReadAllText(Root+"/"+name+".materials.json")+"}").values;
+                foreach(var entry in materials)
+                {
+                    string mp=Root+"/Materials/"+entry.name+".mat";var mat=AssetDatabase.LoadAssetAtPath<Material>(mp);if(!mat){mat=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(mat,mp);}
+                    ColorUtility.TryParseHtmlString(entry.color,out var c);mat.SetColor("_BaseColor",c);mat.SetFloat("_Smoothness",1-entry.roughness);mat.SetFloat("_Cull",0);EditorUtility.SetDirty(mat);importer.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),entry.name),mat);
+                }
+                importer.SaveAndReimport();
+                var source=AssetDatabase.LoadAssetAtPath<GameObject>(path);var instance=(GameObject)PrefabUtility.InstantiatePrefab(source);instance.name="Blender · "+name;
+                try
+                {
+                    var animator=instance.GetComponentInChildren<Animator>();if(!animator||!animator.avatar||!animator.avatar.isValid||!animator.avatar.isHuman)throw new InvalidOperationException(name+": invalid humanoid avatar");
+                    animator.applyRootMotion=false;animator.runtimeAnimatorController=YanYanaAdultLocomotion.ForCharacter(IsChild(name)?"Efe":name,AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(YanYanaAdultLocomotion.BaseControllerPath));animator.cullingMode=AnimatorCullingMode.CullUpdateTransforms;
+                    var skin=instance.GetComponentInChildren<SkinnedMeshRenderer>();foreach(string shape in ShapeNames){int index=skin.sharedMesh.GetBlendShapeIndex(shape);if(index<0)throw new InvalidOperationException(name+" missing shape "+shape);skin.SetBlendShapeWeight(index,0);}
+                    skin.localBounds=new Bounds(new Vector3(0,.9f,0),new Vector3(2,2.7f,1.6f));
+                    PrefabUtility.SaveAsPrefabAsset(instance,Root+"/"+name+".prefab");
+                }
+                finally{UnityEngine.Object.DestroyImmediate(instance);}
+            }
+            foreach(var line in ReadSpeech().lines)
+            {
+                string path=Root+"/Speech/"+line.audio+"_"+line.actor+".anim";var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>(path);if(!clip){clip=new AnimationClip();AssetDatabase.CreateAsset(clip,path);}clip.ClearCurves();clip.legacy=true;clip.frameRate=30;clip.name=line.audio+"_"+line.actor;
+                foreach(string vowel in new[]{"A","E","O"})
+                {
+                    var keys=line.frames.Select(f=>new Keyframe(f.time,100*(vowel=="A"?f.a:vowel=="E"?f.e:f.o))).ToArray();var curve=new AnimationCurve(keys);for(int i=0;i<curve.length;i++){AnimationUtility.SetKeyLeftTangentMode(curve,i,AnimationUtility.TangentMode.Linear);AnimationUtility.SetKeyRightTangentMode(curve,i,AnimationUtility.TangentMode.Linear);}clip.SetCurve("",typeof(SkinnedMeshRenderer),"blendShape.Mouth_"+vowel,curve);
+                }
+                EditorUtility.SetDirty(clip);
+            }
+            AssetDatabase.SaveAssets();Debug.Log("ORIGINAL_RESIDENTS_IMPORTED 22 original meshes, 22 humanoids, 7 facial shapes each");
+        }
+
+        public static bool IsChild(string n)=>new[]{"Ece","Mina","Can","Elif","Arda","Lale","Umut"}.Contains(n);
+
+        [MenuItem("Tools/Yan Yana/Art/Replace Park With Original Residents")]
+        public static void ReplaceScene()
+        {
+            if(EditorApplication.isPlaying)throw new InvalidOperationException("Leave Play Mode before replacing residents.");
+            var scene=SceneManager.GetActiveScene();if(scene.path!=YanYanaAdventureBuilder.ScenePath)throw new InvalidOperationException("Open YanYana_Adventure first.");
+            var actors=scene.GetRootGameObjects().SelectMany(x=>x.GetComponentsInChildren<Transform>(true)).Where(x=>x.name.StartsWith("Park sakini · ")).Select(t=>t.gameObject).ToArray();
+            if(actors.Length!=22)throw new InvalidOperationException("Expected the 22 authored resident roots, found "+actors.Length);
+            foreach(var actor in actors)
+            {
+                string name=Identity(actor.name);var prefab=AssetDatabase.LoadAssetAtPath<GameObject>(Root+"/"+name+".prefab");if(!prefab)throw new FileNotFoundException(name);
+                if(PrefabUtility.IsPartOfPrefabInstance(actor))PrefabUtility.UnpackPrefabInstance(actor,PrefabUnpackMode.Completely,InteractionMode.AutomatedAction);
+                foreach(Transform child in actor.transform.Cast<Transform>().ToArray())UnityEngine.Object.DestroyImmediate(child.gameObject);
+                var previous=actor.GetComponent<Animator>();if(previous)UnityEngine.Object.DestroyImmediate(previous);
+                actor.transform.localScale=Vector3.one;var visual=(GameObject)PrefabUtility.InstantiatePrefab(prefab,actor.transform);visual.transform.localPosition=Vector3.zero;visual.transform.localRotation=Quaternion.identity;visual.transform.localScale=Vector3.one;
+                var animator=visual.GetComponentInChildren<Animator>();var mover=actor.GetComponent<StoryPlayerMovement>();if(mover){var so=new SerializedObject(mover);so.FindProperty("animator").objectReferenceValue=animator;so.ApplyModifiedPropertiesWithoutUndo();}
+                animator.Rebind();animator.Update(0);
+                var baked=new Mesh();float lowest=float.PositiveInfinity;foreach(var skin in visual.GetComponentsInChildren<SkinnedMeshRenderer>()){skin.BakeMesh(baked);foreach(var vertex in baked.vertices)lowest=Mathf.Min(lowest,skin.transform.TransformPoint(vertex).y);}UnityEngine.Object.DestroyImmediate(baked);visual.transform.position+=Vector3.up*(actor.transform.position.y+.004f-lowest);
+                var hit=actor.GetComponent<CapsuleCollider>();if(hit){float height=IsChild(name)?1.25f:1.75f;hit.height=height;hit.center=Vector3.up*height*.5f;}
+            }
+            YanYanaAdventureBuilder.AuthorOriginalResidentFaces();EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();Inspect();
+        }
+
+        [MenuItem("Tools/Yan Yana/QA/Inspect Original Residents")]
+        public static void Inspect()
+        {
+            var rows=new List<string>();var unique=new HashSet<Mesh>();var actors=SceneManager.GetActiveScene().GetRootGameObjects().SelectMany(x=>x.GetComponentsInChildren<Transform>(true)).Where(x=>x.name.StartsWith("Park sakini · ")).ToArray();
+            foreach(var actor in actors)
+            {
+                var animator=actor.GetComponentInChildren<Animator>();var skin=actor.GetComponentInChildren<SkinnedMeshRenderer>();if(!animator||!animator.avatar.isHuman||!skin)throw new InvalidOperationException(actor.name+" incomplete");
+                unique.Add(skin.sharedMesh);foreach(string shape in ShapeNames)if(skin.sharedMesh.GetBlendShapeIndex(shape)<0)throw new InvalidOperationException(actor.name+" missing "+shape);
+                rows.Add("PASS "+actor.name+" | own mesh="+skin.sharedMesh.name+" | vertices="+skin.sharedMesh.vertexCount+" | humanoid=true | facial shapes="+skin.sharedMesh.blendShapeCount);
+            }
+            if(unique.Count!=22)throw new InvalidOperationException("Expected 22 unique meshes, got "+unique.Count);
+            rows.Add("PASS 22 distinct meshes; 7 expression shapes each; native graph/clip playback; no new runtime C#.");Directory.CreateDirectory("ClientExports/YanYana/Reports");File.WriteAllLines("ClientExports/YanYana/Reports/original-residents.txt",rows);Debug.Log(rows.Last());
+        }
+    }
+
+    public static partial class YanYanaAdventureBuilder
+    {
+        public static void AuthorOriginalResidentFaces()
+        {
+            var scene=SceneManager.GetActiveScene();var root=scene.GetRootGameObjects().First(x=>x.name.StartsWith("01 Akış"));
+            var voice=scene.GetRootGameObjects().SelectMany(x=>x.GetComponentsInChildren<AudioSource>(true)).FirstOrDefault(a=>a.gameObject.name.IndexOf("speech",StringComparison.OrdinalIgnoreCase)>=0||a.gameObject.name.IndexOf("konuş",StringComparison.OrdinalIgnoreCase)>=0);
+            if(!voice)voice=speech;if(!voice)throw new InvalidOperationException("Physical speech AudioSource not found.");
+            var lines=YanYanaOriginalResidents.ReadSpeech().lines;var residents=scene.GetRootGameObjects().SelectMany(x=>x.GetComponentsInChildren<Transform>(true)).Where(t=>t.name.StartsWith("Park sakini · ")).Select(t=>t.gameObject).ToArray();
+            foreach(var actor in residents)
+            {
+                string identity=YanYanaOriginalResidents.Identity(actor.name);var skin=actor.GetComponentInChildren<SkinnedMeshRenderer>();
+                foreach(var old in actor.GetComponents<ScriptMachine>().Where(m=>m.graph?.title=="Blender yüzü · konuşma ve tepkiler").ToArray())UnityEngine.Object.DestroyImmediate(old);
+                var g=new YanYanaGraphAuthor(actor,"Blender yüzü · konuşma ve tepkiler");var tick=g.Add(new Unity.VisualScripting.LateUpdate());var p=tick.trigger;
+                ControlOutput Shape(ControlOutput before,string shape,object value)=>g.Do(before,typeof(SkinnedMeshRenderer),"SetBlendShapeWeight",skin,new[]{typeof(int),typeof(float)},skin.sharedMesh.GetBlendShapeIndex(shape),value);
+                foreach(string shape in new[]{"Mouth_A","Mouth_E","Mouth_O"})p=Shape(p,shape,0f);
+                float seed=Array.IndexOf(YanYanaOriginalResidents.Names,identity)*.29f;
+                var cycle=g.Call(typeof(Mathf),"Repeat",null,new[]{typeof(float),typeof(float)},Sum(g,g.Get(typeof(Time),"time"),seed),4.3f).result;
+                var rise=g.Call(typeof(Mathf),"InverseLerp",null,new[]{typeof(float),typeof(float),typeof(float)},3.92f,4.04f,cycle).result;var fall=g.Call(typeof(Mathf),"InverseLerp",null,new[]{typeof(float),typeof(float),typeof(float)},4.20f,4.04f,cycle).result;
+                p=Shape(p,"Blink",g.Binary<ScalarMultiply>(g.Binary<ScalarMultiply>(rise,fall),100f));
+                var quake=Or(g,Is(g,g.Var("Phase",root),1),Is(g,g.Var("Phase",root),31));object worried=quake;
+                if(identity=="Ece")worried=Or(g,quake,And(g,Is(g,g.Var("ParkChildHelped",root),0),Is(g,g.Var("ParkChildNoticed",root),1)));
+                var fear=g.Call(typeof(Convert),"ToSingle",null,OneBool,worried).result;p=Shape(p,"Fear",g.Binary<ScalarMultiply>(fear,identity=="Ece"?60f:48f));
+                var surprised=identity=="Eren"?And(g,Is(g,g.Var("GasNoticed",root),1),Is(g,g.Var("GasRetreated",root),0)):And(g,Is(g,g.Var("ParkChildAsked",root),1),Is(g,g.Var("ParkChildHelped",root),0));
+                p=Shape(p,"Surprise",g.Binary<ScalarMultiply>(g.Call(typeof(Convert),"ToSingle",null,OneBool,surprised).result,identity=="Eren"?45f:identity=="Aylin"?35f:0f));
+                p=Shape(p,"Smile",g.Binary<ScalarMultiply>(g.Call(typeof(Convert),"ToSingle",null,OneBool,And(g,Is(g,g.Var("ParkChildHelped",root),1),Is(g,worried,false))).result,identity=="Ece"||identity=="Aylin"?65f:22f));
+                var matching=lines.Where(l=>l.actor==identity).ToArray();if(matching.Length>0)
+                {
+                    var playing=g.Branch(p,g.Get(typeof(AudioSource),"isPlaying",voice));var sw=g.Add(new SwitchOnString{options=matching.Select(l=>l.audio).ToList()});g.Bind(sw.selector,g.Get(typeof(UnityEngine.Object),"name",g.Get(typeof(AudioSource),"clip",voice)));g.Link(playing.ifTrue,sw.enter);
+                    for(int i=0;i<matching.Length;i++){var line=matching[i];var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>(YanYanaOriginalResidents.Root+"/Speech/"+line.audio+"_"+identity+".anim");g.Do(sw.branches[i].Value,typeof(AnimationClip),"SampleAnimation",clip,new[]{typeof(GameObject),typeof(float)},skin.gameObject,g.Get(typeof(AudioSource),"time",voice));}
+                }
+                g.Dirty();
+            }
+        }
+    }
+}

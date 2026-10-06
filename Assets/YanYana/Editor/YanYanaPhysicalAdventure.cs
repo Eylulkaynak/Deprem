@@ -69,15 +69,22 @@ namespace YanYana.Editor
                 CreatePhysicalFire();
                 CreatePhysicalAid();
                 CreateNeighborhoodResidents();
+                CreateNeighborhoodEncounters();
+                if (YanYanaResidentWorkshop.Names.All(n => YanYanaResidentWorkshop.Prefab(n))) AuthorWorkshopFaces();
                 CreatePhysicalFinals();
                 CreatePhysicalCarry();
                 CreatePhysicalIntro();
                 CreatePhysicalPolish();
                 CreatePhysicalMenusAndSave();
                 YanYanaInterfaceArtDirection.Apply();
-                YanYanaVisualStability.Apply();
                 BakeNavigation();
                 main.Dirty();
+                // Presentation passes require the authored scene's saved identity.
+                // Save the complete gameplay/navmesh first, then persist presentation.
+                EditorSceneManager.SaveScene(SceneManager.GetActiveScene(), ScenePath);
+                YanYanaVisualStability.Apply();
+                ApplyInteractiveQuake();
+                YanYanaNeighborhoodDesign.Apply();
                 EditorSceneManager.SaveScene(SceneManager.GetActiveScene(), ScenePath); AssetDatabase.SaveAssets();
                 var authoredMachines=UnityEngine.Object.FindObjectsByType<ScriptMachine>(FindObjectsInactive.Include,FindObjectsSortMode.None);
                 File.WriteAllText("ClientExports/YanYana/Reports/scene-inventory.json","{\n  \"scene\": \""+ScenePath+"\",\n  \"version\": \"physical-adventure\",\n  \"chapters\": 8,\n  \"endings\": 4,\n  \"scriptMachines\": "+authoredMachines.Length+",\n  \"graphUnits\": "+authoredMachines.Sum(x=>x.graph?.units.Count??0)+",\n  \"newAuthoredRuntimeCSharp\": 0\n}");

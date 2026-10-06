@@ -1,0 +1,27 @@
+{
+  "source_image": "ArtDirection/CharacterReferences/AbdullahEkinci_Reference_v1.png",
+  "geometry": "Original reference-driven sculpture, no Meshy or imported geometry",
+  "vertices": 121194,
+  "triangles": 239660,
+  "texture": "4096px baked reference projection",
+  "bones": 17,
+  "sculpt_details": {
+    "continuous_sculpted_hair_flow": true,
+    "beard_relief_fibers": 170,
+    "convex_eyes": 2,
+    "folded_collars": 2,
+    "physical_buttons": 7,
+    "shoe_laces": true,
+    "watch_parts": "strap, case, dial, 12 indices, hands",
+    "geometry_details": true
+  },
+  "texture_sources": [
+    "ArtDirection/CharacterReferences/AbdullahEkinci_Detail_v2.png",
+    "ArtDirection/CharacterReferences/AbdullahEkinci_FaceDetail_v3.png"
+  ],
+  "material_maps": [
+    "Apo_Albedo.png (4096)",
+    "Apo_Normal.png (2048)",
+    "Apo_Surface.png (2048, metallic R / smoothness A)"
+  ]
+}

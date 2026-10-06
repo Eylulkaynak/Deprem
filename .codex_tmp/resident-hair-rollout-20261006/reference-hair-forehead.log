@@ -1,0 +1,16 @@
+00:01.328  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Gul\Gul.blend"
+00:03.156  cycles           | WARNING CUEW initialization failed: Error opening the library
+Info: Baking map saved to internal image, save it externally or pack it
+FITTED_HEAD_CLOSURE Gul 3 4292
+00:03.828  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Kemal\Kemal.blend"
+Info: Saved as "Gul.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+FITTED_HEAD_CLOSURE Kemal 1 2098
+00:06.265  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Ece.blend"
+Info: Saved as "Kemal.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+FITTED_HEAD_CLOSURE Ece 4 2752
+Info: Saved as "Ece.blend"
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

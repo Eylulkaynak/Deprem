@@ -1,0 +1,15 @@
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\author_resident_faces.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  self.skin=bpy.data.materials.new(self.name+' painted skin');self.skin.use_nodes=True
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\author_resident_faces.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True
+00:04.672  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentSculpts\Ece\Neutral.png'
+00:07.125  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentSculpts\Ece\Speaking.png'
+00:09.625  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentSculpts\Ece\Blink.png'
+00:12.125  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentSculpts\Ece\Surprise.png'
+00:14.641  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentSculpts\Ece\Fear.png'
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+Info: Saved as "Ece_FacialStudy.blend"
+FACIAL_STUDY_READY C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentSculpts\Ece
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

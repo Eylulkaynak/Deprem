@@ -1,0 +1,25 @@
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\Runner\sculpt_apo_reference.py:23: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;m.diffuse_color=srgb(color)
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\Runner\sculpt_apo_reference.py:229: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  baked=bpy.data.materials.new('Apo_ReferenceMaterial');baked.use_nodes=True;bs=baked.node_tree.nodes.get('Principled BSDF')
+Info: Baking map saved to internal image, save it externally or pack it
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ArtDirection\\CharacterModels\\ApoReferenceSculpt\\ApoOriginal.fbx'
+(bpy.data.armatures['ApoRig'], 'POSE')
+export finished in 0.1385 sec.
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+02:20:00 | INFO: Starting glTF 2.0 export
+02:20:00 | INFO: Extracting primitive: ApoReferenceSculpt
+02:20:00 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+02:20:00 | INFO: Primitives created: 1
+02:20:00 | INFO: Finished glTF 2.0 export in 0.33173131942749023 s
+00:22.391  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\CharacterModels\ApoReferenceSculpt\Front.png'
+00:27.203  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\CharacterModels\ApoReferenceSculpt\ThreeQuarter.png'
+00:32.453  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\CharacterModels\ApoReferenceSculpt\Face.png'
+
+Info: Saved as "ApoOriginal.blend"
+APO_REFERENCE_SCULPT_COMPLETE
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

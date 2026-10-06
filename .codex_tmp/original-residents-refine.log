@@ -1,0 +1,20 @@
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_residents.py:84: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(self.s['name']+'_'+n); m.use_nodes=True
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+Info: Saved as "Ece.blend"
+
+FBX export starting... 'C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\Assets\\YanYana\\Characters\\OriginalResidents\\Ece.fbx'
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\build_original_residents.py:513: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+export finished in 0.0829 sec.
+  scene.world.use_nodes=True;scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.72,.78,.85,1);scene.world.node_tree.nodes['Background'].inputs[1].default_value=.50
+ORIGINAL_RESIDENT_READY Ece 28043 54962
+00:05.234  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\FullBody.png'
+00:06.828  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Neutral.png'
+00:08.359  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Speaking.png'
+00:09.906  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Fear.png'
+00:11.484  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Surprise.png'
+00:12.984  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Blink.png'
+00:14.468  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\NewResidents\Ece\Smile.png'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

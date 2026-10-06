@@ -1,0 +1,8 @@
+{
+  "status": "failed_internal_visual_review",
+  "production_ready": false,
+  "integrated_into_scene": false,
+  "do_not_import": true,
+  "issues": ["Visible face and hair intersections", "Unresolved eye boundary artifacts", "Visual style does not yet meet the approved reference"],
+  "note": "These are discarded diagnostic studies, not completed characters."
+}

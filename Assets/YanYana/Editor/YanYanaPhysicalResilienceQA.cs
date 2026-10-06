@@ -34,15 +34,8 @@ namespace YanYana.Editor
         }
         static IEnumerable<object> PhysicalCoverSequence()
         {
-            Protect();foreach(var f in WaitPhysical(()=>State("CoverStage")==1&&ReadyIn(""),"Nearby cover approach"))yield return f;
-            foreach(var f in TimedDrag(Find("Ada"),Find("Ada").transform.position+Vector3.down*2))yield return f;
-            foreach(var f in WaitPhysical(()=>State("CoverStage")==2&&ReadyIn(""),"Crouch gesture"))yield return f;
-            var head=Find("Ada").GetComponentInChildren<Animator>().GetBoneTransform(HumanBodyBones.Head);
-            foreach(var f in TimedDrag(Find("Başını koruyan el"),Find("Başta güvenli avuç teması · Ada").transform.position))yield return f;
-            foreach(var f in WaitPhysical(()=>State("CoverStage")==3,"Head protection drag"))yield return f;
-            foreach(var f in TimedDrag(Find("Masaya tutunan el"),Find("Anchor_HoldAda").transform.position))yield return f;
-            foreach(var f in WaitPhysical(()=>State("Phase")==2&&State("Protected")==1,"Table grip and local earthquake completion"))yield return f;
-            File.AppendAllText("ClientExports/YanYana/Reports/physical-cover-gestures.txt","PASS actual downward gesture, hand-to-head drag, other hand-to-table drag and protected completion. No pose/state assignments in harness.\n");
+            foreach (var frame in InteractiveCoverSequence()) yield return frame;
+            File.AppendAllText("ClientExports/YanYana/Reports/physical-cover-gestures.txt", "PASS continuous crouch, sustained hand-to-head and hand-to-table drags, fresh held grip and protected completion. No outcome assignments.\n");
         }
         [MenuItem("Tools/Yan Yana/QA/Physical Cover Three Steps")]
         static void CoverSteps()=>StartPhysicalCheck(PhysicalCoverSequence(),"physical-cover-check");

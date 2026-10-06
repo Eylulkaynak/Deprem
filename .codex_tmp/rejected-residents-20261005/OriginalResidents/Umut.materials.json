@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Umut_Skin",
+    "color": "#D5A27B",
+    "roughness": 0.56
+  },
+  {
+    "name": "Umut_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Umut_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Umut_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Umut_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Umut_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Umut_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Umut_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Umut_Hair",
+    "color": "#3C2D23",
+    "roughness": 0.68
+  },
+  {
+    "name": "Umut_HairLight",
+    "color": "#4D3E34",
+    "roughness": 0.64
+  },
+  {
+    "name": "Umut_Top",
+    "color": "#B9654A",
+    "roughness": 0.83
+  },
+  {
+    "name": "Umut_Bottom",
+    "color": "#465967",
+    "roughness": 0.82
+  },
+  {
+    "name": "Umut_Shoe",
+    "color": "#D4C8AA",
+    "roughness": 0.6
+  },
+  {
+    "name": "Umut_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Umut_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Umut_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Umut_Seam",
+    "color": "#812D12",
+    "roughness": 0.8
+  }
+]

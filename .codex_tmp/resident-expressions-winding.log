@@ -1,0 +1,29 @@
+00:01.406  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Eren\Eren.blend"
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\author_surface_expressions.py:262: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;p=m.node_tree.nodes['Principled BSDF'];p.inputs['Base Color'].default_value=color(hex);p.inputs['Roughness'].default_value=.65;mats.append(m)
+Info: Saved as "Eren_Expressions.blend"
+SURFACE_EXPRESSIONS Eren {"source_vertices": 29909, "vertices": 42129, "cut_segments": 53, "mouth_center_x": 0.027067983327782118, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:03.969  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\Ece.blend"
+Info: Saved as "Ece_Expressions.blend"
+SURFACE_EXPRESSIONS Ece {"source_vertices": 30432, "vertices": 45075, "cut_segments": 114, "mouth_center_x": 0.01704318870712484, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:06.406  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\Aylin.blend"
+Info: Saved as "Aylin_Expressions.blend"
+SURFACE_EXPRESSIONS Aylin {"source_vertices": 30432, "vertices": 45198, "cut_segments": 114, "mouth_center_x": 0.01704318870712484, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis", "Left_Loop", "Left_Cylinder", "Left_Soft", "Left_Pinch", "Right_Loop", "Right_Cylinder", "Right_Soft", "Right_Pinch"]}
+00:09.641  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Zeynep\Zeynep.blend"
+Info: Saved as "Zeynep_Expressions.blend"
+SURFACE_EXPRESSIONS Zeynep {"source_vertices": 31053, "vertices": 44352, "cut_segments": 94, "mouth_center_x": 0.019383772607884115, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:12.297  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Deniz\Deniz.blend"
+Info: Saved as "Deniz_Expressions.blend"
+SURFACE_EXPRESSIONS Deniz {"source_vertices": 29909, "vertices": 42129, "cut_segments": 53, "mouth_center_x": 0.027067983327782118, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:14.828  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Gul\Gul.blend"
+Info: Saved as "Gul_Expressions.blend"
+SURFACE_EXPRESSIONS Gul {"source_vertices": 31053, "vertices": 44352, "cut_segments": 94, "mouth_center_x": 0.019383772607884115, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:17.360  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Kemal\Kemal.blend"
+Info: Saved as "Kemal_Expressions.blend"
+SURFACE_EXPRESSIONS Kemal {"source_vertices": 29909, "vertices": 42337, "cut_segments": 57, "mouth_center_x": 0.017566786958692415, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+00:19.953  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Arda\Arda.blend"
+Info: Saved as "Arda_Expressions.blend"
+SURFACE_EXPRESSIONS Arda {"source_vertices": 30765, "vertices": 43949, "cut_segments": 116, "mouth_center_x": 0.015753416499093377, "facial_keys": ["Mouth_A", "Mouth_E", "Mouth_O", "Blink", "Fear", "Surprise", "Smile"], "preserved_keys": ["Basis"]}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

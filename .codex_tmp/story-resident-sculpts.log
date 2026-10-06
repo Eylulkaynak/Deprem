@@ -1,0 +1,14 @@
+00:01.500  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Ada.blend"
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\sculpt_story_residents.py:222: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[0].default_value=(.64,.69,.75,1);sc.world.node_tree.nodes['Background'].inputs[1].default_value=.30
+00:12.922  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:16.062  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Ece\FullBody.png'
+Info: Saved as "Ece.blend"
+STORY_RESIDENT_SCULPT Ece
+00:16.062  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Ada.blend"
+00:27.469  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Aylin\FullBody.png'
+Info: Saved as "Aylin.blend"
+STORY_RESIDENT_SCULPT Aylin
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

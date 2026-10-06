@@ -1,0 +1,16 @@
+{
+  "geometry": "Authored locally in Blender; no Meshy used.",
+  "reference": "ArtDirection/CharacterReferences/AbdullahEkinci_Reference_v1.png",
+  "texture_tool": "Built-in image_gen imagegen",
+  "textures": [
+    {
+      "path": "ArtDirection/CharacterReferences/AbdullahEkinci_Detail_v2.png",
+      "prompt": "Use case: identity-preserve. Asset type: high resolution orthographic character reference for projecting onto an existing 3D sculpture. Edit target: supplied full-body Abdullah Ekinci / Apo reference. Enhance fine detail and resolution of exactly this image, ideally 3072x3072 or higher. Preserve exactly the same character identity, head and body shapes, pose, perfectly frontal view, framing, scale and placement, hairstyle, full short black beard, brown eyes, blue shirt, navy trousers, black shoes and watch. Keep the same soft polished stylized 3D family game character style, NOT photorealistic and NOT more realistic anatomy. Add crisp individual groomed hair strands, soft detailed eyebrow and beard strands, clean iris radial fibers, fine cloth weave and stitching, shirt buttons, subtle shirt wrinkles and shoe leather seams. Preserve all facial landmarks and expression. The head must remain at the same relative location and size as the input. No text, no watermark, no extra objects, no change of lighting or background, no camera rotation."
+    },
+    {
+      "path": "ArtDirection/CharacterReferences/AbdullahEkinci_FaceDetail_v3.png",
+      "prompt": "Use case: identity-preserve. Edit the supplied Apo / Abdullah Ekinci reference into a HIGH RESOLUTION DETAIL CROP, a magnified crop of the head and neck, suitable for texture projection. Crop to the exact square region corresponding to x=460..780, y=25..345 of the supplied 1254x1254 image, then enlarge that region to a 2048x2048 square. Preserve the exact facial identity, FRONT view, facial landmarks, eye spacing, nose shape, closed smiling lips, short full beard, swept-back black hair, ears, neck, and original stylized polished 3D family game character style. Do not redesign, rotate, lengthen, make photorealistic, or change the expression. Reconstruct crisp iris radial details, short neatly groomed individual beard and eyebrow strands, fine swept hair strands, subtle lip folds and soft smooth skin. Keep the same original lighting and white background. The entire hairstyle and both ears must fit in the crop. The jaw and neck should remain visible. No text, no border, no labels. A perfectly frontal magnified detail of exactly the input character, preserving placement within the specified crop."
+    }
+  ],
+  "registration": "SIFT affine registration; read-only image analysis, applied as a Blender UV projection."
+}

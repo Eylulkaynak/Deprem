@@ -45,7 +45,8 @@ namespace YanYana.Editor
             if(EditorApplication.isPlaying)
             {
                 string workspace=(string)Variables.Object(Flow).Get("Workspace");if(workspace=="")workspace="phase"+Variables.Object(Flow).Get("Phase");
-                Directory.CreateDirectory("ClientExports/YanYana/Screenshots");ScreenCapture.CaptureScreenshot("ClientExports/YanYana/Screenshots/physical_"+workspace+".png");
+                if(quakeReviewActive)QuakeFrame("setup-"+workspace+"-"+DateTime.Now.ToString("HHmmssfff"));
+                else {Directory.CreateDirectory("ClientExports/YanYana/Screenshots");ScreenCapture.CaptureScreenshot("ClientExports/YanYana/Screenshots/physical_"+workspace+".png");}
                 EditorApplication.QueuePlayerLoopUpdate();EditorWindow.GetWindow(typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.GameView")).Repaint();return;
             }
             var cam=Camera.main;var previous=RenderTexture.active;var target=RenderTexture.GetTemporary(540,960,24,RenderTextureFormat.ARGB32);

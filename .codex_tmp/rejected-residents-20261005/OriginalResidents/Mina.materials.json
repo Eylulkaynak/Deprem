@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Mina_Skin",
+    "color": "#D99A6C",
+    "roughness": 0.56
+  },
+  {
+    "name": "Mina_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Mina_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Mina_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Mina_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Mina_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Mina_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Mina_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Mina_Hair",
+    "color": "#5D311F",
+    "roughness": 0.68
+  },
+  {
+    "name": "Mina_HairLight",
+    "color": "#6E4230",
+    "roughness": 0.64
+  },
+  {
+    "name": "Mina_Top",
+    "color": "#E48C7A",
+    "roughness": 0.83
+  },
+  {
+    "name": "Mina_Bottom",
+    "color": "#487C89",
+    "roughness": 0.82
+  },
+  {
+    "name": "Mina_Shoe",
+    "color": "#E2B65C",
+    "roughness": 0.6
+  },
+  {
+    "name": "Mina_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Mina_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Mina_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Mina_Seam",
+    "color": "#AC5442",
+    "roughness": 0.8
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Aylin_Skin",
+    "color": "#D89A69",
+    "roughness": 0.56
+  },
+  {
+    "name": "Aylin_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Aylin_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Aylin_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Aylin_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Aylin_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Aylin_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Aylin_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Aylin_Hair",
+    "color": "#70331C",
+    "roughness": 0.68
+  },
+  {
+    "name": "Aylin_HairLight",
+    "color": "#81442D",
+    "roughness": 0.64
+  },
+  {
+    "name": "Aylin_Top",
+    "color": "#77815A",
+    "roughness": 0.83
+  },
+  {
+    "name": "Aylin_Bottom",
+    "color": "#494A46",
+    "roughness": 0.82
+  },
+  {
+    "name": "Aylin_Shoe",
+    "color": "#70442E",
+    "roughness": 0.6
+  },
+  {
+    "name": "Aylin_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Aylin_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Aylin_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Aylin_Seam",
+    "color": "#3F4922",
+    "roughness": 0.8
+  }
+]

@@ -1,0 +1,13 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+PASS actual aid camera and unobstructed table/drag targets
+PASS real screen raycast Taşınan ihtiyaç işareti 0 at (425.79, 416.64)
+PASS neighbor 0 physically walks to the unchanged station destination
+PASS real screen raycast Taşınan ihtiyaç işareti 1 at (270.00, 416.64)
+PASS neighbor 1 physically walks to the unchanged station destination
+PASS real screen raycast Taşınan ihtiyaç işareti 2 at (114.21, 416.64)
+PASS neighbor 2 physically walks to the unchanged station destination
+PASS new environment retains aid movement and relief progression
+PASS real screen raycast Efe’ye verilecek su at (261.02, 324.20)
+PASS real screen raycast Efe’ye verilecek yiyecek at (129.54, 379.92)
+PASS relief sources receive real screen input; separate water and food gestures complete with the new camera
+PASS complete

@@ -1,0 +1,12 @@
+{
+  "status": "failed_internal_visual_review",
+  "integrated_into_scene": false,
+  "do_not_import": true,
+  "facial_animation": false,
+  "production_ready": false,
+  "issues": ["Hair extraction damaged facial boundaries", "Collar has open edges", "Garment surfaces intersect", "Character is not sufficiently distinct from the anatomical template"],
+  "templates": [
+    "Efe anatomical mesh",
+    "Derya hair sculpt"
+  ]
+}

@@ -1,0 +1,17 @@
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\render_workshop_review.py:26: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  sc.world=bpy.data.worlds.new('Soft studio');sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[0].default_value=(.66,.73,.75,1);sc.world.node_tree.nodes['Background'].inputs[1].default_value=.5
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\render_workshop_review.py:11: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True
+00:12.828  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports\YanYana\ArtReview\ResidentWorkshop\Blender_Faces.png'
+00:23.703  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports\YanYana\ArtReview\ResidentWorkshop\Frames\0001.png'
+addon_utils.disable: bl_ext.lab_blender_org.mcp not enabled
+Info: Saved as "EightResidents_Expressions.blend"
+REVIEW_FRAME 1
+00:35.218  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports\YanYana\ArtReview\ResidentWorkshop\Frames\0002.png'
+REVIEW_FRAME 2
+00:47.484  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports\YanYana\ArtReview\ResidentWorkshop\Frames\0003.png'
+REVIEW_FRAME 3
+01:00.781  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports\YanYana\ArtReview\ResidentWorkshop\Frames\0004.png'
+REVIEW_FRAME 4
+01:12.172  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ClientExports\YanYana\ArtReview\ResidentWorkshop\Frames\0005.png'
+REVIEW_FRAME 5

@@ -1,0 +1,843 @@
+{
+  "name": "Nermin",
+  "h": 1.65,
+  "age": "adult",
+  "sex": "f",
+  "head": [
+    0.88,
+    0.95,
+    1.13
+  ],
+  "jaw": 0.66,
+  "cheek": 1.01,
+  "eyes": [
+    0.94,
+    1.06,
+    1.05
+  ],
+  "nose": [
+    0.81,
+    1.16
+  ],
+  "hair": "long_braid",
+  "haircolor": "#342923",
+  "skin": "#D4A282",
+  "top": "#688FA9",
+  "bottom": "#BAA787",
+  "shoe": "#865746",
+  "outfit": "cardigan",
+  "build": 0.87,
+  "vertices": 20609,
+  "triangles": 42120,
+  "shapes": [
+    "Mouth_A",
+    "Mouth_E",
+    "Mouth_O",
+    "Blink",
+    "Fear",
+    "Surprise",
+    "Smile"
+  ],
+  "bones": 21,
+  "geometry_sha256": "23e588a7aaf52f61e6254ce124cf14515a46e1c00990a1a393d506f1edd25389",
+  "parts": [
+    {
+      "name": "Neck",
+      "start": 0,
+      "count": 56
+    },
+    {
+      "name": "Shirt tailored body",
+      "start": 56,
+      "count": 168
+    },
+    {
+      "name": "Garment collar or hem",
+      "start": 224,
+      "count": 328
+    },
+    {
+      "name": "Garment collar or hem",
+      "start": 552,
+      "count": 328
+    },
+    {
+      "name": "Open garment panel",
+      "start": 880,
+      "count": 168
+    },
+    {
+      "name": "Jacket opening piping",
+      "start": 1048,
+      "count": 104
+    },
+    {
+      "name": "Sewn patch pocket",
+      "start": 1152,
+      "count": 144
+    },
+    {
+      "name": "Pocket stitching",
+      "start": 1296,
+      "count": 16
+    },
+    {
+      "name": "Open garment panel",
+      "start": 1312,
+      "count": 168
+    },
+    {
+      "name": "Jacket opening piping",
+      "start": 1480,
+      "count": 104
+    },
+    {
+      "name": "Sewn patch pocket",
+      "start": 1584,
+      "count": 144
+    },
+    {
+      "name": "Pocket stitching",
+      "start": 1728,
+      "count": 16
+    },
+    {
+      "name": "Arm skin",
+      "start": 1744,
+      "count": 162
+    },
+    {
+      "name": "Garment sleeve",
+      "start": 1906,
+      "count": 120
+    },
+    {
+      "name": "Soft shoulder seam",
+      "start": 2026,
+      "count": 260
+    },
+    {
+      "name": "Palm",
+      "start": 2286,
+      "count": 234
+    },
+    {
+      "name": "Separate finger",
+      "start": 2520,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 2547,
+      "count": 70
+    },
+    {
+      "name": "Separate finger",
+      "start": 2617,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 2644,
+      "count": 70
+    },
+    {
+      "name": "Separate finger",
+      "start": 2714,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 2741,
+      "count": 70
+    },
+    {
+      "name": "Separate finger",
+      "start": 2811,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 2838,
+      "count": 70
+    },
+    {
+      "name": "Thumb",
+      "start": 2908,
+      "count": 30
+    },
+    {
+      "name": "Leg skin",
+      "start": 2938,
+      "count": 60
+    },
+    {
+      "name": "Trouser leg",
+      "start": 2998,
+      "count": 96
+    },
+    {
+      "name": "Shoe sole",
+      "start": 3094,
+      "count": 264
+    },
+    {
+      "name": "Shoe upper",
+      "start": 3358,
+      "count": 312
+    },
+    {
+      "name": "Shoe lace",
+      "start": 3670,
+      "count": 12
+    },
+    {
+      "name": "Shoe lace",
+      "start": 3682,
+      "count": 12
+    },
+    {
+      "name": "Shoe lace",
+      "start": 3694,
+      "count": 12
+    },
+    {
+      "name": "Arm skin",
+      "start": 3706,
+      "count": 162
+    },
+    {
+      "name": "Garment sleeve",
+      "start": 3868,
+      "count": 120
+    },
+    {
+      "name": "Soft shoulder seam",
+      "start": 3988,
+      "count": 260
+    },
+    {
+      "name": "Palm",
+      "start": 4248,
+      "count": 234
+    },
+    {
+      "name": "Separate finger",
+      "start": 4482,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 4509,
+      "count": 70
+    },
+    {
+      "name": "Separate finger",
+      "start": 4579,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 4606,
+      "count": 70
+    },
+    {
+      "name": "Separate finger",
+      "start": 4676,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 4703,
+      "count": 70
+    },
+    {
+      "name": "Separate finger",
+      "start": 4773,
+      "count": 27
+    },
+    {
+      "name": "Fingertip",
+      "start": 4800,
+      "count": 70
+    },
+    {
+      "name": "Thumb",
+      "start": 4870,
+      "count": 30
+    },
+    {
+      "name": "Leg skin",
+      "start": 4900,
+      "count": 60
+    },
+    {
+      "name": "Trouser leg",
+      "start": 4960,
+      "count": 96
+    },
+    {
+      "name": "Shoe sole",
+      "start": 5056,
+      "count": 264
+    },
+    {
+      "name": "Shoe upper",
+      "start": 5320,
+      "count": 312
+    },
+    {
+      "name": "Shoe lace",
+      "start": 5632,
+      "count": 12
+    },
+    {
+      "name": "Shoe lace",
+      "start": 5644,
+      "count": 12
+    },
+    {
+      "name": "Shoe lace",
+      "start": 5656,
+      "count": 12
+    },
+    {
+      "name": "Sculpted head",
+      "start": 5668,
+      "count": 2752
+    },
+    {
+      "name": "Skin around mouth opening",
+      "start": 8420,
+      "count": 280
+    },
+    {
+      "name": "Ear",
+      "start": 8700,
+      "count": 260
+    },
+    {
+      "name": "Ear concha",
+      "start": 8960,
+      "count": 176
+    },
+    {
+      "name": "Ear cartilage",
+      "start": 9136,
+      "count": 120
+    },
+    {
+      "name": "Ear",
+      "start": 9256,
+      "count": 260
+    },
+    {
+      "name": "Ear concha",
+      "start": 9516,
+      "count": 176
+    },
+    {
+      "name": "Ear cartilage",
+      "start": 9692,
+      "count": 120
+    },
+    {
+      "name": "Nose bridge",
+      "start": 9812,
+      "count": 408
+    },
+    {
+      "name": "Nose tip",
+      "start": 10220,
+      "count": 408
+    },
+    {
+      "name": "Nose wing",
+      "start": 10628,
+      "count": 176
+    },
+    {
+      "name": "Nostril",
+      "start": 10804,
+      "count": 108
+    },
+    {
+      "name": "Nose wing",
+      "start": 10912,
+      "count": 176
+    },
+    {
+      "name": "Nostril",
+      "start": 11088,
+      "count": 108
+    },
+    {
+      "name": "Right sclera",
+      "start": 11196,
+      "count": 588
+    },
+    {
+      "name": "Iris outer ring",
+      "start": 11784,
+      "count": 312
+    },
+    {
+      "name": "Iris",
+      "start": 12096,
+      "count": 364
+    },
+    {
+      "name": "Pupil",
+      "start": 12460,
+      "count": 312
+    },
+    {
+      "name": "Eye catchlight",
+      "start": 12772,
+      "count": 108
+    },
+    {
+      "name": "Eye small catchlight",
+      "start": 12880,
+      "count": 70
+    },
+    {
+      "name": "Eyelid skin",
+      "start": 12950,
+      "count": 240
+    },
+    {
+      "name": "Upper eyelid rim",
+      "start": 13190,
+      "count": 150
+    },
+    {
+      "name": "Eyebrow",
+      "start": 13340,
+      "count": 104
+    },
+    {
+      "name": "Left sclera",
+      "start": 13444,
+      "count": 588
+    },
+    {
+      "name": "Iris outer ring",
+      "start": 14032,
+      "count": 312
+    },
+    {
+      "name": "Iris",
+      "start": 14344,
+      "count": 364
+    },
+    {
+      "name": "Pupil",
+      "start": 14708,
+      "count": 312
+    },
+    {
+      "name": "Eye catchlight",
+      "start": 15020,
+      "count": 108
+    },
+    {
+      "name": "Eye small catchlight",
+      "start": 15128,
+      "count": 70
+    },
+    {
+      "name": "Eyelid skin",
+      "start": 15198,
+      "count": 240
+    },
+    {
+      "name": "Upper eyelid rim",
+      "start": 15438,
+      "count": 150
+    },
+    {
+      "name": "Eyebrow",
+      "start": 15588,
+      "count": 104
+    },
+    {
+      "name": "Mouth cavity",
+      "start": 15692,
+      "count": 240
+    },
+    {
+      "name": "Upper lip",
+      "start": 15932,
+      "count": 232
+    },
+    {
+      "name": "Lower lip",
+      "start": 16164,
+      "count": 232
+    },
+    {
+      "name": "Upper tooth",
+      "start": 16396,
+      "count": 108
+    },
+    {
+      "name": "Upper tooth",
+      "start": 16504,
+      "count": 108
+    },
+    {
+      "name": "Upper tooth",
+      "start": 16612,
+      "count": 108
+    },
+    {
+      "name": "Upper tooth",
+      "start": 16720,
+      "count": 108
+    },
+    {
+      "name": "Upper tooth",
+      "start": 16828,
+      "count": 108
+    },
+    {
+      "name": "Upper tooth",
+      "start": 16936,
+      "count": 108
+    },
+    {
+      "name": "Tongue",
+      "start": 17044,
+      "count": 180
+    },
+    {
+      "name": "Sculpted scalp",
+      "start": 17224,
+      "count": 624
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 17848,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 17956,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18064,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18172,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18280,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18388,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18496,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18604,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18712,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18820,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 18928,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 19036,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 19144,
+      "count": 108
+    },
+    {
+      "name": "Flowing hair lock",
+      "start": 19252,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 19360,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 19468,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 19576,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 19684,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 19792,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 19900,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20008,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20116,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20224,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20332,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20440,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20548,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20656,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20764,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20872,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 20980,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21088,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21196,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21304,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21412,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21520,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21628,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21736,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21844,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 21952,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22060,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22168,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22276,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22384,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22492,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22600,
+      "count": 108
+    },
+    {
+      "name": "Braided hair",
+      "start": 22708,
+      "count": 108
+    },
+    {
+      "name": "Hair tie",
+      "start": 22816,
+      "count": 108
+    }
+  ],
+  "materials": [
+    {
+      "name": "Nermin_Skin",
+      "color": "#D4A282",
+      "roughness": 0.56
+    },
+    {
+      "name": "Nermin_Lip",
+      "color": "#AD6752",
+      "roughness": 0.48
+    },
+    {
+      "name": "Nermin_Mouth",
+      "color": "#361920",
+      "roughness": 0.68
+    },
+    {
+      "name": "Nermin_Tongue",
+      "color": "#BD6970",
+      "roughness": 0.45
+    },
+    {
+      "name": "Nermin_Ivory",
+      "color": "#FFF4DD",
+      "roughness": 0.32
+    },
+    {
+      "name": "Nermin_EyeWhite",
+      "color": "#FDF5E6",
+      "roughness": 0.16
+    },
+    {
+      "name": "Nermin_Iris",
+      "color": "#815127",
+      "roughness": 0.23
+    },
+    {
+      "name": "Nermin_Pupil",
+      "color": "#131115",
+      "roughness": 0.13
+    },
+    {
+      "name": "Nermin_Hair",
+      "color": "#342923",
+      "roughness": 0.68
+    },
+    {
+      "name": "Nermin_HairLight",
+      "color": "#453A34",
+      "roughness": 0.64
+    },
+    {
+      "name": "Nermin_Top",
+      "color": "#688FA9",
+      "roughness": 0.83
+    },
+    {
+      "name": "Nermin_Bottom",
+      "color": "#BAA787",
+      "roughness": 0.82
+    },
+    {
+      "name": "Nermin_Shoe",
+      "color": "#865746",
+      "roughness": 0.6
+    },
+    {
+      "name": "Nermin_Cream",
+      "color": "#E6DAC1",
+      "roughness": 0.79
+    },
+    {
+      "name": "Nermin_Detail",
+      "color": "#DAAC5A",
+      "roughness": 0.4
+    },
+    {
+      "name": "Nermin_Under",
+      "color": "#E4CEB0",
+      "roughness": 0.8
+    },
+    {
+      "name": "Nermin_Seam",
+      "color": "#305771",
+      "roughness": 0.8
+    }
+  ],
+  "source": "Original Blender geometry; no base character imported"
+}

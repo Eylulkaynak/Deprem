@@ -1,0 +1,555 @@
+fileFormatVersion: 2
+guid: 35bdfc69f62ed87439fc9c3213e522c8
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal approved baked material
+    second: {fileID: 2100000, guid: e73a51f1e6ee31044b55605f2d55acf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal back of head skin
+    second: {fileID: 2100000, guid: 920eaa7f781062e43a3f39c315d9ccbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal beret band
+    second: {fileID: 2100000, guid: a96d7ee97fcd9db4db980f5bc7cc07f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal burgundy knitted cloth
+    second: {fileID: 2100000, guid: 4a7ce51a358da494a961ed0b8f4d58df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal crew neck jersey cloth
+    second: {fileID: 2100000, guid: 4aa5d90fcecdae846adb64664432a2dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal designed hair 0
+    second: {fileID: 2100000, guid: 65729f1b1d1c12649bd233bf4bea3253, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal eyelid crease
+    second: {fileID: 2100000, guid: ad11aeee31aa77f41abfa76c692e347c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal matched closure skin albedo
+    second: {fileID: 2100000, guid: 62932d3410ad4b4479c97f93717f752c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal matched closure skin albedo.001
+    second: {fileID: 2100000, guid: 189158277c0473649bcd11e8e3b0f55e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal mouth interior
+    second: {fileID: 2100000, guid: d8ba9f5fef7a18641b8e512c6fbf0b14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal plum wool cloth
+    second: {fileID: 2100000, guid: a97b6a2e5d2eb5e43916f79ea0f8b14a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal portable approved palette
+    second: {fileID: 2100000, guid: 3b1725902c6cbaf4b841294f7f2e264e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal teeth
+    second: {fileID: 2100000, guid: a8ddfbc114589114ea36c653337b35e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal tongue
+    second: {fileID: 2100000, guid: a542dcf461b3f6a43a14ddffa47299aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kemal vest ribbing
+    second: {fileID: 2100000, guid: c82c2ad16c2326e43ab6080e1edaf0c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_10_0
+    second: {fileID: 2100000, guid: f71fd6a86fe5aff489b8680fd63d7531, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_11_0
+    second: {fileID: 2100000, guid: 032438ece4c7dd945b4af8919a327a08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_12_0
+    second: {fileID: 2100000, guid: 3ced6897574d7e246bb3de6871e10dc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_13_0
+    second: {fileID: 2100000, guid: e48d1c082cc0c744ca5ecf210bd27b43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_14_0
+    second: {fileID: 2100000, guid: 9c78ff55a76b69b4396146f6792a8262, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_15_0
+    second: {fileID: 2100000, guid: 22a742c0df34ce94cb0315df26aba405, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_16_0
+    second: {fileID: 2100000, guid: 5678bb503594ec24a86dcd08ade903dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_1_0
+    second: {fileID: 2100000, guid: 1bb8362e17843c148822a99be6054f3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_2_0
+    second: {fileID: 2100000, guid: e78a5f07d39d53c4cb4de9949dfea781, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_3_0
+    second: {fileID: 2100000, guid: 4b9121792b98a3746ae78ecaed5cbfdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_4_0
+    second: {fileID: 2100000, guid: df703343acc858a478f4375d1280bbb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_5_0
+    second: {fileID: 2100000, guid: 77e3ac184a83fe24a86568f715485517, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_6_0
+    second: {fileID: 2100000, guid: 9f0aae59e19ad3243a31bebab11e28e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_7_0
+    second: {fileID: 2100000, guid: d80d864aab85c8d41aaae5c2384632c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_8_0
+    second: {fileID: 2100000, guid: 13dc8702f2495a84a9f70b0fd307fbb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yusuf_9_0
+    second: {fileID: 2100000, guid: 82872e2f8d5208a4d92ff163dad4bb25, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 2
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftUpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightUpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLowerArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLowerArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftUpperLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightUpperLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLowerLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLowerLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftToes
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToes
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Kemal(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kemal_Rig
+      parentName: Kemal(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Kemal_Rig
+      position: {x: -0.0010184934, y: 0.010559142, z: 0.42311674}
+      rotation: {x: 0.07871503, y: -0.65680414, z: -0.744227, w: 0.09240399}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine
+      parentName: Hips
+      position: {x: 6.9849193e-10, y: 0.14601307, z: -0.0000000050349627}
+      rotation: {x: 0.19227356, y: 0.03916333, z: 0.037648037, w: 0.9798366}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+    - name: Chest
+      parentName: Spine
+      position: {x: 5.2386895e-10, y: 0.1637014, z: -0.00000001094304}
+      rotation: {x: 0.029517792, y: -0.0025552039, z: -0.0009984957, w: 0.99956053}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: Neck
+      parentName: Chest
+      position: {x: 5.820766e-10, y: 0.18291984, z: -0.000000045925844}
+      rotation: {x: -0.08822412, y: -0.021712568, z: -0.01885768, w: 0.99568546}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Head
+      parentName: Neck
+      position: {x: 0.0000000014260877, y: 0.17948225, z: -0.000000008447387}
+      rotation: {x: -0.031654835, y: 0.0026755917, z: 0.0025652065, w: 0.999492}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: LeftShoulder
+      parentName: Chest
+      position: {x: 0.031388264, y: 0.15059812, z: 0.008589704}
+      rotation: {x: 0.61933845, y: 0.54835004, z: 0.42703, w: -0.36520886}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: LeftUpperArm
+      parentName: LeftShoulder
+      position: {x: 0.0000000055879354, y: 0.19692251, z: -0.00000003306195}
+      rotation: {x: -0.09103422, y: -0.5655624, z: -0.1384329, w: 0.80789125}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: LeftLowerArm
+      parentName: LeftUpperArm
+      position: {x: 0.000000020023435, y: 0.21847321, z: -0.000000031664968}
+      rotation: {x: -0.026727546, y: 0.04633945, z: -0.022128494, w: 0.99832296}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: LeftHand
+      parentName: LeftLowerArm
+      position: {x: -0.000000056810677, y: 0.13954419, z: -0.000000013038516}
+      rotation: {x: 0.9471673, y: 0.11772314, z: 0.26387444, w: -0.13923258}
+      scale: {x: 0.9999993, y: 1, z: 0.9999996}
+    - name: RightShoulder
+      parentName: Chest
+      position: {x: -0.031306576, y: 0.14855513, z: -0.009146727}
+      rotation: {x: -0.7178754, y: 0.3743853, z: 0.25068966, w: 0.53070265}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: RightUpperArm
+      parentName: RightShoulder
+      position: {x: -0.000000013969839, y: 0.20651053, z: -0.000000009778887}
+      rotation: {x: -0.04148531, y: 0.32427087, z: 0.15090406, w: 0.93292844}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RightLowerArm
+      parentName: RightUpperArm
+      position: {x: -0.000000013038516, y: 0.22476336, z: 0.0000000037252903}
+      rotation: {x: -0.012349015, y: -0.12230377, z: 0.022116074, w: 0.9921695}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+    - name: RightHand
+      parentName: RightLowerArm
+      position: {x: -0, y: 0.1382919, z: 0.000000022351742}
+      rotation: {x: 0.939086, y: -0.15855075, z: -0.27743325, w: -0.12653032}
+      scale: {x: 0.99999857, y: 0.9999997, z: 0.9999997}
+    - name: LeftUpperLeg
+      parentName: Hips
+      position: {x: 0.059646107, y: 0.03214713, z: 0.011491821}
+      rotation: {x: 0.9739031, y: 0.09474706, z: 0.20522977, w: 0.020409524}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: LeftLowerLeg
+      parentName: LeftUpperLeg
+      position: {x: 0.0000000037252903, y: 0.20013475, z: -0.000000011175871}
+      rotation: {x: 0.14831865, y: -0.15621701, z: 0.15120132, w: 0.9647466}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+    - name: LeftFoot
+      parentName: LeftLowerLeg
+      position: {x: 0.0000000037252903, y: 0.23536307, z: 0.000000009313226}
+      rotation: {x: -0.45874962, y: -0.72912836, z: -0.4021016, w: -0.31021744}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: LeftToes
+      parentName: LeftFoot
+      position: {x: -0.000000009313226, y: 0.15482908, z: -0.000000007450581}
+      rotation: {x: -0.6339472, y: 0.3900124, z: 0.38998172, w: 0.54213977}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: RightUpperLeg
+      parentName: Hips
+      position: {x: -0.059460364, y: 0.03275525, z: -0.011498481}
+      rotation: {x: 0.95888525, y: -0.10931529, z: -0.21930914, w: -0.1431527}
+      scale: {x: 1.0000011, y: 1.0000001, z: 1.0000005}
+    - name: RightLowerLeg
+      parentName: RightUpperLeg
+      position: {x: 0.000000011175871, y: 0.19913876, z: 0.000000007450581}
+      rotation: {x: -0.044413406, y: 0.15005669, z: -0.16882318, w: 0.97314394}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: RightFoot
+      parentName: RightLowerLeg
+      position: {x: 0.000000008614734, y: 0.23525831, z: 0.0000000037252903}
+      rotation: {x: 0.6308505, y: 0.097621284, z: 0.03781598, w: 0.76880926}
+      scale: {x: 0.9999998, y: 1, z: 0.99999994}
+    - name: RightToes
+      parentName: RightFoot
+      position: {x: -0.000000013969839, y: 0.15488566, z: 0.0000000016880222}
+      rotation: {x: -0.31647217, y: 0.6482972, z: 0.6483225, w: -0.2433805}
+      scale: {x: 1, y: 0.99999976, z: 0.99999994}
+    - name: Kemal_SculptedBody
+      parentName: Kemal(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kemal_Wardrobe
+      parentName: Kemal(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,26 @@
+00:01.422  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Derya.blend"
+00:01.765  cycles           | WARNING CUEW initialization failed: Error opening the library
+Info: Baking map saved to internal image, save it externally or pack it
+PROTECTED_BROW Gul -1 40 [-0.03705325350165367, -0.2775685489177704, 1.406521201133728]
+PROTECTED_BROW Gul 1 825 [0.1345984935760498, -0.28247103095054626, 1.424569845199585]
+Info: Baking map saved to internal image, save it externally or pack it
+FITTED_HEAD_CLOSURE Gul 5 9605
+DESIGNED_HAIR Gul removed_faces 20030 eye [0.03225607052445412, -0.24962583184242249, 1.2620432376861572]
+Info: Baking map saved to internal image, save it externally or pack it
+REFERENCE_HAIR Gul Ada 19996 38094
+Info: Saved as "Gul.blend"
+CROWD_SCULPT Gul
+00:10.922  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Emre.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+PROTECTED_BROW Kemal -1 251 [-0.047695137560367584, -0.2408837378025055, 1.4827985763549805]
+PROTECTED_BROW Kemal 1 270 [0.11166246235370636, -0.2347521185874939, 1.4803502559661865]
+Info: Baking map saved to internal image, save it externally or pack it
+FITTED_HEAD_CLOSURE Kemal 11 5683
+DESIGNED_HAIR Kemal removed_faces 13189 eye [0.024065399542450905, -0.23738892376422882, 1.3710023164749146]
+Info: Baking map saved to internal image, save it externally or pack it
+REFERENCE_HAIR Kemal Yusuf 11080 21217
+Info: Saved as "Kemal.blend"
+CROWD_SCULPT Kemal
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

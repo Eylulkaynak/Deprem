@@ -1,0 +1,8 @@
+dspTime=2573.16266666667
+listenerPaused=False
+masterMuted=False
+sampleRate=48000
+listener=Ana kamera — tek AudioListener active=True
+voice=Kısa Türkçe konuşmalar active=True time=0 playing=False clip=physical_e8ba9c88e36b loaded=Loaded
+resetAllAudioClipPlayCountsOnPlay=False
+canUseSpatializerEffect=False

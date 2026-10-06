@@ -1,0 +1,20 @@
+{
+  "name": "Arda",
+  "fbx_read_back_passed": true,
+  "armatures": 1,
+  "bones": 21,
+  "renderers": 2,
+  "vertices": 44462,
+  "facial_keys_verified": [
+    "Mouth_A",
+    "Mouth_E",
+    "Mouth_O",
+    "Blink",
+    "Fear",
+    "Surprise",
+    "Smile"
+  ],
+  "unweighted_vertices": 0,
+  "material_count": 6,
+  "unity_play_tested": false
+}

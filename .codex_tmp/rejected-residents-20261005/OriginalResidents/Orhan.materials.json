@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Orhan_Skin",
+    "color": "#CB9369",
+    "roughness": 0.56
+  },
+  {
+    "name": "Orhan_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Orhan_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Orhan_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Orhan_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Orhan_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Orhan_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Orhan_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Orhan_Hair",
+    "color": "#48392E",
+    "roughness": 0.68
+  },
+  {
+    "name": "Orhan_HairLight",
+    "color": "#594A3F",
+    "roughness": 0.64
+  },
+  {
+    "name": "Orhan_Top",
+    "color": "#B3A178",
+    "roughness": 0.83
+  },
+  {
+    "name": "Orhan_Bottom",
+    "color": "#5D6F77",
+    "roughness": 0.82
+  },
+  {
+    "name": "Orhan_Shoe",
+    "color": "#624C36",
+    "roughness": 0.6
+  },
+  {
+    "name": "Orhan_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Orhan_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Orhan_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Orhan_Seam",
+    "color": "#7B6940",
+    "roughness": 0.8
+  }
+]

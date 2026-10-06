@@ -1,0 +1,8 @@
+{
+  "source_image": "ArtDirection/CharacterReferences/AbdullahEkinci_Reference_v1.png",
+  "geometry": "Original reference-driven sculpture, no Meshy or imported geometry",
+  "vertices": 41537,
+  "triangles": 83070,
+  "texture": "4096px baked reference projection",
+  "bones": 17
+}

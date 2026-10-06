@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Arda_Skin",
+    "color": "#D7A074",
+    "roughness": 0.56
+  },
+  {
+    "name": "Arda_Lip",
+    "color": "#AD6752",
+    "roughness": 0.48
+  },
+  {
+    "name": "Arda_Mouth",
+    "color": "#361920",
+    "roughness": 0.68
+  },
+  {
+    "name": "Arda_Tongue",
+    "color": "#BD6970",
+    "roughness": 0.45
+  },
+  {
+    "name": "Arda_Ivory",
+    "color": "#FFF4DD",
+    "roughness": 0.32
+  },
+  {
+    "name": "Arda_EyeWhite",
+    "color": "#FDF5E6",
+    "roughness": 0.16
+  },
+  {
+    "name": "Arda_Iris",
+    "color": "#815127",
+    "roughness": 0.23
+  },
+  {
+    "name": "Arda_Pupil",
+    "color": "#131115",
+    "roughness": 0.13
+  },
+  {
+    "name": "Arda_Hair",
+    "color": "#493026",
+    "roughness": 0.68
+  },
+  {
+    "name": "Arda_HairLight",
+    "color": "#5A4137",
+    "roughness": 0.64
+  },
+  {
+    "name": "Arda_Top",
+    "color": "#7E94C1",
+    "roughness": 0.83
+  },
+  {
+    "name": "Arda_Bottom",
+    "color": "#805F4B",
+    "roughness": 0.82
+  },
+  {
+    "name": "Arda_Shoe",
+    "color": "#D79A4C",
+    "roughness": 0.6
+  },
+  {
+    "name": "Arda_Cream",
+    "color": "#E6DAC1",
+    "roughness": 0.79
+  },
+  {
+    "name": "Arda_Detail",
+    "color": "#DAAC5A",
+    "roughness": 0.4
+  },
+  {
+    "name": "Arda_Under",
+    "color": "#E4CEB0",
+    "roughness": 0.8
+  },
+  {
+    "name": "Arda_Seam",
+    "color": "#465C89",
+    "roughness": 0.8
+  }
+]

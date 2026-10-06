@@ -1,0 +1,64 @@
+Neighborhood geometry and camera inspection
+Playing=False
+Mahalle evi 0 position=(-12.000, -0.480, -12.000) dimensions=(0.689, 3.736, 3.172) active=True
+Mahalle evi 1 position=(-12.000, -0.480, -16.100) dimensions=(1.118, 3.736, 3.172) active=True
+Mahalle evi 2 position=(-12.000, -0.480, -20.200) dimensions=(0.689, 3.736, 3.172) active=True
+Mahalle evi 3 position=(12.000, -0.480, -11.000) dimensions=(1.118, 3.736, 3.172) active=True
+Mahalle evi 4 position=(12.000, -0.480, -17.000) dimensions=(0.689, 3.736, 3.172) active=True
+AidStation position=(0.000, -0.480, -23.150) dimensions=(2.098, 2.399, 1.472) active=True
+AidStation position=(3.000, -0.480, -24.600) dimensions=(2.098, 2.399, 1.472) active=True
+AidStation position=(6.000, -0.480, -23.150) dimensions=(2.098, 2.438, 1.472) active=True
+Sokağın güney cephesi position=(0.000, 0.000, 0.000) dimensions=(23.550, 4.771, 1.428) active=True
+Evin tamamlanmış yakın çevresi position=(0.000, 0.000, 0.000) dimensions=(22.000, 4.351, 20.710) active=True
+Park ağacı · açık meydanın dışında position=(-6.500, -0.480, -34.100) dimensions=(2.607, 3.825, 2.615)
+Park bankı · açık geçişin kenarı position=(8.300, -0.480, -29.500) dimensions=(1.380, 0.975, 0.415)
+Park bankı · açık geçişin kenarı position=(-10.800, -0.480, -27.700) dimensions=(0.415, 0.975, 1.380)
+Park ağacı · açık meydanın dışında position=(-13.200, -0.480, -21.400) dimensions=(2.607, 3.825, 2.615)
+Park bankı · açık geçişin kenarı position=(-8.400, -0.480, -29.500) dimensions=(1.380, 0.975, 0.415)
+Park bankı · açık geçişin kenarı position=(10.800, -0.480, -22.600) dimensions=(0.415, 0.975, 1.380)
+Çocuk parkı · kaydırak ve oyun köşesi position=(0.000, -0.480, -30.900) dimensions=(4.300, 1.670, 3.011)
+Park ağacı · açık meydanın dışında position=(13.100, -0.480, -23.000) dimensions=(2.607, 3.825, 2.615)
+Park ağacı · açık meydanın dışında position=(12.700, -0.480, -32.300) dimensions=(2.607, 3.825, 2.615)
+Park ağacı · açık meydanın dışında position=(6.600, -0.480, -34.000) dimensions=(2.607, 3.825, 2.615)
+Park ağacı · açık meydanın dışında position=(0.000, -0.480, -34.500) dimensions=(2.607, 3.825, 2.615)
+Street_Aid position=(3.000, -0.480, -22.000) dimensions=(0.000, 0.000, 0.000)
+Park ağacı · açık meydanın dışında position=(-12.500, -0.480, -31.700) dimensions=(2.607, 3.825, 2.615)
+CAM Deprem · oda içinden başlangıç position=(0.700, 3.100, -3.650) euler=(45.000, 0.000, 0.000) fov=70 ortho=10
+CAM Yakından incele · reunionRoute3 position=(0.500, 6.280, -12.637) euler=(32.000, 180.000, 0.000) fov=52 ortho=6.4
+CAM Yakından incele · fire1 position=(-8.000, 1.970, -12.050) euler=(13.711, 151.821, 0.000) fov=54 ortho=2.4
+CAM Yakından incele · reunionRoute1 position=(5.500, 5.346, -13.232) euler=(32.000, 180.000, 0.000) fov=52 ortho=5.4
+CAM Yakından incele · bagfit position=(2.580, 2.273, -1.350) euler=(55.000, 180.000, 0.000) fov=46 ortho=0.74
+CAM Yakından incele · reunion4 position=(-1.100, 1.820, -24.300) euler=(27.096, 150.255, 0.000) fov=55 ortho=2.75
+CAM Yakından incele · reunionApproach2 position=(0.450, 4.878, -19.518) euler=(32.000, 226.169, 0.000) fov=52 ortho=4.9
+CAM Yakından incele · reunion2 position=(-6.450, 1.620, -21.800) euler=(22.257, 188.931, 0.000) fov=55 ortho=2.75
+CAM Yakından incele · fire3 position=(-6.900, 1.970, -15.050) euler=(13.711, 151.821, 0.000) fov=54 ortho=2.4
+CAM Yakından incele · hose position=(-3.300, 0.778, -16.391) euler=(55.000, 0.000, 0.000) fov=46 ortho=0.6
+CAM Yakından incele · aid position=(3.000, 8.105, -9.663) euler=(32.000, 180.000, 0.000) fov=52 ortho=8.3
+CAM Yakından incele · reunionRoute4 position=(1.000, 5.346, -14.882) euler=(32.000, 180.000, 0.000) fov=52 ortho=5.4
+CAM Yakından incele · reunionRoute2 position=(0.000, 6.280, -12.287) euler=(32.000, 180.000, 0.000) fov=52 ortho=6.4
+CAM Yakından incele · intro position=(-1.150, 1.950, -0.450) euler=(23.044, 207.031, 0.000) fov=48 ortho=1.05
+CAM Yakından incele · reunionApproach3 position=(1.600, 4.878, -19.868) euler=(32.000, 226.169, 0.000) fov=52 ortho=4.9
+CAM Yakından incele · reunionApproach4 position=(-2.793, 4.224, -20.816) euler=(32.000, 156.801, 0.000) fov=52 ortho=4.2
+CAM Yakından incele · reunion1 position=(8.550, 1.620, -20.800) euler=(22.257, 188.931, 0.000) fov=55 ortho=2.75
+CAM Ada ile odada gezin position=(-1.200, 5.000, -4.950) euler=(51.229, 11.976, 0.000) fov=48 ortho=3.1
+CAM Yakından incele · sibling position=(0.700, 1.400, -4.200) euler=(13.241, 0.000, 0.000) fov=48 ortho=1.12
+CAM Yakından incele · introCarry position=(-1.750, 2.700, -5.850) euler=(26.134, 16.574, 0.000) fov=54 ortho=2.6
+CAM Yakından incele · flashlight position=(-1.272, 1.748, 2.430) euler=(55.000, 90.000, 0.000) fov=46 ortho=0.46
+CAM Yakından incele · familyEfe position=(7.950, 1.010, -23.070) euler=(24.465, 254.476, 0.000) fov=52 ortho=1.14
+CAM AD · mahalle açılış kadrajı position=(-79.880, 2.500, -7.600) euler=(9.998, 359.095, 0.000) fov=40 ortho=2.28
+CAM Yakından incele · relief position=(4.000, 1.800, -23.100) euler=(22.967, 340.974, 0.000) fov=50 ortho=1.55
+CAM Yakından incele · supplyFood position=(-1.870, 2.800, 0.880) euler=(52.125, 0.000, 0.000) fov=52 ortho=0.88
+CAM Yakından incele · map position=(2.920, 3.005, 0.266) euler=(50.000, 0.000, 0.000) fov=46 ortho=1
+CAM Yakından incele · fire2 position=(-5.600, 1.970, -13.050) euler=(13.711, 151.821, 0.000) fov=54 ortho=2.4
+CAM Yakından incele · introDrop position=(3.050, 2.300, -4.700) euler=(37.425, 321.340, 0.000) fov=48 ortho=1.16
+CAM Yakından incele · radio position=(-2.478, 1.768, 2.400) euler=(55.000, 90.000, 0.000) fov=46 ortho=0.45
+CAM Yakından incele · aftershock position=(-3.414, 1.077, -7.543) euler=(17.346, 14.470, 0.000) fov=50 ortho=1.4
+CAM Yakından incele · bag position=(2.580, 2.699, -0.860) euler=(55.000, 180.000, 0.000) fov=57 ortho=1.48
+CAM Yakından incele · supplyWater position=(-1.870, 2.800, 0.880) euler=(52.125, 0.000, 0.000) fov=52 ortho=0.88
+CAM Yakından incele · family position=(6.000, 2.967, -25.156) euler=(55.000, 0.000, 0.000) fov=46 ortho=1.47
+CAM Yakından incele · broadcast position=(4.300, 2.207, -22.566) euler=(55.000, 0.000, 0.000) fov=46 ortho=0.9
+CAM Deprem · eller ve masa ayağı position=(0.450, 0.830, -2.500) euler=(6.514, 359.116, 0.000) fov=50 ortho=10
+CAM Yakından incele · cover position=(-0.120, 1.150, -2.010) euler=(13.173, 13.536, 0.000) fov=52 ortho=1.35
+CAM Yakından incele · bridge position=(0.530, 2.506, -0.490) euler=(55.000, 0.000, 0.000) fov=46 ortho=0.77
+CAM Yakından incele · reunion3 position=(-5.900, 1.620, -21.800) euler=(22.257, 171.069, 0.000) fov=55 ortho=3.05
+CAM Yakından incele · reunionApproach1 position=(8.000, 4.224, -17.259) euler=(32.000, 180.000, 0.000) fov=52 ortho=4.2

@@ -1,0 +1,18 @@
+Editor integration; production EventSystem handlers. Not physical-phone or child usability evidence.
+PASS screen 540x960 Hortumun kavrama ucu at (103.34, 441.79, 1.36)
+PASS screen 540x1170 Hortumun kavrama ucu at (103.34, 546.79, 1.36)
+PASS screen 540x1200 Hortumun kavrama ucu at (103.34, 561.79, 1.36)
+PASS screen 540x960 Su vanası at (412.04, 638.01, 1.51)
+PASS screen 540x960 Hortumu yönlendir 1 at (386.13, 401.35, 6.63)
+PASS screen 540x960 Hortumu yönlendir 1 at (272.51, 394.96, 6.50)
+PASS screen 540x960 Hortumu yönlendir 1 at (229.45, 426.44, 7.22)
+PASS screen 540x1170 Hortumu yönlendir 1 at (386.13, 506.35, 6.63)
+PASS screen 540x1170 Hortumu yönlendir 1 at (272.51, 499.96, 6.50)
+PASS screen 540x1170 Hortumu yönlendir 1 at (229.45, 531.44, 7.22)
+PASS screen 540x1200 Hortumu yönlendir 1 at (386.13, 521.35, 6.63)
+PASS screen 540x1200 Hortumu yönlendir 1 at (272.51, 514.96, 6.50)
+PASS screen 540x1200 Hortumu yönlendir 1 at (229.45, 546.44, 7.22)
+PASS fire shader freezes and resumes
+PASS screen 540x960 Hortumu yönlendir 1 at (386.13, 401.35, 6.63)
+PASS extinguished 1/0 through validated screen input; flame shrinks separately, wet fuel remains, emission stops
+PASS screen 540x960 Hortumu yönlendir 1 at (272.51, 394.96, 6.50)

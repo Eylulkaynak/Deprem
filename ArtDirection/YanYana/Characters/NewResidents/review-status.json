@@ -1,0 +1,10 @@
+{
+  "status": "rejected_visual_direction",
+  "review_date": "2026-10-05",
+  "reason": "The user rejected the Blender batch because it does not match the approved family character style and looks frightening.",
+  "production_ready": false,
+  "integrated_into_scene": false,
+  "unity_assets_quarantined_at": ".codex_tmp/rejected-residents-20261005/OriginalResidents",
+  "do_not_import": true,
+  "remaining_work": "New character modeling in the approved visual style, then facial animation and scene integration. Quantity and expression key counts do not establish visual acceptance."
+}

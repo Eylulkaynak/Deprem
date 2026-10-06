@@ -1,0 +1,26 @@
+00:01.406  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Emre.blend"
+00:01.656  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:05.891  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Deniz\FullBody.png'
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Saved as "Deniz.blend"
+CROWD_SCULPT Deniz
+00:05.891  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Derya.blend"
+00:11.500  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Gul\FullBody.png'
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Saved as "Gul.blend"
+CROWD_SCULPT Gul
+00:11.500  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Yusuf.blend"
+C:\Users\Gokturk\Documents\GitHub\Deprem\Tools\YanYana\sculpt_crowd_residents.py:135: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  im.filepath_raw=str(OUT/'Kemal/ApprovedMaterial.png');im.file_format='PNG';im.save();im.pack();m=bpy.data.materials.new('Kemal approved baked material');m.use_nodes=True;node=m.node_tree.nodes.new('ShaderNodeTexImage');node.image=im;m.node_tree.links.new(node.outputs['Color'],m.node_tree.nodes['Principled BSDF'].inputs['Base Color']);m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=.72
+00:15.844  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Kemal\FullBody.png'
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Saved as "Kemal.blend"
+CROWD_SCULPT Kemal
+00:15.844  blend            | Read blend: "C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ApprovedStyle\Efe.blend"
+00:22.484  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\ArtDirection\YanYana\Characters\ResidentWorkshop\Arda\FullBody.png'
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Saved as "Arda.blend"
+CROWD_SCULPT Arda
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

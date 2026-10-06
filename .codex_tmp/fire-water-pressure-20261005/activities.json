@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "results": [
+        {
+            "minigameId": "firefighter-extinguish",
+            "bestStars": 3,
+            "bestScore": 1000,
+            "bestCoins": 50,
+            "bestTimeSeconds": 0.0,
+            "completionCount": 161
+        }
+    ]
+}

@@ -1,16 +1,19 @@
 """New local Turkish lines for the physical adventure; synthetic voices, no runtime network."""
-import asyncio,hashlib,json,pathlib,re,subprocess,wave,random,math,struct
+import argparse,asyncio,hashlib,json,pathlib,re,subprocess,wave,random,math,struct
 import edge_tts,imageio_ffmpeg
 root=pathlib.Path(__file__).resolve().parents[2];out=root/'Assets/YanYana/Audio/Physical';source=root/'ArtDirection/YanYana/Audio/Physical'
 out.mkdir(parents=True,exist_ok=True);source.mkdir(parents=True,exist_ok=True)
 lines=set()
-for path in (root/'Assets/YanYana/Editor').glob('*.cs'):
+parser=argparse.ArgumentParser();parser.add_argument('--source',action='append');args=parser.parse_args()
+paths=[root/path for path in args.source] if args.source else (root/'Assets/YanYana/Editor').glob('*.cs')
+for path in paths:
  if path.stem in ('YanYanaFlowAuthor','YanYanaWorldAuthor','YanYanaInteractionAuthor','YanYanaConsequencesAuthor'):continue
  for line in re.findall(r'"([^"\r\n]+)"',path.read_text(encoding='utf-8-sig')):
-  if re.match(r'^(Ada|Efe|Derya|Emre|Yusuf|İdil|Bora|Komşu|Radyo): ',line) and len(line)<220:lines.add(line)
-manifest=[];limit=asyncio.Semaphore(3)
+  if re.match(r'^(Ada|Efe|Derya|Emre|Yusuf|İdil|Bora|Komşu|Radyo|Eren|Ece|Zeynep|Deniz|Gül|Mina|Görevli): ',line) and len(line)<220:lines.add(line)
+manifest=json.loads((source/'manifest.json').read_text(encoding='utf-8')) if args.source and (source/'manifest.json').exists() else []
+manifest=[entry for entry in manifest if entry['line'] not in lines];limit=asyncio.Semaphore(3)
 async def one(line):
- key='physical_'+hashlib.sha256(line.encode()).hexdigest()[:12];speaker,spoken=line.split(':',1);voice='tr-TR-AhmetNeural' if speaker in ('Emre','Yusuf','Bora') else 'tr-TR-EmelNeural'
+ key='physical_'+hashlib.sha256(line.encode()).hexdigest()[:12];speaker,spoken=line.split(':',1);voice='tr-TR-AhmetNeural' if speaker in ('Emre','Yusuf','Bora','Eren','Deniz','Görevli') else 'tr-TR-EmelNeural'
  target=out/(key+'.wav');mp3=source/(key+'.mp3')
  async with limit:
   if not target.exists():
@@ -24,9 +27,10 @@ async def one(line):
   manifest.append(dict(key=key,line=line,voice=voice,synthetic=True,ready=target.exists()))
 async def run():
  await asyncio.gather(*(one(line) for line in sorted(lines)))
- (source/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+ (source/'manifest.json').write_text(json.dumps(sorted(manifest,key=lambda entry:entry['key']),ensure_ascii=False,indent=2),encoding='utf-8')
  print('PHYSICAL VOICES',sum(x['ready'] for x in manifest),'/',len(manifest),flush=True)
 asyncio.run(run())
+if args.source:raise SystemExit(0)
 random.seed(909)
 with wave.open(str(out/'radio_static.wav'),'wb') as wav:
  wav.setnchannels(1);wav.setsampwidth(2);wav.setframerate(24000)

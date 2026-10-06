@@ -1,0 +1,274 @@
+Playing=False Compiling=False
+POINT Anchor_Emre (-2.100, 0.000, -0.450) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Derya (1.650, 0.000, 2.550) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_BagWork (2.580, 0.680, -2.250) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Comfort (0.700, 1.010, 0.750) rotation=(270.0, 0.0, 0.0)
+POINT Emre (-2.100, 0.000, -0.450) rotation=(0.0, 180.0, 0.0)
+POINT Anchor_HoldEfe (-0.221, 0.410, 0.403) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_CoverEfe (0.010, 0.000, 0.690) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Camera (-5.500, 6.000, -8.000) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_FlashlightWork (-0.650, 0.820, 2.400) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_CoverAda (0.530, 0.000, 0.690) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Food (-2.550, 0.840, 2.590) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Whistle (1.760, 0.700, -2.250) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Start (-0.500, 0.000, -1.650) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_FamilyMap (3.480, 1.500, 1.850) rotation=(270.0, 0.0, 0.0)
+POINT HomeRoom (0.000, 0.000, 0.000) rotation=(0.0, 0.0, 0.0)
+POINT Anchor_RadioWork (-1.870, 0.820, 2.400) rotation=(270.0, 0.0, 0.0)
+POINT Efe (0.400, 0.000, -0.400) rotation=(0.0, 180.0, 0.0)
+POINT Anchor_Card (1.800, 0.670, -2.550) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_ExitBox (-2.700, 0.040, -2.720) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Wardrobe (-3.180, 0.000, 3.060) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Shelf (3.190, 0.000, 3.050) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Aid (3.200, 1.180, 3.050) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Efe (0.400, 0.000, -0.400) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_HoldAda (0.930, 0.450, 0.387) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Water (-2.450, 0.840, 2.300) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Exit (-3.100, 0.000, -3.350) rotation=(270.0, 0.0, 0.0)
+POINT Derya (1.650, 0.000, 2.550) rotation=(0.0, 180.0, 0.0)
+POINT Ada (-0.500, 0.000, -1.650) rotation=(0.0, 180.0, 0.0)
+POINT Anchor_CameraLook (0.000, 0.850, 0.000) rotation=(270.0, 0.0, 0.0)
+POINT Anchor_Blanket (1.770, 0.690, -0.100) rotation=(270.0, 0.0, 0.0)
+POINT Ada (60.000, 851.000, 0.000) rotation=(0.0, 0.0, 0.0)
+CAM Yakından incele · relief (4.000, 1.800, -23.100) rotation=(23.0, 341.0, 0.0) fov=50 active=False
+CAM Yakından incele · broadcast (4.300, 2.207, -22.566) rotation=(55.0, 0.0, 0.0) fov=46 active=False
+CAM Yakından incele · bag (2.580, 2.699, -0.860) rotation=(55.0, 180.0, 0.0) fov=57 active=False
+CAM Yakından incele · reunionRoute4 (1.000, 5.346, -14.882) rotation=(32.0, 180.0, 0.0) fov=52 active=False
+CAM Yakından incele · sibling (0.700, 1.400, -4.200) rotation=(13.2, 0.0, 0.0) fov=48 active=False
+CAM Yakından incele · reunionRoute1 (5.500, 5.346, -13.232) rotation=(32.0, 180.0, 0.0) fov=52 active=False
+CAM Yakından incele · reunion3 (-5.900, 1.620, -21.800) rotation=(22.3, 171.1, 0.0) fov=55 active=False
+CAM Yakından incele · introCarry (-1.750, 2.700, -5.850) rotation=(26.1, 16.6, 0.0) fov=54 active=False
+CAM Yakından incele · reunion4 (-1.100, 1.820, -24.300) rotation=(27.1, 150.3, 0.0) fov=55 active=False
+CAM Yakından incele · reunion1 (8.550, 1.620, -20.800) rotation=(22.3, 188.9, 0.0) fov=55 active=False
+CAM Yakından incele · reunionRoute3 (0.500, 6.280, -12.637) rotation=(32.0, 180.0, 0.0) fov=52 active=False
+CAM Yakından incele · fire1 (-8.000, 1.970, -12.050) rotation=(13.7, 151.8, 0.0) fov=54 active=False
+CAM Yakından incele · aftershock (-3.414, 1.077, -7.543) rotation=(17.3, 14.5, 0.0) fov=50 active=False
+CAM Yakından incele · aid (3.000, 8.105, -9.663) rotation=(32.0, 180.0, 0.0) fov=52 active=False
+CAM Yakından incele · bridge (0.530, 2.506, -0.490) rotation=(55.0, 0.0, 0.0) fov=46 active=False
+CAM Yakından incele · radio (-2.478, 1.768, 2.400) rotation=(55.0, 90.0, 0.0) fov=46 active=False
+CAM Deprem · oda içinden başlangıç (0.700, 3.100, -3.650) rotation=(45.0, 0.0, 0.0) fov=70 active=False
+CAM Yakından incele · hose (-3.300, 0.778, -16.391) rotation=(55.0, 0.0, 0.0) fov=46 active=False
+CAM Yakından incele · reunionRoute2 (0.000, 6.280, -12.287) rotation=(32.0, 180.0, 0.0) fov=52 active=False
+CAM Yakından incele · reunionApproach1 (8.000, 4.224, -17.259) rotation=(32.0, 180.0, 0.0) fov=52 active=False
+CAM Yakından incele · map (2.920, 3.005, 0.266) rotation=(50.0, 0.0, 0.0) fov=46 active=False
+CAM Yakından incele · supplyFood (-1.870, 2.800, 0.880) rotation=(52.1, 0.0, 0.0) fov=52 active=False
+CAM Yakından incele · reunion2 (-6.450, 1.620, -21.800) rotation=(22.3, 188.9, 0.0) fov=55 active=False
+CAM Yakından incele · fire2 (-5.600, 1.970, -13.050) rotation=(13.7, 151.8, 0.0) fov=54 active=False
+CAM Yakından incele · reunionApproach4 (-2.793, 4.224, -20.816) rotation=(32.0, 156.8, 0.0) fov=52 active=False
+CAM Deprem · eller ve masa ayağı (0.450, 0.830, -2.500) rotation=(6.5, 359.1, 0.0) fov=50 active=False
+CAM Yakından incele · fire3 (-6.900, 1.970, -15.050) rotation=(13.7, 151.8, 0.0) fov=54 active=False
+CAM Yakından incele · cover (-0.120, 1.150, -2.010) rotation=(13.2, 13.5, 0.0) fov=52 active=False
+CAM Ada ile odada gezin (-1.200, 5.000, -4.950) rotation=(51.2, 12.0, 0.0) fov=48 active=True
+CAM Yakından incele · flashlight (-1.272, 1.748, 2.430) rotation=(55.0, 90.0, 0.0) fov=46 active=False
+CAM AD · mahalle açılış kadrajı (-79.880, 2.500, -7.600) rotation=(10.0, 359.1, 0.0) fov=40 active=True
+CAM Yakından incele · reunionApproach3 (1.600, 4.878, -19.868) rotation=(32.0, 226.2, 0.0) fov=52 active=False
+CAM Yakından incele · reunionApproach2 (0.450, 4.878, -19.518) rotation=(32.0, 226.2, 0.0) fov=52 active=False
+CAM Yakından incele · intro (-1.150, 1.950, -0.450) rotation=(23.0, 207.0, 0.0) fov=48 active=False
+CAM Yakından incele · family (6.000, 2.967, -25.156) rotation=(55.0, 0.0, 0.0) fov=46 active=False
+CAM Yakından incele · introDrop (3.050, 2.300, -4.700) rotation=(37.4, 321.3, 0.0) fov=48 active=False
+CAM Yakından incele · bagfit (2.580, 2.273, -1.350) rotation=(55.0, 180.0, 0.0) fov=46 active=False
+CAM Yakından incele · familyEfe (7.950, 1.010, -23.070) rotation=(24.5, 254.5, 0.0) fov=52 active=False
+CAM Yakından incele · supplyWater (-1.870, 2.800, 0.880) rotation=(52.1, 0.0, 0.0) fov=52 active=False
+GRAPH Yardım alıcısının frekans düğmesi : Kontrol edilmemiş radyonun yerine resmî alıcıyı ayarla
+GRAPH Final yol işareti 4 : Ailenin bulunduğu yere doğru ilk adımı oyna
+GRAPH Gazdan uzak açık bekleme noktası : Gaz kokusundan uzaklaşıp yetişkine haber ver
+GRAPH Ada : Doğal eller · etkin nesne kavraması
+GRAPH İncelenen Water 1 : Ambalajın durumuyla malzeme seç; sonuç daha sonra görünür
+GRAPH Yerleşim · Food : Çantada alan, yön ve çakışma · Food
+GRAPH Alev odağı 2 1 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH Yerleşim · FamilyCard : Çantada alan, yön ve çakışma · FamilyCard
+GRAPH İncelenen Food 0 : Ambalajın durumuyla malzeme seç; sonuç daha sonra görünür
+GRAPH Odada bulunacak · ComfortFox : Eşyayı odada bul ve yanına giderek al
+GRAPH Visual : Başını koruyan el ve gerçek tutunma teması
+GRAPH 01 Akış — fiziksel macera : Aktif hortumun dokunma yüzeyi 2
+GRAPH 01 Akış — fiziksel macera : Aile belgesinin yakın kadrajında önü açık tut
+GRAPH Aileye kavuşma hedefi 4 : Buluşmayı yürüyerek ve aile işaretiyle tamamla
+GRAPH Efe’ye uzanan el : Kardeşine kendi elinle karşılık ver
+GRAPH Aileye kavuşma hedefi 2 : Buluşmayı yürüyerek ve aile işaretiyle tamamla
+GRAPH 01 Akış — fiziksel macera : Yolu gösteren eldeki ışık · yürüyüş ve elde temas
+GRAPH Çıkış önündeki hafif oyuncak kutusu : Hafif engeli geçiş yolundan taşı
+GRAPH 01 Akış — fiziksel macera : Efe’nin yanında getirdiği küçük tilki · yürüyüş ve elde temas
+GRAPH İncelenen Water 0 : Ambalajın durumuyla malzeme seç; sonuç daha sonra görünür
+GRAPH Final yol işareti 1 : Ailenin bulunduğu yere doğru ilk adımı oyna
+GRAPH COLLIDER_Sahanlik : Serbest ve kesintisiz yürüme
+GRAPH Odada bulunacak · Whistle : Eşyayı odada bul ve yanına giderek al
+GRAPH Alev odağı 3 2 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH Köprü parçası 1 : Nehir üzerindeki köprüyü birleştir
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 2 / 2
+GRAPH Sönünce kalan buhar · Alev odağı 3 0 : Son su darbesinden sonra kısa buhar
+GRAPH Duvarın açığındaki güvenli adım : Yıkık duvarın dibinden geçme · açık rotaya yürü
+GRAPH Taşınan ihtiyaç işareti 0 : İhtiyacı dinleyip doğru yardım masasına yönlendir
+GRAPH Açılış · mahallede bir öğleden sonra : Açılış kadrajını ekran genişliğine uyarla
+GRAPH SAĞLIK EKİBİ : Yardım bölümünde masa başlığını okunur tut
+GRAPH 01 Akış — fiziksel macera : Bizim mahalle · hafif kutuyu iki farklı yoldan taşı
+GRAPH Pilli fener : Yaklaşınca flashlight nesnesini incele
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 1 / 1
+GRAPH COLLIDER_Avlu : Serbest ve kesintisiz yürüme
+GRAPH 01 Akış — fiziksel macera : Etkin yangın grubu ve kalan odak sayısı
+GRAPH Güvenli ekran alanı : Arayüz katmanlarının görünürlüğü
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 3 / 0
+GRAPH Yerleşim · ComfortFox : Çantada alan, yön ve çakışma · ComfortFox
+GRAPH 01 Akış — fiziksel macera : Çocuklar güvenli tarafta; görevli açmadan yangın alanına girilmez
+GRAPH WalkingCane : Yusuf’un bastonu · yere basış ve elde taşıma
+GRAPH Park sakini · Deniz : Mahalle komşusunu dinle
+GRAPH 01 Akış — fiziksel macera : Hazırladığın çantayla gerçekten yürü · 0
+GRAPH Frekans düğmesi : Döndürerek frekansı bul; yayın gerçekten değişir
+GRAPH Gerçek açma anahtarı : Elektrik devresinin anahtarı
+GRAPH Efe’nin taşınabilir oyun kutusu : Kutuyu kavra, sürükleyerek çevir ve masaya hizala
+GRAPH Hortumu yönlendir 3 : Dokunmayı yakala; sürükleyerek suyun yönünü değiştir
+GRAPH 01 Akış — fiziksel macera : Artçıda iki çocuğun korunmasını birlikte göster
+GRAPH Yusuf’un önündeki hafif boş kutu : Hafif kutuyu yolun dışına taşı; Yusuf kendi yürür
+GRAPH 01 Akış — fiziksel macera : Yangın kadrajı değişirken alevleri kesintisiz göster
+GRAPH SU VE DİNLENME : Yardım bölümünde masa başlığını okunur tut
+GRAPH Ambalajı çevir · Food : Ambalajların arkasını çevirerek incele
+GRAPH COLLIDER_Basamak2 : Serbest ve kesintisiz yürüme
+GRAPH 01 Akış — fiziksel macera : Ekip desteği yalnız kontrol sende olduğunda kullanılabilir
+GRAPH Kamera geçişinde dokunmayı beklet : Geçiş boyunca bekleyen dokunma nesneye gitmesin
+GRAPH COLLIDER_Baglanti : Serbest ve kesintisiz yürüme
+GRAPH Hortumu yönlendir 1 : Dokunmayı yakala; sürükleyerek suyun yönünü değiştir
+GRAPH İncelenen Food 1 : Ambalajın durumuyla malzeme seç; sonuç daha sonra görünür
+GRAPH 01 Akış — fiziksel macera : Hazırlığın görünür sonucu · çanta sırtta, ışık elde
+GRAPH Visual : Başını koruyan el ve gerçek tutunma teması
+GRAPH Yerleşim · FirstAid : Çantada alan, yön ve çakışma · FirstAid
+GRAPH Park sakini · Ece · ailesini bekleyen çocuk : Yakından etkileşim · ListenParkChild
+GRAPH 01 Akış — fiziksel macera : Masayı incelerken yalnız çadır çatısını saydamlaştır
+GRAPH Sönünce kalan buhar · Alev odağı 2 0 : Son su darbesinden sonra kısa buhar
+GRAPH Sönünce kalan buhar · Alev odağı 2 2 : Son su darbesinden sonra kısa buhar
+GRAPH Taşınan ihtiyaç işareti 2 : İhtiyacı dinleyip doğru yardım masasına yönlendir
+GRAPH 01 Akış — fiziksel macera : Efe öğrendiği işareti yürüyerek ve kendi eliyle eşleştirir
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 2 / 0
+GRAPH Aileye kavuşma hedefi 1 : Buluşmayı yürüyerek ve aile işaretiyle tamamla
+GRAPH 01 Akış — fiziksel macera : Deprem etkileşimi · bedenler, kadraj ve sarsıntı
+GRAPH COLLIDER_Basamak0 : Serbest ve kesintisiz yürüme
+GRAPH Bilgi parçası 0 1 : Görsel kayıttaki iki bilgiyi ayrı ayrı karşılaştır
+GRAPH Çantayı kapatma tokası : Yerleştirdiğin içerikle çantayı kapat veya aç
+GRAPH 01 Akış — fiziksel macera : Aktif hortumun dokunma yüzeyi 1
+GRAPH Efe : Kardeşini kontrol et, cevap vermesine alan aç
+GRAPH Efe’ye verilecek su : Hazırlık varsa çantadan, yoksa yardım masasından su al
+GRAPH Alev odağı 3 1 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH Bora : Yakından etkileşim · EnterAid
+GRAPH Yerleşim · Radio : Çantada alan, yön ve çakışma · Radio
+GRAPH Sönünce kalan buhar · Alev odağı 1 0 : Son su darbesinden sonra kısa buhar
+GRAPH Efe’ye verilecek yiyecek : Uygun paketi çantadan veya yardım masasından getir
+GRAPH Park sakini · Gül : Mahalle komşusunu dinle
+GRAPH Yusuf : Yakından etkileşim · TalkNeighbor
+GRAPH 01 Akış — fiziksel macera : Ambalaj yakın planında aynı tezgahtaki radyo kadrajdan çıkar
+GRAPH Sönünce kalan buhar · Alev odağı 1 1 : Son su darbesinden sonra kısa buhar
+GRAPH Yerleşim · Blanket : Çantada alan, yön ve çakışma · Blanket
+GRAPH 01 Akış — fiziksel macera : Alev hareketi oyunla birlikte durur
+GRAPH WindowFrame : Pencereye gitme girişiminde yerel yeniden deneme
+GRAPH 01 Akış — fiziksel macera : Kesintisiz macera · gerçek nesne durumları
+GRAPH Hazırlanabilir dolap : Yetişkine haber ver; sabitleme sırasında keşfe devam et
+GRAPH Ayarlanabilir askı · Left : Askıyı ne gevşek ne fazla sıkı bırak
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 1 / 0
+GRAPH Bilgi parçası 1 1 : Görsel kayıttaki iki bilgiyi ayrı ayrı karşılaştır
+GRAPH 01 Akış — fiziksel macera : İsteğe bağlı düşük genlikli kamera sarsıntısı
+GRAPH Odada bulunacak · FamilyCard : Eşyayı odada bul ve yanına giderek al
+GRAPH Idil : Yakından etkileşim · EnterFirefighter
+GRAPH Ayarlanabilir askı · Right : Askıyı ne gevşek ne fazla sıkı bırak
+GRAPH Aile çantası : Yaklaşınca bag nesnesini incele
+GRAPH Alev odağı 2 0 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH 01 Akış — fiziksel macera : Hazırladığın çantayla gerçekten yürü · 1
+GRAPH Hazırlanabilir raf : Yetişkine haber ver; sabitleme sırasında keşfe devam et
+GRAPH Alev odağı 1 0 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH Kaydırılabilir pil kapağı : Pil kapağını aç veya yerine kaydır
+GRAPH Başını koruyan el : Deprem etkileşimi · eli sürükle ve temasını koru · Right
+GRAPH COLLIDER_Baglanti_ParkGezinti : Serbest ve kesintisiz yürüme
+GRAPH Alev odağı 1 2 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH AA pil 2 : Pilin yeri, kutupları ve metal teması
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 1 / 2
+GRAPH Kapalı kapı : Sarsıntı bittikten sonra çıkışı birlikte değerlendir
+GRAPH 01 Akış — fiziksel macera : Aktif hortumun dokunma yüzeyi 3
+GRAPH Köprü parçası 2 : Nehir üzerindeki köprüyü birleştir
+GRAPH Ada : Artçıda yürümeyi bırakıp yeniden korun
+GRAPH Oyun kutusunun masadaki yeri : Yaklaşıp oyun kutusunu masaya yerleştir
+GRAPH Park sakini · Eren · sokak güvenlik görevlisi : Eren · güvenli mesafeden gaz bildirimi
+GRAPH 01 Akış — fiziksel macera : İncelemede büyük yaklaşma kutusu küçük nesneleri örtmesin
+GRAPH Ambalajı çevir · Water : Ambalajların arkasını çevirerek incele
+GRAPH Haritadaki aile taşı : Yüksek binalardan uzak bir buluşma yolu çiz
+GRAPH Odada bulunacak · Blanket : Eşyayı odada bul ve yanına giderek al
+GRAPH Ada : Aile işaretini kendin yap
+GRAPH 01 Akış — fiziksel macera : Frekans yanlışsa cızırtı duy; netleşince konuşma duy
+GRAPH Yerleşim · Flashlight : Çantada alan, yön ve çakışma · Flashlight
+GRAPH Alev odağı 1 1 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH COLLIDER_Floor : Oyun kutusunu taşırken zemine dokunarak yürü
+GRAPH Köprü parçası 0 : Nehir üzerindeki köprüyü birleştir
+GRAPH WindowFrame.001 : Pencereye gitme girişiminde yerel yeniden deneme
+GRAPH Idil : Doğal eller · etkin nesne kavraması
+GRAPH Hortumu yönlendir 2 : Dokunmayı yakala; sürükleyerek suyun yönünü değiştir
+GRAPH Bilgi parçası 0 0 : Görsel kayıttaki iki bilgiyi ayrı ayrı karşılaştır
+GRAPH 01 Akış — fiziksel macera : İlerleme yoksa nesneyi göster; ardından kısa jest göster
+GRAPH Alev odağı 3 0 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH Yerleşim · Water : Çantada alan, yön ve çakışma · Water
+GRAPH Masaya tutunan el : Deprem etkileşimi · eli sürükle ve temasını koru · Left
+GRAPH Ada : Deprem etkileşimi · parmağın kadar çök
+GRAPH Final yol işareti 2 : Ailenin bulunduğu yere doğru ilk adımı oyna
+GRAPH Aileye kavuşma hedefi 3 : Buluşmayı yürüyerek ve aile işaretiyle tamamla
+GRAPH 01 Akış — fiziksel macera : Deprem etkileşimi · korunma akışı
+GRAPH Sönünce kalan buhar · Alev odağı 1 2 : Son su darbesinden sonra kısa buhar
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 2 / 1
+GRAPH Yerleşim · Whistle : Çantada alan, yön ve çakışma · Whistle
+GRAPH Gaz kokusu gelen servis köşesi : Tesisata dokunma · önce uzaklaş
+GRAPH COLLIDER_AnaYol : Serbest ve kesintisiz yürüme
+GRAPH AA pil 1 : Pilin yeri, kutupları ve metal teması
+GRAPH Çantanın sürüklenen fermuarı : Fermuarı iz boyunca çek; köşeleri atlayamazsın
+GRAPH Alev odağı 2 2 : Su ile azalan alev; duman ve ıslak iz kalır
+GRAPH Odada bulunacak · Food : Eşyayı odada bul ve yanına giderek al
+GRAPH 01 Akış — fiziksel macera : Hazırlığı istediğin noktada tamamla
+GRAPH COLLIDER_YanYol : Serbest ve kesintisiz yürüme
+GRAPH Ailecek denenen resimli mahalle planı : Yaklaşınca map nesnesini incele
+GRAPH Visual : Başını koruyan el ve gerçek tutunma teması
+GRAPH COLLIDER_MahalleZemini : Serbest ve kesintisiz yürüme
+GRAPH COLLIDER_Basamak1 : Serbest ve kesintisiz yürüme
+GRAPH Odada bulunacak · Water : Eşyayı odada bul ve yanına giderek al
+GRAPH Efe : Doğal eller · etkin nesne kavraması
+GRAPH COLLIDER_Floor : Serbest ve kesintisiz yürüme
+GRAPH Su vanası : Bağlantı tamamlandıktan sonra suyu aç
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 3 / 2
+GRAPH 01 Akış — fiziksel macera : Çentik ve sistem çubuklarından uzak arayüz
+GRAPH Taşınan ihtiyaç işareti 1 : İhtiyacı dinleyip doğru yardım masasına yönlendir
+GRAPH 01 Akış — fiziksel macera : Yakından çanta incelerken bedenler nesneyi kapatmaz
+GRAPH 01 Akış — fiziksel macera : Malzeme yakın planında ön plandaki görevli kadrajı kapatmaz
+GRAPH Sönünce kalan buhar · Alev odağı 3 2 : Son su darbesinden sonra kısa buhar
+GRAPH Ayarlanabilir radyo : Yaklaşınca radio nesnesini incele
+GRAPH Erişilebilir acil aydınlatma : Çalışmayan fener için erişilebilir güvenli alternatif
+GRAPH Resmî duyuruyu dinle : Yalnız net duyulan resmî bilgiyi kullan
+GRAPH Odada bulunacak · FirstAid : Eşyayı odada bul ve yanına giderek al
+GRAPH Sönünce kalan buhar · Alev odağı 2 1 : Son su darbesinden sonra kısa buhar
+GRAPH AİLE BULUŞMA : Yardım bölümünde masa başlığını okunur tut
+GRAPH Hortumun kavrama ucu : Hortum bağlantısını yerleştir
+GRAPH Visual : Başını koruyan el ve gerçek tutunma teması
+GRAPH Final yol işareti 3 : Ailenin bulunduğu yere doğru ilk adımı oyna
+GRAPH Sönünce kalan buhar · Alev odağı 3 1 : Son su darbesinden sonra kısa buhar
+GRAPH 01 Akış — fiziksel macera : Efekt, karakter ve sekansları birlikte duraklat
+GRAPH Aile bilgisine başvur : Çantadaki aile kartını veya görevlinin kaydını aç
+GRAPH 01 Akış — fiziksel macera : Tam sönen odağı kaydet · 3 / 1
+GRAPH Cephedeki tehlikeyi güvenli taraftan gör : Yakından etkileşim · ReportFacade
+GRAPH Park sakini · Mina : Mahalle komşusunu dinle
+GRAPH Park sakini · Zeynep · aile danışma görevlisi : Zeynep · çocuğun ailesini güvenli noktaya çağır
+GRAPH Bilgi parçası 1 0 : Görsel kayıttaki iki bilgiyi ayrı ayrı karşılaştır
+AUDIO Radyonun gerçek frekans sesi clip=radio_static volume=0.18 enabled=True
+AUDIO Kısa Türkçe konuşmalar clip=none volume=0.8 enabled=True
+AUDIO Hortumun sesi clip=water volume=0.35 enabled=True
+AUDIO Mahalle ortamı clip=neighborhood volume=0.24 enabled=True
+AUDIO Deprem oda ayrıntıları clip=QuakeRoomRumble volume=0.7 enabled=True
+AUDIO Dokunma ve etkileşim sesleri clip=none volume=0.45 enabled=True
+AUDIO Hortumun sesi clip=water volume=0.35 enabled=True
+AUDIO Hortumun sesi clip=water volume=0.35 enabled=True
+MESH Architecture_NorthWall Center: (0.00, 1.50, 3.90), Extents: (3.95, 1.50, 0.08)
+MESH Architecture_WestWall Center: (3.90, 1.50, 0.00), Extents: (0.08, 1.50, 3.95)
+MESH SafeTable_Leg Center: (0.94, 0.45, 0.38), Extents: (0.06, 0.45, 0.06)
+MESH SafeTable_Leg.001 Center: (0.94, 0.45, 1.12), Extents: (0.06, 0.45, 0.06)
+MESH SafeTable_Leg.002 Center: (-0.24, 0.45, 0.38), Extents: (0.06, 0.45, 0.06)
+MESH SafeTable_Leg.003 Center: (-0.24, 0.45, 1.12), Extents: (0.06, 0.45, 0.06)
+MESH SafeTable_Top Center: (0.35, 0.94, 0.75), Extents: (0.74, 0.06, 0.49)
+MESH Window_CrossHorizontal Center: (2.20, 1.97, 3.61), Extents: (0.76, 0.03, 0.02)
+MESH Window_CrossHorizontal.001 Center: (-1.40, 1.97, 3.61), Extents: (0.76, 0.03, 0.02)
+MESH Window_CrossVertical Center: (2.20, 2.00, 3.62), Extents: (0.03, 0.78, 0.02)
+MESH Window_CrossVertical.001 Center: (-1.40, 2.00, 3.62), Extents: (0.03, 0.78, 0.02)
+MESH Window_Sill Center: (2.20, 1.16, 3.68), Extents: (0.83, 0.06, 0.17)
+MESH Window_Sill.001 Center: (-1.40, 1.16, 3.68), Extents: (0.83, 0.06, 0.17)
+MESH Window_Sky Center: (2.20, 2.00, 3.68), Extents: (0.75, 0.75, 0.03)
+MESH Window_Sky.001 Center: (-1.40, 2.00, 3.68), Extents: (0.75, 0.75, 0.03)
+MESH WindowFrame Center: (2.20, 2.00, 3.76), Extents: (0.83, 0.84, 0.06)
+MESH WindowFrame.001 Center: (-1.40, 2.00, 3.76), Extents: (0.83, 0.84, 0.06)

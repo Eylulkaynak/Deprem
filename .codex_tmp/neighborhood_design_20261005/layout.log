@@ -1,0 +1,7 @@
+C:\Users\Gokturk\Documents\GitHub\Deprem\.codex_tmp\neighborhood_design_20261005\render_layout.py:7: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.diffuse_color=c;m.use_nodes=True;m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=c;return m
+00:01.515  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:05.031  render           | Saved: 'C:\Users\Gokturk\Documents\GitHub\Deprem\.codex_tmp\neighborhood_design_20261005\layout-scale-review.png'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

@@ -1,0 +1,92 @@
+{
+  "Skin": {
+    "color": "#E7A16C",
+    "roughness": 0.55,
+    "metallic": 0
+  },
+  "Lips": {
+    "color": "#B77556",
+    "roughness": 0.55,
+    "metallic": 0
+  },
+  "EarInset": {
+    "color": "#CA845B",
+    "roughness": 0.55,
+    "metallic": 0
+  },
+  "Hair": {
+    "color": "#201D1C",
+    "roughness": 0.43,
+    "metallic": 0
+  },
+  "HairRidges": {
+    "color": "#322B26",
+    "roughness": 0.5,
+    "metallic": 0
+  },
+  "Beard": {
+    "color": "#3A2B23",
+    "roughness": 0.7,
+    "metallic": 0
+  },
+  "Shirt": {
+    "color": "#A3C6EE",
+    "roughness": 0.76,
+    "metallic": 0
+  },
+  "ShirtSeams": {
+    "color": "#789DC4",
+    "roughness": 0.74,
+    "metallic": 0
+  },
+  "Collar": {
+    "color": "#B3D2F1",
+    "roughness": 0.72,
+    "metallic": 0
+  },
+  "Trousers": {
+    "color": "#243247",
+    "roughness": 0.8,
+    "metallic": 0
+  },
+  "Leather": {
+    "color": "#202124",
+    "roughness": 0.42,
+    "metallic": 0
+  },
+  "Soles": {
+    "color": "#111619",
+    "roughness": 0.62,
+    "metallic": 0
+  },
+  "Buckle": {
+    "color": "#8F989D",
+    "roughness": 0.3,
+    "metallic": 0.7
+  },
+  "EyeWhite": {
+    "color": "#FFF3E3",
+    "roughness": 0.24,
+    "metallic": 0
+  },
+  "Iris": {
+    "color": "#764522",
+    "roughness": 0.3,
+    "metallic": 0
+  },
+  "Pupil": {
+    "color": "#10151C",
+    "roughness": 0.2,
+    "metallic": 0
+  },
+  "Catchlight": {
+    "color": "#FFFFFF",
+    "roughness": 0.15,
+    "metallic": 0
+  },
+  "Smile": {
+    "color": "#60392D",
+    "roughness": 0.65,
+    "metallic": 0
+  }
+}

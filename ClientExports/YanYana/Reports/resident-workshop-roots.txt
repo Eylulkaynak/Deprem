@@ -1,0 +1,17 @@
+Park sakini · Deniz | root components: Transform, CapsuleCollider, Variables, ScriptMachine, ScriptMachine
+  Deniz | skins=2 | meshes=0
+Park sakini · Gül | root components: Transform, CapsuleCollider, Variables, ScriptMachine, ScriptMachine
+  Gul | skins=2 | meshes=0
+Park sakini · Kemal dede | root components: Transform, Variables, ScriptMachine
+  Kemal | skins=2 | meshes=0
+Park sakini · Arda | root components: Transform, Variables, ScriptMachine
+  BackpackClosed | skins=0 | meshes=11
+  Arda | skins=2 | meshes=0
+Park sakini · Ece · ailesini bekleyen çocuk | root components: Transform, CapsuleCollider, Variables, ScriptMachine, ScriptMachine
+  Ece | skins=2 | meshes=0
+Park sakini · Aylin · Ece’nin annesi | root components: Transform, NavMeshAgent, StoryPlayerMovement, Variables, ScriptMachine
+  Aylin | skins=1 | meshes=0
+Park sakini · Zeynep · aile danışma görevlisi | root components: Transform, CapsuleCollider, Variables, ScriptMachine, ScriptMachine
+  Zeynep | skins=1 | meshes=0
+Park sakini · Eren · sokak güvenlik görevlisi | root components: Transform, CapsuleCollider, Variables, ScriptMachine, ScriptMachine
+  Eren | skins=2 | meshes=0

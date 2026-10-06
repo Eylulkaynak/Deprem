@@ -1,0 +1,39 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'ClientExports\YanYana\Recordings\physical-playthrough-20261005-182521.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp41isom
+  Duration: 00:00:33.07, start: 0.000000, bitrate: 2499 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(progressive), 540x960 [SAR 1:1 DAR 9:16], 2302 kb/s, 29.94 fps, 30 tbr, 30k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+[Parsed_volumedetect_0 @ 0000000002ce5ac0] n_samples: 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp41isom
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 pcm_s16le
+[Parsed_volumedetect_0 @ 000000000299f3c0] n_samples: 3170304
+[Parsed_volumedetect_0 @ 000000000299f3c0] mean_volume: -22.7 dB
+[Parsed_volumedetect_0 @ 000000000299f3c0] max_volume: -6.3 dB
+[Parsed_volumedetect_0 @ 000000000299f3c0] histogram_6db: 56
+[Parsed_volumedetect_0 @ 000000000299f3c0] histogram_7db: 246
+[Parsed_volumedetect_0 @ 000000000299f3c0] histogram_8db: 994
+[Parsed_volumedetect_0 @ 000000000299f3c0] histogram_9db: 2672
+[out#0/null @ 00000000028fad00] video:0KiB audio:6192KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:33.02 bitrate=N/A speed=1.69e+03x    
