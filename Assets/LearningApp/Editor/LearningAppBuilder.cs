@@ -120,6 +120,43 @@ namespace Deprem.Learning.Editor
             });
             if (report.summary.result != BuildResult.Succeeded) throw new BuildFailedException(report.summary.result.ToString());
         }
+
+        [MenuItem("Tools/Deprem App/Build Windows EXE")]
+        public static void BuildWindows()
+        {
+            if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64))
+                throw new BuildFailedException("Windows Build Support is required.");
+            ConfigureBuildScenes(); Validate();
+            string output = Environment.GetEnvironmentVariable("DEPREM_WINDOWS_BUILD_PATH");
+            if (string.IsNullOrWhiteSpace(output)) output = "Builds/DepremApp/Windows/DepremApp.exe";
+            output = Path.GetFullPath(output);
+            Directory.CreateDirectory(Path.GetDirectoryName(output));
+            var scenes = EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path).ToArray();
+            foreach (string scene in scenes)
+                if (!File.Exists(scene)) throw new FileNotFoundException("Missing build scene", scene);
+            int width = PlayerSettings.defaultScreenWidth, height = PlayerSettings.defaultScreenHeight;
+            FullScreenMode fullscreen = PlayerSettings.fullScreenMode;
+            bool resizable = PlayerSettings.resizableWindow;
+            try
+            {
+                PlayerSettings.defaultScreenWidth = 540; PlayerSettings.defaultScreenHeight = 960;
+                PlayerSettings.fullScreenMode = FullScreenMode.Windowed; PlayerSettings.resizableWindow = true;
+                var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
+                    scenes = scenes, locationPathName = output,
+                    target = BuildTarget.StandaloneWindows64, options = BuildOptions.Development
+                });
+                if (report.summary.result != BuildResult.Succeeded)
+                    throw new BuildFailedException($"Windows build {report.summary.result}: {report.summary.totalErrors} errors.");
+                File.WriteAllText(Path.Combine(Path.GetDirectoryName(output), "build-info.txt"),
+                    $"Result: {report.summary.result}\nTarget: Windows x64\nScenes: {scenes.Length}\nBytes: {report.summary.totalSize}\n\n" + string.Join("\n", scenes) + "\n");
+                Debug.Log($"[Deprem App] WINDOWS BUILD SUCCEEDED: {output}; {scenes.Length} scenes.");
+            }
+            finally
+            {
+                PlayerSettings.defaultScreenWidth = width; PlayerSettings.defaultScreenHeight = height;
+                PlayerSettings.fullScreenMode = fullscreen; PlayerSettings.resizableWindow = resizable;
+            }
+        }
     }
 
     public sealed class LearningArtImporter : AssetPostprocessor
