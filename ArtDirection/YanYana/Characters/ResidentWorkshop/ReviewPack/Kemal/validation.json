@@ -4,7 +4,7 @@
   "armatures": 1,
   "bones": 21,
   "renderers": 2,
-  "vertices": 58404,
+  "vertices": 46113,
   "facial_keys_verified": [
     "Mouth_A",
     "Mouth_E",
@@ -15,6 +15,17 @@
     "Smile"
   ],
   "unweighted_vertices": 0,
-  "material_count": 9,
-  "unity_play_tested": false
+  "material_count": 7,
+  "unity_play_tested": false,
+  "unity_editor_import_verified": true,
+  "unity_editor_pose_images_generated": [
+    "Neutral",
+    "Speaking",
+    "Blink",
+    "Fear",
+    "Surprise",
+    "Smile"
+  ],
+  "fbx_sha256": "B4BBF77283DEFDAB20D363034A8D0CA3F9BBF17B5DE00B8BD20F0C379A83ABC4",
+  "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
 }

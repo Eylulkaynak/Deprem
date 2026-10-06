@@ -10,7 +10,9 @@ def bake_material(obj,name,out):
     for mat in obj.data.materials:
         node=mat.node_tree.nodes.new('ShaderNodeTexImage');node.image=image;mat.node_tree.nodes.active=node
     bpy.ops.object.bake(type='DIFFUSE',pass_filter={'COLOR'},use_clear=True,margin=8)
-    image.filepath_raw=str(out/(name+'_Albedo.png'));image.file_format='PNG';image.save();image.pack()
+    target=out/(name+'_Albedo.png');pending=out/(name+'_Albedo.writing.png')
+    image.filepath_raw=str(pending);image.file_format='PNG';image.save()
+    pending.replace(target);image.filepath_raw=str(target);image.pack()
     mat=bpy.data.materials.new(name+' portable approved palette');mat.use_nodes=True;node=mat.node_tree.nodes.new('ShaderNodeTexImage');node.image=image
     shader=mat.node_tree.nodes['Principled BSDF'];shader.inputs['Roughness'].default_value=.72;mat.node_tree.links.new(node.outputs['Color'],shader.inputs['Base Color']);obj.data.materials.clear();obj.data.materials.append(mat)
     for poly in obj.data.polygons:poly.material_index=0

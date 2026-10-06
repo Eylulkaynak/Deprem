@@ -55,6 +55,13 @@ def image_colors(obj):
     im=next(n.image for n in obj.data.materials[0].node_tree.nodes if n.type=='TEX_IMAGE');px=np.array(im.pixels[:],dtype=np.float32).reshape(im.size[1],im.size[0],4)
     return im,px
 
+def save_character_image(image,path):
+    # Write to a fresh path before replacing an albedo that Blender may have
+    # opened earlier in this process; retain the stable external asset name.
+    path=pathlib.Path(path);pending=path.with_name(path.stem+'.writing.png')
+    image.filepath_raw=str(pending);image.file_format='PNG';image.save()
+    pending.replace(path);image.filepath_raw=str(path);image.pack()
+
 def body_uv_mask(obj,h,w,top=None):
     names={g.index:g.name for g in obj.vertex_groups};weights=[sum(q.weight for q in v.groups if names[q.group] not in ('Head','LeftHand','RightHand')) for v in obj.data.vertices]
     headweights=[sum(q.weight for q in v.groups if names[q.group]=='Head') for v in obj.data.vertices]
@@ -108,57 +115,11 @@ def garment_palette(obj,s,out):
     if np.any(hair):paint(hair,s['hair'],.215)
     im=original.copy()
     if im.packed_file:im.unpack(method='REMOVE')
-    im.name=s['name']+' character albedo';im.pixels=px.flatten();im.filepath_raw=str(out/(s['name']+'_Albedo.png'));im.file_format='PNG';im.save();im.pack()
+    im.name=s['name']+' character albedo';im.pixels=px.flatten();save_character_image(im,out/(s['name']+'_Albedo.png'))
     mat=obj.data.materials[0].copy();obj.data.materials[0]=mat
     for n in mat.node_tree.nodes:
         if n.type=='TEX_IMAGE' and n.image==original:n.image=im
 
-def add_knots(source_copy,rig,material,s):
-    # Extract only the closed high knot above the crown. Original character is
-    # not cut; the extracted pieces are closed at their lower boundary.
-    src=source_copy;src.shape_key_clear();src.modifiers.clear();src.parent=None
-    bm=bmesh.new();bm.from_mesh(src.data);bmesh.ops.delete(bm,geom=[v for v in bm.verts if v.co.z<1.318],context='VERTS')
-    boundary=[e for e in bm.edges if e.is_boundary]
-    if boundary:bmesh.ops.holes_fill(bm,edges=boundary,sides=0)
-    bm.to_mesh(src.data);bm.free();src.data.update()
-    points=[v.co for v in src.data.vertices];center=sum(points,Vector())/len(points)
-    for side in ():
-        ob=bpy.data.objects.new(s['name']+' sculpted hair knot',src.data.copy());bpy.context.scene.collection.objects.link(ob);ob.data.materials.clear();ob.data.materials.append(material)
-        for v in ob.data.vertices:
-            scale=.67 if s['name']=='Ece' else .96;p=(v.co-center)*scale
-            p.z*=1.35
-            v.co=Vector((.012+side*.098,.070,1.085) if s['name']=='Ece' else (.045,.025,1.609))+p
-        for p in ob.data.polygons:p.use_smooth=True
-        ob.vertex_groups.clear();group=ob.vertex_groups.new(name='Head');group.add(list(range(len(ob.data.vertices))),1,'REPLACE');mod=ob.modifiers.new('Hair skin','ARMATURE');mod.object=rig;ob.parent=rig
-    bpy.data.objects.remove(src,do_unlink=True)
-    if s['name']=='Ece':
-        material=mat('Ece sculpted coiled hair','#3E332B');N=64;R=32
-        for side in (-1,1):
-            vs=[];fs=[]
-            for j in range(R+1):
-                phi=math.pi*j/R
-                for i in range(N):
-                    theta=math.tau*i/N;r=1+.060*math.sin(theta*6+phi*3)*math.sin(phi)**.7
-                    vs.append(Vector((.012+side*.095+.054*math.sin(phi)*math.cos(theta)*r,.074+.050*math.sin(phi)*math.sin(theta)*r,1.086+.059*math.cos(phi))))
-            for j in range(R):
-                for i in range(N):fs.append(((j+1)*N+i,(j+1)*N+(i+1)%N,j*N+(i+1)%N,j*N+i))
-            ob=mesh_object('Ece closed coiled bun',vs,fs,material);ob.parent=rig;grp=ob.vertex_groups.new(name='Head');grp.add(list(range(len(vs))),1,'REPLACE');mod=ob.modifiers.new('Hair skin','ARMATURE');mod.object=rig
-
-def aylin_tail(rig):
-    material=mat('Aylin warm chestnut hair','#68412E')
-    # Individually swept, tapered locks give the ponytail a shaped silhouette.
-    for k in range(9):
-        vs=[];fs=[];N=16;R=32;angle=math.tau*k/9
-        for j in range(R):
-            t=j/(R-1);cx=.080+.070*math.sin(t*2.4);cy=.120-.100*t;cz=1.335-.335*t
-            center=Vector((cx+.030*math.cos(angle),cy+.027*math.sin(angle),cz))
-            radius=(.021+.004*math.cos(k*1.7))*(.92-.62*t)*min(1,.25+t*6)
-            for i in range(N):
-                a=math.tau*i/N;r=radius*(1+.05*math.cos(a*3+t*4));vs.append(center+Vector((math.cos(a)*r,math.sin(a)*r,0)))
-        for j in range(R-1):
-            for i in range(N):fs.append((j*N+i,j*N+(i+1)%N,(j+1)*N+(i+1)%N,(j+1)*N+i))
-        fs.append(tuple(range(N-1,-1,-1)));fs.append(tuple((R-1)*N+i for i in range(N)))
-        ob=mesh_object('Aylin ponytail sculpted lock',vs,fs,material);ob.parent=rig;group=ob.vertex_groups.new(name='Head');group.add(list(range(len(vs))),1,'REPLACE');mod=ob.modifiers.new('Ponytail skin','ARMATURE');mod.object=rig
 
 def ece_child_outfit(head,old_rig,s):
     # Retain the newly sculpted head while rebuilding a child's body proportions.
@@ -190,7 +151,7 @@ def ece_child_outfit(head,old_rig,s):
     green=(gg>r*1.16)&(gg>b*.95);target=np.array([.47,.31,.62]);shade=np.clip((lum[green]/.43)**.85,.25,1.65);pixels[green,:3]=np.clip(shade[:,None]*target,0,1)
     image=image.copy()
     if image.packed_file:image.unpack(method='REMOVE')
-    image.pixels=pixels.flatten();image.filepath_raw=str(OUT/'Ece/Ece_HoodieAlbedo.png');image.file_format='PNG';image.save();image.pack()
+    image.pixels=pixels.flatten();save_character_image(image,OUT/'Ece/Ece_HoodieAlbedo.png')
     material=child.data.materials[0].copy();child.data.materials[0]=material
     for n in material.node_tree.nodes:
         if n.type=='TEX_IMAGE':n.image=image
@@ -265,11 +226,11 @@ def main():
         # Use the detailed approved hair mesh; remove the experimental sphere
         # buns and tubular ponytail instead of layering them over the reference.
         if s['name']=='Ece':rig=ece_child_outfit(obj,rig,s)
-        if s['name']=='Ece':
+        if s['name'] in ('Ece','Zeynep'):
             from author_resident_identity import make_hair
-            make_hair(obj,rig,'Ece',s['source'],mat)
+            make_hair(obj,rig,s['name'],s['source'],mat)
         obj['authorship']='Blender resculpt; approved '+s['source']+' anatomical topology, individually sculpted proportions and wardrobe.'
-        if s['name']!='Ece':obj['hair_reference']=s['source']+'.blend; no crown compression or color-mask deformation'
+        if s['name'] not in ('Ece','Zeynep'):obj['hair_reference']=s['source']+'.blend; no crown compression or color-mask deformation'
         rig['status']='Editable source; export and Unity validation are recorded in ReviewPack.'
         bpy.ops.wm.save_as_mainfile(filepath=str(out/(s['name']+'.blend')))
         if not args.skip_render:render(obj,s,out)

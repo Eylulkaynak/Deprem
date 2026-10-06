@@ -801,8 +801,15 @@
       "albedo": null
     }
   ],
+  "hair_reference": "Emre.blend; connected detailed hair resculpt, preserved texture and continuous facial surface.",
+  "identity_design": "asymmetric low side-swept locks and a slender face",
   "runtime_scripts_added": false,
-  "integrated_into_unity": false,
+  "integrated_into_unity": true,
   "production_ready": false,
-  "status": "offline_export_validation"
+  "status": "implemented_pending_visual_review",
+  "integrated_into_scene": true,
+  "user_visual_approval": false,
+  "unity_editor_import_verified": true,
+  "unity_play_tested": false,
+  "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
 }

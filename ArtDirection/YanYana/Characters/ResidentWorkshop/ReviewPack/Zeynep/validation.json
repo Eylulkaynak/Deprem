@@ -16,5 +16,16 @@
   ],
   "unweighted_vertices": 0,
   "material_count": 5,
-  "unity_play_tested": false
+  "unity_play_tested": false,
+  "unity_editor_import_verified": true,
+  "unity_editor_pose_images_generated": [
+    "Neutral",
+    "Speaking",
+    "Blink",
+    "Fear",
+    "Surprise",
+    "Smile"
+  ],
+  "fbx_sha256": "38FCE766B436CAEC6EF3D63E99D4FC66C14CF87AE79E456A1DAF668E951CA2A9",
+  "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
 }

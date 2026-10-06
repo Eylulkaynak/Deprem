@@ -1,7 +1,14 @@
 {
-  "status": "needs_visual_review",
+  "status": "implemented_pending_visual_review",
   "production_ready": false,
-  "integrated_into_scene": false,
+  "integrated_into_scene": true,
   "source_anatomy": "Ada",
-  "expression_rig_complete": false
+  "expression_rig_complete": true,
+  "user_visual_approval": false,
+  "unity_editor_import_verified": true,
+  "unity_play_tested": false,
+  "runtime_scripts_added": false,
+  "hair_reference": "Ada.blend; connected detailed hair resculpt, preserved texture and continuous facial surface.",
+  "last_validation_utc": "2026-10-06T01:19:15.045616+00:00",
+  "fbx_sha256": "D7EBEE2EC09F7E3E5A5044F8AD5494B8E2012EFA727B706FDBC5EB4F7E2661F0"
 }

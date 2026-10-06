@@ -1,7 +1,14 @@
 {
-  "status": "needs_visual_review",
+  "status": "implemented_pending_visual_review",
   "production_ready": false,
-  "integrated_into_scene": false,
+  "integrated_into_scene": true,
   "source_anatomy": "Ada",
-  "expression_rig_complete": false
+  "expression_rig_complete": true,
+  "user_visual_approval": false,
+  "unity_editor_import_verified": true,
+  "unity_play_tested": false,
+  "runtime_scripts_added": false,
+  "hair_reference": null,
+  "last_validation_utc": "2026-10-06T01:19:15.045616+00:00",
+  "fbx_sha256": "C9CB9DD02B6EFB59A525A95050E5216C705D2646AA470FE7FFAC35CEB06505DC"
 }

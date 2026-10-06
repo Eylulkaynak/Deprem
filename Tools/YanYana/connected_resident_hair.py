@@ -29,50 +29,82 @@ def sculpt_connected_hair(body,rig,name,source,eye):
         total=np.bincount(np.r_[a,b],weights=np.r_[v[b],v[a]],minlength=len(v))
         v=.25*v+.75*total/np.maximum(1,count);v[locked]=0
     weights=v[weld]
-    # Preserve the actual source bun as a detailed second pigtail. Its lower
-    # boundary is buried in the retained crown, never on exposed facial skin.
+    # Long low locks inherited shoulder/chest weights in the reference scan.
+    # Bind the classified hair to the head even below the jaw; a height-only
+    # neck blend otherwise stretches the tips when the idle pose turns its head.
+    head=body.vertex_groups.get('Head')
+    for vertex,weight in zip(data.vertices,weights):
+        amount=smooth((float(weight)-.03)/.27)
+        if amount<=0:continue
+        previous=[(g.group,g.weight) for g in vertex.groups]
+        old_head=sum(w for index,w in previous if index==head.index)
+        for index,w in previous:
+            if index==head.index:continue
+            remaining=w*(1-amount)
+            if remaining<.00001:body.vertex_groups[index].remove([vertex.index])
+            else:body.vertex_groups[index].add([vertex.index],remaining,'REPLACE')
+        head.add([vertex.index],amount+old_head*(1-amount),'REPLACE')
+    # Form two complete knots from the reference's curled top surface. A
+    # mirrored underside closes the knot without a flat exposed cut face.
     source_uv={l.vertex_index:data.uv_layers.active.data[l.index].uv.copy() for l in data.loops}
-    bun_center=Vector((eye.x,.060,eye.z+.267))
-    def bun_fit(p,sign):
-        q=bun_center+(p-bun_center)*.63
-        return q+Vector((sign*.105,-.004,-.037))
     if name=='Ece':
         faces=[]
         for face in data.polygons:
             p=sum((original[i] for i in face.vertices),Vector())/len(face.vertices)
             if p.z>ez+.226*scale and p.y>-.074*scale:faces.append(tuple(face.vertices))
         used=sorted({i for f in faces for i in f});mapping={old:i for i,old in enumerate(used)}
-        mesh=bpy.data.meshes.new('Ece right sculpted curls')
-        mesh.from_pydata([bun_fit(current[i],1) for i in used],[],[tuple(mapping[i] for i in reversed(f)) for f in faces]);mesh.update()
-        ob=bpy.data.objects.new('Ece right curled pigtail',mesh);bpy.context.collection.objects.link(ob);ob.parent=rig
+        mesh=bpy.data.meshes.new('Ece reference curls')
+        mesh.from_pydata([current[i] for i in used],[],[tuple(mapping[i] for i in reversed(f)) for f in faces]);mesh.update()
         uv=mesh.uv_layers.new(name='OriginalUV')
         for loop in mesh.loops:uv.data[loop.index].uv=source_uv[used[loop.vertex_index]]
-        material=data.materials[0].copy();material.name='Ece second pigtail painted curls';mesh.materials.append(material)
-        # Close the extracted knot inside the crown. Weld only the duplicated
-        # knot, preserving the original head indices used by facial animation.
-        cap=bpy.data.materials.new('Ece hidden pigtail underside');cap.use_nodes=True
-        cap.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(.080,.047,.034,1)
-        cap.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=.72
-        mesh.materials.append(cap)
+        material=data.materials[0].copy();material.name='Ece pigtail painted curls';mesh.materials.append(material)
         bm=bmesh.new();bm.from_mesh(mesh);bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.00002)
-        boundaries=[edge for edge in bm.edges if edge.is_boundary]
-        if boundaries:
-            for face in bmesh.ops.holes_fill(bm,edges=boundaries,sides=0)['faces']:face.material_index=1
+        boundary={v for edge in bm.edges if edge.is_boundary for v in edge.verts}
+        plane=sum(v.co.z for v in boundary)/len(boundary)
+        for vertex in boundary:vertex.co.z=plane
+        duplicate=bmesh.ops.duplicate(bm,geom=list(bm.verts)+list(bm.edges)+list(bm.faces))['geom']
+        mirror_verts=[v for v in duplicate if isinstance(v,bmesh.types.BMVert)]
+        mirror_faces=[f for f in duplicate if isinstance(f,bmesh.types.BMFace)]
+        for vertex in mirror_verts:vertex.co.z=2*plane-vertex.co.z
+        bmesh.ops.reverse_faces(bm,faces=mirror_faces)
+        bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.00002)
+        # Round the welded equator while retaining the sculpted curl peaks.
+        seam=[v for v in bm.verts if abs(v.co.z-plane)<.007]
+        for _ in range(3):bmesh.ops.smooth_vert(bm,verts=seam,factor=.45,use_axis_x=True,use_axis_y=True,use_axis_z=True)
+        bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
         bm.to_mesh(mesh);bm.free();mesh.update()
         for face in mesh.polygons:face.use_smooth=True
-        group=ob.vertex_groups.new(name='Head');group.add(list(range(len(mesh.vertices))),1,'REPLACE');mod=ob.modifiers.new('Head skin','ARMATURE');mod.object=rig
+        center=Vector(((max(v.co.x for v in mesh.vertices)+min(v.co.x for v in mesh.vertices))*.5,(max(v.co.y for v in mesh.vertices)+min(v.co.y for v in mesh.vertices))*.5,plane))
+        for sign in (-1,1):
+            knot=mesh.copy();ob=bpy.data.objects.new('Ece '+('left' if sign<0 else 'right')+' curled pigtail',knot);bpy.context.collection.objects.link(ob);ob.parent=rig
+            for vertex in knot.vertices:
+                offset=(vertex.co-center)*.50
+                # Present the sculpted curl cap toward the viewer; its joined
+                # equator runs around the side/back, below the crown overlap.
+                offset=Vector((offset.x,-offset.z,offset.y*1.10))
+                vertex.co=Vector((eye.x+sign*.104,.035,eye.z+.228))+offset
+            group=ob.vertex_groups.new(name='Head');group.add(list(range(len(knot.vertices))),1,'REPLACE');mod=ob.modifiers.new('Head skin','ARMATURE');mod.object=rig
+        bpy.data.meshes.remove(mesh)
     def deform(p,index):
         q=p.copy();s=original[index];dz=(s.z-ez)/scale;amount=float(weights[index])
         if name=='Ece':
             bun=smooth((dz-.160)/.065)*smooth((s.y+.120*scale)/(.080*scale))
-            target=bun_fit(p,-1)
+            target=Vector((eye.x+(p.x-eye.x)*.65,.045+(p.y-.045)*.70,eye.z+.19+(p.z-eye.z-.19)*.12))
             return p.lerp(target,bun)
         if name=='Gul':
             low=smooth((.095-dz)/.22)
-            q.x=eye.x+(p.x-eye.x)*(1-.25*low)
-            if p.z<eye.z+.050:q.z=eye.z+.050+(p.z-eye.z-.050)*.52
-            q.y=-.060+(p.y+.060)*(1-.16*low)
-        else:
+            q.x=eye.x+(p.x-eye.x)*(1-.34*low)
+            if p.z<eye.z+.050:q.z=eye.z+.050+(p.z-eye.z-.050)*.36
+            q.y=-.060+(p.y+.060)*(1-.22*low)
+        elif name=='Deniz':
+            # A diagonal, flatter side sweep retains the reference's detailed
+            # locks but has a different outline from Eren's tall upright quiff.
+            top=smooth((dz-.080)/.20)
+            q.x=eye.x+(p.x-eye.x)*(1-.07*top)+.037*top
+            q.y+=.012*top
+            q.z=eye.z+.085+(p.z-eye.z-.085)*(1-.10*top)
+            q.z-=.010*top*smooth((p.x-eye.x+.13)/.26)
+        elif name=='Kemal':
             top=smooth((dz-.090)/.18)
             q.z=eye.z+.080+(p.z-eye.z-.080)*(1-.33*top)
             q.y+=.042*top;q.x-=.020*top
@@ -92,5 +124,5 @@ def sculpt_connected_hair(body,rig,name,source,eye):
     body['hair_top']=max(vertex.co.z for vertex in data.vertices)
     if name=='Ece':body['hair_top']=max(body['hair_top'],max(v.co.z for v in ob.data.vertices))
     body['hair_reference']=source+'.blend; connected detailed hair resculpt, preserved texture and continuous facial surface.'
-    body['identity_design']={'Ece':'two small curled pigtails and round child proportions','Gul':'short inward silver waves and a mature oval face','Kemal':'low swept-back silver hair, long face and broad nose'}[name]
+    body['identity_design']={'Ece':'two small curled pigtails and round child proportions','Gul':'short inward silver waves and a mature oval face','Kemal':'low swept-back silver hair, long face and broad nose','Deniz':'asymmetric low side-swept locks and a slender face','Zeynep':'long chestnut waves with head-bound tips'}[name]
     print('CONNECTED_HAIR',name,'top',body['hair_top'],'hair_vertices',int(sum(weights>.15)),flush=True)

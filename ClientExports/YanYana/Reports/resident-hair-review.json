@@ -1,0 +1,274 @@
+{
+  "validated_utc": "2026-10-06T01:19:15.045616+00:00",
+  "modeling_tool": "Blender 5.2",
+  "resident_count_preserved": 22,
+  "scene_visuals_updated": [
+    "Eren",
+    "Ece",
+    "Aylin",
+    "Zeynep",
+    "Deniz",
+    "Gul",
+    "Kemal",
+    "Arda"
+  ],
+  "approved_neighborhood_preserved": true,
+  "active_runner_scene_file_unchanged": true,
+  "runner_scene_sha256": "C9D1E454E4169A2A6CCC8A1AE9D469AF8E3F2E780860CFC0013133323C944EFF",
+  "runtime_scripts_added": false,
+  "unity_editor_console_errors": 0,
+  "current_revision_play_mode_tested": false,
+  "user_visual_approval": false,
+  "review_image": "C:\\Users\\Gokturk\\Documents\\GitHub\\Deprem\\ClientExports\\YanYana\\ArtReview\\ResidentWorkshop\\Blender_Faces.png",
+  "note": "Checks cover exported skins/morphs, imported assets, Editor pose renders and saved scene structure. No Play Mode run was performed for this revision.",
+  "characters": [
+    {
+      "name": "Eren",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 2,
+      "vertices": 64664,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 11,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "CB6A0A1C8D5CB6C877B56082B2DFE3EA6905A1103393387C60B9C2F3C6A99B91",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Ece",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 2,
+      "vertices": 64976,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 9,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "D7EBEE2EC09F7E3E5A5044F8AD5494B8E2012EFA727B706FDBC5EB4F7E2661F0",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Aylin",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 1,
+      "vertices": 45198,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 5,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "C9CB9DD02B6EFB59A525A95050E5216C705D2646AA470FE7FFAC35CEB06505DC",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Zeynep",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 1,
+      "vertices": 44352,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 5,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "38FCE766B436CAEC6EF3D63E99D4FC66C14CF87AE79E456A1DAF668E951CA2A9",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Deniz",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 2,
+      "vertices": 43053,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 7,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "32E84DF17014E68BE854B9C117C7662F55B7FBCDA4B6A1EB2872328AC4EFC3DD",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Gul",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 2,
+      "vertices": 45308,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 7,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "195B88C47E8EFEA59CA0208291DD6E605B5CD45C29FECA58D5E2F68BA6C0A07A",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Kemal",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 2,
+      "vertices": 46113,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 7,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "B4BBF77283DEFDAB20D363034A8D0CA3F9BBF17B5DE00B8BD20F0C379A83ABC4",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    },
+    {
+      "name": "Arda",
+      "fbx_read_back_passed": true,
+      "armatures": 1,
+      "bones": 21,
+      "renderers": 2,
+      "vertices": 44462,
+      "facial_keys_verified": [
+        "Mouth_A",
+        "Mouth_E",
+        "Mouth_O",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "unweighted_vertices": 0,
+      "material_count": 6,
+      "unity_play_tested": false,
+      "unity_editor_import_verified": true,
+      "unity_editor_pose_images_generated": [
+        "Neutral",
+        "Speaking",
+        "Blink",
+        "Fear",
+        "Surprise",
+        "Smile"
+      ],
+      "fbx_sha256": "31AB743854C99AEE605EB76822599A168613BDADE497B9D0DC6A70A0CB78D871",
+      "last_validation_utc": "2026-10-06T01:19:15.045616+00:00"
+    }
+  ]
+}

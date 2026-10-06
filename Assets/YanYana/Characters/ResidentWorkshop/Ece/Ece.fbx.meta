@@ -42,6 +42,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Ece pigtail painted curls
+    second: {fileID: 2100000, guid: 1d7ba4e1d6837524abba7eb49cd19c16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Ece sculpted coiled hair
     second: {fileID: 2100000, guid: 9cc380609f1ac4a4bb89ff94225e5ced, type: 2}
   - first:

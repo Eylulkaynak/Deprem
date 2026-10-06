@@ -48,40 +48,6 @@ def warp(p,name):
         # Keep the reference child's layered hair and its natural direction.
     return q
 
-def legacy_palette(obj,s,out,kind=None):
-    original,px=image_colors(obj);R,G,B=[px[:,:,i].copy() for i in range(3)];lum=px[:,:,:3].mean(2)
-    # Clothing colors are isolated by both existing painted hue and skeletal UV
-    # regions. Head skin, eye whites and lips remain untouched.
-    H,W=px.shape[:2];shirt=np.zeros((H,W),bool);pants=shirt.copy();hairmask=shirt.copy();source=kind or s['source'];uv=obj.data.uv_layers.active;names={g.index:g.name for g in obj.vertex_groups}
-    def raster(target,t):
-        a,b,c=t[:3];x0=max(0,int(np.floor(t[:,0].min())));x1=min(W-1,int(np.ceil(t[:,0].max())));y0=max(0,int(np.floor(t[:,1].min())));y1=min(H-1,int(np.ceil(t[:,1].max())));den=(b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1])
-        if abs(den)<1e-8:return
-        xx,yy=np.meshgrid(np.arange(x0,x1+1),np.arange(y0,y1+1));u=((b[1]-c[1])*(xx-c[0])+(c[0]-b[0])*(yy-c[1]))/den;v=((c[1]-a[1])*(xx-c[0])+(a[0]-c[0])*(yy-c[1]))/den;target[y0:y1+1,x0:x1+1]|=(u>=-.025)&(v>=-.025)&(u+v<=1.025)
-    for face in obj.data.polygons:
-        points=[obj.data.vertices[i].co for i in face.vertices];p=sum(points,Vector())/len(points);bone={}
-        for vi in face.vertices:
-            for q in obj.data.vertices[vi].groups:bone[names[q.group]]=bone.get(names[q.group],0)+q.weight/len(points)
-        hand=bone.get('LeftHand',0)+bone.get('RightHand',0);head=bone.get('Head',0);leg=sum(v for k,v in bone.items() if 'Leg' in k or k=='Hips');foot=sum(v for k,v in bone.items() if 'Foot' in k or 'Toes' in k)
-        t=np.array([(uv.data[i].uv.x*(W-1),uv.data[i].uv.y*(H-1)) for i in face.loop_indices]);xy=t.mean(0);r,gg,b=px[int(xy[1]),int(xy[0]),:3]
-        if hand<.06 and head<.28 and foot<.18:
-            if source=='Emre':is_shirt=b>r*1.04 and b>gg*.96;is_pants=leg>.5 and gg>b*1.03
-            elif source=='Yusuf':is_shirt=gg>r*1.02 and gg>b*.97;is_pants=leg>.5 and gg>b*1.01
-            else:is_shirt=r>gg*1.09 and b>gg*.88;is_pants=leg>.5 and b<gg*1.04
-            if is_shirt:raster(shirt,t)
-            if is_pants:raster(pants,t)
-        if s['name']=='Gul' and p.z>1.11 and (p.z>1.410 or abs(p.x-.018)>.141 or p.y>.018) and r>gg*1.08 and (r+gg+b)<1.75:raster(hairmask,t)
-    def paint(region,hex,reference=None):
-        if not np.any(region):return
-        target=np.array([int(hex[i:i+2],16)/255 for i in (1,3,5)]);ref=reference or float(np.median(lum[region]));shade=np.clip((lum[region]/ref)**.80,.28,1.65);px[region,:3]=np.clip(shade[:,None]*target,0,1)
-    paint(shirt,s['shirt']);paint(pants,s['pants'])
-    if s['name']=='Gul':
-        paint(hairmask,'#A3A29A',.215)
-    im=original.copy()
-    if im.packed_file:im.unpack(method='REMOVE')
-    im.pixels=px.flatten();im.filepath_raw=str(out/(s['name']+('_Body' if kind else '')+'_Albedo.png'));im.file_format='PNG';im.save();im.pack()
-    m=obj.data.materials[0].copy();obj.data.materials[0]=m
-    for node in m.node_tree.nodes:
-        if node.type=='TEX_IMAGE' and node.image==original:node.image=im
 
 def palette(obj,s,out,kind=None):
     from resident_materials import approved_palette
@@ -119,27 +85,6 @@ def skirt(rig):
     o=mesh_object('Gul softly pleated midi skirt',vs,fs,cloth);bind(o,rig)
     path=[vs[(R-2)*N+i] for i in range(N)]+[vs[(R-2)*N]];o=tube('Gul stitched skirt hem',path,.0014,hem,None);bind(o,rig)
 
-def beret(body,rig):
-    top=max(v.co.z for v in body.data.vertices);cz=top+.009
-    wool=mat('Kemal plum wool cloth','#625461');band=mat('Kemal beret band','#423F49');N=72;R=32;vs=[];fs=[]
-    for j in range(R+1):
-        p=math.pi*j/R
-        for i in range(N):
-            a=math.tau*i/N;r=1+.013*math.cos(a*10)*math.sin(p);vs.append(Vector((.001+.181*math.sin(p)*math.cos(a)*r,-.025+.174*math.sin(p)*math.sin(a)*r,cz+.066*math.cos(p)+.032*math.sin(p)*math.cos(a))))
-    for j in range(R):
-        for i in range(N):fs.append(((j+1)*N+i,(j+1)*N+(i+1)%N,j*N+(i+1)%N,j*N+i))
-    o=mesh_object('Kemal soft beret crown',vs,fs,wool);bind(o,rig,'Head')
-    o=tube('Kemal fitted hat band',[Vector((.001+.147*math.cos(a),-.025+.139*math.sin(a),cz-.038)) for a in np.linspace(0,math.tau,96)],.010,band,None);bind(o,rig,'Head')
-
-def bake_approved_material(obj):
-    sc=bpy.context.scene;sc.render.engine='CYCLES';sc.cycles.samples=1;bpy.ops.object.select_all(action='DESELECT');obj.select_set(True);bpy.context.view_layer.objects.active=obj
-    im=bpy.data.images.new('Kemal approved material bake',2048,2048,alpha=True)
-    for material in obj.data.materials:
-        node=material.node_tree.nodes.new('ShaderNodeTexImage');node.image=im;material.node_tree.nodes.active=node
-    bpy.ops.object.bake(type='DIFFUSE',pass_filter={'COLOR'},use_clear=True,margin=8)
-    im.filepath_raw=str(OUT/'Kemal/ApprovedMaterial.png');im.file_format='PNG';im.save();im.pack();m=bpy.data.materials.new('Kemal approved baked material');m.use_nodes=True;node=m.node_tree.nodes.new('ShaderNodeTexImage');node.image=im;m.node_tree.links.new(node.outputs['Color'],m.node_tree.nodes['Principled BSDF'].inputs['Base Color']);m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=.72
-    obj.data.materials.clear();obj.data.materials.append(m)
-    for face in obj.data.polygons:face.material_index=0
 
 def knit_vest(body,rig):
     tree=BVHTree.FromPolygons([v.co for v in body.data.vertices],[tuple(p.vertices) for p in body.data.polygons]);cloth=mat('Kemal burgundy knitted cloth','#826164');rib=mat('Kemal vest ribbing','#635058');N=64;R=46
@@ -227,7 +172,7 @@ def main():
         else:rig=child_body(body,rig,s,out)
         body['authorship']='Blender anatomical resculpt based on approved '+s['source']+' topology; modified face/body proportions and newly modeled wardrobe.'
         body['hair_reference']=s['source']+'.blend; original hair volume, silhouette and locks preserved'
-        if name in ('Gul','Kemal'):
+        if name in ('Gul','Kemal','Deniz'):
             from author_resident_identity import make_hair
             make_hair(body,rig,name,s['source'],mat)
         bpy.ops.wm.save_as_mainfile(filepath=str(out/(name+'.blend')))
