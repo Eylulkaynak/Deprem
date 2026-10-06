@@ -85,6 +85,7 @@ namespace YanYana.Editor
                 YanYanaVisualStability.Apply();
                 ApplyInteractiveQuake();
                 YanYanaNeighborhoodDesign.Apply();
+                YanYanaPreparationPolish.Apply();
                 EditorSceneManager.SaveScene(SceneManager.GetActiveScene(), ScenePath); AssetDatabase.SaveAssets();
                 var authoredMachines=UnityEngine.Object.FindObjectsByType<ScriptMachine>(FindObjectsInactive.Include,FindObjectsSortMode.None);
                 File.WriteAllText("ClientExports/YanYana/Reports/scene-inventory.json","{\n  \"scene\": \""+ScenePath+"\",\n  \"version\": \"physical-adventure\",\n  \"chapters\": 8,\n  \"endings\": 4,\n  \"scriptMachines\": "+authoredMachines.Length+",\n  \"graphUnits\": "+authoredMachines.Sum(x=>x.graph?.units.Count??0)+",\n  \"newAuthoredRuntimeCSharp\": 0\n}");

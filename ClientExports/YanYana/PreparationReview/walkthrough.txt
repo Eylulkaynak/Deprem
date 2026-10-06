@@ -1,0 +1,76 @@
+Preparation review; real approach, pointer handlers, packing and carrying.
+PASS Empty bag cannot enter zipper trial or become ready
+PASS Leaving an untested flashlight does not collect it
+PASS Screen raycast 540x960 reaches Kaydırılabilir pil kapağı (first=Kaydırılabilir pil kapağı)
+PASS Screen raycast 540x960 reaches AA pil 1 (first=AA pil 1)
+PASS Screen raycast 540x960 reaches AA pil 2 (first=AA pil 2)
+PASS Screen raycast 540x960 reaches Gerçek açma anahtarı (first=Gerçek açma anahtarı)
+PASS Reversed battery prevents flashlight power
+PASS Correct polarity, closed cover and switch produce light
+PASS Working flashlight transfers to the preparation cloth
+PASS Untuned radio cannot skip its mechanism
+PASS Screen raycast 540x960 reaches Frekans düğmesi (first=Frekans düğmesi)
+PASS Radio requires tuning into the clear band
+PASS Screen raycast 540x960 reaches İncelenen Water 1 (first=İncelenen Water 1)
+PASS Screen raycast 540x960 reaches İncelenen Water 0 (first=İncelenen Water 0)
+PASS Screen raycast 540x960 reaches Ambalajı çevir · Water (first=Ambalajı çevir · Water)
+PASS Water must be inspected before selection
+PASS Opened/expired Water rejected with retry available
+PASS Child sees the specific rejection reason for Water
+PASS Inspected sealed Water accepted
+PASS Screen raycast 540x960 reaches İncelenen Food 1 (first=İncelenen Food 1)
+PASS Screen raycast 540x960 reaches İncelenen Food 0 (first=İncelenen Food 0)
+PASS Screen raycast 540x960 reaches Ambalajı çevir · Food (first=Ambalajı çevir · Food)
+PASS Food must be inspected before selection
+PASS Opened/expired Food rejected with retry available
+PASS Child sees the specific rejection reason for Food
+PASS Inspected sealed Food accepted
+PASS Family route rejects the blocked building cell
+PASS Connected safe route reaches the family meeting point
+PASS Screen raycast 540x960 reaches Yerleşim · Water (first=Yerleşim · Water)
+PASS Screen raycast 540x960 reaches Yerleşim · Radio (first=Yerleşim · Radio)
+PASS Screen raycast 540x960 reaches Yerleşim · Flashlight (first=Yerleşim · Flashlight)
+PASS Screen raycast 540x960 reaches Yerleşim · FirstAid (first=Yerleşim · FirstAid)
+PASS Screen raycast 540x960 reaches Yerleşim · Blanket (first=Yerleşim · Blanket)
+PASS Screen raycast 540x960 reaches Yerleşim · Food (first=Yerleşim · Food)
+PASS Screen raycast 540x960 reaches Yerleşim · FamilyCard (first=Yerleşim · FamilyCard)
+PASS Screen raycast 540x960 reaches Yerleşim · Whistle (first=Yerleşim · Whistle)
+PASS Screen raycast 540x960 reaches Yerleşim · ComfortFox (first=Yerleşim · ComfortFox)
+PASS Screen raycast 540x960 reaches Çantayı kapatma tokası (first=Çantayı kapatma tokası)
+PASS Screen raycast 540x1170 reaches Yerleşim · Water (first=Yerleşim · Water)
+PASS Screen raycast 540x1170 reaches Yerleşim · Radio (first=Yerleşim · Radio)
+PASS Screen raycast 540x1170 reaches Yerleşim · Flashlight (first=Yerleşim · Flashlight)
+PASS Screen raycast 540x1170 reaches Yerleşim · FirstAid (first=Yerleşim · FirstAid)
+PASS Screen raycast 540x1170 reaches Yerleşim · Blanket (first=Yerleşim · Blanket)
+PASS Screen raycast 540x1170 reaches Yerleşim · Food (first=Yerleşim · Food)
+PASS Screen raycast 540x1170 reaches Yerleşim · FamilyCard (first=Yerleşim · FamilyCard)
+PASS Screen raycast 540x1170 reaches Yerleşim · Whistle (first=Yerleşim · Whistle)
+PASS Screen raycast 540x1170 reaches Yerleşim · ComfortFox (first=Yerleşim · ComfortFox)
+PASS Screen raycast 540x1170 reaches Çantayı kapatma tokası (first=Çantayı kapatma tokası)
+PASS Screen raycast 540x1200 reaches Yerleşim · Water (first=Yerleşim · Water)
+PASS Screen raycast 540x1200 reaches Yerleşim · Radio (first=Yerleşim · Radio)
+PASS Screen raycast 540x1200 reaches Yerleşim · Flashlight (first=Yerleşim · Flashlight)
+PASS Screen raycast 540x1200 reaches Yerleşim · FirstAid (first=Yerleşim · FirstAid)
+PASS Screen raycast 540x1200 reaches Yerleşim · Blanket (first=Yerleşim · Blanket)
+PASS Screen raycast 540x1200 reaches Yerleşim · Food (first=Yerleşim · Food)
+PASS Screen raycast 540x1200 reaches Yerleşim · FamilyCard (first=Yerleşim · FamilyCard)
+PASS Screen raycast 540x1200 reaches Yerleşim · Whistle (first=Yerleşim · Whistle)
+PASS Screen raycast 540x1200 reaches Yerleşim · ComfortFox (first=Yerleşim · ComfortFox)
+PASS Screen raycast 540x1200 reaches Çantayı kapatma tokası (first=Çantayı kapatma tokası)
+PASS Clicking an item neither packs it nor leaves input held
+PASS Overlapping placement rejected
+PASS Rotated radio fits beside the water bottle
+PASS Unpacking releases occupied space
+PASS Physical packing Radio
+PASS Physical packing FirstAid
+PASS Physical packing Blanket
+PASS Physical packing Water
+PASS Physical packing Flashlight
+PASS Physical packing Food
+PASS Physical packing ComfortFox
+PASS Physical packing FamilyCard
+PASS Missing essential item blocks closure and remains repairable
+PASS Reload preserves inspected and physically packed supplies
+PASS Zipper cannot skip its path
+PASS Zipper, both straps and actual walking required for readiness
+RESTORED original preparation save and audio.

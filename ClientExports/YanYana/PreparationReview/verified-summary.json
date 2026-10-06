@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "verifiedUtc": "2026-10-06T08:28:19.4115751Z",
+  "unity": "6000.0.58f2",
+  "platform": "Windows Editor",
+  "scene": "Assets/YanYana/Scenes/YanYana_Adventure.unity",
+  "authoredRuntimeCSharpAdded": 0,
+  "surfaceContactChecks": 41,
+  "screenRaycastChecks": 41,
+  "gameplayChecks": 33,
+  "portraitResolutions": [
+    "540x960",
+    "540x1170",
+    "540x1200"
+  ],
+  "regressions": [
+    "EmergencyBagRush_EndToEndCompletion",
+    "RoomSafety_EndToEndCompletion",
+    "Story01_Preparation_PlaysToCompletion"
+  ],
+  "regressionPassed": 3,
+  "regressionFailed": 0,
+  "saveRestoration": [
+    {
+      "file": "story-session.json",
+      "restored": true
+    },
+    {
+      "file": "minigame-profile.json",
+      "restored": true
+    }
+  ],
+  "interruptedReviewPreferenceKeysPreserved": 3045,
+  "educationalReference": "https://gumushane.afad.gov.tr/afet-ve-acil-durum-cantasinda-neler-bulunmali",
+  "limits": [
+    "Surface contacts cover authored YanYana preparation items, not every prop in every scene.",
+    "Editor EventSystem/raycast integration, not physical phone or child usability evidence.",
+    "Screenshots are review evidence, not a performance benchmark."
+  ]
+}

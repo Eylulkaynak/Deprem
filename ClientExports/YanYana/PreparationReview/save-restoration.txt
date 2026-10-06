@@ -1,0 +1,2 @@
+PASS Story and minigame save files match their pre-test backups byte for byte after Play mode teardown.
+PASS Interrupted YanYana review: 3045 of 3045 preference values preserved after OnApplicationQuit and domain reload.

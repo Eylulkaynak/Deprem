@@ -23,6 +23,15 @@ namespace YanYana.Editor
             Machine.nest.embed = Graph;
         }
 
+        // Editor migrations can extend a scene's embedded graph without rebuilding it.
+        public YanYanaGraphAuthor(ScriptMachine machine)
+        {
+            Machine = machine;
+            Owner = machine.gameObject;
+            Graph = machine.graph;
+            index = Graph.units.Count;
+        }
+
         public T Add<T>(T unit) where T : Unit
         {
             unit.position = new Vector2((index % 12) * 250, (index / 12) * 210);
