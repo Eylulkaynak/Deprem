@@ -1,0 +1,2124 @@
+{
+  "Story_Rebuild_MainMenu": [
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/StartNewStoryButton/Label",
+      "text": "YENİ HİKÂYE"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/SafetyRouteBadge/SafetyRouteBadgeCaption",
+      "text": "GÜVENLİ EV"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/PreparationRouteBadge/PreparationRouteBadgeNumber",
+      "text": "1"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/QuakeRouteBadge/QuakeRouteBadgeCaption",
+      "text": "DEPREM"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/EvacuationRouteBadge/EvacuationRouteBadgeCaption",
+      "text": "TAHLİYE"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/ContinueStoryButton/Label",
+      "text": "DEVAM ET"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/QuakeRouteBadge/QuakeRouteBadgeNumber",
+      "text": "3"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/EvacuationRouteBadge/EvacuationRouteBadgeNumber",
+      "text": "4"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/StoryBriefingPanel/StoryHook",
+      "text": "Evi hazırla, kardeşini koru,\ngüvenli alana birlikte ulaş."
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/PreparationRouteBadge/PreparationRouteBadgeCaption",
+      "text": "HAZIRLIK"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/StoryRouteEyebrow",
+      "text": "HİKÂYE ROTASI"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/OpenMinigamesButton/Label",
+      "text": "MİNİ OYUNLAR"
+    },
+    {
+      "path": "STORY_REBUILD_MAIN_MENU/StoryMainMenuCanvas/SafeArea/MainMenuCard/SafetyRouteBadge/SafetyRouteBadgeNumber",
+      "text": "2"
+    }
+  ],
+  "Story_01_RebuildPreview": [
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/FamilyContactCompleteMark/FamilyContactCompleteMark_SnapMotion/FamilyContactCompleteMark_Text",
+      "text": "MELEK TEYZE\nANKARA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterCompletionCard/CompletionSafety",
+      "text": "Çantayı sarsıntı sırasında değil, sarsıntı durduktan sonra çıkarken al."
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/PauseOverlay/PausePanel/RetryCheckpointButton/Label",
+      "text": "KONTROL NOKTASINA DÖN"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/DirectWorldInteractions/MelekContactCard_Drag/MelekContactCard_Drag_Artwork/MelekContactCard_Drag_Label",
+      "text": "MELEK TEYZE\nANKARA\n05XX 123 45 67"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ObjectiveStrip/ObjectiveTitle",
+      "text": "ÇANTAYI HAZIRLA"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/OpenHomeSafetyActButton/Label",
+      "text": "2\nEVİ GÜVENLİ YAP"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterCompletionCard/CompletionRibbon/CompletionEyebrow",
+      "text": "1. PERDE • HAZIRLIK"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/FamilyCanRoleCompleteMark/FamilyCanRoleCompleteMark_SnapMotion/FamilyCanRoleCompleteMark_Text",
+      "text": "CAN\nDÜDÜK SORUMLUSU"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/OpenEvacuationActButton/Label",
+      "text": "4\nTAHLİYE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterCompletionCard/NextActButton/Label",
+      "text": "SONRAKİ PERDE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/DirectWorldInteractions/FamilyMeetingPointCard_Drag/MeetingPointCardArtwork/MeetingPointCardLabel",
+      "text": "MAHALLE PARKI\nBİNALARDAN UZAK\nAÇIK ALAN"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/PlanSlotTitle_1",
+      "text": "TOPLANMA YERİ"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ObjectiveStrip/ActBadge/ActBadgeCaption",
+      "text": "PERDE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/OpenQuakeActButton/Label",
+      "text": "3\nDEPREM"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/ChapterSelectionHint",
+      "text": "Hazırlık seçimlerin korunur.\nİstediğin perdeyi yeniden oynayabilirsin."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/PauseOverlay/PausePanel/PauseHint",
+      "text": "Kaldığın yer kontrol noktasında güvende.\nHazır olduğunda maceraya dön."
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/PlanSlotTitle_3",
+      "text": "CAN'IN GÖREVİ"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/PlanSlotTitle_2",
+      "text": "ACİL İLETİŞİM"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ObjectiveStrip/ActBadge/ActBadgeValue",
+      "text": "1/4"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterCompletionCard/ReplayChapterButton/Label",
+      "text": "PERDEYİ YENİDEN OYNA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/PauseOverlay/PausePanel/PauseRibbon/PauseTitle",
+      "text": "OYUN DURAKLATILDI"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/PlanSubheaderText",
+      "text": "BİZİ GÜVENDE TUTAN 3 KARAR"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/OpenPreparationActButton/Label",
+      "text": "1\nHAZIRLIK"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/PlanHeaderText",
+      "text": "AİLE AFET PLANI"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/DirectWorldInteractions/CanWhistleRoleCard_Drag/CanWhistleRoleCard_Drag_Artwork/CanWhistleRoleCard_Drag_Label",
+      "text": "CAN\nDÜDÜĞÜ TAŞIR\n3 KEZ ÇALAR"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/ChapterSelectionRibbon/ChapterSelectionTitle",
+      "text": "BÖLÜM SEÇİMİ"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/PreparationEnvironment/PreparationSetDressing/FamilyPlanBoard/FamilyPlanCompleteMark/FamilyPlanCompleteMark_SnapMotion/FamilyPlanCompleteMark_Text",
+      "text": "MAHALLE PARKI\nTOPLANMA YERİ"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/PauseOverlay/PausePanel/ResumeButton/Label",
+      "text": "DEVAM ET"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/KKTC_ContextDock/ContextPanel/ContextText",
+      "text": "None"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterSelectionCard/CloseChapterSelectionButton/Label",
+      "text": "SONUÇLARA DÖN"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/DirectWorldInteractions/WorldItem_Water/WaterInspect_Hotspot/WaterSpin_Pivot/WaterExpiryLabel_Unchecked/WaterExpiryDateText",
+      "text": "SKT\n2027"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterCompletionCard/CompletionTitle",
+      "text": "AFET ÇANTASI HAZIR"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/SubtitlePanel/SubtitleText",
+      "text": "None"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ChapterCompletionCard/CompletionDetail",
+      "text": "Güvenli adımları tamamladın."
+    },
+    {
+      "path": "STORY_01_REBUILD_PREVIEW/Story01PreviewCanvas/SafeArea/ObjectiveStrip/ObjectiveDetail",
+      "text": "Eşyayı basılı tut; açık çantanın içine sürükleyip bırak."
+    }
+  ],
+  "Story_02_RebuildPreview": [
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ObjectiveStrip/ObjectiveTitle",
+      "text": "ÇIKIŞ ROTASINI DENE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/ChapterSelectionHint",
+      "text": "Hazırlık seçimlerin korunur.\nİstediğin perdeyi yeniden oynayabilirsin."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/PauseOverlay/PausePanel/RetryCheckpointButton/Label",
+      "text": "KONTROL NOKTASINA DÖN"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/OpenHomeSafetyActButton/Label",
+      "text": "2\nEVİ GÜVENLİ YAP"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionTitle",
+      "text": "EVİN RİSKLERİ AZALTILDI"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/SubtitlePanel/SubtitleText",
+      "text": "None"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterCompletionCard/ReplayChapterButton/Label",
+      "text": "PERDEYİ YENİDEN OYNA"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/CloseChapterSelectionButton/Label",
+      "text": "SONUÇLARA DÖN"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/KKTC_ContextDock/ContextPanel/ContextText",
+      "text": "None"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterCompletionCard/NextActButton/Label",
+      "text": "SONRAKİ PERDE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/ChapterSelectionRibbon/ChapterSelectionTitle",
+      "text": "BÖLÜM SEÇİMİ"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/OpenPreparationActButton/Label",
+      "text": "1\nHAZIRLIK"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionSafety",
+      "text": "Deniz riski bulur ve hafif eşyayı taşır; ağır sabitlemeyi yetişkin yapar."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/PauseOverlay/PausePanel/PauseRibbon/PauseTitle",
+      "text": "OYUN DURAKLATILDI"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/PauseOverlay/PausePanel/PauseHint",
+      "text": "Kaldığın yer kontrol noktasında güvende.\nHazır olduğunda maceraya dön."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ObjectiveStrip/ActBadge/ActBadgeValue",
+      "text": "2/4"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionDetail",
+      "text": "Güvenli adımları tamamladın."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/PauseOverlay/PausePanel/ResumeButton/Label",
+      "text": "DEVAM ET"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ObjectiveStrip/ActBadge/ActBadgeCaption",
+      "text": "PERDE"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/OpenQuakeActButton/Label",
+      "text": "3\nDEPREM"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterSelectionCard/OpenEvacuationActButton/Label",
+      "text": "4\nTAHLİYE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionRibbon/CompletionEyebrow",
+      "text": "2. PERDE • EVİ GÜVENLİ YAP"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_02_REBUILD_PREVIEW/Story02RebuildCanvas/SafeArea/ObjectiveStrip/ObjectiveDetail",
+      "text": "Oyuncak arabayı çıkış kapısına kadar sürükle."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    }
+  ],
+  "Story_03_RebuildPreview": [
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ObjectiveStrip/ActBadge/ActBadgeCaption",
+      "text": "PERDE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/OpenEvacuationActButton/Label",
+      "text": "4\nTAHLİYE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/OpenPreparationActButton/Label",
+      "text": "1\nHAZIRLIK"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/PauseOverlay/PausePanel/RetryCheckpointButton/Label",
+      "text": "KONTROL NOKTASINA DÖN"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/OpenHomeSafetyActButton/Label",
+      "text": "2\nEVİ GÜVENLİ YAP"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterCompletionCard/ReplayChapterButton/Label",
+      "text": "PERDEYİ YENİDEN OYNA"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ObjectiveStrip/ObjectiveDetail",
+      "text": "None"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ObjectiveStrip/ActBadge/ActBadgeValue",
+      "text": "3/4"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/PauseOverlay/PausePanel/PauseHint",
+      "text": "Kaldığın yer kontrol noktasında güvende.\nHazır olduğunda maceraya dön."
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/KKTC_ContextDock/ContextPanel/ContextText",
+      "text": "None"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/SubtitlePanel/SubtitleText",
+      "text": "None"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionTitle",
+      "text": "KARDEŞLER KORİDORA ULAŞTI"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/OpenQuakeActButton/Label",
+      "text": "3\nDEPREM"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/ChapterSelectionRibbon/ChapterSelectionTitle",
+      "text": "BÖLÜM SEÇİMİ"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/PauseOverlay/PausePanel/ResumeButton/Label",
+      "text": "DEVAM ET"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/CloseChapterSelectionButton/Label",
+      "text": "SONUÇLARA DÖN"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionRibbon/CompletionEyebrow",
+      "text": "3. PERDE • DEPREM"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterSelectionCard/ChapterSelectionHint",
+      "text": "Hazırlık seçimlerin korunur.\nİstediğin perdeyi yeniden oynayabilirsin."
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionSafety",
+      "text": "Deniz ve Can sarsıntı sırasında koşmadı; Çök–Kapan–Tutun yaptı ve sarsıntı durduktan sonra hazırlandı."
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/PauseOverlay/PausePanel/PauseRibbon/PauseTitle",
+      "text": "OYUN DURAKLATILDI"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ObjectiveStrip/ObjectiveTitle",
+      "text": "None"
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterCompletionCard/CompletionDetail",
+      "text": "Güvenli adımları tamamladın."
+    },
+    {
+      "path": "STORY_03_REBUILD_PREVIEW/Story03RebuildCanvas/SafeArea/ChapterCompletionCard/NextActButton/Label",
+      "text": "SONRAKİ PERDE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_SchoolDrawing/KKTC_Caption",
+      "text": "CAN • İLKOKUL"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_FamilyPhoto/KKTC_Caption",
+      "text": "BİZİM AİLE"
+    },
+    {
+      "path": "KKTC_ApartmentDress/KKTC_ApartmentIdentity",
+      "text": "ZEYTİN APARTMANI\nLEFKOŞA"
+    }
+  ],
+  "Story_04_RebuildPreview": [
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/SubtitlePanel/SubtitleText",
+      "text": "None"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterCompletionCard/ReplayChapterButton/Label",
+      "text": "PERDEYİ YENİDEN OYNA"
+    },
+    {
+      "path": "KKTC_CivilDefenceVest/KKTC_CivilDefenceText",
+      "text": "KKTC\nSİVİL SAVUNMA"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/RebuildAssemblySet/AssemblyAidStationLabel",
+      "text": "AFET YARDIM NOKTASI"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterCompletionCard/CompletionTitle",
+      "text": "AİLE MAHALLE PARKI\nTOPLANMA ALANINDA BULUŞTU"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/OpenEvacuationActButton/Label",
+      "text": "4\nTAHLİYE"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ObjectiveStrip/ObjectiveTitle",
+      "text": "None"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/ChapterSelectionRibbon/ChapterSelectionTitle",
+      "text": "BÖLÜM SEÇİMİ"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/OpenPreparationActButton/Label",
+      "text": "1\nHAZIRLIK"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/OpenQuakeActButton/Label",
+      "text": "3\nDEPREM"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ObjectiveStrip/ObjectiveDetail",
+      "text": "None"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/PauseOverlay/PausePanel/ResumeButton/Label",
+      "text": "DEVAM ET"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/KKTC_ContextDock/ContextPanel/ContextText",
+      "text": "None"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterCompletionCard/CompletionSafety",
+      "text": "Hazırlık eşyaları kullanıldı; Nermin görevliye ulaştı ve aile fiziksel olarak yeniden buluştu."
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterCompletionCard/NextActButton/Label",
+      "text": "BÖLÜM SEÇİMİ"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ObjectiveStrip/ActBadge/ActBadgeCaption",
+      "text": "PERDE"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterCompletionCard/CompletionDetail",
+      "text": "Güvenli adımları tamamladın."
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterCompletionCard/CompletionRibbon/CompletionEyebrow",
+      "text": "4. PERDE • TAHLİYE"
+    },
+    {
+      "path": "KKTC_CivilDefenceVest/KKTC_CivilDefenceText",
+      "text": "KKTC\nSİVİL SAVUNMA"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/CloseChapterSelectionButton/Label",
+      "text": "SONUÇLARA DÖN"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/RebuildAssemblySet/FamilyCallCard_Fallback/FamilySignalCardLabel",
+      "text": "AİLE"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/RebuildAssemblySet/AssemblyRegistryTableLabel",
+      "text": "KAYIT"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/PauseOverlay/PausePanel/PauseHint",
+      "text": "Kaldığın yer kontrol noktasında güvende.\nHazır olduğunda maceraya dön."
+    },
+    {
+      "path": "AssemblyLabel",
+      "text": "AFET TOPLANMA\nALANI"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/ChapterSelectionHint",
+      "text": "Hazırlık seçimlerin korunur.\nİstediğin perdeyi yeniden oynayabilirsin."
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/ElevatorLabel",
+      "text": "ASANSÖR"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/BuildingAddressLabel",
+      "text": "BLOK A"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/RebuildAssemblySet/AssemblyMeetingSignLabel",
+      "text": "MAHALLE PARKI\nTOPLANMA ALANI"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/PauseOverlay/PausePanel/RetryCheckpointButton/Label",
+      "text": "KONTROL NOKTASINA DÖN"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ChapterSelectionCard/OpenHomeSafetyActButton/Label",
+      "text": "2\nEVİ GÜVENLİ YAP"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/PauseOverlay/PausePanel/PauseRibbon/PauseTitle",
+      "text": "OYUN DURAKLATILDI"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/KKTC_Neighborhood/KKTC_NeighborhoodSign",
+      "text": "ZEYTİN SOKAK\nLEFKOŞA"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/EvacuationEnvironment/ContinuousEvacuationRoute/RebuildAssemblySet/AssemblyCareTableLabel",
+      "text": "İLK YARDIM"
+    },
+    {
+      "path": "STORY_04_REBUILD_PREVIEW/StoryUI_Evacuation_Rebuild/SafeArea/ObjectiveStrip/ActBadge/ActBadgeValue",
+      "text": "4/4"
+    }
+  ],
+  "Minigame_Hub": [
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/evacuation-25d_Card/GameTitle",
+      "text": "GÜVENLİ TAHLİYE 2.5D"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/rubble-signal_Card/GameTitle",
+      "text": "ENKAZDA SİNYAL"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-bag-rush_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firefighter-extinguish_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/aftershock-cover_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/evacuation-25d_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firetruck-runner_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/evacuation-25d_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/evacuation-25d_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/rubble-signal_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/room-safety_Card/GameTitle",
+      "text": "GÜVENLİ ODA CHALLENGE"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firetruck-runner_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/aftershock-cover_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firetruck-runner_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/aftershock-cover_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-corridor_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/rubble-signal_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firetruck-runner_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-bag-rush_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-bag-rush_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-corridor_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/aftershock-cover_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/room-safety_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-corridor_Card/GameTitle",
+      "text": "ACİL KORİDOR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firefighter-extinguish_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-corridor_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/BackButton/Label",
+      "text": "ANA MENÜ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-bag-rush_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firefighter-extinguish_Card/GameTitle",
+      "text": "ALEVE SU TUT"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/evacuation-25d_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/room-safety_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/rubble-signal_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/aftershock-cover_Card/GameTitle",
+      "text": "ARTÇI! ÇÖK–KAPAN–TUTUN"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/room-safety_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-corridor_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/HubHeader/Eyebrow",
+      "text": "DEPREME HAZIRLIK • 8 SİNEMATİK GÖREV"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-corridor_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/rubble-signal_Card/Stars",
+      "text": "0 / 3 YILDIZ"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firetruck-runner_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-bag-rush_Card/GameTitle",
+      "text": "ÇANTA 30"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firefighter-extinguish_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/emergency-bag-rush_Card/BestTime",
+      "text": "--:--"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firefighter-extinguish_Card/ResultLabel",
+      "text": "İLK GÖREV HAZIR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/aftershock-cover_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/room-safety_Card/PlayButton/Label",
+      "text": "OYNA"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/room-safety_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/HubHeader/Title",
+      "text": "MİNİ OYUNLAR"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/rubble-signal_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/HubHeader/TotalCoin",
+      "text": "0 / 400 İMO COIN"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firetruck-runner_Card/GameTitle",
+      "text": "İTFAİYE ACİL KOŞU"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/firefighter-extinguish_Card/Coins",
+      "text": "0 / 50 İMO"
+    },
+    {
+      "path": "UI/MinigameHubCanvas/SafeArea/CardsViewport/CardsContent/evacuation-25d_Card/PlayButton/Label",
+      "text": "OYNA"
+    }
+  ],
+  "Story_04_FiretruckRunner": [
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ControlHint/LeftArrow",
+      "text": "‹"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/RunnerCompletionPanel/CompletionCard/SuccessKicker",
+      "text": "ACİL MÜDAHALE"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/TimerCard/Timer",
+      "text": "30 sn"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ObjectiveStrip/MissionText",
+      "text": "ACİL ÇAĞRIYA ULAŞ"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/Countdown",
+      "text": "3"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/RunnerCompletionPanel/CompletionCard/RestartRunnerButton/Label",
+      "text": "TEKRAR SÜR"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/IMOCoinCard/IMOCoinCount",
+      "text": "00 / 42"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ObjectiveStrip/ObjectiveTitle",
+      "text": "İTFAİYE ARACINI SÜR"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ControlHint/HintLabel",
+      "text": "BASILI TUT + YÖNLENDİR  •  A / D"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ObjectiveStrip/ActBadge/ActBadgeValue",
+      "text": "4/4"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/RunnerCompletionPanel/CompletionCard/CompletionStats",
+      "text": "GÜVENLİ VARIŞ\n000 m  •  0 temas"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/IMOCoinCard/CoinCaption",
+      "text": "TOPLANAN"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/TimerCard/Distance",
+      "text": "ACİL ROTA  •  000 m"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ControlHint/RightArrow",
+      "text": "›"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/RunnerCompletionPanel/CompletionCard/SuccessTitle",
+      "text": "GÖREV TAMAMLANDI!"
+    },
+    {
+      "path": "STORY_04_FIRETRUCK_RUNNER/FiretruckRunnerHUD/SafeArea/ObjectiveStrip/ActBadge/ActBadgeCaption",
+      "text": "PERDE"
+    }
+  ],
+  "Minigame_FirefighterExtinguish": [
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/CompletionPanel/ResultCard/ReturnHubButton/Label",
+      "text": "MERKEZE DÖN"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/CompletionPanel/ResultCard/ResultDetail",
+      "text": "5/5 yangın • 00.0 saniye"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/ControlHint/HintText",
+      "text": "BASILI TUT  •  ALEVE NİŞAN AL"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/MissionHeader/Mission",
+      "text": "BASILI TUT • SUYU ALEVE YÖNLENDİR"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/FireCounterCard/RemainingFire",
+      "text": "05 YANGIN"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/CompletionPanel/ResultCard/RetryButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/MissionHeader/Title",
+      "text": "YANGINA MÜDAHALE"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/CompletionPanel/ResultCard/ResultTitle",
+      "text": "TÜM YANGINLAR SÖNDÜ!"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/TimerCard/Timer",
+      "text": "32 sn"
+    },
+    {
+      "path": "UI/FirefighterExtinguishHUD/SafeArea/FireCounterCard/FireCaption",
+      "text": "KALAN HEDEF"
+    }
+  ],
+  "Minigame_Evacuation_25D": [
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_04/StageDetail",
+      "text": "Geçmeden önce gevşek parçaya üç kez kontrollü dokun."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_12/StageTitle",
+      "text": "DEVRİLEN DİREKTEN UZAK ROTAYI SEÇ"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_08/Badge/BadgeText",
+      "text": "08/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_09/StageTitle",
+      "text": "YARALI KOMŞUYU KONTROL ET"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/SuccessOverlay_PostQuakeStreet/SuccessCard/SuccessTitle",
+      "text": "TOPLANMA ALANINDASIN!"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_03/Badge/BadgeText",
+      "text": "03/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_06/Badge/BadgeText",
+      "text": "06/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_10/StageTitle",
+      "text": "İLK YARDIM ÇANTASINI KOMŞUYA ULAŞTIR"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_07/StageDetail",
+      "text": "Kimse basmadan önce tehlike bandını sabitle."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_02/Badge/BadgeText",
+      "text": "02/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_15/StageDetail",
+      "text": "İşaret üzerinde basılı tut ve aile sayımını tamamla."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_04/StageTitle",
+      "text": "GEVŞEK MOLOZU KONTROL ET"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_07/Badge/BadgeText",
+      "text": "07/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_13/StageTitle",
+      "text": "ACİL ARAÇ ŞERİDİNİ AÇ"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/SuccessOverlay_PostQuakeStreet/SuccessCard/RestartButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_02/StageDetail",
+      "text": "Koşma; binalardan uzakta dengeni koruyarak basılı tut."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_12/Badge/BadgeText",
+      "text": "12/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_05/Badge/BadgeText",
+      "text": "05/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_11/Badge/BadgeText",
+      "text": "11/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_15/StageTitle",
+      "text": "TOPLANMA ALANINDA SAYIM YAP"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/GestureHint/HintText",
+      "text": "DOKUN  •  BASILI TUT  •  ÇEK  •  SÜRÜKLE"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_07/StageTitle",
+      "text": "KIRIK CAM ALANINI İŞARETLE"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/StreetMissionTitlePanel/Title",
+      "text": "DEPREM SONRASI GÜVENLİ İLERLE"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_15/Badge/BadgeText",
+      "text": "15/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_01/StageTitle",
+      "text": "HASARLI CEPHEDEN UZAKLAŞ"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_08/StageTitle",
+      "text": "KORUYUCU TAHTAYI CAMLARIN ÜSTÜNE KOY"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/POST_QUAKE_STREET_WORLD/03_POST_QUAKE_SET_DRESSING/WorldText_YARDIM NOKTASI",
+      "text": "YARDIM NOKTASI"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_10/Badge/BadgeText",
+      "text": "10/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_06/StageTitle",
+      "text": "BİNALARDAN UZAK GÜVENLİ TARAFI SEÇ"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_01/StageDetail",
+      "text": "Düşebilecek cam ve sıva hattından açık tarafa çık."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/StreetMissionTitlePanel/Subtitle",
+      "text": "15 YOL OLAYI  •  2.5D SOKAK TAHLİYESİ"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/SuccessOverlay_PostQuakeStreet/SuccessCard/SuccessKicker",
+      "text": "15 / 15 SOKAK OLAYI TAMAMLANDI"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/SuccessOverlay_PostQuakeStreet/SuccessCard/RewardBadge/RewardText",
+      "text": "+50 IMO COIN"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_09/StageDetail",
+      "text": "Bilinç ve durum kontrolü için üç kez seslen."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/POST_QUAKE_STREET_WORLD/02_STREET_GAMEPLAY_PROPS/15_AssemblyHeadcountInteractable/WorldText_AİLE",
+      "text": "AİLE"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_12/StageDetail",
+      "text": "Enerjili hat ve eğik direğin uzağındaki yolu seç."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_14/StageDetail",
+      "text": "Levhayı yol kenarındaki turuncu alana taşı."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_05/StageTitle",
+      "text": "BETON PARÇASINI YÜRÜME HATTINDAN ÇEK"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_10/StageDetail",
+      "text": "Kırmızı çantayı yeşil yardım alanına bırak."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_14/StageTitle",
+      "text": "DEVRİLEN LEVHAYI YOLDAN ÇEK"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_02/StageTitle",
+      "text": "ARTÇI SIRASINDA AÇIK NOKTADA BEKLE"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_05/StageDetail",
+      "text": "Ağır parçayı turuncu güvenli boşluğa sürükle."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/SuccessOverlay_PostQuakeStreet/SuccessCard/SuccessDetail",
+      "text": "Hasarlı cephelerden ve enerji hatlarından uzak kaldın,\nyaralıya yardım edip acil araç yolunu açık bıraktın."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_09/Badge/BadgeText",
+      "text": "09/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_03/StageTitle",
+      "text": "SOKAKTAKİ GAZ VANASINI KAPAT"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_13/Badge/BadgeText",
+      "text": "13/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_11/StageDetail",
+      "text": "Kapıyı geçiş yönünde yatay hareketle aç."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_08/StageDetail",
+      "text": "Geniş tahtayı yeşil hedefe sürükleyip geçiş oluştur."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_03/StageDetail",
+      "text": "Kokuyu fark ettin. Vanayı yatay hareketle kapat."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_04/Badge/BadgeText",
+      "text": "04/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_11/StageTitle",
+      "text": "SIKIŞAN SOKAK KAPISINI AÇ"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_13/StageDetail",
+      "text": "Bariyeri yana çek; itfaiye güzergâhını boş bırak."
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_01/Badge/BadgeText",
+      "text": "01/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_14/Badge/BadgeText",
+      "text": "14/15"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/StreetChoiceFeedbackBubble/ChoiceFeedback",
+      "text": "None"
+    },
+    {
+      "path": "MINIGAME_POST_QUAKE_STREET_25D/PostQuakeStreet_UI/SafeArea/Stage_06/StageDetail",
+      "text": "Cephe dibi ve taşıt yolu yerine açık şeridi seç."
+    }
+  ],
+  "Minigame_AftershockCover": [
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/MinigameTitle",
+      "text": "ARTÇI! ÇÖK–KAPAN–TUTUN"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultCoins",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/RetryButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "Environment/CoverProtocolSign/LabelText",
+      "text": "ÇÖK • KAPAN • TUTUN"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Timer",
+      "text": "SÜRE 22"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultDetail",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureVerb",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/SpeakerBadge/SpeakerName",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Score",
+      "text": "PUAN 1000"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/StageCounter",
+      "text": "AŞAMA 1 / 10"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureDetail",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureMotion/GestureSymbolFallback",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/WorldGestureCoach/WorldActionLabel/NextAction",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultTitle",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/Subtitle",
+      "text": "Anne: Sarsıntı başladı. Koşma; bulunduğun yerde aşağı kaydır ve ÇÖK."
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultStars",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Objective",
+      "text": "Deniz'in üzerinde AŞAĞI KAYDIR • ÇÖK"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureProgress",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/FeedbackToast/FeedbackText",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/HubButton/Label",
+      "text": "MİNİ OYUNLAR"
+    }
+  ],
+  "Minigame_RoomSafety": [
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/HubButton/Label",
+      "text": "MİNİ OYUNLAR"
+    },
+    {
+      "path": "Gameplay/Stage_02_LowerObjects/LowSafeShelfTargetVase/DropGuide/TargetLabel",
+      "text": "VAZO"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/Subtitle",
+      "text": "Anne: Çıkış yolu açık kalmalı. Ayakkabı, oyuncak ve koliyi güvenli sepete taşı."
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/WorldGestureCoach/WorldActionLabel/NextAction",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultDetail",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Score",
+      "text": "PUAN 1000"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Objective",
+      "text": "SIRAYLA TEMİZLE • AYAKKABI → OYUNCAK → KOLİ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureVerb",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/RetryButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureDetail",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_02_LowerObjects/LowSafeShelfTargetFrame/DropGuide/TargetLabel",
+      "text": "ÇERÇEVE"
+    },
+    {
+      "path": "Environment/BedroomExitDoor/ExitDoorPlaque/LabelText",
+      "text": "ÇIKIŞ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultTitle",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureMotion/GestureSymbolFallback",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_02_LowerObjects/LowSafeShelfTargetBook/DropGuide/TargetLabel",
+      "text": "KİTAP"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/MinigameTitle",
+      "text": "GÜVENLİ ODA CHALLENGE"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultStars",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultCoins",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_05_QuakeTest/QuakeTestConsole/DeviceLabel",
+      "text": "SARSINTI TESTİ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/StageCounter",
+      "text": "AŞAMA 1 / 6"
+    },
+    {
+      "path": "Gameplay/Stage_01_ClearExit/ExitClearBasket/DropGuide/TargetLabel",
+      "text": "SEPET"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Timer",
+      "text": "SÜRE 32"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureProgress",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/SpeakerBadge/SpeakerName",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/FeedbackToast/FeedbackText",
+      "text": "None"
+    }
+  ],
+  "Minigame_EmergencyBagRush": [
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Objective",
+      "text": "30 SN • Fener, radyo, pil ve düdüğü ÇANTAYA SÜRÜKLE"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultCoins",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureDetail",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Score",
+      "text": "PUAN 1000"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultDetail",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_02_BlackoutProof/BlackoutProofMat/MatLabel/LabelText",
+      "text": "KESİNTİ TESTİ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/StageCounter",
+      "text": "AŞAMA 1 / 8"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultTitle",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/WorldGestureCoach/WorldActionLabel/NextAction",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureProgress",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_03_FoodWaterRound/FoodWaterMat/MatLabel/LabelText",
+      "text": "SU + DAYANIKLI GIDA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Timer",
+      "text": "SÜRE 30"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultStars",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/BagOpeningTarget/DropGuide/TargetLabel",
+      "text": "ÇANTAYA"
+    },
+    {
+      "path": "Gameplay/HeavyItemReturnTray/DropGuide/TargetLabel",
+      "text": "GERİ KOY"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/SpeakerBadge/SpeakerName",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/FeedbackToast/FeedbackText",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/HubButton/Label",
+      "text": "MİNİ OYUNLAR"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/Subtitle",
+      "text": "Anne: Otuz saniye! Fener, radyo, yedek pil ve düdüğü çantaya sürükle."
+    },
+    {
+      "path": "Gameplay/Stage_06_RemoveConsole/RemoveHeavyItemMat/MatLabel/LabelText",
+      "text": "AĞIR EŞYA • GERİ KOY"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/MinigameTitle",
+      "text": "ÇANTA 30"
+    },
+    {
+      "path": "Gameplay/Stage_07_ComfortChoice/ComfortChoiceMat/MatLabel/LabelText",
+      "text": "YALNIZ 1 KÜÇÜK EŞYA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/RetryButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "Gameplay/Stage_04_HealthDocsRound/HealthDocumentsMat/MatLabel/LabelText",
+      "text": "SAĞLIK + BELGE + ISI"
+    },
+    {
+      "path": "Gameplay/Stage_01_SignalRound/SignalEquipmentMat/MatLabel/LabelText",
+      "text": "SİNYAL EKİPMANI"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureVerb",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureMotion/GestureSymbolFallback",
+      "text": "None"
+    }
+  ],
+  "Minigame_EmergencyCorridor": [
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/RetryButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/WorldGestureCoach/WorldActionLabel/NextAction",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultCoins",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Timer",
+      "text": "SÜRE 38"
+    },
+    {
+      "path": "Gameplay/Stage_02_BarrierMarks/WestRoadClosureTarget/DropGuide/TargetLabel",
+      "text": "BATI GİRİŞİ"
+    },
+    {
+      "path": "Gameplay/Stage_02_BarrierMarks/BarrierCommandWest/InsetRouteLabel",
+      "text": "BATI"
+    },
+    {
+      "path": "Gameplay/Stage_07_Arrival/ArrivalDispatchApproval/InsetRouteLabel",
+      "text": "İTFAİYE"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureDetail",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/FeedbackToast/FeedbackText",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_01_RouteCars/SafePocketRight/DropGuide/TargetLabel",
+      "text": "B • GÜVENLİ CEP"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Score",
+      "text": "PUAN 1000"
+    },
+    {
+      "path": "Gameplay/Stage_01_RouteCars/SafePocketLeft/DropGuide/TargetLabel",
+      "text": "A • GÜVENLİ CEP"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/Subtitle",
+      "text": "Operatör: Araçlara dokunma; rota komutlarını güvenli ceplere sürükle."
+    },
+    {
+      "path": "Gameplay/Stage_02_BarrierMarks/EastRoadClosureTarget/DropGuide/TargetLabel",
+      "text": "DOĞU GİRİŞİ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/MinigameTitle",
+      "text": "ACİL KORİDOR"
+    },
+    {
+      "path": "Gameplay/Stage_02_BarrierMarks/BarrierCommandEast/InsetRouteLabel",
+      "text": "DOĞU"
+    },
+    {
+      "path": "Gameplay/Stage_03_CrowdRoute/CrowdRouteCommand/InsetRouteLabel",
+      "text": "YAYA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/SpeakerBadge/SpeakerName",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_04_FacadeDetour/DetourRouteSlider/IntegratedLabel",
+      "text": "CEPHE → AÇIK ROTA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureMotion/GestureSymbolFallback",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/HubButton/Label",
+      "text": "MİNİ OYUNLAR"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultDetail",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_07_Arrival/OpenCorridorGate/DropGuide/TargetLabel",
+      "text": "AÇIK KORİDOR"
+    },
+    {
+      "path": "Gameplay/Stage_01_RouteCars/RouteCommandA/InsetRouteLabel",
+      "text": "A"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Objective",
+      "text": "ARAÇLARI DEĞİL ROTA KARTLARINI eş renkli ceplere SÜRÜKLE"
+    },
+    {
+      "path": "Gameplay/Stage_01_RouteCars/RouteCommandB/InsetRouteLabel",
+      "text": "B"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureProgress",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/StageCounter",
+      "text": "AŞAMA 1 / 7"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultTitle",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_03_CrowdRoute/SafeSidewalkTarget/DropGuide/TargetLabel",
+      "text": "GÜVENLİ KALDIRIM"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultStars",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureVerb",
+      "text": "None"
+    }
+  ],
+  "Minigame_RubbleSignal": [
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Timer",
+      "text": "SÜRE 25"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/StageCounter",
+      "text": "AŞAMA 1 / 7"
+    },
+    {
+      "path": "Gameplay/Stage_03_SeparateNoise/HumanTripleKnockChoice/IntegratedSignalLabel",
+      "text": "İNSAN • ÜÇLÜ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/HubButton/Label",
+      "text": "MİNİ OYUNLAR"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultTitle",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultStars",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureDetail",
+      "text": "None"
+    },
+    {
+      "path": "Environment/SectorAReceiver/SectorBadgeText",
+      "text": "A"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultCoins",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureMotion/GestureSymbolFallback",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/SpeakerBadge/SpeakerName",
+      "text": "None"
+    },
+    {
+      "path": "Environment/SectorBReceiver/SectorBadgeText",
+      "text": "B"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/ResultDetail",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/MinigameTitle",
+      "text": "ENKAZDA SİNYAL"
+    },
+    {
+      "path": "Gameplay/Stage_03_SeparateNoise/MetalCreakChoice/IntegratedSignalLabel",
+      "text": "METAL • UZUN"
+    },
+    {
+      "path": "Gameplay/Stage_05_Triangulate/SecondDirectionalSensor/SectorBadgeText",
+      "text": "2"
+    },
+    {
+      "path": "Environment/DirectionalSensorConsole/DeviceLabel",
+      "text": "SENSÖR DİZİSİ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Objective",
+      "text": "Kalibrasyon pedine ÜÇ KEZ DOKUN • bilinen üçlü vuruş ritmini tanıt"
+    },
+    {
+      "path": "Gameplay/Stage_03_SeparateNoise/WaterWaveformChoice/IntegratedSignalLabel",
+      "text": "SU • DÜZENLİ"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/FeedbackToast/FeedbackText",
+      "text": "None"
+    },
+    {
+      "path": "Gameplay/Stage_07_ProfessionalRescue/VerifiedVoidDispatchTarget/DropGuide/TargetLabel",
+      "text": "DOĞRULANDI"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/MissionHeader/Score",
+      "text": "PUAN 1000"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureProgress",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/SubtitleCard/Subtitle",
+      "text": "Operatör: Bilinen üç vuruşla yönlü mikrofonu kalibre et."
+    },
+    {
+      "path": "Gameplay/Stage_05_Triangulate/TriangulationLineTarget/DropGuide/TargetLabel",
+      "text": "KESİŞİM"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/ResultPanel/ResultCard/RetryButton/Label",
+      "text": "TEKRAR OYNA"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/GestureCoach/GestureVerb",
+      "text": "None"
+    },
+    {
+      "path": "UI/MinigameCanvas/SafeArea/WorldGestureCoach/WorldActionLabel/NextAction",
+      "text": "None"
+    },
+    {
+      "path": "Environment/SectorCReceiver/SectorBadgeText",
+      "text": "C"
+    },
+    {
+      "path": "Gameplay/Stage_07_ProfessionalRescue/ProfessionalDispatchCard/InsetRouteLabel",
+      "text": "EKİP"
+    }
+  ],
+  "YanYana_Adventure": [
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionfire/İdil’in müdahalesi",
+      "text": "İdil’in müdahalesi"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Yan Yana · başlangıç/Continue/Macera devam etsin",
+      "text": "Maceraya devam"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Food/09 / 2025",
+      "text": "09 / 2025"
+    },
+    {
+      "path": "02 Dünya — ölçülü ve kesintisiz/Ailecek denenen resimli mahalle planı/EV",
+      "text": "EV"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionbagfit/Çantayı taşıma",
+      "text": "Çantayı taşıma"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/PreparationDone/Efe ile oyuna geç",
+      "text": "Efe ile oyuna geç"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Yan Yana · başlangıç/New/Yeni yolculuk",
+      "text": "Yeni bir macera"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/Senin yolun",
+      "text": "Senin yolun"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionevacuation/Birlikte tahliye",
+      "text": "Birlikte tahliye"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/SiblingContinue/Çıkışı kontrol et",
+      "text": "Çıkışı kontrol et"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Water/09 / 2028",
+      "text": "09 / 2028"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Water/BUGÜN: 09 / 2026",
+      "text": "BUGÜN: 09 / 2026"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/ActivityBack/Odaya dön",
+      "text": "Odaya dön"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/RotateItem/Çevir",
+      "text": "Çevir"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/İsteğe bağlı destek/Hint/Göster",
+      "text": "Göster"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Tek amaç/Pause/Dur",
+      "text": "None"
+    },
+    {
+      "path": "02 Dünya — ölçülü ve kesintisiz/AİLE BULUŞMA",
+      "text": "AİLE BULUŞMA"
+    },
+    {
+      "path": "02 Dünya — ölçülü ve kesintisiz/SU VE DİNLENME",
+      "text": "SU VE DİNLENME"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionradio/Radyo yayını",
+      "text": "Radyo yayını"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/Vibration/Titreşim: kapalı",
+      "text": "Titreşim: kapalı"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionsupplyFood/Yiyeceği inceleme",
+      "text": "Yiyeceği inceleme"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Water/09 / 2025",
+      "text": "09 / 2025"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Görevlinin aile doğrulama masası/BİLGİ",
+      "text": "BİLGİ"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/Resume/Devam et",
+      "text": "Devam et"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Çantanın veya yardım masasının suyu/Malzeme kaynağı · Water",
+      "text": "None"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Water/ÇANTAYA",
+      "text": "ÇANTAYA"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/Bir nefes alalım",
+      "text": "Bir nefes alalım"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionsupplyWater/Suyu inceleme",
+      "text": "Suyu inceleme"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/Sound/Ses: açık",
+      "text": "Ses: açık"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Food/09 / 2028",
+      "text": "09 / 2028"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Yusuf’a nasıl destek olalım/NeighborTeam/Görevliye haber ver",
+      "text": "Görevliye haber ver"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/İsteğe bağlı destek/Birlikte deneyebiliriz.",
+      "text": "Birlikte deneyebiliriz."
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/Neden–sonuç 1/Hazırlığın yolunu değiştirdi.",
+      "text": "Hazırlığın yolunu değiştirdi."
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Tek amaç/BİZİM MAHALLE",
+      "text": "BİZİM MAHALLE"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Çantanın veya yardım masasının suyu/Malzeme kaynağı · Food",
+      "text": "None"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Tek amaç/Ada",
+      "text": "Ada"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/Söz Verdiğimiz Yerde",
+      "text": "Söz Verdiğimiz Yerde"
+    },
+    {
+      "path": "Fenerin pil yuvası ve gerçek anahtarı/+",
+      "text": "+"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionaid/Bora’nın yardım noktası",
+      "text": "Bora’nın yardım noktası"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Karakter geçişi/Şimdi İdil",
+      "text": "Şimdi İdil"
+    },
+    {
+      "path": "02 Dünya — ölçülü ve kesintisiz/AA pil 2/+",
+      "text": "+"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/Neden–sonuç 0/Hazırlığın yolunu değiştirdi.",
+      "text": "Hazırlığın yolunu değiştirdi."
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/Tamamladığın hareketler kaydediliyor.",
+      "text": "Tamamladığın hareketler kaydediliyor."
+    },
+    {
+      "path": "02 Dünya — ölçülü ve kesintisiz/AA pil 1/+",
+      "text": "+"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Food/BUGÜN: 09 / 2026",
+      "text": "BUGÜN: 09 / 2026"
+    },
+    {
+      "path": "04 Etkileşimler — nesnelerin gerçek davranışları/Ambalaj incelemesi · Food/ÇANTAYA",
+      "text": "ÇANTAYA"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/ReplayPlan/Aile planını yeniden dene",
+      "text": "Kararlarını yeniden dene"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/ReplayBag/Fener kararına dön",
+      "text": "Fener kararına dön"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Yan Yana · başlangıç/AD · imprint",
+      "text": "ADA İLE EFE’NİN MACERASI"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/Hangi ana dönelim?",
+      "text": "Hangi ana dönelim?"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Tek amaç/Efe’nin yanına git",
+      "text": "Çantanı işe yarar hâle getir"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Kısa konuşma/Efe: Uçurtmamızın kuyruğu nerede?",
+      "text": "Efe: Eşyaları deneyelim. Sonra çantaya sığdıralım."
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/ReducedMotion/Kamera sarsıntısı: sakin",
+      "text": "Kamera sarsıntısı: sakin"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Yusuf’a nasıl destek olalım/NeighborWalk/Birlikte yürüyelim",
+      "text": "Birlikte yürüyelim"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionflashlight/Feneri deneme",
+      "text": "Feneri deneme"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/CloseReplay/Sonuma dön",
+      "text": "Sonuma dön"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionmap/Aile planı",
+      "text": "Aile planı"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/Hareket ipucu/Zemine dokun · birlikte yürü",
+      "text": "Zemine dokunarak odada dolaş"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Senin yolun · neden ve sonuç/Neden–sonuç 2/Hazırlığın yolunu değiştirdi.",
+      "text": "Hazırlığın yolunu değiştirdi."
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Dönüp deneyebileceğin kararlar/ReplayDecisionhome/Evde hazırlık",
+      "text": "Evde hazırlık"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/AD · oyun arayüzü/FireHelp/Ekipten destek al",
+      "text": "Ekip desteği"
+    },
+    {
+      "path": "02 Dünya — ölçülü ve kesintisiz/SAĞLIK EKİBİ",
+      "text": "SAĞLIK EKİBİ"
+    },
+    {
+      "path": "Fenerin pil yuvası ve gerçek anahtarı/+",
+      "text": "+"
+    },
+    {
+      "path": "06 Arayüz ve kayıt/Dikey ekran · 540 × 960/Güvenli ekran alanı/Duraklatma/Captions/Altyazı: açık",
+      "text": "Altyazı: açık"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <Style src="LearningStyles.uss" />
+  <ui:VisualElement name="SafeArea" class="safe-area">
+    <ui:VisualElement name="App" class="app">
+      <ui:VisualElement name="Header" class="header" />
+      <ui:ScrollView name="Body" class="body" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" />
+      <ui:VisualElement name="BottomNav" class="bottom-nav" />
+    </ui:VisualElement>
+    <ui:VisualElement name="ModalLayer" class="modal-layer" style="display: none;" />
+  </ui:VisualElement>
+</ui:UXML>
